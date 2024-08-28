@@ -147,7 +147,7 @@ You can also create data tables like this:
 
 You can insert images from urls or by uploading images to "/assets/img/":
 
-![Image of CLAAUDIA Logo](../../assets/img/claaudia-logo.pngg)
+![Image of CLAAUDIA Logo](../../assets/img/claaudia-logo.png)
 
 ```
 <div class="result" markdown>

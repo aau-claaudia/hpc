@@ -1,5 +1,5 @@
 # Project information
-site_name: AI-LAB Documentation
+site_name: AAU HPC
 site_author: CLAAUDIA, ITS, Aalborg University
 site_description: Documentation for AI-LAB, a powerful computing platform available to students at Aalborg University, designed to support intensive computational tasks, particularly those involving machine learning.
 
@@ -8,64 +8,166 @@ copyright: Copyright &copy; 2024 CLAAUDIA
 
 nav:
   - Home: index.md
-  - Getting started:
-    - Before you begin: getting-started/before-you-begin.md
-    - Login: getting-started/login.md
-    - File management: getting-started/file-management.md
-    - Getting applications: getting-started/getting-applications.md
-    - Running jobs: getting-started/running-jobs.md
-    - Next steps: getting-started/next-steps.md
-  - Applications:
-    - Ollama and LLM: applications/ollama-and-llm.md
-    - MATLAB: applications/matlab.md
-    - TensorFlow: applications/tensorflow.md
-    - PyTorch: applications/pytorch.md
-    - ImageMagick: applications/imagemagick.md
-  - Additional guides:
-    - Monitoring commands:
-      - Checking the queue: additional-guides/checking-the-queue.md
-      - Checking the status of compute nodes: additional-guides/checking-the-status-of-compute-nodes.md
-      - Checking GPU usage: additional-guides/checking-gpu-usage.md
-    - Slurm arguments:
-      - CPU, GPU, and memory allocation: additional-guides/cpu-gpu-and-memory-allocation.md
-      - Setting a time limit: additional-guides/setting-a-time-limit.md
-      - Cancelling jobs: additional-guides/cancelling-jobs.md
-    - Container guides:
-      - Building your own container image: additional-guides/building-your-own-container-image.md
-      - Download container images: additional-guides/download-container-images.md
-      - Adding python packages via virtual environment: additional-guides/adding-python-packages-via-virtual-environment.md
-      - Creating a conda environment: additional-guides/creating-a-conda-environment.md
-    - Running jobs:
-      - Running a container in interactive mode: additional-guides/running-a-container-in-interactive-mode.md
-      - Run a bash script: additional-guides/run-a-bash-script.md
-      - Multiple GPUs with PyTorch: additional-guides/multiple-gpus-with-pytorch.md
-    - Checkpointing: additional-guides/checkpointing.md
-  - System overview:
-    - Hardware: system-overview/hardware.md
-    - Software: system-overview/software.md
-    - Storage: system-overview/storage.md
-  - Courses:
-    - Empty for now: courses/empty-for-now.md
+
+  - HPC Overview:
+    - Introduction to HPC: overview/index.md
+    - Platform overview: overview/platform-overview.md
+    - HPC Decision Tree: overview/hpc-decision-tree.md
+    - Use cases: overview/use-cases.md
+
   - Help & resources:
-    - Support: help-and-resources/support.md
+      - Support: help-and-resources/support.md
+      - Glossery:  help-and-resources/glossery.md
+      - Terminal basics: help-and-resources/terminal-basics.md
+
+  - <span class="nav-divider"></span>: ""
+
+  - Strato:
+    - About Strato: strato/index.md
+    - How to access: strato/how-to-access.md
+    - Guides:
+      - Getting started:
+        - Before you begin: strato/getting-started/before-you-begin.md
+        - Login: strato/getting-started/login.md
+        - File management: strato/getting-started/file-management.md
+        - Getting applications: strato/getting-started/getting-applications.md
+        - Running jobs: strato/getting-started/running-jobs.md
+        - Next steps: strato/getting-started/next-steps.md
+      - Applications:
+        - Ollama and LLM: strato/applications/ollama-and-llm.md
+        - MATLAB: strato/applications/matlab.md
+        - TensorFlow: strato/applications/tensorflow.md
+        - PyTorch: strato/applications/pytorch.md
+        - ImageMagick: strato/applications/imagemagick.md
+      - Additional guides:
+        - Monitoring commands:
+          - Checking the queue: strato/additional-guides/checking-the-queue.md
+          - Checking the status of compute nodes: strato/additional-guides/checking-the-status-of-compute-nodes.md
+          - Checking GPU usage: strato/additional-guides/checking-gpu-usage.md
+        - Slurm arguments:
+          - CPU, GPU, and memory allocation: strato/additional-guides/cpu-gpu-and-memory-allocation.md
+          - Setting a time limit: strato/additional-guides/setting-a-time-limit.md
+          - Cancelling jobs: strato/additional-guides/cancelling-jobs.md
+        - Container guides:
+          - Building your own container image: strato/additional-guides/building-your-own-container-image.md
+          - Download container images: strato/additional-guides/download-container-images.md
+          - Adding python packages via virtual environment: strato/additional-guides/adding-python-packages-via-virtual-environment.md
+          - Creating a conda environment: strato/additional-guides/creating-a-conda-environment.md
+        - Running jobs:
+          - Running a container in interactive mode: strato/additional-guides/running-a-container-in-interactive-mode.md
+          - Run a bash script: strato/additional-guides/run-a-bash-script.md
+          - Multiple GPUs with PyTorch: strato/additional-guides/multiple-gpus-with-pytorch.md
+        - Checkpointing: strato/additional-guides/checkpointing.md
+    - System overview:
+      - Hardware: strato/system-overview/hardware.md
+      - Software: strato/system-overview/software.md
+      - Storage: strato/system-overview/storage.md
+
+  - UCloud:
+    - About UCloud: ucloud/index.md
+    - How to access: ucloud/how-to-access.md
+    - Guides:
+      - Transcriber: ucloud/guides/transcriber.md
+
+  - AI Cloud:
+    - About AI Cloud: ai-cloud/index.md
+    - How to access: ai-cloud/how-to-access.md
+    - Getting started:
+      - Before you begin: ai-cloud/getting-started/before-you-begin.md
+      - Login: ai-cloud/getting-started/login.md
+      - File management: ai-cloud/getting-started/file-management.md
+      - Getting applications: ai-cloud/getting-started/getting-applications.md
+      - Running jobs: ai-cloud/getting-started/running-jobs.md
+      - Next steps: ai-cloud/getting-started/next-steps.md
+    - Applications:
+      - Ollama and LLM: ai-cloud/applications/ollama-and-llm.md
+      - MATLAB: ai-cloud/applications/matlab.md
+      - TensorFlow: ai-cloud/applications/tensorflow.md
+      - PyTorch: ai-cloud/applications/pytorch.md
+      - ImageMagick: ai-cloud/applications/imagemagick.md
+    - Additional guides:
+      - Monitoring commands:
+        - Checking the queue: ai-cloud/additional-guides/checking-the-queue.md
+        - Checking the status of compute nodes: ai-cloud/additional-guides/checking-the-status-of-compute-nodes.md
+        - Checking GPU usage: ai-cloud/additional-guides/checking-gpu-usage.md
+      - Slurm arguments:
+        - CPU, GPU, and memory allocation: ai-cloud/additional-guides/cpu-gpu-and-memory-allocation.md
+        - Setting a time limit: ai-cloud/additional-guides/setting-a-time-limit.md
+        - Cancelling jobs: ai-cloud/additional-guides/cancelling-jobs.md
+      - Container guides:
+        - Building your own container image: ai-cloud/additional-guides/building-your-own-container-image.md
+        - Download container images: ai-cloud/additional-guides/download-container-images.md
+        - Adding python packages via virtual environment: ai-cloud/additional-guides/adding-python-packages-via-virtual-environment.md
+        - Creating a conda environment: ai-cloud/additional-guides/creating-a-conda-environment.md
+      - Running jobs:
+        - Running a container in interactive mode: ai-cloud/additional-guides/running-a-container-in-interactive-mode.md
+        - Run a bash script: ai-cloud/additional-guides/run-a-bash-script.md
+        - Multiple GPUs with PyTorch: ai-cloud/additional-guides/multiple-gpus-with-pytorch.md
+      - Checkpointing: ai-cloud/additional-guides/checkpointing.md
+    - System overview:
+      - Hardware: ai-cloud/system-overview/hardware.md
+      - Software: ai-cloud/system-overview/software.md
+      - Storage: ai-cloud/system-overview/storage.md
+    - Courses:
+      - Empty for now: ai-cloud/courses/empty-for-now.md
+  
+  - AI-LAB:
+    - About AI-LAB: ai-lab/index.md
+    - How to access: ai-lab/how-to-access.md
+    - Getting started:
+      - Before you begin: ai-lab/getting-started/before-you-begin.md
+      - Login: ai-lab/getting-started/login.md
+      - File management: ai-lab/getting-started/file-management.md
+      - Getting applications: ai-lab/getting-started/getting-applications.md
+      - Running jobs: ai-lab/getting-started/running-jobs.md
+      - Next steps: ai-lab/getting-started/next-steps.md
+    - Applications:
+      - Ollama and LLM: ai-lab/applications/ollama-and-llm.md
+      - MATLAB: ai-lab/applications/matlab.md
+      - TensorFlow: ai-lab/applications/tensorflow.md
+      - PyTorch: ai-lab/applications/pytorch.md
+      - ImageMagick: ai-lab/applications/imagemagick.md
+    - Additional guides:
+      - Monitoring commands:
+        - Checking the queue: ai-lab/additional-guides/checking-the-queue.md
+        - Checking the status of compute nodes: ai-lab/additional-guides/checking-the-status-of-compute-nodes.md
+        - Checking GPU usage: ai-lab/additional-guides/checking-gpu-usage.md
+      - Slurm arguments:
+        - CPU, GPU, and memory allocation: ai-lab/additional-guides/cpu-gpu-and-memory-allocation.md
+        - Setting a time limit: ai-lab/additional-guides/setting-a-time-limit.md
+        - Cancelling jobs: ai-lab/additional-guides/cancelling-jobs.md
+      - Container guides:
+        - Building your own container image: ai-lab/additional-guides/building-your-own-container-image.md
+        - Download container images: ai-lab/additional-guides/download-container-images.md
+        - Adding python packages via virtual environment: ai-lab/additional-guides/adding-python-packages-via-virtual-environment.md
+        - Creating a conda environment: ai-lab/additional-guides/creating-a-conda-environment.md
+      - Running jobs:
+        - Running a container in interactive mode: ai-lab/additional-guides/running-a-container-in-interactive-mode.md
+        - Run a bash script: ai-lab/additional-guides/run-a-bash-script.md
+        - Multiple GPUs with PyTorch: ai-lab/additional-guides/multiple-gpus-with-pytorch.md
+      - Checkpointing: ai-lab/additional-guides/checkpointing.md
+    - System overview:
+      - Hardware: ai-lab/system-overview/hardware.md
+      - Software: ai-lab/system-overview/software.md
+      - Storage: ai-lab/system-overview/storage.md
+    - Courses:
+      - Empty for now: ai-lab/courses/empty-for-now.md
     - Guidelines: help-and-resources/guidelines.md
     - Known issues:  help-and-resources/known-issues.md
-    - Glossery:  help-and-resources/glossery.md
-    - Terminal basics: help-and-resources/terminal-basics.md
     - For lecturers:
       - Adding a course: help-and-resources/for-lecturers/adding-a-course.md
-      - Page design guide: help-and-resources/for-lecturers/page-design-guide.md      
-    
+      - Page design guide: help-and-resources/for-lecturers/page-design-guide.md
+
 theme:
   name: material
-  custom_dir: overrides
+  custom_dir: docs/overrides
   features:
     - navigation.instant
-    - navigation.footer
     - navigation.tabs
     - navigation.tabs.sticky
     - content.code.copy
     - content.code.annotate
+    - navigation.prune
 
   logo: assets/img/aau-logo-512x512.png
   favicon: assets/favicon.ico
@@ -118,3 +220,6 @@ extra:
 
     - icon: fontawesome/solid/globe
       link: https://www.researcher.aau.dk/contact/claaudia
+
+extra_watch:
+  - docs/overrides/home.html
