@@ -11,14 +11,12 @@ nav:
 
   - HPC Overview:
     - Introduction to HPC: overview/index.md
-    - Platform overview: overview/platform-overview.md
-    - HPC Decision Tree: overview/hpc-decision-tree.md
-    - Use cases: overview/use-cases.md
+    - Platform Overview: overview/platform-overview.md
+    - Definition Library: overview/definition-library.md
 
-  - Help & resources:
-      - Support: help-and-resources/support.md
-      - Glossery:  help-and-resources/glossery.md
-      - Terminal basics: help-and-resources/terminal-basics.md
+  - Support: 
+    - Support: support/index.md
+    - FAQ: support/faq.md
 
   - <span class="nav-divider"></span>: ""
 
@@ -214,12 +212,17 @@ markdown_extensions:
 extra:
   generator: false
   social:
+    - icon: fontawesome/solid/message
+      link: https://serviceportal.aau.dk/serviceportal?id=emp_taxonomy_topic&topic_id=82a253e8838fc21053711d447daad328
+
     - icon: fontawesome/brands/linkedin
       link: https://www.linkedin.com/company/claaudia/
-      name: Claaudia on LinkedIn
 
     - icon: fontawesome/solid/globe
       link: https://www.researcher.aau.dk/contact/claaudia
+
+
+
 
 extra_watch:
   - docs/overrides/home.html
