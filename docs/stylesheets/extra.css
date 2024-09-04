@@ -1,7 +1,6 @@
 :root {
   --aau-primary: rgb(33, 26, 81);
   --aau-primary-hover: rgb(44,0,143);
-  --aau-teal: #007698;
   --link-color: rgb(26 108 231);
   --aau-grey-background: #f1f1f3;
   --aau-primary--light: #594fbf;
@@ -15,10 +14,10 @@
 .md-typeset h1 {
   font-weight: 700;
   letter-spacing: 2px;
-  font-size: 60px;
+  font-size: 54px;
   margin-bottom: 1.5rem;
   margin-top: 0;
-  color: var(--aau-teal);
+  color: var(--link-color);
   font-family: "Barlow", sans-serif;
   text-transform: uppercase;
 }
@@ -173,6 +172,9 @@ nav .md-grid {
 .md-tabs__item--active {
   color: var(--link-color);
   border-bottom: 3px solid;
+}
+.md-tabs__item--active .md-tabs__link {
+  margin-bottom: 7px;
 }
 .md-tabs__item:hover .md-tabs__link {
   background-color: rgb(222, 227, 234);
@@ -1006,7 +1008,8 @@ del {
 .md-typeset .grid.cards.hero>ul>li  {
   background-color: transparent !important;
   z-index: 1;
-  margin-right: 60px;
+  margin-right: 80px;
+  padding: 0;
 }
 .md-typeset .grid.cards.hero>p {
   margin-top: -30px;

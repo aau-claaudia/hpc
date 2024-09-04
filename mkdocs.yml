@@ -138,9 +138,9 @@ nav:
       - Adding a course: ai-lab/for-lecturers/adding-a-course.md
       - Page design guide: ai-lab/for-lecturers/page-design-guide.md
 
-  - DeiC & EuroHPC:
-    - About DeiC & EuroHPC: deic-and-eurohpc/index.md
-    - How to access: lumi/how-to-access.md
+  - National HPC:
+    - About national HPC resources: national-hpc/index.md
+    - How to access: national-hpc/how-to-access.md
 
 theme:
   name: material
@@ -213,3 +213,4 @@ extra:
 
 extra_watch:
   - docs/overrides/home.html
+  - docs/overrides/hpc-decision-tree.html

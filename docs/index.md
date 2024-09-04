@@ -6,9 +6,9 @@ title: Home
 
 <div class="grid cards hero" markdown>
 
--   # Welcome to AAU HPC
+-   # High-performance computing at AAU
 
-    #### Explore the high-performance computing (HPC) resources available for AAU students and researchers, how they work and what they can be used for in your projects.
+    ##### Explore the high-performance computing (HPC) resources available for AAU students and researchers, how they work and what they can be used for in your projects.
 
 ![Image title](/assets/img/hero-img.jpg)
 
@@ -17,7 +17,7 @@ title: Home
 <br> <!-- Just a little break -->
 
 ## Introduction to HPC
-##### Basic information and instructions for first-time users of Snowflake.
+##### Basic information and instructions for first-time users of AAU HPC.
 
 <div class="grid cards grid-three grid-button-bottom" markdown>
 
@@ -49,6 +49,25 @@ https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/ (best, is to
     CLAAUDIA support provides you with assistance in accessing and using HPC resources in your work and projects.
     
     [Support](/support/){ .md-button .md-button--primary }
+
+</div>
+
+<br> <!-- Just a little break -->
+
+## HPC Decision Tree
+
+<div class="grid cards grid-button-bottom" markdown>
+
+-   __find the most suitable system for your project__
+
+    ---
+
+    Complete the HPC Decision Tree Quiz and find the most suitable HPC platform for your project. HPC Decision Tree is a tool which can assist you in exploring the HPC options fitting your specific needs by answering questions related to your project and research data.
+
+    [HPC Decision Tree](/hpc-decision-tree/){ .md-button .md-button--primary }
+
+
+![Image title](/assets/img/hpc-decision-tree.png)
 
 </div>
 

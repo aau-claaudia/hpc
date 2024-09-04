@@ -86,7 +86,7 @@ https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/ (best, is to
 
     Complete the HPC Decision Tree Quiz and find the most suitable HPC platform for your project. HPC Decision Tree is a tool which can assist you in exploring the HPC options fitting your specific needs by answering questions related to your project and research data.
 
-    [HPC Decision Tree](/overview/hpc-decision-tree/){ .md-button .md-button--primary }
+    [HPC Decision Tree](/hpc-decision-tree/){ .md-button .md-button--primary }
 
 
 ![Image title](/assets/img/hpc-decision-tree.png)
