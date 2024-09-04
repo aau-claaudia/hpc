@@ -219,9 +219,9 @@ input.md-search__input::placeholder {
   align-items: center ;
   color: rgb(51, 49, 51);
   font-weight: 400;
-  font-size: 14px;
+  font-size: 15px;
   line-height: normal;
-  font-family: "Roboto", sans-serif;
+  font-family: "Barlow", sans-serif;
   margin-top: 0;
   margin-right: .6rem !important;
   margin-left: 0.2rem;
@@ -1096,4 +1096,13 @@ del {
 .tabbed-labels label a {
   color: var(--aau-primary);
   font-family: "Montserrat";
+}
+.md-sidebar__scrollwrap {
+  overflow-y: hidden;
+}
+@media screen and (min-width: 76.25em) {
+  .md-nav__item--section>.md-nav__link[for] {
+      color: var(--aau-primary);
+      text-transform: uppercase;
+  }
 }
