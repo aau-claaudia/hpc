@@ -1,1 +1,1 @@
-The AAU HPC pages offers comprehensive information on high-performance computing infrastructure, tools, and support available to students and researchers, helping them maximize their computational capabilities for academic and research purposes.
+The AAU HPC pages offers comprehensive information on high-performance computing infrastructure, tools, and support available to students and researchers at Aalborg University, helping them maximize their computational capabilities for academic and research purposes.
