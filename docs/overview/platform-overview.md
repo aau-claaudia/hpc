@@ -1,5 +1,9 @@
 ##### At AAU, researchers and students can access various HPC platforms to perform simulations, data analysis, and other resource-intensive tasks that would be impractical on standard computers. 
 
+<br> <!-- Just a little break -->
+
+## HPC Platforms
+
 <div class="grid cards grid-three" markdown>
 
 <!--
@@ -66,9 +70,11 @@ https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/ (best, is to
 
 ## HPC Decision Tree
 
-<div class="grid cards" markdown>
+<div class="grid cards grid-button-bottom" markdown>
 
 -   __find the most suitable system for your project__
+
+    ---
 
     Complete the HPC Decision Tree Quiz and find the most suitable HPC platform for your project. HPC Decision Tree is a tool which can assist you in exploring the HPC options fitting your specific needs by answering questions related to your project and research data.
 

@@ -1,135 +1,23 @@
 {% extends "main.html" %}
 
 {% block tabs %}
-  {{ super() }}
+{{ super() }}
 
-  <!-- Additional styles for landing page -->
-  <style>
-
+<!-- Additional styles for home page -->
+<style>
     /* Hide table of contents */
     @media screen and (min-width: 60em) {
-      .md-sidebar--secondary {
+        .md-sidebar--secondary {
         display: none;
-      }
+        }
     }
-
     /* Hide navigation */
     @media screen and (min-width: 76.25em) {
       .md-sidebar--primary {
         display: none;
       }
     }
-    .home-h1 {
-        line-height: 1.25;
-        overflow-wrap: break-word;
-        width: 100%;
-        margin-top: 3rem;
-        margin-bottom: 2rem;
-        text-transform: uppercase;
-        font-family: "Barlow", sans-serif;
-        font-weight: 700;
-        letter-spacing: 0;
-        font-size: 48px;
-        line-height: 52px;
-        color: white;
-        margin-top: 3rem;
-        margin-bottom: 2rem;
-        overflow-wrap: break-word;
-    }
-    .home-hero-p {
-        max-width: 42rem;
-        width: 100%;
-        margin-bottom: 3rem;
-        font-size: 22px;
-        font-weight: 400;
-        color: white;
-        margin: 0;
-        font-family: "Barlow", sans-serif;
-        opacity: 0.8;
-    }
-    .hero {
-        width: 100%;
-        background-image: url('assets/img/meteor.svg'); /* Replace with the path to your SVG */
-        background-size: cover; /* Ensures the image covers the entire element */
-        background-position: center; /* Centers the image */
-    }
-    .hero-buttons {
-        display: flex;
-        flex-flow: row wrap;
-        margin: 0 -.5rem;
-        margin-top: 1rem;
-        margin-bottom: 1rem;
-    }
-    .hero-button-left {
-        margin: .5rem;
-    }
-    .hero-button-right {
-        margin: .5rem;
-    }
-    .hero-button-left a {
-        background-color: white;
-        font-family: 'Roboto', sans-serif;
-        border-color: white;
-        color: #211a52;
-        cursor: pointer;
-        display: inline-block;
-        width: 175px;
-        font-size: 15px;
-        font-weight: 700;
-        padding: .5rem .75rem;
-        text-align: center;
-        border: 1px solid #1d1c1d40;
-        border-radius: 6px;
-        text-decoration: none;
-        transition: color 80ms ease-out, box-shadow 80ms ease-out;
-    }
-    .hero-button-left a:hover {
-        box-shadow: 0px 1px 2px 0px #0000000C;
-        color: #1d1c1d;
-        opacity: 0.9;
-    }
-    .hero-button-right a {
-        background-color: transparent;
-        font-family: 'Roboto', sans-serif;
-        color: white;
-        cursor: pointer;
-        width: 175px;
-        display: inline-block;
-        font-size: 15px;
-        font-weight: 700;
-        padding: .5rem .75rem;
-        text-align: center;
-        border: 1px solid white;
-        border-radius: 6px;
-        text-decoration: none;
-        transition: color 80ms ease-out, box-shadow 80ms ease-out;
-    }
-    .hero-button-right a:hover {
-        box-shadow: 0px 1px 2px 0px #0000000C;
-        color: white;
-        opacity: 0.9;
-    }
-  </style>
-
-    <header class="hero">
-        <div class="md-main__inner md-grid">
-            <div class="md-content">
-                <article class="md-content__inner md-typeset">
-                    <div class="home-h1">High-Performance Computing at AAU</div>
-                    <div class="home-hero-p">Explore the power of High-Performance Computing</div>
-                    <div class="hero-buttons">
-                        <div class="hero-button-left">
-                            <a href="/overview/">Introduction to HPC</a>
-                        </div>
-                        <div class="hero-button-right">
-                            <a href="/overview/platform-overview/">Explore platforms</a>
-                        </div>
-                    </div>
-                </article>
-            </div>
-        </div>
-    </header>
-
+</style>
 {% endblock %}
 
 <!-- Content -->

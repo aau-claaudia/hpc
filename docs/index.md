@@ -3,15 +3,23 @@ template: home.html
 keywords: Home
 title: Home
 ---
-#  Welcome to AAU HPC
-##### Find information about the high-performance computing (HPC) resources at AAU, how they work and what they can be used for in your research projects. Explore the capacities of both internal AAU, national and international HPC resources and get instructions on how to access the system that fulfills your research needs.
+
+<div class="grid cards hero" markdown>
+
+-   # Welcome to AAU HPC
+
+    #### Explore the high-performance computing (HPC) resources at AAU, how they work and what they can be used for in your research projects.
+
+![Image title](/assets/img/hero-img.jpg)
+
+</div>
 
 <br> <!-- Just a little break -->
 
 ## Introduction to HPC
 ##### Basic information and instructions for first-time users of Snowflake.
 
-<div class="grid cards grid-three" markdown>
+<div class="grid cards grid-three grid-button-bottom" markdown>
 
 <!--
 Icons can be searched and found here:
@@ -22,25 +30,25 @@ https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/ (best, is to
 
     ---
     
-    Find out more about high-performance computing (HPC) and the terminology within this topic to be able to understand what is relevant to you and what you need to know to successfully operate the systems you can access.
-    
-    [:octicons-arrow-right-24: What is HPC?](/overview/)
+    Find out more about high-performance computing (HPC) and the terminology within this topic.
 
+    [Introduction to HPC](/overview/){ .md-button .md-button--primary }
+    
 -   :material-widgets-outline:{ .lg .middle } __Find platforms__
 
     ---
     
     Explore the computing possibilities available to you at AAU and find out which HPC system fits your individual needs.
     
-    [:octicons-arrow-right-24: Find platforms](/overview/platform-overview/)
+    [Expore platforms](/overview/platform-overview){ .md-button .md-button--primary }
 
 -   :material-message-outline:{ .lg .middle } __Get help__
 
     ---
     
-    CLAAUDIA is a research support unit at Aalborg University which provides you with assistance in accessing and using HPC resources in your work and projects.
+    CLAAUDIA support provides you with assistance in accessing and using HPC resources in your work and projects.
     
-    [:octicons-arrow-right-24: Get help](https://serviceportal.aau.dk/serviceportal?id=emp_taxonomy_topic&topic_id=82a253e8838fc21053711d447daad328)
+    [Support](/support/){ .md-button .md-button--primary }
 
 </div>
 

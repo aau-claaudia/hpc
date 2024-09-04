@@ -1,8 +1,9 @@
 # Introduction to HPC
 
-High-performance computing (HPC) involves the use of powerful computing resources to perform computationally demanding tasks that are beyond the capability of traditional computing systems. HPC is used to process large datasets, perform simulations, and run resource-intensive applications, such as modelling climate patterns, simulating molecular behaviour, analysing genetic data, designing and testing products and structures, simulating fluid dynamics, optimizing manufacturing processes, identifying trends, and making predictions. HPC allows processing and analysis of complex data, leading to faster discoveries, more efficient processes, and better decision-making.
+##### High-performance computing (HPC) refers to the use of powerful computing resources to tackle complex and resource-intensive tasks that exceed the capabilities of standard computing systems. For researchers and students at AAU, HPC provides the necessary power to train machine learning models, run simulations, perform data analysis, and conduct modeling, among other tasks. This capability is invaluable across a wide range of academic disciplines.
 
-<br> <!-- Just a little break -->
+
+## Benefits from using HPC
 
 <div class="grid cards grid-three" markdown>
 
@@ -13,39 +14,45 @@ https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/ (best, is to
 
 -   :material-server-outline:{ .lg .middle } __Parallel computing__
     
-    HPC provides access to specialized processors that enhance the speed and processing capabilities of the system, enabling the execution of highly parallelizable tasks.
+    AAU HPC provides access to specialized processors that enhance the speed and processing capabilities of the system, enabling the execution of highly parallelizable tasks.
 
 -   :material-speedometer:{ .lg .middle } __Fast data processing__
     
-    High-performance computing allows for much faster calculations than what your local machine can provide. Instead of reducing the data sets - reduce the processing time!
+    HPC allows for much faster calculations than what your local machine can provide. Instead of reducing the data sets - reduce the processing time!
 
 -   :material-laptop:{ .lg .middle } __Available at hand__
     
-    Thanks to cloud computing, you can access your computing environment from anywhere using your laptop, allowing you to work independently.
+    Thanks to HPC, you can access your computing environment from anywhere using your laptop, allowing you to work independently.
+
+</div>
+
+
+!!! info "Explore HPC Definitions"
+    Expand your knowledge of HPC and related terms.
+
+     [:octicons-arrow-right-24: See Definition Library](/overview/definition-library/)
+
+
+<br> <!-- Just a little break -->
+
+## HPC Platforms available for you
+
+<div class="grid cards grid-button-bottom" markdown>
+
+-   __Find the most suitable system for your project__
+
+    ---
+
+    Find out more about high-performance computing resources available for you. See an overview of the offered hardware, operating systems and possible skills required to interact with the machines.
+
+    [Platform overview](/overview/platform-overview/){ .md-button .md-button--primary }
+
+
+![Image title](/assets/img/closeup-af-computer.jpg)
 
 </div>
 
 <br> <!-- Just a little break -->
-
-<div class="grid" markdown>
-
-=== "Common use"
-    * Training of models on GPUs
-    * Collaboration on code development
-    * Creation of Jupyter Notebook and RStudio Server hosts
-    * Simulation of physics and biomolecular models
-    * Testing of web applications
-    * Teaching of advanced computational methods
-    * Testing of distributed computing systems
-
-=== "Recommended skills & knowledge"
-
-    Operating Strato involves running your own Linux virtual machine and learning how to use the Linux terminal environment. It can also be useful to understand secure connections through SSH and secure file transfer protocols.
-
-
-![Image title](/assets/img/strato_hero.jpg)
-
-</div>
 
 ## Use cases
 
