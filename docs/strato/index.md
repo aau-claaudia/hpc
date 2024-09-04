@@ -41,7 +41,7 @@ https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/ (best, is to
 
     Get an overview of Strato's capabilities.
 
-    [System Overview](/strato/system-overview/hardware/){ .md-button .md-button--primary }
+    [System Overview](/strato/system-overview/){ .md-button .md-button--primary }
 
 </div>
 
@@ -120,7 +120,9 @@ https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/ (best, is to
 
 <br> <!-- Just a little break -->
 
+## Please notice...
+
 !!! info "Not for confidential or sensitive data"
-    With Strato you are only allowed to work with public or internal information according to [AAU’s data classification model](https://www.security.aau.dk/data-classification) (classified as levels 0 and 1, respectively).
+    With Strato you are only allowed to work with public or internal information according to [AAU’s data classification model](https://www.security.aau.dk/data-classification){target="_blank} (classified as levels 0 and 1, respectively).
 
     If you would like to work with confidential or sensitive data (classified as levels 2 and 3), then we support another HPC platform called [UCloud](/ucloud/).

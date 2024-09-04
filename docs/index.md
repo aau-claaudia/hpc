@@ -8,7 +8,7 @@ title: Home
 
 -   # Welcome to AAU HPC
 
-    #### Explore the high-performance computing (HPC) resources at AAU, how they work and what they can be used for in your research projects.
+    #### Explore the high-performance computing (HPC) resources available for AAU students and researchers, how they work and what they can be used for in your projects.
 
 ![Image title](/assets/img/hero-img.jpg)
 

@@ -946,10 +946,9 @@ del {
   cursor: default;
 }
 
-.md-nav__item .md-tabs__link:has(> .nav-divider) {
+.md-nav__item:has(.md-nav__link .md-ellipsis > .nav-divider) {
   display: none;
 }
-
 
 .grid-three {
   grid-template-columns: repeat(3, minmax(0, 1fr)) !important;

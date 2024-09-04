@@ -51,6 +51,7 @@ nav:
     - About UCloud: ucloud/index.md
     - How to access: ucloud/how-to-access.md
     - Guides:
+      - Getting started: ucloud/guides/getting-started.md
       - Transcriber: ucloud/guides/transcriber.md
 
   - AI Cloud:
@@ -136,6 +137,10 @@ nav:
     - For lecturers:
       - Adding a course: ai-lab/for-lecturers/adding-a-course.md
       - Page design guide: ai-lab/for-lecturers/page-design-guide.md
+
+  - DeiC & EuroHPC:
+    - About DeiC & EuroHPC: deic-and-eurohpc/index.md
+    - How to access: lumi/how-to-access.md
 
 theme:
   name: material

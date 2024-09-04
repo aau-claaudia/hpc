@@ -43,6 +43,14 @@ https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/ (best, is to
     
     [:octicons-arrow-right-24: Getting access](/ai-lab/how-to-access/)
 
+-   __DeiC & EuroHPC__
+    
+    The Danish E-Infrastructure Cooperation (DeiC) and The European High Performance Computing Joint Undertaking (EuroHPC) offers a range of HPC possibilities.
+
+    [:octicons-arrow-right-24: About Deic & EuroHPC](/deic-and-eurohpc/)
+    
+    [:octicons-arrow-right-24: Getting access](/deic-and-eurohpc/how-to-access/)
+
 </div>
 
 <br> <!-- Just a little break -->
