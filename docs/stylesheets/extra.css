@@ -7,7 +7,7 @@
   --aau-primary--dark:  #54616e;
   --md-admonition-icon--news: url('data:image/svg+xml;charset=utf-8,%3Csvg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="%23e8eaed"%3E%3Cpath d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h440l200 200v440q0 33-23.5 56.5T760-120H200Zm0-80h560v-400H600v-160H200v560Zm80-80h400v-80H280v80Zm0-320h200v-80H280v80Zm0 160h400v-80H280v80Zm-80-320v160-160 560-560Z"/%3E%3C/svg%3E');
 }
-.md-typeset, .md-typeset p, .admonition p, .md-typeset h4, li, strong {
+.md-typeset, .md-typeset p, .admonition p, li, strong {
   font-size: 15px;
   color: var(--aau-primary);
 }
@@ -37,8 +37,8 @@
   margin-top: 1.5rem;
 }
 .md-typeset h4 {
-  font-size: 22px;
-  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  font-family: "Barlow", sans-serif;
   color: var(--aau-primary);
   font-weight: 600;
 }
@@ -1107,4 +1107,10 @@ del {
       color: var(--aau-primary);
       text-transform: uppercase;
   }
+}
+.md-typeset .admonition.info:focus-visible {
+  outline: none;
+}
+.md-typeset .admonition.info:focus-within {
+  box-shadow: none;
 }

@@ -22,7 +22,7 @@ nav:
     - About Strato: strato/index.md
     - How to access: strato/how-to-access.md
     - System overview: strato/system-overview.md
-    - Guidelines: strato/guidelines.md
+    - Terms and Conditions: terms-and-conditions.md
     - Guides:
       - Getting started:
         - Before you begin: strato/getting-started/before-you-begin.md
@@ -50,6 +50,7 @@ nav:
   - UCloud:
     - About UCloud: ucloud/index.md
     - How to access: ucloud/how-to-access.md
+    - Terms and Conditions: terms-and-conditions.md
     - Guides:
       - Getting started: ucloud/guides/getting-started.md
       - Transcriber: ucloud/guides/transcriber.md
@@ -58,7 +59,7 @@ nav:
     - About AI Cloud: ai-cloud/index.md
     - How to access: ai-cloud/how-to-access.md
     - System overview: ai-cloud/system-overview.md
-    - Guidelines: ai-cloud/guidelines.md
+    - Terms and Conditions: terms-and-conditions.md
     - Guides:
       - Getting started:
         - Before you begin: ai-cloud/getting-started/before-you-begin.md
@@ -97,8 +98,8 @@ nav:
     - About AI-LAB: ai-lab/index.md
     - How to access: ai-lab/how-to-access.md
     - System overview: ai-lab/system-overview.md
-    - Guidelines: ai-lab/guidelines.md
     - Known issues:  ai-lab/known-issues.md
+    - Terms and Conditions: assets/terms-and-conditions-ai-lab.pdf
     - Guides:
       - Getting started:
         - Before you begin: ai-lab/getting-started/before-you-begin.md
