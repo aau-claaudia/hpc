@@ -1,6 +1,6 @@
 In the following we will be guiding you throught the process of installing Matlab on a Strato Instance.
 
-!!! Tip
+!!! info
     Matlab is also available on [DeiC Interactive HPC]("https://cloud.sdu.dk/") (also known as UCloud). This requires no setup and ships with a GUI out of the box. Read more about this possibility in [the official platform documentation]("https://docs.cloud.sdu.dk/Apps/matlab.html").
 
 ##  Installing Matlab
@@ -108,10 +108,10 @@ Copy this link and paste it into your web browser.
 
 You can now choose to either run Matlab as an application inside your browser or as a Jupyter Notebook.
 
-![Matlab running inside a browser window](jupyter_lab.png)
+![Matlab running inside a browser window](/assets/img/jupyter_lab.png)
 
 If you chose "Open Matlab" you will be met with a registration window. In order to do this, input your AAU email adress and follow the process of verifying with WAYF.
 
 After this step, you should be inside the application and everything should feel familiar.
 
-![Matlab running inside a browser window](matlab_in_browserwindow.png)
+![Matlab running inside a browser window](/assets/img/matlab_in_browserwindow.png)

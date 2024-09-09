@@ -1,6 +1,6 @@
 In the following we will be guiding you throught the process of setting up Jupyter Notebooks on a Strato Instance.
 
-!!! Tip
+!!! info
     Jupyter Notebookes are also available on [DeiC Interactive HPC]("https://cloud.sdu.dk/") (also known as UCloud). This requires no setup and ships with a GUI out of the box. Read more about this possibility in [the official platform documentation]("https://docs.cloud.sdu.dk/Apps/jupyter-lab.html").
 
 ## Installing Jupyter
@@ -11,8 +11,8 @@ Jupyter can be installed either using Pip or Conda (also known as Anaconda). You
 
 We recommend following the official installation instructions for installing [Miniconda](https://docs.conda.io/projects/miniconda/en/latest/#quick-command-line-install) (a lightweight Conda distribution).
 
-!!! Note
-    It's also possible to launch an instance that has Miniconda preinstalled. You can find this image in the list of source images (look for *Miniconda Ubuntu 22.04*) - refer back to the section [Launch Instance]('../../getting_started/launch_instance.md') to learn about this list. 
+!!! info
+    It's also possible to launch an instance that has Miniconda preinstalled. You can find this image in the list of source images (look for *Miniconda Ubuntu 22.04*) - refer back to the section [Launch Instance](/strato/getting-started/launch-instance/) to learn about this list. 
 
 
 Install Jupyter with conda

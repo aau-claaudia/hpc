@@ -50,7 +50,7 @@ If you are a Windows user, we recommend you use [WinSCP](https://winscp.net/) to
 
 * Opening the application should give you this window: 
 
-![Logging in](../../assets/img/winscp/winscp1_login.png "Fill out the fields")
+![Logging in](/assets/img/winscp/winscp1_login.png "Fill out the fields")
 
 * Choose SCP as the **"File protocol"**
 
@@ -63,11 +63,11 @@ If you are a Windows user, we recommend you use [WinSCP](https://winscp.net/) to
 
 * Then click the **"Advanced Button"**, and you will be faced with this window:
 
-![Advanced](../../assets/img/winscp/winscp2_ssh.png "Find SSH -> Authentication")
+![Advanced](/assets/img/winscp/winscp2_ssh.png "Find SSH -> Authentication")
 
 * Navigate to *SSH -> Authentication* and browse to the location of your SSH-key. Select the key and press **"Open"**. 
 
-![Advanced2](../../assets/img/winscp/winscp_allfiles.png "Locate your keyfile")
+![Advanced2](/assets/img/winscp/winscp_allfiles.png "Locate your keyfile")
 
 * If you have navigated to the correct location and still can not see your SSH-key, please select **"Show all files"** as shown in the image above. Note that WinSCP only supports SSH-keys in the PuTTY-format (*.pkk*). If you have not already converted your key to this format, WinSCP will offer to do this for you, when you select the key in *.pem*-format.
 
@@ -75,12 +75,12 @@ If you are a Windows user, we recommend you use [WinSCP](https://winscp.net/) to
 
 * You should now be back at this window. Press login.
 
-![Login2](../../assets/img/winscp/winscp_login2.png "Locate your keyfile")
+![Login2](/assets/img/winscp/winscp_login2.png "Locate your keyfile")
 
 * The first time you login you will be welcomed by a warning message, asking wether you do in fact want to connect to this adress. If you can confirm this is what you are trying to do, you can press **"Yes"**.
 
-![Advanced2](../../assets/img/winscp/winscp_allfiles.png "Locate your keyfile")
+![Advanced2](/assets/img/winscp/winscp_allfiles.png "Locate your keyfile")
 
 * You should now have a two-pane window, split vertically. On the left side you will have your local computer, and on the right side you will have the remote computer. To transfer files between them you can simply drag and drop. 
 
-![Final](../../assets/img/winscp/winscp_dragdrop.png "Copy your files with drag & drop")
+![Final](/assets/img/winscp/winscp_dragdrop.png "Copy your files with drag & drop")

@@ -4,7 +4,7 @@ All Strato instances are essentially Linux computers with [headless interfaces](
 
 For many users, operating a computer from the command line will be a new experience. At first they may not know what to do with it. and they may be tempted to install applications, that more or less turn their instance into a remote desktop. Although this may be possible, it might not necessarily be a good idea. Installing desktop capabilities will require a large number additional libraries to be installed, whereby critical system libraries are replaced, leaving you with a very non-standard instance that may be prone to errors, is difficult to troubleshoot and potentially has security risks.
 
-!!! Tip
+!!! info
     A great ressource for learning how to use the Linux command line is: [linuxjourney.com](https://linuxjourney.com/lesson/the-shell)
 
 
@@ -14,11 +14,11 @@ In some cases however, you might need a graphical user interface (also known as 
 
 In the following we will suggest a few simple solutions for working with GUI applications on Strato.
 
-!!! Tip
+!!! info
     If you find that the prospect of learning to navigate the command line will be too difficult, you may consider one of our other HPC options:
 
     - A more suitable alternative could be [DeiC Interactive HPC (also known as UCloud)](https://cloud.sdu.dk/app/login), which as the name indicates is built for GUI-reliant interactive HPC operations.
-    - Read about our other computing services at our website: [researcher.aau.dk](https://www.researcher.aau.dk/guides/research-data/high-performance-computing). 
+    - Read about our other [computing services](/overview/platform-overview/). 
 
 ### Port forwarding
 
@@ -37,8 +37,7 @@ ssh -i ~/.ssh/<my_private_key> -L 8888:localhost:8888 ubuntu@10.92.x.xxx
 
 Now you should be able to run your application in a web browser!
 
-!!! Example
-    We use Jupyter Notebook as an example.
+!!! info "We use Jupyter Notebook as an example"
     
     Assuming that we logged in with the `-L` parameter added to our ssh command and installed Jupyter, we can launch it with
     ```
@@ -52,7 +51,7 @@ Now you should be able to run your application in a web browser!
     
     You should now have a fully functional Jupyter Notebook environment from within your browser!
     
-    ![Port forwarding example](../../assets/img/gui/port-forwarding-example.png)
+    ![Port forwarding example](/assets/img/gui/port-forwarding-example.png)
 
 ### X11 forwarding
 
@@ -89,7 +88,7 @@ If you did not log in to the instance with the `-X` flag, simply log out and log
 
 This will create a file in the home diretory of your Strato instance called `.Xauthority`. You can use `ls -al $HOME` to view the files in your user directory. If you find one, and the last modified date column corresponds to the time you logged in to the server, you can assume that everything went well.
 
-!!! Example
+!!! info "Example"
     Now that you have logged in to your instance with `ssh -X` image windows will now get rendered on your computer.
 
     Assuming that I have the following R code
@@ -101,4 +100,4 @@ This will create a file in the home diretory of your Strato instance called `.Xa
     
     As soon as the `plot(x, y)` is run, this window will open:
     
-    ![X Window example](../../assets/img/gui/x-window-example.png)
+    ![X Window example](/assets/img/gui/x-window-example.png)

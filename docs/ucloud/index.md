@@ -114,3 +114,10 @@ https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/ (best, is to
     Find popular applications such as openFOAM, Ansys, Comsol, MATLAB, SAS, VS Coder, RStudio, Jupyter Notebook etc.
 
 </div>
+
+<br> <!-- Just a little break -->
+
+## Please notice...
+
+!!! info "Review the terms and conditions"
+    Before getting started, take a few moments to review the [terms and conditions](/ucloud/terms-and-conditions/) of using UCloud, and don't hesitate to [reach out](https://serviceportal.aau.dk/serviceportal?id=emp_taxonomy_topic&topic_id=82a253e8838fc21053711d447daad328){target="_blank} to our support team if you have any questions or concerns.

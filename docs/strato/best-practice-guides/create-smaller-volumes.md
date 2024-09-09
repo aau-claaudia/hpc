@@ -10,4 +10,4 @@ When you create a new instance, it will inherit the volume size from the flavour
 8. Select **Boot source Volume**.
 9. Select flavour and launch instance
 
-![diffrent_volume_size.gif](../../assets/img/openstack/diffrent_volume_size.gif)
+![diffrent_volume_size.gif](/assets/img/openstack/diffrent_volume_size.gif)

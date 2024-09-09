@@ -1,6 +1,6 @@
-All Strato instances are run on the AAU-network. Before you attempt to access your instance, please make sure that you are connected to the AAU-network - either by being physically on university grounds, being connected to the [**AAU VPN-service**](https://www.en.its.aau.dk/instructions/vpn) or establishing the connection through the [**SSH-gateway**](access_instance.md#connecting-via-aaus-ssh-gateway). 
+All Strato instances are run on the AAU-network. Before you attempt to access your instance, please make sure that you are connected to the AAU-network - either by being physically on university grounds, being connected to the [**AAU VPN-service**](https://www.en.its.aau.dk/instructions/vpn) or establishing the connection through the [**SSH-gateway**](/strato/getting-started/access-instance/#connecting-via-aaus-ssh-gateway/). 
 
-Strato requires your key file to be in the OpenSSH-format, and if you have managed to create the key pair [*according to the previous section*](launch_instance.md#create-ssh-key-pair), it's safe to assume that you have OpenSSH installed on your machine. 
+Strato requires your key file to be in the OpenSSH-format, and if you have managed to create the key pair [*according to the previous section*](/strato/getting-started/launch-instance/#create-ssh-key-pair), it's safe to assume that you have OpenSSH installed on your machine. 
 
 The following will work on most modern computers, but for Windows users we specifically recomend using either Powershell (comes preinstalled on all Windows computers), [MobaXterm](https://mobaxterm.mobatek.net/) or [PuTTY](link). Do not rely on the console built in the OpenStack dashboard.
 
@@ -51,7 +51,7 @@ It is possible, you might be faced with an error message telling you *"Permissio
 ```
 chmod 600 ~/.ssh/my_ssh_key
 ```
-![Placeholder](../../assets/img/openstack/ssh_instance.gif){ loading=lazy }
+![Placeholder](/assets/img/openstack/ssh_instance.gif){ loading=lazy }
 
 
 

@@ -10,7 +10,7 @@ Most images is reached by SSH, which require port 22 open.
 4. Add a rule
 5. Choose SSH from dropdown menu.
 
-![Alt Description](../../assets/img/openstack/ssh_rule.gif)
+![Alt Description](/assets/img/openstack/ssh_rule.gif)
 
 ### Custom rule
 
@@ -21,7 +21,7 @@ Some services require different ports open. To achieve this, the user must creat
 3. Create new **Security group**
 4. Enter name & description
 5. Add a rule with a custom port
-![Alt Description](../../assets/img/openstack/Custom_security_rule.gif)
+![Alt Description](/assets/img/openstack/Custom_security_rule.gif)
 
 
 ## Key-pair
@@ -33,7 +33,7 @@ Openstack authenticates per default Linux instances with a ssh key-pair. If you 
 3. Add new **Key Pair**
 4. Fill out name
 5. Save the public key locally
-![Alt Description](../../assets/img/openstack/Creat_Key_Pair.gif?raw=true)
+![Alt Description](/assets/img/openstack/Creat_Key_Pair.gif?raw=true)
 
 
 ### SSH access to instance
@@ -45,4 +45,4 @@ You will have root-admin access to every instance you create and can therefore i
 ssh ubuntu@130.226.98.xx -i yourPersonalKey.pem
  ```
 
-![Alt Description](../../assets/img/openstack/ssh_instance.gif?raw=true)
+![Alt Description](/assets/img/openstack/ssh_instance.gif?raw=true)

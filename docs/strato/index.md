@@ -126,3 +126,6 @@ https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/ (best, is to
     With Strato you are only allowed to work with public or internal information according to [AAU’s data classification model](https://www.security.aau.dk/data-classification){target="_blank} (classified as levels 0 and 1, respectively).
 
     If you would like to work with confidential or sensitive data (classified as levels 2 and 3), then we support another HPC platform called [UCloud](/ucloud/).
+
+!!! info "Review the terms and conditions"
+    Before getting started, take a few moments to review the [terms and conditions](/strato/terms-and-conditions/) of using Strato, and don't hesitate to [reach out](https://serviceportal.aau.dk/serviceportal?id=emp_taxonomy_topic&topic_id=82a253e8838fc21053711d447daad328){target="_blank} to our support team if you have any questions or concerns.
