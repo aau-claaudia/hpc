@@ -1,7 +1,7 @@
-In this guide, we will demonstrate how to submit a job to Slurm using a bash script. 
+In this guide, we will demonstrate how to submit a job to Slurm using a batch script. 
 
 !!! info "What is a bash script?"
-    A bash script is essentially a text file with a series of commands that you would normally type in the terminal. When executed, the script runs these commands in sequence. Bash scripts are used to automate repetitive tasks, manage system operations, and perform complex workflows.
+    A batch script is a text file that contains all the arguments you would otherwise give to Slurm via `srun`. The advantage of using batch scripts, is that they are a convenient way for us to document our workflow.
 
 Let's create a bash script to submit a simple job that runs a Singularity container. This job will run a Python script inside the container.
 
@@ -36,7 +36,7 @@ Create a bash script named run_job.sh:
     #SBATCH --cpus-per-task=1
     #SBATCH --mem=1G
 
-    singularity exec /ceph/container/tensorflow_24.03-tf2-py3.sif python3 hello.py
+    singularity exec /ceph/container/tensorflow_24.03-tf2-py3.sif python hello.py
     ```
 </div>
 

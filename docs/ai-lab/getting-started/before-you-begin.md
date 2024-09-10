@@ -9,8 +9,8 @@ Before diving into AI-LAB, ensure you have the necessary tools and knowledge for
 - For Windows users, use Windows PowerShell to follow our docs effectively. Alternatively, try installing [OpenSSH](https://learn.microsoft.com/en-us/windows-server/administration/openssh/openssh_install_firstuse?tabs=gui) or a [Linux subsystem](https://learn.microsoft.com/en-us/windows/wsl/setup/environment)
 
 !!! info "Please review our [Terms and Conditions](/assets/terms-and-conditions-ai-lab.pdf), especially noting the following points:"
+      - **Each year, on August 1st, all students will lose access to AI-LAB**. To regain access, students must reapply. Files will remain available as long as the student reapplies before the end of the year. However, if no application is submitted by December 31st, all files will be permanently deleted from AI-LAB.
       - AI-LAB is not intended for working with confidential or sensitive data
-      - On August 1st of each year, all student data and user information will be automatically deleted from the AI-LAB platform if you haven't [applied for extension](../help-and-resources/guidelines.md)
       - Job durations are limited to a maximum of 12 hours
 
 <hr>

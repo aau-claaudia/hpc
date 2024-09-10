@@ -1,4 +1,4 @@
-You are now logged into AI-LAB and are in your user directory, which is located at `/ceph/home/<domain>/<user>`. You can confirm this by typing `pwd`. This directory is your private storage space where you can keep all your files. It is stored on a network file system, so you can access your files from any [compute node](../help-and-resources/glossery.md#compute-nodes) within the platform.
+You are now logged into AI-LAB and are in your user directory, which is located at `/ceph/home/<domain>/<user>`. You can confirm this by typing `pwd`. This directory is your private storage space where you can keep all your files. It is stored on a network file system, so you can access your files from any compute node within the platform.
 
 Here is the general file structure on AI-LAB:
 
@@ -27,7 +27,7 @@ Here is the general file structure on AI-LAB:
 	</ul>
 </div>
 
-For a detailed overview of the AI-LAB storage system, click [here](../system-overview/storage.md).
+For a detailed overview of the AI-LAB storage system, click [here](/ai-lab/system-overview/).
 
 <hr>
 
@@ -48,7 +48,7 @@ Here, `/ceph/course/claaudia/docs/matlab_script.m` is the path to the file or fo
 	You can transfer files between your local computer and AI-LAB using [WinSCP](https://winscp.net/eng/download.php). Other popular solutions are [PuTTY](https://www.putty.org/) and [FileZilla](https://filezilla-project.org/). Alternatively, you can install [OpenSSH](https://learn.microsoft.com/en-us/windows-server/administration/openssh/openssh_install_firstuse?tabs=gui) to use the `scp` command, as shown for [Linux/MacOS](#__tabbed_1_2) users.
 
 	When you open WinSCP, you will be greeted by a *Login* modal. Follow the instructions in the image above to establish a connection to the server.
-	![Screenshot of WinSCP setup](../assets/img/winscp-setup.png)
+	![Screenshot of WinSCP setup](/assets/img/winscp-setup.png)
 		
 	You can now drag and drop files between your local computer and the AI-LAB platform.
 
