@@ -22,7 +22,7 @@ nav:
     - Terms and Conditions: strato/terms-and-conditions.md
     - Guides:
       - Getting started:
-        - Before you begin: strato/getting-started/before-you-begin.md
+        - Before you begin: strato/getting-started/index.md
         - Launch instance: strato/getting-started/launch-instance.md
         - Access instance: strato/getting-started/access-instance.md
         - Transfer files: strato/getting-started/transfer-files.md
@@ -58,7 +58,7 @@ nav:
     - Terms and Conditions: ai-cloud/terms-and-conditions.md
     - Guides:
       - Getting started:
-        - Before you begin: ai-cloud/getting-started/before-you-begin.md
+        - Before you begin: ai-cloud/getting-started/index.md
         - Login: ai-cloud/getting-started/login.md
         - File management: ai-cloud/getting-started/file-management.md
         - Getting applications: ai-cloud/getting-started/getting-applications.md
@@ -98,7 +98,7 @@ nav:
     - Terms and Conditions: assets/terms-and-conditions-ai-lab.pdf
     - Guides:
       - Getting started:
-        - Before you begin: ai-lab/getting-started/before-you-begin.md
+        - Before you begin: ai-lab/getting-started/index.md
         - Login: ai-lab/getting-started/login.md
         - File management: ai-lab/getting-started/file-management.md
         - Getting applications: ai-lab/getting-started/getting-applications.md
