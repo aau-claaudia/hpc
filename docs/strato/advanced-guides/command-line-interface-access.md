@@ -26,7 +26,7 @@ pip install python-openstackclient
 From a internet browser, *[login to this openstack wayf auth](https://strato-new.claaudia.aau.dk:5000/v3/OS-FEDERATION/identity_providers/WAYF/protocols/saml2/auth)* and inspect the **Response Headers** and find the **X-Subject-Token**.
 How to find the **Response Headers** varies from browser to browser. To find the **Response Headers** checkout this guide <https://www.dev2qa.com/how-to-view-http-headers-cookies-in-google-chrome-firefox-internet-explorer/> which covers the most common browsers.
 
-![x-token](../../assets/img/openstack/x-token.gif"Title")
+![x-token](/assets/img/openstack/x-token.gif"Title")
 
 After you have found the **X-Subject-Token**, login to [strato-new](https://strato-new.claaudia.aau.dk) as normal. In the upper right corner, find and click your AAU ID (XXZZXX@aau.dk), and then "OpenStack RC File". Open or save the file. Start a terminal, and export the following variables (you need to locate a few values from the "OpenStack RC File"):
 

@@ -1,22 +1,19 @@
-To login you need to [SSH connect](https://www.cloudflare.com/learning/access-management/what-is-ssh/) to either of the two front-end nodes, `ailab-fe01` or `ailab-fe02`. 
+To login you need to [SSH connect](https://www.cloudflare.com/learning/access-management/what-is-ssh/) to the front-end node, `ai-fe02.srv.aau.dk`. 
 
 Run the following command on a command-line interface on your local Windows (*Windows PowerShell*), macOS, or Linux computer:
 
 ```
-ssh -l user@student.aau.dk ailab-fe01.srv.aau.dk
-```
-or
-```
-ssh -l user@student.aau.dk ailab-fe02.srv.aau.dk
+ssh -l user@domain.aau.dk ai-fe02.srv.aau.dk
 ```
 
-Replace `user@student.aau.dk` with your AAU email address.
+
+Replace `user@domain.aau.dk` with your AAU email address.
 
 !!! info
     The first time you connect, you will get a message like:
 
     ```
-    The authenticity of host 'ailab-fe01.srv.aau.dk (172.21.131.1300)' can't be established.
+    The authenticity of host 'ai-fe02.srv.aau.dk (172.21.131.1300)' can't be established.
     ED25519 key fingerprint is SHA256:xosJtOSfQyyW16c6RtpN8tAi/91XHCR3GxM9/KJEogg.
     This key is not known by any other names.
     Are you sure you want to continue connecting (yes/no/[fingerprint])?
@@ -26,7 +23,7 @@ Replace `user@student.aau.dk` with your AAU email address.
 
 Enter your AAU password when prompted. 
 
-When you can see `user@student.aau.dk@ailab-fe01:~$` you are succesfully logged in.
+When you can see `user@domain.aau.dk@ai-fe02:~$` you are succesfully logged in.
 
 <hr>
 

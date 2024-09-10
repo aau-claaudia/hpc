@@ -54,17 +54,9 @@ Save by pressing `CTRL + O` enter a file name, e.g. `conda_env.yml` and exit by 
 
 We can now build a container (Lets call it `conda_container.sif`) containing the conda environment specified in `conda_env.yml` with the following command:
 
-<div class="show-on-ai-lab" style="display:none;" markdown="span">
 ```
 srun /ceph/container/cotainr-2023.11.0/bin/cotainr build conda_container.sif --base-image=docker://ubuntu:22.04 --conda-env=conda_env.yml --accept-licenses
 ```
-</div>
-
-<div class="show-on-ai-cloud" style="display:none;" markdown="span">
-```
-srun cotainr-2023.11.0/bin/cotainr build conda_container.sif --base-image=docker://ubuntu:22.04 --conda-env=conda_env.yml --accept-licenses
-```
-</div>
 
 
 !!! info

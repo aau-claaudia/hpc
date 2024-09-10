@@ -22,7 +22,7 @@ Strato configures port access with *Security groups*. Each group can have multip
 5. Choose **SSH** from dropdown menu.
 6. Click **Add**
 
-![Alt Description](../../assets/img/openstack/ssh_rule.gif "SSH Rule")
+![Alt Description](/assets/img/openstack/ssh_rule.gif "SSH Rule")
 
 ### Create SSH key pair
 
@@ -66,7 +66,7 @@ To launch the Ubuntu instance navigate to the "launch instance" menu using the w
 3. Press **Launch** on the right side of the image you wish to Launch.
 
 
-![Alt Description](../../assets/img/openstack/find_create_instance.gif "Find the 'create instance' option")
+![Alt Description](/assets/img/openstack/find_create_instance.gif "Find the 'create instance' option")
 
 In the *"Launch instance"* menu you can choose the settings for the instance. In this excercise we will apply the following:
 
@@ -79,9 +79,9 @@ In the *"Launch instance"* menu you can choose the settings for the instance. In
 * **Key-pair:** Ensure that the key-pair created earlier is applied (should be default).
 
 
-![Alt Description](../../assets/img/openstack/Create_instance.gif "Create instance 2")
+![Alt Description](/assets/img/openstack/Create_instance.gif "Create instance 2")
 
 <p style="font-weight: bold; font-size: 22px;">Congratulations!</p> 
-You have launched your first instance. Now consult the ["Access instance"](access_instance.md)-section to learn how to access your instance!
+You have launched your first instance. Now consult the ["Access instance"](/strato/getting-started/access-instance/)-section to learn how to access your instance!
 
-Reminder: Strato is a pool of ressources shared between all users. If you do not plan on using the instance, you have just created, please delete it, so other users can make use of the ressources. Consult the page ["Shelve instance"](shutting_down.md) for instructions on how to do this.
+Reminder: Strato is a pool of ressources shared between all users. If you do not plan on using the instance, you have just created, please delete it, so other users can make use of the ressources. Consult the page ["Shutting down"](/strato/getting-started/shutting-down/) for instructions on how to do this.

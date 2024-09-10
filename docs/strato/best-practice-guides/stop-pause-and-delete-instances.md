@@ -10,7 +10,7 @@ Instances in the Strato CLAAUDIA Compute cloud can have a range of **States:**
 
 ## Delete an instance
 
-To delete an instance using the Horizon web interface you must be logged in. For an instance to be deleted, it should first be [shut down](#shut-down-an-instance). Navigate to the **launch instance** menu using the horizon web interface.
+To delete an instance using the Horizon web interface you must be logged in. For an instance to be deleted, it should first be shut down. Navigate to the **launch instance** menu using the horizon web interface.
 
 1. Navigate to the project tab
 2. Click the **Compute** sub-tab
@@ -19,7 +19,7 @@ To delete an instance using the Horizon web interface you must be logged in. For
 5. Press **Delete Instances** on the right side of the webpage.
 6. Press **Delete Instances** in the confirmation dialog.
 
-![delete_instance.gif](../../assets/img/openstack/delete_instance.gif)
+![delete_instance.gif](/assets/img/openstack/delete_instance.gif)
 
 Deleting an instance will not delete the attached volume, unless specifically set to during creation.
 

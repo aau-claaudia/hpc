@@ -2,8 +2,6 @@
 site_name: AAU HPC
 site_author: CLAAUDIA, ITS, Aalborg University
 site_description: The AAU HPC pages offers comprehensive information on high-performance computing infrastructure, tools, and support available to students and researchers at Aalborg University, helping them maximize their computational capabilities for academic and research purposes.
-
-# Copyright
 copyright: Copyright &copy; 2024 CLAAUDIA
 
 nav:
@@ -21,16 +19,14 @@ nav:
   - Strato:
     - About Strato: strato/index.md
     - How to access: strato/how-to-access.md
-    - System overview: strato/system-overview.md
-    - Terms and Conditions: terms-and-conditions.md
+    - Terms and Conditions: strato/terms-and-conditions.md
     - Guides:
       - Getting started:
-        - Before you begin: strato/getting-started/before-you-begin.md
+        - Before you begin: strato/getting-started/index.md
         - Launch instance: strato/getting-started/launch-instance.md
         - Access instance: strato/getting-started/access-instance.md
         - Transfer files: strato/getting-started/transfer-files.md
         - Shutting down: strato/getting-started/shutting-down.md
-        - Next steps: strato/getting-started/next-steps.md
       - Application guides:
           - Strato applications: strato/application-guides/strato-applications.md
           - Matlab: strato/application-guides/matlab.md
@@ -50,7 +46,7 @@ nav:
   - UCloud:
     - About UCloud: ucloud/index.md
     - How to access: ucloud/how-to-access.md
-    - Terms and Conditions: terms-and-conditions.md
+    - Terms and Conditions: ucloud/terms-and-conditions.md
     - Guides:
       - Getting started: ucloud/guides/getting-started.md
       - Transcriber: ucloud/guides/transcriber.md
@@ -60,10 +56,10 @@ nav:
     - About AI Cloud: ai-cloud/index.md
     - How to access: ai-cloud/how-to-access.md
     - System overview: ai-cloud/system-overview.md
-    - Terms and Conditions: terms-and-conditions.md
+    - Terms and Conditions: ai-cloud/terms-and-conditions.md
     - Guides:
       - Getting started:
-        - Before you begin: ai-cloud/getting-started/before-you-begin.md
+        - Before you begin: ai-cloud/getting-started/index.md
         - Login: ai-cloud/getting-started/login.md
         - File management: ai-cloud/getting-started/file-management.md
         - Getting applications: ai-cloud/getting-started/getting-applications.md
@@ -103,7 +99,7 @@ nav:
     - Terms and Conditions: assets/terms-and-conditions-ai-lab.pdf
     - Guides:
       - Getting started:
-        - Before you begin: ai-lab/getting-started/before-you-begin.md
+        - Before you begin: ai-lab/getting-started/index.md
         - Login: ai-lab/getting-started/login.md
         - File management: ai-lab/getting-started/file-management.md
         - Getting applications: ai-lab/getting-started/getting-applications.md
@@ -181,6 +177,8 @@ markdown_extensions:
   - pymdownx.keys
   - pymdownx.mark
   - pymdownx.critic
+  - pymdownx.snippets:
+      base_path: docs
   - pymdownx.tasklist:
       custom_checkbox: true
   - pymdownx.caret
@@ -210,8 +208,9 @@ extra:
     - icon: fontawesome/solid/globe
       link: https://www.researcher.aau.dk/contact/claaudia
 
-
-
+    - icon: fontawesome/solid/globe
+      link: https://github.com/claaudia
+      name: Aalborg University's Privacy Policy and Cookie Policy - How We Handle Your Personal Data.
 
 extra_watch:
   - docs/overrides/home.html
