@@ -2,29 +2,12 @@ When using the cluster, you typically wish to see an overview of what is current
 
 The command `squeue` can be used to get a general overview:
 
-<div class="show-on-ai-lab" style="display:none;" markdown="span">
-    ```
-    squeue
+```
+squeue
 
-    JOBID   PARTITION       NAME      USER    ST      TIME    NODES   NODELIST(REASON)
-    42            gpu   interact  xxxxxxxx     R   6:45:14        1        ailab-l4-01
-    ```
-</div>
-
-<div class="show-on-ai-cloud" style="display:none;" markdown="span">
-    ```
-    squeue
-
-    JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
-    31623     batch     DRSC xxxxxxxx  R    6:45:14      1 i256-a10-10
-    31693     batch singular yyyyyyyy  R      24:20      1 i256-a40-01
-    31694     batch singular yyyyyyyy  R      24:20      1 i256-a40-01
-    31695     batch singular yyyyyyyy  R      24:20      1 i256-a40-01
-    31696     batch singular yyyyyyyy  R      24:20      1 i256-a40-01
-    31502 prioritiz runQHGK. zzzzzzzz PD       0:00      1 (Dependency)
-    31504 prioritiz runQHGK. zzzzzzzz PD       0:00      1 (Dependency)
-    ```
-</div>
+JOBID   PARTITION       NAME      USER    ST      TIME    NODES   NODELIST(REASON)
+42            gpu   interact  xxxxxxxx     R   6:45:14        1        ailab-l4-01
+```
 
 
 1.  `JOBID` shows the `ID` number of each job in queue.

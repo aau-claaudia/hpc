@@ -224,64 +224,31 @@ if __name__ == '__main__':
 ## Running the Script
 To execute the multi-GPU training script we will use a Bash script (submit_job.sh):
 
-<div class="show-on-ai-lab" style="display:none;" markdown="span">
-    ```
-    #!/bin/bash
-    #SBATCH --job-name=ddp_training
-    #SBATCH --cpus-per-task=8
-    #SBATCH --mem=60G
-    #SBATCH --time=02:00:00
-    #SBATCH --output=ddp_training.out
+```
+#!/bin/bash
+#SBATCH --job-name=ddp_training
+#SBATCH --cpus-per-task=8
+#SBATCH --mem=60G
+#SBATCH --time=02:00:00
+#SBATCH --output=ddp_training.out
 
-    # Number of GPUs to allocate (adjust this value as needed)
-    num_gpus=4
+# Number of GPUs to allocate (adjust this value as needed)
+num_gpus=4
 
-    # Set the number of tasks and GPUs accordingly
-    #SBATCH --ntasks=$num_gpus
-    #SBATCH --gres=gpu:$num_gpus
+# Set the number of tasks and GPUs accordingly
+#SBATCH --ntasks=$num_gpus
+#SBATCH --gres=gpu:$num_gpus
 
-    # Execute the job using Singularity
-    srun singularity exec --nv /ceph/container/pytorch_24.03-py3.sif python3 multi_gpu.py --world_size=$num_gpus
-    ```
-</div>
+# Execute the job using Singularity
+srun singularity exec --nv /ceph/container/pytorch_24.03-py3.sif python3 multi_gpu.py --world_size=$num_gpus
+```
 
-<div class="show-on-ai-cloud" style="display:none;" markdown="span">
-    ```
-    #!/bin/bash
-    #SBATCH --job-name=ddp_training
-    #SBATCH --cpus-per-task=8
-    #SBATCH --mem=60G
-    #SBATCH --time=02:00:00
-    #SBATCH --output=ddp_training.out
 
-    # Number of GPUs to allocate (adjust this value as needed)
-    num_gpus=4
+- `--job-name`: Specifies the name of the job.
+- `-partition`: Defines the partition or queue to submit the job to (l4 in this example).
+- `--cpus-per-task`: Specifies the number of CPUs allocated to each task.
+- `--mem`: Specifies the memory allocated to the job.
+- `--time`: Adjust these settings based on your specific resource requirements.
+- `num_gpus`: Modify this variable to specify the number of GPUs (--ntasks and --gres=gpu) allocated for your job.
+- `srun singularity exec --nv /ceph/container/pytorch_24.03-py3.sif python3 multi_gpu.py --world_size=$num_gpus`: Executes the job inside the specified Singularity container (`pytorch_24.03-py3.sif`) with Python 3, running the `multi_gpu.py` script and passing `--world_size=$num_gpus` as an argument to specify the number of GPUs for distributed training.
 
-    # Set the number of tasks and GPUs accordingly
-    #SBATCH --ntasks=$num_gpus
-    #SBATCH --gres=gpu:$num_gpus
-
-    # Execute the job using Singularity
-    srun singularity exec --nv pytorch_24.03-py3.sif python3 multi_gpu.py --world_size=$num_gpus
-    ```
-</div>
-
-<div class="show-on-ai-lab" style="display:none;" markdown="block">
-  - `--job-name`: Specifies the name of the job.
-  - `-partition`: Defines the partition or queue to submit the job to (l4 in this example).
-  - `--cpus-per-task`: Specifies the number of CPUs allocated to each task.
-  - `--mem`: Specifies the memory allocated to the job.
-  - `--time`: Adjust these settings based on your specific resource requirements.
-  - `num_gpus`: Modify this variable to specify the number of GPUs (--ntasks and --gres=gpu) allocated for your job.
-  - `srun singularity exec --nv /ceph/container/pytorch_24.03-py3.sif python3 multi_gpu.py --world_size=$num_gpus`: Executes the job inside the specified Singularity container (`pytorch_24.03-py3.sif`) with Python 3, running the `multi_gpu.py` script and passing `--world_size=$num_gpus` as an argument to specify the number of GPUs for distributed training.
-</div>
-
-<div class="show-on-ai-cloud" style="display:none;" markdown="block">
-  - `--job-name`: Specifies the name of the job.
-  - `-partition`: Defines the partition or queue to submit the job to (l4 in this example).
-  - `--cpus-per-task`: Specifies the number of CPUs allocated to each task.
-  - `--mem`: Specifies the memory allocated to the job.
-  - `--time`: Adjust these settings based on your specific resource requirements.
-  - `num_gpus`: Modify this variable to specify the number of GPUs (--ntasks and --gres=gpu) allocated for your job.
-  - `srun singularity exec --nv pytorch_24.03-py3.sif python3 multi_gpu.py --world_size=$num_gpus`: Executes the job inside the specified Singularity container (`pytorch_24.03-py3.sif`) with Python 3, running the `multi_gpu.py` script and passing `--world_size=$num_gpus` as an argument to specify the number of GPUs for distributed training.
-</div>

@@ -130,7 +130,7 @@ nav:
           - Multiple GPUs with PyTorch: ai-lab/additional-guides/multiple-gpus-with-pytorch.md
         - Checkpointing: ai-lab/additional-guides/checkpointing.md
     - Courses:
-      - Empty for now: ai-lab/courses/empty-for-now.md    
+      - Name generator exercises: ai-lab/courses/name-generator-exercises.md  
     - For lecturers:
       - Adding a course: ai-lab/for-lecturers/adding-a-course.md
       - Page design guide: ai-lab/for-lecturers/page-design-guide.md
