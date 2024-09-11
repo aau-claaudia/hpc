@@ -8,9 +8,11 @@
 
 4. Add `samples('German', 'GER')` at the bottom of the code, to generate some German names, save it and exit the file.
 
+5. Use `cat name_generator.py` and check that `samples('German', 'GER')` is now at the bottom of the code.
+
 !!! info "References"
-  * [https://hpc.aau.dk/ai-lab/getting-started/login/](https://hpc.aau.dk/ai-lab/getting-started/login/)
-  * [https://hpc.aau.dk/ai-lab/getting-started/file-management/](https://hpc.aau.dk/ai-lab/getting-started/file-management/)
+     * [https://hpc.aau.dk/ai-lab/getting-started/login/](https://hpc.aau.dk/ai-lab/getting-started/login/)
+     * [https://hpc.aau.dk/ai-lab/getting-started/file-management/](https://hpc.aau.dk/ai-lab/getting-started/file-management/)
 
 
 ## Part 2:
@@ -29,5 +31,5 @@
 4. When the job done, check the content of `result_x.out` using  `cat` command 
 
 !!! info "References"
-  * [https://hpc.aau.dk/ai-lab/additional-guides/run-a-bash-script/](https://hpc.aau.dk/ai-lab/additional-guides/run-a-bash-script/)
-  * [https://hpc.aau.dk/ai-lab/additional-guides/cpu-gpu-and-memory-allocation/](https://hpc.aau.dk/ai-lab/additional-guides/cpu-gpu-and-memory-allocation/)
+     * [https://hpc.aau.dk/ai-lab/additional-guides/run-a-bash-script/](https://hpc.aau.dk/ai-lab/additional-guides/run-a-bash-script/)
+     * [https://hpc.aau.dk/ai-lab/additional-guides/cpu-gpu-and-memory-allocation/](https://hpc.aau.dk/ai-lab/additional-guides/cpu-gpu-and-memory-allocation/)
