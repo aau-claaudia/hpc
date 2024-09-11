@@ -50,6 +50,7 @@ nav:
     - Guides:
       - Getting started: ucloud/guides/getting-started.md
       - Transcriber: ucloud/guides/transcriber.md
+      - ChatUI for teachers: ucloud/guides/ChatUI-teaching.md
 
   - AI Cloud:
     - About AI Cloud: ai-cloud/index.md
