@@ -237,6 +237,9 @@ input.md-search__input::placeholder {
       display: none;
   }
 }
+.md-nav__link--passed {
+  background-color: white !important;
+}
 .md-nav__link--active {
   color: rgb(8 91 215) !important;
   border-radius: .375rem;
@@ -254,9 +257,11 @@ input.md-search__input::placeholder {
   max-width: 1175px;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 1.5rem;
 }
 .md-main__inner {
   padding-bottom: 50px;
+  margin-top: 0;
 }
 .md-typeset table:not([class]) th, .md-typeset table:not([class]) td {
   padding: 0.8em;
@@ -1103,9 +1108,7 @@ del {
   color: var(--aau-primary);
   font-family: "Montserrat";
 }
-.md-sidebar__scrollwrap {
-  overflow-y: hidden;
-}
+
 @media screen and (min-width: 76.25em) {
   .md-nav__item--section>.md-nav__link[for] {
       color: var(--aau-primary);
@@ -1117,4 +1120,10 @@ del {
 }
 .md-typeset .admonition.info:focus-within {
   box-shadow: none;
+}
+.md-sidebar__scrollwrap:focus-within, .md-sidebar__scrollwrap:hover {
+  scrollbar-color: initial;
+}
+.md-sidebar__scrollwrap {
+  scrollbar-color: initial;
 }

@@ -2,21 +2,12 @@ Monitoring GPU usage is a good practice for optimizing the performance of your j
 
 ### Start a job with GPU allocation
 
-<div class="show-on-ai-lab" style="display:none;" markdown="span">
-    First, submit a job using `srun` or `sbatch` with one GPU or more allocated and execute some code inside a Singularity container. In this example we will use the `pytorch_24.03-py3.sif` container image from `/ceph/container` directory and a PyTorch benchmark script `torch_bm.py` from `/ceph/course/claaudia/docs` directory:
 
-    ```
-    srun --gres=gpu:1 singularity exec --nv /ceph/container/pytorch_24.03-py3.sif python3 torch_bm.py
-    ```
-</div>
+First, submit a job using `srun` or `sbatch` with one GPU or more allocated and execute some code inside a Singularity container. In this example we will use `pytorch_24.03-py3.sif` container image and a PyTorch benchmark script `torch_bm.py`:
 
-<div class="show-on-ai-cloud" style="display:none;" markdown="span">
-    First, submit a job using `srun` or `sbatch` with one GPU or more allocated and execute some code inside a Singularity container. In this example we will use `pytorch_24.03-py3.sif` container image and a PyTorch benchmark script `torch_bm.py`:
-    
-    ```
-    srun --gres=gpu:1 singularity exec --nv pytorch_24.03-py3.sif python3 torch_bm.py
-    ```
-</div>
+```
+srun --gres=gpu:1 singularity exec --nv pytorch_24.03-py3.sif python3 torch_bm.py
+```
 
 This script is NOT optimized for utilizing multiple GPUs, so in this example we will only allocate 1 GPU. [Here](multiple-gpus-with-pytorch.md) is an example of a PyTorch script that can handle multiple GPUs.
 

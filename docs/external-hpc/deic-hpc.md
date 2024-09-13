@@ -4,13 +4,9 @@ Through the Danish e-Infrastructure Cooperation (DeiC), CLAAUDIA can provide acc
 
 <div class="grid cards grid-three" markdown>
 
--   #### DeiC Interactive HPC (UCloud)
-  
-    UCloud is a digital research platform developed by the SDU eScience Center, specifically designed to deliver high-performance computing with a strong emphasis on user experience. UCloud is provided by a consortium including AAU and we at CLAAUDIA can directly provide resources to any student or researcher at AAU. [Read more here](/ucloud/). 
-
 -   #### DeiC Throughput HPC
     
-    DeiC Throughput HPC allows users to submit jobs to a queue system on a large cluster of CPU servers which then executes the job. These systems allow for much larger pools of resources to be used, but the user cannot interact directly with the hardware, as with Interactive HPC. Facilities includes [DTU Sophia](https://dtu-sophia.github.io/docs/), [GenomeDK](https://genome.au.dk/docs/hardware/), and [Computerome 2.0](https://escience.sdu.dk/index.php/type-2-computerome/).
+    DeiC Throughput HPC allows users to submit jobs to a queue system on a large cluster of CPU servers which then executes the job. These systems allow for much larger pools of resources to be used, but the user cannot interact directly with the hardware. Facilities includes [DTU Sophia](https://dtu-sophia.github.io/docs/), [GenomeDK](https://genome.au.dk/docs/hardware/), and [Computerome 2.0](https://escience.sdu.dk/index.php/type-2-computerome/).
 
 -   #### DeiC Large Memory HPC
 
@@ -75,7 +71,6 @@ There are three ways of getting access to DeiC HPC resources. Apart from those, 
 #### Which DeiC HPC types can be accessed through the certain ways?
 | DeiC HPC Type	| Local resources | DeiC Sandbox | National resources|
 | --- | --- | --- | --- |
-| Interactive HPC | Yes | Yes | Yes |
 | Throughput HPC | Yes | Yes | Yes |
 | Large Memory HPC | No | Yes | Yes |
 | LUMI-capability HPC | Yes | Yes | Yes |

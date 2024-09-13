@@ -7,13 +7,7 @@ Let's create a bash script to submit a simple job that runs a Singularity contai
 
 #### Step 1: Prepare the Singularity Container
 
-<div class="show-on-ai-lab" style="display:none;" markdown="span">
-    Ensure you have a Singularity image (.sif file) ready. For this example, let's use the `tensorflow_24.03-tf2-py3.sif` container image from `/ceph/container`.
-</div>
-
-<div class="show-on-ai-cloud" style="display:none;" markdown="span">
-    Ensure you have a Singularity image (.sif file) ready. For this example, we will use `tensorflow_24.03-tf2-py3.sif` container image.
-</div>
+Ensure you have a Singularity image (.sif file) ready. For this example, we will use `tensorflow_24.03-tf2-py3.sif` container image.
 
 #### Step 2: Create the Python Script
 Create a simple Python script named hello.py:
@@ -25,35 +19,18 @@ print("Hello from within the Singularity container!")
 #### Step 3: Create the Bash Script
 Create a bash script named run_job.sh:
 
-<div class="show-on-ai-lab" style="display:none;" markdown="span">
-    ```
-    #!/bin/bash
-    #SBATCH --job-name=singularity_test
-    #SBATCH --output=result_%j.out
-    #SBATCH --error=error_%j.err
-    #SBATCH --time=00:10:00
-    #SBATCH --ntasks=1
-    #SBATCH --cpus-per-task=1
-    #SBATCH --mem=1G
+```
+#!/bin/bash
+#SBATCH --job-name=singularity_test
+#SBATCH --output=result_%j.out
+#SBATCH --error=error_%j.err
+#SBATCH --time=00:10:00
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=1
+#SBATCH --mem=1G
 
-    singularity exec /ceph/container/tensorflow_24.03-tf2-py3.sif python hello.py
-    ```
-</div>
-
-<div class="show-on-ai-cloud" style="display:none;" markdown="span">
-    ```
-    #!/bin/bash
-    #SBATCH --job-name=singularity_test
-    #SBATCH --output=result_%j.out
-    #SBATCH --error=error_%j.err
-    #SBATCH --time=00:10:00
-    #SBATCH --ntasks=1
-    #SBATCH --cpus-per-task=1
-    #SBATCH --mem=1G
-
-    singularity exec tensorflow_24.03-tf2-py3.sif python hello.py
-    ```
-</div>
+singularity exec tensorflow_24.03-tf2-py3.sif python hello.py
+```
 
 Explanation of SBATCH Options:
 

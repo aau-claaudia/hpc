@@ -33,7 +33,7 @@ https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/ (best, is to
 
     Learn the basics on how to use AI Cloud.
 
-    [Guides for AI Cloud](/ai-cloud/getting-started/before-you-begin/){ .md-button .md-button--primary }
+    [Guides for AI Cloud](/ai-cloud/getting-started/){ .md-button .md-button--primary }
 
 - :material-lan: __System Overview__ 
 

@@ -138,7 +138,7 @@ nav:
 
   - External HPC:
     - About external HPC resources: external-hpc/index.md
-    - Deic HPC: external-hpc/deic-hpc.md
+    - DeiC HPC: external-hpc/deic-hpc.md
     - EuroHPC: external-hpc/eurohpc.md
 theme:
   name: material
@@ -151,6 +151,7 @@ theme:
     - content.code.annotate
     - navigation.prune
     - navigation.sections
+    - toc.integrate
 
   logo: assets/img/aau-logo-512x512.png
   favicon: assets/favicon.ico
@@ -170,6 +171,8 @@ extra_javascript:
   - javascripts/conditional.js
 
 markdown_extensions:
+  - toc:
+      toc_depth: 3
   - pymdownx.superfences
   - pymdownx.tabbed:
       alternate_style: true 

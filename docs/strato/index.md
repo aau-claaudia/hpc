@@ -33,15 +33,15 @@ https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/ (best, is to
 
     Learn the basics on how to use Strato.
 
-    [Guides for Strato](/strato/getting-started/before-you-begin/){ .md-button .md-button--primary }
+    [Guides for Strato](/strato/getting-started/){ .md-button .md-button--primary }
 
-- :material-lan: __System Overview__ 
+- :material-scale-balance: __Terms and Conditions__ 
 
     ---
 
-    Get an overview of Strato's capabilities.
+    Get an overview of the Terms and Conditions for Strato.
 
-    [System Overview](/strato/system-overview/){ .md-button .md-button--primary }
+    [Terms and Conditions](/strato/terms-and-conditions/){ .md-button .md-button--primary }
 
 </div>
 

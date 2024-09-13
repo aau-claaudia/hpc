@@ -33,7 +33,7 @@ https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/ (best, is to
 
     Learn the basics on how to use AI-LAB.
 
-    [Guides for AI-LAB](/ai-lab/getting-started/before-you-begin/){ .md-button .md-button--primary }
+    [Guides for AI-LAB](/ai-lab/getting-started/){ .md-button .md-button--primary }
 
 - :material-lan: __System Overview__ 
 
