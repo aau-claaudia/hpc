@@ -136,10 +136,10 @@ nav:
       - Adding a course: ai-lab/for-lecturers/adding-a-course.md
       - Page design guide: ai-lab/for-lecturers/page-design-guide.md
 
-  - National HPC:
-    - About national HPC resources: national-hpc/index.md
-    - How to access: national-hpc/how-to-access.md
-
+  - External HPC:
+    - About external HPC resources: external-hpc/index.md
+    - Deic HPC: external-hpc/deic-hpc.md
+    - EuroHPC: external-hpc/eurohpc.md
 theme:
   name: material
   custom_dir: docs/overrides

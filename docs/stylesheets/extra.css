@@ -278,7 +278,7 @@ input.md-search__input::placeholder {
   margin: 0;
   padding: 0;
   font-weight: 700;
-  font-size: .875rem;
+  font-size: 22px;
   color: var(--aau-primary);
   font-family: "Barlow", sans-serif;
 }
@@ -288,7 +288,9 @@ input.md-search__input::placeholder {
 .show-on-ai-cloud, .show-on-ai-lab {
   font-family: "Roboto", sans-serif;
 }
-
+.md-typeset table:not([class]) {
+  font-size: 16px;
+}
 /* 
 
 .grid ul li {
