@@ -43,17 +43,23 @@ https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/ (best, is to
     
     [:octicons-arrow-right-24: Getting access](/ai-lab/how-to-access/)
 
--   __DeiC & EuroHPC__
+-   __DeiC HPC__
     
-    The Danish E-Infrastructure Cooperation (DeiC) and The European High Performance Computing Joint Undertaking (EuroHPC) offers a range of HPC possibilities.
+    Through the Danish e-Infrastructure Cooperation (DeiC), CLAAUDIA can provide access to HPC facilities run at a national scale.
 
-    [:octicons-arrow-right-24: About Deic & EuroHPC](/deic-and-eurohpc/)
+    [:octicons-arrow-right-24: About Deic HPC](/external-hpc/deic-hpc/)
     
-    [:octicons-arrow-right-24: Getting access](/deic-and-eurohpc/how-to-access/)
+-   __EuroHPC__
+    
+    Aalborg University researchers are eligible to use the supercomputers of the EuroHPC.
 
+    [:octicons-arrow-right-24: About EuroHPC](/external-hpc/eurohpc/)
+    
 </div>
 
 <br> <!-- Just a little break -->
+
+<!-- NOT DONE YET
 
 ## Compare with other system
 
