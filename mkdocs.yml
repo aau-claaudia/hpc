@@ -140,7 +140,6 @@ theme:
   features:
     - navigation.instant
     - navigation.tabs
-    - navigation.tabs.sticky
     - content.code.copy
     - content.code.annotate
     - navigation.prune
