@@ -1,6 +1,6 @@
 In this guide, we will demonstrate how to submit a job to Slurm using a batch script. 
 
-!!! info "What is a bash script?"
+!!! info "What is a batch script?"
     A batch script is a text file that contains all the arguments you would otherwise give to Slurm via `srun`. The advantage of using batch scripts, is that they are a convenient way for us to document our workflow.
 
 Let's create a bash script to submit a simple job that runs a Singularity container. This job will run a Python script inside the container.

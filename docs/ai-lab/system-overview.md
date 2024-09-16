@@ -41,9 +41,9 @@ You start by logging into a front-end node, either `ailab-fe01` or `ailab-fe02`.
 ### Compute nodes
 AI-LAB currently include the following compute nodes:
 
-| Node name            | CPU model             | Number of CPUs | Number of cores | Number of GPUs | GPU Model | Total Memory (GB) |
-| -------------------- | --------------------- | -------------- | --------------- | -------------- | --------- | ----------------- |
-| ailab-l4-[01-11]     | AMD EPYC 7543 32-Core | 128            | 64              | 8              | NVIDIA L4 | 500               |
+| Node name            | CPU model             | Number of CPUs | Number of cores | Number of GPUs | GPU Model | RAM pr GPU (GB) |
+| -------------------- | --------------------- | -------------- | --------------- | -------------- | --------- | --------------- |
+| ailab-l4-[01-11]     | AMD EPYC 7543 32-Core | 128            | 64              | 8              | NVIDIA L4 | 24              |
 
 
 ## Software
@@ -103,7 +103,7 @@ flowchart LR
 <br>
 
 #### Pre-Downloaded Containers on AI-LAB
-AI-LAB provides a variety of pre-downloaded containers to help users get started quickly. These containers are stored in the `/ceph/container` directory. The list of available containers is periodically updated, and users can propose new containers by contacting the [support team](../help-and-resources/support.md). Currently available container images includes:
+AI-LAB provides a variety of pre-downloaded containers to help users get started quickly. These containers are stored in the `/ceph/container` directory. The list of available containers is periodically updated, and users can propose new containers by contacting the [support team](https://serviceportal.aau.dk/serviceportal?id=emp_taxonomy_topic&topic_id=82a253e8838fc21053711d447daad328). Currently available container images includes:
 
 - PyTorch (CPU/GPU)
 - TensorFlow (CPU/GPU)
@@ -243,4 +243,4 @@ For convenience and efficiency, AI-LAB offers a collection of ready-to-use appli
     </ul>
 </div>
 
-If you have specific container image requests, we welcome your input. Please reach out to us via the [AAU service portal](https://www.serviceportal.aau.dk/) and include "CLAAUDIA" and "AI-LAB" in the subject line.
+If you have specific container image requests, we welcome your input. Please reach out to us via the [AAU service portal](https://serviceportal.aau.dk/serviceportal?id=emp_taxonomy_topic&topic_id=82a253e8838fc21053711d447daad328) and include "CLAAUDIA" and "AI-LAB" in the subject line.

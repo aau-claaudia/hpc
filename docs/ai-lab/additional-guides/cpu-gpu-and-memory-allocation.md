@@ -1,10 +1,10 @@
 To effectively run jobs, it's important to understand the hardware configuration and set appropriate parameters for resource allocation. Here’s a detailed guide on setting Slurm parameters based on the specified hardware on the platform:
 
 ### Memory per job
-`--mem` specifies the memory allocated to the job. Maximum value is 60 GB per GPU. Example:
+`--mem` specifies the memory allocated to the job. Maximum value is 24 GB per GPU. Example:
 
 ```
-srun --mem=60G singularity exec --nv /ceph/container/tensorflow_24.03-tf2-py3.sif python3 benchmark_tensorflow.py
+srun --mem=24G singularity exec --nv /ceph/container/tensorflow_24.03-tf2-py3.sif python3 benchmark_tensorflow.py
 ```
 
 

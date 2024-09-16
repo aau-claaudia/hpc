@@ -62,7 +62,7 @@ https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/ (best, is to
     Operating the AI Cloud involves learning how to use the queueing mechanism and understanding the containerisation concept. It's also useful to be able to navigate a Linux terminal environment.
 
 
-![Image title](/assets/img/ai-cloud-hero.webp)
+![Image title](/assets/img/ai-cloud/ai-cloud-hero.webp)
 
 </div>
 

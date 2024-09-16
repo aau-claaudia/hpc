@@ -38,4 +38,4 @@ The two commands `sinfo` and `scontrol show node` provide information which is e
 nodesummary
 ```
 
-![Screenshot of `nodesummary` in use.](../assets/img/nodesummary.png)
+![Screenshot of `nodesummary` in use.](/assets/img/ai-lab/nodesummary.png)
