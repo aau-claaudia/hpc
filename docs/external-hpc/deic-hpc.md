@@ -1,6 +1,8 @@
 # DeiC HPC
 
-Through the Danish e-Infrastructure Cooperation (DeiC), CLAAUDIA can provide access to HPC facilities run at a national scale. These facilities have different capabilities and target groups.
+##### Through the Danish e-Infrastructure Cooperation (DeiC), CLAAUDIA can provide access to HPC facilities run at a national scale. These facilities have different capabilities and target groups.
+
+<br> <!-- Just a little break -->
 
 <div class="grid cards grid-three" markdown>
 

@@ -7,7 +7,7 @@
 
 <div class="grid cards grid-button-bottom" markdown>
 
--   ## DeiC HPC
+-   #### DeiC HPC
 
     ---
 
@@ -16,7 +16,7 @@
     [Read more about DeiC HPC](/external-hpc/deic-hpc/){ .md-button .md-button--primary }
 
 
--   ## EuroHPC
+-   #### EuroHPC
 
     ---
 
