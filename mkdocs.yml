@@ -5,16 +5,7 @@ site_description: The AAU HPC pages offers comprehensive information on high-per
 copyright: Copyright &copy; 2024 CLAAUDIA
 
 nav:
-  - Home: index.md
-
-  - HPC Overview:
-    - Introduction to HPC: overview/index.md
-    - Platform Overview: overview/platform-overview.md
-    - Definition Library: overview/definition-library.md
-
-  - Support: https://serviceportal.aau.dk/serviceportal?id=emp_taxonomy_topic&topic_id=82a253e8838fc21053711d447daad328" target="_blank
-
-  - <span class="nav-divider"></span>: ""
+  - <span class="dont-display-this"></span>: index.md
 
   - Strato:
     - About Strato: strato/index.md
@@ -123,6 +114,7 @@ nav:
           - Running a container in interactive mode: ai-lab/additional-guides/running-a-container-in-interactive-mode.md
           - Run a bash script: ai-lab/additional-guides/run-a-bash-script.md
           - Multiple GPUs with PyTorch: ai-lab/additional-guides/multiple-gpus-with-pytorch.md
+        - Creating shared project directories: ai-lab/additional-guides/creating-shared-project-directories.md
         - Checkpointing: ai-lab/additional-guides/checkpointing.md
     - Courses:
       - Name generator exercises: ai-lab/courses/name-generator-exercises.md  
@@ -134,6 +126,12 @@ nav:
     - About external HPC resources: external-hpc/index.md
     - DeiC HPC: external-hpc/deic-hpc.md
     - EuroHPC: external-hpc/eurohpc.md
+
+  - <span class="nav-divider"></span>: ""
+
+  # Custom support button
+  - Get Support: https://serviceportal.aau.dk/serviceportal?id=emp_taxonomy_topic&topic_id=82a253e8838fc21053711d447daad328" target="_blank" class="support-btn md-tabs__link"
+
 theme:
   name: material
   custom_dir: docs/overrides

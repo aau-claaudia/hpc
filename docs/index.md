@@ -1,5 +1,4 @@
 ---
-template: home.html
 keywords: Home
 title: Home
 ---
@@ -16,43 +15,125 @@ title: Home
 
 <br> <!-- Just a little break -->
 
-## Introduction to HPC
-##### Basic information and instructions for first-time users of AAU HPC.
+## What is HPC?
+High-performance computing (HPC) refers to the use of powerful computing resources to tackle complex and resource-intensive tasks that exceed the capabilities of standard computing systems. For researchers and students at AAU, HPC provides the necessary power to train machine learning models, run simulations, perform data analysis, and conduct modeling, among other tasks. This capability is invaluable across a wide range of academic disciplines.
 
-<div class="grid cards grid-three grid-button-bottom" markdown>
+
+#### Benefits from using HPC
+
+<div class="grid cards grid-three" markdown>
 
 <!--
 Icons can be searched and found here:
 https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/ (best, is to use the ones starting with material)
 -->
 
--   :material-cloud-outline:{ .lg .middle } __What is HPC?__
+-   :material-server-outline:{ .lg .middle } __Parallel computing__
+    
+    AAU HPC provides access to specialized processors that enhance the speed and processing capabilities of the system, enabling the execution of highly parallelizable tasks.
 
-    ---
+-   :material-speedometer:{ .lg .middle } __Fast data processing__
     
-    Find out more about high-performance computing (HPC) and the terminology within this topic.
+    HPC allows for much faster calculations than what your local machine can provide. Instead of reducing the data sets - reduce the processing time!
 
-    [Introduction to HPC](/overview/){ .md-button .md-button--primary }
+-   :material-laptop:{ .lg .middle } __Available at hand__
     
--   :material-widgets-outline:{ .lg .middle } __Find platforms__
-
-    ---
-    
-    Explore the computing possibilities available to you at AAU and find out which HPC system fits your individual needs.
-    
-    [Expore platforms](/overview/platform-overview){ .md-button .md-button--primary }
-
--   :material-message-outline:{ .lg .middle } __Get help__
-
-    ---
-    
-    CLAAUDIA support provides you with assistance in accessing and using HPC resources in your work and projects.
-    
-    [Support](/support/){ .md-button .md-button--primary }
+    Thanks to HPC, you can access your computing environment from anywhere using your laptop, allowing you to work independently.
 
 </div>
 
+
+!!! info "Explore HPC Definitions"
+    Expand your knowledge of HPC and related terms.
+
+     [:octicons-arrow-right-24: See Definition Library](/overview/definition-library/)
+
 <br> <!-- Just a little break -->
+
+## Platform Overview
+
+##### At AAU, researchers and students can access various HPC platforms to perform simulations, data analysis, and other resource-intensive tasks that would be impractical on standard computers. 
+
+<br> <!-- Just a little break -->
+
+<div class="grid cards grid-three" markdown>
+
+<!--
+Icons can be searched and found here:
+https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/ (best, is to use the ones starting with material)
+-->
+
+-   __Strato__
+    
+    Strato is based on servers with CPU and GPU components that enable you to solve both generic and specific computational problems using virtual machines that you can configure yourself.
+    
+    [:octicons-arrow-right-24: About Strato](/strato/)
+    
+    [:octicons-arrow-right-24: Getting access](/strato/how-to-access/)
+
+-   __UCloud__
+    
+    UCloud is a digital research platform developed by the SDU eScience Center, specifically designed to deliver high-performance computing with a strong emphasis on user experience.    
+    
+    [:octicons-arrow-right-24: About UCloud](/ucloud/)
+    
+    [:octicons-arrow-right-24: Getting access](/ucloud/how-to-access/)
+
+-   __AI Cloud__
+    
+    AI Cloud holds the university's largest collection of GPU resources, and is specifically designed for running machine learning workloads.    
+    
+    [:octicons-arrow-right-24: About AI Cloud](/ai-cloud/)
+    
+    [:octicons-arrow-right-24: Getting access](/ai-cloud/how-to-access/)
+
+-   __AI-LAB__
+    
+    AI-LAB is designed exclusively for students at Aalborg University, offering high-performance computing (HPC) right at your fingertips.
+
+    [:octicons-arrow-right-24: About AI-LAB](/ai-lab/)
+    
+    [:octicons-arrow-right-24: Getting access](/ai-lab/how-to-access/)
+
+-   __DeiC HPC__
+    
+    Through the Danish e-Infrastructure Cooperation (DeiC), CLAAUDIA can provide access to HPC facilities run at a national scale.
+
+    [:octicons-arrow-right-24: About Deic HPC](/external-hpc/deic-hpc/)
+    
+-   __EuroHPC__
+    
+    Aalborg University researchers are eligible to use the supercomputers of the EuroHPC.
+
+    [:octicons-arrow-right-24: About EuroHPC](/external-hpc/eurohpc/)
+    
+</div>
+
+<br> <!-- Just a little break -->
+
+<!-- NOT DONE YET
+
+## Compare with other system
+
+##### Dive into the characteristics of the available HPC platforms
+
+| Feature | Strato | UCloud | AI Cloud | AI-LAB |
+| --- | --- | --- | --- | --- |
+| Available to researchers | :material-check: | :material-check: | :material-check: | :material-close: |
+| Available to students | :material-check: | :material-check: | :material-close: | :material-check: |
+| Data categories | 0,1 | 0,1,2,3 | 0,1 | 0,1 |
+| CPU processing | :material-check: | :material-check: | :material-close: | :material-close: |
+| Total number of CPUs |  |  |  |  |
+| Unlimited CPU ressources | :material-check: | :material-check: | :material-close: | :material-close: |
+| GPU processing | :material-check: | :material-check: | :material-check: | :material-check: |
+| Total number of GPUs |  |  |  |  |
+| Unlimited GPU ressources | :material-close: | :material-close: | :material-check: | :material-check: |
+| Storage quota |  |  | 1000 MB | 1000 MB |
+| Access interface | Linux terminal | Web browser | Linux terminal | Linux terminal |
+| Possible to add GUI | :material-check: | :material-check: | :material-close: | :material-close: |
+
+<br> <!-- Just a little break -->
+
 
 ## HPC Decision Tree
 
@@ -82,3 +163,6 @@ https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/ (best, is to
 
 !!! news "26-08-2024 - 16 new NVIDIA H100 GPUs for UCloud"
     You can find 16 new NVIDIA H100 GPU resources on UCloud (select machine type u3-gpu). Read more [here](https://escience.sdu.dk/index.php/news/16-new-h100-ai-gpus-arrive-at-sdu/).
+
+
+
