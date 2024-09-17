@@ -118,7 +118,7 @@ https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/ (best, is to
 
 <br> <!-- Just a little break -->
 
-## Please notice...
+## Please Notice...
 
 !!! info "Not for confidential or sensitive data"
     With AI-LAB you are only allowed to work with public or internal information according to [AAU’s data classification model](https://www.security.aau.dk/data-classification){target="_blank} (classified as levels 0 and 1, respectively).
