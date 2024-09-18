@@ -131,15 +131,11 @@ https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/ (best, is to
 
     AI Cloud might be a relevant choice when working with transformer methods in deep learning, and when the analysis involves a great amount of data– particularly image or video data. In this scenario, a good practice would be to test your jobs locally on a smaller scale, and involve the HPC afterwards, as it might take a long time to finish – depending how large is the data set you are working on.
 
-    [:octicons-arrow-right-24: AI Cloud](/ai-cloud/)
-
 -   __Electricity price forecasting__
 
     ---
 
     Integrate machine learning in your project to identify patterns in electricity price forecasting and develop large models with the use of AI Cloud's access to a powerful GPU, which provides processing power capable of dealing with large and complex datasets.
-
-    [:octicons-arrow-right-24: AI Cloud](/ai-cloud/)
 
 -   __Training large language models__
 
@@ -147,15 +143,11 @@ https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/ (best, is to
 
     Train large language models thanks to the powerful GPU which AI Cloud provides. You can accelerate various cloud workloads in parallel data processing and develop models for human-robot interaction or image classification. Integrate large datasets in your projects and train your models on HPC servers.
 
-    [:octicons-arrow-right-24: AI Cloud](/ai-cloud/)
-
 -   __Object recognition__
 
     ---
 
     Consider involving AI Cloud for training large neural networks for object recognition. The powerful GPU allows for achieving high-performance processing by integrating parallel computing into your project, which will also make the training process faster. With AI Cloud, you can integrate large data sets into your analysis and run short sampling tests to make sure the further processes are correct, fast, and convenient.
-
-    [:octicons-arrow-right-24: AI Cloud](/ai-cloud/)
 
 -   __Running atomistic simulations__
 
@@ -163,7 +155,6 @@ https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/ (best, is to
 
     Consider involving AI Cloud if in your project you are planning to run atomistic simulations. Powerful GPU processing is relevant when applying various methods for simulating materials and minerals on an atomic level, which might require running parallel simulations or many related scientific computing applications - which are supported by AI Cloud.
 
-    [:octicons-arrow-right-24: AI Cloud](/ai-cloud/)
 </div>
 
 
