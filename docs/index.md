@@ -71,6 +71,8 @@ https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/ (best, is to
     
     [:octicons-arrow-right-24: Getting access](/strato/how-to-access/)
 
+    [:octicons-arrow-right-24: Quicklink to application form](https://forms.office.com/e/r1u0QXH4KJ)
+
 -   __UCloud__
     
     UCloud is a digital research platform developed by the SDU eScience Center, specifically designed to deliver high-performance computing with a strong emphasis on user experience.    
@@ -78,6 +80,8 @@ https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/ (best, is to
     [:octicons-arrow-right-24: About UCloud](/ucloud/)
     
     [:octicons-arrow-right-24: Getting access](/ucloud/how-to-access/)
+
+    [:octicons-arrow-right-24: Quicklink to application form](https://forms.office.com/e/8Khbr1TJGC)
 
 -   __AI Cloud__
     
@@ -87,6 +91,8 @@ https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/ (best, is to
     
     [:octicons-arrow-right-24: Getting access](/ai-cloud/how-to-access/)
 
+    [:octicons-arrow-right-24: Quicklink to application form](https://forms.office.com/e/ewgvLRbbv7)
+
 -   __AI-LAB__
     
     AI-LAB is designed exclusively for students at Aalborg University, offering high-performance computing (HPC) right at your fingertips.
@@ -94,6 +100,8 @@ https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/ (best, is to
     [:octicons-arrow-right-24: About AI-LAB](/ai-lab/)
     
     [:octicons-arrow-right-24: Getting access](/ai-lab/how-to-access/)
+
+    [:octicons-arrow-right-24: Quicklink to application form](https://forms.office.com/Pages/ResponsePage.aspx?id=Sbrb9QbOb0msPgzxQ2HZNEdKMbCNz_9Lom8_yaZURCNUNjcwRzFLWkYyUDVPTjFLUDRTT0JZUzZCOCQlQCN0PWcu)
 
 -   __DeiC HPC__
     
