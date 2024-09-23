@@ -119,7 +119,9 @@ nav:
         - Creating shared project directories: ai-lab/additional-guides/creating-shared-project-directories.md
         - Checkpointing: ai-lab/additional-guides/checkpointing.md
     - Courses:
-      - Name generator exercises: ai-lab/courses/name-generator-exercises.md  
+      - Name generator exercises: 
+        - Part one: ai-lab/courses/name-generator-exercises/part-1.md  
+        - Part two: ai-lab/courses/name-generator-exercises/part-2.md
     - For lecturers:
       - Adding a course: ai-lab/for-lecturers/adding-a-course.md
       - Page design guide: ai-lab/for-lecturers/page-design-guide.md
