@@ -38,7 +38,7 @@ To *move* files and directories use `mv [source] [destination]`.
 	You can transfer files between your local computer and AI Cloud using [WinSCP](https://winscp.net/eng/download.php). Other popular solutions are [PuTTY](https://www.putty.org/) and [FileZilla](https://filezilla-project.org/). Alternatively, you can install [OpenSSH](https://learn.microsoft.com/en-us/windows-server/administration/openssh/openssh_install_firstuse?tabs=gui) to use the `scp` command, as shown for [Linux/MacOS](#__tabbed_1_2) users.
 
 	When you open WinSCP, you will be greeted by a *Login* modal. Follow the instructions in the image above to establish a connection to the server.
-	![Screenshot of WinSCP setup](/assets/img/winscp-setup-ai-cloud.png)
+	![Screenshot of WinSCP setup](/assets/img/ai-cloud/winscp-setup.png)
 		
 	You can now drag and drop files between your local computer and the AI Cloud platform.
 

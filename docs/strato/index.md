@@ -33,15 +33,15 @@ https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/ (best, is to
 
     Learn the basics on how to use Strato.
 
-    [Guides for Strato](/strato/getting-started/before-you-begin/){ .md-button .md-button--primary }
+    [Guides for Strato](/strato/getting-started/){ .md-button .md-button--primary }
 
-- :material-lan: __System Overview__ 
+- :material-scale-balance: __Terms and Conditions__ 
 
     ---
 
-    Get an overview of Strato's capabilities.
+    Get an overview of the Terms and Conditions for Strato.
 
-    [System Overview](/strato/system-overview/){ .md-button .md-button--primary }
+    [Terms and Conditions](/strato/terms-and-conditions/){ .md-button .md-button--primary }
 
 </div>
 
@@ -120,7 +120,66 @@ https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/ (best, is to
 
 <br> <!-- Just a little break -->
 
-## Please notice...
+## Use cases
+
+##### Find out how Strato can be effectively utilized in certain computing practices.
+
+<div class="grid cards grid-three" markdown>
+
+-   __Synthetic data generation and probabilistic graphical model__
+
+    ---
+
+    Integrate the joint power of CPU and GPU in an interactive environment provided by Strato if you need to run your experiments on servers with many CPU cores, for example for creating synthetic data. For some methods, just like probabilistic graphical models, you can take advantage of the GPU available on this system and run the algorithms effectively.
+
+-   __Developing natural language processing pipelines__
+
+    ---
+
+    Develop a natural language processing pipeline and create a set consisting of several natural language processing large language models. Involve extensive datasets in your projects with convenient memory and storage access possibilities of Strato with the possibility of GPU integration. Work in an individual and interactive environment.
+
+-   __Graph data management and knowledge graphs__
+
+    ---
+
+    If you are planning to carry out CPU-intensive processes in your project, consider integrating Strato, which allows for explorative research thanks to its interactive environment - for example running queries or specialized algorithms while working on the graph data. Suitable for those whose analysis involves measuring the efficiency of the code, and where the code algorithms play a great role in the project.
+
+-   __Knowledge graph embedding__
+
+    ---
+
+    Involve the powerful GPU provided by AI Cloud in your project to train different knowledge graph embedding models for many applications like entity recognition, clustering, or link prediction. Take advantage of parallel computing possibilities and integrate them in multi-relation learning of your models.
+
+-   __Text mining__
+
+    ---
+
+    Tackle multi-dimensional problems involving text mining methods and consult utilizing Strato, which provides access to powerful CPU cores. Set up your own virtual environment, establish the connection between the files, settings and libraries, and work on your extensive data sets at any time, without the need of setting up the environment every time you start running the virtual machine and save time on training your models.
+
+-   __Data mining__
+
+    ---
+
+    If your project involves dealing with a great amount of unstructured data, consider integrating Strato buy-in for the implementation of various mathematical and statistical algorithms in an interactive environment allowing for fast and parallel computing. Involve multiple complex databases and data processing and choose the required hardware specifications yourself.
+
+-   __Training object detection model__
+
+    ---
+
+    Train object detection models with the use of deep neural networks by integrating GPU in an explorative and interactive environment. The possibilities of Strato allow you to run tasks on servers with powerful GPU to integrate training pipelines, and effectively train your models.
+
+-   __Running parallel simulations__
+
+    ---
+
+    If you are planning to run several simulations in your project simultaneously, possibly also involving extensive data sets, you might consider applying for access to Strato, which allows for parallel computing in an interactive environment of virtual machines.
+
+
+</div>
+
+<br> <!-- Just a little break -->
+
+## Important Information
 
 !!! info "Not for confidential or sensitive data"
     With Strato you are only allowed to work with public or internal information according to [AAU’s data classification model](https://www.security.aau.dk/data-classification){target="_blank} (classified as levels 0 and 1, respectively).

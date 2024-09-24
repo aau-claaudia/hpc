@@ -1,9 +1,7 @@
 Checkpointing is a technique used to ensure that your computational jobs can be resumed from a previously saved state in case of interruptions or failures. This guide outlines how to implement and use checkpointing effectively within your jobs using different applications.
 
 !!! info "Why checkpointing matters"
-    <div class="show-on-ai-lab" style="display:none;">
-        <p><span style="font-weight:700;">Job Time Limits:</span>On AI-LAB, jobs are restricted to a maximum runtime of 12 hours. Checkpointing allows you to save your model's progress periodically, ensuring that even if your job is terminated due to time limits, you can restart training from the last checkpoint rather than starting over.</p>
-    </div>
+    <p><span style="font-weight:700;">Job Time Limits:</span>On AI-LAB, jobs are restricted to a maximum runtime of 12 hours. Checkpointing allows you to save your model's progress periodically, ensuring that even if your job is terminated due to time limits, you can restart training from the last checkpoint rather than starting over.</p>
 
     <span style="font-weight:700;">Service Windows:</span> There are times when the platform undergoes maintenance or updates, during which jobs cannot be run. Checkpointing enables you to pause training during these service windows and resume later without losing progress.
 

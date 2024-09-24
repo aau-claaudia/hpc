@@ -33,7 +33,7 @@ https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/ (best, is to
 
     Learn the basics on how to use AI Cloud.
 
-    [Guides for AI Cloud](/ai-cloud/getting-started/before-you-begin/){ .md-button .md-button--primary }
+    [Guides for AI Cloud](/ai-cloud/getting-started/){ .md-button .md-button--primary }
 
 - :material-lan: __System Overview__ 
 
@@ -62,7 +62,7 @@ https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/ (best, is to
     Operating the AI Cloud involves learning how to use the queueing mechanism and understanding the containerisation concept. It's also useful to be able to navigate a Linux terminal environment.
 
 
-![Image title](/assets/img/ai-cloud-hero.webp)
+![Image title](/assets/img/ai-cloud/ai-cloud-hero.webp)
 
 </div>
 
@@ -119,7 +119,48 @@ https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/ (best, is to
 
 <br> <!-- Just a little break -->
 
-## Please notice...
+## Use cases
+
+##### Find out how AI Cloud can be effectively utilized in certain computing practices.
+
+<div class="grid cards grid-three" markdown>
+
+-   __Transformer methods with large amount of data__
+
+    ---
+
+    AI Cloud might be a relevant choice when working with transformer methods in deep learning, and when the analysis involves a great amount of data– particularly image or video data. In this scenario, a good practice would be to test your jobs locally on a smaller scale, and involve the HPC afterwards, as it might take a long time to finish – depending how large is the data set you are working on.
+
+-   __Electricity price forecasting__
+
+    ---
+
+    Integrate machine learning in your project to identify patterns in electricity price forecasting and develop large models with the use of AI Cloud's access to a powerful GPU, which provides processing power capable of dealing with large and complex datasets.
+
+-   __Training large language models__
+
+    ---
+
+    Train large language models thanks to the powerful GPU which AI Cloud provides. You can accelerate various cloud workloads in parallel data processing and develop models for human-robot interaction or image classification. Integrate large datasets in your projects and train your models on HPC servers.
+
+-   __Object recognition__
+
+    ---
+
+    Consider involving AI Cloud for training large neural networks for object recognition. The powerful GPU allows for achieving high-performance processing by integrating parallel computing into your project, which will also make the training process faster. With AI Cloud, you can integrate large data sets into your analysis and run short sampling tests to make sure the further processes are correct, fast, and convenient.
+
+-   __Running atomistic simulations__
+
+    ---
+
+    Consider involving AI Cloud if in your project you are planning to run atomistic simulations. Powerful GPU processing is relevant when applying various methods for simulating materials and minerals on an atomic level, which might require running parallel simulations or many related scientific computing applications - which are supported by AI Cloud.
+
+</div>
+
+
+<br> <!-- Just a little break -->
+
+## Important Information
 
 !!! info "Not for confidential or sensitive data"
     With AI Cloud you are only allowed to work with public or internal information according to [AAU’s data classification model](https://www.security.aau.dk/data-classification){target="_blank} (classified as levels 0 and 1, respectively).

@@ -1,14 +1,14 @@
 You can download a large range of container images by visiting [NVIDIA GPU Cloud (NGC)](https://catalog.ngc.nvidia.com/) and check whether NVIDIA provides a container image with the application you need.
 
-![Screenshot of NGC website](/assets/img/ngc.png)
+![Screenshot of NGC website](/assets/img/ai-lab/ngc.png)
 
 As an example, this could be TensorFlow. You can search on NGC and find [TensorFlow](https://catalog.ngc.nvidia.com/orgs/nvidia/containers/tensorflow). Here you can choose the desired version from the "Copy image path" dropdown menu:
 
-![Screenshot of NGC TensorFlow page](/assets/img/ngc-tf-detail.png)
+![Screenshot of NGC TensorFlow page](/assets/img/ai-lab/ngc-tf-detail.png)
 
 This copies a link to the container image which we will use in the following example.
 
-## Setting `SINGULARITY_TMPDIR` and `SINGULARITY_CACHEDIR`:
+#### Setting `SINGULARITY_TMPDIR` and `SINGULARITY_CACHEDIR`:
 Before downloading the container image, we need to set the `SINGULARITY_TMPDIR` and `SINGULARITY_CACHEDIR` environment variables, to speed up repeated operations. We will use these variables to a temporary directory (`$HOME/.singularity/tmp/` and `$HOME/.singularity/cache/`) inside your home directory. Singularity will use this directory for storing temporary files and cached data during container operations.
 
 ```
