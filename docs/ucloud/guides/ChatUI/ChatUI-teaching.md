@@ -1,4 +1,4 @@
-# ChatUI classroom guide
+# ChatUI teaching guide
 
 **Table of content**
 
