@@ -43,7 +43,7 @@ nav:
     - Guides:
       - Getting started:
         - Before you begin: ucloud/guides/getting-started/before-you-begin.md
-        - Download files: ucloud/guides/getting-started/download-files.md
+        - File transfer: ucloud/guides/getting-started/transfer-files.md
       - ChatUI:
     #    - ChatUI for research: ucloud/guides/ChatUI/ChatUI-research.md 
         - ChatUI for teachers: ucloud/guides/ChatUI/ChatUI-teaching.md
