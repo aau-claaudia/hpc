@@ -41,9 +41,13 @@ nav:
     - How to access: ucloud/how-to-access.md
     - Terms and Conditions: ucloud/terms-and-conditions.md
     - Guides:
-      - Getting started: ucloud/guides/getting-started.md
+      - Getting started:
+        - Before you begin: ucloud/guides/getting-started/before-you-begin.md
+        - File transfer: ucloud/guides/getting-started/transfer-files.md
+      - ChatUI:
+    #    - ChatUI for research: ucloud/guides/ChatUI/ChatUI-research.md 
+        - ChatUI for teachers: ucloud/guides/ChatUI/ChatUI-teaching.md
       - Transcriber: ucloud/guides/transcriber.md
-      - ChatUI for teachers: ucloud/guides/ChatUI-teaching.md
 
   - AI Cloud:
     - About AI Cloud: ai-cloud/index.md
