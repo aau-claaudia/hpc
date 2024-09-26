@@ -2,8 +2,8 @@
 
 Transcriber is an app for transcribing audio into text. Many apps can do this, but like it’s sister transcription app, Whisper, Transcriber is a little different in a big way. Located on UCloud on the DeiC Interactive HPC it can handle sensitive data. Transcriber is developed to support features not available with the Whisper-based technology, such as speech recognition. Transcriber is available for everyone with access to UCloud. 
 
-!!! info "Feedback is appreciated"
-    Transcriber is still under development and getting new features. Please give us your feedback via the [AAU service portal](https://serviceportal.aau.dk/serviceportal?id=sc_cat_item&sys_id=0a246b54c353f150f5575dcd2b013105).
+!!! info "Written guide"
+    **[Transcriber user guide (PDF)](/assets/transcriber-userguide-1-1.pdf)**
 
 ## Video guide
 
@@ -76,6 +76,10 @@ Transcriber is an app for transcribing audio into text. Many apps can do this, b
             referrerpolicy="strict-origin-when-cross-origin" 
             allowfullscreen></iframe>
 </div>
+
+!!! info "Feedback is appreciated"
+    Transcriber is still under development and getting new features. Please give us your feedback via the [AAU service portal](https://serviceportal.aau.dk/serviceportal?id=sc_cat_item&sys_id=0a246b54c353f150f5575dcd2b013105).
+
 
 ## Sensitive data?
 For employees at AAU:
