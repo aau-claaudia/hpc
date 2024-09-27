@@ -163,7 +163,7 @@ https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/ (best, is to
 
 <br> <!-- Just a little break -->
 
-## News & Announcements
+<!-- ## News & Announcements
 
 ##### Overview of the new features, enhancements, and important maintenance updates for AAU HPC platforms.
 
@@ -171,4 +171,4 @@ https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/ (best, is to
     We have arranged the automatic security updates for all hosts on our OpenStack platform (Strato and UCloud virtual machines) and AI Cloud. The routine maintenance will start **00:01, 17th of September 2024**. We have reserved the entire day from 00:01 to 23:59, but the time required to restart hosts once all instances have been shut down is only a few minutes. Strato and UCloud virtual machines may still be affected by the maintenance on the CEPH storage, so you should expect some performance impact until that is completed. AI-Cloud will be unavailable throughout most of that day and will come back online towards the end of the workday. 
 
 !!! news "26-08-2024 - 16 new NVIDIA H100 GPUs for UCloud"
-    You can find 16 new NVIDIA H100 GPU resources on UCloud (select machine type u3-gpu). Read more [here](https://escience.sdu.dk/index.php/news/16-new-h100-ai-gpus-arrive-at-sdu/).
+    You can find 16 new NVIDIA H100 GPU resources on UCloud (select machine type u3-gpu). Read more [here](https://escience.sdu.dk/index.php/news/16-new-h100-ai-gpus-arrive-at-sdu/). -->
