@@ -13,7 +13,7 @@ All Aalborg University users automatically have access to UCloud and can simply 
 
     These policies cover the general rules all researchers (and students and TAP staff for GDPR) should abide by with regards to what kind of data may be kept, for how long, whether data can be re-used or recycled, and how long it should be archived for, etc.
 
-## UCloud Projects: Apply for additional quota
+## UCloud projects: Additional resources and working with sensitive data
 It is also possible to apply for a separate **Project** workspace or environment on the UCloud platform.
 The project environment allows collaboration with separate storage, computer resources, and management of user rights and responsibilities on the UCloud platform.
 

@@ -8,6 +8,7 @@
     
     UCloud provides an intuitive graphical user interface to powerful interactive high-performance computing and tools for data analytics and visualization. UCloud offers an “Apps” section preloaded with popular applications and more applications can be customized and uploaded on-demand. UCloud gives researchers access to the computing power they need, whenever they need it.
 
+    [Apply for resources](/ucloud/how-to-access/){ .md-button .md-button--primary .not-max-width}
 
 ## Introduction to UCloud
 

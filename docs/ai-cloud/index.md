@@ -8,6 +8,8 @@
 
     Accessing AI Cloud is done from a terminal application found on your local computer. From here you log into a front-end node, where you can manage your files and submit your jobs to a queueing mechanism (Slurm). The job is then distributed to one of the GPU nodes in the cluster. Given that AI Cloud is a platform shared among many users, it is not a system where you install your software directly on to the system. Instead, you rely on software containers, that have all the necessary software libraries bundled up in a single file.
 
+    [Apply for resources](/ai-cloud/how-to-access/){ .md-button .md-button--primary .not-max-width}
+
 ## Introduction to AI Cloud
 
 ##### Basic information and instructions for first-time users of AI Cloud.

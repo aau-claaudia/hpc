@@ -8,6 +8,8 @@
     
     The platform integrates user-friendly software, such as PyTorch, TensorFlow, and MATLAB, and utilizes tools like Slurm for job scheduling and Singularity for containerization, making it accessible even to those with limited technical expertise.
 
+    [Apply for resources](/ai-lab/how-to-access/){ .md-button .md-button--primary .not-max-width}
+
 ## Introduction to AI-LAB
 
 ##### Basic information and instructions for first-time users of AI-LAB.
