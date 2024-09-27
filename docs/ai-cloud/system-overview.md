@@ -1,6 +1,6 @@
 
 ## Hardware
-The AI Cloud platform is built around several key components, including a front-end node for managing tasks and code, and 21 compute nodes equipped with diverse hardware options.
+The AI Cloud platform is built around several key components, including a front-end node for managing tasks and code, and 27 compute nodes equipped with diverse hardware options.
 
 In this overview, you will find a description of each major component of AI Cloud. Below, is a diagram illustrating the architecture of the AI Cloud platform.
 
@@ -8,7 +8,7 @@ In this overview, you will find a description of each major component of AI Clou
 flowchart LR
   subgraph id1[<p style="font-family: Barlow, sans-serif; font-weight: 800; font-size: 12px; text-transform: uppercase; color: #221a52; letter-spacing: 1px; margin: 5px;">Compute nodes</p>]
   direction TB
-  A["<span><img src="/assets/img/server.svg"  width='25' height='25' ><p>a256-t4-[01-03]</p><p>i256-a10-[06-10]</p><p>a256-a40-[04-07]</p><p>i256-a40-[01-02]</p><p>nv-ai-[01-03]</p><p>nv-ai-04</p><p>a768-l40-[01-02]</p><p>a512-mi100-01</p>
+  A["<span><img src="/assets/img/server.svg"  width='25' height='25' ><p>a256-t4-[01-03]</p><p>i256-a10-[06-10]</p><p>a256-a40-[04-07]</p><p>i256-a40-[01-02]</p><p>a512-l4-06</p><p>nv-ai-[01-03]</p><p>nv-ai-04</p><p>a768-l40s-[01-06]</p><p>a512-mi100-01</p>
   </span>"]
   end
 
@@ -47,16 +47,17 @@ AI Cloud currently include the following compute nodes:
 
 
 
-| Name             | Nodes in total |GPUs per node     | CPU cores per node | CPU HW threads | RAM per node | RAM per GPU  | Disk         | NVLINK / NVSWITCH | Primary usage                         |
-| ---              | ---            | ---              | ---                | ---            | ---          | ---          | ---          | ---               | ---                                   |
-| a256-t4-[01-03]  | 3              | 6 (NVIDIA T4)    | 32 (AMD EPYC)      | 64             | 256 GB       | 16 GB        | None locally | No                | Interactive / smaller single-GPU jobs |
-| i256-a10-[06-10] | 5              | 4 (NVIDIA A10)   | 32 (Intel Xeon)    | 64             | 256 GB       | 24 GB        | None locally | No                | Interactive / medium single-GPU jobs  |
-| a256-a40-[04-07] | 4              | 3 (NVIDIA A40)   | 32 (AMD EPYC)      | 32             | 256 GB       | 48 GB        | None locally | No                | Large single-GPU jobs                 |
-| i256-a40-[01-02] | 2              | 4 (NVIDIA A40)   | 24 (Intel Xeon)    | 24             | 256 GB       | 48 GB        | 6.4 TB /raid | Yes (2&times;2)   | Large single-/multi-GPU jobs          |
-| nv-ai-[01-03]    | 3              | 16 (NVIDIA V100) | 48 (Intel Xeon)    | 96             | 1470 GB      | 32 GB        | 30 TB /raid  | Yes               | Large / batch / multi-GPU jobs        |
-| nv-ai-04         | 1              | 8 (NVIDIA A100)  | 128 (AMD EPYC)     | 256            | 980 GB       | 40 GB        | 14 TB /raid  | Yes               | Large / batch / multi-GPU jobs        |
-| a768-l40-[01-02] | 2              | 8 (NVIDIA L40)   |                    |                |              | 48 GB        |              | Yes               | Large / batch / multi-GPU jobs        |
-| a512-mi100-01    | 1              | 8 (AMD MI100)    |                    |                |              | 32 GB        |              | Yes (Infinity Fabric link)| Large / batch / multi-GPU jobs        |
+| Name             | Nodes in total |GPUs per node     | CPU cores per node | CPU HW threads | RAM per node | RAM per GPU  | Disk         | NVLINK / Infinity Frabric Link | Primary usage                         |
+| ---              | ---            | ---              | ---                | ---            | ---          | ---          | ---          | ---                            | ---                                   |
+| a256-t4-[01-03]  | 3              | 6 (NVIDIA T4)    | 32 (AMD EPYC)      | 64             | 256 GB       | 16 GB        | -            | No                             | Interactive / smaller single-GPU jobs |
+| i256-a10-[06-10] | 5              | 4 (NVIDIA A10)   | 32 (Intel Xeon)    | 64             | 256 GB       | 24 GB        | -            | No                             | Interactive / medium single-GPU jobs  |
+| a256-a40-[04-07] | 4              | 3 (NVIDIA A40)   | 32 (AMD EPYC)      | 32             | 256 GB       | 48 GB        | -            | No                             | Large single-GPU jobs                 |
+| i256-a40-[01-02] | 2              | 4 (NVIDIA A40)   | 24 (Intel Xeon)    | 24             | 256 GB       | 48 GB        | 6.4 TB /raid | Yes (2&times;2)                | Large single-/multi-GPU jobs          |
+| a512-mi100-01    | 1              | 8 (AMD MI100)    | 16 (AMD EPYC)      | 32             | 512 GB       | 32 GB        | -            | Yes (Infinity Fabric link)     | Large / batch / multi-GPU jobs        |
+| a512-l4-06       | 6              | 8 (NVIDIA L4)    | 64 (AMD EPYC)      | 128            | 512 GB       | 24 GB        | -            | No                             | Large / batch / multi-GPU jobs        |
+| a768-l40s-[01-06]| 6              | 8 (NVIDIA L40s)  | 64 (AMD EPYC)      | 128            | 768 GB       | 48 GB        | -            | No                             | Large / batch / multi-GPU jobs        |
+| nv-ai-[01-03]    | 3              | 16 (NVIDIA V100) | 48 (Intel Xeon)    | 96             | 1470 GB      | 32 GB        | 30 TB /raid  | Yes                            | Large / batch / multi-GPU jobs        |
+| nv-ai-04         | 1              | 8 (NVIDIA A100)  | 128 (AMD EPYC)     | 256            | 980 GB       | 40 GB        | 14 TB /raid  | Yes                            | Large / batch / multi-GPU jobs        |
 
 !!! info "Note"
 
