@@ -47,7 +47,7 @@ AI Cloud currently include the following compute nodes:
 
 
 
-| Name             | Nodes in total |GPUs per node     | CPU cores per node | CPU HW threads | RAM per node | RAM per GPU  | Disk         | NVLINK / Infinity Frabric Link | Primary usage                         |
+| Name             | Nodes in total |GPUs per node     | CPU cores per node | CPU HW threads | RAM per node | RAM per GPU  | Local Disk   | NVLINK / Infinity Frabric Link | Primary usage                         |
 | ---              | ---            | ---              | ---                | ---            | ---          | ---          | ---          | ---                            | ---                                   |
 | a256-t4-[01-03]  | 3              | 6 (NVIDIA T4)    | 32 (AMD EPYC)      | 64             | 256 GB       | 16 GB        | -            | No                             | Interactive / smaller single-GPU jobs |
 | i256-a10-[06-10] | 5              | 4 (NVIDIA A10)   | 32 (Intel Xeon)    | 64             | 256 GB       | 24 GB        | -            | No                             | Interactive / medium single-GPU jobs  |
