@@ -192,7 +192,7 @@ AI-LAB fosters collaborative work through shared project directories. These dire
     </ul>
 </div>
 
-==Comming soon: Guide on how to utilize this==
+[Read our guide](/ai-lab/additional-guides/creating-shared-project-directories) on how to make shared project directories.
 
 <hr>
 
