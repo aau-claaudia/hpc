@@ -27,8 +27,8 @@ The project environment allows collaboration with separate storage, computer res
     GPU access on UCloud: All access to GPU resources on UCloud require a project (Only [data classification levels 0 and 1](https://www.security.aau.dk/data-classification)). Additional computer resources that are allocated out of the AAU pool of UCloud resources.
 
 
-#### How to get access to a UCloud Project?
-Creating a project requires you to the follow these steps:
+#### Procedure for working with sensitive data on UCloud
+Creating a project with sensitive data requires you to the follow these steps:
 
 1.  **Identify the data classification** of your data by reviewing the [AAU data classification model](https://www.security.aau.dk/data-classification).
 2.  **If you are a researcher**, and working with data classifications 2 or 3, you must register a research project with Grants and Contracts using the relevant [registration form](https://aaudk.sharepoint.com/sites/persondata-ressourcer/SitePages/Registrations%20og%20reports%20(Online%20forms).aspx).
