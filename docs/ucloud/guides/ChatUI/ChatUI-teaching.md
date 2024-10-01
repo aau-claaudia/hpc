@@ -1,11 +1,5 @@
 # ChatUI teaching guide
-
-**Table of content**
-
-1. [Setting up the Application](#setting-up-the-application)
-2. [Using the Application for Inference](#using-the-application-for-inference)
-3. [FAQ](#faq)
-  
+**Only for data classified as level 0 or 1**
 ## Setting up the application
 
 The Chat UI application on UCloud is a great tool for working with LLMs and is simple to set up and use. The app supports saving your work in a directory on your personal drive on UCloud. It is a good idea to use this option so that you only need to go through the setup process once. The first step is to create an empty folder to use as the application input parameter `DATA_DIR`.
@@ -16,7 +10,7 @@ Now it is time to find and start the application. Search for “chatui” under 
 
 ![ChatUI - Create empty folder](/assets/img/UCloud/ChatUI 2.png)
 
-Running inference against LLMs is much faster on a machine with one GPU and a large amount of memory. Remember to select the empty directory that was created in the first step as `DATA_DIR`. Notice also that you should specify the number of hours that the application should run for. 
+Running inference against LLMs is much faster on a machine with one GPU and a large amount of memory. For optimal performance, we recommend using the u3-GPU from SDU or the uc1-l4 or uc1-l40 from the AAU/K8 provider. Remember to select the empty directory that was created in the first step as `DATA_DIR`. Additionally, remember to specify the desired runtime duration for the application by setting the number of hours. Once the machine is running, you can extend the runtime or shut it down as needed.
 
 ![Find ChatUI under apps](/assets/img/UCloud/ChatUI 3.png)
 
@@ -24,7 +18,7 @@ The application needs a public link in order for the students to be able to acce
 
 ![Settings for the server](/assets/img/UCloud/ChatUI 4.png)
 
-In this example, we are using a machine in the AAU/K8 provider, so we will create the link on this provider.
+In this example, we are using a machine in the AAU/K8 provider, so we will create the link from the **same provider**.
 
 ![Create public link](/assets/img/UCloud/ChatUI 5.png)
 

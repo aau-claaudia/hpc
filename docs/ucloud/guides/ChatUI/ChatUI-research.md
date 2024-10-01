@@ -1,12 +1,6 @@
 # ChatUI for Researchers
 
-**Table of content**
-
-1. [Setting up the Application](#setting-up-the-application)
-2. [Using the Application for Inference](#using-the-application-for-inference)
-3. [FAQ](#faq)
-  
-## Setting up the application
+ ## Setting up the application
 
 The Chat UI application on UCloud is an excellent tool for working with large language models (LLMs) and is straightforward to set up. You can save your work in a directory on your personal UCloud drive, allowing you to reuse the setup later. First, create an empty folder to use as the application input parameter `DATA_DIR`.
 
