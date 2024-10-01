@@ -101,14 +101,24 @@ https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/ (best, is to
     
     [:octicons-arrow-right-24: Getting access](/ai-lab/how-to-access/)
 
-    [:octicons-arrow-right-24: Quicklink to application form](https://forms.office.com/Pages/ResponsePage.aspx?id=Sbrb9QbOb0msPgzxQ2HZNEdKMbCNz_9Lom8_yaZURCNUNjcwRzFLWkYyUDVPTjFLUDRTT0JZUzZCOCQlQCN0PWcu)
+    [:octicons-arrow-right-24: Quicklink to application form](https://forms.office.com/e/caEhCRmqVN)
 
--   __DeiC HPC__
+-   __DeiC Throughput HPC__
     
-    Through the Danish e-Infrastructure Cooperation (DeiC), CLAAUDIA can provide access to HPC facilities run at a national scale.
+    Through the Danish e-Infrastructure Cooperation (DeiC), CLAAUDIA can provide access to three National HPC facilities (Computerome 2.0, DTU Sophia, GenomeDK).
 
     [:octicons-arrow-right-24: About Deic HPC](/external-hpc/deic-hpc/)
+
+    [:octicons-arrow-right-24: Quicklink to application form](https://forms.office.com/e/DxRA4hPK84)
+
+-   __LUMI__
     
+    Through the Danish e-Infrastructure Cooperation (DeiC), CLAAUDIA can provide access to the pre-exascale LUMI supercomputer in Finland, with AMD based CPU and GPU resources available.
+
+    [:octicons-arrow-right-24: About Deic HPC](/external-hpc/deic-hpc/)
+
+    [:octicons-arrow-right-24: Quicklink to application form](https://forms.office.com/e/4XC48iVu4S)
+
 -   __EuroHPC__
     
     Aalborg University researchers are eligible to use the supercomputers of the EuroHPC.
