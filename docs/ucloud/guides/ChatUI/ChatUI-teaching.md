@@ -7,9 +7,6 @@
 
 # ChatUI teaching guide   
 
-
-
-
 ## Setting up the application
 
 The Chat UI application on UCloud is a great tool for working with LLMs and is simple to set up and use. The app supports saving your work in a directory on your personal drive on UCloud. It is a good idea to use this option so that you only need to go through the setup process once. The first step is to create an empty folder to use as the application input parameter `DATA_DIR`.
