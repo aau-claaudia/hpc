@@ -6,14 +6,14 @@
 ## 2.1 Find the Application
 - Go into the application.
 - Use the search function to find Transcriber.
-![Transcriber Guide Screen](Transcriberguide16)
+![Transcriber Guide Screen](/assets/img/UCloud/Transcriberguide16)
 - Click on **Transcriber**.
-![Transcriber Node Assigned](Transcriberguide17)
+![Transcriber Node Assigned](/assets/img/UCloud/Transcriberguide17)
 
 
 ## 2.2 Using the Application
 You should now have the following screen:
-![Transcriber Node Assigned](Transcriberguide18)
+![Transcriber Node Assigned](/assets/img/UCloud/Transcriberguide18)
 
 There are several options here, and it can seem a bit overwhelming. For this example, we will show the "quickest" way to start a transcription.
 
@@ -28,41 +28,41 @@ There are several options here, and it can seem a bit overwhelming. For this exa
 3. **Pick a machine to use**: We recommend the machine named `u3-gpu-1` as it performed best in our tests (even better than bigger machines).  
    _Note_: Feel free to test this with a few sample files.
    
-   ![Transcriber Node Assigned](Transcriberguide19)
+   ![Transcriber Node Assigned](/assets/img/UCloud/Transcriberguide19)
 
 
 4. **Select the input file**:
    - Click the "use" button.
-   ![Transcriber Node Assigned](Transcriberguide20)
+   ![Transcriber Node Assigned](/assets/img/UCloud/Transcriberguide20)
 
    - Click on the text box to select a file.
-   ![Transcriber Node Assigned](Transcriberguide21)
+   ![Transcriber Node Assigned](/assets/img/UCloud/Transcriberguide21)
 
    - You will be navigated to your "drives." Click on the folder with your file, or if the file is already listed, simply click "use" on the file you wish to use.
    - In this example, we clicked on the folder "New folder" from before and selected our audio file.
-    ![Transcriber Node Assigned](Transcriberguide22)
+    ![Transcriber Node Assigned](/assets/img/UCloud/Transcriberguide22)
 
 
 5. **Select the output directory**:
    - We recommend selecting where your output will be saved.
    - Click "use" on "option: --output_dir".
-   ![Transcriber Node Assigned](Transcriberguide23)
+   ![Transcriber Node Assigned](/assets/img/UCloud/Transcriberguide23)
 
    - Then click the "text box" again and select the folder you want for your transcription output. In this example, we selected the folder "New folder."
-   ![Transcriber Node Assigned](Transcriberguide24)
+   ![Transcriber Node Assigned](/assets/img/UCloud/Transcriberguide24)
 
 Now you are ready to begin your transcription. Click on **Submit** to start the process.  
 _Note_: There are other options you can use, but more information on these can be found in the "Other Options" section.
-![Transcriber Node Assigned](Transcriberguide25)
+![Transcriber Node Assigned](/assets/img/UCloud/Transcriberguide25)
 
 At this step, you are free to close your computer until Transcriber is done. If you want to ensure everything is running smoothly, wait until a "node" has been assigned and your screen will look something like this:
-![Transcriber Node Assigned](Transcriberguide26)
+![Transcriber Node Assigned](/assets/img/UCloud/Transcriberguide26)
 
 Once the transcription is complete, you will see something like this:
-![Transcriber Node Assigned](Transcriberguide27)
+![Transcriber Node Assigned](/assets/img/UCloud/Transcriberguide27)
 
 _Note_: This is not the actual output of your transcription. The transcription files can be found in the folder you selected for output. The files may look something like this:
-![Transcriber Node Assigned](Transcriberguide28)
+![Transcriber Node Assigned](/assets/img/UCloud/Transcriberguide28)
 
 
 You will have several different files with your transcription. The most commonly used formats are `.txt` and `.docx`. Feel free to explore the formats and choose the one that suits your needs best.  
@@ -83,7 +83,7 @@ The default setting produces all 8 formats automatically. You can limit the outp
 - **TSV**: Tab-separated values file containing start, end, and text.
 - **DOTE**: Transcription software developed by the BigSoftVideo team at AAU.
 - **DOCX**: Text file with transcription and speaker recognition.
-![Transcriber Node Assigned](Transcriberguide29)
+![Transcriber Node Assigned](/assets/img/UCloud/Transcriberguide29)
 
 ## 3.2 Optional: --output_model
 This option allows you to select the model size. Choices include:
@@ -92,7 +92,7 @@ This option allows you to select the model size. Choices include:
 - **Large**: Most accurate but slowest.
 
 The default is the **Large** model. With a machine featuring 16 vCPUs and 96GB of memory, the transcription speed is roughly the same as the audio length. For example, 1 minute of audio takes roughly 1 minute to transcribe.
-![Transcriber Node Assigned](Transcriberguide30)
+![Transcriber Node Assigned](/assets/img/UCloud/Transcriberguide30)
 ## 3.3 Optional: --output_language
 This option allows you to specify the language the model will use to evaluate the audio for transcription. The supported languages are available in a dropdown list.
 
