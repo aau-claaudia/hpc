@@ -1,8 +1,7 @@
 <div class="icon-container">
     <div class="icon level-0" title="Approved for public data">0</div>
     <div class="icon level-1" title="Approved for internal data">1</div>
-    <div class="icon level-2" title="Approved for confidential data">2</div>
-    <div class="icon level-3" title="Approved for sensitive data">3</div>
+
 </div>
 
 # ChatUI teaching guide   
