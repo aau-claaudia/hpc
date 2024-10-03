@@ -1,83 +1,171 @@
-It is possible to define and build your own container images with Singularity. Lets try creating a Singularity container image with Python and pip installed. 
+???+ news "This guide is currently in testing phase"
+    If you encounter any errors or issues, please provide us with your feedback through the [AAU Service Portal](https://serviceportal.aau.dk/serviceportal?id=sc_cat_item&sys_id=a05e2fb4c3434610f0f3041ad001310e). Your input is invaluable in helping us improve this resource. Thank you for your understanding!
 
-!!! info "Another way to build containers using Cotainr"
-    You also have the option to use a software called [cotainr](creating-a-conda-environment.md) to build containers. We have a guide on how to install a Conda environment with Cotainr [here](creating-a-conda-environment.md).
+# Building your own container image
 
-First we need to create a [Singularity definition file](https://docs.sylabs.io/guides/3.0/user-guide/definition_files.html) (`.def`). This definition file is a blueprint for how Singularity should build the container image. It includes information about the base OS to build, which software to install and several other options.
+##### This guide will show you how to use an application called [Podman](https://podman.io/) on your local computer to build containers, transfer it to AI-LAB, and convert it into a Singularity image.
 
-Lets create an empty text file by using the `nano` command:
+!!! info "Why Use Podman to Build Containers Locally?"
+    Building Singularity containers directly on AI-LAB requires root privileges, which users don’t have. To overcome this, we can use an application called [Podman](https://podman.io/) to build containers **locally** on your own machine. Podman is a container management tool similar to [Docker](https://www.docker.com/), but it doesn't require root privileges to run. Once created, the container can be transferred to AI-LAB and converted into a Singularity image for use on AI-lAB.
 
-```console
-nano
+
+## Step 1: Install Podman on your local machine
+Before starting, you'll need to install [Podman](https://podman.io/) on your local machine to build containers. Podman is available for Windows, macOS, and Linux, and the installation process varies slightly depending on your operating system.
+
+===+ "Windows"
+
+    1. Begin by downloading the [Podman Windows installer](https://github.com/containers/podman/releases) (.exe). Make sure to choose version 4.1 or later for compatibility with the features discussed in this guide.
+
+    2. Run the installer and follow the prompts to complete the installation. A system restart may be required.
+
+    3. Once installed, open PowerShell and initialize your first Podman machine with the following command:
+
+        ```
+        podman machine init
+        ```
+
+    !!! info "Automatic WSL Installation"
+        If [Windows Subsystem for Linux (WSL)](https://learn.microsoft.com/en-us/windows/wsl/install) is not already installed, Podman will prompt you to install it automatically during the `podman machine init` process. Accepting this will install WSL and restart your system. After logging back in, the machine creation will continue. If you prefer, you can install WSL manually before running `podman machine init`.
+
+    To start the Podman machine, run:
+
+    ```
+    podman machine start
+    ```
+
+    This starts a virtual machine where containers can be build.
+
+===+ "macOS"
+    1. You can either download the latest Podman installer from the [Podman GitHub releases](https://github.com/containers/podman/releases) or use Homebrew (recommended for macOS users) to install Podman:
+
+        ```
+        brew install podman
+        ```
+
+    2. Once installed, initialize your first machine:
+
+        ```
+        podman machine init
+        ```
+
+    3. Start the machine:
+
+        ```
+        podman machine start
+        ```
+
+        This starts a virtual machine where containers can be build.
+
+===+ "Linux"
+    On most Linux distributions, Podman is available through the package manager. Follow the instructions for your specific distribution below.
+
+    1. Update your system: It's always good practice to update your system before installing new software.
+
+        ```
+        sudo apt update && sudo apt upgrade   # Debian-based distros (Ubuntu, etc.)
+        sudo dnf update                       # Fedora-based distros
+        ```
+
+    2. Install Podman:
+
+          * Debian-based distributions (Ubuntu, Debian, etc.):
+
+            ```
+            sudo apt install podman -y
+            ```
+
+          * Fedora-based distributions (Fedora, CentOS, RHEL): Podman may already be installed on Fedora. If not:
+
+            ```
+            sudo dnf install podman -y
+            ```
+
+          * Arch Linux:
+
+            ```
+            sudo pacman -S podman
+            ```
+
+          * Other distributions: Refer to the [official Podman installation guide](https://podman.io/docs/installation#installing-on-linux) for installation instructions for other Linux distributions.
+
+    3. After installation, verify that Podman is installed correctly by checking the version:
+
+        ```
+        podman --version
+        ```
+        
+        You should see the installed version of Podman. If successful, you are ready to proceed.
+
+
+## Step 2: Building a Container Locally with Podman
+To create a container, you first need to define what the container will look like and how it will behave. This is done using a special text file called a [Dockerfile](https://docs.docker.com/reference/dockerfile/). A Dockerfile is essentially a set of instructions that tell Podman how to create the container, such as what software to include and what commands to run when the container starts.
+
+!!! info "Creating the Dockerfile"
+    When creating a Dockerfile, it's important that the file has no extension (like `.txt` or `.doc`). The file should simply be named *Dockerfile*. This is because tools like Podman specifically look for a file named `Dockerfile` to understand how to build the container.
+
+Here’s an example of a simple Dockerfile for a Python-based container:
+
+``` title="Dockerfile"
+# Use an official Python image as the base
+FROM python:3.9-slim
+
+# Install necessary Python libraries
+RUN pip install --no-cache-dir numpy scipy
+
+# Set the command to run when the container starts
+CMD ["python3"]
 ```
 
-Now we can enter the blueprint needed to install our application:
+!!! info "What does this Dockerfile do?"
+    `FROM python:3.9-slim`: This tells Podman to start from an existing container image, in this case, a lightweight version of Python 3.9. It provides a base to build your custom container.
 
-```console
-Bootstrap: docker
-From: ubuntu:20.04
+    `RUN pip install --no-cache-dir numpy scipy`: This command installs the Python libraries `numpy` and `scipy` inside the container.
+    
+    `CMD ["python3"]`: This sets the default action when the container runs—in this case, it starts the Python interpreter.
 
-%post
-    # This section is where you install additional packages or software
-    # Update package list and install the latest Python and pip version
-    apt-get update
-    apt-get install -y python3 python3-pip
-    pip install numpy pandas scikit-learn matplotlib
+Next, save the Dockerfile in an **empty** folder on your computer. It's important to create an empty folder to save the Dockerfile in because when you build a container with Podman, it includes all the files from the current directory in the container image by default.
 
-%test
-    # Define tests to run after the container is built
-    python3 --version
-```
-
-In this example we will use `docker` to pull `ubuntu:20.04` as the base OS of our container image. 
-
-In the next section,`%post`, we can define commands that will be executed after the base OS has been installed. In this example, we will update the container and install `python3` and `pip` along with `numpy pandas scikit-learn matplotlib` packages. 
-
-After that we can define commands to run after the container is built in the `%test` section. Lets try with `python3 --version`.
-
-You can find more options to use in definition file in the [Singularity definition file documentation](https://docs.sylabs.io/guides/3.0/user-guide/definition_files.html).
-
-To save the file press `CTRL + O` and enter a filename ending with `.def` and hit `ENTER`. In this example, lets call it `python3.def`.
-
-### Get access token from Sylabs
-
-Before you can build the container, you need to get an access token from Sylabs in order to authenticate the build of the container. Head over to [https://cloud.sylabs.io/](https://cloud.sylabs.io/) and Sign up for a new account (its free). Once you are logged it, then hover over your username in the top, and choose Access Tokens
-
-![Image of CLAAUDIA Logo](/assets/img/ai-lab/sylabs-access-tokens.png)
-
-Now, enter a name, in this case "mytoken" and press "Create Access Token". An access token is created, that you can use for 1 month before it expires. 
-
-![Image of CLAAUDIA Logo](/assets/img/ai-lab/sylabs-create-token.png)
-
-Now go back to the terminal and enter the following command to verify your access token:
+In the directory where your Dockerfile is located, run:
 
 ```
-srun singularity remote login
+podman build -t my-python-app .
 ```
 
-When prompted, paste the token you just copied.
+Replace `my-python-app` with the name you want for your container image.
+
+## Step 3: Saving and Exporting the Container
+Once your container is built, export it as a TAR file so that it can be transferred to the Slurm cluster:
 
 ```
-Generate an access token at https://cloud.sylabs.io/auth/tokens, and paste it here.
-Token entered will be hidden for security.
-eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2F1dGguc3lsYWJzLmlvL3Rva2VuIiwic3ViIjoiNjY3YThmMTJmMGVkNGQxMzdhYTA1NzMwIiwiZXhwIjoxNzIxOTA0MzE4LCJpYXQiOjE3MTkzMTIzMTgsImp0aSI6IjY2N2E5ZmJlMTRjNTI5MTY5Zjk4OGQwYyJ9.DseTflfB6_mT_9HQpX6tUetfdOR7-_QzVdJOu-reO6OY6rFYJ1ZU2acbkPJ2sLqUSGYfTp8bAOrvawZKJQ1hIGkFx3qGjK1s_sFx18dboN0zjFZPbsk41m6Vmu3u5d1tWzfCDn2GgGBgdeJ411M6ECvfAFCV5In3G5abZ44KyY_N1_ziPOYTmLCbtGEbagxBFIBIyGVhMtyFNdaPfVANko8BtsCAhi3_dW0jsT4EzMBpf3afEhdbjIPP5T_gWuTzxqY-VEQQZVYKr-TA9rfv-CPS_kzBK8AQ3kZThryUTi818Xxolr2UGjjph-m4aVN9sLNfSqJu3PQx1UdxBsyoPA
-Access Token:
-INFO:    Access Token Verified!
-...
+podman save -o my-python-app.tar my-python-app
 ```
 
-You can now build container images from definition files using `--remote`. Lets build a container image from `python3.def` file:
+This will create a file named `my-python-app.tar`.
 
-```console
-srun singularity build --remote python3.sif python3.def
+## Step 4: Transferring the Container to AI-LAB
+Use scp or a similar file transfer method ([view examples here](/ai-lab/getting-started/file-management/)) to transfer the TAR file to AI-LAB:
+
+```
+scp my-python-app.tar user@student.aau.dk@ailab-fe01.srv.aau.dk:~/some-dir
 ```
 
-After some time you should  see the `Python X.X.X` version be printed in the terminal, and you should now have a `python3.sif` container image ready to run.
+Replace `user@student.aau.dk` with your AAU email address.
 
-Lets for example print the matplotlib version:
+Here, `~` represents your user directory on AI-LAB and `/some-dir` a folder in your directory.
 
-```console
-srun singularity exec python3.sif python3 -c "import matplotlib; print('Matplotlib version:', matplotlib.__version__)"
+## Step 5: Converting the Container to Singularity
+[Login](/ai-lab/getting-started/login/) to AI-LAB. Once on the server, convert the Podman image into a Singularity image:
+
+```
+srun singularity build my-python-app.sif docker-archive://my-python-app.tar
 ```
 
-You can find more information about building containers from Singularity definition files [here](https://docs.sylabs.io/guides/3.0/user-guide/definition_files.html).
+This will convert the container into a Singularity Image File (.sif) that can be used in the cluster.
+
+
+## Step 6: Test running the Singularity Container (optional)
+Submit a job to Slurm using the newly converted Singularity image:
+
+```
+srun --gres=gpu:1 singularity exec my-python-app.sif python3 --version
+```
