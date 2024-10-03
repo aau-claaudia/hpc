@@ -1,9 +1,18 @@
 # Transcriber
-**[Transcriber user guide (PDF)](/assets/transcriber-userguide-1-1.pdf)**
+**Approved for data classification level**
+
+<a href="https://www.security.aau.dk/data-classification" target="_blank" class="icon-container">
+    <span class="icon level-0" title="Approved for public data">0</span>
+    <span class="icon level-1" title="Approved for internal data">1</span>
+    <span class="icon level-2" title="Approved for confidential data">2</span>
+    <span class="icon level-3" title="Approved for strictly confidential data">3</span>
+</a>
+
+!!! info "[Download transcriber user guide (PDF)](/assets/transcriber-userguide-1-1.pdf)"
     
 # Using the Transcriber Application
 
-## 2.1 Find the Application
+## 1.1 Find the Application
 - Go into the application.
 - Use the search function to find Transcriber.
 ![Transcriber Guide Screen](/assets/img/UCloud/Transcriberguide16.jpg)
@@ -11,7 +20,7 @@
 ![Transcriber Node Assigned](/assets/img/UCloud/Transcriberguide17.jpg)
 
 
-## 2.2 Using the Application
+## 1.2 Using the Application
 You should now have the following screen:
 ![Transcriber Node Assigned](/assets/img/UCloud/Transcriberguide18.jpg)
 
@@ -70,9 +79,9 @@ If you'd prefer only one specific output format, refer to the "output_format" se
 
 For further assistance, contact CLAAUDIA at [https://serviceportal.aau.dk](https://serviceportal.aau.dk).
 
-# 3. Other Options
+# 2. Other Options
 
-## 3.1 Option: --output_format
+## 2.1 Option: --output_format
 The default setting produces all 8 formats automatically. You can limit the output to a specific format by selecting one of the following:
 
 - **CSV**: Contains all parameters outputted from the Whisper model.
@@ -85,7 +94,7 @@ The default setting produces all 8 formats automatically. You can limit the outp
 - **DOCX**: Text file with transcription and speaker recognition.
 ![Transcriber Node Assigned](/assets/img/UCloud/Transcriberguide29.jpg)
 
-## 3.2 Optional: --output_model
+## 2.2 Optional: --output_model
 This option allows you to select the model size. Choices include:
 - **Small**: Faster but less accurate.
 - **Medium**: Slightly slower, significantly more accurate.
@@ -93,9 +102,8 @@ This option allows you to select the model size. Choices include:
 
 The default is the **Large** model. With a machine featuring 16 vCPUs and 96GB of memory, the transcription speed is roughly the same as the audio length. For example, 1 minute of audio takes roughly 1 minute to transcribe.
 ![Transcriber Node Assigned](/assets/img/UCloud/Transcriberguide30.jpg)
-## 3.3 Optional: --output_language
+## 2.3 Optional: --output_language
 This option allows you to specify the language the model will use to evaluate the audio for transcription. The supported languages are available in a dropdown list.
-
 The default setting is for the Whisper model to automatically detect the audio language.  
 _Note_: This setting also determines the output language of the transcribed text. The Whisper model will translate audio from multiple languages into the detected or chosen language. For example, if the detected/chosen language is English but the audio includes English, Danish, Spanish, and Greek, the output will be entirely in English.
 
