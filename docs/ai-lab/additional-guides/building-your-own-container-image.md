@@ -118,7 +118,9 @@ CMD ["python3"]
 
 !!! info "What does this Dockerfile do?"
     `FROM python:3.9-slim`: This tells Podman to start from an existing container image, in this case, a lightweight version of Python 3.9. It provides a base to build your custom container.
+
     `RUN pip install --no-cache-dir numpy scipy`: This command installs the Python libraries `numpy` and `scipy` inside the container.
+    
     `CMD ["python3"]`: This sets the default action when the container runs—in this case, it starts the Python interpreter.
 
 Next, save the Dockerfile in an **empty** folder on your computer. It's important to create an empty folder to save the Dockerfile in because when you build a container with Podman, it includes all the files from the current directory in the container image by default.
