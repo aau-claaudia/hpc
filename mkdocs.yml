@@ -47,7 +47,9 @@ nav:
       - ChatUI:
     #    - ChatUI for research: ucloud/guides/ChatUI/ChatUI-research.md 
         - ChatUI for teachers: ucloud/guides/ChatUI/ChatUI-teaching.md
-      - Transcriber: ucloud/guides/transcriber.md
+      - Transcriber:
+          - Transcriber: ucloud/guides/Transcriber/transcriber.md
+          - Transcriber guide videos: ucloud/guides/Transcriber/transcriber-video.md
 
   - AI Cloud:
     - About AI Cloud: ai-cloud/index.md

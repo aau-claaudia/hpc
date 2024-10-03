@@ -1162,3 +1162,64 @@ del {
 .not-max-width {
   width: auto !important;
 }
+
+
+
+
+.icon-container {
+  display: flex;
+  gap: 15px;
+
+}
+
+.icon {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 50%;
+}
+
+.level-0 {
+  background-color: green;
+}
+
+.level-1 {
+  background-color: blue;
+}
+
+.level-2 {
+  background-color: orange;
+}
+
+.level-3 {
+  background-color: red;
+}
+
+.approved_data{
+  <span class = 
+}
+
+
+
+.icon-container .icon {
+  position: relative;
+}
+
+.icon-container .icon:hover::after {
+  content: attr(title);
+  position: absolute;
+  top: 35px;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+  color: white;
+  padding: 5px;
+  border-radius: 4px;
+  white-space: nowrap;
+  font-size: 10px;
+  z-index: 1;
+}
