@@ -1,4 +1,5 @@
 # Transcriber
+**Approved for data classification level**
 
 <a href="https://www.security.aau.dk/data-classification" target="_blank" class="icon-container">
     <span class="icon level-0" title="Approved for public data">0</span>
