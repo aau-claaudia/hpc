@@ -3,7 +3,7 @@
 
 # Building your own container image
 
-##### This guide will show you how to use an application called Podman on your local computer to build containers, transfer it to AI-LAB, and convert it into a Singularity image.
+##### This guide will show you how to use an application called [Podman](https://podman.io/) on your local computer to build containers, transfer it to AI-LAB, and convert it into a Singularity image.
 
 !!! info "Why Use Podman to Build Containers Locally?"
     Building Singularity containers directly on AI-LAB requires root privileges, which users don’t have. To overcome this, we can use an application called [Podman](https://podman.io/) to build containers **locally** on your own machine. Podman is a container management tool similar to [Docker](https://www.docker.com/), but it doesn't require root privileges to run. Once created, the container can be transferred to AI-LAB and converted into a Singularity image for use on AI-lAB.
