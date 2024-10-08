@@ -101,7 +101,7 @@ All projects with sensitive data must include the following two project numbers:
 1. A project reference number from Grants and Contracts
 2. A DeiC Interactive HPC project number from CLAAUDIA
 3. 
-How to get these numbers is described [here](/ucloud/how-to-access/#ucloud-projects-apply-for-additional-quota).
+How to get these numbers is described [here](/ucloud/how-to-access/#Projects).
 
 UCloud’s data classification maps to the AAU data classification model in the following way:​
 
