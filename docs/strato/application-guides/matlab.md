@@ -49,9 +49,9 @@ Choose "Activate automatically using the Internet" then "Log in to my MathWorks 
 
 There are two ways in which you can work with Matlab on Strato instances.
 
-1. [Run the application in headless mode](https://www.strato-docs.claaudia.aau.dk/guides/application_guides/matlab/#headless_mode): By default Strato instances do not come with any graphical user interfaces, but are operated in headless mode. In cases where you simply need to execute a prewritten script, this approach might be preferable.
+1. [Run the application in headless mode](/strato/application-guides/strato-applications/#command-line-interfaces): By default Strato instances do not come with any graphical user interfaces, but are operated in headless mode. In cases where you simply need to execute a prewritten script, this approach might be preferable.
 
-2. [Run with graphical user interface (GUI)](https://www.strato-docs.claaudia.aau.dk/guides/application_guides/matlab/#with_a_gui): Here the application runs on your Strato instance, but its graphics are rendered on your local computer - in this case your web browser. This is useful for interactive development, ie. workflows where you will need to test and modify your code continuously.
+2. [Run with graphical user interface (GUI)](/strato/application-guides/strato-applications/#graphical-user-interfaces): Here the application runs on your Strato instance, but its graphics are rendered on your local computer - in this case your web browser. This is useful for interactive development, ie. workflows where you will need to test and modify your code continuously.
 
 ### Headless mode
 If you wanted to run prepared script called `your_script.m`, you would run:

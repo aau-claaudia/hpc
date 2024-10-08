@@ -17,6 +17,8 @@ All Aalborg University users automatically have access to UCloud and can simply 
 It is also possible to apply for a separate **Project** workspace or environment on the UCloud platform.
 The project environment allows collaboration with separate storage, computer resources, and management of user rights and responsibilities on the UCloud platform.
 
+[Apply for a project](https://forms.office.com/e/8Khbr1TJGC){target="_blank}
+
 !!! info "The project environment is required for the following types of work on UCloud"
 
     **For researchers employed at AAU (VIP):**

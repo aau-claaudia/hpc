@@ -1,10 +1,11 @@
-<div class="icon-container">
-    <div class="icon level-0" title="Approved for public data">0</div>
-    <div class="icon level-1" title="Approved for internal data">1</div>
-
-</div>
-
 # ChatUI teaching guide   
+**Approved for data classification level**
+
+<a href="https://www.security.aau.dk/data-classification" target="_blank" class="icon-container">
+    <span class="icon level-0" title="Approved for public data">0</span>
+    <span class="icon level-1" title="Approved for internal data">1</span>
+</a>
+
 
 ## Setting up the application
 

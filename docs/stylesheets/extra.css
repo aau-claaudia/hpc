@@ -1206,8 +1206,11 @@ del {
 
 
 
-.icon-container .icon {
-  position: relative;
+
+.icon-container {
+  display: flex; /* Aligns icons in a row */
+  gap: 10px; /* Optional: Adds space between the icons */
+  text-decoration: none; /* Removes underline from the link */
 }
 
 .icon-container .icon:hover::after {
