@@ -29,6 +29,9 @@
 ### Applications  
 -  It is **not allowed** to add a public link when running applications. 
 
+### Guides 
+- When using our guides, please check the "Approved Data Classification Level" icons at the top of each guide to ensure it is approved for sensitive data.
+
 ### Completing a Project
 - Upon project completion:
   - Delete all data from the UCloud platform.
