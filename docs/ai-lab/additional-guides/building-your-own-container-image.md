@@ -1,4 +1,4 @@
-???+ news "This guide is currently in testing phase"
+!!! info "This guide is currently in testing phase"
     If you encounter any errors or issues, please provide us with your feedback through the [AAU Service Portal](https://serviceportal.aau.dk/serviceportal?id=sc_cat_item&sys_id=a05e2fb4c3434610f0f3041ad001310e). Your input is invaluable in helping us improve this resource. Thank you for your understanding!
 
 # Building your own container image
@@ -131,6 +131,9 @@ In the directory where your Dockerfile is located, run:
 podman build -t my-python-app .
 ```
 
+!!! info "HINT: It may require a lot of space"
+    Building the container may take up a lot of space on your local computer. A simple PyTorch container can take up approx. 10GB of space.
+
 Replace `my-python-app` with the name you want for your container image.
 
 ## Step 3: Saving and Exporting the Container
@@ -154,7 +157,22 @@ Replace `user@student.aau.dk` with your AAU email address.
 Here, `~` represents your user directory on AI-LAB and `/some-dir` a folder in your directory.
 
 ## Step 5: Converting the Container to Singularity
-[Login](/ai-lab/getting-started/login/) to AI-LAB. Once on the server, convert the Podman image into a Singularity image:
+[Login](/ai-lab/getting-started/login/) to AI-LAB. Once on the server, we need to set the `SINGULARITY_TMPDIR` and `SINGULARITY_CACHEDIR` environment variables, to speed up repeated operations. We will use these variables to a temporary directory (`$HOME/.singularity/tmp/` and `$HOME/.singularity/cache/`) inside your home directory.
+```
+export SINGULARITY_TMPDIR="$HOME/.singularity/tmp/"
+```
+
+```
+export SINGULARITY_CACHEDIR="$HOME/.singularity/cache/"
+```
+
+Then we need to create the directories defined by `SINGULARITY_CACHEDIR` and `SINGULARITY_TMPDIR`, if they don’t already exist. The `-p` flag ensures that the command does not return an error if the directories are already in place.
+
+```
+mkdir -p $SINGULARITY_CACHEDIR $SINGULARITY_TMPDIR
+```
+
+Now, convert the Podman image into a Singularity image:
 
 ```
 srun singularity build my-python-app.sif docker-archive://my-python-app.tar

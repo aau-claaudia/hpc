@@ -22,7 +22,7 @@ Replace `user@student.aau.dk` with your AAU email address.
     Are you sure you want to continue connecting (yes/no/[fingerprint])?
     ```
 
-    Please confirm by typing 'yes' to proceed with the connection.
+    Please confirm by typing `yes` to proceed with the connection.
 
 Enter your AAU password when prompted. 
 
