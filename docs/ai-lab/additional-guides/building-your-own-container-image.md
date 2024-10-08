@@ -160,6 +160,9 @@ Here, `~` represents your user directory on AI-LAB and `/some-dir` a folder in y
 [Login](/ai-lab/getting-started/login/) to AI-LAB. Once on the server, we need to set the `SINGULARITY_TMPDIR` and `SINGULARITY_CACHEDIR` environment variables, to speed up repeated operations. We will use these variables to a temporary directory (`$HOME/.singularity/tmp/` and `$HOME/.singularity/cache/`) inside your home directory.
 ```
 export SINGULARITY_TMPDIR="$HOME/.singularity/tmp/"
+```
+
+```
 export SINGULARITY_CACHEDIR="$HOME/.singularity/cache/"
 ```
 
