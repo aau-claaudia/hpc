@@ -66,6 +66,7 @@ The downloaded model should now be visible if you click on “Workspace” on th
 In the “Documents” section, it is possible to upload documents for adding RAG functionality. Try to upload a document. Notice the text with information about how to use/load the documents for use in prompts .
 
 ![Load documents for RAG functionality](/assets/img/UCloud/ChatUI 13.png)
+
 ---
 
 ## Using the application for inference
@@ -93,6 +94,7 @@ The next time you need to run the app with the same data and configuration, use 
 Click on “Import” to import the configuration from the last run. Everything should be the same, and just click “Submit” to start the job.
 
 ![Using the application](/assets/img/UCloud/ChatUI 17.png)
+
 ---
 
 ## FAQ
