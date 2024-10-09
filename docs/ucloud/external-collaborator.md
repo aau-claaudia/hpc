@@ -4,7 +4,7 @@ If your UCloud project involves an external collaborator who does not have stand
 ### Procedure for Adding External Collaborators on UCloud
 
 1. **Sensitive Data Projects**:  
-    - If your project includes sensitive data, please follow the [Sensitive Data Process](#procedure-for-working-with-sensitive-data-on-ucloud-projects) before proceeding.
+    - If your project includes sensitive data, please follow the [Sensitive Data Process](/ucloud/terms-and-conditions/#procedure-for-working-with-sensitive-data-on-ucloud-projects) before proceeding.
         - The external collaborator should be approved by grants and contacts to get access to the data. 
 
 2. **Request a Guest Account**:  
