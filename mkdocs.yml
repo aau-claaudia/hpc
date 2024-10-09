@@ -40,6 +40,7 @@ nav:
     - About UCloud: ucloud/index.md
     - How to access: ucloud/how-to-access.md
     - Terms and Conditions: ucloud/terms-and-conditions.md
+    - External collaborators: ucloud/external-collaborator.md
     - Guides:
       - Getting started:
         - Before you begin: ucloud/guides/getting-started/before-you-begin.md

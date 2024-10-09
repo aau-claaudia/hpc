@@ -61,7 +61,7 @@ Please visit [AAU's website for GDPR related info for students](https://aaudk.sh
 AI Cloud and virtual machines on Strato or UCloud must not be used to store confidential and/or sensitive data.
 
 !!! info "UCloud projects with sensitive data"
-    Please read the [procedure for working with sensitive data on UCloud](/ucloud/how-to-access/) that has been agreed upon with the Department of Grants and Contracts. 
+    Please read the [procedure for working with sensitive data on UCloud](/ucloud/terms-and-conditions/#procedure-for-working-with-sensitive-data-on-ucloud-projects) that has been agreed upon with the Department of Grants and Contracts. 
 
 ---
 
@@ -187,3 +187,239 @@ Physical kits are delivered with a camera. Please act ethically and refrain from
 
 ## 9. Updates to Terms and Conditions
 We reserve the right to make periodic changes to these terms and conditions, and commit to inform users of the changes made.
+
+
+## Appendix
+### *Procedure for working with sensitive data on UCloud projects*
+
+CLAAUDIA, Aalborg University
+
+2023-10-10
+
+v1.0
+
+As a user on the UCloud platform you have a workspace called "My workspace".
+
+It is also possible to apply for a separate "Project" workspace on the
+UCloud platform. Projects on UCloud allow for collaboration with
+separate storage, compute resources and management of user rights and
+responsibilities on the UCloud platform.
+
+**The project environment is required for the following types of work on
+UCloud:**
+
+1.  For employed researchers at AAU (VIP)
+
+    a.  Sensitive data: All work on the UCloud platform that involves
+        research data in classification levels 2 or 3.
+a
+2.  All users
+
+    a.  GPU access on UCloud: All access to GPU resources on UCloud
+        require a project. (Only data classification levels 0 and 1)
+
+    b.  Additional compute resources that are allocated out of the AAU
+        pool of UCloud resources.
+
+UCloud users at AAU must be familiar with the details of
+the following codes of conduct and policies:
+
+1.  [The Danish Code of Conduct for Research
+    Integrity](https://ufm.dk/en/publications/2014/the-danish-code-of-conduct-for-research-integrity)
+
+2.  [The AAU Policy for Research Data
+    Management](https://www.ansatte.aau.dk/regler/forskning/politik-for-handtering-af-forskningsdata)
+
+3.  [The AAU policies with regards to
+    GDPR](https://aaudk.sharepoint.com/sites/persondata/SitePages/In%20English.aspx)
+    (Available in English for
+    [researchers](https://aaudk.sharepoint.com/sites/gdpr-for-researchers)
+    (VIP),
+    [teachers](https://aaudk.sharepoint.com/sites/gdpr-for-teachers)
+    (VIP) and
+    [students](https://aaudk.sharepoint.com/sites/GDPR-for-students);
+    Only in Danish for [administration (TAP)
+    employees](https://aaudk.sharepoint.com/sites/persondata-administration))
+
+4.  [The AAU data management
+    recommendations](https://www.researcher.aau.dk/guides/research-data/data-management)
+
+These policies cover the general rules all researchers (and students and
+TAP staff for point 3.) should abide by with regards to what kind of
+data may be kept, for how long, whether data can be re-used or recycled,
+and how long it should be archived for, etc.
+
+**Sensitive data: Registration of research projects at Grants and
+Contracts (Excludes students)**
+
+For researchers at AAU, working with sensitive personal data requires
+that you register your research project with "Grants and Contracts" by
+completing the [digital form that matches your role in relation to the
+data, for example Data Controller or Data
+processor](https://aaudk.sharepoint.com/sites/persondata-ressourcer/SitePages/Registrations%20og%20reports%20(Online%20forms).aspx).
+
+**Data processing agreement between AAU and the EScience center at SDU**
+
+> For AAU users, data analysis and processing may then take place on the
+> UCloud platform according to the data
+> processing agreement between AAU and EScience center at SDU.
+
+**Steps required to working with projects on the UCloud platform**
+
+1.  Identify the data classification of your data by reviewing the [AAU
+    data classification
+    model.](https://aaudk.sharepoint.com/sites/ForskIT/Delte%20dokumenter/General/01%20-%20Administration/03%20-%20Policies%20and%20procedures/DeiC%20Interactive%20HPC/i.%09https:/www.security.aau.dk/dataclassification/model)
+    ([Classify your data at Aalborg University - Aalborg University
+    (aau.dk)](https://www.security.aau.dk/data-classification))
+
+2.  If you are a researcher, and working with data classifications 2 or
+    3, you must register a research project with Grants and Contracts
+    using [the relevant registration
+    form.](https://aaudk.sharepoint.com/sites/persondata-ressourcer/SitePages/Registrations%20og%20reports%20(Online%20forms).aspx)
+
+    a.  Once you have registered your research activity at Grants and
+        Contracts, you will get a receipt that contains a "WorkZone case
+        number" (To be included in your UCloud project application).
+
+3.  Students cannot register projects with Grants and Contracts. As a
+    student you are personally responsible for any data you collect. You
+    must ensure that you comply with [GDPR regulations for
+    students](https://aaudk.sharepoint.com/sites/GDPR-for-students).
+
+    a.  To assist with GDPR compliance we recommend that students
+        request a supervisor to create a project on their behalf and
+        follow the same procedures as researchers.
+
+    b.  Students cannot apply for project resources on UCloud, and you
+        therefore need a project supervisory to apply on your behalf.
+        This requires that your project supervisor assumes the
+        [responsibilities of a Principal Investigator on
+        UCloud](https://docs.cloud.sdu.dk/guide/project-overview.html#member-roles).
+        This must be discussed with your supervisor.
+
+4.  All applicants for projects on UCloud must complete the [CLAAUDIA
+    application form for DeiC Interactive HPC resources](https://forms.office.com/e/8Khbr1TJGC).
+
+5.  Once approved, you will receive a UCloud project
+    number, and you must [apply for a project in the UCloud
+    Interface](https://docs.cloud.sdu.dk/tutorials/tutorial3.html#create-a-project),
+    including the resources that you had approved in the CLAAUDIA
+    application. (You can apply for additional resources later if
+    needed.)
+
+    a.  As project applicant you will be the Principal Investigator for
+        the project, and you should be aware of your [roles and
+        responsibilities.](https://docs.cloud.sdu.dk/guide/project-overview.html#member-roles)
+
+    b.  If the user is a student, then their supervisor for the student
+        project must apply for the project, and so must assume the role
+        of Principal Investigator.
+
+    c.  The project must include both the **DeiC project number**, and
+        the **Grants and Contracts** reference number in the "Comments"
+        field of the UCloud project application.
+
+    d.  Once your project is approved, you will get access to project
+        storage (Drive(s)) on UCloud that is separate from your "My
+        Workspace" storage. No sensitive data may be stored in the "My
+        workspace" drives.
+
+6.  Adding data to the UCloud platform:
+
+    a.  Any data added to the project should be in a project folder and
+        this must be marked according to the level of data sensitivity,
+        as described in the [AAU data classification
+        model](https://aaudk.sharepoint.com/sites/ForskIT/Delte%20dokumenter/General/01%20-%20Administration/03%20-%20Policies%20and%20procedures/DeiC%20Interactive%20HPC/i.%09https:/www.security.aau.dk/dataclassification/model).
+
+        i.  On the UCloud platform the corresponding classifications are
+            as follows: 
+
+            1.  **AAU Level 0:** Public information = **UCloud:**
+                Inherit.
+
+            2.  **AAU Level 1:** Internal information = **UCloud:**
+                Private.
+
+            3.  **AAU Level 2:** Confidential information - **UCloud:**
+                Confidential.
+
+            4.  **AAU Level 3:** Sensitive information - **UCloud:**
+                Sensitive. (Only permitted to be added to your
+                registered and approved project folder.) Sensitive data
+                may **NOT** be added to My Workspace.
+
+7.  **Collaboration on UCloud within projects:** Fellow AAU persons
+
+    a.  Only persons named in the project registered with Grants and
+        Contracts may be added to the UCloud project.
+
+8.  **Collaboration on UCloud within projects:** Persons from outside
+    AAU
+
+    a.  The collaborator's employer must have a Data Processing
+        agreement with SDU (SDU are hosting UCloud), or
+
+        i.  Where there is an agreement of shared data responsibility
+            (Agreement on Joint data controlling), that states that it
+            is agreed to use DeiC/SDU as the data processor, then it is
+            sufficient that AAU has an existing data processing
+            agreement with DeiC/SDU. In these cases AAU will be
+            responsible for the data processing agreement with DeiC/SDU.
+
+    b.  If this is not the case, you cannot invite the collaborator
+        inside the project folder in UCloud.
+
+    c.  No person(s) that are not included in the data processing
+        agreement or the agreement on joint data controlling may be
+        invited to the project.
+
+9.  UCloud project members and roles should be set appropriately.
+
+    a.  Project "admins" can see all member files by activating the
+        "show member files" option. The Principal Investigator is
+        responsible for ensuring that all [roles and
+        responsibilities](https://docs.cloud.sdu.dk/guide/project-overview.html#member-roles)
+        are properly assigned.
+
+10. Read and write privileges on UCloud
+
+    a.  If collaborators are only allowed read or write to specific
+        parts of the data / dataset, you will need to follow the
+        following steps:
+
+        i.  Within the project, you will need to create a new "Drive".
+            (As drives are the only level to which you can specify read
+            and write permissions.)
+
+            1.  Only project "admins" can create new drives within a
+                project.
+
+        ii. Name the drive and then click the "..." button to modify the
+            permissions. Then choose the permissions (None / Read /
+            Write).
+
+11. Permitted applications and uses
+
+    a.  All applications except those labeled as "Virtual Machines" may
+        be used for work on all data.
+
+    b.  Virtual Machine applications may only be used for data
+        classified as level 0 and 1.
+
+12. On completion the project 
+
+    a.  All data on the UCloud platform should be deleted.
+
+    b.  The project should then be archived with a final date that
+        corresponds with the GDPR notification with 'Grants and
+        Contracts'.
+
+    c.  All files in trash folders should be permanently deleted.
+
+    d.  All complete data sets and metadata should be stored in a data
+        repository in accordance with [The AAU Policy for Research Data
+        Management](https://www.handbook.aau.dk/document/?contentId=402570).
+        As of 2023-January, AAU
+        [DataDeposit](https://www.researcher.aau.dk/guides/research-data/data-management/data-publishing)
+        as a local archiving solution, while a national solution is
+        under development.
