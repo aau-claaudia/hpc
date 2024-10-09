@@ -1,15 +1,14 @@
-1. Log in to AI-LAB
+##### In this exercise series, you'll work with a Recurrent Neural Network (RNN) to generate 3 fictional German names based on a dataset of ~700 german names. The script you'll interact with is based on PyTorch and demonstrates how AI-LAB can be used for sequence prediction tasks.
 
-2. Copy the project `/ceph/course/claaudia/generating-names-with-pytorch` to your user directory
+1. Log in to AI-LAB ([Login guide](https://hpc.aau.dk/ai-lab/getting-started/login/))
 
-3. Open `name_generator.py` from the copied `/generating-names-with-pytorch` with [vim](https://www.geeksforgeeks.org/how-to-edit-text-files-in-linux/#2-vim) or [nano](https://www.geeksforgeeks.org/how-to-edit-text-files-in-linux/#1-nano) text editors.
+2. Copy the folder `/ceph/course/claaudia/generating-names-with-pytorch` to your user directory ([Guide on how to copy a folder](https://hpc.aau.dk/ai-lab/getting-started/file-management/#transfer-files-within-ai-lab))
 
-4. Add `samples('German', 'GER')` at the bottom of the code, to generate some German names, save it and exit the file.
+3. Go into the copied directory `generating-names-with-pytorch` and open `name_generator.py` with nano ([Nano guide](https://hpc.aau.dk/ai-lab/applications/linux-text-editors/#nano-a-simple-text-editor)) or vim ([Vim guide](https://hpc.aau.dk/ai-lab/applications/linux-text-editors/#vim-a-powerful-text-editor)) text editor.
 
+4. Add this line: `samples('German', 'GER')` at the bottom of the code, save it, and exit the file.
 
-!!! info "References"
-     * [https://hpc.aau.dk/ai-lab/getting-started/login/](https://hpc.aau.dk/ai-lab/getting-started/login/)
-     * [https://hpc.aau.dk/ai-lab/getting-started/file-management/](https://hpc.aau.dk/ai-lab/getting-started/file-management/)
+5. (Optional) run `cat name_generator.py` to print out the code, and verify that `samples('German', 'GER')` is at the bottom.
 
 
 ??? info "Solution"
@@ -27,9 +26,11 @@
 
           Please confirm by typing `yes` to proceed with the connection.
 
-     2. Enter `cp -r /ceph/course/claaudia/generating-names-with-pytorch .` to copy the directory to your user directory
+     2. Enter `cp -r /ceph/course/claaudia/generating-names-with-pytorch ~/` to copy the directory to your user directory
      3. Enter `cd generating-names-with-pytorch` to go into the directory
      4. Use `nano name_generator.py` to open the python file with nano text editor
            * Go down to the bottom of the script and enter `samples('German', 'GER')`.
            * Press `CTRL+O` followed by `ENTER` to save the file, then press `CTRL+X` to exit the file.
      5. Use `cat name_generator.py` and check that `samples('German', 'GER')` is now at the bottom of the code.
+
+

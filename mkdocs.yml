@@ -102,6 +102,7 @@ nav:
         - Running jobs: ai-lab/getting-started/running-jobs.md
         - Next steps: ai-lab/getting-started/next-steps.md
       - Applications:
+        - Linux text editors: ai-lab/applications/linux-text-editors.md
         - Ollama and LLM: ai-lab/applications/ollama-and-llm.md
         - MATLAB: ai-lab/applications/matlab.md
         - TensorFlow: ai-lab/applications/tensorflow.md
@@ -175,6 +176,7 @@ extra_javascript:
   - javascripts/conditional.js
 
 markdown_extensions:
+  - footnotes
   - toc:
       toc_depth: 2
   - pymdownx.superfences

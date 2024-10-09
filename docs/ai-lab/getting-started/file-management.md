@@ -35,10 +35,18 @@ For a detailed overview of the AI-LAB storage system, click [here](/ai-lab/syste
 You can use the command `cp [source] [destination]` to copy files and `cp -r [source] [destination]` to copy folders to and from directories within AI-LAB. This will be useful when you need to retrieve applications or course materials later. For example:
 
 ```
-cp /ceph/course/claaudia/docs/matlab_script.m .
+cp /ceph/course/claaudia/docs/matlab_script.m ~/
 ```
 
-Here, `/ceph/course/claaudia/docs/matlab_script.m` is the path to the file or folder you want to copy, and `.` is the path to where you want to copy it—in this case, your user directory.
+Here, `/ceph/course/claaudia/docs/matlab_script.m` is the path to the file or folder you want to copy, and `~/` is the path to where you want to copy it—in this case, your user directory.
+
+If you want to copy files into a specific folder within your home directory, you can add the folder path after the tilde. For example:
+
+```
+cp /ceph/course/claaudia/docs/matlab_script.m ~/myfolder/
+```
+
+Remember to add `-r` to the command if you are copying a folder.
 
 <hr>
 
@@ -80,6 +88,11 @@ Here, `/ceph/course/claaudia/docs/matlab_script.m` is the path to the file or fo
 
 	Here, `.` represents the current directory on your local computer.
 
+
+## Editing Files on AI-LAB
+You can easily edit files on AI-LAB using text editors like [Nano](/ai-lab/applications/linux-text-editors/#nano-a-simple-text-editor) or [Vim](/ai-lab/applications/linux-text-editors/#vim-a-powerful-text-editor). Nano is beginner-friendly, while Vim offers advanced features for more experienced users.
+
+For a detailed guide on how to use these editors, please visit our [Linux text editors guide](/ai-lab/applications/linux-text-editors/).
 
 <hr>
 
