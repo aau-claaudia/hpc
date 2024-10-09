@@ -131,8 +131,8 @@ In the directory where your Dockerfile is located, run:
 podman build -t my-python-app .
 ```
 
-!!! info "HINT: It may require a lot of space"
-    Building the container may take up a lot of space on your local computer. A simple PyTorch container can take up approx. 10GB of space.
+!!! info "INFO: It may require a lot of space"
+    Building the container may take up a lot of space on your local computer. A simple PyTorch container can take up approx. 20GB of space.
 
 Replace `my-python-app` with the name you want for your container image.
 
