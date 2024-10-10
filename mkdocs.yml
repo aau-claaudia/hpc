@@ -103,7 +103,7 @@ nav:
         - Next steps: ai-lab/getting-started/next-steps.md
       - Applications:
         - Linux text editors: ai-lab/applications/linux-text-editors.md
-        - Ollama and LLM: ai-lab/applications/ollama-and-llm.md
+        #- Ollama and LLM: ai-lab/applications/ollama-and-llm.md
         - MATLAB: ai-lab/applications/matlab.md
         - TensorFlow: ai-lab/applications/tensorflow.md
         - PyTorch: ai-lab/applications/pytorch.md
