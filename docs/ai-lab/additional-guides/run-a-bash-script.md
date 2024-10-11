@@ -7,7 +7,7 @@ Let's create a bash script to submit a simple job that runs a Singularity contai
 
 #### Step 1: Prepare the Singularity Container
 
-Ensure you have a Singularity image (.sif file) ready. For this example, let's use the `tensorflow_24.03-tf2-py3.sif` container image from `/ceph/container`.
+Ensure you have a Singularity image (.sif file) ready. For this example, let's use the `pytorch_24.09.sif` container image from `/ceph/container/pytorch`.
 
 
 #### Step 2: Create the Python Script
@@ -31,7 +31,7 @@ Create a bash script named run_job.sh:
 #SBATCH --cpus-per-task=1
 #SBATCH --mem=1G
 
-singularity exec /ceph/container/tensorflow_24.03-tf2-py3.sif python3 hello.py
+singularity exec /ceph/container/pytorch/pytorch_24.09.sif python3 hello.py
 ```
 
 

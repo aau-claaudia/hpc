@@ -12,17 +12,12 @@ You can check which container images exist in the `/ceph/container` directory on
 ls /ceph/container
 ```
 
-To use the container images, you can either use them straight from the `/ceph/container` directory.
+To use the container images, you can use them straight from the `/ceph/container` directory by referencing the absolute path, e.g.:
 
-!!! info "Copying the container image"
+```
+/ceph/container/pytorch/pytorch_24.09.sif
+```
 
-    If you need to modify the container image, make sure to copy the container image to your own directory. To copy the container, simply execute:
-
-    ```console
-    cp /ceph/container/tensorflow_24.03-tf2-py3.sif .
-    ```
-
-    It may take a few minutes to copy. When you get your prompt back, the transfer has completed. Make sure by entering `ls` to see if `tensorflow_24.03-tf2-py3.sif` is in your directory.
 
 <hr>
 

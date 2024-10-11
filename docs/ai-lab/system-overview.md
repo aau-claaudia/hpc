@@ -233,8 +233,8 @@ For convenience and efficiency, AI-LAB offers a collection of ready-to-use appli
         <ul>
         <li><i class="fa fa-folder-open"></i> container <span>directory with ready-to-use applications</span>
             <ul>
-            <li><i class="fa fa-file"></i> tensorflow.sif</li>
-            <li><i class="fa fa-file"></i> pytorch.sif</li>
+            <li><i class="fa fa-file"></i> tensorflow/tensorflow.sif</li>
+            <li><i class="fa fa-file"></i> pytorch/pytorch.sif</li>
             <li><i class="fa fa-file"></i> ...sif</li>
             </ul>
         </li>

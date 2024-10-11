@@ -4,7 +4,7 @@ To effectively run jobs, it's important to understand the hardware configuration
 `--mem` specifies the memory allocated to the job. Maximum value is 24 GB per GPU. Example:
 
 ```
-srun --mem=24G singularity exec --nv /ceph/container/tensorflow_24.03-tf2-py3.sif python3 benchmark_tensorflow.py
+srun --mem=24G singularity exec --nv /ceph/container/pytorch/pytorch_24.09.sif python3 /ceph/course/claaudia/docs/torch_bm.py
 ```
 
 
@@ -13,7 +13,7 @@ srun --mem=24G singularity exec --nv /ceph/container/tensorflow_24.03-tf2-py3.si
 `--cpus-per-task` specifies the number of CPUs allocated to each task. Maximum value is 15 CPUs per GPU. Example:
 
 ```
-srun --cpus-per-task=15 singularity exec --nv /ceph/container/tensorflow_24.03-tf2-py3.sif python3 benchmark_tensorflow.py
+srun --cpus-per-task=15 singularity exec --nv /ceph/container/pytorch/pytorch_24.09.sif python3 /ceph/course/claaudia/docs/torch_bm.py
 ```
 
 <p>There is actually 16 CPUs per GPU available, but using a maximum of 15 CPUs per GPU, leaves 1 CPU free per GPU for system overhead and non-GPU tasks, which helps in maintaining overall system stability and performance.</p>
@@ -24,7 +24,7 @@ srun --cpus-per-task=15 singularity exec --nv /ceph/container/tensorflow_24.03-t
 `--gres=gpu` specifies the number of GPUs required for the jobs. Maximum value is 8 GPUs per job. Example:
 
 ```
-run --gres=gpu:4 singularity exec --nv /ceph/container/tensorflow_24.03-tf2-py3.sif python3 benchmark_tensorflow.py
+run --gres=gpu:4 singularity exec --nv /ceph/container/pytorch/pytorch_24.09.sif python3 /ceph/course/claaudia/docs/torch_bm.py
 ```
 
 

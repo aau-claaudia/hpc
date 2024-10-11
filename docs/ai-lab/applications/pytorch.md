@@ -9,7 +9,7 @@ ls /ceph/container
 You can run PyTorch scripts using Singularity to execute within the container. Below is an example of running a PyTorch script with 1 GPU allocated:
 
 ```
-srun --gres=gpu:1 singularity exec --nv /ceph/container/pytorch_24.03-tf2-py3.sif python3 your_script.py
+srun --gres=gpu:1 singularity exec --nv /ceph/container/pytorch/pytorch_24.09.sif python3 your_script.py
 ```
 
 <span style="font-weight: 600;">Note! </span>The container image might be newer version at this time.

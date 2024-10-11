@@ -1,7 +1,7 @@
 You can launch a shell within a Singularity container, allowing you to interact with the container's environment. Use the `shell` command with the desired image as follows
 
 ```
-srun --gres=gpu:1 --pty singularity shell --nv /ceph/container/tensorflow_24.03-tf2-py3.sif
+srun --gres=gpu:1 --pty singularity shell --nv /ceph/container/pytorch/pytorch_24.09.sif
 ```
 
 

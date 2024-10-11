@@ -2,10 +2,10 @@ Monitoring GPU usage is a good practice for optimizing the performance of your j
 
 ### Start a job with GPU allocation
 
-First, submit a job using `srun` or `sbatch` with one GPU or more allocated and execute some code inside a Singularity container. In this example we will use the `pytorch_24.03-py3.sif` container image from `/ceph/container` directory and a PyTorch benchmark script `torch_bm.py` from `/ceph/course/claaudia/docs` directory:
+First, submit a job using `srun` or `sbatch` with one GPU or more allocated and execute some code inside a Singularity container. In this example we will use the `pytorch_24.09.sif` container image from `/ceph/container/pytorch` directory and a PyTorch benchmark script `torch_bm.py` from `/ceph/course/claaudia/docs` directory:
 
 ```
-srun --gres=gpu:1 singularity exec --nv /ceph/container/pytorch_24.03-py3.sif python3 torch_bm.py
+srun --gres=gpu:1 singularity exec --nv /ceph/container/pytorch/pytorch_24.09.sif python3 torch_bm.py
 ```
 
 

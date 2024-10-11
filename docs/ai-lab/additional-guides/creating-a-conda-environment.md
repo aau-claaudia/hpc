@@ -1,3 +1,5 @@
+!!! info "This guide is deprecated!"
+    This guide is deprecated for the moment. For alternative guides, please have a look at our guides for [Adding python packages via virtual environment](/ai-lab/additional-guides/adding-python-packages-via-virtual-environment/) or [Building your own container image](/ai-lab/additional-guides/building-your-own-container-image/).
 
 Creating a conda environment in a container may be easily done using [cotainr](https://cotainr.readthedocs.io/en/stable/). 
 
