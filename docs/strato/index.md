@@ -122,6 +122,7 @@ https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/ (best, is to
 
 <br> <!-- Just a little break -->
 
+<!--
 ## Use cases
 
 ##### Find out how Strato can be effectively utilized in certain computing practices.
@@ -178,8 +179,9 @@ https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/ (best, is to
 
 
 </div>
+-->
 
-<br> <!-- Just a little break -->
+<!-- <br> --> <!-- Just a little break -->
 
 ## Important Information
 
