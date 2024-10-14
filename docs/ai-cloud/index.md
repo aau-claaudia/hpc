@@ -121,6 +121,7 @@ https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/ (best, is to
 
 <br> <!-- Just a little break -->
 
+<!--
 ## Use cases
 
 ##### Find out how AI Cloud can be effectively utilized in certain computing practices.
@@ -158,9 +159,9 @@ https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/ (best, is to
     Consider involving AI Cloud if in your project you are planning to run atomistic simulations. Powerful GPU processing is relevant when applying various methods for simulating materials and minerals on an atomic level, which might require running parallel simulations or many related scientific computing applications - which are supported by AI Cloud.
 
 </div>
+-->
 
-
-<br> <!-- Just a little break -->
+<!-- <br> --> <!-- Just a little break -->
 
 ## Important Information
 
