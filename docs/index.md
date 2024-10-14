@@ -153,7 +153,7 @@ https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/ (best, is to
 
 <br>
 
-
+<!--
 #### HPC Decision Tree
 
 <div class="grid cards grid-button-bottom" markdown>
@@ -170,7 +170,7 @@ https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/ (best, is to
 ![Image title](/assets/img/hpc-decision-tree.png)
 
 </div>
-
+-->
 <br> <!-- Just a little break -->
 
 <!-- ## News & Announcements
