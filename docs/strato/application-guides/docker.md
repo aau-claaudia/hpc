@@ -1,26 +1,41 @@
-The following will guide you trough installing Docker on your Strato instance.
+In the following we will be guiding you throught the process of installing [Docker](https://www.docker.com/) on a Strato Instance.
 
-1. Fetch the appropriate GPG key, to verify the integrity of the software
+## Installing Docker
+Begin by fetching the appropriate GPG key. This is used by the APT package manager to verify the integrity of the software we want to install.
 ```
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
 ```
-2. Add the Docker repository to the list of sources in the APT packaging index
+
+Add the Docker repository to the list of sources in the APT packaging index.
 ```
 echo "deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 ```
-3. Update the APT packaging index
+
+After this has been done, we will update the APT packaging index.
 ```
 sudo apt update
 ```
-4. Install Docker CE (Community Edition), Docker CE CLI (Command Line Interface) and containerd.io (a container runtime dependency).
+
+Install Docker CE (Community Edition), Docker CE CLI (Command Line Interface) and containerd.io (a container runtime dependency).
 ```
 sudo apt install docker-ce docker-ce-cli containerd.io
 ```
-5. Verify that Docker is running
+If this went well, we should now have installed Docker successfully. Let's verify that, by checking if Docker is running:
 ```
 sudo systemctl --no-pager status docker
 ```
-6. Add the current user to the appropriate Linux group "Docker". This is so you don't have to `sudo` all your docker commands.
+
+## Change the privileges
+By default the `docker` commands can only be run by the root user, and we will thus need to take two steps to allow the current user to execute `docker` commands. 
+
+Create a new group called `docker`
 ```
-sudo usermod -aG docker ${USER} && newgrp docker
+newgrp docker
 ```
+
+Add the current user to the appropriate Linux group "Docker".
+```
+sudo usermod -aG docker $USER 
+```
+
+Optionally you can run a Docker command (eg. `docker ps`) to verify that all the steps were completed correctly.
