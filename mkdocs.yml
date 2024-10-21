@@ -7,7 +7,7 @@ copyright: Copyright &copy; 2024 CLAAUDIA
 nav:
   - About HPC:
     - About HPC: index.md
-    - Definition Library: definition-library.md
+    #- Definition Library: definition-library.md
     #- HPC Decision Tree: hpc-decision-tree.md
   - Strato:
     - About Strato: strato/index.md
