@@ -20,10 +20,22 @@ Download the Matlab Package Manager (MPM) from Mathworks and make it executable:
 sudo wget -P /usr/local/bin/ https://www.mathworks.com/mpm/glnxa64/mpm && sudo chmod +x /usr/local/bin/mpm
 ```
 
-Now install Matlab using MPM. Note that here we are installing a version from late 2023. You can check [Mathworks website]("https://se.mathworks.com/help/matlab/release-notes.html") to see if there is a newer release.
+Now install Matlab using MPM. Note that here we are installing a version from early. You can check [Mathworks website]("https://se.mathworks.com/help/matlab/release-notes.html") to see if there is a newer release.
 ```
 mpm install MATLAB --release=R2024a --destination=$HOME/matlab/
 ```
+
+As we want to be able to launch matlab, when we type `matlab` - we will need to add the directory where the matlab executable is located to our `$PATH` variable. We do this and restart our shell:
+```
+echo "export PATH=$HOME/matlab/bin:$PATH" >> .bashrc
+```
+
+After this has been updated, we can restart our shell
+```
+exec bash
+```
+
+### Installing aditional toolboxes
 
 Additional matlab toolboxes can be installed in the following manner:
 ```
@@ -31,19 +43,6 @@ mpm install --release=R2024a --destination=$HOME/matlab --products Signal_Proces
 ```
 For a full list of available toolboxes check out [mpm's documentation for input files](https://github.com/mathworks-ref-arch/matlab-dockerfile/tree/main/mpm-input-files).
 If you cannot find a toolbox you need, it might be unavailable for the Matlab release and/or platform, read about [mpm's limitations](https://github.com/mathworks-ref-arch/matlab-dockerfile/blob/main/MPM.md#limitations).
-
-As we want to be able to launch matlab, when we type `matlab` - we will need to add the directory of the matlab executable to our `PATH` variable. We do this and restart our shell:
-```
-echo "export PATH=$HOME/matlab/bin:$PATH" >> .bashrc && exec $SHELL
-```
-
-## Activating Matlab
-Matlab needs an active licence to run. Before starting the activation process, open your local browser and visit [MathWorks to acquire a one-time password](https://mathworks.com/mwa/otp).
-```
-bash $HOME/matlab/bin/activate_matlab.sh
-```
-Choose "Activate automatically using the Internet" then "Log in to my MathWorks Account" with your AAU e-mail and the one-time password to proceed with activation. Select the appropriate license for you (student or employee), finally confirm the information and finish the activation process.
-
 
 ## Running Matlab
 
@@ -66,12 +65,12 @@ matlab -nodisplay
 
 ### With a GUI
 
-Here we will be running the application on the Strato instance and rendering the application on our local computer. In order for your local computer to receive the necessary datastream from the server, we will need to add a small detail to our SSH command.
+Here we will be running the application on the Strato instance but rendering the application's graphics in the webbrowser of your local computer. In order for your local computer to receive the datastream from the server, we will need to add a small detail to our SSH command.
 ``` 
 ssh -i ~/.ssh/my_ssh_key -L 8888:localhost:8888 <user>@<instance_ip>
 ```
 
-This establishes port-forwarding from your instance to the localhost of your computer. If you did not do this when you logged in to your instance, simply log out and log back in with these details added.
+This establishes port-forwarding from your instance to the `localhost` of your computer. If you did not do this when you logged in to your instance, simply log out and log back in with these details added.
 
 Now let's proceed with the install. Start by checking if PIP is found on the system: 
 ```
@@ -100,17 +99,22 @@ jupyter lab --port=8888
 
 This will output a great many lines. Towards the end of the output, you will find a line that looks something like this:
 ```
-http://localhost:8888/tree?token=b9fc44a5ic1dbl685da73a2acad22uu5ac299f3d46icae8445bfa262382c
+http://localhost:8888/tree?token=b9fc44a5ic1dl685da73a2acad22uu5ac299f3d46icae8445bfa262382c
 ```
 
 This URL has the port number we specified earlier and a special security token.
 Copy this link and paste it into your web browser.
-
 You can now choose to either run Matlab as an application inside your browser or as a Jupyter Notebook.
 
-![Matlab running inside a browser window](/assets/img/jupyter_lab.png)
+![Open Matlab](/assets/img/matlab_jupyter.png)
 
-If you chose "Open Matlab" you will be met with a registration window. In order to do this, input your AAU email adress and follow the process of verifying with WAYF.
+
+### Activate license
+If you chose "Open Matlab" you will be met with a registration window. Enter your AAU-email.
+
+If this is your first time, you will be forwarded to a [WAYF](https://www.wayf.dk/) log in page. Click 'OK' at the bottom of the page. This will redirect you to a Mathworks site, where you can create a profile with Mathworks. After this has been done, you will receive an email saying that a software license is now linked to your account. You will also be redirected to the launch site. It may take a few minutes to complete the activation.
+
+![Matlab license processing](/assets/img/matlab_license.png)
 
 After this step, you should be inside the application and everything should feel familiar.
 
