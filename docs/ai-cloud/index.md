@@ -1,12 +1,12 @@
 # AI Cloud
 
-##### AI Cloud holds the university's largest collection of GPU resources, and is specifically designed for running machine learning workloads. It is particularly well suited for researchers that work with large processes that can be run in parallel.
+##### AI Cloud is Aalborg University's primary GPU resource, tailored for machine learning and parallel processing tasks. It leverages containers for flexibility, providing an efficient platform for research using GPU acceleration.
 
 !!! info "What is AI Cloud?"
 
-    AI Cloud is a collection – a cluster – of large GPU servers and typically requires that users provide a container required to run their job. This makes the platform exceptionally flexible to your individual needs.
+    AI Cloud consists of a powerful cluster of GPU servers, designed for running jobs that require containers. This approach offers significant flexibility, allowing users to tailor their environment based on their specific project needs.
 
-    Accessing AI Cloud is done from a terminal application found on your local computer. From here you log into a front-end node, where you can manage your files and submit your jobs to a queueing mechanism (Slurm). The job is then distributed to one of the GPU nodes in the cluster. Given that AI Cloud is a platform shared among many users, it is not a system where you install your software directly on to the system. Instead, you rely on software containers, that have all the necessary software libraries bundled up in a single file.
+    To access AI Cloud, users connect through a terminal on their local machine, logging into a front-end node. From there, files are managed, and jobs are submitted to a queueing system, which assigns tasks to available GPU nodes. Since the platform is shared among multiple users, software isn't installed directly on the system. Instead, containers with all required libraries are used to ensure smooth execution.
 
     [Apply for resources](/ai-cloud/how-to-access/){ .md-button .md-button--primary .not-max-width}
 
@@ -53,11 +53,10 @@ https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/ (best, is to
 <div class="grid" markdown>
 
 === "Common use"
-    * **Deep Learning Training:** Ideal for training complex deep learning models that require high computational power.
-    * **Image Recognition:** Perfect for running models that process and analyze large volumes of images.
-    * **Natural Language Processing:** Useful for training large language models, such as those used in AI and chatbots.
-    * **Genomic Data Processing:** Efficient for processing and analyzing large genomic datasets.
-    * **Visual Simulations:** Great for running simulations that involve complex visual data and require substantial computational resources.
+    * Training deep learning models for image classification and recognition tasks.
+    * Accelerating natural language processing with large-scale language models.
+    * Running high-resolution visual simulations with GPU-powered parallel computing.
+    * Performing video analysis for object detection and motion tracking in real-time.
 
 === "Recommended skills & knowledge"
 

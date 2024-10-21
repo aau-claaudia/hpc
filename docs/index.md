@@ -42,12 +42,6 @@ https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/ (best, is to
 
 </div>
 
-
-!!! info "Explore HPC Definitions"
-    Expand your knowledge of HPC and related terms.
-
-     [:octicons-arrow-right-24: See Definition Library](/definition-library/)
-
 <br> <!-- Just a little break -->
 
 ## Platform Overview
@@ -65,7 +59,7 @@ https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/ (best, is to
 
 -   __Strato__
     
-    Strato is based on servers with CPU and GPU components that enable you to solve both generic and specific computational problems using virtual machines that you can configure yourself.
+    Built on a Linux-based system, Strato supports data-driven research that requires enhanced processing power with both CPU and GPU capabilities.
     
     [:octicons-arrow-right-24: About Strato](/strato/)
     
@@ -85,7 +79,7 @@ https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/ (best, is to
 
 -   __AI Cloud__
     
-    AI Cloud holds the university's largest collection of GPU resources, and is specifically designed for running machine learning workloads.    
+    AI Cloud is Aalborg University's primary GPU resource, tailored for machine learning and parallel processing tasks.
     
     [:octicons-arrow-right-24: About AI Cloud](/ai-cloud/)
     
