@@ -62,12 +62,6 @@ python3 /ceph/course/claaudia/docs/gpu_util.py
 
 The most important parameter to notice here is the `GPU-Util` metric. Here, you can see that the first GPU is operating at 90% GPU utilization. This indicates excellent utilization of the GPU.
 
-!!! info "High Utilization (70-100%)"
-    For many GPU-accelerated applications like deep learning training or scientific simulations, a high GPU utilization (often around 70-100%) during compute-intensive tasks is considered good. It indicates that the GPU is efficiently processing tasks without significant idle time.
-
-!!! info "Low to Moderate Utilization (10-40%)"
-    In some cases, especially when the workload is less intensive or the application is idle waiting for data or other resources, the GPU utilization might be lower (e.g., 10-40%). This doesn't necessarily mean the GPU is underutilized or performing poorly; it could indicate a natural variation in workload or efficient scheduling of tasks.
-
 You can locate which GPU(s) that belongs to your job, by finding your username below `USER` and the GPU number under `GPU`. In this case `user@+` are utilizing GPU number `0` in the NVIDIA-SMI list.
 
 ``` 
@@ -77,3 +71,8 @@ You can locate which GPU(s) that belongs to your job, by finding your username b
 +------------------------------------------------------------------------------+
 ```
 
+!!! info "High Utilization (70-100%)"
+    For many GPU-accelerated applications like deep learning training or scientific simulations, a high GPU utilization (often around 70-100%) during compute-intensive tasks is considered good. It indicates that the GPU is efficiently processing tasks without significant idle time.
+
+!!! info "Low to Moderate Utilization (10-40%)"
+    In some cases, especially when the workload is less intensive or the application is idle waiting for data or other resources, the GPU utilization might be lower (e.g., 10-40%). This doesn't necessarily mean the GPU is underutilized or performing poorly; it could indicate a natural variation in workload or efficient scheduling of tasks.
