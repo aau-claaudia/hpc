@@ -127,7 +127,7 @@ nav:
           - Run a bash script: ai-lab/additional-guides/run-a-bash-script.md
           - Multiple GPUs with PyTorch: ai-lab/additional-guides/multiple-gpus-with-pytorch.md
         - Creating shared project directories: ai-lab/additional-guides/creating-shared-project-directories.md
-        - Checkpointing: ai-lab/additional-guides/checkpointing.md
+        - Requeuing and checkpointing: ai-lab/additional-guides/requeuing-and-checkpointing.md
     - Courses:
       - Name generator exercises: 
         - Part one: ai-lab/courses/name-generator-exercises/part-1.md  

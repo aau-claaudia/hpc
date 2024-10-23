@@ -6,6 +6,10 @@
   --aau-primary--light: #594fbf;
   --aau-primary--dark:  #54616e;
   --md-admonition-icon--news: url('data:image/svg+xml;charset=utf-8,%3Csvg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="%23e8eaed"%3E%3Cpath d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h440l200 200v440q0 33-23.5 56.5T760-120H200Zm0-80h560v-400H600v-160H200v560Zm80-80h400v-80H280v80Zm0-320h200v-80H280v80Zm0 160h400v-80H280v80Zm-80-320v160-160 560-560Z"/%3E%3C/svg%3E');
+  --md-admonition-icon--python: url("data:image/svg+xml,%3Csvg viewBox='0 0 64 64' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg id='SVGRepo_bgCarrier' stroke-width='0'%3E%3C/g%3E%3Cg id='SVGRepo_tracerCarrier' stroke-linecap='round' stroke-linejoin='round'%3E%3C/g%3E%3Cg id='SVGRepo_iconCarrier'%3E%3Cpath d='M31.885 16c-8.124 0-7.617 3.523-7.617 3.523l.01 3.65h7.752v1.095H21.197S16 23.678 16 31.876c0 8.196 4.537 7.906 4.537 7.906h2.708v-3.804s-.146-4.537 4.465-4.537h7.688s4.32.07 4.32-4.175v-7.019S40.374 16 31.885 16zm-4.275 2.454c.771 0 1.395.624 1.395 1.395s-.624 1.395-1.395 1.395a1.393 1.393 0 0 1-1.395-1.395c0-.771.624-1.395 1.395-1.395z' fill='url(%23a)'%3E%3C/path%3E%3Cpath d='M32.115 47.833c8.124 0 7.617-3.523 7.617-3.523l-.01-3.65H31.97v-1.095h10.832S48 40.155 48 31.958c0-8.197-4.537-7.906-4.537-7.906h-2.708v3.803s.146 4.537-4.465 4.537h-7.688s-4.32-.07-4.32 4.175v7.019s-.656 4.247 7.833 4.247zm4.275-2.454a1.393 1.393 0 0 1-1.395-1.395c0-.77.624-1.394 1.395-1.394s1.395.623 1.395 1.394c0 .772-.624 1.395-1.395 1.395z' fill='url(%23b)'%3E%3C/path%3E%3Cdefs%3E%3ClinearGradient id='a' x1='19.075' y1='18.782' x2='34.898' y2='34.658' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%23387EB8'%3E%3C/stop%3E%3Cstop offset='1' stop-color='%23366994'%3E%3C/stop%3E%3C/linearGradient%3E%3ClinearGradient id='b' x1='28.809' y1='28.882' x2='45.803' y2='45.163' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%23FFE052'%3E%3C/stop%3E%3Cstop offset='1' stop-color='%23FFC331'%3E%3C/stop%3E%3C/linearGradient%3E%3C/defs%3E%3C/g%3E%3C/svg%3E");
+  --md-admonition-icon--pytorch: url("data:image/svg+xml,%3Csvg viewBox='-27 0 310 310' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' preserveAspectRatio='xMidYMid' fill='%23000000'%3E%3Cg id='SVGRepo_bgCarrier' stroke-width='0'%3E%3C/g%3E%3Cg id='SVGRepo_tracerCarrier' stroke-linecap='round' stroke-linejoin='round'%3E%3C/g%3E%3Cg id='SVGRepo_iconCarrier'%3E%3Cg%3E%3Cpath d='M218.281037,90.106412 C268.572988,140.398363 268.572988,221.075034 218.281037,271.716235 C169.036835,322.008186 88.0109141,322.008186 37.7189632,271.716235 C-12.5729877,221.424284 -12.5729877,140.398363 37.7189632,90.106412 L127.825375,0 L127.825375,45.053206 L119.443383,53.4351978 L59.7216917,113.156889 C22.0027285,150.177353 22.0027285,210.946794 59.7216917,248.665757 C96.7421555,286.38472 157.511596,286.38472 195.230559,248.665757 C232.949523,211.645293 232.949523,150.875853 195.230559,113.156889 L218.281037,90.106412 Z M173.227831,84.5184175 C163.969338,84.5184175 156.463847,77.0129263 156.463847,67.7544338 C156.463847,58.4959413 163.969338,50.9904502 173.227831,50.9904502 C182.486323,50.9904502 189.991814,58.4959413 189.991814,67.7544338 C189.991814,77.0129263 182.486323,84.5184175 173.227831,84.5184175 Z' fill='%23EE4C2C'%3E%3C/path%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  --md-admonition-icon--tensorflow: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' fill='%23000000'%3E%3Cg id='SVGRepo_bgCarrier' stroke-width='0'%3E%3C/g%3E%3Cg id='SVGRepo_tracerCarrier' stroke-linecap='round' stroke-linejoin='round'%3E%3C/g%3E%3Cg id='SVGRepo_iconCarrier'%3E%3Cg stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cpath d='M12.3008862,4.00003179 L18.9908678,7.90329279 L19,11.4442164 L14.973309,9.0680926 L14.973309,10.8562526 L16.9806355,12.0276231 L16.9918433,15.1064843 L14.973309,13.9136004 L14.973309,18.415105 L12.3008862,20 L12.3008862,4.00003179 Z M11.6991138,4 L11.6991138,19.9999682 L9.02669102,18.4150732 L9.02669102,9.06816678 L5,11.4441846 L5.00913223,7.903261 L11.6991138,4 Z' fill='%234285F4'%3E%3C/path%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  --md-admonition-icon--bash: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg id='SVGRepo_bgCarrier' stroke-width='0'%3E%3C/g%3E%3Cg id='SVGRepo_tracerCarrier' stroke-linecap='round' stroke-linejoin='round'%3E%3C/g%3E%3Cg id='SVGRepo_iconCarrier'%3E%3Cg id='System / Terminal'%3E%3Cpath id='Vector' d='M17 15H12M7 10L10 12.5L7 15M3 15.8002V8.2002C3 7.08009 3 6.51962 3.21799 6.0918C3.40973 5.71547 3.71547 5.40973 4.0918 5.21799C4.51962 5 5.08009 5 6.2002 5H17.8002C18.9203 5 19.4796 5 19.9074 5.21799C20.2837 5.40973 20.5905 5.71547 20.7822 6.0918C21 6.5192 21 7.07899 21 8.19691V15.8031C21 16.921 21 17.48 20.7822 17.9074C20.5905 18.2837 20.2837 18.5905 19.9074 18.7822C19.48 19 18.921 19 17.8031 19H6.19691C5.07899 19 4.5192 19 4.0918 18.7822C3.71547 18.5905 3.40973 18.2837 3.21799 17.9074C3 17.4796 3 16.9203 3 15.8002Z' stroke='%23000000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3C/path%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
 }
 .md-typeset, .md-typeset p, .admonition p, li, strong {
   font-size: 15px;
@@ -1163,6 +1167,27 @@ del {
   width: auto !important;
 }
 
+.md-typeset .python > .admonition-title::before,
+.md-typeset .python > summary::before {
+  -webkit-mask-image: var(--md-admonition-icon--python);
+          mask-image: var(--md-admonition-icon--python);
+}
+.md-typeset .pytorch > .admonition-title::before,
+.md-typeset .pytorch > summary::before {
+  -webkit-mask-image: var(--md-admonition-icon--pytorch);
+          mask-image: var(--md-admonition-icon--pytorch);
+}
+.md-typeset .tensorflow > .admonition-title::before,
+.md-typeset .tensorflow > summary::before {
+  -webkit-mask-image: var(--md-admonition-icon--tensorflow);
+          mask-image: var(--md-admonition-icon--tensorflow);
+}
+.md-typeset .bash > .admonition-title::before,
+.md-typeset .bash > summary::before {
+  -webkit-mask-image: var(--md-admonition-icon--bash);
+          mask-image: var(--md-admonition-icon--bash);
+}
+
 
 
 
@@ -1199,12 +1224,6 @@ del {
 .level-3 {
   background-color: red;
 }
-
-.approved_data{
-  <span class = 
-}
-
-
 
 
 .icon-container {
