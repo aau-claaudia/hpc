@@ -1,13 +1,19 @@
 {% extends "main.html" %}
 
-{% block tabs %}
-{{ super() }}
+{% block header %}
+<header class="md-header md-header--shadow" data-md-component="header"></header>
+{% endblock %}
+
+{% block tabs %}{% endblock %}
+
+{% block container %}
 
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
 <style>
+
     /* Hide table of contents */
     @media screen and (min-width: 60em) {
         .md-sidebar--secondary {
@@ -27,8 +33,10 @@
     .md-typeset h1 {
         display: none;
     }
-    .md-container {
-        background: var(--aau-primary);
+    .md-main, .md-main__inner {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
     }
     .content {
         width: 80vw;
@@ -39,20 +47,12 @@
         padding: 40px;
         margin-left: auto;
         margin-right: auto;
-        margin-top: 70px;
-    }
-    .remaining-progress {
-        border-radius: 20px !important;
-        height: 25px;
-        margin-right: 20px;
-        width: 100%;
-    }
-    #remaining-progress-bar {
-        background-color: #6200EE !important;
-        color: #fff;
-        font-size: 16px;
-        font-weight: 500;
-        font-family: Montserrat, sans-serif;
+        text-align: center;
+        flex-grow: 1;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        margin-top: 20px;
     }
     .quiz-body {
         display: flex;
@@ -68,20 +68,30 @@
     }
     .question-content {
         margin-block: 1rem 2rem;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
     }
     .form-check {
-        border: 2px solid #d5d8dc;
-        border-radius: 8px;
+        border: 1px solid #d5d8dc;
+        border-radius: 20px;
         margin-bottom: 1rem;
-        padding-left: 3rem;
-        padding-right: 2rem;
         transition: all .15s ease-in-out;
         cursor: pointer;
         display: flex;
         align-items: center;
+        padding-left: 12px;
+        padding-right: 20px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .form-check-input:focus {
+        box-shadow: none;
     }
     .form-check.question-option.selected {
-        border-color: #6200EE;
+        border-color: rgb(26 108 231);
     }
     .question-option:hover {
         background-color: #fafafa;
@@ -89,70 +99,65 @@
     .question-option-content {
         align-items: center;
         display: flex;
-        gap: 8px;
         position: relative;
+        width: 100%;
         vertical-align: top;
-        font-size: 16px;
-        font-weight: 400;
-        font-family: Montserrat, sans-serif;
+    }
+    .form-check .form-check-input {
+        margin-left: 0;
     }
     .form-check-label {
         height: 100%;
         width: 100%;
-        align-content: center;
-        padding-left: 20px;
+        cursor: pointer;
+        padding-left: 15px;
         color: #211a52;
         font-weight: 500;
-        font-family: "Montserrat", sans-serif;
+        font-family: Montserrat, sans-serif;
         font-size: 14px;
-        min-height: 50px;
-        padding-top: 3px;
-        padding-bottom: 3px;
     }
     .form-check-input {
         margin-top: 0 !important;
     }
     .form-check-input:checked {
-        background-color: #6200EE;
-        border-color: #6200EE;
+        background-color: rgb(26 108 231);
+        border-color: rgb(26 108 231);
     }
 
-    .next-btn, .next-previous {
-        align-items: center;
-        display: flex;
-        flex-direction: row;
-        background-color: #6200EE;
+    .next-btn, .go-to-hpc-btn {
+        background-color: rgb(26 108 231);
         padding: 0.5rem 1.8rem;
-        transition: all .15s ease-in-out;
         cursor: pointer;
-        border-radius: 4px;
-        color: #fff;
+        border-radius: 25px;
+        color: #fff !important;
         font-family: Montserrat, sans-serif;
-        font-size: 16px;
-        font-weight: 600;
-        text-align: center;
+        font-size: 15px;
+        font-weight: 500;
     }
-    .next-btn:hover {
-        background-color: #3700B3;
+    .next-btn:hover, .go-to-hpc-btn:hover {
+        background-color: rgb(24, 96, 203);
     }
-    .next-previous {
-        color: #54616e !important;
-        background-color: transparent !important;
-        padding-top: 0.5rem;
-        padding-bottom: 0.5rem;
-        padding-right: 1.8rem;
-        padding-left: 0.5rem;
+    .next-btn.disabled {
+        cursor: default;
+        background-color: #ebebef;
+    }
+    .go-to-hpc-btn {
+        padding: 0.6rem 1.8rem;
+    }
+    .previous-btn {
+        font-family: Montserrat, sans-serif;
+        display: flex;
+        font-size: 14px;
+        align-items: center;
+        margin-bottom: 7px;
+        cursor: pointer;
+        width: 100px;
+        float: left;
     }
     .button-container {
         display: flex;
         flex-direction: column;
         height: 40px;
-    }
-    .button-content .next-btn[style*="display: none"] ~ .next-previous {
-        margin-right: auto;
-    }
-    .button-content .next-previous[style*="display: none"] ~ .next-btn {
-        margin-left: auto;
     }
     .button-content {
         padding: 0;
@@ -224,132 +229,132 @@
     .finished {
         display: none;
     }
-    .go-to-hpc-btn {
-        background-color: #6200EE;
-        border-radius: 4px;
-        padding: 0.8rem 1.5rem;
-        transition: all .15s ease-in-out;
-        color: white !important;
-        font-size: 14px;
+    .divider-horizontal {
+        background-color: #ebebef;
+        height: 1px;
+        width: 100%;
+    }
+    .spec {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+    .spec-content {
+        padding: 3rem 3rem;
+        margin-top: 20px;
+        background: whitesmoke;
+        border-radius: 10px;
+    }
+    #quiz-title-hint {
+        font-family: Montserrat, sans-serif;
+        margin-top: 20px;
+        margin-bottom: 60px;
+    }
+    #spec-title {
+        margin-top: 0;
+        align-self: flex-end;
+    }
+    #spec-description {
+        margin-bottom: 2rem;
+    }
+    .remaining-progress {
+        border-radius: 20px !important;
+        height: 8px;
+        margin-right: 20px;
+        width: 100%;
+    }
+    #remaining-progress-bar {
+        background-color: rgb(26 108 231) !important;
+        color: #fff;
+        font-size: 16px;
         font-weight: 500;
         font-family: Montserrat, sans-serif;
-        text-decoration: none;
     }
-    .go-to-hpc-btn:hover {
-            background-color: #3700B3;
-            cursor: pointer;
+    .go-to-home-btn {
+        position: absolute;
+        top: 0;
+        z-index: 99999;
+        right: 0;
+        border-radius: 30px;
+        border: 1px solid #e1e1e1;
+        font-family: Montserrat, sans-serif;
+        font-size: 14px;
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        cursor: pointer;
+        display: flex;
+        margin-top: 30px;
+        margin-right: 30px;
+    }
+    @media (max-width: 920px) {
+        .content {
+            padding: 25px;
         }
-        .divider-horizontal {
-            background-color: #ebebef;
-            height: 1px;
-            width: 100%;
+        .quiz-body {
+            flex-direction: column;
         }
-        .reset-btn {
-            background-color: transparent;
-            border: 1px solid #d5d8dc;
-            border-radius: 4px;
-            height: -webkit-max-content;
-            height: max-content;
-            padding: 5px 10px;
-            transition: all .15s ease-in-out;
-            text-decoration: none;
-            cursor: pointer;
-            display: inline-block;
-            color: #211a52;
-            font-family: "Montserrat", sans-serif;
-            font-size: 13.3333px;
+        .sections-container {
+            flex-direction: column;
         }
-        .reset-btn:hover {
-            background-color: #fafafa;
-            cursor: pointer;
+    }
+    @media (max-width: 600px) {
+        .md-content {
+            padding-top: 2rem;
+            padding-left: 0;
+            padding-right: 0;
+            margin-left: 0;
+            margin-right: 0;
         }
-        .spec {
-            padding-top: 1rem;
-            padding-bottom: 1rem;
-        }
-        .spec-content {
-            padding: 3rem 3rem;
-            margin-top: 20px;
-            background: whitesmoke;
-            border-radius: 10px;
-        }
-        #quiz-title-hint {
-            font-family: Montserrat, sans-serif;
-            margin-top: 20px;
-        }
-        #spec-title {
-            margin-top: 0;
-            align-self: flex-end;
-        }
-        #spec-description {
-            margin-bottom: 2rem;
-        }
-        @media (max-width: 920px) {
-            .content {
-                padding: 25px;
-            }
-            .quiz-body {
-                flex-direction: column;
-            }
-            .sections-container {
-                flex-direction: column;
-            }
-        }
-        @media (max-width: 600px) {
-            .md-content {
-                padding-top: 2rem;
-                padding-left: 0;
-                padding-right: 0;
-                margin-left: 0;
-                margin-right: 0;
-            }
-        }
+    }
     </style>
-
+    <a class="go-to-home-btn" href="/"><span class="material-symbols-outlined" style="font-size: 20px; padding-right: 5px;">close</span>Close</a>
     <div class="content">
-        <div style="display: flex; justify-content: space-between;">
-            <div class="md-typeset" style="display: flex; align-items: flex-end;">
-                <h2 style="margin-top: 0;">HPC Decision Tree</h2>
+        <div class="decision-header">
+            <div>
+                <div class="previous-btn"><span class="material-symbols-outlined" style="font-size: 20px;">chevron_left</span>Previous</div>
             </div>
-        </div>
-        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
             <div class="progress remaining-progress" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
-                <div id="remaining-progress-bar" class="progress-bar" style="width: 0%">0%</div>
+                <div id="remaining-progress-bar" class="progress-bar" style="width: 0%"></div>
             </div>
-            <button type="button" id="reset-btn" class="reset-btn">Reset</button>
         </div>
-        <div class="quiz-body">
-            <div class="sections-container">
-                <div class="survey md-typeset">
-                    <h4 id="quiz-title"></h4>
-                    <div id="quiz-title-hint"></div>
-                    <div class="question-content"></div>
-                    <div class="button-container">
-                        <div class="button-content">
-                            <div class="next-previous">Previous</div>
-                            <div class="next-btn">Next</div>
+        <div class="decision-content">
+            <div class="quiz-body">
+                <div class="sections-container">
+                    <div class="survey md-typeset">
+                        <h4 id="quiz-title"></h4>
+                        <div id="quiz-title-hint"></div>
+                        <div class="question-content"></div>
+                        <div class="next-btn disabled">Next</div>
+                        <div class="button-container">
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="finished">
-            <div class="spec md-typeset">
-                <h4 style="margin-top: 20px;">We recommend the following HPC platform for you:</h4>
-                <div class="spec-content">
-                    <div class="spec-content-header">
-                        <div class="md-typeset" style="display: flex; justify-content: space-between;">
-                            <h2 id="spec-title"></h2>
+            <div class="finished">
+                <div class="spec md-typeset">
+                    <h4 style="margin-top: 20px;">We recommend the following HPC platform for you:</h4>
+                    <div class="spec-content">
+                        <div class="spec-content-header">
+                            <div class="md-typeset">
+                                <h2 id="spec-title"></h2>
+                            </div>
                         </div>
+                        <p id="spec-description"></p>
+                        <a class="go-to-hpc-btn" href=""></a>
                     </div>
-                    <p id="spec-description"></p>
-		            <a class="go-to-hpc-btn" href=""></a>
                 </div>
             </div>
+        </div>
+        <div class="decision-tree-footer">
         </div>
     </div>
 
     <script>
+
+        var currentPath = [];
+        var currentQuestionIndex = 0;
+        var totalQuestions = 0;
 
         function initializePage() {
             const quizData = [
@@ -361,15 +366,15 @@
                         {
                             hpc: ["AI-LAB", "UCloud", "Strato"],
                             question: "Do you need to process or store confidential or sensitive data?",
-                            options: ["I'm only working on data levels 0, 1<span><div class='survey-tooltip'><span>?</span><p class='tooltip-text'>Data level 0: Public information. Data level 1: Internal information - only users with a purely work-related need may and can have access to.</p></div></span>", "I will include data levels 2, 3<span><div class='survey-tooltip'><span>?</span><p class='tooltip-text'>Data level 2: Confidential information - only users with a purely work-related need may and can have access to, and where a breach of confidentiality will have semi-serious impacts for the parties involved. Data level 3: sensitive information - due to its personal, technical, commercial, or competitive nature and sensitivity, must be protected against unintentional access and disclosure.</p></div></span>"],
+                            options: ["I'm only working on data levels 0, 1<span style='padding-left: 8px;'><div class='survey-tooltip'><span>?</span><p class='tooltip-text'>Data level 0: Public information. Data level 1: Internal information - only users with a purely work-related need may and can have access to.</p></div></span>", "I will include data levels 2, 3<span style='padding-left: 8px;'><div class='survey-tooltip'><span>?</span><p class='tooltip-text'>Data level 2: Confidential information - only users with a purely work-related need may and can have access to, and where a breach of confidentiality will have semi-serious impacts for the parties involved. Data level 3: sensitive information - due to its personal, technical, commercial, or competitive nature and sensitivity, must be protected against unintentional access and disclosure.</p></div></span>"],
                             next: [
                                 {
                                     hpc: ["AI-LAB", "UCloud", "Strato"],
                                     question: "What type of processing power is required for your work?",
                                     options: [
-                                        "GPU-focused<span><div class='survey-tooltip'><span>?</span><p class='tooltip-text'>My work involves tasks like machine learning, deep learning, or other GPU-accelerated computations that benefit from parallel processing capabilities.</p></div></span>",
-                                        "CPU-focused<span><div class='survey-tooltip'><span>?</span><p class='tooltip-text'>My work involves general computations, high-performance simulations, or tasks that rely on the strong sequential processing power of CPUs.</p></div></span>",
-                                        "It requires efficiency of both CPU and GPU equally<span><div class='survey-tooltip'><span>?</span><p class='tooltip-text'>My work requires a combination of GPU and CPU resources to handle a diverse set of computational tasks efficiently.</p></div></span>",
+                                        "GPU-focused<span style='padding-left: 8px;'><div class='survey-tooltip'><span>?</span><p class='tooltip-text'>My work involves tasks like machine learning, deep learning, or other GPU-accelerated computations that benefit from parallel processing capabilities.</p></div></span>",
+                                        "CPU-focused<span style='padding-left: 8px;'><div class='survey-tooltip'><span>?</span><p class='tooltip-text'>My work involves general computations, high-performance simulations, or tasks that rely on the strong sequential processing power of CPUs.</p></div></span>",
+                                        "It requires efficiency of both CPU and GPU equally<span style='padding-left: 8px;'><div class='survey-tooltip'><span>?</span><p class='tooltip-text'>My work requires a combination of GPU and CPU resources to handle a diverse set of computational tasks efficiently.</p></div></span>",
                                         "I don't know"
                                     ],
                                     next: [
@@ -417,15 +422,15 @@
                         {
                             hpc: ["AI Cloud", "UCloud", "Strato"],
                             question: "Do you need to process or store confidential or sensitive data?",
-                            options: ["I'm only working on data levels 0, 1<span><div class='survey-tooltip'><span>?</span><p class='tooltip-text'>Data level 0: Public information. Data level 1: Internal information - only users with a purely work-related need may and can have access to.</p></div></span>", "I will include data levels 2, 3<span><div class='survey-tooltip'><span>?</span><p class='tooltip-text'>Data level 2: Confidential information - only users with a purely work-related need may and can have access to, and where a breach of confidentiality will have semi-serious impacts for the parties involved. Data level 3: sensitive information - due to its personal, technical, commercial, or competitive nature and sensitivity, must be protected against unintentional access and disclosure.</p></div></span>"],
+                            options: ["I'm only working on data levels 0, 1<span style='padding-left: 8px;'><div class='survey-tooltip'><span>?</span><p class='tooltip-text'>Data level 0: Public information. Data level 1: Internal information - only users with a purely work-related need may and can have access to.</p></div></span>", "I will include data levels 2, 3<span style='padding-left: 8px;'><div class='survey-tooltip'><span>?</span><p class='tooltip-text'>Data level 2: Confidential information - only users with a purely work-related need may and can have access to, and where a breach of confidentiality will have semi-serious impacts for the parties involved. Data level 3: sensitive information - due to its personal, technical, commercial, or competitive nature and sensitivity, must be protected against unintentional access and disclosure.</p></div></span>"],
                             next: [
                                 {
                                     hpc: ["AI Cloud", "UCloud", "Strato"],
                                     question: "What type of processing power is required for your work?",
                                     options: [
-                                        "GPU-focused<span><div class='survey-tooltip'><span>?</span><p class='tooltip-text'>My work involves tasks like machine learning, deep learning, or other GPU-accelerated computations that benefit from parallel processing capabilities.</p></div></span>",
-                                        "CPU-focused<span><div class='survey-tooltip'><span>?</span><p class='tooltip-text'>My work involves general computations, high-performance simulations, or tasks that rely on the strong sequential processing power of CPUs.</p></div></span>",
-                                        "It requires efficiency of both CPU and GPU equally<span><div class='survey-tooltip'><span>?</span><p class='tooltip-text'>My work requires a combination of GPU and CPU resources to handle a diverse set of computational tasks efficiently.</p></div></span>",
+                                        "GPU-focused<span style='padding-left:10px;'><div class='survey-tooltip'><span>?</span><p class='tooltip-text'>My work involves tasks like machine learning, deep learning, or other GPU-accelerated computations that benefit from parallel processing capabilities.</p></div></span>",
+                                        "CPU-focused<span style='padding-left:10px;'><div class='survey-tooltip'><span>?</span><p class='tooltip-text'>My work involves general computations, high-performance simulations, or tasks that rely on the strong sequential processing power of CPUs.</p></div></span>",
+                                        "It requires efficiency of both CPU and GPU equally<span style='padding-left: 8px;'><div class='survey-tooltip'><span>?</span><p class='tooltip-text'>My work requires a combination of GPU and CPU resources to handle a diverse set of computational tasks efficiently.</p></div></span>",
                                         "I don't know"
                                     ],
                                     next: [
@@ -531,19 +536,26 @@
                 }
             };
             
-            let currentPath = [];
-            let currentQuestionIndex = 0;
+            currentPath = [];
+            currentQuestionIndex = 0;
 
             const questionTitle = document.getElementById('quiz-title');
             const questionContent = document.querySelector('.question-content');
             const remainingProgressBar = document.getElementById('remaining-progress-bar');
             const nextButton = document.querySelector('.next-btn');
-            const previousButton = document.querySelector('.next-previous');
+            const previousButton = document.querySelector('.previous-btn');
             const buttonContent = document.querySelector('.button-content');
             const quizBody = document.querySelector('.quiz-body');
             const finishedContent = document.querySelector('.finished');
-            const resetButton = document.getElementById('reset-btn');
             const quizTitleHint = document.getElementById('quiz-title-hint');
+
+            quizBody.style.display = 'block';
+            finishedContent.style.display = 'none';
+            previousButton.childNodes[1].nodeValue = "Previous";
+            remainingProgressBar.style.width = '0%';
+
+            // Clear any previously selected radio buttons
+            document.querySelectorAll('input[name="quizOptions"]').forEach(input => input.checked = false);
 
             function calculateLongestPath(question) {
                 if (typeof question === 'string') return 0;
@@ -552,7 +564,7 @@
                 return 1 + Math.max(...question.next.map(calculateLongestPath));
             }
 
-            const totalQuestions = calculateLongestPath(quizData[0]);
+            totalQuestions = calculateLongestPath(quizData[0]);
             
             function renderQuestion() {
                 const questionData = getCurrentQuestion();
@@ -566,6 +578,7 @@
                     quizTitleHint.innerHTML = ``;
                 }
 
+                // Render question options
                 questionData.options.forEach((option, i) => {
                     const formCheck = document.createElement('div');
                     formCheck.className = 'form-check question-option';
@@ -573,45 +586,45 @@
                         <input class="form-check-input" type="radio" name="quizOptions" id="option${i}">
                         <label class="form-check-label question-option-content" for="option${i}">
                             ${option}
-                        </label>
+                        </label>    
                     `;
-                    questionContent.appendChild(formCheck);
-                });
 
-                const remainingQuestions = totalQuestions - currentPath.length;
-                const progressPercentage = ((totalQuestions - remainingQuestions) / totalQuestions) * 100;
-                remainingProgressBar.style.width = `${progressPercentage}%`;
-                remainingProgressBar.textContent = `${Math.round(progressPercentage)}%`;
+                    formCheck.addEventListener('click', () => {
+                        const radioInput = formCheck.querySelector('input[type="radio"]');
+                        radioInput.checked = true;
 
-                nextButton.style.display = 'none';
-                previousButton.style.display = currentPath.length === 0 ? 'none' : 'inline-block';
-
-                document.querySelectorAll('input[name="quizOptions"]').forEach(option => {
-                    option.addEventListener('change', () => {
+                        // Remove 'selected' class from all form-check divs
                         document.querySelectorAll('.form-check').forEach(element => {
                             element.classList.remove('selected');
                         });
-                    
-                        // Add the 'selected' class to the parent .form-check element of the checked input
-                        if (option.checked) {
-                            option.closest('.form-check').classList.add('selected');
-                        }
-                    
-                        nextButton.style.display = 'inline-block';
+
+                        // Add 'selected' class to the clicked form-check div
+                        formCheck.classList.add('selected');
+
+                        // Show the next button once an option is selected
+                        nextButton.classList.remove('disabled');
                     });
+
+                    questionContent.appendChild(formCheck);
                 });
 
-                updateButtonLayout();
+                // Update progress bar
+                updateProgressBar();
+                
+                nextButton.classList.add('disabled');
+                nextButton.style.display = 'inline-block';
             }
 
-            function updateButtonLayout() {
-                if (currentPath.length === 0) {
-                    buttonContent.style.justifyContent = 'right';
-                } else {
-                    buttonContent.style.justifyContent = 'space-between';
+            function updateProgressBar() {
+                const completedQuestions = currentPath.length;
+                const progressPercentage = (completedQuestions / totalQuestions) * 100;
+
+                remainingProgressBar.style.width = `${progressPercentage}%`;
+
+                if (completedQuestions === totalQuestions) {
+                    remainingProgressBar.style.width = '100%';
                 }
             }
-
 
             function getCurrentQuestion() {
 
@@ -634,7 +647,6 @@
             }
 
             function displayResult(result) {
-                console.log("Result:", result); // Add this line for debugging
             
                 quizBody.style.display = 'none';
                 finishedContent.style.display = 'block';
@@ -658,13 +670,13 @@
                 const linkElement = document.querySelector('.go-to-hpc-btn');
                 linkElement.href = platform.link[0].href;
                 linkElement.textContent = platform.link[0].text;
-            
+
                 // Reset progress bar
                 remainingProgressBar.style.width = '100%';
-                remainingProgressBar.textContent = '100%';
-            
+
                 nextButton.style.display = 'none';
-                previousButton.style.display = 'none';
+
+                previousButton.childNodes[1].nodeValue = "Reset quiz"
             }
             
             nextButton.addEventListener('click', () => {
@@ -681,37 +693,36 @@
                 }
             });
 
+            
+
             previousButton.addEventListener('click', () => {
-                if (currentPath.length > 0) {
+                if (previousButton.textContent.includes('Reset quiz')) {
+                    currentPath = [];
+                    currentQuestionIndex = 0;
+                    quizBody.style.display = 'block';
+                    finishedContent.style.display = 'none';
+                    previousButton.childNodes[1].nodeValue = "Previous"
+                    renderQuestion();
+                } else if (currentPath.length > 0) {
                     currentPath.pop();
                     renderQuestion();
                 }
             });
             
-            resetButton.addEventListener('click', () => {
-                currentPath = [];
-                currentQuestionIndex = 0;
-                quizBody.style.display = 'block';
-                finishedContent.style.display = 'none';
-                renderQuestion(); // Reset the quiz to the initial state
-            });
-                
 
             renderQuestion();
         }
 
         document.addEventListener('DOMContentLoaded', initializePage, false);
-    
-        document$.subscribe(function() {
-            initializePage();
-        })
+
+        if (typeof window.document$ !== 'undefined') {
+            window.document$.subscribe(function() {
+                initializePage(); // Reinitialize the page on every navigation
+            });
+        } else {
+            document.addEventListener('DOMContentLoaded', initializePage);
+        }
 
     </script>
 
 {% endblock %}
-
-<!-- Content -->
-{% block content %}{% endblock %}
-
-<!-- Application footer -->
-{% block footer %}{% endblock %}

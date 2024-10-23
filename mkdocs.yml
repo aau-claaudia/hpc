@@ -8,7 +8,7 @@ nav:
   - About HPC:
     - About HPC: index.md
     #- Definition Library: definition-library.md
-    #- HPC Decision Tree: hpc-decision-tree.md
+    - HPC Decision Tree: hpc-decision-tree.md
   - Strato:
     - About Strato: strato/index.md
     - How to access: strato/how-to-access.md
@@ -150,7 +150,6 @@ theme:
   name: material
   custom_dir: docs/overrides
   features:
-    - navigation.instant
     - navigation.tabs
     - content.code.copy
     - content.code.annotate
