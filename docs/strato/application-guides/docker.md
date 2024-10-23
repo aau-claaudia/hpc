@@ -28,14 +28,9 @@ sudo systemctl --no-pager status docker
 ## Change the privileges
 By default the `docker` commands can only be run by the root user, and we will thus need to take two steps to allow the current user to execute `docker` commands. 
 
-Create a new group called `docker`
+Create a new group called `docker` and add the current user to this group:
 ```
-newgrp docker
-```
-
-Add the current user to the appropriate Linux group "Docker".
-```
-sudo usermod -aG docker $USER 
+sudo usermod -aG docker ${USER} && newgrp docker
 ```
 
 Optionally you can run a Docker command (eg. `docker ps`) to verify that all the steps were completed correctly.
