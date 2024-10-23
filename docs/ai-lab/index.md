@@ -128,7 +128,7 @@ https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/ (best, is to
     If you would like to work with confidential or sensitive data (classified as levels 2 and 3), then we support another HPC platform called [UCloud](/ucloud/).
 
 !!! info "Not suitable for CPU-only computational tasks"
-    The powerful GPU processors allow users to process large datasets much more efficiently than would be the case with pure CPU processing - given that your application can be parallelised in a GPU compatible manner. At the same time, the AI Cloud platform is not designed for CPU-only computational tasks, and we have alternative recommended platforms, such as [UCloud](/ucloud/) for those needs.
+    The powerful GPU processors allow users to process large datasets much more efficiently than would be the case with pure CPU processing - given that your application can be parallelised in a GPU compatible manner. At the same time, the AI-LAB platform is not designed for CPU-only computational tasks, and we have alternative recommended platforms, such as [UCloud](/ucloud/) for those needs.
 
 !!! info "Review the terms and conditions"
     Before getting started, take a few moments to review the [terms and conditions](/assets/terms-and-conditions-ai-lab.pdf) of using AI-LAB, and don't hesitate to [reach out](https://serviceportal.aau.dk/serviceportal?id=emp_taxonomy_topic&topic_id=82a253e8838fc21053711d447daad328){target="_blank} to our support team if you have any questions or concerns.
