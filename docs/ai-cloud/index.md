@@ -1,12 +1,14 @@
 # AI Cloud
 
-##### AI Cloud is Aalborg University's primary GPU resource, tailored for machine learning and parallel processing tasks. It leverages containers for flexibility, providing an efficient platform for research using GPU acceleration.
+##### AI Cloud is Aalborg University's largest GPU cluster - perfect for machine learning and parallel processing tasks.
 
 !!! info "What is AI Cloud?"
 
-    AI Cloud consists of a powerful cluster of GPU servers, designed for running jobs that require containers. This approach offers significant flexibility, allowing users to tailor their environment based on their specific project needs.
+    AI Cloud is a GPU cluster made up of a collecton of Nvidia and AMD GPU's, designed for processing GPU-demanding machine learning workloads. 
 
-    To access AI Cloud, users connect through a terminal on their local machine, logging into a front-end node. From there, files are managed, and jobs are submitted to a queueing system, which assigns tasks to available GPU nodes. Since the platform is shared among multiple users, software isn't installed directly on the system. Instead, containers with all required libraries are used to ensure smooth execution.
+    The platform is accessed through a terminal application on the user's local machine. From here the user logs in to a front end node, where files management and job submission to the compute nodes takes place.
+
+    AI Cloud is best suited for batch processing workflows, ie. submitting jobs to a queueing mechanism and where they are processed on the compute nodes without user interaction. It is *not* designed for interactive development, where users occupy one or more GPU's while writing scripts.
 
     [Apply for resources](/ai-cloud/how-to-access/){ .md-button .md-button--primary .not-max-width}
 
@@ -52,15 +54,19 @@ https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/ (best, is to
 
 <div class="grid" markdown>
 
+=== "Recommended skills & knowledge"
+    Operating AI Cloud successfully involves being able to use the following:
+    
+    * A Linux terminal environment.
+    * [Slurm](/ai-cloud/system-overview/#slurm) - a common mechanism for queueing HPC workloads.
+    * [Singularity](/ai-cloud/system-overview/#singularity) software containers.
+
 === "Common use"
     * Training deep learning models for image classification and recognition tasks.
     * Accelerating natural language processing with large-scale language models.
     * Running high-resolution visual simulations with GPU-powered parallel computing.
     * Performing video analysis for object detection and motion tracking in real-time.
 
-=== "Recommended skills & knowledge"
-
-    Operating the AI Cloud involves learning how to use the queueing mechanism and understanding the containerisation concept. It's also useful to be able to navigate a Linux terminal environment.
 
 
 ![Image title](/assets/img/ai-cloud/ai-cloud-hero.webp)
