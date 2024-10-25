@@ -132,7 +132,7 @@ https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/ (best, is to
 | Feature | Strato | UCloud | AI Cloud | AI-LAB |
 | --- | --- | --- | --- | --- |
 | Available to researchers | :material-check: | :material-check: | :material-check: | - |
-| Available to students | - | :material-check: | - | :material-check: |
+| Available to students | :material-check: (CPU processing) | :material-check: | - | :material-check: |
 | Sensitive data | - | :material-check: | - | - |
 | Ideal for | Model training, simulations | First-time users, data processing | Deep learning, large datasets | Student projects, deep learning |
 | CPU processing | :material-check: | :material-check: | - | - |

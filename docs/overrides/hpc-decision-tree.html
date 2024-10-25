@@ -385,13 +385,35 @@
                                             question: "Do you need to process or store confidential or sensitive data?",
                                             description: "Not sure what type your data is? </span><a target='_blank' href='https://www.security.aau.dk/data-classification'>Click here</a><span> to learn more about how to classify your information according to the AAU data classification model.</span>",
                                             options: ["No, I do not need to handle confidential or sensitive data", "Yes, my project involves confidential or sensitive data (<span><a href='https://www.security.aau.dk/data-classification/the-four-data-types-at-aau' target='_blank'>type 2 or 3</a></span>)."],
-                                            next: ["AI-LAB", "UCloud"]
+                                            next: [
+                                                {
+                                                    question: "Which capability is most crucial for your work?",
+                                                    description: "",
+                                                    options: ["I need a lot of GPU power for training models", "I need to perform smaller experiments or test models interactively"],
+                                                    next: ["AI-LAB", "Strato"
+                                                    ]
+                                                },
+                                                "UCloud"
+                                            ]
                                         },
                                     ]
                                 },
                                 "UCloud",
                                 "UCloud",
-                                "UCloud",
+                                {
+                                    question: "Do you require specialized software or specific applications for your project?",
+                                    description: "",
+                                    options: ["Yes, I need pre-installed software (e.g., Jupyter Notebook, MATLAB, RStudio, etc.)", "No, I want to install and configure my own software environment"],
+                                    next: [
+                                        "UCloud",
+                                        {
+                                            question: "Do you need to process or store confidential or sensitive data?",
+                                            description: "Not sure what type your data is? </span><a target='_blank' href='https://www.security.aau.dk/data-classification'>Click here</a><span> to learn more about how to classify your information according to the AAU data classification model.</span>",
+                                            options: ["No, I do not need to handle confidential or sensitive data", "Yes, my project involves confidential or sensitive data (<span><a href='https://www.security.aau.dk/data-classification/the-four-data-types-at-aau' target='_blank'>type 2 or 3</a></span>)."],
+                                            next: ["Strato", "UCloud"]
+                                        },
+                                    ]
+                                },
                                 {
                                     question: "Do you need help understanding what type of resources your project might require?",
                                     description: "",
