@@ -1,8 +1,8 @@
-## Who can get access?
-All researchers at AAU can get access to AI Cloud. If you're a student, use [AI-LAB](/ai-lab/), which is similar to AI Cloud but built for AAU students. If you need more GPU power, you can request access to AI Cloud with a strong justification, and your supervisor must submit the access request for you.
+## Who can request access?
 
-## 1. Fill out the application form
-Please fill in the [access request form](https://forms.office.com/e/ewgvLRbbv7){target="_blank} to get started using AI Cloud. Supervisors should fill in the form for their students.
+* **Researchers** are granted access upon filling out our access request form.
+* **Students** are refered to using [AI-LAB](/ailab/) - a similar platform dedicated to students. If more GPU power is needed, it's possible to apply for access to AI Cloud, if they can provide a strong justification and their supervisor submits the application on their behalf.
 
-## 2. Processing of your request
-The request is processed manually, so please expect a bit of delay before you can start using AI Cloud.
+## How to request access
+* Fill out the [access request form](https://forms.office.com/e/ewgvLRbbv7){target="_blank}. 
+* The request is processed manually, so please expect a bit of delay before you can start using AI Cloud.

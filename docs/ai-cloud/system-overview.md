@@ -172,8 +172,6 @@ mkdir <name>
 
 Please remember, that these directories should be deleted when your project is finished, and you no longer need them. They are not intended for long term data storage.
 
-Happy computing!
-
 ## Storage quota expansions
 When users log in to AI Cloud for the first time, a user directory is created for them. These directories are allocated 1 TB of storage by default. This should be plenty for most users, but should you need additional space, it is possible to apply for storage quota expansions for a limited time using our [Storage quota expansions form](https://forms.office.com/e/AjT0GccAPb).
 
