@@ -1,13 +1,10 @@
 ##### In AI-LAB, semester groups can collaborate by creating shared project directories in `/ceph/project`. Follow this guide to set up a project directory and ensure that only group members can access it.
 
 !!! info "Note: This guide only works between users in a semester group"
-    You can check if your part of the same group, by using this command:
+   If you need to create a private shared directory for specific users that are not part of a semester group, please contact us through the [AAU Service Portal](https://serviceportal.aau.dk/serviceportal?id=sc_cat_item&sys_id=a05e2fb4c3434610f0f3041ad001310e) and include the following in your request:
     
-    ```
-    groups
-    ```
-    
-    A semester group could be something like `xx-43-xx-9-01@student.aau.dk`.
+    * Email address(es) of the users who need access to the directory
+    * Name of the directory you want to create
 
 
 ### Step 1: Create a Project Directory
