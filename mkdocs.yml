@@ -129,6 +129,7 @@ nav:
         - Creating shared project directories: ai-lab/additional-guides/creating-shared-project-directories.md
         - Requeuing and checkpointing: ai-lab/additional-guides/requeuing-and-checkpointing.md
     - Courses:
+      - AI-LAB Workshop: ai-lab/courses/ai-lab-workshop.md
       - Name generator exercises: 
         - Part one: ai-lab/courses/name-generator-exercises/part-1.md  
         - Part two: ai-lab/courses/name-generator-exercises/part-2.md
