@@ -176,3 +176,6 @@ https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/ (best, is to
 
 !!! news "26-08-2024 - 16 new NVIDIA H100 GPUs for UCloud"
     You can find 16 new NVIDIA H100 GPU resources on UCloud (select machine type u3-gpu). Read more [here](https://escience.sdu.dk/index.php/news/16-new-h100-ai-gpus-arrive-at-sdu/). -->
+
+
+    
