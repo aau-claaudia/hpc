@@ -1245,3 +1245,8 @@ del {
   font-size: 10px;
   z-index: 1;
 }
+
+
+.standard_image_width{
+  width: 650px;
+}

@@ -11,27 +11,27 @@
 
 The Chat UI application on UCloud is a great tool for working with LLMs and is simple to set up and use. The app supports saving your work in a directory on your personal drive on UCloud. It is a good idea to use this option so that you only need to go through the setup process once. The first step is to create an empty folder to use as the application input parameter `DATA_DIR`.
 
-![ChatUI - Create empty folder](/assets/img/UCloud/ChatUI 1.png)
+![ChatUI - Create empty folder](/assets/img/UCloud/ChatUI 1.png){.standard_image_width}
 
 Now it is time to find and start the application. Search for “chatui” under apps.
 
-![ChatUI - Create empty folder](/assets/img/UCloud/ChatUI 2.png)
+![ChatUI - Create empty folder](/assets/img/UCloud/ChatUI 2.png){.standard_image_width}
 
 Running inference against LLMs is much faster on a machine with one GPU and a large amount of memory. For optimal performance, we recommend using the u3-GPU from SDU or the uc1-l4 or uc1-l40 from the AAU/K8 provider. Remember to select the empty directory that was created in the first step as `DATA_DIR`. Additionally, remember to specify the desired runtime duration for the application by setting the number of hours. Once the machine is running, you can extend the runtime or shut it down as needed.
 
-![Find ChatUI under apps](/assets/img/UCloud/ChatUI 3.png)
+![Find ChatUI under apps](/assets/img/UCloud/ChatUI 3.png){.standard_image_width}
 
 The application needs a public link in order for the students to be able to access it from outside UCloud. Scroll down and click "add public link".
 
-![Settings for the server](/assets/img/UCloud/ChatUI 4.png)
+![Settings for the server](/assets/img/UCloud/ChatUI 4.png){.standard_image_width}
 
 In this example, we are using a machine in the AAU/K8 provider, so we will create the link from the **same provider**.
 
-![Create public link](/assets/img/UCloud/ChatUI 5.png)
+![Create public link](/assets/img/UCloud/ChatUI 5.png){.standard_image_width}
 
 Click on “Use” after the link is created.
 
-![Click on use](/assets/img/UCloud/ChatUI 6.png)
+![Click on use](/assets/img/UCloud/ChatUI 6.png){.standard_image_width}
 
 With this configuration, the application will be accessible over the internet on the URL listed above. Lastly, click the green “Submit” button at the top of the page to start the application. The number of hours that the application runs can be extended after it has started. And since we are using a data directory, the application can be started again with the same configuration. 
 
@@ -45,42 +45,52 @@ Fill in your name, email, and password, and click on “Create Account”.
 
 In the settings, we can disable new sign-ups and create a user that students can log in with.
 
-![Disable sign-ups in settings](/assets/img/UCloud/ChatUI 8.png)
+![Disable sign-ups in settings](/assets/img/UCloud/ChatUI 8.png){.standard_image_width}
 
 Under the “Dashboard” pane, a new user called e.g., “student” can be created. Remember to create the user as a normal user and not as an admin. This user can be used by the students to log in, and in this way, only you have control over the application configuration.
 
-![Create a new user for the students](/assets/img/UCloud/ChatUI 9.png)
+![Create a new user for the students](/assets/img/UCloud/ChatUI 9.png){.standard_image_width}
 
 Toggle off “Enable New Sign Ups” under “Settings” and “General” in the admin panel. **Remember to click the save button in the bottom right corner.**
 
-![Toggle New Sign Ups off](/assets/img/UCloud/ChatUI 10.png)
+![Toggle New Sign Ups off](/assets/img/UCloud/ChatUI 10.png){.standard_image_width}
 
 To download a model, click on “Settings” and “Models.” If you don’t know the name of the model you want to use, there is a link with information about the available models. For instance, type in “llama3” and click the download button on the right.
 
-![Download a model](/assets/img/UCloud/ChatUI 11.png)
+![Download a model](/assets/img/UCloud/ChatUI 11.png){.standard_image_width}
 
 The downloaded model should now be visible if you click on “Workspace” on the left.
 
-![Model visible in the workspace ](/assets/img/UCloud/ChatUI 12.png)
+![Model visible in the workspace ](/assets/img/UCloud/ChatUI 12.png){.standard_image_width}
 
-In the “Documents” section, it is possible to upload documents for adding RAG functionality. Try to upload a document. Notice the text with information about how to use/load the documents for use in prompts .
+In the “Knowledge” section, it is possible to create a knowledge base where documents can be uploaded to get a RAG  functionality.
 
-![Load documents for RAG functionality](/assets/img/UCloud/ChatUI 13.png)
+![Model visible in the workspace ](/assets/img/UCloud/ChatUI 12a.png){.standard_image_width}
 
+Input the name and description of the knowledge base. 
+
+![Model visible in the workspace ](/assets/img/UCloud/ChatUI 12a.png){.standard_image_width}
+
+ Try to upload a document or a directory.
+
+![Load documents for RAG functionality](/assets/img/UCloud/ChatUI 13.png){.standard_image_width}
+
+Now everything is setup and ready to use.
 ---
 
 ## Using the application for inference
 
-Now that the model has been downloaded, try to make a prompt by clicking “New Chat” in the upper left corner. Then select the model (in this case llama3) from the dropdown. In the prompt input field, type `#` to select which/all documents to use.
+Now that the model has been setup, try to make a prompt by clicking “New Chat” in the upper left corner. Then select the model (in this case llama3) from the dropdown. In the prompt input field, type `#` to select the knowledge base.
 
-![Using the application](/assets/img/UCloud/ChatUI 14.png)
+![Using the application](/assets/img/UCloud/ChatUI 14.png){.standard_image_width}
 
 This is an example of a query. The query is at the top, and notice under the reply that it is mentioned which document was used as the source in generating the reply.
 
-![Using the application](/assets/img/UCloud/ChatUI 15.png)
+![Using the application](/assets/img/UCloud/ChatUI 15.png){.standard_image_width}
 
-When the appropriate documents have been uploaded, the application is ready for use. When the students log in with the user created for this purpose, they will also have access to the same model and documents.
+When the students log in with the user created for this purpose, they will also have access to the same model and documents.
 
+---
 To summarize, with the configuration used in this example, a student would go to:
 ```
 http://app-chatui-example.cloud.aau.dk/
@@ -89,11 +99,11 @@ and log in with the username “student@email.com” with the password created f
 
 The next time you need to run the app with the same data and configuration, use the “Import parameters” option.
 
-![Using the application](/assets/img/UCloud/ChatUI 16.png)
+![Using the application](/assets/img/UCloud/ChatUI 16.png){.standard_image_width}
 
 Click on “Import” to import the configuration from the last run. Everything should be the same, and just click “Submit” to start the job.
 
-![Using the application](/assets/img/UCloud/ChatUI 17.png)
+![Using the application](/assets/img/UCloud/ChatUI 17.png){.standard_image_width}
 
 ---
 
