@@ -52,15 +52,8 @@ There are two ways in which you can work with Matlab on Strato instances.
 2. [Run with graphical user interface (GUI)](/strato/application-guides/strato-applications/#graphical-user-interfaces): Here the application runs on your Strato instance, but its graphics are rendered on your local computer - in this case your web browser. This is useful for interactive development, ie. workflows where you will need to test and modify your code continuously.
 
 ### Headless mode
-If you wanted to run prepared script called `your_script.m`, you would run:
-```
-matlab -nodisplay -batch your_script.m
-```
 
-If you would want to enter the Matlab console to execute individual statements:
-```
-matlab -nodisplay
-```
+Currently broken - we are working on it.
 
 ### With a GUI
 
@@ -83,12 +76,12 @@ sudo apt install python3-pip python3-dev python3-venv
 
 On newer Linux distributions, you will not be able to install Pip modules system wide - they must be installed in a virtual environment. Let's create one with:
 ```
-python3 -m venv $HOME/.matlab-venv
+python3 -m venv $HOME/matlab-venv
 ```
 
 Finally we can activate the virtual environment before installing:
 ```
-source $HOME/.matlab-venv/bin/activate
+source $HOME/matlab-venv/bin/activate
 ```
 
 Now install the Jupyter Kernel with:
