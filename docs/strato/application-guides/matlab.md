@@ -12,7 +12,7 @@ sudo apt update
 
 Before going further, we will need to install an unzip tool and some additional libraries recommended by Mathworks.
 ```
-sudo apt install unzip libx11-dev xorg-dev xvfb
+sudo apt install unzip libx11-dev xorg-dev xvfb libgdk-pixbuf-2.0-0
 ```
 
 Download the Matlab Package Manager (MPM) from Mathworks and make it executable:
@@ -51,10 +51,6 @@ There are two ways in which you can work with Matlab on Strato instances.
 1. [Run the application in headless mode](/strato/application-guides/strato-applications/#command-line-interfaces): By default Strato instances do not come with any graphical user interfaces, but are operated in headless mode. In cases where you simply need to execute a prewritten script, this approach might be preferable.
 2. [Run with graphical user interface (GUI)](/strato/application-guides/strato-applications/#graphical-user-interfaces): Here the application runs on your Strato instance, but its graphics are rendered on your local computer - in this case your web browser. This is useful for interactive development, ie. workflows where you will need to test and modify your code continuously.
 
-### Headless mode
-
-Currently broken - we are working on it.
-
 ### With a GUI
 
 Here we will be running the application on the Strato instance but rendering the application's graphics in the webbrowser of your local computer. In order for your local computer to receive the datastream from the server, we will need to add a small detail to our SSH command.
@@ -84,14 +80,14 @@ Finally we can activate the virtual environment before installing:
 source $HOME/matlab-venv/bin/activate
 ```
 
-Now install the Jupyter Kernel with:
+The virtual environment is not loaded by default, when you log in to the server. You will have to either run `source` command (shown above), or run this command, to add the source command to your .bashrc file (this file is sourced on login).
 ```
-pip install jupyter jupyter-matlab-proxy
+echo "source $HOME/matlab-venv/bin/activate" >> .bashrc
 ```
 
-Jupyter has now been installed in `$HOME/.local/bin` - a subdirectory to your user directory. Adding this directory to the system variable `$PATH` will allow us to launch Jupyter from anywhere:
+With the virtual environment activated, you can now install the Jupyter Kernel with:
 ```
-export PATH="$PATH:$HOME/.local/bin/"
+pip install jupyter jupyter-matlab-proxy
 ```
 
 Now launch Jupyter with:
@@ -122,3 +118,6 @@ After this step, you should be inside the application and everything should feel
 
 ![Matlab running inside a browser window](/assets/img/matlab_in_browserwindow.png)
 
+### Headless mode
+
+This is currently broken ... we are working with Mathworks on resolving the issue.
