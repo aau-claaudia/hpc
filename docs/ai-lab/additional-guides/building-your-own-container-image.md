@@ -1,7 +1,4 @@
-It is possible to define and build your own container images with Singularity. Lets try creating a Singularity container image with Python and pip installed. 
-
-!!! info "Another way to build containers using Cotainr"
-    You also have the option to use a software called [cotainr](creating-a-conda-environment.md) to build containers. We have a guide on how to install a Conda environment with Cotainr [here](creating-a-conda-environment.md).
+It is possible to define and build your own container images with Singularity. Lets try creating a simple Singularity container image with Python and pip installed. 
 
 First we need to create a [Singularity definition file](https://docs.sylabs.io/guides/3.0/user-guide/definition_files.html) (`.def`). This definition file is a blueprint for how Singularity should build the container image. It includes information about the base OS to build, which software to install and several other options.
 
