@@ -82,7 +82,6 @@ nav:
           - Adding python packages via virtual environment: ai-cloud/additional-guides/adding-python-packages-via-virtual-environment.md
           - Creating a conda environment: ai-cloud/additional-guides/creating-a-conda-environment.md
         - Running jobs:
-          - Running a container in interactive mode: ai-cloud/additional-guides/running-a-container-in-interactive-mode.md
           - Run a batch script: ai-cloud/additional-guides/run-a-batch-script.md
           - Multiple GPUs with PyTorch: ai-cloud/additional-guides/multiple-gpus-with-pytorch.md
         - Checkpointing: ai-cloud/additional-guides/checkpointing.md

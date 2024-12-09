@@ -79,7 +79,8 @@ If you'd prefer only one specific output format, refer to the "output_format" se
 
 For further assistance, contact CLAAUDIA at [https://serviceportal.aau.dk](https://serviceportal.aau.dk).
 
-# 2. Other Options
+# 2. Optional parameters
+![Transcriber optional parameters](/assets/img/UCloud/Transcriberguide32.jpg)
 
 ## 2.1 Option: --output_format
 The default setting produces all 8 formats automatically. You can limit the output to a specific format by selecting one of the following:
@@ -92,18 +93,25 @@ The default setting produces all 8 formats automatically. You can limit the outp
 - **TSV**: Tab-separated values file containing start, end, and text.
 - **DOTE**: Transcription software developed by the BigSoftVideo team at AAU.
 - **DOCX**: Text file with transcription and speaker recognition.
-![Transcriber Node Assigned](/assets/img/UCloud/Transcriberguide29.jpg)
 
-## 2.2 Optional: --output_model
+## 2.2 Option: --output_model
 This option allows you to select the model size. Choices include:
 - **Small**: Faster but less accurate.
 - **Medium**: Slightly slower, significantly more accurate.
 - **Large**: Most accurate but slowest.
 
 The default is the **Large** model. With a machine featuring 16 vCPUs and 96GB of memory, the transcription speed is roughly the same as the audio length. For example, 1 minute of audio takes roughly 1 minute to transcribe.
-![Transcriber Node Assigned](/assets/img/UCloud/Transcriberguide30.jpg)
-## 2.3 Optional: --output_language
+## 2.3 Option: --output_language
 This option allows you to specify the language the model will use to evaluate the audio for transcription. The supported languages are available in a dropdown list.
 The default setting is for the Whisper model to automatically detect the audio language.  
 _Note_: This setting also determines the output language of the transcribed text. The Whisper model will translate audio from multiple languages into the detected or chosen language. For example, if the detected/chosen language is English but the audio includes English, Danish, Spanish, and Greek, the output will be entirely in English.
-
+## 2.4 Interactive mode 
+Enabling interactive mode allows the job to run interactively, providing access to the app terminal or a web interface. The web interface provides a JupyterLab workspace where users can work with notebooks.
+## 2.5 Archive password 
+This will AES encrypt and password-protect the ZIP output archive. The user must specify a password for the archive as a text string.
+## 2.6 Minimum and maximum number of speakers 
+If the minimum or maximum number of speakers is known in advance these options can be used to  in some cases increase the accuracy of the speaker diarization.
+## 2.7 Merge consecutive text entries from the same speaker (Recommended)
+This option enables you to combine consecutive text entries from the same speaker. When the transcription model detects the same speaker across multiple entries, it merges the text into a single, continuous block, resulting in a more reader-friendly output.
+Setting this option to "True" generates additional output formats in **docx**, **dote**, **json**, and **csv**, named filename_merged. These files are created alongside the original formats and will not replace them.
+_Note_: To enable this option, scroll down in the optional parameter window until the setting becomes visible.

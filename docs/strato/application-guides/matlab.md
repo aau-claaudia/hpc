@@ -12,7 +12,7 @@ sudo apt update
 
 Before going further, we will need to install an unzip tool and some additional libraries recommended by Mathworks.
 ```
-sudo apt install unzip libx11-dev xorg-dev xvfb
+sudo apt install unzip libx11-dev xorg-dev xvfb libgdk-pixbuf-2.0-0
 ```
 
 Download the Matlab Package Manager (MPM) from Mathworks and make it executable:
@@ -22,7 +22,7 @@ sudo wget -P /usr/local/bin/ https://www.mathworks.com/mpm/glnxa64/mpm && sudo c
 
 Now install Matlab using MPM. Note that here we are installing a version from early. You can check [Mathworks website]("https://se.mathworks.com/help/matlab/release-notes.html") to see if there is a newer release.
 ```
-mpm install MATLAB --release=R2024a --destination=$HOME/matlab/
+mpm install MATLAB --release=R2024b --destination=$HOME/matlab/
 ```
 
 As we want to be able to launch matlab, when we type `matlab` - we will need to add the directory where the matlab executable is located to our `$PATH` variable. We do this and restart our shell:
@@ -39,7 +39,7 @@ exec bash
 
 Additional matlab toolboxes can be installed in the following manner:
 ```
-mpm install --release=R2024a --destination=$HOME/matlab --products Signal_Processing_Toolbox Communications_Toolbox
+mpm install --release=R2024b --destination=$HOME/matlab --products Signal_Processing_Toolbox Communications_Toolbox
 ```
 For a full list of available toolboxes check out [mpm's documentation for input files](https://github.com/mathworks-ref-arch/matlab-dockerfile/tree/main/mpm-input-files).
 If you cannot find a toolbox you need, it might be unavailable for the Matlab release and/or platform, read about [mpm's limitations](https://github.com/mathworks-ref-arch/matlab-dockerfile/blob/main/MPM.md#limitations).
@@ -49,19 +49,7 @@ If you cannot find a toolbox you need, it might be unavailable for the Matlab re
 There are two ways in which you can work with Matlab on Strato instances.
 
 1. [Run the application in headless mode](/strato/application-guides/strato-applications/#command-line-interfaces): By default Strato instances do not come with any graphical user interfaces, but are operated in headless mode. In cases where you simply need to execute a prewritten script, this approach might be preferable.
-
 2. [Run with graphical user interface (GUI)](/strato/application-guides/strato-applications/#graphical-user-interfaces): Here the application runs on your Strato instance, but its graphics are rendered on your local computer - in this case your web browser. This is useful for interactive development, ie. workflows where you will need to test and modify your code continuously.
-
-### Headless mode
-If you wanted to run prepared script called `your_script.m`, you would run:
-```
-matlab -nodisplay -batch your_script.m
-```
-
-If you would want to enter the Matlab console to execute individual statements:
-```
-matlab -nodisplay
-```
 
 ### With a GUI
 
@@ -79,17 +67,27 @@ which pip
 
 If the command ouputs a path, PIP is installed. If command outputs `pip not found`, go ahead and install it by running:
 ```
-sudo apt install python3-pip python3-dev
+sudo apt install python3-pip python3-dev python3-venv
 ```
 
-Now install the Jupyter Kernel with:
+On newer Linux distributions, you will not be able to install Pip modules system wide - they must be installed in a virtual environment. Let's create one with:
+```
+python3 -m venv $HOME/matlab-venv
+```
+
+Finally we can activate the virtual environment before installing:
+```
+source $HOME/matlab-venv/bin/activate
+```
+
+The virtual environment is not loaded by default, when you log in to the server. You will have to either run `source` command (shown above), or run this command, to add the source command to your .bashrc file (this file is sourced on login).
+```
+echo "source $HOME/matlab-venv/bin/activate" >> .bashrc
+```
+
+With the virtual environment activated, you can now install the Jupyter Kernel with:
 ```
 pip install jupyter jupyter-matlab-proxy
-```
-
-Jupyter has now been installed in `$HOME/.local/bin` - a subdirectory to your user directory. Adding this directory to the system variable `$PATH` will allow us to launch Jupyter from anywhere:
-```
-export PATH="$PATH:$HOME/.local/bin/"
 ```
 
 Now launch Jupyter with:
@@ -119,3 +117,7 @@ If this is your first time, you will be forwarded to a [WAYF](https://www.wayf.d
 After this step, you should be inside the application and everything should feel familiar.
 
 ![Matlab running inside a browser window](/assets/img/matlab_in_browserwindow.png)
+
+### Headless mode
+
+This is currently broken ... we are working with Mathworks on resolving the issue.

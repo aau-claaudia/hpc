@@ -7,140 +7,120 @@
 </a>
 
 
-## Setting up the application
+---
 
-The Chat UI application on UCloud is a great tool for working with LLMs and is simple to set up and use. The app supports saving your work in a directory on your personal drive on UCloud. It is a good idea to use this option so that you only need to go through the setup process once. The first step is to create an empty folder to use as the application input parameter `DATA_DIR`.
+## Introduction  
+ChatUI on UCloud is an intuitive application for working with large language models (LLMs). This guide will walk you through the process of setting up, configuring, and using ChatUI effectively, including optimizing the app for teaching.
 
-![ChatUI - Create empty folder](/assets/img/UCloud/ChatUI 1.png)
+## Configuring the ChatUI application  
 
-Now it is time to find and start the application. Search for “chatui” under apps.
+### 1. Create a data directory  
+To save configurations and avoid repeated setups, create an empty folder on your drive in UCloud. This folder will later be used as the input parameter `DATA_DIR` .  
+![Create a data directory](/assets/img/UCloud/ChatUI%201.png){.standard_image_width}
 
-![ChatUI - Create empty folder](/assets/img/UCloud/ChatUI 2.png)
+### 2. Find and start the ChatUI application  
+Search for "chatui" under the apps section of UCloud and select it to begin setup.  
+![Find ChatUI in apps](/assets/img/UCloud/ChatUI%202.png){.standard_image_width}
+ 
+### 3. Select the optimal machine configuration  
+Choose a machine with **one** GPU, such as `u3-GPU` (SDU) or `uc1-l4`/`uc1-l40` (AAU/K8). Set the runtime duration in hours and select the previously created folder as `DATA_DIR`.  
+![Configure server settings](/assets/img/UCloud/ChatUI%203.png){.standard_image_width}
 
-Running inference against LLMs is much faster on a machine with one GPU and a large amount of memory. For optimal performance, we recommend using the u3-GPU from SDU or the uc1-l4 or uc1-l40 from the AAU/K8 provider. Remember to select the empty directory that was created in the first step as `DATA_DIR`. Additionally, remember to specify the desired runtime duration for the application by setting the number of hours. Once the machine is running, you can extend the runtime or shut it down as needed.
+### 4. Create a public link for accessibility  
+To enable student access outside UCloud, scroll down and click "Add Public Link." Create a link within the same provider as the machine (`SDU` or `AAU/K8`) in this example we use the `AAU/K8`. 
+![Add public link](/assets/img/UCloud/ChatUI%204.png){.standard_image_width}
+![Create public link](/assets/img/UCloud/ChatUI%205.png)
 
-![Find ChatUI under apps](/assets/img/UCloud/ChatUI 3.png)
+Once the link is created, click "Use." This will generate a URL to access the application.  
+![Click on Use](/assets/img/UCloud/ChatUI%206.png){.standard_image_width}
 
-The application needs a public link in order for the students to be able to access it from outside UCloud. Scroll down and click "add public link".
-
-![Settings for the server](/assets/img/UCloud/ChatUI 4.png)
-
-In this example, we are using a machine in the AAU/K8 provider, so we will create the link from the **same provider**.
-
-![Create public link](/assets/img/UCloud/ChatUI 5.png)
-
-Click on “Use” after the link is created.
-
-![Click on use](/assets/img/UCloud/ChatUI 6.png)
-
-With this configuration, the application will be accessible over the internet on the URL listed above. Lastly, click the green “Submit” button at the top of the page to start the application. The number of hours that the application runs can be extended after it has started. And since we are using a data directory, the application can be started again with the same configuration. 
-
-When the application has been started, click on “Open interface” to open the user interface. You may need to refresh the page since it can take a minute to start up.
-
-The first user that accesses the welcome page can click on “Sign up” to create the admin user.
-
-![Sign up](/assets/img/UCloud/ChatUI 7.png)
-
-Fill in your name, email, and password, and click on “Create Account”.
-
-In the settings, we can disable new sign-ups and create a user that students can log in with.
-
-![Disable sign-ups in settings](/assets/img/UCloud/ChatUI 8.png)
-
-Under the “Dashboard” pane, a new user called e.g., “student” can be created. Remember to create the user as a normal user and not as an admin. This user can be used by the students to log in, and in this way, only you have control over the application configuration.
-
-![Create a new user for the students](/assets/img/UCloud/ChatUI 9.png)
-
-Toggle off “Enable New Sign Ups” under “Settings” and “General” in the admin panel. **Remember to click the save button in the bottom right corner.**
-
-![Toggle New Sign Ups off](/assets/img/UCloud/ChatUI 10.png)
-
-To download a model, click on “Settings” and “Models.” If you don’t know the name of the model you want to use, there is a link with information about the available models. For instance, type in “llama3” and click the download button on the right.
-
-![Download a model](/assets/img/UCloud/ChatUI 11.png)
-
-The downloaded model should now be visible if you click on “Workspace” on the left.
-
-![Model visible in the workspace ](/assets/img/UCloud/ChatUI 12.png)
-
-In the “Documents” section, it is possible to upload documents for adding RAG functionality. Try to upload a document. Notice the text with information about how to use/load the documents for use in prompts .
-
-![Load documents for RAG functionality](/assets/img/UCloud/ChatUI 13.png)
+### 5. Launch the application  
+Click the green "Submit" button at the top of the page to start the application. After launching, wait for the application to build and then click "Open Interface" to access ChatUI. Refresh the page if it doesn't load.  
 
 ---
 
-## Using the application for inference
+### 6. Set up admin and student users
+The next step is to create an account by clicking "Sign Up." Enter your name, email, and password, then click "Create Account." The first user (you) will automatically be assigned the admin role. 
 
-Now that the model has been downloaded, try to make a prompt by clicking “New Chat” in the upper left corner. Then select the model (in this case llama3) from the dropdown. In the prompt input field, type `#` to select which/all documents to use.
+![Sign up page](/assets/img/UCloud/ChatUI%207.png)
 
-![Using the application](/assets/img/UCloud/ChatUI 14.png)
+Currently, anyone who accesses the URL can create a user and access ChatUI, we therefore recommend that after logging in, go to **Settings** > **General** to disable new sign-ups. This ensures that only authorized users can access the application.  
+![Disable sign-ups in settings](/assets/img/UCloud/ChatUI%208.png){.standard_image_width}
 
-This is an example of a query. The query is at the top, and notice under the reply that it is mentioned which document was used as the source in generating the reply.
+You then have two options for providing your students with access:  
+**1.** Activate new sign-ups the first time students need to use ChatUI, such as in the classroom. Once all students have signed up, you can disable sign-ups again as described above.  
+   
+**2.** Create a single student user with a generic email and password for all students to use.**Note:** Using this method allows students to see each other's queries.
 
-![Using the application](/assets/img/UCloud/ChatUI 15.png)
-
-When the appropriate documents have been uploaded, the application is ready for use. When the students log in with the user created for this purpose, they will also have access to the same model and documents.
-
-To summarize, with the configuration used in this example, a student would go to:
-```
-http://app-chatui-example.cloud.aau.dk/
-```
-and log in with the username “student@email.com” with the password created for this user.
-
-The next time you need to run the app with the same data and configuration, use the “Import parameters” option.
-
-![Using the application](/assets/img/UCloud/ChatUI 16.png)
-
-Click on “Import” to import the configuration from the last run. Everything should be the same, and just click “Submit” to start the job.
-
-![Using the application](/assets/img/UCloud/ChatUI 17.png)
+- Under the **Dashboard**, create a user account for students. Assign the user as "Normal" instead of "Admin" to maintain control over the application settings.  
+![Create a new user for the students](/assets/img/UCloud/ChatUI%209.png){.standard_image_width}  
 
 ---
 
-## FAQ
+### 7. Download and manage models  
+Go to **Settings** > **Models** to download models. If you’re unsure of the model name, use the provided link to explore available options. For example, type "llama3" and click the download button.  
+![Download a model](/assets/img/UCloud/ChatUI%2011.png)  
 
-### 1. Why does the first response take longer to complete?
+Once downloaded, the model will appear in the **Workspace** under the **Models** section.  
+![Model visible in the workspace](/assets/img/UCloud/ChatUI%2012.png){.standard_image_width}
 
-The first response takes longer because the model needs to load into memory before processing any prompts. This initial loading process can take some time, especially if the model is large. After the model is loaded, subsequent responses will be faster.
+---
 
-### 2. Why is there no response to my first query?
+### 8. Set up a knowledge base for RAG functionality  
+In the **Knowledge** section, you can create a knowledge base to upload documents for retrieval-augmented generation (RAG).  
+![Set up a knowledge base](/assets/img/UCloud/ChatUI%2012a.png){.standard_image_width}
 
-It takes a minute or two for the application to fully load the LLM. If you send a query before the model has been completely loaded, you will not get an answer, and the UI would, for instance, keep looking like this. In this case, you can first click "edit," then "save," and after that click on the "resend" button.
+Provide a name and description for the knowledge base, then upload documents or directories.  
+![Upload documents for RAG functionality](/assets/img/UCloud/ChatUI%2013.png){.standard_image_width}
 
-For the technical user: It is possible to open a terminal and monitor the logfile `ollama-log.txt` to see when the model is fully loaded. As the admin user, try to make a prompt before the students use the application to ensure the model is fully loaded. You need to redo this when restarting the application.
+---
 
-![Using the application](/assets/img/UCloud/ChatUI 18.png)
+## Using ChatUI for inference  
 
-### 3. How to Add More Time to a Currently Running Server
+### 1. Start a new chat  
+Click "New Chat" in the upper-left corner. Select the downloaded model (e.g., llama3) from the dropdown. Use `#` in the prompt input field to reference the knowledge base.  
+![Using the application](/assets/img/UCloud/ChatUI%2014.png){.standard_image_width}
 
-If you need to extend the time for a currently running server in the Chat UI application, follow these steps:
+### 2. Submit queries and view responses  
+Type a query in the input field. Responses will indicate the source document used in the reply.  
+![Example query and response](/assets/img/UCloud/ChatUI%2015.png){.standard_image_width}
 
-- Access the UCloud dashboard and locate the running Chat UI server in the “recent runs” tab.
-- Click on the server instance to access its details page.
-- Extend the running time by clicking on the +1, +8, or +24-hours buttons.
+Students can log in with their designated account to access the same models and knowledge bases.
 
-### 4. How Can I Turn Off the Server?
+---
 
-To turn off the server running the Chat UI application, follow these steps:
+## Reusing configurations  
+Next time you want to use the same settings:  
+1. Click **Import parameters** on the app start page.  
+2. Import the configuration from the previous session.  
+3. Click "Submit" to relaunch the app.  
+![Using the application](/assets/img/UCloud/ChatUI%2016.png){.standard_image_width}  
+![Import parameters](/assets/img/UCloud/ChatUI%2017.png){.standard_image_width}
 
-- Access the UCloud dashboard and locate the running Chat UI server in the “recent runs” tab.
-- Click on the server instance to access its details page.
-- Click and hold the “Stop application” button.
-- Confirm the shutdown when prompted. The server will begin to stop, and you’ll see its status update to “Completed.”
+---
 
-### 5. Why Is It Important to Shut Down the Server?
+## FAQ  
 
-- **Cost Management:** Running a server on UCloud consumes resources, which are billed by the hour. If you forget to turn off a server, it will continue to run and accrue costs even if it’s no longer in use. To ensure you have resources available when needed, it is important to shut down the server after each usage.
-  
-- **Resource Allocation:** UCloud resources like GPUs and memory are limited. Keeping a server running when it’s not in use can block these resources, preventing others from utilizing them. Shutting down the server frees up these resources for other projects or users.
+### 1. Why does the first response take longer to complete?  
+The model needs to load into memory before processing queries. Subsequent responses will be faster.
 
-### 6. What should I do if I cannot start a server due to "not enough credits"?
+### 2. Why is there no response to my first query?  
+The model might not be fully loaded. Click "Edit," then "Save," and resend the query. Alternatively, monitor the log file `ollama-log.txt` to confirm the model is ready.  
+![Monitor log file](/assets/img/UCloud/ChatUI%2018.png){.standard_image_width}
 
-Ensure you're in the correct project. Check the current project on the UCloud front page in the top right corner. If you are out of resources, apply for more using our application form.
+### 3. How to extend server runtime?  
+Locate your server in UCloud’s **recent runs** tab, select the instance, and add more time using the +1, +8, or +24-hour buttons.
 
-### 7. I get the page “Job is unavailable” when selecting “Open interface”
+### 4. How to stop the server?  
+In the **recent runs** tab, select the server and click "Stop application." Confirm the shutdown to free resources and avoid unnecessary costs.
 
-This page appears because the server isn't fully ready yet. Please close the tab, wait for 30 seconds, and then try selecting "Open Interface" again.
+### 5. Why is shutting down the server important?  
+- **Cost management**: Servers consume resources billed by the hour.  
+- **Resource allocation**: Free up resources for other users or projects.
 
---- 
+### 6. What to do if I cannot start a server due to "not enough credits"?  
+Check if you’re in the correct project. If resources are depleted, apply for more using the designated application form.
+
+### 7. What does "Job is unavailable" mean?  
+This error appears if the server isn't ready. Wait 30 seconds and try "Open Interface" again.
 
