@@ -4,7 +4,9 @@ The CLAAUDIA team is responsible for system administration and support. We work 
 The overarching principle in our ressource administration is that we aim to strike a balance between high ressource utilisation, while still leaving the majority of users with the feeling that they can get their work done on the platform.
 
 ### Violations
-If we find indications of violations of these principles, CLAAUDIA will contact you to learn more about your situation.
+If we find indications of violations of these principles, CLAAUDIA will contact you to learn more about your situation. 
+
+As a general rule CLAAUDIA will not cancel jobs without the user's permission. We do however reserve the right to do so, if the situation is characterised by a degree of severity or urgency, and we can not get a hold of the user.
 
 ## Ressource consumption
 The overall demand for GPU ressources fluctuates throughout the year, and we understand that demand is also dependent on the schedule of the individual researcher. We therefore prefer not to set a fixed limit on how many ressources an individual researcher can consume, as there may be times where they have a legitimate reason for high consumption. Instead we ask our users to be mindful of the overall supply, by making frequent asssesments of the queue.
