@@ -118,6 +118,7 @@ nav:
           - Cancelling jobs: ai-lab/additional-guides/cancelling-jobs.md
         - Container guides:
           - Building your own container image: ai-lab/additional-guides/building-your-own-container-image.md
+          - Building your own container image locally: ai-lab/additional-guides/building-your-own-container-image-locally.md
           - Download container images: ai-lab/additional-guides/download-container-images.md
           - Adding python packages via virtual environment: ai-lab/additional-guides/adding-python-packages-via-virtual-environment.md
           - Creating a conda environment: ai-lab/additional-guides/creating-a-conda-environment.md
