@@ -6,7 +6,7 @@ The overarching principle in our ressource administration is that we aim to stri
 ### Violations
 If we find indications of violations of these principles, CLAAUDIA will contact you to learn more about your situation. 
 
-As a general rule CLAAUDIA will not cancel jobs without the user's permission. We do however reserve the right to do so, if the situation is characterised by a degree of severity or urgency, and we can not get a hold of the user.
+As a general rule CLAAUDIA does not cancel jobs without the user's permission. We do however reserve the right to do so, if the situation is characterised by a degree of severity or urgency, and we can not get a hold of the user.
 
 ## Ressource consumption
 The overall demand for GPU ressources fluctuates throughout the year, and we understand that demand is also dependent on the schedule of the individual researcher. We therefore prefer not to set a fixed limit on how many ressources an individual researcher can consume, as there may be times where they have a legitimate reason for high consumption. Instead we ask our users to be mindful of the overall supply, by making frequent asssesments of the queue.
