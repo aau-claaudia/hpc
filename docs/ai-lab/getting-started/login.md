@@ -12,9 +12,8 @@ ssh -l user@student.aau.dk ailab-fe02.srv.aau.dk
 
 Replace `user@student.aau.dk` with your AAU email address.
 
-!!! info
-    The first time you connect, you will get a message like:
-
+!!! info "The first time you connect, you will get a message like:"
+    
     ```
     The authenticity of host 'ailab-fe01.srv.aau.dk (172.21.131.1300)' can't be established.
     ED25519 key fingerprint is SHA256:xosJtOSfQyyW16c6RtpN8tAi/91XHCR3GxM9/KJEogg.

@@ -41,9 +41,9 @@ You start by logging into a front-end node, either `ailab-fe01` or `ailab-fe02`.
 ### Compute nodes
 AI-LAB currently include the following compute nodes:
 
-| Node name            | CPU model             | Number of CPUs | Number of cores | Number of GPUs | GPU Model | RAM pr GPU (GB) |
-| -------------------- | --------------------- | -------------- | --------------- | -------------- | --------- | --------------- |
-| ailab-l4-[01-11]     | AMD EPYC 7543 32-Core | 128            | 64              | 8              | NVIDIA L4 | 24              |
+| Node name            | CPU model             | Sockets | Threads (Logical CPUs) | Number of GPUs | GPU Model | RAM pr GPU (GB) |
+| -------------------- | --------------------- | ------- | ---------------------- | -------------- | --------- | --------------- |
+| ailab-l4-[01-11]     | AMD EPYC 7543 32-Core | 2       | 128                    | 8              | NVIDIA L4 | 24              |
 
 
 ## Software
