@@ -44,10 +44,10 @@ You can also use this method to expand containers, such as a PyTorch container.
 To do this, you will need to use the Singularity `--bind` option to bind your virtual environment directory to a location inside the container, and point Python to the path where it can find the installed packages.
 
 ```
-srun singularity exec --bind ~/my-virtual-env:/my-virtual-env /ceph/container/pytorch/pytorch_24.09.sif python3 -c "import matplotlib; print(matplotlib.__version__)"
+srun singularity exec --bind ~/my-virtual-env:/my-virtual-env /ceph/container/pytorch/pytorch_24.09.sif /my-virtual-env/bin/python3 -c "import matplotlib; print(matplotlib.__version__)"
 ```
 
-Here, `~/my-virtual-env:/my-virtual-env` binds your virtual environment `~/my-virtual-env` to a new directory `/my-virtual-env` inside the container.
+Here, `~/my-virtual-env:/my-virtual-env` binds your virtual environment to a new directory inside the container. `/my-virtual-env/bin/python3` tells Singularity to use the Python interpreter inside your virtual environment.
 
-Then to use the packages inside the virtual environment you need to define the path to Python3 `/my-virtual-env/bin/python3`.
+
 
