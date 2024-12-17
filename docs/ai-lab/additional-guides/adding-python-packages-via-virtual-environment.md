@@ -24,7 +24,7 @@ source my-virtual-env/bin/activate
 With the virtual environment activated, install the Python packages you need. For example, to install `numpy`, `pandas`, and `matplotlib`:
 
 ```
-srun --mem=24G --cpus-per-task=15 pip install numpy pandas matplotlib
+srun --mem=24G --cpus-per-task=15 bash -c "export TMPDIR=/scratch; pip install numpy pandas matplotlib --no-cache-dir"
 ```
 
 This command will download and install the specified packages into your virtual environment.
