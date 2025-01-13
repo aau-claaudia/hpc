@@ -2,6 +2,9 @@ To login you need to [SSH connect](https://www.cloudflare.com/learning/access-ma
 
 Run the following command on a command-line interface on your local Windows (*Windows PowerShell*), macOS, or Linux computer:
 
+!!! info "Troubleshooting Windows Login Issues"
+    If you cannot log in using Windows PowerShell, try installing [OpenSSH](https://learn.microsoft.com/en-us/windows-server/administration/openssh/openssh_install_firstuse?tabs=gui) or a [Linux subsystem](https://learn.microsoft.com/en-us/windows/wsl/setup/environment).
+
 ```
 ssh -l user@student.aau.dk ailab-fe01.srv.aau.dk
 ```

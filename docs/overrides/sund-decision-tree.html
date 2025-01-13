@@ -1,0 +1,374 @@
+
+{% extends "main.html" %}
+
+{% block header %}
+<header class="md-header md-header--shadow" data-md-component="header"></header>
+{% endblock %}
+
+{% block tabs %}{% endblock %}
+
+{% block container %}
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+<link rel="stylesheet" href="../stylesheets/decision-tree.css">
+
+<a class="go-to-home-btn" href="/"><span class="material-symbols-outlined" style="font-size: 20px; padding-right: 5px;">close</span>Close</a>
+<div class="content">
+    <div class="decision-header">
+        <div>
+            <div class="previous-btn"><span class="material-symbols-outlined" style="font-size: 20px;">chevron_left</span>Previous</div>
+        </div>
+        <div class="progress remaining-progress" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+            <div id="remaining-progress-bar" class="progress-bar" style="width: 0%"></div>
+        </div>
+    </div>
+    <div class="decision-content">
+        <div class="quiz-body">
+            <div class="sections-container">
+                <div class="survey md-typeset">
+                    <h4 id="quiz-title"></h4>
+                    <div id="quiz-title-hint"></div>
+                    <div id="subdescription"></div>
+                    <div class="question-content"></div>
+                    <div class="next-btn disabled">Next</div>
+                    <div class="button-container">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="finished">
+            <div class="spec md-typeset">
+                <h4 style="margin-top: 20px;">Cost summary</h4>
+                <div class="spec-content">
+                    <div class="spec-content-header">
+                        <div class="md-typeset">
+                            <h2 id="spec-title"></h2>
+                        </div>
+                    </div>
+                    <p id="spec-description"></p>
+                    <a href="/sund-decision-tree/">Reset quiz</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="decision-tree-footer">
+    </div>
+</div>
+
+<script>
+
+    var currentPath = [];
+    var currentQuestionIndex = 0;
+
+    function initializePage() {
+
+        const price_fte = 600000/12 // DKK per month for a full time ressource
+        const price_license = 100000/12 // DKK per month for a license
+        const price_storage = 250/12 // DKK per TB storage per month (https://genome.au.dk/pricing/)
+        const price_backup = 500/12 // DKK per TB backup storage per month (https://genome.au.dk/pricing/)
+        const price_cpu = 0.12 // DKK per hour CPU usage (https://genome.au.dk/pricing/)
+        const price_gpu = 6 // DKK per hour GPU usage (https://genome.au.dk/pricing/)
+
+        const selectedValues = {
+            durationMonths: null,
+            storageTB: null,
+            needsBackup: null
+        };
+
+        const quizData = [
+            {
+                "question": "What is the expected duration of your project?",
+                "description": "Adjust the slider below to select the duration of your project.",
+                "subdescription": "1 month",
+                "options": [],
+                "next": 1
+            },
+            {
+                "question": "What is the estimated initial data storage requirement?",
+                "description": "Adjust the slider below to select the initial storage requirement.",
+                "subdescription": "1 TB",
+                "options": [],
+                "next": 2
+            },
+            {
+                "question": "Do you need to store data in backup?",
+                "description": "42DKK/TB/month",
+                "subdescription": " ",
+                "options": [
+                    "Yes",
+                    "No"
+                ],
+                "next": 3
+            },
+            {
+                "question": "Do you expect data storage needs to grow during the project?",
+                "description": "",
+                "subdescription": " ",
+                "options": [
+                    "No, static data size",
+                    "Yes, moderate growth",
+                    "Yes, significant growth"
+                ],
+                "next": 4
+            },
+            {
+                "question": "Select the most suitable resource model based on your data and compute needs.",
+                "description": "This will guide the estimated costs for your project.",
+                "subdescription": " ",
+                "options": [
+                    "Small: Virtual server without GPU resources",
+                    "Medium: Virtual server with GPU for moderate computational tasks",
+                    "Large: High-performance server with multiple GPUs for intensive tasks"
+                ],
+                "next": 5
+            },
+            {
+                "question": "Do you require data stewardship or governance support?",
+                "description": "Includes managing data import/export, user access, and compliance.",
+                "subdescription": " ",
+                "options": [
+                    "Minimal: Single dataset import/export",
+                    "Moderate: Periodic data management",
+                    "Extensive: Ongoing data governance and stewardship"
+                ],
+                "next": null
+            }
+        ];
+
+
+        
+        currentPath = [];
+        currentQuestionIndex = 0;
+
+        const questionTitle = document.getElementById('quiz-title');
+        const questionContent = document.querySelector('.question-content');
+        const remainingProgressBar = document.getElementById('remaining-progress-bar');
+        const nextButton = document.querySelector('.next-btn');
+        const previousButton = document.querySelector('.previous-btn');
+        const buttonContent = document.querySelector('.button-content');
+        const quizBody = document.querySelector('.quiz-body');
+        const finishedContent = document.querySelector('.finished');
+        const quizTitleHint = document.getElementById('quiz-title-hint');
+        const subdescription = document.getElementById('subdescription');
+
+        const storageSteps = [
+                    1, 2, 3, 4, 5, 6, 7, 8, 9, 10,
+                    15, 20, 25, 30, 35, 40, 45, 50,
+                    60, 70, 80, 90, 100, 125, 150, 175, 200,
+                    250, 300, 350, 400, 450, 500, 550, 600, 650,
+                    700, 750, 800, 850, 900, 950, 1000
+                ];
+
+
+        quizBody.style.display = 'block';
+        finishedContent.style.display = 'none';
+        previousButton.childNodes[1].nodeValue = "Previous";
+        const totalQuestions = quizData.length;
+
+        updateProgressBar(false); // Start with an empty progress bar
+
+        // Clear any previously selected radio buttons
+        document.querySelectorAll('input[name="quizOptions"]').forEach(input => input.checked = false);
+
+        
+        
+        function renderQuestion() {
+            const questionData = getCurrentQuestion();
+            questionTitle.textContent = questionData.question;
+            quizTitleHint.innerHTML = questionData.description || '';
+            subdescription.innerHTML = questionData.subdescription || '';
+            questionContent.innerHTML = '';
+
+            if (questionData.question == "What is the expected duration of your project?") { // Expected duration question
+                questionContent.innerHTML = `
+                    <input type="range" class="form-range" id="duration-slider" min="1" max="60" value="1">
+                `;
+                const slider = document.getElementById('duration-slider');
+                const durationValue = document.getElementById('duration-value');
+                slider.addEventListener('input', () => {
+                    const months = slider.value;
+                    const years = Math.floor(months / 12);
+                    const remainingMonths = months % 12;
+
+                    subdescription.innerHTML = `${years > 0 ? `${years} year${years > 1 ? 's' : ''}` : ''}${years > 0 && remainingMonths > 0 ? ' and ' : ''}${remainingMonths > 0 ? `${remainingMonths} month${remainingMonths > 1 ? 's' : ''}` : ''}`;
+                    nextButton.classList.remove('disabled');
+                });
+            } else if (questionData.question == "What is the estimated initial data storage requirement?") { // Initial data storage requirement question
+
+                questionContent.innerHTML = `
+                    <input type="range" class="form-range" id="storage-slider" min="0" max="42" value="0" step="1">
+                `;
+
+                const slider = document.getElementById('storage-slider');
+                const storageValue = document.getElementById('storage-value');
+                const subdescription = document.getElementById('subdescription');
+
+                // Update value on slider input
+                slider.addEventListener('input', () => {
+                    const index = parseInt(slider.value, 10); // Get the slider's linear position
+                    const value = storageSteps[index]; // Map it to the custom steps
+                    subdescription.innerHTML = `${value} TB`;
+                    nextButton.classList.remove('disabled');
+                });
+            } else if (questionData.question == "Do you need to store data in backup?") { // Backup storage question
+                questionData.options.forEach((option, i) => {
+                    const formCheck = document.createElement('div');
+                    formCheck.className = 'form-check question-option';
+                    formCheck.innerHTML = `
+                        <input class="form-check-input" type="radio" name="quizOptions" id="option${i}">
+                        <label class="form-check-label question-option-content" for="option${i}">
+                            ${option}
+                        </label>
+                    `;
+                    formCheck.addEventListener('click', () => {
+                        formCheck.querySelector('input[type="radio"]').checked = true;
+                        selectedValues.needsBackup = option === "Yes"; // Save "Yes" as true and "No" as false
+                        nextButton.classList.remove('disabled');
+                    });
+                    questionContent.appendChild(formCheck);
+                });
+            } else {
+
+                // Render radio buttons for other questions
+                questionData.options.forEach((option, i) => {
+                    const formCheck = document.createElement('div');
+                    formCheck.className = 'form-check question-option';
+                    formCheck.innerHTML = `
+                        <input class="form-check-input" type="radio" name="quizOptions" id="option${i}">
+                        <label class="form-check-label question-option-content" for="option${i}">
+                            ${option}
+                        </label>
+                    `;
+                    formCheck.addEventListener('click', () => {
+                        formCheck.querySelector('input[type="radio"]').checked = true;
+                        nextButton.classList.remove('disabled');
+                    });
+                    questionContent.appendChild(formCheck);
+                });
+            }
+
+            updateProgressBar();
+            nextButton.classList.add('disabled');
+        }
+
+        function saveSelectedValues() {
+            if (getCurrentQuestion().question == "What is the expected duration of your project?") {
+                const durationSlider = document.getElementById('duration-slider');
+                selectedValues.durationMonths = parseInt(durationSlider.value, 10);
+            } else if (getCurrentQuestion().question == "What is the estimated initial data storage requirement?") {
+                const storageSlider = document.getElementById('storage-slider');
+                console.log(parseInt(storageSteps[storageSlider.value], 10));
+                selectedValues.storageTB = parseInt(storageSteps[storageSlider.value], 10);
+            }
+        }
+
+
+        function updateProgressBar(isFinished = false) {
+            const progressPercentage = isFinished
+                ? 100
+                : (currentQuestionIndex / totalQuestions) * 100;
+
+            remainingProgressBar.style.width = `${progressPercentage}%`;
+            remainingProgressBar.setAttribute('aria-valuenow', Math.round(progressPercentage));
+        }
+
+        function getCurrentQuestion() {
+            return quizData[currentQuestionIndex];
+        }
+
+        function getNextQuestionIndex(selectedOption) {
+            let question = quizData[currentQuestionIndex];
+            currentPath.forEach(index => {
+                question = question.next[index];
+            });
+
+            if (question.next && question.next[selectedOption]) {
+                return selectedOption;
+            }
+
+            // Return null or handle cases where no next question exists.
+            return null;
+        }
+
+        function displayResult(result) {
+            quizBody.style.display = 'none';
+            finishedContent.style.display = 'block';
+
+            const totalStorageCost = price_storage * selectedValues.storageTB * selectedValues.durationMonths;
+            var totalBackupCost = 0;
+
+            if (selectedValues.needsBackup == true) {
+                totalBackupCost = price_backup * selectedValues.storageTB * selectedValues.durationMonths;
+            }
+            
+            console.log(`Total Cost: ${totalStorageCost + totalBackupCost} DKK`);
+            console.log(`Total Storage Cost: ${totalStorageCost} DKK`);
+            console.log(`Total Backup Cost: ${totalBackupCost} DKK`);
+
+            // Populate title and description
+            document.getElementById('spec-title').textContent = "Some title";
+            document.getElementById('spec-description').textContent = "Some description";
+
+            // Ensure progress reaches 100%
+            updateProgressBar(true);
+
+            // Hide "Next" button and update "Previous" to "Reset quiz"
+            nextButton.style.display = 'none';
+            previousButton.childNodes[1].nodeValue = "Reset quiz";
+        }
+                
+        nextButton.addEventListener('click', () => {
+            saveSelectedValues();
+            const currentQuestion = getCurrentQuestion();
+
+            if (currentQuestion.next === null) {
+                // Display result if this is the last question
+                displayResult("Cost breakdown: Data resources, compute resources, and governance resources");
+            } else {
+                // Move to the next question
+                currentQuestionIndex = currentQuestion.next;
+                renderQuestion();
+            }
+        });
+
+        previousButton.addEventListener('click', () => {
+            if (previousButton.textContent.includes('Reset quiz')) {
+                // Reset quiz to the beginning
+                currentPath = [];
+                currentQuestionIndex = 0;
+                quizBody.style.display = 'block';
+                finishedContent.style.display = 'none';
+                previousButton.childNodes[1].nodeValue = "Previous";
+                nextButton.style.display = 'inline-block';
+                renderQuestion();
+            } else if (currentQuestionIndex > 0) {
+                // Navigate to the previous question
+                currentQuestionIndex--;
+                currentPath.pop(); // Remove the last choice
+                renderQuestion();
+            }
+
+            updateProgressBar(); // Ensure the progress bar reflects the current state
+        });
+
+        
+
+        renderQuestion();
+    }
+
+    document.addEventListener('DOMContentLoaded', initializePage, false);
+
+    if (typeof window.document$ !== 'undefined') {
+        window.document$.subscribe(function() {
+            initializePage(); // Reinitialize the page on every navigation
+        });
+    } else {
+        document.addEventListener('DOMContentLoaded', initializePage);
+    }
+
+</script>
+
+{% endblock %}
