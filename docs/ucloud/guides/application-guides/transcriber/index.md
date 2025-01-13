@@ -51,6 +51,7 @@ There are several options here, and it can seem a bit overwhelming. For this exa
    - In this example, we clicked on the folder "New folder" from before and selected our audio file.
     ![Transcriber Node Assigned](/assets/img/UCloud/Transcriberguide22.jpg)
 
+   **Note** The app can only process .mp3, .mp4, .m4a, .wav and .mpg files. If your file is in another format we reccomend to use VLC to convert it to one of the supported formats. VLC can be downloaded from software center / company portal. 
 
 5. **Select the output directory**:
    - We recommend selecting where your output will be saved.
@@ -59,6 +60,8 @@ There are several options here, and it can seem a bit overwhelming. For this exa
 
    - Then click the "text box" again and select the folder you want for your transcription output. In this example, we selected the folder "New folder."
    ![Transcriber Node Assigned](/assets/img/UCloud/Transcriberguide24.jpg)
+
+   **Note** The app can only process .mp3, .mp4, .m4a, .wav and .mpg files. If your file is in another format we reccomend to use VLC to convert it to one of the supported formats. VLC can be downloaded from software center / company portal. 
 
 Now you are ready to begin your transcription. Click on **Submit** to start the process.  
 _Note_: There are other options you can use, but more information on these can be found in the "Other Options" section.
