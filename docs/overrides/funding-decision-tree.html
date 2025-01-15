@@ -63,14 +63,12 @@
     });
     document.addEventListener('DOMContentLoaded', () => {
         const prices = {
-            fte: 600000 / 12,
-            license: 100000 / 12,
-            storage: 250 / 12,
-            backup: 500 / 12,
-            cpu: 0.12,
-            memory: 0.12/8,
-            gpu: 6,
-            dataStewardSalery: 600000// yearly cost for 1 FTE data steward
+            storage: 250 / 12, // DKK per TB / month (https://genome.au.dk/pricing/)
+            backup: 500 / 12, // DKK per TB / month (https://genome.au.dk/pricing/)
+            cpu: 0.12, // DKK per CPU hour (https://genome.au.dk/pricing/)
+            memory: 0.12/8, // DKK per memory hour (https://genome.au.dk/pricing/)
+            gpu: 6, // DKK per GPU hour (https://genome.au.dk/pricing/)
+            dataStewardSalery: 600000 // yearly cost for 1 FTE data steward
         };
 
         const quizData = [
