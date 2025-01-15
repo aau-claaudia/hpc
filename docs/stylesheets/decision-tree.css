@@ -240,6 +240,7 @@ a {
 }
 #spec-description {
     margin-bottom: 2rem;
+    font-family: Montserrat, sans-serif;
 }
 .remaining-progress {
     border-radius: 20px !important;
@@ -280,6 +281,65 @@ a {
 #duration-slider {
     width: 80%;
     margin: 0 auto;
+}
+.input-group {
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-family: Montserrat, sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+}
+.input-group>.form-control {
+    max-width: 200px;
+    font-size: 15px;
+    font-weight: 400;
+}
+.form-group {
+    width: 300px;
+    text-align: left;
+    margin-bottom: 1rem !important;
+}
+.form-range {
+    width: 220px !important;
+    margin-right: 10px !important;
+}
+.badge {
+    font-size: 13px;
+}
+.result-group {
+    background-color: #fff;
+    border: 1px solid #dee2e6;
+    padding: 1rem 1rem;
+    margin-top: 20px;
+}
+.result-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.result-title {
+    font-weight: 700;
+    margin-bottom: 0 !important;
+}
+.result-subtitle {
+    text-align: left;
+    margin-bottom: 0 !important;
+}
+@media print {
+    body * {
+        visibility: hidden;
+    }
+    #spec-description, #spec-description * {
+        visibility: visible;
+    }
+    #spec-description {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
 }
 @media (max-width: 920px) {
     .content {

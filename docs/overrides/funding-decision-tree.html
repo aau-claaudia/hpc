@@ -1,0 +1,457 @@
+
+{% extends "main.html" %}
+
+{% block header %}
+<header class="md-header md-header--shadow" data-md-component="header"></header>
+{% endblock %}
+
+{% block tabs %}{% endblock %}
+
+{% block container %}
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="../stylesheets/decision-tree.css">
+
+<a class="go-to-home-btn" href="/"><span class="material-symbols-outlined" style="font-size: 20px; padding-right: 5px;">close</span>Close</a>
+<div class="content">
+    <div class="decision-header">
+        <div>
+            <div class="previous-btn"><span class="material-symbols-outlined" style="font-size: 20px;">chevron_left</span>Previous</div>
+        </div>
+        <div class="progress remaining-progress" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+            <div id="remaining-progress-bar" class="progress-bar" style="width: 0%"></div>
+        </div>
+    </div>
+    <div class="decision-content">
+        <div class="quiz-body">
+            <div class="sections-container">
+                <div class="survey md-typeset">
+                    <h4 id="quiz-title"></h4>
+                    <div id="quiz-title-hint"></div>
+                    <div id="subdescription"></div>
+                    <div class="question-content"></div>
+                    <div class="next-btn disabled">Next</div>
+                    <div class="button-container">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="finished">
+            <div class="spec md-typeset">
+                <div class="spec-content">
+                    <div class="spec-content-header">
+                        <div class="md-typeset">
+                            <h2 id="spec-title" style="text-align: left !important;"></h2>
+                        </div>
+                    </div>
+                    <div id="spec-description"></div>
+                    <button id="save-to-pdf-btn" class="btn btn-primary" style="font-family: Montserrat, 'sans-serif';font-size: 14px;font-weight: 500;margin-top: 0 !important;">Save to PDF</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="decision-tree-footer">
+    </div>
+</div>
+
+
+<script>
+
+    document.getElementById('save-to-pdf-btn').addEventListener('click', () => {
+        window.print(); // This will print the entire page.
+    });
+    document.addEventListener('DOMContentLoaded', () => {
+        const prices = {
+            fte: 600000 / 12,
+            license: 100000 / 12,
+            storage: 250 / 12,
+            backup: 500 / 12,
+            cpu: 0.12,
+            memory: 0.12/8,
+            gpu: 6
+        };
+
+        const quizData = [
+            { 
+                question: "What is the expected duration of your project?", 
+                description: "Adjust the slider below to select the duration of your project.",
+                subdescription: "0 month(s)",
+                type: "slider", min: 0, max: 60, unit: "month(s)", step: "1", next: 1 
+            },
+            { 
+                question: "What is the estimated data storage requirement?", 
+                description: "The price for storage data is estimated to 21DKK/TB/month", 
+                subdescription: "Estimated costs: 0 DKK",
+                type: "input", min: 0, max: 1000, unit: "TB", next: 2 
+            },
+            { 
+                question: "Do you need to store data in backup?", 
+                description: "The price for backup data is estimated to 42DKK/TB/month", 
+                subdescription: "",
+                type: "radio", options: ["Yes", "No"], next: 3 
+            },
+            { 
+                question: "Configure your compute requirements", 
+                description: "Adjust the sliders below to select your desired compute type.",
+                subdescription: "Estimated compute costs per hour: 0 DKK/hour",
+                type: "compute",
+                next: 4
+            },
+            { 
+                question: "Select the estimated amount of compute hours you need.", 
+                description: "", 
+                subdescription: "Estimated costs: 0 DKK",
+                type: "input", min: 0, max: 100000, unit: "hours", next: 5
+            },
+            { 
+                question: "Do you require any software licenses?", 
+                description: "Please provide the estimated annual cost of the license(s).", 
+                subdescription: "Estimated costs: 0 DKK",
+                type: "input", min: 0, max: 100000, unit: "DKK", next: null
+            }
+        ];
+
+        const state = { currentQuestion: 0, answers: {} };
+        const elements = {
+            title: document.getElementById('quiz-title'),
+            hint: document.getElementById('quiz-title-hint'),
+            subdesc: document.getElementById('subdescription'),
+            content: document.querySelector('.question-content'),
+            next: document.querySelector('.next-btn'),
+            prev: document.querySelector('.previous-btn'),
+            progress: document.getElementById('remaining-progress-bar'),
+            finished: document.querySelector('.finished'),
+            specTitle: document.getElementById('spec-title'),
+            specDesc: document.getElementById('spec-description'),
+            quizBody: document.querySelector('.quiz-body')
+        };
+
+        function renderQuestion() {
+            const question = quizData[state.currentQuestion];
+            elements.title.textContent = question.question;
+            elements.hint.textContent = question.description || "";
+            elements.content.innerHTML = "";
+            elements.subdesc.textContent = question.subdescription || "";
+
+            if (question.type === "slider") {
+                
+                elements.content.innerHTML = `
+                    <input type="range" class="form-range" min="${question.min}" max="${question.max}" value="${question.min}" step="${question.step}">
+                `;
+                const slider = elements.content.querySelector("input");
+                slider.addEventListener("input", () => {
+                    const value = parseInt(slider.value, 10);
+                    if (question.unit === "month(s)" && value >= 12) {
+                        elements.subdesc.textContent = parseDate(value)
+                    } else {
+                        elements.subdesc.textContent = `${value} ${question.unit}`;
+                    }
+                    state.answers[state.currentQuestion] = value;
+                    elements.next.classList.remove("disabled"); // Add this line
+                    elements.next.style.pointerEvents = "auto"; // Add this line
+                });
+            } else if (question.type === "radio") {
+                question.options.forEach((option, i) => {
+                    const radioHTML = `
+                        <div class="form-check question-option">
+                            <input class="form-check-input" type="radio" name="quizOptions" id="option${i}">
+                            <label class="form-check-label" for="option${i}">${option}</label>
+                        </div>
+                    `;
+                    elements.content.insertAdjacentHTML("beforeend", radioHTML);
+
+                    const months = state.answers[0] || 0;
+                    const storage = state.answers[1] || 0;
+
+                    elements.subdesc.textContent = `Estimated backup cost for the entire duration of your project: ${convertCurrency(storage * prices.backup * months)}`;
+                });
+
+                elements.content.querySelectorAll('.form-check').forEach((formCheck, i) => {
+                    formCheck.addEventListener("click", () => {
+                        // Programmatically check the input inside the clicked .form-check
+                        const input = formCheck.querySelector(".form-check-input");
+                        input.checked = true;
+
+                        // Update the state based on the selected option
+                        state.answers[state.currentQuestion] = question.options[i] === "Yes";
+
+                        // Enable the "Next" button
+                        elements.next.classList.remove("disabled");
+                        elements.next.style.pointerEvents = "auto";
+                    });
+                });
+            } else if (question.type === "input") {
+                // Wrap the input and unit in a container
+                elements.content.innerHTML = `
+                    <div class="input-group">
+                        <input type="number" class="form-control" min="${question.min}" placeholder="0">
+                        <span>${question.unit}</span>
+                    </div>
+                `;
+                const numberInput = elements.content.querySelector("input");
+
+                numberInput.addEventListener("input", () => {
+                    const value = parseFloat(numberInput.value);
+
+                    if (value >= question.min) {
+                        state.answers[state.currentQuestion] = value;
+
+                        const months = state.answers[0] || 0;
+                        const computeCost = state.answers[3]?.cost || 0;
+
+                        if (question.unit === "hours") {
+                            elements.subdesc.textContent = `Estimated costs: ${convertCurrency(value * computeCost)}`;
+                            state.answers[state.currentQuestion] = {
+                                cost: value * computeCost,
+                                hours: value
+                            };
+                        } else if (question.unit === "TB") {
+                            elements.subdesc.textContent = `Estimated costs: ${convertCurrency(value * prices.storage * months)}`;
+                        } else if (question.unit === "DKK") {
+                            elements.subdesc.textContent = `Estimated costs: ${convertCurrency((value/12) * months)}`;
+                            state.answers[state.currentQuestion] = (value/12) * months;
+                        }
+
+                        elements.next.classList.remove("disabled");
+                        elements.next.style.pointerEvents = "auto";
+                    } else {
+                        elements.next.classList.add("disabled");
+                        elements.next.style.pointerEvents = "none";
+                        elements.subdesc.textContent = `Estimated costs: 0 DKK`;
+                    }
+                });
+            } else if (question.type === "compute") {
+                elements.content.innerHTML = `
+                    <div style="display: flex; flex-direction: column;">
+                        <div class="form-group"">
+                            <label>CPUs:</label>
+                            <div style="display: flex;">
+                                <input type="range" class="form-range" id="cpu-slider" min="0" max="192" step="1" value="0">
+                                <span class="me-1" id="cpu-value">0</span>CPU(s)
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Memory:</label>
+                            <div style="display: flex;">
+                                <input type="range" class="form-range" id="memory-slider" min="0" max="2048" step="1" value="0">
+                                <span class="me-1" id="memory-value">0</span>GB
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>GPUs:</label>
+                            <div style="display: flex;">
+                                <input type="range" class="form-range" id="gpu-slider" min="0" max="8" step="1" value="0">
+                                <span class="me-1" id="gpu-value">0</span>GPU(s)
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Quantity:</label>
+                            <div style="display: flex;">
+                                <input type="range" class="form-range" id="quantity-slider" min="1" max="20" step="1" value="1">
+                                <span class="me-1" id="quantity-value">1</span>machine(s)
+                            </div>
+                        </div>
+                    </div> 
+                `;
+
+                const cpuSlider = document.getElementById("cpu-slider");
+                const memorySlider = document.getElementById("memory-slider");
+                const gpuSlider = document.getElementById("gpu-slider");
+                const quantitySlider = document.getElementById("quantity-slider");
+
+                cpuSlider.addEventListener("input", () => {
+                    document.getElementById("cpu-value").textContent = cpuSlider.value;
+                    updateComputeCost();
+                });
+
+                memorySlider.addEventListener("input", () => {
+                    document.getElementById("memory-value").textContent = memorySlider.value;
+                    updateComputeCost();
+                });
+
+                gpuSlider.addEventListener("input", () => {
+                    document.getElementById("gpu-value").textContent = gpuSlider.value;
+                    updateComputeCost();
+                });
+
+                quantitySlider.addEventListener("input", () => {
+                    document.getElementById("quantity-value").textContent = quantitySlider.value;
+                    updateComputeCost();
+                });
+
+
+                function adjustMemorySlider() {
+                    const includedMemory = cpuSlider.value * 8; // Calculate included RAM
+                    memorySlider.min = includedMemory; // Set minimum memory to the included amount
+                    memorySlider.value = Math.max(memorySlider.value, includedMemory); // Ensure memory value is at least the included amount
+                    document.getElementById("memory-value").textContent = memorySlider.value;
+                }
+
+                function updateComputeCost() {
+                    const cpuCount = cpuSlider.value;
+                    const memorySize = memorySlider.value;
+                    const gpuCount = gpuSlider.value;
+                    const machineCount = quantitySlider.value;
+
+                    const cpuCost = cpuCount * prices.cpu;
+                    const includedMemory = cpuCount * 8; // Free memory with selected CPUs
+                    const extraMemory = Math.max(memorySize - includedMemory, 0); // Calculate extra memory beyond included
+                    const memoryCost = extraMemory * prices.memory;
+                    const gpuCost = gpuCount * prices.gpu;
+
+                    const computeCost = (cpuCost + memoryCost + gpuCost) * machineCount;
+
+                    elements.subdesc.textContent = `Estimated total costs: ${computeCost.toFixed(2)} DKK/hour`;
+
+                    // Save compute configuration
+                    state.answers[state.currentQuestion] = {
+                        cost: computeCost,
+                        type: `${machineCount} machines with ${cpuCount} CPU(s), ${memorySize} GB memory, ${gpuCount} GPU(s)`
+                    };
+
+                    if (gpuCount > 0 || cpuCount > 0) {
+                        elements.next.classList.remove("disabled");
+                        elements.next.style.pointerEvents = "auto";
+                    } else {
+                        elements.next.classList.add("disabled");
+                        elements.next.style.pointerEvents = "none";
+                    }
+                }
+            }
+
+
+            // Update the text of the "Next" button for the last question
+            elements.next.textContent = state.currentQuestion === quizData.length - 1 ? "Calculate costs" : "Next";
+            elements.next.classList.add("disabled");
+            elements.next.style.pointerEvents = elements.next.classList.contains("disabled") ? "none" : "auto";
+            
+            // Update progress bar
+            updateProgress();
+        }
+
+        function parseDate(value) {
+            const years = Math.floor(value / 12);
+            const months = value % 12;
+            return `${years} year(s)${months > 0 ? ` and ${months} month(s)` : ""}`;
+        }
+
+        function updateProgress() {
+            const currentStep = state.currentQuestion; // 0-based index for steps
+            const totalSteps = quizData.length + 1; // Include the results step
+            const percentage = (currentStep / totalSteps) * 100;
+            elements.progress.style.width = `${percentage}%`;
+        }
+
+
+        function calculateTotalCost() {
+            const months = state.answers[0] || 0;
+            const storage = state.answers[1] || 0;
+            const needsBackup = state.answers[2] || false;
+            const computeDetails = state.answers[3] || { cost: 0, type: "N/A" };
+            const computeHourDetails = state.answers[4] || { cost: 0, hours: 0 };
+            const computeCosts = computeDetails.cost || 0;
+            const machineType = computeDetails.type || "N/A";
+            const licenseCosts = state.answers[5] || 0;
+
+            const totalStorageCost = storage * prices.storage * months;
+            const totalBackupCost = needsBackup ? storage * prices.backup * months : 0;
+            const totalComputeCost = computeHourDetails.cost || 0;
+            const totalCost = totalStorageCost + totalBackupCost + totalComputeCost + licenseCosts;
+
+            return {
+                total: convertCurrency(totalCost),
+                storage: convertCurrency(totalStorageCost + totalBackupCost),
+                compute: convertCurrency(totalComputeCost),
+                licenses: convertCurrency(licenseCosts),
+                details: {
+                    projectDuration: parseDate(months),
+                    storageAmount: `${storage} TB`,
+                    needsBackup: needsBackup ? "Yes" : "No",
+                    computeHours: computeHourDetails.hours || 0,
+                    machineType,
+                    licenseCost: licenseCosts > 0 ? `${licenseCosts} DKK/year` : "None"
+                }
+            };
+        }
+
+
+
+        function convertCurrency(cost ) {
+            return (Math.ceil(cost)).toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + ' DKK';
+        }
+
+        elements.next.addEventListener("click", () => {
+            if (elements.next.classList.contains("disabled")) return;
+
+            if (quizData[state.currentQuestion].next !== null) {
+                state.currentQuestion++;
+                renderQuestion();
+            } else {
+                const { total, storage, compute, licenses, details } = calculateTotalCost();
+
+                elements.title.textContent = "Quiz complete!";
+                elements.hint.textContent = "";
+                elements.content.innerHTML = "";
+                elements.finished.style.display = "block";
+                elements.quizBody.style.display = "none";
+
+                elements.specTitle.textContent = "Your cost breakdown:";
+                elements.specDesc.innerHTML = `
+                    <div class="result-group">
+                        <div class="result-header">
+                            <p class="result-title">Total cost:</p>
+                            <span class="badge bg-primary">${total}</span>
+                        </div>
+                        <p class="result-subtitle">Project duration: ${details.projectDuration}</p>
+                    </div>
+                    <div class="result-group">
+                        <div class="result-header">
+                            <p class="result-title">Storage cost:</p>
+                            <span class="badge bg-secondary">${storage}</span>
+                        </div>
+                        <p class="result-subtitle">Storage amount: ${details.storageAmount}</p>
+                        <p class="result-subtitle">Backup required: ${details.needsBackup}</p>
+                    </div>
+                    <div class="result-group">
+                        <div class="result-header">
+                            <p class="result-title">Compute cost:</p>
+                            <span class="badge bg-secondary">${compute}</span>
+                        </div>
+                        <p class="result-subtitle">Compute type: ${details.machineType}</p>
+                        <p class="result-subtitle">Compute hours: ${details.computeHours} hours</p>
+                    </div>
+                    <div class="result-group">
+                        <div class="result-header">
+                            <p class="result-title">License cost:</p>
+                            <span class="badge bg-secondary">${licenses}</span>
+                        </div>
+                    </div>
+                `;
+
+
+
+                elements.progress.style.width = "100%"; // Fully fill the progress bar
+                elements.prev.childNodes[1].nodeValue = "Reset quiz";
+            }
+        });
+
+
+        elements.prev.addEventListener("click", () => {
+            if (elements.prev.textContent.includes('Reset quiz')) {
+                state.currentQuestion = 0;
+                elements.quizBody.style.display = 'block';
+                elements.finished.style.display = 'none';
+                elements.prev.childNodes[1].nodeValue = "Previous"
+                renderQuestion();
+            } else if (state.currentQuestion > 0) {
+                state.currentQuestion--;
+                renderQuestion();
+            }
+        });
+
+        renderQuestion();
+    });
+</script>
+
+{% endblock %}
