@@ -69,7 +69,8 @@
             backup: 500 / 12,
             cpu: 0.12,
             memory: 0.12/8,
-            gpu: 6
+            gpu: 6,
+            dataStewardSalery: 600000// yearly cost for 1 FTE data steward
         };
 
         const quizData = [
@@ -108,7 +109,13 @@
                 question: "Do you require any software licenses?", 
                 description: "Please provide the estimated annual cost of the license(s).", 
                 subdescription: "Estimated costs: 0 DKK",
-                type: "input", min: 0, max: 100000, unit: "DKK", next: null
+                type: "input", min: 0, max: 100000, unit: "DKK", next: 6
+            },
+            {
+                question: "Do you require help from data stewards with tasks such as data management, organization, and compliance?",
+                description: "Please specify the number of hours per week you require their assistance.",
+                subdescription: "Estimated costs: 0 DKK",
+                type: "dm", min: 0, max: 72, unit: "hours/week", step: 1, next: null
             }
         ];
 
@@ -318,6 +325,68 @@
                         elements.next.style.pointerEvents = "none";
                     }
                 }
+            } else if (question.type === "dm") {
+                elements.content.innerHTML = `
+                    <div style="display: flex; flex-direction: column;">
+                        <div class="form-group"">
+                            <div style="display: flex;">
+                                <input type="range" class="form-range" id="hour-slider" min="0" max="72" step="1" value="0">
+                                <span class="me-1" id="hour-value">0</span>hours/week
+                            </div>
+                        </div>
+                    </div> 
+                `;
+
+                const hourSlider = document.getElementById("hour-slider");
+              
+                hourSlider.addEventListener("input", () => {
+                    document.getElementById("hour-value").textContent = hourSlider.value;
+                    
+                    const hours = hourSlider.value;
+                    const months = state.answers[0] || 0;
+
+                    // Data steward-specific cost calculation
+                    const totalDMCost = calculateDMCost(hours, months)
+                    elements.subdesc.textContent = `Estimated total costs: ${convertCurrency(totalDMCost)}`;
+                    state.answers.dataStewardHours = hours;
+                    state.answers.dataStewardCost = totalDMCost;
+
+                    if (hours > 0) {
+                        elements.next.classList.remove("disabled");
+                        elements.next.style.pointerEvents = "auto";
+                    } else {
+                        elements.next.classList.add("disabled");
+                        elements.next.style.pointerEvents = "none";
+                    }
+
+                });
+
+                function updateComputeCost() {
+
+                    const cpuCost = cpuCount * prices.cpu;
+                    const includedMemory = cpuCount * 8; // Free memory with selected CPUs
+                    const extraMemory = Math.max(memorySize - includedMemory, 0); // Calculate extra memory beyond included
+                    const memoryCost = extraMemory * prices.memory;
+                    const gpuCost = gpuCount * prices.gpu;
+
+                    const computeCost = (cpuCost + memoryCost + gpuCost) * machineCount;
+
+                    elements.subdesc.textContent = `Estimated total costs: ${computeCost.toFixed(2)} DKK/hour`;
+
+                    // Save compute configuration
+                    state.answers[state.currentQuestion] = {
+                        cost: computeCost,
+                        type: `${machineCount} machines with ${cpuCount} CPU(s), ${memorySize} GB memory, ${gpuCount} GPU(s)`
+                    };
+
+                    if (gpuCount > 0 || cpuCount > 0) {
+                        elements.next.classList.remove("disabled");
+                        elements.next.style.pointerEvents = "auto";
+                    } else {
+                        elements.next.classList.add("disabled");
+                        elements.next.style.pointerEvents = "none";
+                    }
+                }
             }
 
 
@@ -353,26 +422,47 @@
             const computeCosts = computeDetails.cost || 0;
             const machineType = computeDetails.type || "N/A";
             const licenseCosts = state.answers[5] || 0;
+            const dataStewardHours = state.answers.dataStewardHours || 0;
+            const dataStewardCost = state.answers.dataStewardCost || 0;
 
             const totalStorageCost = storage * prices.storage * months;
             const totalBackupCost = needsBackup ? storage * prices.backup * months : 0;
             const totalComputeCost = computeHourDetails.cost || 0;
-            const totalCost = totalStorageCost + totalBackupCost + totalComputeCost + licenseCosts;
+            const totalCost = totalStorageCost + totalBackupCost + totalComputeCost + licenseCosts + dataStewardCost;
 
             return {
                 total: convertCurrency(totalCost),
                 storage: convertCurrency(totalStorageCost + totalBackupCost),
                 compute: convertCurrency(totalComputeCost),
                 licenses: convertCurrency(licenseCosts),
+                stewards: convertCurrency(dataStewardCost),
                 details: {
                     projectDuration: parseDate(months),
                     storageAmount: `${storage} TB`,
                     needsBackup: needsBackup ? "Yes" : "No",
                     computeHours: computeHourDetails.hours || 0,
                     machineType,
-                    licenseCost: licenseCosts > 0 ? `${licenseCosts} DKK/year` : "None"
+                    licenseCost: licenseCosts > 0 ? `${licenseCosts} DKK/year` : "None",
+                    stewardHours: dataStewardHours
                 }
             };
+        }
+
+        function calculateDMCost(hoursPerWeek, months) {
+            // Total hours worked by a full-time employee per year
+            const fullTimeHoursPerYear = 160.33*12
+
+            // Hourly rate for the full-time employee
+            const hourlyRate = prices.dataStewardSalery / fullTimeHoursPerYear;
+
+            // Total hours worked by the part-time employee
+            const weeks = months * 4.35; // Approximate number of weeks in a month
+            const totalHours = hoursPerWeek * weeks;
+
+            // Total cost for the part-time work
+            const totalCost = hourlyRate * totalHours;
+
+            return totalCost;
         }
 
 
@@ -388,7 +478,7 @@
                 state.currentQuestion++;
                 renderQuestion();
             } else {
-                const { total, storage, compute, licenses, details } = calculateTotalCost();
+                const { total, storage, compute, licenses, stewards, details } = calculateTotalCost();
 
                 elements.title.textContent = "Quiz complete!";
                 elements.hint.textContent = "";
@@ -426,6 +516,13 @@
                             <p class="result-title">License cost:</p>
                             <span class="badge bg-secondary">${licenses}</span>
                         </div>
+                    </div>
+                    <div class="result-group">
+                        <div class="result-header">
+                            <p class="result-title">Data steward cost:</p>
+                            <span class="badge bg-secondary">${stewards}</span>
+                        </div>
+                        <p class="result-subtitle">Hours a week: ${details.stewardHours} hours</p>
                     </div>
                 `;
 
