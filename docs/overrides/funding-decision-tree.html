@@ -232,28 +232,28 @@
                 elements.content.innerHTML = `
                     <div style="display: flex; flex-direction: column;">
                         <div class="form-group"">
-                            <label>CPUs:</label>
+                            <label class="form-label">CPUs:</label>
                             <div style="display: flex;">
                                 <input type="range" class="form-range" id="cpu-slider" min="0" max="192" step="1" value="0">
                                 <span class="me-1" id="cpu-value">0</span>CPU(s)
                             </div>
                         </div>
                         <div class="form-group">
-                            <label>Memory:</label>
+                            <label class="form-label">Memory:</label>
                             <div style="display: flex;">
                                 <input type="range" class="form-range" id="memory-slider" min="0" max="2048" step="1" value="0">
                                 <span class="me-1" id="memory-value">0</span>GB
                             </div>
                         </div>
                         <div class="form-group">
-                            <label>GPUs:</label>
+                            <label class="form-label">GPUs:</label>
                             <div style="display: flex;">
                                 <input type="range" class="form-range" id="gpu-slider" min="0" max="8" step="1" value="0">
                                 <span class="me-1" id="gpu-value">0</span>GPU(s)
                             </div>
                         </div>
                         <div class="form-group">
-                            <label>Quantity:</label>
+                            <label class="form-label">Quantity:</label>
                             <div style="display: flex;">
                                 <input type="range" class="form-range" id="quantity-slider" min="1" max="20" step="1" value="1">
                                 <span class="me-1" id="quantity-value">1</span>machine(s)
@@ -329,26 +329,61 @@
                 elements.content.innerHTML = `
                     <div style="display: flex; flex-direction: column;">
                         <div class="form-group"">
+                            <label class="form-label">For weekly assistance:</label>
                             <div style="display: flex;">
                                 <input type="range" class="form-range" id="hour-slider" min="0" max="72" step="1" value="0">
                                 <span class="me-1" id="hour-value">0</span>hours/week
+                            </div>
+                        </div>
+                        <div class="form-group"">
+                            <label class="form-label">For single time assistance:</label>
+                            <div class="input-group" style="justify-content: left !important;">
+                                <input type="number" class="form-control" id="single-input" min="0" placeholder="0">
+                                <span>hours</span>
                             </div>
                         </div>
                     </div> 
                 `;
 
                 const hourSlider = document.getElementById("hour-slider");
+                const singleInput = document.getElementById("single-input");
               
                 hourSlider.addEventListener("input", () => {
                     document.getElementById("hour-value").textContent = hourSlider.value;
+                    singleInput.value = null;
                     
                     const hours = hourSlider.value;
                     const months = state.answers[0] || 0;
 
                     // Data steward-specific cost calculation
-                    const totalDMCost = calculateDMCost(hours, months)
+                    const totalDMCost = calculateDMCost(hours, months, "weekly")
                     elements.subdesc.textContent = `Estimated total costs: ${convertCurrency(totalDMCost)}`;
-                    state.answers.dataStewardHours = hours;
+                    state.answers.dataStewardWeeklyHours = hours;
+                    state.answers.dataStewardSingleHours = 0;
+                    state.answers.dataStewardCost = totalDMCost;
+
+                    if (hours > 0) {
+                        elements.next.classList.remove("disabled");
+                        elements.next.style.pointerEvents = "auto";
+                    } else {
+                        elements.next.classList.add("disabled");
+                        elements.next.style.pointerEvents = "none";
+                    }
+
+                });
+
+                singleInput.addEventListener("input", () => {
+                    document.getElementById("hour-value").textContent = 0;
+                    hourSlider.value = 0;
+     
+                    const hours = singleInput.value;
+                    const months = state.answers[0] || 0;
+
+                    // Data steward-specific cost calculation
+                    const totalDMCost = calculateDMCost(hours, months, "single")
+                    elements.subdesc.textContent = `Estimated total costs: ${convertCurrency(totalDMCost)}`;
+                    state.answers.dataStewardWeeklyHours = 0;
+                    state.answers.dataStewardSingleHours = hours;
                     state.answers.dataStewardCost = totalDMCost;
 
                     if (hours > 0) {
@@ -422,7 +457,6 @@
             const computeCosts = computeDetails.cost || 0;
             const machineType = computeDetails.type || "N/A";
             const licenseCosts = state.answers[5] || 0;
-            const dataStewardHours = state.answers.dataStewardHours || 0;
             const dataStewardCost = state.answers.dataStewardCost || 0;
 
             const totalStorageCost = storage * prices.storage * months;
@@ -442,25 +476,27 @@
                     needsBackup: needsBackup ? "Yes" : "No",
                     computeHours: computeHourDetails.hours || 0,
                     machineType,
-                    licenseCost: licenseCosts > 0 ? `${licenseCosts} DKK/year` : "None",
-                    stewardHours: dataStewardHours
+                    licenseCost: licenseCosts > 0 ? `${licenseCosts} DKK/year` : "None"
                 }
             };
         }
 
-        function calculateDMCost(hoursPerWeek, months) {
+        function calculateDMCost(hours, months, type) {
             // Total hours worked by a full-time employee per year
             const fullTimeHoursPerYear = 160.33*12
 
             // Hourly rate for the full-time employee
             const hourlyRate = prices.dataStewardSalery / fullTimeHoursPerYear;
+            var totalCost = 0;
 
             // Total hours worked by the part-time employee
             const weeks = months * 4.35; // Approximate number of weeks in a month
-            const totalHours = hoursPerWeek * weeks;
-
-            // Total cost for the part-time work
-            const totalCost = hourlyRate * totalHours;
+            const totalHours = hours * weeks;
+            if (type === "weekly") {
+                totalCost = hourlyRate * totalHours;
+            } else {
+                totalCost = hourlyRate * hours;
+            }
 
             return totalCost;
         }
@@ -522,7 +558,8 @@
                             <p class="result-title">Data steward cost:</p>
                             <span class="badge bg-secondary">${stewards}</span>
                         </div>
-                        <p class="result-subtitle">Weekly hours: ${details.stewardHours} hours</p>
+                        <p class="result-subtitle">Weekly assistance: ${state.answers.dataStewardWeeklyHours} hours</p>
+                        <p class="result-subtitle">Single assistance: ${state.answers.dataStewardSingleHours} hours</p>
                     </div>
                 `;
 
