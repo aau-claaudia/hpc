@@ -537,15 +537,15 @@
                             <span class="badge bg-secondary">${storage}</span>
                         </div>
                         <p class="result-subtitle">Storage amount: ${details.storageAmount}</p>
-                        <p class="result-subtitle">Backup required: ${details.needsBackup}</p>
+                        <p class="result-subtitle">Backup: ${details.needsBackup}</p>
                     </div>
                     <div class="result-group">
                         <div class="result-header">
                             <p class="result-title">Compute cost:</p>
                             <span class="badge bg-secondary">${compute}</span>
                         </div>
-                        <p class="result-subtitle">Compute type: ${details.machineType}</p>
-                        <p class="result-subtitle">Compute hours: ${details.computeHours} hours</p>
+                        <p class="result-subtitle">Type: ${details.machineType}</p>
+                        <p class="result-subtitle">Hours: ${details.computeHours} hours</p>
                     </div>
                     <div class="result-group">
                         <div class="result-header">
@@ -566,13 +566,13 @@
 
 
                 elements.progress.style.width = "100%"; // Fully fill the progress bar
-                elements.prev.childNodes[1].nodeValue = "Reset quiz";
+                elements.prev.childNodes[1].nodeValue = "Reset";
             }
         });
 
 
         elements.prev.addEventListener("click", () => {
-            if (elements.prev.textContent.includes('Reset quiz')) {
+            if (elements.prev.textContent.includes('Reset')) {
                 state.currentQuestion = 0;
                 elements.quizBody.style.display = 'block';
                 elements.finished.style.display = 'none';
