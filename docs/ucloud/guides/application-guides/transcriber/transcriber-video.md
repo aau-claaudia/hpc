@@ -115,16 +115,17 @@ UCloud’s data classification maps to the AAU data classification model in the 
 
 Transcriber stands on the shoulders of the Whisper Transcription app and has additional features such as:
 
-**Version 1.0**
+**Version 1.5**
 
 * Multiple speaker recognition
+* Merge consecutive speaker entries 
  
 ## Who made it?
 
 **Research & development by**
 
-* Pelle Rosenbeck Gøeg, CLAAUDIA, ITS, AAU 
 * Nikolaj Andersen, CLAAUDIA, ITS, AAU 
+* Pelle Rosenbeck Gøeg, CLAAUDIA, ITS, AAU 
 
 **With support from**
 
@@ -136,4 +137,4 @@ Transcriber stands on the shoulders of the Whisper Transcription app and has add
 
 **Citation**
 
-Gøeg, Pelle Rosenbeck (CLAAUDIA); Andersen, Nikolaj (CLAAUDIA) and OpenAI. (2024). Transcriber (Version1.0) [App]. UCloud interactive HPC system, eScience Center at the University of Southern Denmark. https://cloud.sdu.dk/app/jobs/create?app=transcriber&version=1.0  
+Andersen, Nikolaj (CLAAUDIA); Gøeg, Pelle Rosenbeck (CLAAUDIA) and OpenAI. (2024). Transcriber (Version1.0) [App]. UCloud interactive HPC system, eScience Center at the University of Southern Denmark. https://cloud.sdu.dk/app/jobs/create?app=transcriber&version=1.0  
