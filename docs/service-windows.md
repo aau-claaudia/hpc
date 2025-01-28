@@ -1,90 +1,77 @@
-On this page you will find information about the proposed upcoming service windows.
 
-## Proposed schedule of service windows
+!!! warning "Next Service window: 11th of february 2025"
 
-**Next service window: 11/02/2025**
+Four times a year, all of our platforms are subject to routine maintainance where changes and security upgrades are implemented.
+During these days, we reserve the entirety of the day to maintainance. 
 
+## Schedule
 
-**2025** 11/02, 13/05, 16/09, 02/12
+It should be expected that the platforms are offline for the entire day from 00:01 until 23:59 - but they may come online by the end of the days, as the work is finished.
 
-**2026** 10/02, 12/05, 15/09, 01/12
-
-**2027** 09/02, 11/05, 14/09, 30/11
-
-**2028** 08/02, 09/05, 12/09, 28/11
+A service window for **AI Cloud, Strato, UCloud VM's** and **UCloud Kubernetes** will take place on the following dates:
 
 
-**We try to minimize the downtime of all systems**
+| 2025  | 2026  | 2027  | 2028  |
+| ---   | ---   | ---   | ---   |
+| 11/02 | 13/05 | 16/09 | 02/12 |
+| 10/02 | 12/05 | 15/09 | 01/12 |
+| 09/02 | 11/05 | 14/09 | 30/11 |
+| 08/02 | 09/05 | 12/09 | 28/11 |
 
 
-**Time reservation for services: 00:00 to 23:59.**
+A service window for **AI-LAB** will take place on the following dates:
+
+| 2025  | 2026  | 2027  | 2028  |
+| ---   | ---   | ---   | ---   |
+| 13/02 | 15/05 | 18/09 | 04/12 |
+| 12/02 | 14/05 | 17/09 | 03/12 |
+| 11/02 | 13/05 | 16/09 | 01/12 |
+| 10/02 | 11/05 | 14/09 | 30/11 |
 
 
-!!! info "ServiceInfo: Sign up for progress notifications"
-    Click this link to go to serviceinfo.dk, then select **Aalborg University**,
-    and under the "Abonnér" / "Subscribe" tab you can select **CLAAUDIA**, and
-    select *email*, *SMS* or *calendar*, according to your preferences:
+!!! info "Sign up for notifications on serviceinfo.dk"
+    Click this link to go to serviceinfo.dk. Then select *Aalborg University*,
+    and under the tab *Subscribe* (or *Abonnér*), select *CLAAUDIA*.
+    Select *email*, *SMS* or *calendar*, according to your preferences:
 
      [:octicons-arrow-right-24: Go to ServiceInfo.dk](https://serviceinfo.dk/)
 
 
-## OpenStack virtual machines
-### (Strato and UCloud virtual machines)
+## Platform specific information
 
-**Remember to save your work on Strato and UCloud Virtual Machines
-(VMs)**
+### Strato and UCloud virtual machines
 
-**Strato: All hosts will be rebooted, and to do this all Strato virtual
-machines will be shut off**
+**Remember to save your work on Strato and UCloud Virtual Machines (VMs).**  All hosts will be rebooted, and to do this all Strato virtual machines will be shut off
+If you have active work on your virtual machines that has not been saved. 
 
-If you have active work on your virtual machines that has not been
-saved, **please make sure you save your work** by the latest end of 
-the day before the service window (Monday). All virtual machines will automatically undergo the
+**Please make sure you save your work** by the latest end of 
+the day before the service window. All virtual machines will automatically undergo the
 equivalent of shutting down your computer, so any unsaved data will be
 lost.
-
-We have reserved the entire day from 00:01 to 23:59, but the time
-required to restart hosts once all instances have been shut down is only
-a few minutes.
 
 Virtual machines that are running at the start of the window will be
 automatically restarted after the host has been rebooted. This includes
 all virtual machines on the UCloud platform.
 
-**Strato: All virtual machines should be removed when not in use**
-
-The best practice, if you don't need your VM right away is to 1. Rename
-your volume, 2. Delete your instance, and 3. When you need to run that
-machine again, just launch a new VM from the volume. This also lets you
-change the VM flavour or resize your disk if you need to. Basic rule:
-keep your volumes, delete your unused VMs, and only run a VM with the
-size you really need right now.
+**All virtual machines should be removed when not in use.** 
+Basic rule: keep your volumes, delete your unused VMs, and only run a VM with the size you really need right now.
+Please consult the page ['Delete and restart an instance from the volume'](strato/best-practice-guides/delete-and-restart-an-instance-from-the-volume/)
+for instructions on how to do this.
 
 Link to Strato's
-web-interface: [https://strato-new.claaudia.aau.dk](https://strato-new.claaudia.aau.dk/)
+web-interface: [strato-new.claaudia.aau.dk](https://strato-new.claaudia.aau.dk/)
 
-## AI Cloud
+### AI Cloud
+In the days leading up to the service window, a reservation will be put in place for the entire cluster. The entirety of the cluster will therefore be unavailable for that day, but may come back online by the end of the day.
 
-AI-Cloud will be unavailable throughout most of that day and will come
-back online towards the end of the workday. 
+**You can still submit jobs in the days leading up to the service window.**
+Since the `batch` and `prioritized` partitions have time limits of 12 hours and 6 days respectively, you will only be able to launch new jobs if you add the `--time` parameter to your Slurm command. If you do not set this parameter, and there are 5 days until the day of the service window, your job will not start until after the service window. You will thus need to calculate how much time there is left, and then submit the job with this parameter added. 
 
-**AI Cloud: Time limit will be imposed prior to service window**
+To submit a job that runs for 1 day and 8 hours, you can simply add `--time=1-08:00:00` to your Slurm command. 
 
-In the days leading up to the [service
-window](https://hpc.aau.dk/terms-and-conditions/),
-a time limit will be imposed, which will  prevent you from launching
-jobs with end dates that surpass the date of the service window. 
+Additionally you can read about our recommendations for using [checkpointing](ai-lab/additional-guides/requeuing-and-checkpointing/) to work with time limits.
 
-In this
-period, you will only be able to launch new jobs, if you add
-the `--time` parameter to your Slurm command. If the time parameter is
-not set, Slurm assumes you ask for the default maximum time for the
-partition. You will thus have to calculate how much time you have before
-the service window, and then submit a job with this parameter added. To
-submit a job that runs for 1 day and 8 hours, you can simply
-add `--time=1-08:00:00` to your Slurm command. 
+### AI-LAB
+In the days leading up to the service window, a reservation will be put in place for the entire cluster. The entirety of the cluster will therefore be unavailable for that day, but may come back online by the end of the day.
 
-Additionally you can read
-about our recommendations for
-using [checkpointing](https://aicloud-docs.claaudia.aau.dk/slurm/#checkpointing) to
-work with time limits.
+Because of the reservation, you will also need to add the `--time` argument to your Slurm command, if you wish to launch new jobs, and there are less than 12 hours until the service window. Follow the instructions for AI Cloud layed out above.
