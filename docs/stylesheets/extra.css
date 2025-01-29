@@ -61,7 +61,6 @@
 .md-typeset h3, strong {
   font-family: "Barlow", sans-serif;
   color: var(--aau-primary);
-  text-transform: uppercase;
 }
 .twemoji {
   color: var(--aau-primary);
@@ -1052,7 +1051,6 @@ del {
   padding-left: 0.6rem;
   font-size: 15px;
   font-family: "Barlow", sans-serif;
-  text-transform: uppercase;
 }
 .md-typeset .news > .admonition-title::before,
 .md-typeset .news > summary::before {

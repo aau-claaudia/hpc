@@ -91,6 +91,33 @@
                 type: "radio", options: ["Yes", "No"], next: 3 
             },
             { 
+                question: "Do you already know the specific compute type (e.g., GPU, CPU) and configuration you need?", 
+                description: "This will help us guide you better in selecting the compute resources.",
+                subdescription: "",
+                type: "radio", options: ["Yes", "No, I need assistance"], next: { "Yes": 6, "No, I need assistance": 4 }
+            },
+            { 
+                question: "What type of project are you working on?", 
+                description: "Select the option that best describes your project. This helps us suggest the appropriate compute type.",
+                subdescription: "",
+                type: "radio", 
+                options: [
+                    "Machine Learning/Deep Learning",
+                    "Data Analysis/ETL",
+                    "Scientific Simulations (e.g., physics, chemistry, biology)",
+                    "Image or Video Processing",
+                    "General Software Development",
+                    "Other"
+                ], 
+                next: 5
+            },
+            { 
+                question: "How large is your dataset?", 
+                description: "Provide an estimate of the total data size that you plan to process.",
+                subdescription: "",
+                type: "input", min: 0, max: 10000, unit: "TB", next: 6 
+            },
+            { 
                 question: "Configure your compute requirements", 
                 description: "Adjust the sliders below to select your desired compute type.",
                 subdescription: "Estimated compute costs per hour: 0 DKK/hour",
@@ -165,11 +192,13 @@
                         </div>
                     `;
                     elements.content.insertAdjacentHTML("beforeend", radioHTML);
-
-                    const months = state.answers[0] || 0;
-                    const storage = state.answers[1] || 0;
-
-                    elements.subdesc.textContent = `Estimated backup cost for the entire duration of your project: ${convertCurrency(storage * prices.backup * months)}`;
+                    
+                    if (question.question === "Do you need to store data in backup?") {
+                        const months = state.answers[0] || 0;
+                        const storage = state.answers[1] || 0;
+                        
+                        elements.subdesc.textContent = `Estimated backup cost for the entire duration of your project: ${convertCurrency(storage * prices.backup * months)}`;
+                    }
                 });
 
                 elements.content.querySelectorAll('.form-check').forEach((formCheck, i) => {
@@ -509,7 +538,13 @@
             if (elements.next.classList.contains("disabled")) return;
 
             if (quizData[state.currentQuestion].next !== null) {
-                state.currentQuestion++;
+                if (state.answers[3] === true) {
+                    state.currentQuestion += 3;
+                } else if (state.answers[3] === false) {
+                    state.currentQuestion++;
+                } else {
+                    state.currentQuestion++;
+                }
                 renderQuestion();
             } else {
                 const { total, storage, compute, licenses, stewards, details } = calculateTotalCost();
@@ -561,8 +596,6 @@
                     </div>
                 `;
 
-
-
                 elements.progress.style.width = "100%"; // Fully fill the progress bar
                 elements.prev.childNodes[1].nodeValue = "Reset";
             }
@@ -577,7 +610,13 @@
                 elements.prev.childNodes[1].nodeValue = "Previous"
                 renderQuestion();
             } else if (state.currentQuestion > 0) {
-                state.currentQuestion--;
+                if (state.answers[3] === true) {
+                    state.currentQuestion -= 3;
+                } else if (state.answers[3] === false) {
+                    state.currentQuestion--;
+                } else {
+                    state.currentQuestion--;
+                }
                 renderQuestion();
             }
         });

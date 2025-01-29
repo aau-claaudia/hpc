@@ -8,4 +8,4 @@ Fill out this [application form](https://forms.office.com/Pages/ResponsePage.asp
 You will recieve an email when your request is approved. Expect a delay up to 30 minutes before you can log in to AI-LAB.
 
 ## 3. Follow "Getting started" guide
-After getting access, please follow the [Getting started](/ai-lab/getting-started/) guide.
+After getting access, please follow the [Getting started](/ai-lab/guides/) guide.
