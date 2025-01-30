@@ -1,58 +1,6 @@
 # AI-LAB
 
 
-## Learn the Key Features
-
-##### Discover the essential features of AI-LAB.
-
-
-<div class="grid cards grid-three" markdown>
-
-<!--
-Icons can be searched and found here:
-https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/ (best, is to use the ones starting with material)
--->
-
--   :material-speedometer:{ .lg .middle } __High-Performance Computing (HPC)__
-
-    ---
-    
-    AI-LAB provides students with access to powerful computing resources, including 11 nodes equipped with 8 L4 NVIDIA GPUs, enabling complex computational tasks.
-
--   :material-brain:{ .lg .middle } __Deep Learning Capabilities__
-
-    ---
-    
-    With integrated frameworks like PyTorch and TensorFlow, AI-LAB is optimized for training deep learning models, allowing for faster experimentation and iteration on complex neural networks.
-
--   :material-package-variant-closed:{ .lg .middle } __User-Friendly Software Integration__
-
-    ---
-    
-    AI-LAB comes pre-loaded with popular software tools like MATLAB and offers containerization with Singularity, ensuring that even users with limited technical expertise can get started quickly.
-
--   :material-human-queue:{ .lg .middle } __Workload Management__
-
-    ---
-    
-    The integration of Slurm for job scheduling allows for efficient resource allocation, ensuring that computational tasks are handled smoothly and efficiently.
-
--   :material-file-document-multiple-outline:{ .lg .middle } __Comprehensive Documentation__
-
-    ---
-    
-    Extensive resources are available to guide users through the setup and usage of AI-LAB, with a focus on accessibility for beginners.
-
--   :material-account-group-outline:{ .lg .middle } __Collaborative Platform__
-
-    ---
-    
-    AI-LAB facilitates collaboration among students and researchers by allowing multiple users to work on shared projects, enabling seamless teamwork on complex computational tasks and research initiatives.
-
-</div>
-
-
-
 
 ##### AI-LAB is designed exclusively for students at Aalborg University, offering high-performance computing (HPC) right at your fingertips. Think of it as a mini supercomputer, packed with GPUs, making it a perfect playground for training deep learning models, running simulations, and performing high-speed data analysis.
 
