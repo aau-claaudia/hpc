@@ -68,6 +68,12 @@ To submit a job that runs for 1 day and 8 hours, you can simply add `--time=1-08
 Additionally you can read about our recommendations for using [checkpointing](ai-lab/additional-guides/requeuing-and-checkpointing/) to work with time limits.
 
 ### AI-LAB
-In the days leading up to the service window, a reservation will be put in place for the entire cluster. The entirety of the cluster will therefore be unavailable for that day, but may come back online by the end of the day.
+In the days leading up to the service window, a time limit will be imposed, which will prevent you from launching jobs with end dates that surpass the date of the service window. 
 
-Because of the reservation, you will also need to add the `--time` argument to your Slurm command, if you wish to launch new jobs, and there are less than 12 hours until the service window. Follow the instructions for AI Cloud layed out above.
+In this period, you will only be able to launch new jobs, if you add the `--time` parameter to your Slurm command. If the time parameter is not included, Slurm assumes you ask for the default maximum time for the partition. You will thus have to calculate how much time you have before the service window, and then submit a job with this parameter added. 
+
+To submit a job that runs for 12 hours, you should add: `--time=12:00:00`. Not setting the `--time` parameter will place your job in the queue, where it will wait until the service window has been completed.
+
+**IMPORTANT:** You can still run jobs in the days leading up to the service window
+
+If you have any questions, please open a case with us on [serviceportal.aau.dk](https://serviceportal.aau.dk/serviceportal?id=sc_cat_item&sys_id=a05e2fb4c3434610f0f3041ad001310e)
