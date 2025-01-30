@@ -33,9 +33,9 @@ A service window for **AI-LAB** will take place on the following dates:
 
      [:octicons-arrow-right-24: Go to ServiceInfo.dk](https://serviceinfo.dk/)
 
-## Platform specific information
+### Platform specific information
 
-### Strato and UCloud virtual machines
+## Strato and UCloud virtual machines
 
 **Remember to save your work on Strato and UCloud Virtual Machines (VMs).**  All hosts will be rebooted, and to do this all Strato virtual machines will be shut off
 If you have active work on your virtual machines that has not been saved. 
@@ -57,7 +57,7 @@ for instructions on how to do this.
 Link to Strato's
 web-interface: [strato-new.claaudia.aau.dk](https://strato-new.claaudia.aau.dk/)
 
-### AI Cloud
+## AI Cloud
 In the days leading up to the service window, a reservation will be put in place for the entire cluster. The entirety of the cluster will therefore be unavailable for that day, but may come back online by the end of the day.
 
 **You can still submit jobs in the days leading up to the service window.**
@@ -67,7 +67,7 @@ To submit a job that runs for 1 day and 8 hours, you can simply add `--time=1-08
 
 Additionally you can read about our recommendations for using [checkpointing](ai-lab/additional-guides/requeuing-and-checkpointing/) to work with time limits.
 
-### AI-LAB
+## AI-LAB
 In the days leading up to the service window, a time limit will be imposed, which will prevent you from launching jobs with end dates that surpass the date of the service window. 
 
 In this period, you will only be able to launch new jobs, if you add the `--time` parameter to your Slurm command. If the time parameter is not included, Slurm assumes you ask for the default maximum time for the partition. You will thus have to calculate how much time you have before the service window, and then submit a job with this parameter added. 
