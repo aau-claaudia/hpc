@@ -21,7 +21,7 @@ AI-LAB is designed for processing GPU-demanding batch jobs, that can be executed
 ### Interactive development sessions
 By *interactive development* we mean opening jobs, where you have a GPU available to you, but you only ocassinally run commands on the GPU. This results in a very ineffective utilisation of the GPU's, and decreases overall availability. Examples of interactive development session, could be connecting a Jupyter Notebook, Spyder, VS Code to a compute node.
 
-Interactive development is allowed on [UCloud](../../ucloud/index.md).
+Interactive development is allowed on [UCloud](/ucloud/).
 
 ### CPU demanding operations
 If your application can not make use of the GPU's - or does not require one, AI-LAB is not the correct platform. Instead we recomend making use of one of our other computing platforms. Have a look around this website, or [contact CLAAUDIA for guidance](https://aau.service-now.com/serviceportal?id=sc_cat_item&sys_id=34e8536083cfc21053711d447daad30a) on more suitable alternatives.
