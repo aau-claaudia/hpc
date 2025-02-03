@@ -332,6 +332,11 @@ a {
     text-align: left;
     margin-bottom: 0 !important;
 }
+.form-select {
+    font-family: Montserrat, sans-serif;
+    font-size: 15px;
+    color: rgb(33, 26, 81);
+}
 @media print {
     body * {
         visibility: hidden;
