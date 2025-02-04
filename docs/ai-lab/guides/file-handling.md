@@ -206,6 +206,7 @@ On AI-LAB, semester groups can collaborate by creating shared project directorie
 
 	This ensures that any new files or directories created inside the project will automatically belong to the group.
 
+	
 	### Step 4: Verify Permissions
 	You can verify that the permissions are correctly set by listing the directory details:
 
@@ -229,9 +230,56 @@ On AI-LAB, semester groups can collaborate by creating shared project directorie
 	* Any group member can access, read, write, and create files within the directory.
 	* Users who are not in the group cannot access the directory.
 
-	!!! info "Notes:"
-		* No other users outside the group will be able to access this directory.
-		*  If you need to change the group or add more users, you’ll need administrative assistance.
+	!!! info "Important: Fix Permission Issues for Uploaded Files:"
+		When uploading existing files from your own computer, they may **not** automatically get the correct permissions, preventing other group members from editing them.
+
+		To **automatically fix permissions**, follow these steps:
+
+		#### **1. Create an Automatic Fix Script**
+		Create a script that will regularly correct the permissions of uploaded files.
+
+		1. Open a terminal and create a new script file, e.g. inside the project directory:
+	
+			```
+			nano /ceph/project/[project_name]/fix_permissions.sh
+			```
+
+		2. Add the following content to the file:
+		
+			```
+			#!/bin/bash
+			chmod -R g+rwX /ceph/project/[project_name]
+			```
+
+		3. Save the file (`CTRL + X`, then `Y`, then `ENTER`).
+
+		4. Make the script executable:
+
+			```
+			chmod +x /ceph/project/fix_permissions.sh
+			```
+
+		#### **2. Set Up a Cron Job to Run the Script Automatically**
+		A cron job will run the script **every 5 minutes**, ensuring tht all uploaded files get the correct permissions.
+
+		1. Open the cron job editor:
+
+			```
+			crontab -e
+			```
+
+		2. Add this line at the bottom:
+
+			```
+			*/5 * * * * /ceph/project/[project_name]/fix_permissions.sh
+			```
+
+		**Remember to replace [project_name] with the name of your project folder throughout the guide**
+		
+		3. Save the file (`CTRL + X`, then `Y`, then `ENTER`).
+
+		Now, every **5 minutes**, the script will automatically fix permissions for any uploaded files.
+
 
 Now that you know the basics of file handling, lets proceed to learn how to [**run jobs on AI-LAB :octicons-arrow-right-24:**](running-jobs.md)
 

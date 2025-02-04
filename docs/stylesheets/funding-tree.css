@@ -1,0 +1,91 @@
+/* Hide table of contents */
+@media screen and (min-width: 60em) {
+    .md-sidebar--secondary {
+    display: none;
+    }
+}
+/* Hide navigation */
+@media screen and (min-width: 76.25em) {
+  .md-sidebar--primary {
+    display: none;
+  }
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+.md-typeset h1 {
+    display: none;
+}
+.md-main, .md-main__inner {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+.cost {
+    box-sizing: border-box;
+    padding: 0;
+    position: sticky;
+    top: 65px;
+}
+.cost-details {
+    border-width: 0;
+    box-shadow: 0 1px 2px 0 rgba(60, 64, 67, .3), 0 1px 3px 1px rgba(60, 64, 67, .15);
+    background-color: rgb(248, 249, 250);
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    min-height: 425px;
+    width: 380px;
+    position: relative;
+    overflow: hidden;
+}
+.cost-details-title {
+    align-items: center;
+    display: flex;
+    padding: 16px 24px 5px;
+}
+.cost-details-title h2 {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    font-family: Montserrat, sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: normal;
+    line-height: 28px;
+    margin-right: auto;
+    color: rgb(33, 26, 81);
+}
+.price-element {
+    padding: 18px 24px 0;
+    padding-bottom: 24px;
+    padding-top: 0px;
+}
+.price-content {
+    align-items: center;
+    display: flex;
+    margin-bottom: 4px;
+}
+.price-text {
+    color: rgb(95, 99, 104);
+    flex: 0 1 auto;
+    margin-right: 4px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.price-value {
+    color: rgb(32, 33, 36);
+    font-size: 14px;
+    margin-left: auto;
+    white-space: nowrap;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    font-family: Google Sans, Roboto, Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: normal;
+    line-height: 24px;
+}
