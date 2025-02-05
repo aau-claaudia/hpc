@@ -315,6 +315,9 @@ hr {
     background-color: white !important;
     text-decoration: underline;
 }
+.form-switch {
+    padding-left: 0 !important;
+}
 @media print {
     body * {
         visibility: hidden;
