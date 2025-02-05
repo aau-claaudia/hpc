@@ -1,0 +1,1135 @@
+{% extends "main.html" %}
+
+{% block header %}
+<header class="md-header md-header--shadow" data-md-component="header"></header>
+{% endblock %}
+
+{% block tabs %}{% endblock %}
+
+{% block container %}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<link rel="stylesheet" href="../stylesheets/hpc-cost-estimator.css">
+
+<div style="height: 100%; margin-top: 1rem;">
+  <div class="estimator-header">
+    <h1>HPC Cost Estimator</h1>
+    <a href="#" class="d-inline-block" data-bs-toggle="tooltip" data-bs-placement="right"
+      data-bs-title="This tool helps you estimate HPC resource usage and approximate costs.">
+      <i class="bi bi-info-circle"></i>
+    </a>
+  </div>
+
+  <div style="display: flex; gap: 32px; margin-bottom: 36px; min-height: inherit;">
+    <!-- LEFT COLUMN -->
+    <div style="flex: 1; padding-bottom: 24px; position: relative; width: 640px;">
+      <div class="accordion shadow-sm" id="accordionExample">
+
+        <!-- PROJECT DURATION -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingDuration">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseDuration"
+              aria-expanded="true" aria-controls="collapseDuration">
+              Project duration
+            </button>
+          </h2>
+          <div id="collapseDuration" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <div class="accordion-element">
+                <div class="item-description">
+                  <h4>What is the expected duration of your project?</h4>
+                  <a href="#" class="d-inline-block" data-bs-toggle="tooltip" data-bs-placement="right"
+                    data-bs-title="Use this slider to set the duration you expect your project to last.">
+                    <i class="bi bi-info-circle"></i>
+                  </a>
+                </div>
+                <div class="mt-2" style="display: flex; align-items: center;">
+                  <input type="range" step="1" class="form-range" value="1" id="durationRange" min="1" max="120">
+                  <span class="ms-3 range-text" id="durationValue">1 month</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- STORAGE -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingStorage">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseStorage" aria-expanded="false" aria-controls="collapseStorage">
+              Storage
+            </button>
+          </h2>
+          <div id="collapseStorage" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <div class="accordion-element">
+                <div class="item-description">
+                  <h4>What is the estimated data storage requirement?</h4>
+                </div>
+                <div class="input-group mb-3 mt-3">
+                  <span class="input-group-text">
+                    Total amount of storage*
+                    <a href="#" class="d-inline-block" data-bs-toggle="tooltip" data-bs-placement="right"
+                      data-bs-title="Enter the total storage in TiB you expect to need. If unsure, include a small buffer for growth or intermediate data.">
+                      <i class="bi bi-info-circle"></i>
+                    </a>
+                  </span>
+                  <input type="number" class="form-control" id="storageInput" aria-label="storage" placeholder="0">
+                  <span class="input-group-text">TiB</span>
+                </div>
+              </div>
+              <div class="accordion-element">
+                <div class="form-check form-switch">
+                  <input class="form-check-input" type="checkbox" role="switch" id="backupSwitch">
+                  <label class="form-check-label" for="backupSwitch">
+                    Do you need to store data in backup?
+                  </label>
+                  <a href="#" class="d-inline-block" data-bs-toggle="tooltip" data-bs-placement="right"
+                    data-bs-title="Enable this option if you want a backup copy of your data to protect against accidental loss (usually doubles storage needs).">
+                    <i class="bi bi-info-circle"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- FRONTEND -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingFrontend">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseFrontend" aria-expanded="false" aria-controls="collapseFrontend">
+              Front-end computer
+            </button>
+          </h2>
+          <div id="collapseFrontend" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <div class="accordion-element">
+                <div class="item-description">
+                  <h4>Specify the configuration for your interactive front-end computer</h4>
+                  <a href="#" class="d-inline-block" data-bs-toggle="tooltip" data-bs-placement="right"
+                    data-bs-title="The front-end computer is used to manage jobs, run setup scripts, handle data transfers, and provide an interactive environment before submitting tasks to the main compute resources.">
+                    <i class="bi bi-info-circle"></i>
+                  </a>
+                </div>
+                <div class="input-group mb-3 mt-3">
+                  <label class="input-group-text" style="min-width: 85px;" for="frontEndSelect" id="frontEndSelectLabel">Default</label>
+                  <select class="form-select" id="frontEndSelect">
+                    <option value="default-frontend" selected>2 CPUs, 4 GiB memory</option>
+                    <option value="medium-frontend">4 CPUs, 8 GiB memory</option>
+                    <option value="large-frontend">8 CPUs, 16 GiB memory</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- COMPUTE -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingCompute">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseCompute" aria-expanded="false" aria-controls="collapseCompute">
+              Compute
+            </button>
+          </h2>
+          <div id="collapseCompute" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+
+              <div class="accordion-element">
+
+                <!-- The dropdown button remains the same -->
+                <div class="dropdown">
+                  <button type="button" class="btn btn-outline-primary dropdown-toggle quiz-btn" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
+                    Need help finding the right compute power?
+                  </button>
+
+                  <!-- Multi-step form wizard -->
+                  <form class="dropdown-menu p-4 shadow" id="quizForm" style="width: 100%;">
+
+                    <!-- STEP 1: PROJECT TYPE -->
+                    <div id="quizStep1" style="display: block;">
+                      <div class="mb-3">
+                        <label class="form-label d-block quiz-title">Which best describes your research project?</label>
+                        <div class="form-check custom-check">
+                          <input class="form-check-input" type="radio" name="questionProjectType" id="projType1" value="ml-ai">
+                          <label class="form-check-label" for="projType1">
+                            Machine learning / Deep learning / AI
+                          </label>
+                        </div>
+                        <div class="form-check custom-check">
+                          <input class="form-check-input" type="radio" name="questionProjectType" id="projType2" value="data-analysis">
+                          <label class="form-check-label" for="projType2">
+                            Large-scale data analysis (big dataset queries, analytics)
+                          </label>
+                        </div>
+                        <div class="form-check custom-check">
+                          <input class="form-check-input" type="radio" name="questionProjectType" id="projType3" value="simulations">
+                          <label class="form-check-label" for="projType3">
+                            Scientific HPC simulations (CFD, genomics, physics, etc.)
+                          </label>
+                        </div>
+                        <div class="form-check custom-check">
+                          <input class="form-check-input" type="radio" name="questionProjectType" id="projType4" value="general">
+                          <label class="form-check-label" for="projType4">
+                            General-purpose computing (scripts, moderate calculations)
+                          </label>
+                        </div>
+                      </div>
+                      <button type="button" class="btn btn-primary" id="btnNext1">Next</button>
+                    </div>
+
+                    <!-- STEP 2: DATA SIZE -->
+                    <div id="quizStep2" style="display: none;">
+                      <div class="mb-3">
+                        <label class="form-label d-block quiz-title">How large is your dataset in total?</label>
+                        <div class="form-check custom-check">
+                          <input class="form-check-input" type="radio" name="questionDataSize" id="dataSizeSmall" value="small">
+                          <label class="form-check-label" for="dataSizeSmall">Small (under 1 TB)</label>
+                        </div>
+                        <div class="form-check custom-check">
+                          <input class="form-check-input" type="radio" name="questionDataSize" id="dataSizeMedium" value="medium">
+                          <label class="form-check-label" for="dataSizeMedium">Medium (1-10 TB)</label>
+                        </div>
+                        <div class="form-check custom-check">
+                          <input class="form-check-input" type="radio" name="questionDataSize" id="dataSizeLarge" value="large">
+                          <label class="form-check-label" for="dataSizeLarge">Large (10-100 TB)</label>
+                        </div>
+                        <div class="form-check custom-check">
+                          <input class="form-check-input" type="radio" name="questionDataSize" id="dataSizeMassive" value="massive">
+                          <label class="form-check-label" for="dataSizeMassive">Massive (100+ TB)</label>
+                        </div>
+                        <!-- Not sure -->
+                        <div class="form-check custom-check">
+                          <input class="form-check-input" type="radio" name="questionDataSize" id="dataSizeUnknown" value="dontknow">
+                          <label class="form-check-label" for="dataSizeUnknown">Not sure</label>
+                        </div>
+                      </div>
+                      <button type="button" class="btn btn-secondary me-2" id="btnPrev2">Back</button>
+                      <button type="button" class="btn btn-primary" id="btnNext2">Next</button>
+                    </div>
+
+                    <!-- STEP 3: JOB LENGTH -->
+                    <div id="quizStep3" style="display: none;">
+                      <div class="mb-3">
+                        <label class="form-label d-block quiz-title">How long do your typical jobs run?</label>
+                        <div class="form-check custom-check">
+                          <input class="form-check-input" type="radio" name="questionJobLength" id="jobShort" value="short">
+                          <label class="form-check-label" for="jobShort">Short (minutes to a few hours)</label>
+                        </div>
+                        <div class="form-check custom-check">
+                          <input class="form-check-input" type="radio" name="questionJobLength" id="jobMedium" value="medium">
+                          <label class="form-check-label" for="jobMedium">Medium (~ half a day)</label>
+                        </div>
+                        <div class="form-check custom-check">
+                          <input class="form-check-input" type="radio" name="questionJobLength" id="jobLong" value="long">
+                          <label class="form-check-label" for="jobLong">Long (multi-day or continuous)</label>
+                        </div>
+                        <!-- Not sure -->
+                        <div class="form-check custom-check">
+                          <input class="form-check-input" type="radio" name="questionJobLength" id="jobUnknown" value="dontknow">
+                          <label class="form-check-label" for="jobUnknown">Not sure</label>
+                        </div>
+                      </div>
+                      <button type="button" class="btn btn-secondary me-2" id="btnPrev3">Back</button>
+                      <button type="button" class="btn btn-primary" id="btnNext3">Next</button>
+                    </div>
+
+                    <!-- STEP 4: GPU USAGE -->
+                    <div id="quizStep4" style="display: none;">
+                      <div class="mb-3">
+                        <label class="form-label d-block quiz-title">Do you plan to utilize GPUs (e.g., for deep learning)?</label>
+                        <div class="form-check custom-check">
+                          <input class="form-check-input" type="radio" name="questionGpuNeeded" id="gpuYes" value="yes">
+                          <label class="form-check-label" for="gpuYes">Yes, GPU acceleration needed</label>
+                        </div>
+                        <div class="form-check custom-check">
+                          <input class="form-check-input" type="radio" name="questionGpuNeeded" id="gpuNo" value="no">
+                          <label class="form-check-label" for="gpuNo">No, CPU-only is sufficient</label>
+                        </div>
+                        <!-- Not sure -->
+                        <div class="form-check custom-check">
+                          <input class="form-check-input" type="radio" name="questionGpuNeeded" id="gpuUnknown" value="dontknow">
+                          <label class="form-check-label" for="gpuUnknown">Not sure</label>
+                        </div>
+                      </div>
+                      <button type="button" class="btn btn-secondary me-2" id="btnPrev4">Back</button>
+                      <button type="button" class="btn btn-primary" id="btnNext4">Next</button>
+                    </div>
+
+                    <!-- STEP 5: PARALLELISM -->
+                    <div id="quizStep5" style="display: none;">
+                      <div class="mb-3">
+                        <label class="form-label d-block quiz-title">Will you run tasks in parallel across multiple machines?</label>
+                        <div class="form-check custom-check">
+                          <input class="form-check-input" type="radio" name="questionConcurrency" id="concYes" value="yes">
+                          <label class="form-check-label" for="concYes">Yes (MPI/distributed tasks or multiple concurrent jobs)</label>
+                        </div>
+                        <div class="form-check custom-check">
+                          <input class="form-check-input" type="radio" name="questionConcurrency" id="concNo" value="no">
+                          <label class="form-check-label" for="concNo">No, just a single machine</label>
+                        </div>
+                        <!-- Not sure -->
+                        <div class="form-check custom-check">
+                          <input class="form-check-input" type="radio" name="questionConcurrency" id="concUnknown" value="dontknow">
+                          <label class="form-check-label" for="concUnknown">Not sure</label>
+                        </div>
+                      </div>
+                      <button type="button" class="btn btn-secondary me-2" id="btnPrev5">Back</button>
+                      <button type="button" class="btn btn-primary" id="btnNext5">Next</button>
+                    </div>
+
+                    <!-- STEP 6: REAL-TIME OR BATCH -->
+                    <div id="quizStep6" style="display: none;">
+                      <div class="mb-3">
+                        <label class="form-label d-block quiz-title">Do you need interactive or near real-time processing?</label>
+                        <div class="form-check custom-check">
+                          <input class="form-check-input" type="radio" name="questionRealTime" id="realTimeYes" value="yes">
+                          <label class="form-check-label" for="realTimeYes">Yes, quick turnarounds or interactive sessions</label>
+                        </div>
+                        <div class="form-check custom-check">
+                          <input class="form-check-input" type="radio" name="questionRealTime" id="realTimeNo" value="no">
+                          <label class="form-check-label" for="realTimeNo">No, offline/batch processing is fine</label>
+                        </div>
+                        <!-- Not sure -->
+                        <div class="form-check custom-check">
+                          <input class="form-check-input" type="radio" name="questionRealTime" id="realTimeUnknown" value="dontknow">
+                          <label class="form-check-label" for="realTimeUnknown">Not sure</label>
+                        </div>
+                      </div>
+                      <button type="button" class="btn btn-secondary me-2" id="btnPrev6">Back</button>
+                      <button type="button" class="btn btn-primary" id="btnNext6">Next</button>
+                    </div>
+
+                    <!-- STEP 7: CONCURRENT USERS -->
+                    <div id="quizStep7" style="display: none;">
+                      <div class="mb-3">
+                        <label class="form-label d-block quiz-title">How many users will be using this HPC at the same time?</label>
+                        <div class="form-check custom-check">
+                          <input class="form-check-input" type="radio" name="questionConcurrentUsers" id="oneUser" value="1">
+                          <label class="form-check-label" for="oneUser">Just me (1 user)</label>
+                        </div>
+                        <div class="form-check custom-check">
+                          <input class="form-check-input" type="radio" name="questionConcurrentUsers" id="smallTeam" value="small">
+                          <label class="form-check-label" for="smallTeam">Small team (2-5 people)</label>
+                        </div>
+                        <div class="form-check custom-check">
+                          <input class="form-check-input" type="radio" name="questionConcurrentUsers" id="largeTeam" value="large">
+                          <label class="form-check-label" for="largeTeam">Large group (6+ people)</label>
+                        </div>
+                      </div>
+                      <button type="button" class="btn btn-secondary me-2" id="btnPrev7">Back</button>
+                      <button type="button" class="btn btn-primary" id="btnNext7">Next</button>
+                    </div>
+
+                    <!-- STEP 8: DAILY USAGE HOURS -->
+                    <div id="quizStep8" style="display: none;">
+                      <div class="mb-3">
+                        <label class="form-label fw-bold" for="quizComputeHours">Approx. how many hours per day do you plan to run tasks?</label>
+                        <input type="number" class="form-control" id="quizComputeHours" placeholder="e.g. 8" min="0">
+                      </div>
+                      <button type="button" class="btn btn-secondary me-2" id="btnPrev8">Back</button>
+                      <button type="button" class="btn btn-primary" id="btnShowSummary">Next</button>
+                    </div>
+
+                    <!-- FINAL STEP: SUMMARY & ACTION -->
+                    <div id="quizSummary" style="display: none;">
+                      <h5 class="fw-bold mb-2">Recommended HPC Configuration</h5>
+                      <p id="quizSummaryText" class="mb-3" style="white-space: pre-line;">
+                        <!-- We'll fill this text via JavaScript -->
+                      </p>
+                      <button type="button" class="btn btn-secondary me-2" id="btnCancelQuiz">Cancel</button>
+                      <button type="button" class="btn btn-primary" id="applyQuizBtn">Apply Settings</button>
+                    </div>
+
+                  </form>
+                </div>
+                <div class="item-title" style="margin-bottom: 5px;">
+                  <div>
+                    <h3>Configure your compute requirements</h3>
+                  </div>
+                </div>
+              </div>
+
+              <!-- vCPUs -->
+              <div class="accordion-element">
+                <div class="item-description">
+                  <h4>Number of vCPUs</h4>
+                  <a href="#" class="d-inline-block" data-bs-toggle="tooltip" data-bs-placement="right"
+                    data-bs-title="vCPUs (virtual CPUs) represent how many CPU cores your tasks can run on simultaneously. More vCPUs can speed up processing, but also increase cost.">
+                    <i class="bi bi-info-circle"></i>
+                  </a>
+                </div>
+                <div style="display: flex; align-items: center;">
+                  <input type="range" step="2" class="form-range" value="4" id="vCPURange" min="4" max="128">
+                  <span class="ms-3 range-text" id="vCPUValue">4 vCPUs</span>
+                </div>
+              </div>
+              
+              <!-- Memory -->
+              <div class="accordion-element">
+                <div class="item-description">
+                  <h4>Amount of memory</h4>
+                  <a href="#" class="d-inline-block" data-bs-toggle="tooltip" data-bs-placement="right"
+                    data-bs-title="Memory (RAM) is used to store data while it's being processed. Larger computations and datasets generally need more memory.">
+                    <i class="bi bi-info-circle"></i>
+                  </a>
+                </div>
+                <div style="display: flex; align-items: center;">
+                  <input type="range" step="2" class="form-range" value="8" id="memoryRange" min="8" max="384">
+                  <span class="ms-3 range-text" id="memoryValue">8 GiB</span>
+                </div>
+              </div>
+
+              <!-- GPUs -->
+              <div class="accordion-element">
+                <div class="item-description">
+                  <h4>Number of GPUs</h4>
+                  <a href="#" class="d-inline-block" data-bs-toggle="tooltip" data-bs-placement="right"
+                    data-bs-title="GPUs (Graphics Processing Units) can significantly accelerate specialized tasks (like deep learning). Only useful if your software supports GPU acceleration.">
+                    <i class="bi bi-info-circle"></i>
+                  </a>
+                </div>
+                <div style="display: flex; align-items: center;">
+                  <input type="range" step="1" class="form-range" id="gpuRange" value="0" min="0" max="8">
+                  <span class="ms-3 range-text" id="gpuValue">0 GPUs</span>
+                </div>
+              </div>
+
+              <!-- Number of Machines -->
+              <div class="accordion-element">
+                <div class="input-group mb-3">
+                  <span class="input-group-text">
+                    Number of Machines*
+                    <a href="#" class="d-inline-block" data-bs-toggle="tooltip" data-bs-placement="right"
+                      data-bs-title="This is how many HPC nodes (servers) you plan to run. Each node has its own CPU, memory, and optional GPUs. Increasing nodes can speed up parallel tasks.">
+                      <i class="bi bi-info-circle"></i>
+                    </a>
+                  </span>
+                  <input type="number" class="form-control" id="machinesInput" placeholder="0">
+                </div>
+              </div>
+
+              <!-- Compute usage time -->
+              <div class="accordion-element">
+                <div class="input-group mb-3">
+                  <span class="input-group-text">
+                    Total compute usage time*
+                    <a href="#" class="d-inline-block" data-bs-toggle="tooltip" data-bs-placement="right"
+                      data-bs-title="Estimate how many hours the resources (CPUs/GPUs) will be actively running. For instance, 2 machines running 8 hours per day for 30 days = 480 machine-hours.">
+                      <i class="bi bi-info-circle"></i>
+                    </a>
+                  </span>
+                  <input type="number" class="form-control" id="computeHoursInput" placeholder="0">
+                  <span class="input-group-text">hours</span>
+                  <select class="form-select" id="computeHoursSelect">
+                    <option value="per day" selected>per day</option>
+                    <option value="per week">per week</option>
+                    <option value="per month">per month</option>
+                    <option value="in total">in total</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- DATA MANAGEMENT -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingDataManagement">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseDataManagement" aria-expanded="false" aria-controls="collapseDataManagement">
+              Data management
+            </button>
+          </h2>
+          <div id="collapseDataManagement" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <div class="accordion-element">
+                <div class="item-description">
+                  <h4>Do you require help from data stewards?</h4>
+                  <a href="#" class="d-inline-block" data-bs-toggle="tooltip" data-bs-placement="right"
+                    data-bs-title="If you need specialized assistance with data organization, cleaning, or compliance, estimate the number of hours of support needed.">
+                    <i class="bi bi-info-circle"></i>
+                  </a>
+                </div>
+                <div class="input-group mb-3 mt-3">
+                  <input type="number" class="form-control" id="dataMgmtHoursInput" placeholder="0">
+                  <span class="input-group-text">hours</span>
+                  <select class="form-select" id="dataMgmtHoursSelect">
+                    <option value="per day" selected>per day</option>
+                    <option value="per week">per week</option>
+                    <option value="per month">per month</option>
+                    <option value="in total">in total</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> <!-- /accordion -->
+    </div>
+
+    <!-- RIGHT COLUMN (COST DETAILS) -->
+    <div style="flex: 0 0 380px; min-height: inherit;">
+      <div class="cost shadow-sm">
+        <div class="cost-details">
+          <div class="cost-header">
+            <i class="bi bi-filetype-pdf"></i>
+            <span class="print-txt" id="print-btn">Print to pdf</span>
+          </div>
+          <div class="cost-details-title">
+            <h2>Cost details</h2>
+            <select class="form-select" id="currencySelect" aria-label="Default select example" style="max-width: 100px;">
+              <option value="DKK" selected>DKK</option>
+              <option value="EUR">EUR</option>
+            </select>
+          </div>
+          <hr style="margin: 16px 24px 5px;">
+          <div class="price-elements">
+            <!-- STORAGE COST DISPLAY -->
+            <div class="price-element">
+              <div class="price-content">
+                <div class="price-text">Storage</div>
+                <div class="price-value" id="storageCostDisplay">0 DKK</div>
+              </div>
+            </div>
+
+            <!-- FRONT-END COST DISPLAY (new) -->
+            <div class="price-element">
+              <div class="price-content">
+                <div class="price-text">Front-end</div>
+                <div class="price-value" id="frontEndCostDisplay">0 DKK</div>
+              </div>
+            </div>
+
+            <!-- COMPUTE COST DISPLAY -->
+            <div class="price-element">
+              <div class="price-content">
+                <div class="price-text">Compute</div>
+                <div class="price-value" id="computeCostDisplay">0 DKK</div>
+              </div>
+            </div>
+
+            <!-- DATA MANAGEMENT COST DISPLAY -->
+            <div class="price-element">
+              <div class="price-content">
+                <div class="price-text">Data management</div>
+                <div class="price-value" id="dataMgmtCostDisplay">0 DKK</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- TOTAL COST DISPLAY -->
+          <div class="cost-total">
+            <div class="cost-total-text">
+              <div class="price-text">Estimated cost</div>
+              <div class="price-value" id="totalCostDisplay">0 DKK</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> <!-- /Right column -->
+  </div>
+</div>
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    // Initialize Bootstrap tooltips
+    const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+    [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
+
+    document.getElementById('print-btn').addEventListener('click', () => {
+      window.print();
+    });
+
+    // Grab references
+    const durationRange = document.getElementById("durationRange");
+    const durationValue = document.getElementById("durationValue");
+
+    const storageInput = document.getElementById("storageInput");
+    const backupSwitch = document.getElementById("backupSwitch");
+
+    const frontEndSelect = document.getElementById("frontEndSelect");
+    const frontEndSelectLabel = document.getElementById("frontEndSelectLabel");
+
+    const vCPURange = document.getElementById("vCPURange");
+    const vCPUValue = document.getElementById("vCPUValue");
+
+    const memoryRange = document.getElementById("memoryRange");
+    const memoryValue = document.getElementById("memoryValue");
+
+    const gpuRange = document.getElementById("gpuRange");
+    const gpuValue = document.getElementById("gpuValue");
+
+    const machinesInput = document.getElementById("machinesInput");
+    const computeHoursInput = document.getElementById("computeHoursInput");
+    const computeHoursSelect = document.getElementById("computeHoursSelect");
+
+    const dataMgmtHoursInput = document.getElementById("dataMgmtHoursInput");
+    const dataMgmtHoursSelect = document.getElementById("dataMgmtHoursSelect");
+
+    const storageCostDisplay = document.getElementById("storageCostDisplay");
+    const frontEndCostDisplay = document.getElementById("frontEndCostDisplay"); // NEW
+    const computeCostDisplay = document.getElementById("computeCostDisplay");
+    const dataMgmtCostDisplay = document.getElementById("dataMgmtCostDisplay");
+    const totalCostDisplay = document.getElementById("totalCostDisplay");
+
+    const currencySelect = document.getElementById("currencySelect");
+
+    // Constants
+    const DKK_TO_EUR = 1 / 7.45;  // approximate
+
+    // 1) Convert months to “X years Y months” if needed
+    function formatDuration(mVal) {
+      let m = parseInt(mVal, 10) || 0;
+      if (m < 12) {
+        return `${m} month${m === 1 ? '' : 's'}`;
+      }
+      let years = Math.floor(m / 12);
+      let months = m % 12;
+      let yearText = years === 1 ? "1 year" : `${years} years`;
+      let monthText = months === 1 ? "1 month" : `${months} months`;
+      if (months === 0) {
+        return yearText;
+      }
+      return `${yearText} ${monthText}`;
+    }
+
+    // 2) Format a numeric amount with commas and 2 decimals
+    function formatNumber(num) {
+      return Number(num).toLocaleString("en-US", {
+        minimumFractionDigits: 2,
+        maximumFractionDigits: 2
+      });
+    }
+
+    // 3) Convert cost in DKK to the chosen currency
+    function formatCurrency(dkkAmount) {
+      // Decide which currency is selected
+      const currency = currencySelect.value;  // "DKK" or "EUR"
+
+      // Convert from DKK to EUR if needed
+      let amount = dkkAmount;
+      if (currency === "EUR") {
+        amount *= DKK_TO_EUR;
+      }
+
+      // Convert to a nice string with commas and 2 decimals
+      const formattedNumber = Number(amount).toLocaleString("en-US", {
+        minimumFractionDigits: 2,
+        maximumFractionDigits: 2
+      });
+
+      // Append the correct currency label
+      return currency === "DKK" 
+        ? `kr.${formattedNumber}`
+        : `€${formattedNumber}`;
+    }
+
+    // 4) Convert user “hours” input to total hours based on day/week/month/total
+    function computeTotalHours(userHours, periodSelect, durationMonths) {
+      let hours = parseFloat(userHours) || 0;
+      let months = parseFloat(durationMonths) || 0;
+
+      switch (periodSelect) {
+        case "per day":
+          return months * 31 * hours;
+        case "per week":
+          return months * 4.3 * hours;
+        case "per month":
+          return months * hours;
+        case "in total":
+          return hours;
+      }
+      return 0;
+    }
+
+    // 5) Update all cost displays
+    function updateAllCosts() {
+      // Project duration in months
+      const durationMonths = parseInt(durationRange.value, 10) || 0;
+
+      // ----- STORAGE COST -----
+      let storageTiB = parseFloat(storageInput.value) || 0;
+      let baseStorageCost = storageTiB * (250 / 12) * durationMonths;
+      // If backup is checked, cost is triple
+      let storageCost = backupSwitch.checked ? baseStorageCost * 3 : baseStorageCost;
+
+      // ----- FRONT-END COST (NEW) -----
+      // default = (2 CPU * 0.12 + 4 GiB * (0.12/8)) * 24h * 31d * months
+      // medium = (4 CPU * 0.12 + 8 GiB * (0.12/8)) * 24h * 31d * months
+      // large = (8 CPU * 0.12 + 16 GiB * (0.12/8)) * 24h * 31d * months
+      let frontEndType = frontEndSelect.value;
+      let frontEndCost = 0;
+      let hoursPerMonth = 24 * 31; // continuous usage each month
+
+      if (frontEndType === "default-frontend") {
+        frontEndCost =
+          (2 * 0.12 * hoursPerMonth * durationMonths) +
+          (4 * (0.12 / 8) * hoursPerMonth * durationMonths);
+          frontEndSelectLabel.textContent = "Default";
+      } else if (frontEndType === "medium-frontend") {
+        frontEndCost =
+          (4 * 0.12 * hoursPerMonth * durationMonths) +
+          (8 * (0.12 / 8) * hoursPerMonth * durationMonths);
+          frontEndSelectLabel.textContent = "Medium";
+      } else if (frontEndType === "large-frontend") {
+        frontEndCost =
+          (8 * 0.12 * hoursPerMonth * durationMonths) +
+          (16 * (0.12 / 8) * hoursPerMonth * durationMonths);
+          frontEndSelectLabel.textContent = "Large";
+      }
+
+      // ----- COMPUTE COST -----
+      // ((vCPUs*0.12) + (memory*(0.12/8)) + (GPUs*6)) * machines * totalHours
+      let vcpus = parseFloat(vCPURange.value) || 0;
+      let mem = parseFloat(memoryRange.value) || 0;
+      let gpus = parseFloat(gpuRange.value) || 0;
+      let machines = parseFloat(machinesInput.value) || 0;
+      let totalComputeHours = computeTotalHours(computeHoursInput.value, computeHoursSelect.value, durationMonths);
+
+      let computeUnitCost = (vcpus * 0.12) + (mem * (0.12 / 8)) + (gpus * 6);
+      let computeCost = computeUnitCost * machines * totalComputeHours;
+
+      // ----- DATA MANAGEMENT COST -----
+      // totalHours * (600000 / (160.33 * 12))
+      let dataMgmtTotalHours = computeTotalHours(dataMgmtHoursInput.value, dataMgmtHoursSelect.value, durationMonths);
+      let dataMgmtRate = 600000 / (160.33 * 12);
+      let dataMgmtCost = dataMgmtTotalHours * dataMgmtRate;
+
+      // ----- SUM ALL COSTS IN DKK -----
+      let totalCostDKK = storageCost + frontEndCost + computeCost + dataMgmtCost;
+
+      // Update the individual displays in the correct currency
+      storageCostDisplay.textContent = formatCurrency(storageCost);
+      frontEndCostDisplay.textContent = formatCurrency(frontEndCost);
+      computeCostDisplay.textContent = formatCurrency(computeCost);
+      dataMgmtCostDisplay.textContent = formatCurrency(dataMgmtCost);
+      totalCostDisplay.textContent = formatCurrency(totalCostDKK);
+    }
+
+    // 6) Set up event listeners
+
+    // Project duration
+    durationRange.addEventListener("input", () => {
+      durationValue.textContent = formatDuration(durationRange.value);
+      updateAllCosts();
+    });
+
+    // Storage + Backup
+    storageInput.addEventListener("input", updateAllCosts);
+    backupSwitch.addEventListener("change", updateAllCosts);
+
+    // Front-end selection (NEW)
+    frontEndSelect.addEventListener("change", updateAllCosts);
+
+    // Compute Sliders
+    vCPURange.addEventListener("input", () => {
+      vCPUValue.textContent = `${vCPURange.value} vCPUs`;
+      updateAllCosts();
+    });
+    memoryRange.addEventListener("input", () => {
+      memoryValue.textContent = `${memoryRange.value} GiB`;
+      updateAllCosts();
+    });
+    gpuRange.addEventListener("input", () => {
+      gpuValue.textContent = `${gpuRange.value} GPUs`;
+      updateAllCosts();
+    });
+
+    // Machines, Compute hours & dropdown
+    machinesInput.addEventListener("input", updateAllCosts);
+    computeHoursInput.addEventListener("input", updateAllCosts);
+    computeHoursSelect.addEventListener("change", updateAllCosts);
+
+    // Data management
+    dataMgmtHoursInput.addEventListener("input", updateAllCosts);
+    dataMgmtHoursSelect.addEventListener("change", updateAllCosts);
+
+    // Currency switch
+    currencySelect.addEventListener("change", updateAllCosts);
+
+    // Initialize everything on load
+    updateAllCosts();
+
+    ////////////////////////////////////////////////////////////////////////////////
+    // MULTI-STEP QUIZ WIZARD
+    ////////////////////////////////////////////////////////////////////////////////
+    (function() {
+      // We store user answers in a small object
+      let answers = {
+        projectType: null,      // question 1
+        dataSize: null,         // question 2
+        jobLength: null,        // question 3
+        gpuNeeded: null,        // question 4
+        concurrency: null,      // question 5
+        realTimeNeeded: null,   // question 6
+        concurrentUsers: null,  // question 7
+        dailyHours: 0           // question 8
+      };
+
+      // STEP references
+      const step1 = document.getElementById("quizStep1");
+      const step2 = document.getElementById("quizStep2");
+      const step3 = document.getElementById("quizStep3");
+      const step4 = document.getElementById("quizStep4");
+      const step5 = document.getElementById("quizStep5");
+      const step6 = document.getElementById("quizStep6");
+      const step7 = document.getElementById("quizStep7");
+      const step8 = document.getElementById("quizStep8");
+      const stepSummary = document.getElementById("quizSummary");
+
+      // Buttons
+      const btnNext1   = document.getElementById("btnNext1");
+      const btnNext2   = document.getElementById("btnNext2");
+      const btnPrev2   = document.getElementById("btnPrev2");
+      const btnNext3   = document.getElementById("btnNext3");
+      const btnPrev3   = document.getElementById("btnPrev3");
+      const btnNext4   = document.getElementById("btnNext4");
+      const btnPrev4   = document.getElementById("btnPrev4");
+      const btnNext5   = document.getElementById("btnNext5");
+      const btnPrev5   = document.getElementById("btnPrev5");
+      const btnNext6   = document.getElementById("btnNext6");
+      const btnPrev6   = document.getElementById("btnPrev6");
+      const btnNext7   = document.getElementById("btnNext7");
+      const btnPrev7   = document.getElementById("btnPrev7");
+      const btnNext8   = document.getElementById("btnShowSummary");
+      const btnPrev8   = document.getElementById("btnPrev8");
+
+      const quizSummaryText = document.getElementById("quizSummaryText");
+      const btnCancelQuiz   = document.getElementById("btnCancelQuiz");
+      const btnApplyQuiz    = document.getElementById("applyQuizBtn");
+
+      const quizComputeHours = document.getElementById("quizComputeHours");
+
+      // A helper to get a radio value by name
+      function getRadioValue(name) {
+        const radios = document.getElementsByName(name);
+        for (let i = 0; i < radios.length; i++) {
+          if (radios[i].checked) return radios[i].value;
+        }
+        return null;
+      }
+
+      // A helper to show/hide steps
+      function showStep(current, next) {
+        current.style.display = "none";
+        next.style.display    = "block";
+      }
+
+      //////////////////////////////////////////////////////////////////////////
+      // STEP-BY-STEP NAVIGATION
+      //////////////////////////////////////////////////////////////////////////
+
+      // Step 1 -> Step 2
+      btnNext1.addEventListener("click", function() {
+        const val = getRadioValue("questionProjectType");
+        if (!val) {
+          alert("Please select an answer to continue.");
+          return;
+        }
+        answers.projectType = val;
+        showStep(step1, step2);
+      });
+
+      // Step 2 -> Next or Back
+      btnNext2.addEventListener("click", function() {
+        const val = getRadioValue("questionDataSize");
+        if (!val) {
+          alert("Please select an answer to continue.");
+          return;
+        }
+        // If "dontknow", we default to "small"
+        answers.dataSize = (val === "dontknow") ? "small" : val;
+        showStep(step2, step3);
+      });
+      btnPrev2.addEventListener("click", function() {
+        showStep(step2, step1);
+      });
+
+      // Step 3 -> Next or Back
+      btnNext3.addEventListener("click", function() {
+        const val = getRadioValue("questionJobLength");
+        if (!val) {
+          alert("Please select an answer to continue.");
+          return;
+        }
+        // If "dontknow", default to "short"
+        answers.jobLength = (val === "dontknow") ? "short" : val;
+        showStep(step3, step4);
+      });
+      btnPrev3.addEventListener("click", function() {
+        showStep(step3, step2);
+      });
+
+      // Step 4 -> Next or Back
+      btnNext4.addEventListener("click", function() {
+        const val = getRadioValue("questionGpuNeeded");
+        if (!val) {
+          alert("Please select an answer to continue.");
+          return;
+        }
+        // If "dontknow", default to "no" (CPU-only)
+        answers.gpuNeeded = (val === "dontknow") ? "no" : val;
+        showStep(step4, step5);
+      });
+      btnPrev4.addEventListener("click", function() {
+        showStep(step4, step3);
+      });
+
+      // Step 5 -> Next or Back
+      btnNext5.addEventListener("click", function() {
+        const val = getRadioValue("questionConcurrency");
+        if (!val) {
+          alert("Please select an answer to continue.");
+          return;
+        }
+        // If "dontknow", default to "no" (single machine)
+        answers.concurrency = (val === "dontknow") ? "no" : val;
+        showStep(step5, step6);
+      });
+      btnPrev5.addEventListener("click", function() {
+        showStep(step5, step4);
+      });
+
+      // Step 6 -> Next or Back
+      btnNext6.addEventListener("click", function() {
+        const val = getRadioValue("questionRealTime");
+        if (!val) {
+          alert("Please select an answer to continue.");
+          return;
+        }
+        // If "dontknow", default to "yes" (interactive)
+        answers.realTimeNeeded = (val === "dontknow") ? "yes" : val;
+        showStep(step6, step7);
+      });
+      btnPrev6.addEventListener("click", function() {
+        showStep(step6, step5);
+      });
+
+      // Step 7 -> Next or Back
+      btnNext7.addEventListener("click", function() {
+        const val = getRadioValue("questionConcurrentUsers");
+        if (!val) {
+          alert("Please select an answer to continue.");
+          return;
+        }
+        answers.concurrentUsers = val;
+        showStep(step7, step8);
+      });
+      btnPrev7.addEventListener("click", function() {
+        showStep(step7, step6);
+      });
+
+      // Step 8 -> Show Summary or Back
+      btnNext8.addEventListener("click", function() {
+        // daily hours
+        const dh = parseFloat(quizComputeHours.value) || 0;
+        answers.dailyHours = dh;
+
+        // Move to summary
+        showStep(step8, stepSummary);
+
+        // Now compute recommended HPC config so we can display it
+        const { recommendedVCPUs, recommendedMemoryGiB, recommendedGPUs, recommendedMachines } 
+          = computeRecommendation(answers);
+
+        // Fill the summary text
+        const summary = 
+          `For your project, we estimate:\n\n` +
+          `• vCPUs: ${recommendedVCPUs}\n` +
+          `• Memory (GiB): ${recommendedMemoryGiB}\n` +
+          `• GPUs: ${recommendedGPUs}\n` +
+          `• Number of machines: ${recommendedMachines}\n` +
+          `• Daily usage hours: ${dh}\n\n` +
+          `Click "Apply Settings" to use these values, or "Cancel" to discard.`;
+
+        quizSummaryText.textContent = summary;
+      });
+      btnPrev8.addEventListener("click", function() {
+        showStep(step8, step7);
+      });
+
+      // CANCEL
+      btnCancelQuiz.addEventListener("click", function() {
+        resetWizard();
+      });
+
+      // APPLY SETTINGS
+      btnApplyQuiz.addEventListener("click", function() {
+        // Actually set the HPC form
+        const { recommendedVCPUs, recommendedMemoryGiB, recommendedGPUs, recommendedMachines } 
+          = computeRecommendation(answers);
+
+        // 1) daily usage => "per day"
+        computeHoursSelect.value = "per day";
+        computeHoursInput.value  = answers.dailyHours.toString();
+
+        // 2) Sliders/inputs
+        vCPURange.value = recommendedVCPUs;
+        vCPUValue.textContent = `${recommendedVCPUs} vCPUs`;
+
+        memoryRange.value = recommendedMemoryGiB;
+        memoryValue.textContent = `${recommendedMemoryGiB} GiB`;
+
+        gpuRange.value = recommendedGPUs;
+        gpuValue.textContent = `${recommendedGPUs} GPUs`;
+
+        machinesInput.value = recommendedMachines;
+
+        // 3) Trigger cost update
+        updateAllCosts();
+
+        // For convenience, you might also close the dropdown:
+        const quizForm = document.getElementById("quizForm");
+        quizForm.classList.remove("show");
+
+        resetWizard();
+      });
+
+      //////////////////////////////////////////////////////////////////////////
+      // HPC RECOMMENDATION LOGIC
+      //////////////////////////////////////////////////////////////////////////
+      function computeRecommendation(a) {
+        // a = { projectType, dataSize, jobLength, gpuNeeded, concurrency, realTimeNeeded, concurrentUsers, dailyHours }
+        let recommendedVCPUs     = 4;
+        let recommendedMemoryGiB = 8;
+        let recommendedGPUs      = 0;
+        let recommendedMachines  = 1;
+
+        // -- Project type
+        switch (a.projectType) {
+          case "ml-ai":
+            recommendedVCPUs     = 8;
+            recommendedMemoryGiB = 32;
+            break;
+          case "data-analysis":
+            recommendedVCPUs     = 8;
+            recommendedMemoryGiB = 16;
+            break;
+          case "simulations":
+            recommendedVCPUs     = 16;
+            recommendedMemoryGiB = 64;
+            break;
+          case "general":
+            recommendedVCPUs     = 4;
+            recommendedMemoryGiB = 8;
+            break;
+        }
+
+        // -- Data size
+        switch (a.dataSize) {
+          case "medium":
+            recommendedMemoryGiB = Math.max(recommendedMemoryGiB, 16);
+            break;
+          case "large":
+            recommendedMemoryGiB = Math.max(recommendedMemoryGiB, 32);
+            break;
+          case "massive":
+            recommendedMemoryGiB = Math.max(recommendedMemoryGiB, 64);
+            break;
+          // "small" => do nothing
+        }
+
+        // -- Job length
+        if (a.jobLength === "medium") {
+          recommendedVCPUs     = Math.max(recommendedVCPUs, 8);
+          recommendedMemoryGiB = Math.max(recommendedMemoryGiB, 16);
+        } else if (a.jobLength === "long") {
+          recommendedVCPUs     = Math.max(recommendedVCPUs, 16);
+          recommendedMemoryGiB = Math.max(recommendedMemoryGiB, 32);
+        }
+        // "short" => do nothing
+
+        // -- GPU usage
+        if (a.gpuNeeded === "yes") {
+          recommendedGPUs = (a.projectType === "ml-ai") ? 2 : 1;
+        }
+        // "no" => do nothing
+
+        // -- Parallelism
+        if (a.concurrency === "yes") {
+          if (a.projectType === "simulations") {
+            recommendedMachines = 8;
+          } else if (a.projectType === "data-analysis" || a.projectType === "ml-ai") {
+            recommendedMachines = 4;
+          } else {
+            recommendedMachines = 2;
+          }
+        }
+        // "no" => do nothing
+
+        // -- Real-time
+        if (a.realTimeNeeded === "yes") {
+          recommendedVCPUs += 4;
+        }
+        // "no" => do nothing
+
+        // -- Concurrent users
+        if (a.concurrentUsers === "small") {
+          recommendedMachines = Math.max(recommendedMachines, 2);
+          recommendedVCPUs    = Math.max(recommendedVCPUs, 8);
+        } else if (a.concurrentUsers === "large") {
+          recommendedMachines  = Math.max(recommendedMachines, 4);
+          recommendedVCPUs     = Math.max(recommendedVCPUs, 16);
+          recommendedMemoryGiB = Math.max(recommendedMemoryGiB, 32);
+        }
+        // "1" => do nothing
+
+        return { recommendedVCPUs, recommendedMemoryGiB, recommendedGPUs, recommendedMachines };
+      }
+
+      function resetWizard() {
+        // 1) Hide all steps
+        step1.style.display      = "none";
+        step2.style.display      = "none";
+        step3.style.display      = "none";
+        step4.style.display      = "none";
+        step5.style.display      = "none";
+        step6.style.display      = "none";
+        step7.style.display      = "none";
+        step8.style.display      = "none";
+        stepSummary.style.display= "none";
+
+        // 2) Show the first step again
+        step1.style.display = "block";
+
+        // 3) Clear all radio-button selections
+        const radios = quizForm.querySelectorAll('input[type="radio"]');
+        radios.forEach(radio => {
+          radio.checked = false;
+        });
+
+        // 4) Clear daily hours
+        quizComputeHours.value = "";
+
+        // 5) Optionally close the dropdown:
+        //    If you want to close the dropdown after Apply or Cancel, remove the "show" class:
+        quizForm.classList.remove("show");
+
+        // You could also reset your `answers` object if you keep it in a higher scope
+        answers = {
+          projectType: null,     
+          dataSize: null,        
+          jobLength: null,       
+          gpuNeeded: null,       
+          concurrency: null,     
+          realTimeNeeded: null,  
+          concurrentUsers: null, 
+          dailyHours: 0          
+        };
+      }
+
+
+    })();
+
+  });
+
+  
+</script>
+{% endblock %}
