@@ -55,7 +55,7 @@ h1, h2, h3, h4, h5, h6 {
     box-sizing: border-box;
     padding: 0;
     position: sticky;
-    /* top: 65px; */
+    border-radius: 0.375rem;
 }
 .cost-details {
     border-color: #dee2e6;
@@ -239,6 +239,7 @@ hr {
     letter-spacing: 0;
     line-height: 1.25rem;
     padding: 12px 16px;
+    justify-content: space-between;
 }
 .print-txt {
     color: rgb(95, 99, 104);
@@ -315,8 +316,29 @@ hr {
     background-color: white !important;
     text-decoration: underline;
 }
+.pricelist-btn {
+    color: rgb(95, 99, 104);
+    cursor: pointer;
+    border: none;
+    padding: 0;
+    text-decoration: underline;
+    font-size: .875rem;
+    font-weight: 500;
+}
+.pricelist-btn:hover, .pricelist-btn.show, .pricelist-btn:first-child:active {
+    color: rgb(95, 99, 104) !important;
+    background-color: transparent;
+    text-decoration: underline;
+}
 .form-switch {
     padding-left: 0 !important;
+}
+.accordion {
+    border-radius: 0.375rem;
+}
+.price-list-txt {
+    font-size: 15px;
+    font-weight: 400;
 }
 @media print {
     body * {

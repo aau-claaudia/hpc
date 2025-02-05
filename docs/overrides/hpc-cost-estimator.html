@@ -478,8 +478,30 @@
       <div class="cost shadow-sm">
         <div class="cost-details">
           <div class="cost-header">
-            <i class="bi bi-filetype-pdf"></i>
-            <span class="print-txt" id="print-btn">Print to pdf</span>
+            <div class="cost-header-element">
+              <div class="dropdown">
+                <button type="button" class="btn btn-outline-primary dropdown-toggle pricelist-btn" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
+                  Pricelist
+                </button>
+
+                <!-- Multi-step form wizard -->
+                <form class="dropdown-menu p-4 shadow" style="width: 350px;;">
+                  <div>
+                    <label class="quiz-title">Prices</label>
+                    <p class="price-list-txt">• Storage: <span id="storagePrice">kr.250</span>/TB/year</p>
+                    <p class="price-list-txt">• Backup: <span id="backupPrice">kr.500</span>/TB/year</p>
+                    <p class="price-list-txt">• CPU: <span id="cpuPrice">kr.0.12</span>/CPU/hour</p>
+                    <p class="price-list-txt">• Memory: <span id="memoryPrice">kr.0.12</span>/8GiB/hour</p>
+                    <p class="price-list-txt">• GPU: <span id="gpuPrice">kr.6.00</span>/GPU/hour</p>
+                    <p class="price-list-txt">• Data steward: <span id="stewardPrice">kr.311</span>/hour</p>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="cost-header-element">
+              <i class="bi bi-filetype-pdf"></i>
+              <span class="print-txt" id="print-btn">Print to pdf</span>
+            </div>
           </div>
           <div class="cost-details-title">
             <h2>Cost details</h2>
@@ -579,7 +601,16 @@
     const dataMgmtCostDisplay = document.getElementById("dataMgmtCostDisplay");
     const totalCostDisplay = document.getElementById("totalCostDisplay");
 
+    const storagePrice = document.getElementById("storagePrice");
+    const backupPrice = document.getElementById("backupPrice");
+    const cpuPrice = document.getElementById("cpuPrice");
+    const memoryPrice = document.getElementById("memoryPrice");
+    const gpuPrice = document.getElementById("gpuPrice");
+    const stewardPrice = document.getElementById("stewardPrice");
+
     const currencySelect = document.getElementById("currencySelect");
+
+
 
     // Constants
     const DKK_TO_EUR = 1 / 7.45;  // approximate
@@ -711,6 +742,14 @@
       computeCostDisplay.textContent = formatCurrency(computeCost);
       dataMgmtCostDisplay.textContent = formatCurrency(dataMgmtCost);
       totalCostDisplay.textContent = formatCurrency(totalCostDKK);
+
+      storagePrice.textContent = formatCurrency(250);
+      backupPrice.textContent = formatCurrency(500);
+      cpuPrice.textContent = formatCurrency(0.12);
+      memoryPrice.textContent = formatCurrency(0.12);
+      gpuPrice.textContent = formatCurrency(6.00);
+      stewardPrice.textContent = formatCurrency(311);
+
     }
 
     // 6) Set up event listeners
