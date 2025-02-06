@@ -43,13 +43,15 @@
                 <div class="item-description">
                   <h4>What is the expected duration of your project?</h4>
                   <a href="#" class="d-inline-block" data-bs-toggle="tooltip" data-bs-placement="right"
-                    data-bs-title="Use this slider to set the duration you expect your project to last.">
+                    data-bs-title="Use this input to set the duration you expect your project to last.">
                     <i class="bi bi-info-circle"></i>
                   </a>
                 </div>
-                <div class="mt-2" style="display: flex; align-items: center;">
-                  <input type="range" step="1" class="form-range" value="1" id="durationRange" min="1" max="120">
-                  <span class="ms-3 range-text" id="durationValue">1 month</span>
+                <div class="input-group mb-3 mt-3">
+                  <input type="number" class="form-control" id="durationMonthsInput" placeholder="0">
+                  <span class="input-group-text">months</span>
+                  <input type="number" class="form-control" id="durationYearsInput" placeholder="0">
+                  <span class="input-group-text">years</span>
                 </div>
               </div>
             </div>
@@ -69,15 +71,13 @@
               <div class="accordion-element">
                 <div class="item-description">
                   <h4>What is the estimated data storage requirement?</h4>
+                  <a href="#" class="d-inline-block" data-bs-toggle="tooltip" data-bs-placement="right"
+                    data-bs-title="Enter the total storage in TiB you expect to need. If unsure, include a small buffer for growth or intermediate data.">
+                    <i class="bi bi-info-circle"></i>
+                  </a>
                 </div>
                 <div class="input-group mb-3 mt-3">
-                  <span class="input-group-text">
-                    Total amount of storage*
-                    <a href="#" class="d-inline-block" data-bs-toggle="tooltip" data-bs-placement="right"
-                      data-bs-title="Enter the total storage in TiB you expect to need. If unsure, include a small buffer for growth or intermediate data.">
-                      <i class="bi bi-info-circle"></i>
-                    </a>
-                  </span>
+                  <span class="input-group-text">Total amount of storage</span>
                   <input type="number" class="form-control" id="storageInput" aria-label="storage" placeholder="0">
                   <span class="input-group-text">TiB</span>
                 </div>
@@ -357,54 +357,54 @@
 
               <!-- vCPUs -->
               <div class="accordion-element">
-                <div class="item-description">
-                  <h4>Number of vCPUs</h4>
-                  <a href="#" class="d-inline-block" data-bs-toggle="tooltip" data-bs-placement="right"
-                    data-bs-title="vCPUs (virtual CPUs) represent how many CPU cores your tasks can run on simultaneously. More vCPUs can speed up processing, but also increase cost.">
-                    <i class="bi bi-info-circle"></i>
-                  </a>
-                </div>
-                <div style="display: flex; align-items: center;">
-                  <input type="range" step="2" class="form-range" value="4" id="vCPURange" min="4" max="128">
-                  <span class="ms-3 range-text" id="vCPUValue">4 vCPUs</span>
+                <div class="input-group mb-3">
+                  <span class="input-group-text first">
+                    Number of CPUs
+                    <a href="#" class="d-inline-block" data-bs-toggle="tooltip" data-bs-placement="right"
+                      data-bs-title="vCPUs (virtual CPUs) represent how many CPU cores your tasks can run on simultaneously. More vCPUs can speed up processing, but also increase cost.">
+                      <i class="bi bi-info-circle"></i>
+                    </a>
+                  </span>
+                  <input type="number" class="form-control" id="cpuInput" placeholder="0">
+                  <span class="input-group-text">CPUs</span>
                 </div>
               </div>
               
               <!-- Memory -->
               <div class="accordion-element">
-                <div class="item-description">
-                  <h4>Amount of memory</h4>
-                  <a href="#" class="d-inline-block" data-bs-toggle="tooltip" data-bs-placement="right"
-                    data-bs-title="Memory (RAM) is used to store data while it's being processed. Larger computations and datasets generally need more memory.">
-                    <i class="bi bi-info-circle"></i>
-                  </a>
-                </div>
-                <div style="display: flex; align-items: center;">
-                  <input type="range" step="2" class="form-range" value="8" id="memoryRange" min="8" max="384">
-                  <span class="ms-3 range-text" id="memoryValue">8 GiB</span>
+                <div class="input-group mb-3">
+                  <span class="input-group-text first">
+                    Amount of memory
+                    <a href="#" class="d-inline-block" data-bs-toggle="tooltip" data-bs-placement="right"
+                      data-bs-title="Memory (RAM) is used to store data while it's being processed. Larger computations and datasets generally need more memory.">
+                      <i class="bi bi-info-circle"></i>
+                    </a>
+                  </span>
+                  <input type="number" class="form-control" id="memoryInput" placeholder="0">
+                  <span class="input-group-text">GiB</span>
                 </div>
               </div>
 
               <!-- GPUs -->
               <div class="accordion-element">
-                <div class="item-description">
-                  <h4>Number of GPUs</h4>
-                  <a href="#" class="d-inline-block" data-bs-toggle="tooltip" data-bs-placement="right"
-                    data-bs-title="GPUs (Graphics Processing Units) can significantly accelerate specialized tasks (like deep learning). Only useful if your software supports GPU acceleration.">
-                    <i class="bi bi-info-circle"></i>
-                  </a>
-                </div>
-                <div style="display: flex; align-items: center;">
-                  <input type="range" step="1" class="form-range" id="gpuRange" value="0" min="0" max="8">
-                  <span class="ms-3 range-text" id="gpuValue">0 GPUs</span>
+                <div class="input-group mb-3">
+                  <span class="input-group-text first">
+                    Number of GPUs
+                    <a href="#" class="d-inline-block" data-bs-toggle="tooltip" data-bs-placement="right"
+                      data-bs-title="GPUs (Graphics Processing Units) can significantly accelerate specialized tasks (like deep learning). Only useful if your software supports GPU acceleration.">
+                      <i class="bi bi-info-circle"></i>
+                    </a>
+                  </span>
+                  <input type="number" class="form-control" id="gpuInput" placeholder="0">
+                  <span class="input-group-text">GPUs</span>
                 </div>
               </div>
 
               <!-- Number of Machines -->
               <div class="accordion-element">
                 <div class="input-group mb-3">
-                  <span class="input-group-text">
-                    Number of Machines*
+                  <span class="input-group-text first">
+                    Number of Machines
                     <a href="#" class="d-inline-block" data-bs-toggle="tooltip" data-bs-placement="right"
                       data-bs-title="This is how many HPC nodes (servers) you plan to run. Each node has its own CPU, memory, and optional GPUs. Increasing nodes can speed up parallel tasks.">
                       <i class="bi bi-info-circle"></i>
@@ -417,8 +417,8 @@
               <!-- Compute usage time -->
               <div class="accordion-element">
                 <div class="input-group mb-3">
-                  <span class="input-group-text">
-                    Total compute usage time*
+                  <span class="input-group-text first">
+                    Total compute usage time
                     <a href="#" class="d-inline-block" data-bs-toggle="tooltip" data-bs-placement="right"
                       data-bs-title="Estimate how many hours the resources (CPUs/GPUs) will be actively running. For instance, 2 machines running 8 hours per day for 30 days = 480 machine-hours.">
                       <i class="bi bi-info-circle"></i>
@@ -570,8 +570,8 @@
     });
 
     // Grab references
-    const durationRange = document.getElementById("durationRange");
-    const durationValue = document.getElementById("durationValue");
+    const durationMonthsInput = document.getElementById("durationMonthsInput");
+    const durationYearsInput = document.getElementById("durationYearsInput");
 
     const storageInput = document.getElementById("storageInput");
     const backupSwitch = document.getElementById("backupSwitch");
@@ -579,14 +579,9 @@
     const frontEndSelect = document.getElementById("frontEndSelect");
     const frontEndSelectLabel = document.getElementById("frontEndSelectLabel");
 
-    const vCPURange = document.getElementById("vCPURange");
-    const vCPUValue = document.getElementById("vCPUValue");
-
-    const memoryRange = document.getElementById("memoryRange");
-    const memoryValue = document.getElementById("memoryValue");
-
-    const gpuRange = document.getElementById("gpuRange");
-    const gpuValue = document.getElementById("gpuValue");
+    const cpuInput = document.getElementById("cpuInput");
+    const memoryInput = document.getElementById("memoryInput");
+    const gpuInput = document.getElementById("gpuInput");
 
     const machinesInput = document.getElementById("machinesInput");
     const computeHoursInput = document.getElementById("computeHoursInput");
@@ -615,23 +610,7 @@
     // Constants
     const DKK_TO_EUR = 1 / 7.45;  // approximate
 
-    // 1) Convert months to “X years Y months” if needed
-    function formatDuration(mVal) {
-      let m = parseInt(mVal, 10) || 0;
-      if (m < 12) {
-        return `${m} month${m === 1 ? '' : 's'}`;
-      }
-      let years = Math.floor(m / 12);
-      let months = m % 12;
-      let yearText = years === 1 ? "1 year" : `${years} years`;
-      let monthText = months === 1 ? "1 month" : `${months} months`;
-      if (months === 0) {
-        return yearText;
-      }
-      return `${yearText} ${monthText}`;
-    }
-
-    // 2) Format a numeric amount with commas and 2 decimals
+    // Format a numeric amount with commas and 2 decimals
     function formatNumber(num) {
       return Number(num).toLocaleString("en-US", {
         minimumFractionDigits: 2,
@@ -639,7 +618,7 @@
       });
     }
 
-    // 3) Convert cost in DKK to the chosen currency
+    // Convert cost in DKK to the chosen currency
     function formatCurrency(dkkAmount) {
       // Decide which currency is selected
       const currency = currencySelect.value;  // "DKK" or "EUR"
@@ -662,7 +641,7 @@
         : `€${formattedNumber}`;
     }
 
-    // 4) Convert user “hours” input to total hours based on day/week/month/total
+    // Convert user “hours” input to total hours based on day/week/month/total
     function computeTotalHours(userHours, periodSelect, durationMonths) {
       let hours = parseFloat(userHours) || 0;
       let months = parseFloat(durationMonths) || 0;
@@ -680,10 +659,13 @@
       return 0;
     }
 
-    // 5) Update all cost displays
+    // Update all cost displays
     function updateAllCosts() {
       // Project duration in months
-      const durationMonths = parseInt(durationRange.value, 10) || 0;
+      let durMonths = parseFloat(durationMonthsInput.value) || 0;
+      let durYears = parseFloat(durationYearsInput.value) || 0;
+
+      const durationMonths = durMonths + (durYears*12);
 
       // ----- STORAGE COST -----
       let storageTiB = parseFloat(storageInput.value) || 0;
@@ -718,9 +700,9 @@
 
       // ----- COMPUTE COST -----
       // ((vCPUs*0.12) + (memory*(0.12/8)) + (GPUs*6)) * machines * totalHours
-      let vcpus = parseFloat(vCPURange.value) || 0;
-      let mem = parseFloat(memoryRange.value) || 0;
-      let gpus = parseFloat(gpuRange.value) || 0;
+      let vcpus = parseFloat(cpuInput.value) || 0;
+      let mem = parseFloat(memoryInput.value) || 0;
+      let gpus = parseFloat(gpuInput.value) || 0;
       let machines = parseFloat(machinesInput.value) || 0;
       let totalComputeHours = computeTotalHours(computeHoursInput.value, computeHoursSelect.value, durationMonths);
 
@@ -755,10 +737,8 @@
     // 6) Set up event listeners
 
     // Project duration
-    durationRange.addEventListener("input", () => {
-      durationValue.textContent = formatDuration(durationRange.value);
-      updateAllCosts();
-    });
+    durationMonthsInput.addEventListener("input", updateAllCosts);
+    durationYearsInput.addEventListener("input", updateAllCosts);
 
     // Storage + Backup
     storageInput.addEventListener("input", updateAllCosts);
@@ -768,18 +748,9 @@
     frontEndSelect.addEventListener("change", updateAllCosts);
 
     // Compute Sliders
-    vCPURange.addEventListener("input", () => {
-      vCPUValue.textContent = `${vCPURange.value} vCPUs`;
-      updateAllCosts();
-    });
-    memoryRange.addEventListener("input", () => {
-      memoryValue.textContent = `${memoryRange.value} GiB`;
-      updateAllCosts();
-    });
-    gpuRange.addEventListener("input", () => {
-      gpuValue.textContent = `${gpuRange.value} GPUs`;
-      updateAllCosts();
-    });
+    cpuInput.addEventListener("input", updateAllCosts);
+    memoryInput.addEventListener("input", updateAllCosts);
+    gpuInput.addEventListener("input", updateAllCosts);
 
     // Machines, Compute hours & dropdown
     machinesInput.addEventListener("input", updateAllCosts);
@@ -1009,15 +980,10 @@
         computeHoursSelect.value = "per day";
         computeHoursInput.value  = answers.dailyHours.toString();
 
-        // 2) Sliders/inputs
-        vCPURange.value = recommendedVCPUs;
-        vCPUValue.textContent = `${recommendedVCPUs} vCPUs`;
-
-        memoryRange.value = recommendedMemoryGiB;
-        memoryValue.textContent = `${recommendedMemoryGiB} GiB`;
-
-        gpuRange.value = recommendedGPUs;
-        gpuValue.textContent = `${recommendedGPUs} GPUs`;
+        // 2) Inputs
+        cpuInput.value = recommendedVCPUs;
+        memoryInput.value = recommendedMemoryGiB;
+        gpuInput.value = recommendedGPUs;
 
         machinesInput.value = recommendedMachines;
 
