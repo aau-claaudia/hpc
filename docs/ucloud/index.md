@@ -35,7 +35,7 @@ https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/ (best, is to
 
     Learn the basics on how to use UCloud.
 
-    [Guides for UCloud](/ucloud/guides/getting-started/){ .md-button .md-button--primary }
+    [Guides for UCloud](/ucloud/guides/getting-started/before-you-begin/){ .md-button .md-button--primary }
 
 - :material-lan: __Official documentation__ 
 
