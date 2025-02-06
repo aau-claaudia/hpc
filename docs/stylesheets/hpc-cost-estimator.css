@@ -329,6 +329,9 @@ hr {
     font-size: 15px;
     font-weight: 400;
 }
+.input-group-text {
+    justify-content: space-between;
+}
 .input-group-text.first {
     width: 240px;
 }
