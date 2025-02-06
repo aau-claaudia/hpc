@@ -220,10 +220,6 @@ hr {
 .accordion-body {
     margin-bottom: 20px;
 }
-.range-text {
-    min-width: 140px;
-    text-align: right;
-}
 .accordion-button:not(.collapsed) {
     color: #212529;
     background-color: rgb(232, 234, 237);
@@ -257,15 +253,6 @@ hr {
     border-color: rgb(33, 26, 81);
     border: none;
     background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='rgba(255,255,255,1.0)'/></svg>");
-}
-.form-range::-webkit-slider-thumb {
-    background: rgb(33, 26, 81);
-}
-.form-range::-moz-range-thumb {
-    background: rgb(33, 26, 81);
-}
-.form-range::-ms-thumb {
-    background: rgb(33, 26, 81);
 }
 .compute-quiz-txt {
     color: rgb(13, 110, 253) !important;

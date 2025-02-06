@@ -520,7 +520,7 @@
               </div>
             </div>
 
-            <!-- FRONT-END COST DISPLAY (new) -->
+            <!-- FRONT-END COST DISPLAY -->
             <div class="price-element">
               <div class="price-content">
                 <div class="price-text">Front-end</div>
@@ -591,7 +591,7 @@
     const dataMgmtHoursSelect = document.getElementById("dataMgmtHoursSelect");
 
     const storageCostDisplay = document.getElementById("storageCostDisplay");
-    const frontEndCostDisplay = document.getElementById("frontEndCostDisplay"); // NEW
+    const frontEndCostDisplay = document.getElementById("frontEndCostDisplay");
     const computeCostDisplay = document.getElementById("computeCostDisplay");
     const dataMgmtCostDisplay = document.getElementById("dataMgmtCostDisplay");
     const totalCostDisplay = document.getElementById("totalCostDisplay");
@@ -673,7 +673,7 @@
       // If backup is checked, cost is triple
       let storageCost = backupSwitch.checked ? baseStorageCost * 3 : baseStorageCost;
 
-      // ----- FRONT-END COST (NEW) -----
+      // ----- FRONT-END COST -----
       // default = (2 CPU * 0.12 + 4 GiB * (0.12/8)) * 24h * 31d * months
       // medium = (4 CPU * 0.12 + 8 GiB * (0.12/8)) * 24h * 31d * months
       // large = (8 CPU * 0.12 + 16 GiB * (0.12/8)) * 24h * 31d * months
@@ -734,7 +734,7 @@
 
     }
 
-    // 6) Set up event listeners
+    // Set up event listeners
 
     // Project duration
     durationMonthsInput.addEventListener("input", updateAllCosts);
@@ -744,10 +744,10 @@
     storageInput.addEventListener("input", updateAllCosts);
     backupSwitch.addEventListener("change", updateAllCosts);
 
-    // Front-end selection (NEW)
+    // Front-end selection
     frontEndSelect.addEventListener("change", updateAllCosts);
 
-    // Compute Sliders
+    // Compute inputs
     cpuInput.addEventListener("input", updateAllCosts);
     memoryInput.addEventListener("input", updateAllCosts);
     gpuInput.addEventListener("input", updateAllCosts);
