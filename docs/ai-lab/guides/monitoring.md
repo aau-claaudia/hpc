@@ -160,3 +160,5 @@ Monitoring GPU utilization is a good practice for optimizing the performance of 
 **:material-party-popper: Congratulations! :material-party-popper:**
 
 You've mastered the fundamentals of AI-LAB. If you have experience any errors or if you have feedback, [please let us know!](https://serviceportal.aau.dk/serviceportal?id=sc_cat_item&sys_id=a05e2fb4c3434610f0f3041ad001310e).
+
+You can also check out some [additional guides](additional-guides.md) on how to set up requeuing and checkpointing.
