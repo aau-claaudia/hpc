@@ -607,7 +607,13 @@
 
     const currencySelect = document.getElementById("currencySelect");
 
-
+    // Pricelist from NGC: https://www.ngc.dk/forskning-og-internationalt-samarbejde/ngc-forskerservice
+    storageListedPrice = 139.90 // DKK/TB/year
+    backupListedPrice = 71.00 // DKK/TB/year
+    cpuListedPrice = 5.80 // DKK/CPU/hour
+    memoryListedPrice = 5.80/8 // DKK/GB/hour
+    gpuListedPrice = 11.60 // DKK/GPU/hour
+    datastewardListedPrice = 311.00 // DKK/hour
 
     // Constants
     const DKK_TO_EUR = 1 / 7.45;  // approximate
@@ -672,59 +678,61 @@
       // ----- STORAGE COST -----
       let storageAmount = parseFloat(storageInput.value) || 0;
       let baseStorageCost = 0;
+      let backupCost = 0;
 
       if (storageUnitSelect.value === "TB") {
         // 139.90 DKK per TB per year
-        baseStorageCost = storageAmount * (139.90 / 12) * durationMonths;
+        baseStorageCost = storageAmount * (storageListedPrice / 12) * durationMonths;
+        backupCost = storageAmount * (backupListedPrice / 12) * durationMonths;
       } else {
-        // 0.25 DKK per GB per year
-        baseStorageCost = storageAmount * (0.25 / 12) * durationMonths;
+        // 0.139 DKK per GB per year
+        baseStorageCost = storageAmount * (0.139 / 12) * durationMonths;
+        backupCost = storageAmount * (0.071 / 12) * durationMonths;
       }
 
       // Keep your existing backup multiplier logic (if it's *3 or *2), e.g.:
-      let storageCost = backupSwitch.checked ? baseStorageCost * 3 : baseStorageCost;
+      let storageCost = backupSwitch.checked ? baseStorageCost + backupCost : baseStorageCost;
 
       // ----- FRONT-END COST -----
-      // default = (2 CPU * 5.80 + 4 GB * (5.80/8)) * 24h * 31d * months
-      // medium = (4 CPU * 5.80 + 8 GB * (5.80/8)) * 24h * 31d * months
-      // large = (8 CPU * 5.80 + 16 GB * (5.80/8)) * 24h * 31d * months
+      // default = (2 CPU * cpuListedPrice + 4 GB * memoryListedPrice) * 24h * 31d * months
+      // medium = (4 CPU * cpuListedPrice + 8 GB * memoryListedPrice) * 24h * 31d * months
+      // large = (8 CPU * cpuListedPrice + 16 GB * memoryListedPrice) * 24h * 31d * months
       let frontEndType = frontEndSelect.value;
       let frontEndCost = 0;
       let hoursPerMonth = 24 * 31; // continuous usage each month
 
       if (frontEndType === "default-frontend") {
         frontEndCost =
-          (2 * 5.80 * hoursPerMonth * durationMonths) +
-          (4 * (5.80 / 8) * hoursPerMonth * durationMonths);
+          (2 * cpuListedPrice * hoursPerMonth * durationMonths) +
+          (4 * memoryListedPrice * hoursPerMonth * durationMonths);
           frontEndSelectLabel.textContent = "Default";
       } else if (frontEndType === "medium-frontend") {
         frontEndCost =
-          (4 * 5.80 * hoursPerMonth * durationMonths) +
-          (8 * (5.80 / 8) * hoursPerMonth * durationMonths);
+          (4 * cpuListedPrice * hoursPerMonth * durationMonths) +
+          (8 * memoryListedPrice * hoursPerMonth * durationMonths);
           frontEndSelectLabel.textContent = "Medium";
       } else if (frontEndType === "large-frontend") {
         frontEndCost =
-          (8 * 5.80 * hoursPerMonth * durationMonths) +
-          (16 * (5.80 / 8) * hoursPerMonth * durationMonths);
+          (8 * cpuListedPrice * hoursPerMonth * durationMonths) +
+          (16 * memoryListedPrice * hoursPerMonth * durationMonths);
           frontEndSelectLabel.textContent = "Large";
       }
 
       // ----- COMPUTE COST -----
-      // ((vCPUs*5.80) + (memory*(5.80/8)) + (GPUs*6.00)) * machines * totalHours
+      // ((vCPUs*cpuListedPrice) + (memory*memoryListedPrice) + (GPUs*gpuListedPrice)) * machines * totalHours
       let vcpus = parseFloat(cpuInput.value) || 0;
       let mem = parseFloat(memoryInput.value) || 0;
       let gpus = parseFloat(gpuInput.value) || 0;
       let machines = parseFloat(machinesInput.value) || 0;
       let totalComputeHours = computeTotalHours(computeHoursInput.value, computeHoursSelect.value, durationMonths);
 
-      let computeUnitCost = (vcpus * 5.80) + (mem * (5.80 / 8)) + (gpus * 6.00);
+      let computeUnitCost = (vcpus * cpuListedPrice) + (mem * memoryListedPrice) + (gpus * gpuListedPrice);
       let computeCost = computeUnitCost * machines * totalComputeHours;
 
       // ----- DATA MANAGEMENT COST -----
       // totalHours * (600000 / (160.33 * 12))
       let dataMgmtTotalHours = computeTotalHours(dataMgmtHoursInput.value, dataMgmtHoursSelect.value, durationMonths);
-      let dataMgmtRate = 600000 / (160.33 * 12);
-      let dataMgmtCost = dataMgmtTotalHours * dataMgmtRate;
+      let dataMgmtCost = dataMgmtTotalHours * datastewardListedPrice;
 
       // ----- SUM ALL COSTS IN DKK -----
       let totalCostDKK = storageCost + frontEndCost + computeCost + dataMgmtCost;
@@ -736,12 +744,12 @@
       dataMgmtCostDisplay.textContent = formatCurrency(dataMgmtCost);
       totalCostDisplay.textContent = formatCurrency(totalCostDKK);
 
-      storagePrice.textContent = formatCurrency(139.90);
-      backupPrice.textContent = formatCurrency(71.00);
-      cpuPrice.textContent = formatCurrency(5.80);
-      memoryPrice.textContent = formatCurrency(5.80);
-      gpuPrice.textContent = formatCurrency(11.60);
-      stewardPrice.textContent = formatCurrency(311);
+      storagePrice.textContent = formatCurrency(storageListedPrice);
+      backupPrice.textContent = formatCurrency(backupListedPrice);
+      cpuPrice.textContent = formatCurrency(cpuListedPrice);
+      memoryPrice.textContent = formatCurrency(memoryListedPrice);
+      gpuPrice.textContent = formatCurrency(gpuListedPrice);
+      stewardPrice.textContent = formatCurrency(datastewardListedPrice);
 
     }
 
