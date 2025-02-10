@@ -49,9 +49,9 @@
                 </div>
                 <div class="input-group mb-3 mt-3">
                   <input type="number" class="form-control" id="durationMonthsInput" placeholder="0">
-                  <span class="input-group-text">month</span>
+                  <span class="input-group-text">month(s)</span>
                   <input type="number" class="form-control" id="durationYearsInput" placeholder="0">
-                  <span class="input-group-text">year</span>
+                  <span class="input-group-text">year(s)</span>
                 </div>
               </div>
             </div>
@@ -72,14 +72,17 @@
                 <div class="item-description">
                   <h4>What is the estimated data storage requirement?</h4>
                   <a href="#" class="d-inline-block" data-bs-toggle="tooltip" data-bs-placement="right"
-                    data-bs-title="Enter the total storage in TiB you expect to need. If unsure, include a small buffer for growth or intermediate data.">
+                    data-bs-title="Enter the total storage in TB or GB you expect to need. If unsure, include a small buffer for growth or intermediate data.">
                     <i class="bi bi-info-circle"></i>
                   </a>
                 </div>
                 <div class="input-group mb-3 mt-3">
                   <span class="input-group-text">Total amount of storage</span>
-                  <input type="number" class="form-control" id="storageInput" aria-label="storage" placeholder="0">
-                  <span class="input-group-text">TiB</span>
+                  <input style="flex-basis: content;" type="number" class="form-control" id="storageInput" aria-label="storage" placeholder="0">
+                  <select class="form-select" id="storageUnitSelect">
+                    <option value="GB">GB</option>
+                    <option value="TB" selected>TB</option>
+                  </select>
                 </div>
               </div>
               <div class="accordion-element">
@@ -89,7 +92,7 @@
                     Do you need to store data in backup?
                   </label>
                   <a href="#" class="d-inline-block" data-bs-toggle="tooltip" data-bs-placement="right"
-                    data-bs-title="Enable this option if you want a backup copy of your data to protect against accidental loss (usually doubles storage needs).">
+                    data-bs-title="Enable this option if you want a backup copy of your data to protect against accidental loss (doubles storage needs).">
                     <i class="bi bi-info-circle"></i>
                   </a>
                 </div>
@@ -119,9 +122,9 @@
                 <div class="input-group mb-3 mt-3">
                   <label class="input-group-text" style="min-width: 85px;" for="frontEndSelect" id="frontEndSelectLabel">Default</label>
                   <select class="form-select" id="frontEndSelect">
-                    <option value="default-frontend" selected>2 CPUs, 4 GiB memory</option>
-                    <option value="medium-frontend">4 CPUs, 8 GiB memory</option>
-                    <option value="large-frontend">8 CPUs, 16 GiB memory</option>
+                    <option value="default-frontend" selected>2 CPUs, 4 GB memory</option>
+                    <option value="medium-frontend">4 CPUs, 8 GB memory</option>
+                    <option value="large-frontend">8 CPUs, 16 GB memory</option>
                   </select>
                 </div>
               </div>
@@ -366,7 +369,6 @@
                     </a>
                   </span>
                   <input type="number" class="form-control" id="cpuInput" placeholder="0">
-                  <span class="input-group-text">CPUs</span>
                 </div>
               </div>
               
@@ -374,14 +376,13 @@
               <div class="accordion-element">
                 <div class="input-group mb-3">
                   <span class="input-group-text first">
-                    Amount of memory
+                    Amount of memory (GB)
                     <a href="#" class="d-inline-block" data-bs-toggle="tooltip" data-bs-placement="right"
                       data-bs-title="Memory (RAM) is used to store data while it's being processed. Larger computations and datasets generally need more memory.">
                       <i class="bi bi-info-circle"></i>
                     </a>
                   </span>
                   <input type="number" class="form-control" id="memoryInput" placeholder="0">
-                  <span class="input-group-text">GiB</span>
                 </div>
               </div>
 
@@ -396,7 +397,6 @@
                     </a>
                   </span>
                   <input type="number" class="form-control" id="gpuInput" placeholder="0">
-                  <span class="input-group-text">GPUs</span>
                 </div>
               </div>
 
@@ -491,7 +491,7 @@
                     <p class="price-list-txt">• Storage: <span id="storagePrice">kr.250</span>/TB/year</p>
                     <p class="price-list-txt">• Backup: <span id="backupPrice">kr.500</span>/TB/year</p>
                     <p class="price-list-txt">• CPU: <span id="cpuPrice">kr.0.12</span>/CPU/hour</p>
-                    <p class="price-list-txt">• Memory: <span id="memoryPrice">kr.0.12</span>/8GiB/hour</p>
+                    <p class="price-list-txt">• Memory: <span id="memoryPrice">kr.0.12</span>/8GB/hour</p>
                     <p class="price-list-txt">• GPU: <span id="gpuPrice">kr.6.00</span>/GPU/hour</p>
                     <p class="price-list-txt">• Data steward: <span id="stewardPrice">kr.311</span>/hour</p>
                   </div>
@@ -575,6 +575,7 @@
 
     const storageInput = document.getElementById("storageInput");
     const backupSwitch = document.getElementById("backupSwitch");
+    const storageUnitSelect = document.getElementById("storageUnitSelect");
 
     const frontEndSelect = document.getElementById("frontEndSelect");
     const frontEndSelectLabel = document.getElementById("frontEndSelectLabel");
@@ -668,15 +669,24 @@
       const durationMonths = durMonths + (durYears*12);
 
       // ----- STORAGE COST -----
-      let storageTiB = parseFloat(storageInput.value) || 0;
-      let baseStorageCost = storageTiB * (250 / 12) * durationMonths;
-      // If backup is checked, cost is triple
+      let storageAmount = parseFloat(storageInput.value) || 0;
+      let baseStorageCost = 0;
+
+      if (storageUnitSelect.value === "TB") {
+        // 250 DKK per TB per year
+        baseStorageCost = storageAmount * (250 / 12) * durationMonths;
+      } else {
+        // 0.25 DKK per GB per year
+        baseStorageCost = storageAmount * (0.25 / 12) * durationMonths;
+      }
+
+      // Keep your existing backup multiplier logic (if it's *3 or *2), e.g.:
       let storageCost = backupSwitch.checked ? baseStorageCost * 3 : baseStorageCost;
 
       // ----- FRONT-END COST -----
-      // default = (2 CPU * 0.12 + 4 GiB * (0.12/8)) * 24h * 31d * months
-      // medium = (4 CPU * 0.12 + 8 GiB * (0.12/8)) * 24h * 31d * months
-      // large = (8 CPU * 0.12 + 16 GiB * (0.12/8)) * 24h * 31d * months
+      // default = (2 CPU * 0.12 + 4 GB * (0.12/8)) * 24h * 31d * months
+      // medium = (4 CPU * 0.12 + 8 GB * (0.12/8)) * 24h * 31d * months
+      // large = (8 CPU * 0.12 + 16 GB * (0.12/8)) * 24h * 31d * months
       let frontEndType = frontEndSelect.value;
       let frontEndCost = 0;
       let hoursPerMonth = 24 * 31; // continuous usage each month
@@ -743,6 +753,7 @@
     // Storage + Backup
     storageInput.addEventListener("input", updateAllCosts);
     backupSwitch.addEventListener("change", updateAllCosts);
+    storageUnitSelect.addEventListener("change", updateAllCosts);
 
     // Front-end selection
     frontEndSelect.addEventListener("change", updateAllCosts);
@@ -946,14 +957,14 @@
         showStep(step8, stepSummary);
 
         // Now compute recommended HPC config so we can display it
-        const { recommendedVCPUs, recommendedMemoryGiB, recommendedGPUs, recommendedMachines } 
+        const { recommendedVCPUs, recommendedMemoryGB, recommendedGPUs, recommendedMachines } 
           = computeRecommendation(answers);
 
         // Fill the summary text
         const summary = 
           `For your project, we estimate:\n\n` +
           `• vCPUs: ${recommendedVCPUs}\n` +
-          `• Memory (GiB): ${recommendedMemoryGiB}\n` +
+          `• Memory (GB): ${recommendedMemoryGB}\n` +
           `• GPUs: ${recommendedGPUs}\n` +
           `• Number of machines: ${recommendedMachines}\n` +
           `• Daily usage hours: ${dh}\n\n` +
@@ -973,7 +984,7 @@
       // APPLY SETTINGS
       btnApplyQuiz.addEventListener("click", function() {
         // Actually set the HPC form
-        const { recommendedVCPUs, recommendedMemoryGiB, recommendedGPUs, recommendedMachines } 
+        const { recommendedVCPUs, recommendedMemoryGB, recommendedGPUs, recommendedMachines } 
           = computeRecommendation(answers);
 
         // 1) daily usage => "per day"
@@ -982,7 +993,7 @@
 
         // 2) Inputs
         cpuInput.value = recommendedVCPUs;
-        memoryInput.value = recommendedMemoryGiB;
+        memoryInput.value = recommendedMemoryGB;
         gpuInput.value = recommendedGPUs;
 
         machinesInput.value = recommendedMachines;
@@ -1003,7 +1014,7 @@
       function computeRecommendation(a) {
         // a = { projectType, dataSize, jobLength, gpuNeeded, concurrency, realTimeNeeded, concurrentUsers, dailyHours }
         let recommendedVCPUs     = 4;
-        let recommendedMemoryGiB = 8;
+        let recommendedMemoryGB = 8;
         let recommendedGPUs      = 0;
         let recommendedMachines  = 1;
 
@@ -1011,32 +1022,32 @@
         switch (a.projectType) {
           case "ml-ai":
             recommendedVCPUs     = 8;
-            recommendedMemoryGiB = 32;
+            recommendedMemoryGB = 32;
             break;
           case "data-analysis":
             recommendedVCPUs     = 8;
-            recommendedMemoryGiB = 16;
+            recommendedMemoryGB = 16;
             break;
           case "simulations":
             recommendedVCPUs     = 16;
-            recommendedMemoryGiB = 64;
+            recommendedMemoryGB = 64;
             break;
           case "general":
             recommendedVCPUs     = 4;
-            recommendedMemoryGiB = 8;
+            recommendedMemoryGB = 8;
             break;
         }
 
         // -- Data size
         switch (a.dataSize) {
           case "medium":
-            recommendedMemoryGiB = Math.max(recommendedMemoryGiB, 16);
+            recommendedMemoryGB = Math.max(recommendedMemoryGB, 16);
             break;
           case "large":
-            recommendedMemoryGiB = Math.max(recommendedMemoryGiB, 32);
+            recommendedMemoryGB = Math.max(recommendedMemoryGB, 32);
             break;
           case "massive":
-            recommendedMemoryGiB = Math.max(recommendedMemoryGiB, 64);
+            recommendedMemoryGB = Math.max(recommendedMemoryGB, 64);
             break;
           // "small" => do nothing
         }
@@ -1044,10 +1055,10 @@
         // -- Job length
         if (a.jobLength === "medium") {
           recommendedVCPUs     = Math.max(recommendedVCPUs, 8);
-          recommendedMemoryGiB = Math.max(recommendedMemoryGiB, 16);
+          recommendedMemoryGB = Math.max(recommendedMemoryGB, 16);
         } else if (a.jobLength === "long") {
           recommendedVCPUs     = Math.max(recommendedVCPUs, 16);
-          recommendedMemoryGiB = Math.max(recommendedMemoryGiB, 32);
+          recommendedMemoryGB = Math.max(recommendedMemoryGB, 32);
         }
         // "short" => do nothing
 
@@ -1082,11 +1093,11 @@
         } else if (a.concurrentUsers === "large") {
           recommendedMachines  = Math.max(recommendedMachines, 4);
           recommendedVCPUs     = Math.max(recommendedVCPUs, 16);
-          recommendedMemoryGiB = Math.max(recommendedMemoryGiB, 32);
+          recommendedMemoryGB = Math.max(recommendedMemoryGB, 32);
         }
         // "1" => do nothing
 
-        return { recommendedVCPUs, recommendedMemoryGiB, recommendedGPUs, recommendedMachines };
+        return { recommendedVCPUs, recommendedMemoryGB, recommendedGPUs, recommendedMachines };
       }
 
       function resetWizard() {

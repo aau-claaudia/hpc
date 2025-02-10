@@ -348,4 +348,7 @@ hr {
         left: 0;
         width: 100%;
     }
+    #currencySelect, .pricelist-btn, .bi-filetype-pdf, .print-txt {
+        visibility: hidden !important;
+    }
 }
