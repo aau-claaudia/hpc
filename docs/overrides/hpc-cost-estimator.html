@@ -686,8 +686,8 @@
         backupCost = storageAmount * (backupListedPrice / 12) * durationMonths;
       } else {
         // 0.139 DKK per GB per year
-        baseStorageCost = storageAmount * (0.139 / 12) * durationMonths;
-        backupCost = storageAmount * (0.071 / 12) * durationMonths;
+        baseStorageCost = storageAmount * ((storageListedPrice/1000) / 12) * durationMonths;
+        backupCost = storageAmount * ((backupListedPrice/1000) / 12) * durationMonths;
       }
 
       // Keep your existing backup multiplier logic (if it's *3 or *2), e.g.:
