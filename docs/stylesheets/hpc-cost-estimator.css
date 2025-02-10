@@ -326,8 +326,9 @@ hr {
     border-radius: 0.375rem;
 }
 .price-list-txt {
-    font-size: 15px;
+    font-size: 13px;
     font-weight: 400;
+    margin-bottom: 0.5rem;
 }
 .input-group-text {
     justify-content: space-between;

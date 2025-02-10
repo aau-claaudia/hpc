@@ -92,7 +92,7 @@
                     Do you need to store data in backup?
                   </label>
                   <a href="#" class="d-inline-block" data-bs-toggle="tooltip" data-bs-placement="right"
-                    data-bs-title="Enable this option if you want a backup copy of your data to protect against accidental loss (doubles storage needs).">
+                    data-bs-title="Enable this option if you want a backup copy of your data to protect against accidental loss.">
                     <i class="bi bi-info-circle"></i>
                   </a>
                 </div>
@@ -488,12 +488,13 @@
                 <form class="dropdown-menu p-4 shadow" style="width: 350px;;">
                   <div>
                     <label class="quiz-title">Prices</label>
-                    <p class="price-list-txt">• Storage: <span id="storagePrice">kr.250</span>/TB/year</p>
-                    <p class="price-list-txt">• Backup: <span id="backupPrice">kr.500</span>/TB/year</p>
-                    <p class="price-list-txt">• CPU: <span id="cpuPrice">kr.0.12</span>/CPU/hour</p>
-                    <p class="price-list-txt">• Memory: <span id="memoryPrice">kr.0.12</span>/8GB/hour</p>
-                    <p class="price-list-txt">• GPU: <span id="gpuPrice">kr.6.00</span>/GPU/hour</p>
+                    <p class="price-list-txt">• Storage: <span id="storagePrice">kr.139.90</span>/TB/year</p>
+                    <p class="price-list-txt">• Backup: <span id="backupPrice">kr.71.00</span>/TB/year</p>
+                    <p class="price-list-txt">• CPU: <span id="cpuPrice">kr.5.80</span>/CPU/hour</p>
+                    <p class="price-list-txt">• Memory: <span id="memoryPrice">kr.5.80</span>/8GB/hour</p>
+                    <p class="price-list-txt">• GPU: <span id="gpuPrice">kr.11.60</span>/GPU/hour</p>
                     <p class="price-list-txt">• Data steward: <span id="stewardPrice">kr.311</span>/hour</p>
+                    <a target="_blank" class="quiz-btn" style="color: rgb(13, 110, 253) !important;" href="https://www.ngc.dk/forskning-og-internationalt-samarbejde/ngc-forskerservice">Prices are taken from NGC Cloud service</a>
                   </div>
                 </form>
               </div>
@@ -673,8 +674,8 @@
       let baseStorageCost = 0;
 
       if (storageUnitSelect.value === "TB") {
-        // 250 DKK per TB per year
-        baseStorageCost = storageAmount * (250 / 12) * durationMonths;
+        // 139.90 DKK per TB per year
+        baseStorageCost = storageAmount * (139.90 / 12) * durationMonths;
       } else {
         // 0.25 DKK per GB per year
         baseStorageCost = storageAmount * (0.25 / 12) * durationMonths;
@@ -684,39 +685,39 @@
       let storageCost = backupSwitch.checked ? baseStorageCost * 3 : baseStorageCost;
 
       // ----- FRONT-END COST -----
-      // default = (2 CPU * 0.12 + 4 GB * (0.12/8)) * 24h * 31d * months
-      // medium = (4 CPU * 0.12 + 8 GB * (0.12/8)) * 24h * 31d * months
-      // large = (8 CPU * 0.12 + 16 GB * (0.12/8)) * 24h * 31d * months
+      // default = (2 CPU * 5.80 + 4 GB * (5.80/8)) * 24h * 31d * months
+      // medium = (4 CPU * 5.80 + 8 GB * (5.80/8)) * 24h * 31d * months
+      // large = (8 CPU * 5.80 + 16 GB * (5.80/8)) * 24h * 31d * months
       let frontEndType = frontEndSelect.value;
       let frontEndCost = 0;
       let hoursPerMonth = 24 * 31; // continuous usage each month
 
       if (frontEndType === "default-frontend") {
         frontEndCost =
-          (2 * 0.12 * hoursPerMonth * durationMonths) +
-          (4 * (0.12 / 8) * hoursPerMonth * durationMonths);
+          (2 * 5.80 * hoursPerMonth * durationMonths) +
+          (4 * (5.80 / 8) * hoursPerMonth * durationMonths);
           frontEndSelectLabel.textContent = "Default";
       } else if (frontEndType === "medium-frontend") {
         frontEndCost =
-          (4 * 0.12 * hoursPerMonth * durationMonths) +
-          (8 * (0.12 / 8) * hoursPerMonth * durationMonths);
+          (4 * 5.80 * hoursPerMonth * durationMonths) +
+          (8 * (5.80 / 8) * hoursPerMonth * durationMonths);
           frontEndSelectLabel.textContent = "Medium";
       } else if (frontEndType === "large-frontend") {
         frontEndCost =
-          (8 * 0.12 * hoursPerMonth * durationMonths) +
-          (16 * (0.12 / 8) * hoursPerMonth * durationMonths);
+          (8 * 5.80 * hoursPerMonth * durationMonths) +
+          (16 * (5.80 / 8) * hoursPerMonth * durationMonths);
           frontEndSelectLabel.textContent = "Large";
       }
 
       // ----- COMPUTE COST -----
-      // ((vCPUs*0.12) + (memory*(0.12/8)) + (GPUs*6)) * machines * totalHours
+      // ((vCPUs*5.80) + (memory*(5.80/8)) + (GPUs*6.00)) * machines * totalHours
       let vcpus = parseFloat(cpuInput.value) || 0;
       let mem = parseFloat(memoryInput.value) || 0;
       let gpus = parseFloat(gpuInput.value) || 0;
       let machines = parseFloat(machinesInput.value) || 0;
       let totalComputeHours = computeTotalHours(computeHoursInput.value, computeHoursSelect.value, durationMonths);
 
-      let computeUnitCost = (vcpus * 0.12) + (mem * (0.12 / 8)) + (gpus * 6);
+      let computeUnitCost = (vcpus * 5.80) + (mem * (5.80 / 8)) + (gpus * 6.00);
       let computeCost = computeUnitCost * machines * totalComputeHours;
 
       // ----- DATA MANAGEMENT COST -----
@@ -735,11 +736,11 @@
       dataMgmtCostDisplay.textContent = formatCurrency(dataMgmtCost);
       totalCostDisplay.textContent = formatCurrency(totalCostDKK);
 
-      storagePrice.textContent = formatCurrency(250);
-      backupPrice.textContent = formatCurrency(500);
-      cpuPrice.textContent = formatCurrency(0.12);
-      memoryPrice.textContent = formatCurrency(0.12);
-      gpuPrice.textContent = formatCurrency(6.00);
+      storagePrice.textContent = formatCurrency(139.90);
+      backupPrice.textContent = formatCurrency(71.00);
+      cpuPrice.textContent = formatCurrency(5.80);
+      memoryPrice.textContent = formatCurrency(5.80);
+      gpuPrice.textContent = formatCurrency(11.60);
       stewardPrice.textContent = formatCurrency(311);
 
     }
