@@ -49,8 +49,8 @@ AI Cloud currently include the following compute nodes:
 
 | Name             | Nodes in total |GPUs per node     | CPU cores per node | CPU HW threads | RAM per node | RAM per GPU  | Local Disk   | NVLINK / Infinity Frabric Link | Primary usage                         |
 | ---              | ---            | ---              | ---                | ---            | ---          | ---          | ---          | ---                            | ---                                   |
-| a256-t4-[01-03]  | 3              | 6 (NVIDIA T4)    | 32 (AMD EPYC)      | 64             | 256 GB       | 16 GB        | -            | No                             | Interactive / smaller single-GPU jobs |
-| i256-a10-[06-10] | 5              | 4 (NVIDIA A10)   | 32 (Intel Xeon)    | 64             | 256 GB       | 24 GB        | -            | No                             | Interactive / medium single-GPU jobs  |
+| a256-t4-[01-03]  | 3              | 6 (NVIDIA T4)    | 32 (AMD EPYC)      | 64             | 256 GB       | 16 GB        | -            | No                             | Smalle single-GPU jobs |
+| i256-a10-[06-10] | 5              | 4 (NVIDIA A10)   | 32 (Intel Xeon)    | 64             | 256 GB       | 24 GB        | -            | No                             | Medium single-GPU jobs  |
 | a256-a40-[04-07] | 4              | 3 (NVIDIA A40)   | 32 (AMD EPYC)      | 32             | 256 GB       | 48 GB        | -            | No                             | Large single-GPU jobs                 |
 | i256-a40-[01-02] | 2              | 4 (NVIDIA A40)   | 24 (Intel Xeon)    | 24             | 256 GB       | 48 GB        | 6.4 TB /raid | Yes (2&times;2)                | Large single-/multi-GPU jobs          |
 | a512-mi100-01    | 1              | 8 (AMD MI100)    | 16 (AMD EPYC)      | 32             | 512 GB       | 32 GB        | -            | Yes (Infinity Fabric link)     | Large / batch / multi-GPU jobs        |
