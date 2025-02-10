@@ -488,13 +488,13 @@
                 <form class="dropdown-menu p-4 shadow" style="width: 350px;;">
                   <div>
                     <label class="quiz-title">Prices</label>
-                    <p class="price-list-txt">• Storage: <span id="storagePrice">kr.139.90</span>/TB/year</p>
-                    <p class="price-list-txt">• Backup: <span id="backupPrice">kr.71.00</span>/TB/year</p>
-                    <p class="price-list-txt">• CPU: <span id="cpuPrice">kr.5.80</span>/CPU/hour</p>
-                    <p class="price-list-txt">• Memory: <span id="memoryPrice">kr.5.80</span>/8GB/hour</p>
-                    <p class="price-list-txt">• GPU: <span id="gpuPrice">kr.11.60</span>/GPU/hour</p>
-                    <p class="price-list-txt">• Data steward: <span id="stewardPrice">kr.311</span>/hour</p>
-                    <a target="_blank" class="quiz-btn" style="color: rgb(13, 110, 253) !important;" href="https://www.ngc.dk/forskning-og-internationalt-samarbejde/ngc-forskerservice">Prices are taken from NGC Cloud service</a>
+                    <p class="price-list-txt">• Storage: <span id="storagePrice"></span>/TB/year</p>
+                    <p class="price-list-txt">• Backup: <span id="backupPrice"></span>/TB/year</p>
+                    <p class="price-list-txt">• CPU: <span id="cpuPrice"></span>/CPU/hour</p>
+                    <p class="price-list-txt">• Memory: <span id="memoryPrice"></span>/GB/hour</p>
+                    <p class="price-list-txt">• GPU: <span id="gpuPrice"></span>/GPU/hour</p>
+                    <p class="price-list-txt">• Data steward: <span id="stewardPrice"></span>/hour</p>
+                    <a target="_blank" class="quiz-btn" style="color: rgb(13, 110, 253) !important;" href="https://genome.au.dk/pricing/">Prices are taken from GenomeDK</a>
                   </div>
                 </form>
               </div>
@@ -608,11 +608,11 @@
     const currencySelect = document.getElementById("currencySelect");
 
     // Pricelist from NGC: https://www.ngc.dk/forskning-og-internationalt-samarbejde/ngc-forskerservice
-    storageListedPrice = 139.90 // DKK/TB/year
-    backupListedPrice = 71.00 // DKK/TB/year
-    cpuListedPrice = 5.80 // DKK/CPU/hour
-    memoryListedPrice = 5.80/8 // DKK/GB/hour
-    gpuListedPrice = 11.60 // DKK/GPU/hour
+    storageListedPrice = 250 // DKK/TB/year
+    backupListedPrice = 500 // DKK/TB/year
+    cpuListedPrice = 0.12 // DKK/CPU/hour
+    memoryListedPrice = 0.12/8 // DKK/GB/hour
+    gpuListedPrice = 6.00 // DKK/GPU/hour
     datastewardListedPrice = 311.00 // DKK/hour
 
     // Constants
