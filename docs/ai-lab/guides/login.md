@@ -30,7 +30,16 @@ When you can see `user@student.aau.dk@ailab-fe01:~$` you are succesfully logged 
 !!! info "Troubleshooting Windows Login Issues"
     If you cannot log in using Windows PowerShell, try installing [OpenSSH](https://learn.microsoft.com/en-us/windows-server/administration/openssh/openssh_install_firstuse?tabs=gui){target=_blank} or a [Linux subsystem](https://learn.microsoft.com/en-us/windows/wsl/setup/environment){target=_blank}.
 
+!!! info "No access to VPN or AAUs network?"
+    If you do not have access to VPN, it is also possible to connect to your instance by using AAU's SSH gateway as a jump host. This way your connection gets established through the gateway without redirecting the rest of your network traffic. Note that this will ask you for [multifactor authentication](https://www.en.its.aau.dk/instructions/mfa).
 
+    ```
+    ssh -J user@student.aau.dk@sshgw.aau.dk -l user@student.aau.dk ailab-fe01.srv.aau.dk
+    ```
+    
+    Replace `user@student.aau.dk` with your AAU email address.
+
+    
 <hr>
 
 You are now ready to proceed to learn about [**file handling :octicons-arrow-right-24:**](file-handling.md)
