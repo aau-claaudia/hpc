@@ -72,7 +72,7 @@
                 <div class="item-description">
                   <h4>What is the estimated data storage requirement?</h4>
                   <a href="#" class="d-inline-block" data-bs-toggle="tooltip" data-bs-placement="right"
-                    data-bs-title="Enter the total storage in TB or GB you expect to need. If unsure, include a small buffer for growth or intermediate data.">
+                    data-bs-title="Enter the total storage in TB or GB you expect to need. If unsure, include a small buffer for growth or intermediate data. Backup of all transferred data is included in the price.">
                     <i class="bi bi-info-circle"></i>
                   </a>
                 </div>
@@ -83,18 +83,6 @@
                     <option value="GB">GB</option>
                     <option value="TB" selected>TB</option>
                   </select>
-                </div>
-              </div>
-              <div class="accordion-element">
-                <div class="form-check form-switch">
-                  <input class="form-check-input" type="checkbox" role="switch" id="backupSwitch">
-                  <label class="form-check-label" for="backupSwitch">
-                    Do you need to store data in backup?
-                  </label>
-                  <a href="#" class="d-inline-block" data-bs-toggle="tooltip" data-bs-placement="right"
-                    data-bs-title="Enable this option if you want a backup copy of your data to protect against accidental loss.">
-                    <i class="bi bi-info-circle"></i>
-                  </a>
                 </div>
               </div>
             </div>
@@ -489,7 +477,6 @@
                   <div>
                     <label class="quiz-title">Prices</label>
                     <p class="price-list-txt">• Storage: <span id="storagePrice"></span>/TB/year</p>
-                    <p class="price-list-txt">• Backup: <span id="backupPrice"></span>/TB/year</p>
                     <p class="price-list-txt">• CPU: <span id="cpuPrice"></span>/CPU/hour</p>
                     <p class="price-list-txt">• Memory: <span id="memoryPrice"></span>/GB/hour</p>
                     <p class="price-list-txt">• GPU: <span id="gpuPrice"></span>/GPU/hour</p>
@@ -575,7 +562,6 @@
     const durationYearsInput = document.getElementById("durationYearsInput");
 
     const storageInput = document.getElementById("storageInput");
-    const backupSwitch = document.getElementById("backupSwitch");
     const storageUnitSelect = document.getElementById("storageUnitSelect");
 
     const frontEndSelect = document.getElementById("frontEndSelect");
@@ -599,7 +585,6 @@
     const totalCostDisplay = document.getElementById("totalCostDisplay");
 
     const storagePrice = document.getElementById("storagePrice");
-    const backupPrice = document.getElementById("backupPrice");
     const cpuPrice = document.getElementById("cpuPrice");
     const memoryPrice = document.getElementById("memoryPrice");
     const gpuPrice = document.getElementById("gpuPrice");
@@ -608,8 +593,7 @@
     const currencySelect = document.getElementById("currencySelect");
 
     // Pricelist from NGC: https://www.ngc.dk/forskning-og-internationalt-samarbejde/ngc-forskerservice
-    storageListedPrice = 250 // DKK/TB/year
-    backupListedPrice = 500 // DKK/TB/year
+    storageListedPrice = 750 // DKK/TB/year (backup included)
     cpuListedPrice = 0.12 // DKK/CPU/hour
     memoryListedPrice = 0.12/8 // DKK/GB/hour
     gpuListedPrice = 6.00 // DKK/GPU/hour
@@ -677,21 +661,13 @@
 
       // ----- STORAGE COST -----
       let storageAmount = parseFloat(storageInput.value) || 0;
-      let baseStorageCost = 0;
-      let backupCost = 0;
+      let storageCost = 0;
 
       if (storageUnitSelect.value === "TB") {
-        // 139.90 DKK per TB per year
-        baseStorageCost = storageAmount * (storageListedPrice / 12) * durationMonths;
-        backupCost = storageAmount * (backupListedPrice / 12) * durationMonths;
+        storageCost = storageAmount * (storageListedPrice / 12) * durationMonths;
       } else {
-        // 0.139 DKK per GB per year
-        baseStorageCost = storageAmount * ((storageListedPrice/1000) / 12) * durationMonths;
-        backupCost = storageAmount * ((backupListedPrice/1000) / 12) * durationMonths;
+        storageCost = storageAmount * ((storageListedPrice/1000) / 12) * durationMonths;
       }
-
-      // Keep your existing backup multiplier logic (if it's *3 or *2), e.g.:
-      let storageCost = backupSwitch.checked ? baseStorageCost + backupCost : baseStorageCost;
 
       // ----- FRONT-END COST -----
       // default = (2 CPU * cpuListedPrice + 4 GB * memoryListedPrice) * 24h * 31d * months
@@ -745,7 +721,6 @@
       totalCostDisplay.textContent = formatCurrency(totalCostDKK);
 
       storagePrice.textContent = formatCurrency(storageListedPrice);
-      backupPrice.textContent = formatCurrency(backupListedPrice);
       cpuPrice.textContent = formatCurrency(cpuListedPrice);
       memoryPrice.textContent = formatCurrency(memoryListedPrice);
       gpuPrice.textContent = formatCurrency(gpuListedPrice);
@@ -759,9 +734,8 @@
     durationMonthsInput.addEventListener("input", updateAllCosts);
     durationYearsInput.addEventListener("input", updateAllCosts);
 
-    // Storage + Backup
+    // Storage
     storageInput.addEventListener("input", updateAllCosts);
-    backupSwitch.addEventListener("change", updateAllCosts);
     storageUnitSelect.addEventListener("change", updateAllCosts);
 
     // Front-end selection
