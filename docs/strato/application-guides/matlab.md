@@ -117,7 +117,3 @@ If this is your first time, you will be forwarded to a [WAYF](https://www.wayf.d
 After this step, you should be inside the application and everything should feel familiar.
 
 ![Matlab running inside a browser window](/assets/img/matlab_in_browserwindow.png)
-
-### Headless mode
-
-This is currently broken ... we are working with Mathworks on resolving the issue.
