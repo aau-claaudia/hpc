@@ -1,4 +1,4 @@
-### Why do I get `Error generating job credential` when running a job?
+### Why do I get `Error generating job credential` or `unknown userid` when running a job?
 Sometimes there are challenges with Active Directory (AD) at Aalborg University where AD fails to translate UIDs to people's usernames. Consequently, Slurm may encounter authentication issues, preventing you from running a job, and you may notice the job hanging when you run `sinfo`.
 
 **Solution:** Often, the problem resolves itself after some time (~20 minutes), and you will be able to run jobs again. You can also try running the `refresh-nodes` command to translate the username to UID, which usually gets cached and starts working after a while.

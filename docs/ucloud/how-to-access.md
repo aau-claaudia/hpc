@@ -1,6 +1,6 @@
 
 ## Direct access
-All Aalborg University users automatically have access to UCloud and can simply log in using their WAYF credentials (university logon credentials). This gives you access to **"My Workspace"** with a fairly substantial starting quota of CPU-hours that can be used in the standard web app environment. This is  the quickest and most user-friendly way to access HPC as a first-time user.
+All Aalborg University users automatically have access to UCloud and can simply log in using their WAYF credentials (university logon credentials). This gives you access to **"My Workspace"** with a fairly substantial starting quota of CPU-hours that can be used in the standard web app environment. This is the quickest and most user-friendly way to access HPC as a first-time user.
 
 [Log in to UCloud](https://cloud.sdu.dk/app/dashboard){target="_blank}
 

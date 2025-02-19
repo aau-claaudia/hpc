@@ -353,19 +353,18 @@ Below is a step-by-step guide on how to set up a self-hosted GitHub Actions runn
         ```yaml
         name: AI-LAB test job
         on:
-        push:
+          push:
             branches:
-            - main
+              - main
         jobs:
-        test-hpc:
+          test-hpc:
             runs-on: self-hosted
             steps:
-            - name: Check out repo
+              - name: Check out repo
                 uses: actions/checkout@v3
-
-            - name: AI-LAB hostname info
+              - name: AI-LAB hostname info
                 run: |
-                sbatch --output=hostname_output.txt --wrap="hostname"
+                  sbatch --output=hostname_output.txt --wrap="hostname"
         ```
 
     2.  With the runner, running on AI-LAB, the job should start immediately. Once complete, you can check the output file using: 
