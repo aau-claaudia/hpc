@@ -73,7 +73,8 @@ h1, h2, h3, h4, h5, h6 {
 .cost-details-title {
     align-items: center;
     display: flex;
-    padding: 16px 24px 5px;
+    padding: 20px 24px 0px;
+    margin-bottom: 20px;
 }
 .cost-details-title h2 {
     -webkit-font-smoothing: antialiased;
@@ -86,21 +87,22 @@ h1, h2, h3, h4, h5, h6 {
 }
 .price-elements {
     flex-grow: 1;
-    height: 370px;
     overflow-x: hidden;
     overflow-y: auto;
-    padding-top: 2px;
     scrollbar-width: none;
+    margin-bottom: 34px;
 }
 .price-element {
     padding: 18px 24px 0;
     padding-top: 0px;
-    margin-top: 34px;
+    margin-top: 25px;
 }
 .price-content {
     align-items: center;
     display: flex;
-    margin-bottom: 4px;
+}
+.form-select, .form-control {
+    font-size: 15px;
 }
 .price-text {
     color: rgb(95, 99, 104);
@@ -118,7 +120,7 @@ h1, h2, h3, h4, h5, h6 {
     text-transform: uppercase;
 }
 .price-value {
-    color: rgb(32, 33, 36);
+    color: rgb(95, 99, 104);
     font-size: 14px !important;
     margin-left: auto;
     white-space: nowrap;
@@ -130,8 +132,10 @@ h1, h2, h3, h4, h5, h6 {
     letter-spacing: normal;
     line-height: 24px;
 }
+.price-divider {
+    margin: 0px 20px 0px;
+}
 .cost-total {
-    background-color: rgb(33, 26, 81);
     padding: 14px 19px;
     position: relative;
 }
@@ -141,13 +145,6 @@ h1, h2, h3, h4, h5, h6 {
     gap: 10px;
     justify-content: space-between;
     margin: 8px 0 8px;
-}
-.cost-total-text .price-text {
-    color: white !important;
-}
-.cost-total-text .price-value {
-    color: white !important;
-    font-size: 16px !important;
 }
 .bi-info-circle {
     padding: 8px;
@@ -332,6 +329,7 @@ hr {
 }
 .input-group-text {
     justify-content: space-between;
+    font-size: 15px;
 }
 .input-group-text.first {
     width: 240px;

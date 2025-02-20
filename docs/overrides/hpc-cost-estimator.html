@@ -476,11 +476,12 @@
                 <form class="dropdown-menu p-4 shadow" style="width: 350px;;">
                   <div>
                     <label class="quiz-title">Prices</label>
-                    <p class="price-list-txt">• Storage: <span id="storagePrice"></span>/TB/year</p>
-                    <p class="price-list-txt">• CPU: <span id="cpuPrice"></span>/CPU/hour</p>
-                    <p class="price-list-txt">• Memory: <span id="memoryPrice"></span>/GB/hour</p>
-                    <p class="price-list-txt">• GPU: <span id="gpuPrice"></span>/GPU/hour</p>
-                    <p class="price-list-txt">• Data steward: <span id="stewardPrice"></span>/hour</p>
+                    <p class="price-list-txt">- Storage: <span id="storagePrice"></span>/TB/year</p>
+                    <p class="price-list-txt">- CPU: <span id="cpuPrice"></span>/CPU/hour</p>
+                    <p class="price-list-txt">- Memory: <span id="memoryPrice"></span>/GB/hour</p>
+                    <p class="price-list-txt">- GPU: <span id="gpuPrice"></span>/GPU/hour</p>
+                    <p class="price-list-txt">- Data steward: <span id="stewardPrice"></span>/hour</p>
+                    <p class="price-list-txt"><em>An additional 32% overhead will be applied to all prices.</em></p>
                     <a target="_blank" class="quiz-btn" style="color: rgb(13, 110, 253) !important;" href="https://genome.au.dk/pricing/">Prices are taken from GenomeDK</a>
                   </div>
                 </form>
@@ -498,13 +499,13 @@
               <option value="EUR">EUR</option>
             </select>
           </div>
-          <hr style="margin: 16px 24px 5px;">
+          <hr class="price-divider">
           <div class="price-elements">
             <!-- STORAGE COST DISPLAY -->
             <div class="price-element">
               <div class="price-content">
                 <div class="price-text">Storage</div>
-                <div class="price-value" id="storageCostDisplay">0 DKK</div>
+                <div class="price-value" id="storageCostDisplay"></div>
               </div>
             </div>
 
@@ -512,7 +513,7 @@
             <div class="price-element">
               <div class="price-content">
                 <div class="price-text">Front-end</div>
-                <div class="price-value" id="frontEndCostDisplay">0 DKK</div>
+                <div class="price-value" id="frontEndCostDisplay"></div>
               </div>
             </div>
 
@@ -520,7 +521,7 @@
             <div class="price-element">
               <div class="price-content">
                 <div class="price-text">Compute</div>
-                <div class="price-value" id="computeCostDisplay">0 DKK</div>
+                <div class="price-value" id="computeCostDisplay"></div>
               </div>
             </div>
 
@@ -528,16 +529,26 @@
             <div class="price-element">
               <div class="price-content">
                 <div class="price-text">Data management</div>
-                <div class="price-value" id="dataMgmtCostDisplay">0 DKK</div>
+                <div class="price-value" id="dataMgmtCostDisplay"></div>
               </div>
             </div>
           </div>
 
+          
           <!-- TOTAL COST DISPLAY -->
+          <hr class="price-divider">
           <div class="cost-total">
             <div class="cost-total-text">
-              <div class="price-text">Estimated cost</div>
-              <div class="price-value" id="totalCostDisplay">0 DKK</div>
+              <div class="price-text">Cost</div>
+              <div class="price-value" id="totalCostDisplay"></div>
+            </div>
+            <div class="cost-total-text">
+              <div class="price-text">Overhead (32%)</div>
+              <div class="price-value" id="overheadCostDisplay"></div>
+            </div>
+            <div class="cost-total-text">
+              <div style="color: rgb(32, 33, 36) !important;" class="price-text">Total</div>
+              <div style="color: rgb(32, 33, 36) !important;" class="price-value" id="totalCostWithOverheadDisplay"></div>
             </div>
           </div>
         </div>
@@ -583,6 +594,8 @@
     const computeCostDisplay = document.getElementById("computeCostDisplay");
     const dataMgmtCostDisplay = document.getElementById("dataMgmtCostDisplay");
     const totalCostDisplay = document.getElementById("totalCostDisplay");
+    const overheadCostDisplay = document.getElementById("overheadCostDisplay");
+    const totalCostWithOverheadDisplay = document.getElementById("totalCostWithOverheadDisplay");
 
     const storagePrice = document.getElementById("storagePrice");
     const cpuPrice = document.getElementById("cpuPrice");
@@ -713,12 +726,20 @@
       // ----- SUM ALL COSTS IN DKK -----
       let totalCostDKK = storageCost + frontEndCost + computeCost + dataMgmtCost;
 
+      // ------ CALCULATE OVERHEAD -----
+      let overheadDKK = totalCostDKK * 0.32
+
+      // ------- TOTAL COST WITH OVERHEAD -----
+      let totalCostWithOverheadDKK = totalCostDKK + overheadDKK
+
       // Update the individual displays in the correct currency
       storageCostDisplay.textContent = formatCurrency(storageCost);
       frontEndCostDisplay.textContent = formatCurrency(frontEndCost);
       computeCostDisplay.textContent = formatCurrency(computeCost);
       dataMgmtCostDisplay.textContent = formatCurrency(dataMgmtCost);
       totalCostDisplay.textContent = formatCurrency(totalCostDKK);
+      overheadCostDisplay.textContent = formatCurrency(overheadDKK);
+      totalCostWithOverheadDisplay.textContent = formatCurrency(totalCostWithOverheadDKK);
 
       storagePrice.textContent = formatCurrency(storageListedPrice);
       cpuPrice.textContent = formatCurrency(cpuListedPrice);
