@@ -160,6 +160,7 @@ h1, h2, h3, h4, h5, h6 {
 .accordion-button {
     font-size: 16px;
     color: rgb(95, 99, 104);
+    height: 50px;
 }
 .form-check.form-switch {
     display: flex;
@@ -233,6 +234,7 @@ hr {
     line-height: 1.25rem;
     padding: 12px 16px;
     justify-content: space-between;
+    height: 50px;
 }
 .print-txt {
     color: rgb(95, 99, 104);
