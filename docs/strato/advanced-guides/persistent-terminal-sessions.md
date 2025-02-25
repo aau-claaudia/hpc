@@ -66,9 +66,17 @@ There is a screen on:
 1 Socket in /run/screen/S-ubuntu.
 ```
 
+Here 1463 is our session identifier.
+
 Attach to the sesion with:
 ```
 screen -r 1463
+```
+
+A session can be killed with:
+
+```
+screen -XS 1463 kill
 ```
 
 These commands should be enough to get you started.
