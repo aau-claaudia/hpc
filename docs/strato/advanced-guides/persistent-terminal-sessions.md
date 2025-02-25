@@ -1,34 +1,74 @@
-You might want to start long simulations, but this requires a bit of extra work. If you start the simulation in the login session, you need to keep the SSH connection alive and not e.g. close down your computer, close terminal etc. to avoid killing/stopping the simulations process. To avoid this problem you have to start the simulations through a mechanism that allows you to "detach" from the running process.
+# Persistant terminal sessions
+Every time you log in to a Strato instance, you are landed in a *session*. Connecting to the same instance in a different window, will land you in a new sesison. Applications launched in "Session A" will be detectable from within "Session B", but most often you will not be able to interact with them.
 
-There are multiple options for running long simulations in a detached session, the most common being `screen` , `tmux` and `byobu`. Here well show how to get started using screen
+In many cases it can be desireable to be able to launch an application, put it away, and attach to the same session - perhaps many days later. For this purpose we can use of either `tmux` or `screen`. Both come preinstalled on most Linux distributions.
+
+In the following we will show you the most basic features.
+
+## Tmux
+
+Create a new session:
+```
+tmux new
+```
+
+![A new Tmux session](../../assets/img/openstack/tmux_new.png "A new Tmux Session")
+
+At the bottom of the window, you will see a green pane. This indicates you have entered a Tmux sesison.
+
+Now detach from the session using: `ctrl +b, d`. Please note that this is: `ctrl + b` *and then* `d`.
+
+List open sessions (if there are any):
+```
+tmux ls
+```
+![A new Tmux session](../../assets/img/openstack/tmux_ls.png "A new Tmux Session")
+
+The session, we have just detached from is called `0`.
+
+Attach to it using:
+```
+tmux attach -t 0
+```
+
+We could also have killed it using:
+```
+tmux kill-session -t 
+```
+
+These commands should be enough to get you started!
+
+## Screen
 
 Start a new screen:
-```bash
-$ screen
 ```
-and press [Enter] to acknowledge the terms. You should now see a fresh session. In this session you can start your simulations. When the simulations are running, hit [Ctrl+a d] to "detach". You should now be in your login session again. Now try
+screen
+```
 
-```bash
-$ screen -ls
+Accept the terms by pressing `Enter`. 
+
+You should now be standing inside a new Screen session.
+
+Detach from the current session using : `ctrl + a, d`  (please note that this is `ctrl + a` *and then* `d`).
+
+You should now be in your login session again.
+
+List the open `screen`-sessions with:
+
+```
+screen -ls
+```
+This outputs something like:
+
+```
 There is a screen on:
 	1463.pts-0.screen-test	(09/09/21 09:48:48)	(Detached)
 1 Socket in /run/screen/S-ubuntu.
 ```
 
-and you should see a single screen that is detached. You can start multiple screens using `screen` again. To re-attach to a detached session, you can do:
-
-```bash
-$ screen -r
+Attach to the sesion with:
+```
+screen -r 1463
 ```
 
-to reattach if you only have one screen, or:
-
-```bash
-$ screen -r 146
-```
-
-or the few first characters of the screen name to re-attach a particular screen session. When attached, you can then inspect standard output for simulation progress.
-
-You can read more about screen on the internet, e.g. [a guide](https://linuxize.com/post/how-to-use-linux-screen/) or [a cheatsheet](https://kapeli.com/cheat_sheets/screen.docset/Contents/Resources/Documents/index)
-
-As mentioned, you can also use more advanced session managers such as [tmux](https://en.wikipedia.org/wiki/Tmux) and [byobu](https://en.wikipedia.org/wiki/Byobu_(software)). Please consult additional guides for this.
+These commands should be enough to get you started.
