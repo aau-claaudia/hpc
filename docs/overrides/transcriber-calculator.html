@@ -17,9 +17,9 @@
 
 <div style="height: 100%; margin-top: 1rem;">
   <div class="estimator-header">
-    <h1>HPC Cost Estimator</h1>
+    <h1>Transcriber Calculator</h1>
     <a href="#" class="d-inline-block" data-bs-toggle="tooltip" data-bs-placement="right"
-      data-bs-title="This tool helps you estimate HPC resource usage and approximate costs.">
+      data-bs-title="This tool helps you estimate the resource needs for your Transcriber project.">
       <i class="bi bi-info-circle"></i>
     </a>
   </div>
@@ -32,427 +32,46 @@
         <!-- PROJECT DURATION -->
         <div class="accordion-item">
           <h2 class="accordion-header" id="headingDuration">
-            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseDuration"
+            <button class="accordion-button" type="button" data-bs-target="#collapseDuration"
               aria-expanded="true" aria-controls="collapseDuration">
-              Project duration
+              Audio or video duration
             </button>
           </h2>
           <div id="collapseDuration" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
             <div class="accordion-body">
               <div class="accordion-element">
+                <div class="item-title" style="margin-bottom: 5px;">
+                  <div>
+                    <h3>Duration</h3>
+                  </div>
+                </div>
                 <div class="item-description">
-                  <h4>What is the expected duration of your project?</h4>
-                  <a href="#" class="d-inline-block" data-bs-toggle="tooltip" data-bs-placement="right"
-                    data-bs-title="Use this input to set the duration you expect your project to last.">
-                    <i class="bi bi-info-circle"></i>
-                  </a>
+                  <h4>Please enter the number of hours of audio or video that you would like to transcribe.</h4>
                 </div>
                 <div class="input-group mb-3 mt-3">
-                  <input type="number" class="form-control" id="durationMonthsInput" placeholder="0">
-                  <span class="input-group-text">month(s)</span>
-                  <input type="number" class="form-control" id="durationYearsInput" placeholder="0">
-                  <span class="input-group-text">year(s)</span>
+                  <span class="input-group-text">Total duration</span>
+                  <input style="flex-basis: content;" type="number" class="form-control" id="storageInput" aria-label="storage" placeholder="0">
+                  <span class="input-group-text">hours</span>
                 </div>
               </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- STORAGE -->
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="headingStorage">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-              data-bs-target="#collapseStorage" aria-expanded="false" aria-controls="collapseStorage">
-              Storage
-            </button>
-          </h2>
-          <div id="collapseStorage" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-            <div class="accordion-body">
+              <hr>
               <div class="accordion-element">
+                <div class="item-title" style="margin-bottom: 5px;">
+                  <div>
+                    <h3>Storage</h3>
+                  </div>
+                </div>
                 <div class="item-description">
-                  <h4>What is the estimated data storage requirement?</h4>
+                  <h4>Please enter the number of gigabytes (GB) of data that you need to store</h4>
                   <a href="#" class="d-inline-block" data-bs-toggle="tooltip" data-bs-placement="right"
-                    data-bs-title="Enter the total storage in TB or GB you expect to need. If unsure, include a small buffer for growth or intermediate data. Backup of all transferred data is included in the price.">
+                    data-bs-title="We will add 20% to make sure you have enough space to run the Transcriber application.">
                     <i class="bi bi-info-circle"></i>
                   </a>
                 </div>
                 <div class="input-group mb-3 mt-3">
                   <span class="input-group-text">Total amount of storage</span>
                   <input style="flex-basis: content;" type="number" class="form-control" id="storageInput" aria-label="storage" placeholder="0">
-                  <select class="form-select" id="storageUnitSelect">
-                    <option value="GB">GB</option>
-                    <option value="TB" selected>TB</option>
-                  </select>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- FRONTEND -->
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="headingFrontend">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-              data-bs-target="#collapseFrontend" aria-expanded="false" aria-controls="collapseFrontend">
-              Front-end computer
-            </button>
-          </h2>
-          <div id="collapseFrontend" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-            <div class="accordion-body">
-              <div class="accordion-element">
-                <div class="item-description">
-                  <h4>Specify the configuration for your interactive front-end computer</h4>
-                  <a href="#" class="d-inline-block" data-bs-toggle="tooltip" data-bs-placement="right"
-                    data-bs-title="The front-end computer is used to manage jobs, run setup scripts, handle data transfers, and provide an interactive environment before submitting tasks to the main compute resources.">
-                    <i class="bi bi-info-circle"></i>
-                  </a>
-                </div>
-                <div class="input-group mb-3 mt-3">
-                  <label class="input-group-text" style="min-width: 85px;" for="frontEndSelect" id="frontEndSelectLabel">Default</label>
-                  <select class="form-select" id="frontEndSelect">
-                    <option value="default-frontend" selected>2 CPUs, 4 GB memory</option>
-                    <option value="medium-frontend">4 CPUs, 8 GB memory</option>
-                    <option value="large-frontend">8 CPUs, 16 GB memory</option>
-                  </select>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- COMPUTE -->
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="headingCompute">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-              data-bs-target="#collapseCompute" aria-expanded="false" aria-controls="collapseCompute">
-              Compute
-            </button>
-          </h2>
-          <div id="collapseCompute" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-            <div class="accordion-body">
-
-              <div class="accordion-element">
-
-                <!-- The dropdown button remains the same -->
-                <div class="dropdown">
-                  <button type="button" class="btn btn-outline-primary dropdown-toggle quiz-btn" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
-                    Quiz: Need help finding the right compute power?
-                  </button>
-
-                  <!-- Multi-step form wizard -->
-                  <form class="dropdown-menu p-4 shadow" id="quizForm" style="width: 100%;">
-
-                    <!-- STEP 1: PROJECT TYPE -->
-                    <div id="quizStep1" style="display: block;">
-                      <div class="mb-3">
-                        <label class="form-label d-block quiz-title">Which best describes your research project?</label>
-                        <div class="form-check custom-check">
-                          <input class="form-check-input" type="radio" name="questionProjectType" id="projType1" value="ml-ai">
-                          <label class="form-check-label" for="projType1">
-                            Machine learning / Deep learning / AI
-                          </label>
-                        </div>
-                        <div class="form-check custom-check">
-                          <input class="form-check-input" type="radio" name="questionProjectType" id="projType2" value="data-analysis">
-                          <label class="form-check-label" for="projType2">
-                            Large-scale data analysis (big dataset queries, analytics)
-                          </label>
-                        </div>
-                        <div class="form-check custom-check">
-                          <input class="form-check-input" type="radio" name="questionProjectType" id="projType3" value="simulations">
-                          <label class="form-check-label" for="projType3">
-                            Scientific HPC simulations (CFD, genomics, physics, etc.)
-                          </label>
-                        </div>
-                        <div class="form-check custom-check">
-                          <input class="form-check-input" type="radio" name="questionProjectType" id="projType4" value="general">
-                          <label class="form-check-label" for="projType4">
-                            General-purpose computing (scripts, moderate calculations)
-                          </label>
-                        </div>
-                      </div>
-                      <button type="button" class="btn btn-primary" id="btnNext1">Next</button>
-                    </div>
-
-                    <!-- STEP 2: DATA SIZE -->
-                    <div id="quizStep2" style="display: none;">
-                      <div class="mb-3">
-                        <label class="form-label d-block quiz-title">How large is your dataset in total?</label>
-                        <div class="form-check custom-check">
-                          <input class="form-check-input" type="radio" name="questionDataSize" id="dataSizeSmall" value="small">
-                          <label class="form-check-label" for="dataSizeSmall">Small (under 1 TB)</label>
-                        </div>
-                        <div class="form-check custom-check">
-                          <input class="form-check-input" type="radio" name="questionDataSize" id="dataSizeMedium" value="medium">
-                          <label class="form-check-label" for="dataSizeMedium">Medium (1-10 TB)</label>
-                        </div>
-                        <div class="form-check custom-check">
-                          <input class="form-check-input" type="radio" name="questionDataSize" id="dataSizeLarge" value="large">
-                          <label class="form-check-label" for="dataSizeLarge">Large (10-100 TB)</label>
-                        </div>
-                        <div class="form-check custom-check">
-                          <input class="form-check-input" type="radio" name="questionDataSize" id="dataSizeMassive" value="massive">
-                          <label class="form-check-label" for="dataSizeMassive">Massive (100+ TB)</label>
-                        </div>
-                        <!-- Not sure -->
-                        <div class="form-check custom-check">
-                          <input class="form-check-input" type="radio" name="questionDataSize" id="dataSizeUnknown" value="dontknow">
-                          <label class="form-check-label" for="dataSizeUnknown">Not sure</label>
-                        </div>
-                      </div>
-                      <button type="button" class="btn btn-secondary me-2" id="btnPrev2">Back</button>
-                      <button type="button" class="btn btn-primary" id="btnNext2">Next</button>
-                    </div>
-
-                    <!-- STEP 3: JOB LENGTH -->
-                    <div id="quizStep3" style="display: none;">
-                      <div class="mb-3">
-                        <label class="form-label d-block quiz-title">How long do your typical jobs run?</label>
-                        <div class="form-check custom-check">
-                          <input class="form-check-input" type="radio" name="questionJobLength" id="jobShort" value="short">
-                          <label class="form-check-label" for="jobShort">Short (minutes to a few hours)</label>
-                        </div>
-                        <div class="form-check custom-check">
-                          <input class="form-check-input" type="radio" name="questionJobLength" id="jobMedium" value="medium">
-                          <label class="form-check-label" for="jobMedium">Medium (~ half a day)</label>
-                        </div>
-                        <div class="form-check custom-check">
-                          <input class="form-check-input" type="radio" name="questionJobLength" id="jobLong" value="long">
-                          <label class="form-check-label" for="jobLong">Long (multi-day or continuous)</label>
-                        </div>
-                        <!-- Not sure -->
-                        <div class="form-check custom-check">
-                          <input class="form-check-input" type="radio" name="questionJobLength" id="jobUnknown" value="dontknow">
-                          <label class="form-check-label" for="jobUnknown">Not sure</label>
-                        </div>
-                      </div>
-                      <button type="button" class="btn btn-secondary me-2" id="btnPrev3">Back</button>
-                      <button type="button" class="btn btn-primary" id="btnNext3">Next</button>
-                    </div>
-
-                    <!-- STEP 4: GPU USAGE -->
-                    <div id="quizStep4" style="display: none;">
-                      <div class="mb-3">
-                        <label class="form-label d-block quiz-title">Do you plan to utilize GPUs (e.g., for deep learning)?</label>
-                        <div class="form-check custom-check">
-                          <input class="form-check-input" type="radio" name="questionGpuNeeded" id="gpuYes" value="yes">
-                          <label class="form-check-label" for="gpuYes">Yes, GPU acceleration needed</label>
-                        </div>
-                        <div class="form-check custom-check">
-                          <input class="form-check-input" type="radio" name="questionGpuNeeded" id="gpuNo" value="no">
-                          <label class="form-check-label" for="gpuNo">No, CPU-only is sufficient</label>
-                        </div>
-                        <!-- Not sure -->
-                        <div class="form-check custom-check">
-                          <input class="form-check-input" type="radio" name="questionGpuNeeded" id="gpuUnknown" value="dontknow">
-                          <label class="form-check-label" for="gpuUnknown">Not sure</label>
-                        </div>
-                      </div>
-                      <button type="button" class="btn btn-secondary me-2" id="btnPrev4">Back</button>
-                      <button type="button" class="btn btn-primary" id="btnNext4">Next</button>
-                    </div>
-
-                    <!-- STEP 5: PARALLELISM -->
-                    <div id="quizStep5" style="display: none;">
-                      <div class="mb-3">
-                        <label class="form-label d-block quiz-title">Will you run tasks in parallel across multiple machines?</label>
-                        <div class="form-check custom-check">
-                          <input class="form-check-input" type="radio" name="questionConcurrency" id="concYes" value="yes">
-                          <label class="form-check-label" for="concYes">Yes (MPI/distributed tasks or multiple concurrent jobs)</label>
-                        </div>
-                        <div class="form-check custom-check">
-                          <input class="form-check-input" type="radio" name="questionConcurrency" id="concNo" value="no">
-                          <label class="form-check-label" for="concNo">No, just a single machine</label>
-                        </div>
-                        <!-- Not sure -->
-                        <div class="form-check custom-check">
-                          <input class="form-check-input" type="radio" name="questionConcurrency" id="concUnknown" value="dontknow">
-                          <label class="form-check-label" for="concUnknown">Not sure</label>
-                        </div>
-                      </div>
-                      <button type="button" class="btn btn-secondary me-2" id="btnPrev5">Back</button>
-                      <button type="button" class="btn btn-primary" id="btnNext5">Next</button>
-                    </div>
-
-                    <!-- STEP 6: REAL-TIME OR BATCH -->
-                    <div id="quizStep6" style="display: none;">
-                      <div class="mb-3">
-                        <label class="form-label d-block quiz-title">Do you need interactive or near real-time processing?</label>
-                        <div class="form-check custom-check">
-                          <input class="form-check-input" type="radio" name="questionRealTime" id="realTimeYes" value="yes">
-                          <label class="form-check-label" for="realTimeYes">Yes, quick turnarounds or interactive sessions</label>
-                        </div>
-                        <div class="form-check custom-check">
-                          <input class="form-check-input" type="radio" name="questionRealTime" id="realTimeNo" value="no">
-                          <label class="form-check-label" for="realTimeNo">No, offline/batch processing is fine</label>
-                        </div>
-                        <!-- Not sure -->
-                        <div class="form-check custom-check">
-                          <input class="form-check-input" type="radio" name="questionRealTime" id="realTimeUnknown" value="dontknow">
-                          <label class="form-check-label" for="realTimeUnknown">Not sure</label>
-                        </div>
-                      </div>
-                      <button type="button" class="btn btn-secondary me-2" id="btnPrev6">Back</button>
-                      <button type="button" class="btn btn-primary" id="btnNext6">Next</button>
-                    </div>
-
-                    <!-- STEP 7: CONCURRENT USERS -->
-                    <div id="quizStep7" style="display: none;">
-                      <div class="mb-3">
-                        <label class="form-label d-block quiz-title">How many users will be using this HPC at the same time?</label>
-                        <div class="form-check custom-check">
-                          <input class="form-check-input" type="radio" name="questionConcurrentUsers" id="oneUser" value="1">
-                          <label class="form-check-label" for="oneUser">Just me (1 user)</label>
-                        </div>
-                        <div class="form-check custom-check">
-                          <input class="form-check-input" type="radio" name="questionConcurrentUsers" id="smallTeam" value="small">
-                          <label class="form-check-label" for="smallTeam">Small team (2-5 people)</label>
-                        </div>
-                        <div class="form-check custom-check">
-                          <input class="form-check-input" type="radio" name="questionConcurrentUsers" id="largeTeam" value="large">
-                          <label class="form-check-label" for="largeTeam">Large group (6+ people)</label>
-                        </div>
-                      </div>
-                      <button type="button" class="btn btn-secondary me-2" id="btnPrev7">Back</button>
-                      <button type="button" class="btn btn-primary" id="btnNext7">Next</button>
-                    </div>
-
-                    <!-- STEP 8: DAILY USAGE HOURS -->
-                    <div id="quizStep8" style="display: none;">
-                      <div class="mb-3">
-                        <label class="form-label fw-bold" for="quizComputeHours">Approx. how many hours per day do you plan to run tasks?</label>
-                        <input type="number" class="form-control" id="quizComputeHours" placeholder="e.g. 8" min="0">
-                      </div>
-                      <button type="button" class="btn btn-secondary me-2" id="btnPrev8">Back</button>
-                      <button type="button" class="btn btn-primary" id="btnShowSummary">Next</button>
-                    </div>
-
-                    <!-- FINAL STEP: SUMMARY & ACTION -->
-                    <div id="quizSummary" style="display: none;">
-                      <h5 class="fw-bold mb-2">Recommended HPC Configuration</h5>
-                      <p id="quizSummaryText" class="mb-3" style="white-space: pre-line;">
-                        <!-- We'll fill this text via JavaScript -->
-                      </p>
-                      <button type="button" class="btn btn-secondary me-2" id="btnCancelQuiz">Cancel</button>
-                      <button type="button" class="btn btn-primary" id="applyQuizBtn">Apply Settings</button>
-                    </div>
-
-                  </form>
-                </div>
-                <div class="item-title" style="margin-bottom: 5px;">
-                  <div>
-                    <h3>Configure your compute requirements</h3>
-                  </div>
-                </div>
-              </div>
-
-              <!-- vCPUs -->
-              <div class="accordion-element">
-                <div class="input-group mb-3">
-                  <span class="input-group-text first">
-                    Number of CPUs
-                    <a href="#" class="d-inline-block" data-bs-toggle="tooltip" data-bs-placement="right"
-                      data-bs-title="vCPUs (virtual CPUs) represent how many CPU cores your tasks can run on simultaneously. More vCPUs can speed up processing, but also increase cost.">
-                      <i class="bi bi-info-circle"></i>
-                    </a>
-                  </span>
-                  <input type="number" class="form-control" id="cpuInput" placeholder="0">
-                </div>
-              </div>
-              
-              <!-- Memory -->
-              <div class="accordion-element">
-                <div class="input-group mb-3">
-                  <span class="input-group-text first">
-                    Amount of memory (GB)
-                    <a href="#" class="d-inline-block" data-bs-toggle="tooltip" data-bs-placement="right"
-                      data-bs-title="Memory (RAM) is used to store data while it's being processed. Larger computations and datasets generally need more memory.">
-                      <i class="bi bi-info-circle"></i>
-                    </a>
-                  </span>
-                  <input type="number" class="form-control" id="memoryInput" placeholder="0">
-                </div>
-              </div>
-
-              <!-- GPUs -->
-              <div class="accordion-element">
-                <div class="input-group mb-3">
-                  <span class="input-group-text first">
-                    Number of GPUs
-                    <a href="#" class="d-inline-block" data-bs-toggle="tooltip" data-bs-placement="right"
-                      data-bs-title="GPUs (Graphics Processing Units) can significantly accelerate specialized tasks (like deep learning). Only useful if your software supports GPU acceleration.">
-                      <i class="bi bi-info-circle"></i>
-                    </a>
-                  </span>
-                  <input type="number" class="form-control" id="gpuInput" placeholder="0">
-                </div>
-              </div>
-
-              <!-- Number of Machines -->
-              <div class="accordion-element">
-                <div class="input-group mb-3">
-                  <span class="input-group-text first">
-                    Number of Machines
-                    <a href="#" class="d-inline-block" data-bs-toggle="tooltip" data-bs-placement="right"
-                      data-bs-title="This is how many HPC nodes (servers) you plan to run. Each node has its own CPU, memory, and optional GPUs. Increasing nodes can speed up parallel tasks.">
-                      <i class="bi bi-info-circle"></i>
-                    </a>
-                  </span>
-                  <input type="number" class="form-control" id="machinesInput" placeholder="0">
-                </div>
-              </div>
-
-              <!-- Compute usage time -->
-              <div class="accordion-element">
-                <div class="input-group mb-3">
-                  <span class="input-group-text first">
-                    Total compute usage time
-                    <a href="#" class="d-inline-block" data-bs-toggle="tooltip" data-bs-placement="right"
-                      data-bs-title="Estimate how many hours the resources (CPUs/GPUs) will be actively running. For instance, 2 machines running 8 hours per day for 30 days = 480 machine-hours.">
-                      <i class="bi bi-info-circle"></i>
-                    </a>
-                  </span>
-                  <input type="number" class="form-control" id="computeHoursInput" placeholder="0">
-                  <span class="input-group-text">hours</span>
-                  <select class="form-select" id="computeHoursSelect">
-                    <option value="per day" selected>per day</option>
-                    <option value="per week">per week</option>
-                    <option value="per month">per month</option>
-                    <option value="in total">in total</option>
-                  </select>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- DATA MANAGEMENT -->
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="headingDataManagement">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-              data-bs-target="#collapseDataManagement" aria-expanded="false" aria-controls="collapseDataManagement">
-              Data management
-            </button>
-          </h2>
-          <div id="collapseDataManagement" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-            <div class="accordion-body">
-              <div class="accordion-element">
-                <div class="item-description">
-                  <h4>Do you require help from data stewards?</h4>
-                  <a href="#" class="d-inline-block" data-bs-toggle="tooltip" data-bs-placement="right"
-                    data-bs-title="If you need specialized assistance with data organization, cleaning, or compliance, estimate the number of hours of support needed.">
-                    <i class="bi bi-info-circle"></i>
-                  </a>
-                </div>
-                <div class="input-group mb-3 mt-3">
-                  <input type="number" class="form-control" id="dataMgmtHoursInput" placeholder="0">
-                  <span class="input-group-text">hours</span>
-                  <select class="form-select" id="dataMgmtHoursSelect">
-                    <option value="per day" selected>per day</option>
-                    <option value="per week">per week</option>
-                    <option value="per month">per month</option>
-                    <option value="in total">in total</option>
-                  </select>
+                  <span class="input-group-text">GB</span>
                 </div>
               </div>
             </div>
@@ -466,27 +85,6 @@
       <div class="cost shadow-sm">
         <div class="cost-details">
           <div class="cost-header">
-            <div class="cost-header-element">
-              <div class="dropdown">
-                <button type="button" class="btn btn-outline-primary dropdown-toggle pricelist-btn" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
-                  Pricelist
-                </button>
-
-                <!-- Multi-step form wizard -->
-                <form class="dropdown-menu p-4 shadow" style="width: 350px;;">
-                  <div>
-                    <label class="quiz-title">Prices</label>
-                    <p class="price-list-txt">- Storage: <span id="storagePrice"></span>/TB/year</p>
-                    <p class="price-list-txt">- CPU: <span id="cpuPrice"></span>/CPU/hour</p>
-                    <p class="price-list-txt">- Memory: <span id="memoryPrice"></span>/GB/hour</p>
-                    <p class="price-list-txt">- GPU: <span id="gpuPrice"></span>/GPU/hour</p>
-                    <p class="price-list-txt">- Data steward: <span id="stewardPrice"></span>/hour</p>
-                    <p class="price-list-txt"><em>An additional 32% overhead will be applied to all prices.</em></p>
-                    <a target="_blank" class="quiz-btn" style="color: rgb(13, 110, 253) !important;" href="https://genome.au.dk/pricing/">Prices are taken from GenomeDK</a>
-                  </div>
-                </form>
-              </div>
-            </div>
             <div class="cost-header-element">
               <i class="bi bi-filetype-pdf"></i>
               <span class="print-txt" id="print-btn">Print to pdf</span>
