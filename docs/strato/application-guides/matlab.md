@@ -48,8 +48,11 @@ If you cannot find a toolbox you need, it might be unavailable for the Matlab re
 
 There are two ways in which you can work with Matlab on Strato instances.
 
-1. [Run the application in headless mode](/strato/application-guides/strato-applications/#command-line-interfaces): By default Strato instances do not come with any graphical user interfaces, but are operated in headless mode. In cases where you simply need to execute a prewritten script, this approach might be preferable.
+1. [Run the application as a command line interface (CLI)](/strato/application-guides/strato-applications/#command-line-interfaces): By default Strato instances do not come with any graphical user interfaces, but are operated in headless mode. In cases where you simply need to execute a prewritten script, this approach might be preferable.
 2. [Run with graphical user interface (GUI)](/strato/application-guides/strato-applications/#graphical-user-interfaces): Here the application runs on your Strato instance, but its graphics are rendered on your local computer - in this case your web browser. This is useful for interactive development, ie. workflows where you will need to test and modify your code continuously.
+
+### As CLI
+*... this section is currently broken. We are working on solving the issue.* 
 
 ### With a GUI
 
@@ -110,10 +113,11 @@ You can now choose to either run Matlab as an application inside your browser or
 ### Activate license
 If you chose "Open Matlab" you will be met with a registration window. Enter your AAU-email.
 
-If this is your first time, you will be forwarded to a [WAYF](https://www.wayf.dk/) log in page. Click 'OK' at the bottom of the page. This will redirect you to a Mathworks site, where you can create a profile with Mathworks. After this has been done, you will receive an email saying that a software license is now linked to your account. You will also be redirected to the launch site. It may take a few minutes to complete the activation.
+Wait for the license to be acquired. This may take a few minutes.
 
 ![Matlab license processing](/assets/img/matlab_license.png)
 
 After this step, you should be inside the application and everything should feel familiar.
 
 ![Matlab running inside a browser window](/assets/img/matlab_in_browserwindow.png)
+
