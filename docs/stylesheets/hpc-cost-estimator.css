@@ -335,6 +335,36 @@ hr {
 .input-group-text.first {
     width: 240px;
 }
+.contact-claaudia-box {
+    align-items: center;
+    color: rgb(60, 64, 67);
+    display: flex;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: normal;
+    line-height: 24px;
+    margin: 0;
+}
+.contact-claaudia-link {
+    color: rgb(25, 103, 210);
+    margin-left: 6px;
+    border-radius: 4px;
+    color: rgb(26, 115, 232);
+    transition: background-color .2s, color .2s;
+    text-decoration: underline;
+    outline: 0;
+    cursor: pointer;
+    word-break: break-word;
+}
+.contact-claaudia-link:hover {
+    color: rgb(23, 78, 166);
+    text-decoration: underline;
+    background-color: rgba(26, 115, 232, .04);
+}
 @media print {
     body * {
         visibility: hidden;
