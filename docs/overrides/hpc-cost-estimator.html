@@ -13,7 +13,10 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.23/jspdf.plugin.autotable.min.js"></script>
 <link rel="stylesheet" href="../stylesheets/hpc-cost-estimator.css">
+<script src="../assets/fonts.js"></script>
 
 <div style="height: 100%; margin-top: 1rem;">
   <div class="estimator-header">
@@ -559,14 +562,119 @@
 </div>
 
 
-<script>
+<script > 
   document.addEventListener("DOMContentLoaded", function() {
     // Initialize Bootstrap tooltips
     const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
     [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
 
-    document.getElementById('print-btn').addEventListener('click', () => {
-      window.print();
+    document.getElementById("print-btn").addEventListener("click", () => {
+      
+      
+      const { jsPDF } = window.jspdf;
+      const doc = new jsPDF();
+
+      // Register fonts from window.customFonts
+      Object.entries(window.customFonts).forEach(([name, data]) => {
+          doc.addFileToVFS(`${name}.ttf`, data);
+          doc.addFont(`${name}.ttf`, name, "normal");
+      });
+
+
+      let yOffset = 10;
+
+      function addSection(title, sum, elements) {
+        // Title (Bold)
+        doc.setFontSize(10);
+        doc.setFont("Roboto-SemiBold", "normal");
+        doc.setFillColor(228, 230, 233);
+        doc.rect(10, yOffset - 5, 190, 8, "F");
+        doc.text(title, 15, yOffset);
+        doc.text(sum, 195, yOffset, { align: "right" });
+        yOffset += 8;
+
+        elements.forEach(({ label, value, price }, index) => {
+            if (index % 2 !== 0) {
+                doc.setFillColor(242, 242, 244); // Light gray background for odd rows
+                doc.rect(10, yOffset - 5, 190, 8, "F");
+            }
+
+            // Label (Regular or Thin)
+            doc.setFontSize(8);
+            doc.setFont("Roboto-Regular", "normal"); // Set font for label
+            doc.text(`${label}:`, 15, yOffset);
+
+            // Value (Light)
+            doc.setFont("Roboto-Light", "normal");
+            doc.text(value, 60, yOffset);
+
+            // Price (Align right)
+            if (price) {
+                doc.setFont("Roboto-Regular", "normal"); // Use Regular for prices
+                doc.text(price, 195, yOffset, { align: "right" });
+            }
+
+            yOffset += 8;
+        });
+
+        yOffset += 5;
+      }
+
+      const sections = [
+        {
+            title: "Storage",
+            sum: summaryStorageSumValue, // Use the new variable
+            elements: [
+                { label: "Total amount of storage", value: summaryStorageAmountValue, price: summaryStoragePriceValue },
+                { label: "Backup on initial data upload", value: "Yes", price: "N/A" },
+                { label: "Compliance standards", value: "EU Region, ISO 27001/27002, GDPR", price: "N/A" }
+            ]
+        },
+        {
+            title: "Front-end computer",
+            sum: summaryFrontendSumValue,
+            elements: [
+                { label: "Machine type", value: summaryFrontendTypeValue, price: summaryFrontendPriceValue },
+                { label: "Number of machines", value: "1 machine", price: "N/A" },
+                { label: "Instance-time", value: summaryFrontendTimeValue, price: "N/A" },
+                { label: "Location type", value: "EU Region", price: "N/A" },
+                { label: "Compliance standards", value: "EU Region, ISO 27001/27002, GDPR", price: "N/A" }
+            ]
+        },
+        {
+            title: "Compute",
+            sum: summaryComputeSumValue,
+            elements: [
+                { label: "Number of instances", value: summaryComputeInstancesValue, price: "N/A" },
+                { label: "Total amount of CPUs", value: summaryComputeCPUAmountValue, price: summaryComputeCPUPriceValue },
+                { label: "Total amount of memory", value: summaryComputeMemorymountValue, price: summaryComputeMemoryPriceValue },
+                { label: "Total amount of GPUs", value: summaryComputeGPUAmountValue, price: summaryComputeGPUPriceValue },
+                { label: "Total compute usage time", value: summaryComputeUsageValue, price: "N/A" },
+                { label: "Compliance standards", value: "EU Region, ISO 27001/27002, GDPR", price: "N/A" }
+            ]
+        },
+        {
+            title: "Data management",
+            sum: summaryDMSumValue,
+            elements: [
+                { label: "Total amount of hours", value: summaryDMAmountValue, price: summaryDMPriceValue }
+            ]
+        }
+    ];
+
+
+      sections.forEach(section => addSection(section.title, section.sum, section.elements));
+
+      // Total Price Box
+      doc.setFillColor(228, 230, 233);
+      doc.rect(10, yOffset, 190, 10, "F");
+      doc.setFontSize(14);
+      doc.setFont("Roboto-Bold", "normal");
+      doc.text("Total estimated cost:", 15, yOffset + 7);
+      doc.text(summaryTotalPriceValue, 195, yOffset + 7, { align: "right" });
+
+      // Save PDF
+      doc.save("hpc-cost-estimation-summary.pdf");
     });
 
     // Grab references
@@ -603,6 +711,32 @@
     const stewardPrice = document.getElementById("stewardPrice");
 
     const currencySelect = document.getElementById("currencySelect");
+
+    let summaryStorageSumValue = "";
+    let summaryStorageAmountValue = "";
+    let summaryStoragePriceValue = "";
+
+    let summaryFrontendSumValue = "";
+    let summaryFrontendTypeValue = "";
+    let summaryFrontendPriceValue = "";
+    let summaryFrontendTimeValue = "";
+
+    let summaryComputeSumValue = "";
+    let summaryComputeInstancesValue = "";
+    let summaryComputeCPUAmountValue = "";
+    let summaryComputeCPUPriceValue = "";
+    let summaryComputeMemorymountValue = "";
+    let summaryComputeMemoryPriceValue = "";
+    let summaryComputeGPUAmountValue = "";
+    let summaryComputeGPUPriceValue = "";
+    let summaryComputeUsageValue = "";
+
+    let summaryDMSumValue = "";
+    let summaryDMAmountValue = "";
+    let summaryDMPriceValue = "";
+
+    let summaryTotalPriceValue = "";
+
 
     // Pricelist from NGC: https://www.ngc.dk/forskning-og-internationalt-samarbejde/ngc-forskerservice
     storageListedPrice = 750 // DKK/TB/year (backup included)
@@ -674,11 +808,14 @@
       // ----- STORAGE COST -----
       let storageAmount = parseFloat(storageInput.value) || 0;
       let storageCost = 0;
+      let storageText = `${parseFloat(storageInput.value) || 0}`;
 
       if (storageUnitSelect.value === "TB") {
         storageCost = storageAmount * (storageListedPrice / 12) * durationMonths;
+        storageText = storageText + " TB"
       } else {
         storageCost = storageAmount * ((storageListedPrice/1000) / 12) * durationMonths;
+        storageText = storageText + " GB"
       }
 
       // ----- FRONT-END COST -----
@@ -737,7 +874,32 @@
       memoryPrice.textContent = formatCurrency(memoryListedPrice);
       gpuPrice.textContent = formatCurrency(gpuListedPrice);
       stewardPrice.textContent = formatCurrency(datastewardListedPrice);
+      
+      summaryStorageSumValue = formatCurrency(storageCost);
+      summaryStorageAmountValue = storageText;
+      summaryStoragePriceValue = formatCurrency(storageCost);
 
+      summaryFrontendSumValue = formatCurrency(frontEndCost);
+      summaryFrontendTypeValue = frontEndSelect.options[frontEndSelect.selectedIndex].text;
+      summaryFrontendPriceValue = formatCurrency(frontEndCost);
+      const frontendHours = durationMonths * 31 * 24;
+      summaryFrontendTimeValue = `${frontendHours.toLocaleString('da-DK')} hours`;
+
+      summaryComputeSumValue = formatCurrency(computeCost);
+      summaryComputeInstancesValue = `${machines} machines`;
+      summaryComputeCPUAmountValue = `${vcpus} CPUs`;
+      summaryComputeCPUPriceValue = formatCurrency(vcpus * cpuListedPrice * machines * totalComputeHours);
+      summaryComputeMemorymountValue = `${mem} GB`;
+      summaryComputeMemoryPriceValue = formatCurrency(mem * memoryListedPrice * machines * totalComputeHours);
+      summaryComputeGPUAmountValue = `${gpus} GPUs`;
+      summaryComputeGPUPriceValue = formatCurrency(gpus * gpuListedPrice * machines * totalComputeHours);
+      summaryComputeUsageValue = `${totalComputeHours.toLocaleString('da-DK')} hours`;
+
+      summaryDMSumValue = formatCurrency(dataMgmtCost);
+      summaryDMAmountValue = `${dataMgmtTotalHours.toLocaleString('da-DK')} hours`;
+      summaryDMPriceValue = formatCurrency(dataMgmtCost);
+
+      summaryTotalPriceValue = formatCurrency(totalCostDKK);
     }
 
     // Set up event listeners
