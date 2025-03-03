@@ -109,7 +109,7 @@ As you've properly noticed, working on AI-LAB involves navigating a **Linux** en
 	You can transfer files between your local computer and AI-LAB using the command line utility `scp` from your local computer (**note:** You have to be logged out from AI-LAB to use `scp`).
 
 	```console
-	scp some-file user@student.aau.dk@ailab-fe01.srv.aau.dk:~/some-dir
+	scp -r some-file user@student.aau.dk@ailab-fe01.srv.aau.dk:~/some-dir
 	```
 
 	Replace `user@student.aau.dk` with your AAU email address.
@@ -122,7 +122,7 @@ As you've properly noticed, working on AI-LAB involves navigating a **Linux** en
 
 
 	```console
-	scp user@student.aau.dk@ailab-fe01.srv.aau.dk:~/some-folder/some-subfolder/some-file .
+	scp -r user@student.aau.dk@ailab-fe01.srv.aau.dk:~/some-folder/some-subfolder/some-file .
 	```
 
 	Replace `user@student.aau.dk` with your AAU email address.
