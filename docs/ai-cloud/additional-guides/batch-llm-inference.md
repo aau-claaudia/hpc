@@ -115,10 +115,22 @@ Prompt: 'The capital of France is', Generated text: ' the most populous city in 
 Prompt: 'The future of AI is', Generated text: ' at stake\nThe world is going to change in the next 20 years, and'
 ```
 
+!!! info "Restricted Model Access Error"
+    If you encounter an error such as:
+    
+    ```
+    Access to model meta-llama/Llama-3.2-1B-Instruct is restricted and you are not in the authorized list.
+    ```
+    
+    You need to request access on Hugging Face. Visit the model page, such as [meta-llama/Llama-3.2-1B-Instruct](https://huggingface.co/meta-llama/Llama-3.2-1B-Instruct), and click **Agree and access repository**.
+
+    ![Screenshot of Hugging Face](/assets/img/ai-cloud/batch-llm-inference-4.png)
+
+This guide provides the foundation for running batch LLM inference using vLLM on AI Cloud. Explore the official [vLLM documentation](https://docs.vllm.ai/) for further customization and optimizations.
+
 ## Additional vLLM Examples
 
 Below are additional examples demonstrating different vLLM use cases. More advanced examples can be found in the [vLLM GitHub repository](https://github.com/vllm-project/vllm/tree/main/examples/offline_inference).
-
 
 ??? news "chat.py"
     ```py title="chat.py"
@@ -437,17 +449,12 @@ Below are additional examples demonstrating different vLLM use cases. More advan
     
     ```
 
-## Handling Restricted Model Access Errors
+## Multi-GPU Utilization
+Some models like `meta-llama/Llama-3.3-70B-Instruct` is too large to fit in a single GPU on AI Cloud and you will get an out-of-memory (OOM) error. 
+vLLM supports tensor parallelism, which allows the model to be distributed across multiple GPUs. To enable it, pass `tensor_parallel_size` to the EngineArgs in your script:
 
-!!! info "Restricted Model Access Error"
-    If you encounter an error such as:
-    
-    ```
-    Access to model meta-llama/Llama-3.2-1B-Instruct is restricted and you are not in the authorized list.
-    ```
-    
-    You need to request access on Hugging Face. Visit the model page, such as [meta-llama/Llama-3.2-1B-Instruct](https://huggingface.co/meta-llama/Llama-3.2-1B-Instruct), and click **Agree and access repository**.
+```
+engine_group.set_defaults(model="meta-llama/Llama-3.3-70B-Instruct", tensor_parallel_size=4)
+```
 
-    ![Screenshot of Hugging Face](/assets/img/ai-cloud/batch-llm-inference-4.png)
-
-This guide provides the foundation for running batch LLM inference using vLLM on AI Cloud. Explore the official [vLLM documentation](https://docs.vllm.ai/) for further customization and optimizations.
+And don't forget to set `--gres=gpu` to the number of GPUs you want to utilize, in this instance `--gres=gpu:4`. This will run on a `l40s` node on AI Cloud.
