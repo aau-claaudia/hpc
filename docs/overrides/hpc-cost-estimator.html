@@ -660,7 +660,12 @@
             ]
         }
     ];
-
+      
+      // Title
+      doc.setFontSize(16);
+      doc.setFont("Roboto-Bold", "normal");
+      doc.text("Cost details", 10, yOffset + 7);
+      yOffset += 20;
 
       sections.forEach(section => addSection(section.title, section.sum, section.elements));
 

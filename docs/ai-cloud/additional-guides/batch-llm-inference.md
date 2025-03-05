@@ -457,4 +457,4 @@ vLLM supports tensor parallelism, which allows the model to be distributed acros
 engine_group.set_defaults(model="meta-llama/Llama-3.3-70B-Instruct", tensor_parallel_size=4)
 ```
 
-And don't forget to set `--gres=gpu` to the number of GPUs you want to utilize, in this instance `--gres=gpu:4`. This will run on a `l40s` node on AI Cloud.
+And don't forget to set `--gres=gpu` to the number of GPUs you want to utilize, in this instance `--gres=gpu:l40s:4`. This will allocate 4 GPUs to the job on a arbitrary `l40s` node on AI Cloud.
