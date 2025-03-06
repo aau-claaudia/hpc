@@ -115,6 +115,18 @@ Prompt: 'The capital of France is', Generated text: ' the most populous city in 
 Prompt: 'The future of AI is', Generated text: ' at stake\nThe world is going to change in the next 20 years, and'
 ```
 
+!!! info "Restricted Model Access Error"
+    If you encounter an error such as:
+    
+    ```
+    Access to model meta-llama/Llama-3.2-1B-Instruct is restricted and you are not in the authorized list.
+    ```
+    
+    You need to request access on Hugging Face. Visit the model page, such as [meta-llama/Llama-3.2-1B-Instruct](https://huggingface.co/meta-llama/Llama-3.2-1B-Instruct), and click **Agree and access repository**.
+
+    ![Screenshot of Hugging Face](/assets/img/ai-lab/batch-llm-inference-4.png)
+
+
 ## Additional vLLM Examples
 
 Below are additional examples demonstrating different vLLM use cases. More advanced examples can be found in the [vLLM GitHub repository](https://github.com/vllm-project/vllm/tree/main/examples/offline_inference).
@@ -437,17 +449,122 @@ Below are additional examples demonstrating different vLLM use cases. More advan
     
     ```
 
-## Handling Restricted Model Access Errors
 
-!!! info "Restricted Model Access Error"
-    If you encounter an error such as:
-    
-    ```
-    Access to model meta-llama/Llama-3.2-1B-Instruct is restricted and you are not in the authorized list.
-    ```
-    
-    You need to request access on Hugging Face. Visit the model page, such as [meta-llama/Llama-3.2-1B-Instruct](https://huggingface.co/meta-llama/Llama-3.2-1B-Instruct), and click **Agree and access repository**.
+## Batch Reasoning with DeepSeek R1
+vLLM offers support for reasoning models like DeepSeek R1, which are designed to generate outputs containing both reasoning steps and final conclusions. This guide explains how to use the DeepSeek model with batch processing on. It includes setting up the vLLM server, running inference, and using guided decoding for structured outputs.
 
-    ![Screenshot of Hugging Face](/assets/img/ai-lab/batch-llm-inference-4.png)
+### Step 1: Writing the Inference Script
+Create a Python script (`run_inference.py`) to interact with the vLLM server:
+
+```python
+from openai import OpenAI
+from pydantic import BaseModel
+
+# Modify OpenAI's API key and API base to use vLLM's API server.
+openai_api_key = "EMPTY"
+openai_api_base = "http://localhost:8000/v1"
+
+# Initialize OpenAI client for vLLM
+client = OpenAI(
+    api_key=openai_api_key,
+    base_url=openai_api_base,
+)
+
+# List available models
+models = client.models.list()
+model = models.data[0].id  # Assumes the first model is the correct one
+
+# Simple chat completion request
+prompt = "What is the capital of France?"
+response = client.chat.completions.create(
+    model=model,
+    messages=[{"role": "user", "content": prompt}],
+    extra_body={"guided_regex": "(Paris|London)"},  # Example of guided decoding
+)
+
+print("Reasoning:", response.choices[0].message.reasoning_content)
+print("Response:", response.choices[0].message.content)
+
+# Guided decoding using JSON schema
+class People(BaseModel):
+    name: str
+    age: int
+
+json_schema = People.model_json_schema()
+
+prompt = "Generate a JSON with the name and age of one random person."
+response = client.chat.completions.create(
+    model=model,
+    messages=[{"role": "user", "content": prompt}],
+    extra_body={"guided_json": json_schema},
+)
+
+print("Reasoning:", response.choices[0].message.reasoning_content)
+print("Response:", response.choices[0].message.content)
+```
+
+### Step 2: Creating the Slurm Job Script
+Create a Slurm batch script (`submit_vllm.sh`) to run the inference job:
+
+```bash
+#!/bin/bash
+#SBATCH --job-name=vllm_reasoning
+#SBATCH --gres=gpu:1
+#SBATCH --cpus-per-task=8
+#SBATCH --mem=32G
+#SBATCH --time=01:00:00
+#SBATCH --output=vllm_output_%j.log
+#SBATCH --error=vllm_error_%j.log
+
+# Path to vLLM container
+VLLM_CONTAINER="/ceph/container/vllm-openai_latest.sif"
+
+# Start the vLLM server in the background
+singularity exec --nv $VLLM_CONTAINER vllm serve deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B \
+    --enable-reasoning --reasoning-parser deepseek_r1 &
+
+# Get the PID of the server
+VLLM_PID=$!
+
+# Wait for server to be ready
+echo "Waiting for vLLM server to start..."
+while ! curl -s http://localhost:8000/v1/models >/dev/null; do
+    sleep 2  # Check every 2 seconds
+done
+
+# Run inference script
+singularity exec --nv $VLLM_CONTAINER python3 run_inference.py
+
+# Stop the server after inference is done
+echo "Stopping vLLM server..."
+kill $VLLM_PID
+```
+
+### Step 3: Submitting the Job
+Run the following command to submit the job to Slurm:
+
+```bash
+sbatch submit_vllm.sh
+```
+
+### Step 4: Monitoring and Debugging
+Check job status:
+
+```bash
+squeue --me
+```
+
+Check job logs:
+
+```bash
+tail -f vllm_output_<job_id>.log
+```
+
+If there are errors, inspect the error log:
+
+```bash
+tail -f vllm_error_<job_id>.log
+```
 
 This guide provides the foundation for running batch LLM inference using vLLM on AI-LAB. Explore the official [vLLM documentation](https://docs.vllm.ai/) for further customization and optimizations.
+

@@ -86,6 +86,7 @@ nav:
         - Running jobs:
           - Run a batch script: ai-cloud/additional-guides/run-a-batch-script.md
           - Multiple GPUs with PyTorch: ai-cloud/additional-guides/multiple-gpus-with-pytorch.md
+          - Batch LLM Inference: ai-cloud/additional-guides/batch-llm-inference.md
         - Checkpointing: ai-cloud/additional-guides/checkpointing.md
 
   - AI-LAB:
@@ -96,15 +97,21 @@ nav:
     - Terms and Conditions: assets/terms-and-conditions-ai-lab.pdf
     - Fair Usage: ai-lab/fair-usage.md
     - Guides:
+      - Overview: ai-lab/guides/index.md
       - Video Onboarding Guide: ai-lab/guides/video-onboarding-guide.md
-      - 1. Prerequisites: ai-lab/guides/index.md
-      - 2. Login: ai-lab/guides/login.md
-      - 3. File Handling: ai-lab/guides/file-handling.md
-      - 4. Running Jobs: ai-lab/guides/running-jobs.md
-      - 5. Getting Containers: ai-lab/guides/getting-containers.md
-      - 6. Using Containers: ai-lab/guides/using-containers.md
-      - 7. Monitoring: ai-lab/guides/monitoring.md
-      - 8. Additional Guides: ai-lab/guides/additional-guides.md
+      - Getting started:
+        - 1. Prerequisites: ai-lab/guides/prerequisites.md
+        - 2. Login: ai-lab/guides/login.md
+        - 3. File Handling: ai-lab/guides/file-handling.md
+        - 4. Running Jobs: ai-lab/guides/running-jobs.md
+        - 5. Getting Containers: ai-lab/guides/getting-containers.md
+        - 6. Using Containers: ai-lab/guides/using-containers.md
+        - 7. Monitoring: ai-lab/guides/monitoring.md
+      - Additional Guides: 
+        - Batch LLM Inference: ai-lab/guides/batch-llm-inference.md
+        - Checkpointing: ai-lab/guides/checkpointing.md
+        - Requeuing jobs: ai-lab/guides/requeuing-jobs.md
+        - CI/CD with GitHub Actions: ai-lab/guides/ci-cd-with-github-actions.md
 
   - External HPC:
     - About external HPC resources: external-hpc/index.md
