@@ -109,7 +109,7 @@ flowchart LR
 
 
 ## Storage
-AI Cloud utilizes a [Ceph](https://docs.ceph.com/) network drive as its storage solutio. Your files are organized within the Ceph file system hierarchy, ensuring efficient access and management across the entire platform.
+AI Cloud utilizes a [Ceph](https://docs.ceph.com/) network drive as its storage solution. Your files are organized within the Ceph file system hierarchy, ensuring efficient access and management across the entire platform.
 
 <hr>
 
