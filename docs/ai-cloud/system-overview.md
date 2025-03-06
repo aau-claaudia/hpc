@@ -69,8 +69,8 @@ AI Cloud is based on Ubuntu Linux as its operating system. In practice, working 
 
 AI Cloud leverages two primary software components: [Slurm](https://slurm.schedmd.com/quickstart.html) and [Singularity](https://docs.sylabs.io/guides/3.5/user-guide/introduction.html). Understanding these tools and how they work together is crucial for efficiently utilizing the AI Cloud platform.
 
-## Slurm
-[Slurm](https://slurm.schedmd.com/quickstart.html) is the workload manager used for scheduling and managing jobs on AI Cloud. It provides essential features such as:
+### Slurm
+[Slurm](https://slurm.schedmd.com/quickstart.html) is the queueing mechanism used for scheduling and managing resources on AI Cloud. It provides essential features such as:
 
 - **Job Scheduling:** Allocating resources to jobs based on user requests and system policies.
 - **Resource Management:** Tracking and managing compute resources, ensuring optimal utilization.
@@ -80,7 +80,7 @@ On AI Cloud, Slurm is responsible for managing the allocation and scheduling of 
 
 <hr>
 
-## Singularity
+### Singularity
 [Singularity](https://docs.sylabs.io/guides/3.5/user-guide/introduction.html) is a container platform designed for running applications on AI Cloud. Containers are portable and reproducible environments that bundle an application's code, libraries, and dependencies. Key features of Singularity include:
 
 - **Compatibility:** Running containers with high-performance computing workloads without requiring root privileges.
@@ -89,7 +89,7 @@ On AI Cloud, Slurm is responsible for managing the allocation and scheduling of 
 
 <hr>
 
-## Interconnection of Slurm and Singularity
+### Interconnection of Slurm and Singularity
 On AI Cloud, Slurm and Singularity work together. Slurm handles the job scheduling and resource allocation, while Singularity ensures that the specified container environment is instantiated and the application runs with all its dependencies.
 
 ``` mermaid
@@ -109,11 +109,11 @@ flowchart LR
 
 
 ## Storage
-AI Cloud utilizes [Ceph](https://docs.ceph.com/) as its storage solution, providing a robust and scalable file system for your data needs. Your files are organized within the Ceph file system hierarchy, ensuring efficient access and management across the entire platform.
+AI Cloud utilizes a [Ceph](https://docs.ceph.com/) network drive as its storage solutio. Your files are organized within the Ceph file system hierarchy, ensuring efficient access and management across the entire platform.
 
 <hr>
 
-## User Directory
+### User Directory
 Your user directory serves as the primary location for storing personal files and data. It is structured within the Ceph file system as follows:
 
 <div class="tree">
@@ -138,7 +138,7 @@ Here, [domain] represents your domain or institution (e.g., student.aau.dk), and
 
 <hr>
 
-## Shared Project Directories
+### Shared Project Directories
 AI Cloud fosters collaborative work through shared project directories. These directories enable multiple users to collaborate on projects by providing a centralized space for data sharing and collaboration. Shared project directories are organized under the project directory within the Ceph file system:
 
 <div class="tree">
@@ -172,7 +172,11 @@ mkdir <name>
 
 Please remember, that these directories should be deleted when your project is finished, and you no longer need them. They are not intended for long term data storage.
 
-## Storage quota expansions
+### Local scratch space
+
+A handful of nodes have local scratch space, which can be utilised for faster I/O operations. Read more about this possibility in the appropriate section under [Additional guides](additional-guides/local-scratch-space.md).
+
+### Storage quota expansions
 When users log in to AI Cloud for the first time, a user directory is created for them. These directories are allocated 1 TB of storage by default. This should be plenty for most users, but should you need additional space, it is possible to apply for storage quota expansions for a limited time using our [Storage quota expansions form](https://forms.office.com/e/AjT0GccAPb).
 
 !!! info

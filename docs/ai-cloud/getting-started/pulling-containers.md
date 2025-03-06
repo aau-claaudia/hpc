@@ -3,7 +3,7 @@ To run applications on AI Cloud, you must use container images. On AI Cloud we u
 !!! info "What is a container image?"
     A container image is a static, portable file that contains all the components needed to run a piece of software, including the code, runtime, system tools, libraries, and settings.
 
-## Download container images
+## Pulling container images
 You can access a wide array of container images by visiting [NVIDIA GPU Cloud (NGC)](https://catalog.ngc.nvidia.com/) and exploring whether NVIDIA provides a container image for the application you require. Refer to our guide [here](../additional-guides/download-container-images.md) for detailed instructions.
 
 <hr>
