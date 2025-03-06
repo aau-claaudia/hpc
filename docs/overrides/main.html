@@ -20,11 +20,12 @@
 
 
   <!-- Uncomment this for alert on all hpc pages -->
-    <!-- <div style="background: #ce2020;">
+    <div style="background: #ce2020;">
     <p style="text-align: center;font-size: 16px;color: white;max-width: 1500px;margin: auto;padding-left: 30px;padding-right: 30px;font-weight: 600;margin-bottom: 10px;margin-top: 10px;">
-      ⚠️ 11/2-2025 Service window on AI Cloud, Strato, UCloud VMs and UCloud Kubernetes. ⚠️</p>
+      ⚠️ Important notice: Virtual Machines on UCloud and Strato. ⚠️</p>
     <p style="text-align: center;font-size: 14px;color: white;max-width: 1500px;margin: auto;padding-left: 30px;padding-right: 30px;margin-bottom: 20px;font-weight: 400;">
-      You should expect the platforms to be offline for the entirety of the day.  </p>
-    
-  </div> -->
+      Users may experience instability in starting and stopping virtual machines on all systems that are dependent on OpenStack (Strato and the UCloud AAU provider).
+      The issue has intermittently caused some jobs to fail to start with a message that “all available resources have been allocated” even though resources are available.
+      This issue started at approximately 12:00, 05 March 2024.  </p>
+  </div>
 {% endblock %}
