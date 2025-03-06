@@ -577,5 +577,5 @@ If there are errors, inspect the error log:
 tail -f vllm_error_<job_id>.log
 ```
 
-This guide provides the foundation for running batch LLM inference using vLLM on AI-LAB. Explore the official [vLLM documentation](https://docs.vllm.ai/) for further customization and optimizations.
+This guide provides the foundation for running batch LLM inference using vLLM on AI Cloud. Explore the official [vLLM documentation](https://docs.vllm.ai/) for further customization and optimizations.
 
