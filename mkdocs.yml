@@ -99,7 +99,7 @@ nav:
     - Terms and Conditions: assets/terms-and-conditions-ai-lab.pdf
     - Fair Usage: ai-lab/fair-usage.md
     - Guides:
-      - Guide Index: ai-lab/guides/index.md
+      - Index: ai-lab/guides/index.md
       - Video Onboarding Guide: ai-lab/guides/video-onboarding-guide.md
       - Getting started:
         - 1. Prerequisites: ai-lab/guides/prerequisites.md
