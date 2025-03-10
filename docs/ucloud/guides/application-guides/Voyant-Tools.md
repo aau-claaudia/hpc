@@ -96,4 +96,4 @@ Now you can add the words you don’t want to see in your research, one term per
 
  ![VoyantApp](/assets/img/UCloud/Voyant/Billede11.png)
 
-Cliack "Save" and then "Confirm" in options
+Click "Save" and then "Confirm" in options
