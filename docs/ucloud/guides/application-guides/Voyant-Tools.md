@@ -1,9 +1,19 @@
 # Voyant Tools Guide
 
 
+
+**Approved for data classification level**
+
+<a href="https://www.security.aau.dk/data-classification" target="_blank" class="icon-container">
+    <span class="icon level-0" title="Approved for public data">0</span>
+    <span class="icon level-1" title="Approved for internal data">1</span>
+    <span class="icon level-2" title="Approved for confidential data">2</span>
+    <span class="icon level-3" title="Approved for strictly confidential data">3</span>
+</a>
+
+<br>
+
 Voyant is a text reading and analysis environment. It is possible to work with one or more texts in a variety of formats. 
-
-
 
 ## 1. Using the Voyant application 
 
