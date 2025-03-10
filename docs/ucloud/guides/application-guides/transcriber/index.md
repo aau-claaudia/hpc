@@ -9,7 +9,7 @@
     <span class="icon level-3" title="Approved for strictly confidential data">3</span>
 </a>
 
-**[Download Transcriber User Guide (PDF)](/assets/transcriber-userguide-1-1.pdf)**
+**[Download Transcriber User Guide (PDF)](/assets/transcriber-userguide-1-2.pdf)**
 
 ---
 
