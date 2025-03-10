@@ -54,7 +54,7 @@ nav:
         - Transcriber:
             - Transcriber: ucloud/guides/application-guides/transcriber/index.md
             - Transcriber guide videos: ucloud/guides/application-guides/transcriber/transcriber-video.md
-
+        - Voyant Tools: ucloud/guides/application-guides/Voyant-Tools.md
   - AI Cloud:
     - About AI Cloud: ai-cloud/index.md
     - How to access: ai-cloud/how-to-access.md
