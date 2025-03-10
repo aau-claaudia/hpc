@@ -4,36 +4,37 @@ Voyant is a text reading and analysis environment. It is possible to work with o
 ### 1.1 Finding the application 
 
 * Click on the applications button   
-
+<br>
 
   ![VoyantApp](/assets/img/UCloud/Voyant/Billede1.png)
-
+<br>
 
 * Click on search 
-
+<br>
 
   ![VoyantApp](/assets/img/UCloud/Voyant/Billede2.png) 
-
+<br>
 
 * Search ”Voyant” 
-
+<br>
 
   ![VoyantApp](/assets/img/UCloud/Voyant/Billede3.png)
 
-
+<br>
 * Click on **Voyant**
-
+<br>
 
    ![VoyantApp](/assets/img/UCloud/Voyant/Billede17.png)
-
+<br>
 
 ## 1.2 Using the application
 
 You should now see the following screen:
 
+<br>
 
    ![VoyantApp](/assets/img/UCloud/Voyant/Billede4.png)
-
+<br>
 
 There are several options here, and it can seem overwhelming. For this example, we’ll walk through the quickest way to start the app.
 
@@ -55,24 +56,26 @@ There are several options here, and it can seem overwhelming. For this example, 
 
 * We recommend the u1-standard-16.
 
+<br>
 
  ![VoyantApp](/assets/img/UCloud/Voyant/Billede5.png)
-
+<br>
 
 Feel free to test what works best for you.
 Now, you are ready to begin your work. Click **Submit** to start the process.
-
+<br>
 
  ![VoyantApp](/assets/img/UCloud/Voyant/Billede6.png)
 
-
+<br>
 * Click on “Open interface” and the application will open. 
 
 **Note:** There can be waiting time before the interface is ready for you. Just wait until it looks like this: 
 
+<br>
 
  ![VoyantApp](/assets/img/UCloud/Voyant/Billede8.png)
-
+<br>
 
 Now the application pops op in a new window and you can upload the files you would like to work on. The entire text collection you are working on is called corpus in the application. 
 
@@ -88,40 +91,46 @@ It is possible to work on one or more files and have combination of files and we
 
 * Press “Reveal” when you have all the texts for the corpus. 
 
+<br>
 
  ![VoyantApp](/assets/img/UCloud/Voyant/Billede9.png)
-
+<br>
 
 It can take some time for the application to read the corpus. Once the corpus is read you will be presented with the default skin. There are many more types of
-
+<br>
 
  ![VoyantApp](/assets/img/UCloud/Voyant/Billede10.png)
-
+<br>
 
 You can choose other options of analysis here 
 
+<br>
 
  ![VoyantApp](/assets/img/UCloud/Voyant/Billede16.png)
-
+<br>
 
 Here’s a link to the different type of analysis called “skins”  [Click Here] (https://voyant-tools.org/docs/tutorial-tools_.html)
 
 You can edit the list of “stop words” so the tools will not include the stop words. Click on “Define options for this tool”
 
+<br>
 
  ![VoyantApp](/assets/img/UCloud/Voyant/Billede12.png)
 
+<br>
 
 This window pops up and click on “Edit List” next to “Stopwords”
 
+<br>
 
  ![VoyantApp](/assets/img/UCloud/Voyant/Billede18.png)
-
+<br>
 
 Now you can add the words you don’t want to see in your research, one term per line
 
+<br>
 
  ![VoyantApp](/assets/img/UCloud/Voyant/Billede11.png)
-
+<br>
 
 Click "Save" and then "Confirm" in options
