@@ -38,7 +38,7 @@ Voyant is a text reading and analysis environment. It is possible to work with o
 
 <br>
 
-   ![VoyantApp](/assets/img/UCloud/Voyant/Billede17.png)
+   ![VoyantApp](/assets/img/UCloud/Voyant/Billede4.png)
 
 <br>
 
@@ -48,7 +48,7 @@ You should now see the following screen:
 
 <br>
 
-   ![VoyantApp](/assets/img/UCloud/Voyant/Billede4.png)
+   ![VoyantApp](/assets/img/UCloud/Voyant/Billede17.png)
 
 <br>
 
