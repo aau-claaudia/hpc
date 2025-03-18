@@ -286,17 +286,7 @@ processor](https://aaudk.sharepoint.com/sites/persondata-ressourcer/SitePages/Re
     must ensure that you comply with [GDPR regulations for
     students](https://aaudk.sharepoint.com/sites/GDPR-for-students).
 
-    a.  To assist with GDPR compliance we recommend that students
-        request a supervisor to create a project on their behalf and
-        follow the same procedures as researchers.
-
-    b.  Students cannot apply for project resources on UCloud, and you
-        therefore need a project supervisory to apply on your behalf.
-        This requires that your project supervisor assumes the
-        [responsibilities of a Principal Investigator on
-        UCloud](https://docs.cloud.sdu.dk/guide/project-overview.html#member-roles).
-        This must be discussed with your supervisor.
-
+    
 4.  All applicants for projects on UCloud must complete the [CLAAUDIA
     application form for DeiC Interactive HPC resources](https://forms.office.com/e/8Khbr1TJGC).
 
