@@ -81,7 +81,7 @@ In many cases, you will need to add additional Python packages to an existing co
     With the virtual environment created, you can now install the necessary Python packages within it.
 
     ```
-    srun singularity exec --bind ~/my-virtual-env:/my-virtual-env /ceph/container/python/python_3.10.sif /bin/bash -c "source /my-virtual-env/bin/activate && pip install numpy pandas matplotlib"
+    srun singularity exec --bind ~/my-virtual-env:/my-virtual-env /ceph/container/python/python_3.10.sif /bin/bash -c "source /my-virtual-env/bin/activate && python3 -m pip install numpy pandas matplotlib"
     ```
 
     Here’s what happens in this command:
