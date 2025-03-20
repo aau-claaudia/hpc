@@ -47,14 +47,13 @@ nav:
         - Before you begin: ucloud/guides/getting-started/before-you-begin.md
         - File transfer: ucloud/guides/getting-started/transfer-files.md
       - Guidelines for handling sensitive data: ucloud/guides/sensitive-data-on-ucloud.md
-      - Application guides:
-        - ChatUI:
-      #    - ChatUI for research: ucloud/guides/ChatUI/ChatUI-research.md 
-          - ChatUI for teachers: ucloud/guides/application-guides/ChatUI/ChatUI-teaching.md
+      - Application guides: 
+        - ChatUI: ucloud/guides/application-guides/ChatUI/index.md
         - Transcriber:
             - Transcriber: ucloud/guides/application-guides/transcriber/index.md
             - Transcriber guide videos: ucloud/guides/application-guides/transcriber/transcriber-video.md
         - Voyant Tools: ucloud/guides/application-guides/Voyant-Tools.md
+  
   - AI Cloud:
     - About AI Cloud: ai-cloud/index.md
     - How to access: ai-cloud/how-to-access.md
