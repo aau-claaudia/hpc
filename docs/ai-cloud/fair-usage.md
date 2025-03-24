@@ -1,7 +1,9 @@
-## System administration
+### System administration principles
 The CLAAUDIA team is responsible for system administration and support. We work closely with the infrastructure team in ITS on maintainance of the system.
 
 The overarching principle in our ressource administration is that we aim to strike a balance between high ressource utilisation, while still leaving the majority of users with the feeling that they can get their work done on the platform.
+
+In time periods of high resource consumption CLAAUDIA may reach out to you and ask about your consumption.
 
 ### Violations
 If we find indications of violations of these principles, CLAAUDIA will contact you to learn more about your situation. 
@@ -19,7 +21,9 @@ If possible, we recomend making good use of times with low consumption - ie. tim
 AI Cloud is designed for processing GPU-demanding batch jobs, that can be executed without the need for user interaction.
 
 ### Interactive development sessions
-By *interactive development* we mean opening jobs, where you have a GPU available to you, but you only ocassinally run commands on the GPU. This results in a very ineffective utilisation of the GPU's, and decreases overall availability. Examples of interactive development session, could be connecting a Jupyter Notebook, Spyder, VS Code to a compute node.
+By *interactive development* we mean opening jobs, where you have a GPU available to you, but you only ocassinally run commands on the GPU. This results in a very ineffective utilisation of the GPU's, risks  and decreases overall availability. Examples of interactive development session, could be connecting a Jupyter Notebook, Spyder, VS Code to a compute node. 
+
+Launching interactive jobs directly in the console is not allowed either - this could be something like: `srun --pty -G 1 singularity --nv shell`. Going in to an interactive session on a compute node, before launching your job will not release the resources automatically, when they are finished.
 
 Interactive development is allowed on [UCloud](/ucloud/).
 
