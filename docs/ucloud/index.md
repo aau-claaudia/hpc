@@ -53,7 +53,7 @@ https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/ (best, is to
 <div class="grid" markdown>
 
 === "Common use"
-    * Transcription of text with [Transcriber](/ucloud/guides/transcriber/)
+    * Transcription of text with [Transcriber](/ucloud/guides/application-guides/transcriber/)
     * Collaboration on code development
     * Creation of Jupyter Notebook and RStudio Server hosts
     * Simulation of physics and biomolecular models
