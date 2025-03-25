@@ -30,7 +30,7 @@ git pull
 ```bash
 git checkout -b newbranchname
 ```
-or using the longhand option
+Alternatively, you can do this after using the longhand option
 
 ```bash
 git branch newbranchname
@@ -108,38 +108,56 @@ Next there are ___ steps to complete the merge
 3. Merge the pull request
 4. Delete the branch on Github
 5. Delete the branch locally
+6. Prune remote links to deleted branches
 
 
-### Create a pull request
+### 1. Create a pull request
 In the Github interface, inside the [hpc page repo](https://github.com/aau-claaudia/hpc/):
 
 1. Click on the [pull request tab](https://github.com/aau-claaudia/hpc/pulls)
 2. Click **New pull request**
 3. Select the branch you want to merge into the main branch.
 
+> The changes will be displayed in a code view at the bottom of the screen.
 
-### Check the changes in the pull request
+4. Click **Create pull request**
 
-### Merge the pull request
+> Provide a title if you wish to change the title from the commit message, and notes about the changes.
+Current internal processes are that pull requests do not require a review before merging.
 
-### Delete the branch on Github
 
-### Delete the branch locally
+### 2. Check the changes in the pull request
 
+1. Open the [pull request tab](https://github.com/aau-claaudia/hpc/pulls) again.
+2. Open the pull request
+3. Check the changes in the pull request
+> If there was a review process it would happen here.
+
+### 3. Merge the pull request
+
+4. Click "Merge pull request"
+
+### 4. Delete the branch on Github
+
+Once the pull request has been merged, there is a button available to delete the branch.
+
+*If you miss this opportunity, then you find and delete the branch from the repo.*
+
+1. Return to the [hpc page repo](https://github.com/aau-claaudia/hpc/).
+2. Click on the [branches](https://github.com/aau-claaudia/hpc/branches) button under the [Code tab](https://github.com/aau-claaudia/hpc).
+3. Find the branch that you have just merged, and click the trashcan icon to the right.
+
+### 5. Delete the branch locally
 
 Once all changes have been merged, the branch can be deleted
-This should be done on github first, and then locally.
 
-## Additional common commandline tools
-
-
-### Rename a branch
+**This should be done on github first, and then locally.**
 
 ```bash
-git branch -m old_branch_name new_branch_name
+git branch -d branch_name
 ```
 
-### Prune remote links to deleted branches
+### 6. Prune remote links to deleted branches
 
 The prune command can then be used to remove any remote links to deleted branches. I.e. if you have a local branch that is set to track an online branch (i.e. upstream) then those links can be removed via pruning.
 
@@ -153,15 +171,13 @@ git fetch --prune
 git branch -d branchname
 ```
 
-Next, a pull request is needed to incorporate the changes into the main branch
+## Additional common commandline tools
 
+### Rename a branch
 
-
-
-
-If there are uncommitted changes, or commits that have not been merged, this will return an error.
-
-Check git status one more time, and if you are certain you want to delete the branch, you can force the delete with the -D flag.
+```bash
+git branch -m old_branch_name new_branch_name
+```
 
 ### Force delete a branch locally
 ```bash
