@@ -13,7 +13,7 @@ To start using the CLAAUDIA LLM platform, please follow these steps:
 
 ## API Endpoints
 
-Cerate a new Bearer API key from **Settings > Account** in the Open WebU. To test the connection you can fetch all models by using:
+Cerate a new Bearer API key from **Settings > Account**. To test the connection you can fetch all models by using:
 
 ```
 curl -H "Authorization: Bearer YOUR_API_KEY" http://10.92.1.195:3000/api/models
