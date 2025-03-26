@@ -1,4 +1,4 @@
-# CLAAUDIA LLM Platform
+# CLAAUDIA LLM
 This is a PoC for a local LLM platform at AAU. The platform runs on Strato with 6 NVIDIA T4 GPUs and utilizes Open WebUI and Ollama for model management and interaction. Open WebUI provides a user-friendly interface, while Ollama handles model execution and optimization. Researchers can create groups and collaborate on RAG systems by integrating their own datasets. The goal is to create a flexible, GPU-optimized solution for research use.
 
 ## Getting started
@@ -13,7 +13,7 @@ To start using the CLAAUDIA LLM platform, please follow these steps:
 
 ## API Endpoints
 
-Obtain your API key from **Settings > Account** in the Open WebU. Then create a new API Key. To test the connection you can fetch all models by using:
+Cerate a new Bearer API key from **Settings > Account** in the Open WebU. To test the connection you can fetch all models by using:
 
 ```
 curl -H "Authorization: Bearer YOUR_API_KEY" http://10.92.1.195:3000/api/models
@@ -26,7 +26,7 @@ curl -X POST http://10.92.1.195:3000/api/chat/completions \
 -H "Authorization: Bearer YOUR_API_KEY" \
 -H "Content-Type: application/json" \
 -d '{
-      "model": "llama3.1",
+      "model": "mistral:7b",
       "messages": [
         {
           "role": "user",
