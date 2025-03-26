@@ -162,14 +162,14 @@ Here, [domain] represents your domain or institution (e.g., student.aau.dk), and
     When users log in to AI-LAB for the first time, a user directory is created for them. These directories are allocated 1 TB of storage by default. When you log in to the platform, you can see your storage usage of the user directory at the very top line:
 
     ```
-    Current quota usage: 181GiB / 1.0TiB
-    Welcome to Ubuntu 20.04.6 LTS (GNU/Linux 5.4.0-169-generic x86_64)
+    Disk usage and quota for /ceph/home/student.aau.dk/user: 128GiB / 1.0TiB
+    Welcome to Ubuntu 22.04.5 LTS (GNU/Linux 5.15.0-131-generic x86_64)
 
     * Documentation:  https://help.ubuntu.com
     * Management:     https://landscape.canonical.com
     * Support:        https://ubuntu.com/pro
 
-    System information as of Fri Mar 15 11:09:21 CET 2024
+    System information as of Wed Mar 26 07:57:43 CET 2025
     ```
 
 <hr>
