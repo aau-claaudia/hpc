@@ -48,7 +48,7 @@ cat my_job.out
 ## Adding Python packages via virtual environment
 In many cases, you will need to add additional Python packages to an existing container. The easiest way to do this, is using a virtual environment. The guide below outlines the steps to create and utilize a virtual environment within your directory on AI-LAB.
 
-??? news "Guide on adding Python packages via virtual environment"
+??? info "Guide on adding Python packages via virtual environment"
     To enhance the functionality of a containerized environment, you can add additional Python packages using a virtual environment. This guide outlines the steps to create and utilize a virtual environment within a Singularity container to ensure compatibility between different Python versions.
 
     ### Step 1: Create a virtual environment inside a Singularity container.
@@ -116,7 +116,7 @@ In many cases, you will need to add additional Python packages to an existing co
 ## Cancelling jobs
 There are several scenarios where you might need to cancel jobs, such as when a job is stuck, running longer than expected, or you realize that the job parameters were set incorrectly. Here’s a guide on how to cancel jobs with Slurm.
 
-??? news "Guide on cancelling jobs"
+??? info "Guide on cancelling jobs"
 
     ### Checking Job Status
     Before cancelling a job, it’s often useful to check its current status or job ID. You can list your currently running or queued jobs using the squeue command:

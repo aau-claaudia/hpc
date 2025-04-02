@@ -37,7 +37,7 @@ For a detailed overview of the AI-LAB storage system, click [here](/ai-lab/syste
 
 As you've properly noticed, working on AI-LAB involves navigating a **Linux** environment. Whether you're managing files or editing scripts, familiarity with a few core Linux commands can make your workflow smoother. If you’re completely new to Linux or just need a quick refresher, explore the commands below.
 
-??? news "Basic Linux commands to know"
+??? info "Basic Linux commands to know"
 
     Below are some basic commands that will help you navigate and manage files on AI-LAB:
 
@@ -135,7 +135,7 @@ As you've properly noticed, working on AI-LAB involves navigating a **Linux** en
 
 On AI-LAB, semester groups can collaborate by creating shared project directories in `/ceph/project`. Follow the guide below to set up a project directory and ensure that only group members can access it.
 
-??? news "Guide on how to create shared project directories"
+??? info "Guide on how to create shared project directories"
 
 	!!! info "Note: This guide only works between users in a semester group"
 		Unfortunately you cannot create a private shared directory for specific users that are not part of a semester group. Therefore, you can only create a public available project directory.

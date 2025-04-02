@@ -77,7 +77,7 @@ nodesummary
 ## Checking GPU utilization
 Monitoring GPU utilization is a good practice for optimizing the performance of your jobs running, particularly if you intend to utilize multiple GPUs and verify their utilization. The guide below will provide step-by-step instructions on how to monitor GPU utilization using a Python script.
 
-??? news "Guide on how to check GPU utilization"
+??? info "Guide on how to check GPU utilization"
 
     ### Start a job with GPU allocation
 

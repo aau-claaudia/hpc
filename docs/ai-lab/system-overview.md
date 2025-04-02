@@ -1,3 +1,6 @@
+AI-LAB is a high-performance computing (HPC) platform developed for students and educators at Aalborg University. It functions like a mini supercomputer, equipped with advanced hardware, including NVIDIA GPUs, designed to handle computationally intensive tasks. Whether you're training deep learning models, analyzing large datasets, processing images and videos, or running complex simulations, AI-LAB provides the necessary power and flexibility.
+
+The platform integrates user-friendly software, such as PyTorch, TensorFlow, and MATLAB, and utilizes tools like Slurm for job scheduling and Singularity for containerization, making it accessible even to those with limited technical expertise.
 
 ## Hardware
 The AI-LAB platform is built around several key components, including two front-end nodes for managing tasks and code, and 11 compute nodes equipped with diverse hardware options.

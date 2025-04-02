@@ -5,134 +5,130 @@ site_description: The AAU HPC pages offers comprehensive information on high-per
 copyright: Copyright &copy; 2024 CLAAUDIA
 
 nav:
-  - About HPC:
-    - About HPC: index.md
-    #- Definition Library: definition-library.md
-    - HPC Decision Tree: hpc-decision-tree.md
-    - Service windows: service-windows.md
+  - Home:
+      - About HPC: index.md
+      - Service windows: service-windows.md
+      - HPC Decision Tree: hpc-decision-tree.md
+      - HPC Comparison Tree: hpc-comparison-table.md
+      - HPC Cost Estimator: hpc-cost-estimator.md
   - Strato:
-    - About Strato: strato/index.md
-    - How to access: strato/how-to-access.md
-    - Terms and Conditions: strato/terms-and-conditions.md
-    - Guides:
-      - Getting started:
-        - Before you begin: strato/getting-started/index.md
-        - Launch instance: strato/getting-started/launch-instance.md
-        - Access instance: strato/getting-started/access-instance.md
-        - Transfer files: strato/getting-started/transfer-files.md
-        - Shutting down: strato/getting-started/shutting-down.md
-      - Application guides:
-          - Strato applications: strato/application-guides/strato-applications.md
-          - Matlab: strato/application-guides/matlab.md
-          - Jupyter Notebook: strato/application-guides/jupyter-notebook.md
-          - Docker: strato/application-guides/docker.md
-      - Advanced guides:
-        - Command line interface access: strato/advanced-guides/command-line-interface-access.md
-        - Custom security groups: strato/advanced-guides/custom-security-groups.md
-        - Attaching a volume for additional storage: strato/advanced-guides/attaching-a-volume-for-additional-storage.md
-        - Persistent terminal sessions: strato/advanced-guides/persistent-terminal-sessions.md
-      - Best-practice guides:
-        - Delete and restart an instance from the volume: strato/best-practice-guides/delete-and-restart-an-instance-from-the-volume.md
-        - Stop, pause & delete instances: strato/best-practice-guides/stop-pause-and-delete-instances.md
-        - Create smaller volumes: strato/best-practice-guides/create-smaller-volumes.md
-        - How to Minimize the Risk of Malware: strato/best-practice-guides/how-to-minimize-the-risk-of-malware.md
+      - About Strato: strato/index.md
+      - How to access: strato/how-to-access.md
+      - Terms and Conditions: strato/terms-and-conditions.md
+      - Guides:
+          - Getting started:
+              - Before you begin: strato/getting-started/index.md
+              - Launch instance: strato/getting-started/launch-instance.md
+              - Access instance: strato/getting-started/access-instance.md
+              - Transfer files: strato/getting-started/transfer-files.md
+              - Shutting down: strato/getting-started/shutting-down.md
+          - Application guides:
+              - Strato applications: strato/application-guides/strato-applications.md
+              - Matlab: strato/application-guides/matlab.md
+              - Jupyter Notebook: strato/application-guides/jupyter-notebook.md
+              - Docker: strato/application-guides/docker.md
+          - Advanced guides:
+              - Command line interface access: strato/advanced-guides/command-line-interface-access.md
+              - Custom security groups: strato/advanced-guides/custom-security-groups.md
+              - Attaching a volume for additional storage: strato/advanced-guides/attaching-a-volume-for-additional-storage.md
+              - Persistent terminal sessions: strato/advanced-guides/persistent-terminal-sessions.md
+          - Best-practice guides:
+              - Delete and restart an instance from the volume: strato/best-practice-guides/delete-and-restart-an-instance-from-the-volume.md
+              - Stop, pause & delete instances: strato/best-practice-guides/stop-pause-and-delete-instances.md
+              - Create smaller volumes: strato/best-practice-guides/create-smaller-volumes.md
+              - How to Minimize the Risk of Malware: strato/best-practice-guides/how-to-minimize-the-risk-of-malware.md
 
   - UCloud:
-    - About UCloud: ucloud/index.md
-    - How to access: ucloud/how-to-access.md
-    - Terms and Conditions: ucloud/terms-and-conditions.md
-    - External collaborators: ucloud/external-collaborator.md
-    - Providers: ucloud/providers.md
-    - Guides:
-      - Getting started:
-        - Before you begin: ucloud/guides/getting-started/before-you-begin.md
-        - File transfer: ucloud/guides/getting-started/transfer-files.md
-      - Guidelines for handling sensitive data: ucloud/guides/sensitive-data-on-ucloud.md
-      - Application guides: 
-        - ChatUI: ucloud/guides/application-guides/ChatUI/index.md
-        - Transcriber:
-            - Transcriber: ucloud/guides/application-guides/transcriber/index.md
-            - Transcriber guide videos: ucloud/guides/application-guides/transcriber/transcriber-video.md
-        - Voyant Tools: ucloud/guides/application-guides/Voyant-Tools.md
-  
+      - About UCloud: ucloud/index.md
+      - How to access: ucloud/how-to-access.md
+      - Terms and Conditions: ucloud/terms-and-conditions.md
+      - External collaborators: ucloud/external-collaborator.md
+      - Providers: ucloud/providers.md
+      - Guides:
+          - Getting started:
+              - Before you begin: ucloud/guides/getting-started/before-you-begin.md
+              - File transfer: ucloud/guides/getting-started/transfer-files.md
+          - Guidelines for handling sensitive data: ucloud/guides/sensitive-data-on-ucloud.md
+          - Application guides:
+              - ChatUI: ucloud/guides/application-guides/ChatUI/index.md
+              - Transcriber:
+                  - Transcriber: ucloud/guides/application-guides/transcriber/index.md
+                  - Transcriber guide videos: ucloud/guides/application-guides/transcriber/transcriber-video.md
+              - Voyant Tools: ucloud/guides/application-guides/Voyant-Tools.md
+
   - AI Cloud:
-    - About AI Cloud: ai-cloud/index.md
-    - How to access: ai-cloud/how-to-access.md
-    - System overview: ai-cloud/system-overview.md
-    - Terms and Conditions: ai-cloud/terms-and-conditions.md
-    - Fair usage: ai-cloud/fair-usage.md
-    - Guides:
-      - Getting started:
-        - Before you begin: ai-cloud/getting-started/index.md
-        - Login: ai-cloud/getting-started/login.md
-        - File transfer: ai-cloud/getting-started/file-transfer.md
-        - Pulling containers: ai-cloud/getting-started/pulling-containers.md
-        - Running jobs: ai-cloud/getting-started/running-jobs.md
-        - Next steps: ai-cloud/getting-started/next-steps.md
-      - Additional guides:
-        - Checkpointing: ai-cloud/additional-guides/checkpointing.md
-        - Container guides:
-          - Building your own container image: ai-cloud/additional-guides/building-your-own-container-image.md
-          - Download container images: ai-cloud/additional-guides/download-container-images.md
-          - Adding python packages via virtual environment: ai-cloud/additional-guides/adding-python-packages-via-virtual-environment.md
-          - Creating a conda environment: ai-cloud/additional-guides/creating-a-conda-environment.md
-        - Local scratch space: ai-cloud/additional-guides/local-scratch-space.md
-        - Monitoring commands:
-          - Checking the queue: ai-cloud/additional-guides/checking-the-queue.md
-          - Checking the status of compute nodes: ai-cloud/additional-guides/checking-the-status-of-compute-nodes.md
-          - Checking GPU usage: ai-cloud/additional-guides/checking-gpu-usage.md
-        - Running jobs:
-          - Run a batch script: ai-cloud/additional-guides/run-a-batch-script.md
-          - Multiple GPUs with PyTorch: ai-cloud/additional-guides/multiple-gpus-with-pytorch.md
-        - Slurm arguments:
-          - CPU, GPU, and memory allocation: ai-cloud/additional-guides/cpu-gpu-and-memory-allocation.md
-          - Setting a time limit: ai-cloud/additional-guides/setting-a-time-limit.md
-          - Cancelling jobs: ai-cloud/additional-guides/cancelling-jobs.md
-        - Checkpointing: ai-cloud/additional-guides/checkpointing.md
-        - Batch LLM Inference: ai-cloud/additional-guides/batch-llm-inference.md
+      - About AI Cloud: ai-cloud/index.md
+      - How to access: ai-cloud/how-to-access.md
+      - System overview: ai-cloud/system-overview.md
+      - Terms and Conditions: ai-cloud/terms-and-conditions.md
+      - Fair usage: ai-cloud/fair-usage.md
+      - Guides:
+          - Getting started:
+              - Before you begin: ai-cloud/getting-started/index.md
+              - Login: ai-cloud/getting-started/login.md
+              - File transfer: ai-cloud/getting-started/file-transfer.md
+              - Pulling containers: ai-cloud/getting-started/pulling-containers.md
+              - Running jobs: ai-cloud/getting-started/running-jobs.md
+              - Next steps: ai-cloud/getting-started/next-steps.md
+          - Additional guides:
+              - Checkpointing: ai-cloud/additional-guides/checkpointing.md
+              - Container guides:
+                  - Building your own container image: ai-cloud/additional-guides/building-your-own-container-image.md
+                  - Download container images: ai-cloud/additional-guides/download-container-images.md
+                  - Adding python packages via virtual environment: ai-cloud/additional-guides/adding-python-packages-via-virtual-environment.md
+                  - Creating a conda environment: ai-cloud/additional-guides/creating-a-conda-environment.md
+              - Local scratch space: ai-cloud/additional-guides/local-scratch-space.md
+              - Monitoring commands:
+                  - Checking the queue: ai-cloud/additional-guides/checking-the-queue.md
+                  - Checking the status of compute nodes: ai-cloud/additional-guides/checking-the-status-of-compute-nodes.md
+                  - Checking GPU usage: ai-cloud/additional-guides/checking-gpu-usage.md
+              - Running jobs:
+                  - Run a batch script: ai-cloud/additional-guides/run-a-batch-script.md
+                  - Multiple GPUs with PyTorch: ai-cloud/additional-guides/multiple-gpus-with-pytorch.md
+              - Slurm arguments:
+                  - CPU, GPU, and memory allocation: ai-cloud/additional-guides/cpu-gpu-and-memory-allocation.md
+                  - Setting a time limit: ai-cloud/additional-guides/setting-a-time-limit.md
+                  - Cancelling jobs: ai-cloud/additional-guides/cancelling-jobs.md
+              - Checkpointing: ai-cloud/additional-guides/checkpointing.md
+              - Batch LLM Inference: ai-cloud/additional-guides/batch-llm-inference.md
 
   - AI-LAB:
-    - About AI-LAB: ai-lab/index.md
-    - How to access: ai-lab/how-to-access.md
-    - System overview: ai-lab/system-overview.md
-    - Troubleshooting:  ai-lab/troubleshooting.md
-    - Terms and Conditions: assets/terms-and-conditions-ai-lab.pdf
-    - Fair Usage: ai-lab/fair-usage.md
-    - Guides:
-      - Index: ai-lab/guides/index.md
-      - Video Onboarding Guide: ai-lab/guides/video-onboarding-guide.md
-      - Getting started:
-        - 1. Prerequisites: ai-lab/guides/prerequisites.md
-        - 2. Login: ai-lab/guides/login.md
-        - 3. File Handling: ai-lab/guides/file-handling.md
-        - 4. Running Jobs: ai-lab/guides/running-jobs.md
-        - 5. Getting Containers: ai-lab/guides/getting-containers.md
-        - 6. Using Containers: ai-lab/guides/using-containers.md
-        - 7. Monitoring: ai-lab/guides/monitoring.md
-      - Additional Guides: 
-        - Batch LLM Inference: ai-lab/guides/batch-llm-inference.md
-        - Checkpointing: ai-lab/guides/checkpointing.md
-        - Requeuing jobs: ai-lab/guides/requeuing-jobs.md
-        - CI/CD with GitHub Actions: ai-lab/guides/ci-cd-with-github-actions.md
+      - About AI-LAB: ai-lab/index.md
+      - How to access: ai-lab/how-to-access.md
+      - System overview: ai-lab/system-overview.md
+      - Troubleshooting: ai-lab/troubleshooting.md
+      - Terms and Conditions: assets/terms-and-conditions-ai-lab.pdf
+      - Fair Usage: ai-lab/fair-usage.md
+      - Guides:
+          - Index: ai-lab/guides/index.md
+          - Video Onboarding Guide: ai-lab/guides/video-onboarding-guide.md
+          - Getting started:
+              - 1. Prerequisites: ai-lab/guides/prerequisites.md
+              - 2. Login: ai-lab/guides/login.md
+              - 3. File Handling: ai-lab/guides/file-handling.md
+              - 4. Running Jobs: ai-lab/guides/running-jobs.md
+              - 5. Getting Containers: ai-lab/guides/getting-containers.md
+              - 6. Using Containers: ai-lab/guides/using-containers.md
+              - 7. Monitoring: ai-lab/guides/monitoring.md
+          - Additional Guides:
+              - Batch LLM Inference: ai-lab/guides/batch-llm-inference.md
+              - Checkpointing: ai-lab/guides/checkpointing.md
+              - Requeuing jobs: ai-lab/guides/requeuing-jobs.md
+              - CI/CD with GitHub Actions: ai-lab/guides/ci-cd-with-github-actions.md
 
   - External HPC:
-    - About external HPC resources: external-hpc/index.md
-    - DeiC HPC: external-hpc/deic-hpc.md
-    - EuroHPC: external-hpc/eurohpc.md
-
-  - <span class="nav-divider"></span>: ""
-
-  # Custom support button
-  - Get Support: https://serviceportal.aau.dk/serviceportal?id=emp_taxonomy_topic&topic_id=82a253e8838fc21053711d447daad328" target="_blank" class="support-btn md-tabs__link"
+      - About external HPC resources: external-hpc/index.md
+      - DeiC HPC: external-hpc/deic-hpc.md
+      - EuroHPC: external-hpc/eurohpc.md
 
 theme:
   name: material
   custom_dir: docs/overrides
   features:
     - navigation.tabs
+    - navigation.tabs.sticky
     - content.code.copy
     - content.code.annotate
-    - navigation.prune
     - navigation.sections
     - toc.integrate
 
@@ -141,7 +137,7 @@ theme:
 
   font:
     text: barlow
- 
+
   language: en
 
   icon:
@@ -159,7 +155,7 @@ markdown_extensions:
       toc_depth: 2
   - pymdownx.superfences
   - pymdownx.tabbed:
-      alternate_style: true 
+      alternate_style: true
   - pymdownx.inlinehilite
   - pymdownx.keys
   - pymdownx.mark

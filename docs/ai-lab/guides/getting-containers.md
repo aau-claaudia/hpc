@@ -36,7 +36,7 @@ You can download a wide range of pre-built containers by visiting websites such 
 
 Check out the guide below for detailed instructions on how to download the containers.
 
-??? news "Guide on how to download containers"
+??? info "Guide on how to download containers"
 
     ### NVIDIA NGC Catalog
 
@@ -92,7 +92,7 @@ You also have the flexibility to create your own container tailored to your spec
 
 Check out the guide below for detailed instructions on building your own container:
 
-??? news "Guide on how to build your own container"
+??? info "Guide on how to build your own container"
     It is possible to define and build your own container with Singularity. Lets try creating a simple Singularity container with Python and pip installed. 
 
     First we need to create a [Singularity definition file](https://docs.sylabs.io/guides/3.0/user-guide/definition_files.html){target=_blank} (`.def`). This definition file is a blueprint for how Singularity should build the container. It includes information about the base OS to build, which software to install and several other options.
