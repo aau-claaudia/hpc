@@ -4,15 +4,6 @@ All Aalborg University users automatically have access to UCloud and can simply 
 
 [Log in to UCloud](https://cloud.sdu.dk/app/dashboard){target="_blank}
 
-
-!!! info "UCloud users at AAU must be familiar with the details of the following codes of conduct and policies:"
-    * [The Danish Code of Conduct for Research Integrity](https://ufm.dk/en/publications/2014/the-danish-code-of-conduct-for-research-integrity)
-    * [AAU Policy for Research Data Management](https://www.ansatte.aau.dk/regler/forskning/politik-for-handtering-af-forskningsdata)
-    * [AAU policies for GDPR](https://aaudk.sharepoint.com/sites/persondata/SitePages/In%20English.aspx)
-    * [AAU data management recommendations](https://www.researcher.aau.dk/guides/research-data/data-management)
-
-    These policies cover the general rules all researchers (and students and TAP staff for GDPR) should abide by with regards to what kind of data may be kept, for how long, whether data can be re-used or recycled, and how long it should be archived for, etc.
-
 ## Projects
 If you require a larger CPU quota, a GPU resource, a Virtual machine or are working with sensitive data; you can apply for a **project** from CLAAUDIA's local resources.
  

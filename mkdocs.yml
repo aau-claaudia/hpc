@@ -6,7 +6,7 @@ copyright: Copyright &copy; 2024 CLAAUDIA
 
 nav:
   - Home:
-      - About HPC: index.md
+      - Home: index.md
       - Service windows: service-windows.md
       - Tools:
         - HPC Decision Tree: hpc-decision-tree.md
