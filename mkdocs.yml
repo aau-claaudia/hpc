@@ -8,9 +8,10 @@ nav:
   - Home:
       - About HPC: index.md
       - Service windows: service-windows.md
-      - HPC Decision Tree: hpc-decision-tree.md
-      - HPC Comparison Tree: hpc-comparison-table.md
-      - HPC Cost Estimator: hpc-cost-estimator.md
+      - Tools:
+        - HPC Decision Tree: hpc-decision-tree.md
+        - HPC Comparison Tree: hpc-comparison-table.md
+        - HPC Cost Estimator: hpc-cost-estimator.md
   - Strato:
       - About Strato: strato/index.md
       - How to access: strato/how-to-access.md
