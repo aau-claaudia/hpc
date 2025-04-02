@@ -14,5 +14,5 @@ If you require a larger CPU quota, a GPU resource, a Virtual machine or are work
         * If you don't have a WorkZone case number you can apply Grants and Contracts using their [registration form](https://aaudk.sharepoint.com/sites/persondata-ressourcer/SitePages/Registrations%20og%20reports%20(Online%20forms).aspx){target="_blank}.
     * **Student:** You cannot register projects with Grants and Contracts. As a student you are personally responsible for any data you collect. You must ensure that you comply with [GDPR regulations for students](https://aaudk.sharepoint.com/sites/GDPR-for-students).
     * **All:** Only SDU compute resources may be used to handle sensitive data.
-    * **ALL:** To get started read our guide on how to handle sensitive data on UCloud.
+    * **ALL:** To get started read [our guide](/ucloud/guides/sensitive-data-on-ucloud/) on how to handle sensitive data on UCloud.
 
