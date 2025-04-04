@@ -20,19 +20,19 @@ Download the Matlab Package Manager (MPM) from Mathworks and make it executable:
 sudo wget -P /usr/local/bin/ https://www.mathworks.com/mpm/glnxa64/mpm && sudo chmod +x /usr/local/bin/mpm
 ```
 
-Now install Matlab using MPM. Note that here we are installing a version from early. You can check [Mathworks website]("https://se.mathworks.com/help/matlab/release-notes.html") to see if there is a newer release.
+Install Matlab using MPM. Note that here we will be installing a version from late 2024 - check [Mathworks website]("https://se.mathworks.com/help/matlab/release-notes.html") for a newer release.
 ```
-mpm install MATLAB --release=R2024b --destination=$HOME/matlab/
-```
-
-As we want to be able to launch matlab, when we type `matlab` - we will need to add the directory where the matlab executable is located to our `$PATH` variable. We do this and restart our shell:
-```
-echo "export PATH=$HOME/matlab/bin:$PATH" >> .bashrc
+mpm install MATLAB --release=R2024b --destination=$HOME/.local/matlab/
 ```
 
-After this has been updated, we can restart our shell
+To be able to launch Matlab when we type `matlab` - we will need to add the directory where *the matlab executable* is found to our `$PATH` variable. We can make this addition permanent by writing to the file `.bashrc`, which is read every time a new shell session starts.
 ```
-exec bash
+echo 'export PATH=$HOME/.local/matlab/bin:$PATH' >> $HOME/.bashrc
+```
+
+We source the `.bashrc`-file, to apply these changes to the current session.
+```
+source $HOME/.bashrc
 ```
 
 ### Installing aditional toolboxes
@@ -46,46 +46,32 @@ If you cannot find a toolbox you need, it might be unavailable for the Matlab re
 
 ## Running Matlab
 
-There are two ways in which you can work with Matlab on Strato instances.
-
-1. [Run the application as a command line interface (CLI)](/strato/application-guides/strato-applications/#command-line-interfaces): By default Strato instances do not come with any graphical user interfaces, but are operated in headless mode. In cases where you simply need to execute a prewritten script, this approach might be preferable.
-2. [Run with graphical user interface (GUI)](/strato/application-guides/strato-applications/#graphical-user-interfaces): Here the application runs on your Strato instance, but its graphics are rendered on your local computer - in this case your web browser. This is useful for interactive development, ie. workflows where you will need to test and modify your code continuously.
-
-### As CLI
-*... this section is currently broken. We are working on solving the issue.* 
-
-### With a GUI
-
-Here we will be running the application on the Strato instance but rendering the application's graphics in the webbrowser of your local computer. In order for your local computer to receive the datastream from the server, we will need to add a small detail to our SSH command.
+In the following example, we will be running Matlab on the Strato instance, but rendering the application's graphics in the webbrowser of your local computer. In order for your local computer to receive the datastream from the server, we will need to add a small detail to our SSH command.
 ``` 
 ssh -i ~/.ssh/my_ssh_key -L 8888:localhost:8888 <user>@<instance_ip>
 ```
 
-This establishes port-forwarding from your instance to the `localhost` of your computer. If you did not do this when you logged in to your instance, simply log out and log back in with these details added.
+This establishes a connection between your Strato instance and a network adress on your computer (`localhost`). If you did not do this when you logged in to your instance, simply log out and log back in with these details added.
 
-Now let's proceed with the install. Start by checking if PIP is found on the system: 
-```
-which pip
-```
+Now let's proceed with the install. We will install `pip` along with some dependencies.
 
-If the command ouputs a path, PIP is installed. If command outputs `pip not found`, go ahead and install it by running:
 ```
 sudo apt install python3-pip python3-dev python3-venv
 ```
 
-On newer Linux distributions, you will not be able to install Pip modules system wide - they must be installed in a virtual environment. Let's create one with:
+On modern Linux distributions, you will not be able to install Pip modules system wide - they must be installed in a virtual environment. Let's create one with:
 ```
-python3 -m venv $HOME/matlab-venv
+python3 -m venv $HOME/.local/matlab-venv
 ```
 
 Finally we can activate the virtual environment before installing:
 ```
-source $HOME/matlab-venv/bin/activate
+source $HOME/.local/matlab-venv/bin/activate
 ```
 
-The virtual environment is not loaded by default, when you log in to the server. You will have to either run `source` command (shown above), or run this command, to add the source command to your .bashrc file (this file is sourced on login).
+The virtual environment is not loaded by default, when you log in to the instance. You will have to either run `source` command (shown above), or run this command, to add the source command to your .bashrc file (this file is sourced on login).
 ```
-echo "source $HOME/matlab-venv/bin/activate" >> .bashrc
+echo "source $HOME/.local/matlab-venv/bin/activate" >> .bashrc
 ```
 
 With the virtual environment activated, you can now install the Jupyter Kernel with:
@@ -120,4 +106,3 @@ Wait for the license to be acquired. This may take a few minutes.
 After this step, you should be inside the application and everything should feel familiar.
 
 ![Matlab running inside a browser window](/assets/img/matlab_in_browserwindow.png)
-
