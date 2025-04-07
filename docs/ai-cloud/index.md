@@ -49,7 +49,14 @@
 
 ## Introduction
 
-AI Cloud is a GPU cluster made up of a collecton of NVIDIA GPU's, designed for processing GPU-demanding machine learning workloads. The platform is accessed through a terminal application on the user's local machine. From here the user logs in to a front end node, where files management and job submission to the compute nodes takes place. 
+AI Cloud is a GPU cluster made up of a collecton of NVIDIA GPU's, designed for processing GPU-demanding machine learning workloads. The platform is accessed through a terminal application on the user's local machine. From here the user logs in to a front end node, where files management and job submission to the compute nodes takes place.
+
+<div class="video-container">
+  <iframe src="https://panopto.aau.dk/Panopto/Pages/Embed.aspx?id=bc2671ac-38d8-4e00-9f81-b2b800c519c5&amp;autoplay=false&amp;offerviewer=true&amp;showtitle=false&amp;showbrand=true&amp;captions=false&amp;interactivity=all"
+          allowfullscreen=""
+          allow="autoplay"
+          style="border: 1px solid #464646;"></iframe>
+</div>
 
 ## Getting Started
 

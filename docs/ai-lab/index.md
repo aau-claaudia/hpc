@@ -54,6 +54,13 @@
 ## Introduction
 AI-LAB is designed exclusively for students at Aalborg University, offering high-performance computing (HPC) right at your fingertips. Think of it as a mini supercomputer, packed with GPUs, making it a perfect playground for training deep learning models, running simulations, and performing high-speed data analysis.
 
+<div class="video-container">
+  <iframe src="https://panopto.aau.dk/Panopto/Pages/Embed.aspx?id=ca815ae2-352b-4d2e-942f-b2b800bfa7e3&amp;autoplay=false&amp;offerviewer=true&amp;showtitle=false&amp;showbrand=true&amp;captions=false&amp;interactivity=all"
+          allowfullscreen=""
+          allow="autoplay"
+          style="border: 1px solid #464646;"></iframe>
+</div>
+
 ## Getting Started
 
 <div class="custom-grid-3">
@@ -92,15 +99,6 @@ AI-LAB is designed exclusively for students at Aalborg University, offering high
         <p class="custom-grid-feature">AI-LAB uses Slurm for seamless job scheduling, enabling easy batch processing and background task management.</p>
         <img src="/assets/img/ai-lab/ai-lab-feature-3.png">
     </div>
-</div>
-
-## Onbaording Guide
-
-<div class="video-container">
-  <iframe src="https://panopto.aau.dk/Panopto/Pages/Embed.aspx?id=b770c467-06cf-426e-9e3c-b27500c2d88f&amp;autoplay=false&amp;offerviewer=true&amp;showtitle=true&amp;showbrand=true&amp;captions=false&amp;interactivity=all"
-          allowfullscreen=""
-          allow="autoplay"
-          style="border: 1px solid #464646;"></iframe>
 </div>
 
 ## Common Use Cases

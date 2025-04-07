@@ -49,6 +49,13 @@ Find the most suitable system for your project. You can also complete the [HPC D
     </div>
 </div>
 
+<div class="video-container">
+  <iframe src="https://panopto.aau.dk/Panopto/Pages/Embed.aspx?id=cbfb191c-fde8-4dec-998e-b2b800ba6b03&amp;autoplay=false&amp;offerviewer=true&amp;showtitle=false&amp;showbrand=true&amp;captions=false&amp;interactivity=all"
+          allowfullscreen=""
+          allow="autoplay"
+          style="border: 1px solid #464646;"></iframe>
+</div>
+
 ## External HPC
 
 <div class="custom-grid-4">

@@ -55,6 +55,13 @@
 
 UCloud is a HPC research platform, engineered to provide high-performance computing with a focus on ease of use. UCloud provides an intuitive graphical user interface to powerful interactive high-performance computing and tools for data analytics and visualization. UCloud offers an “Apps” section preloaded with popular applications and more applications can be customized and uploaded on-demand.
 
+<div class="video-container">
+  <iframe src="https://panopto.aau.dk/Panopto/Pages/Embed.aspx?id=a99ac46e-bab4-4b2a-809b-b2b800ceb5fc&amp;autoplay=false&amp;offerviewer=true&amp;showtitle=false&amp;showbrand=true&amp;captions=false&amp;interactivity=all"
+          allowfullscreen=""
+          allow="autoplay"
+          style="border: 1px solid #464646;"></iframe>
+</div>
+
 ## Getting Started
 
 <div class="custom-grid-3">
