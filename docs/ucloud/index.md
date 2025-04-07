@@ -85,8 +85,8 @@ UCloud is a HPC research platform, engineered to provide high-performance comput
         <img src="/assets/img/UCloud/ucloud-feature-1.png">
     </div>
     <div class="custom-grid-item">
-        <h2>Collaboration Tool</h2>
-        <p class="custom-grid-feature">Easily share data within secure virtual environments, supporting limitless projects and team members.</p>
+        <h2>Secure, cloud-based resources</h2>
+        <p class="custom-grid-feature">UCloud is designed to handle data at different [security levels](https://www.security.aau.dk/data-classification), and is especially handy if you’re working with sensitive data.</p>
         <img src="/assets/img/UCloud/ucloud-feature-2.png">
     </div>
     <div class="custom-grid-item">

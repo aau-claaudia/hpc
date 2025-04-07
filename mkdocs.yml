@@ -10,7 +10,7 @@ nav:
       - Service windows: service-windows.md
       - Tools:
         - HPC Decision Tree: hpc-decision-tree.md
-        - HPC Comparison Tree: hpc-comparison-table.md
+        - HPC Comparison Table: hpc-comparison-table.md
         - HPC Cost Estimator: hpc-cost-estimator.md
   - Strato:
       - About Strato: strato/index.md
