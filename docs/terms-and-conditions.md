@@ -389,12 +389,10 @@ processor](https://aaudk.sharepoint.com/sites/persondata-ressourcer/SitePages/Re
             Write).
 
 11. Permitted applications and uses
-
-    a.  All applications except those labeled as "Virtual Machines" may
-        be used for work on all data.
-
-    b.  Virtual Machine applications may only be used for data
-        classified as level 0 and 1.
+ 
+    a. Only the SDU/K8 provider is permitted for working with data classifications 2 and 3.
+    
+    b. The AAU/K8 and AAU virtual machine providers are only permitted to be used for data classified as level 0 and 1.
 
 12. On completion the project 
 
