@@ -290,6 +290,7 @@ processor](https://aaudk.sharepoint.com/sites/persondata-ressourcer/SitePages/Re
 4.  All applicants for projects on UCloud must complete the [CLAAUDIA
     application form for DeiC Interactive HPC resources](https://forms.office.com/e/8Khbr1TJGC).
 
+
 5.  Once approved, you will receive a UCloud project
     number, and you must [apply for a project in the UCloud
     Interface](https://docs.cloud.sdu.dk/tutorials/tutorial3.html#create-a-project),
@@ -304,11 +305,12 @@ processor](https://aaudk.sharepoint.com/sites/persondata-ressourcer/SitePages/Re
     b.  If the user is a student, then their supervisor for the student
         project must apply for the project, and so must assume the role
         of Principal Investigator.
-
-    c.  The project must include both the **DeiC project number**, and
-        the **Grants and Contracts** reference number in the "Comments"
-        field of the UCloud project application.
-
+        
+    c. The project must use the same **project title** as provided in the CLAAUDIA application, and both the **DeiC project number** and the **Grants and Contracts reference number** should be included:
+        
+        i. The DeiC project number should be entered in the "DeiC Interactive HPC project number" field.
+        ii. The WorkZone case number should be entered in the "WorkZone reference number" field.
+    
     d.  Once your project is approved, you will get access to project
         storage (Drive(s)) on UCloud that is separate from your "My
         Workspace" storage. No sensitive data may be stored in the "My
