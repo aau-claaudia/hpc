@@ -10,10 +10,6 @@
     
     DeiC Throughput HPC allows users to submit jobs to a queue system on a large cluster of CPU servers which then executes the job. These systems allow for much larger pools of resources to be used, but the user cannot interact directly with the hardware. Facilities includes [DTU Sophia](https://dtu-sophia.github.io/docs/), [GenomeDK](https://genome.au.dk/docs/hardware/), and [Computerome 2.0](https://escience.sdu.dk/index.php/type-2-computerome/).
 
--   #### DeiC Large Memory HPC
-
-    Large Memory HPC is very much like Throughput HPC but offers significantly larger memory (or RAM) possibilities. There is only one facility currently offering this format of HPC in Denmark, [HIPPO](https://docs.hpc-type3.sdu.dk/).
-    
 -   #### LUMI-capability HPC
 
     [LUMI](https://www.lumi-supercomputer.eu/) is the largest supercomputer that AAU users can get access to via DeiC. It functions very much like Throughput HPC and Large Memory HPC, in that users submit containerised jobs to a queue system. In addition, it includes both CPU and GPU processing capabilities.
