@@ -46,71 +46,73 @@ cat my_job.out
 <hr>
 
 ## Adding Python packages via virtual environment
-In many cases, you will need to add additional Python packages to an existing container. The easiest way to do this, is using a virtual environment. The guide below outlines the steps to create and utilize a virtual environment within your directory on AI-LAB.
+Sometimes, you’ll need additional Python packages that aren’t included in the container you’re using. The simplest and cleanest way to manage these is by creating a virtual environment within your own directory.
+
+This guide walks you through creating a **virtual environment** inside a Singularity container and installing additional packages for use in your Python scripts.
+
+!!! warning "This guide is recently updated and under testing" 
+    This guide has just been updated to reflect new container paths and best practices. If you encounter any issues, please report them by submitting a ticket through our [service portal](https://serviceportal.aau.dk/serviceportal?id=emp_taxonomy_topic&topic_id=82a253e8838fc21053711d447daad328).
+
 
 ??? info "Guide on adding Python packages via virtual environment"
-    To enhance the functionality of a containerized environment, you can add additional Python packages using a virtual environment. This guide outlines the steps to create and utilize a virtual environment within a Singularity container to ensure compatibility between different Python versions.
 
-    ### Step 1: Create a virtual environment inside a Singularity container.
+    ### Step 1: Create a virtual environment inside the container.
 
-    Create the virtual environment using the installed `virtualenv` tool. Remember to replace `/ceph/container/python/python_3.10.sif` with your container path.
-
-    ```
-    srun singularity exec /ceph/container/python/python_3.10.sif virtualenv ~/my-virtual-env
-    ```
-
-    This ensures that the virtual environment is set up using the correct Python version from the container.
-
-    !!! info "Missing `virtualenv` package?"
-        If the command fails due to missing `virtualenv` dependency, try installing the package in the container:
-
-        ```
-        srun singularity exec /ceph/container/python/python_3.10.sif pip install --user virtualenv
-        ```
-
-        Then run:
-
-        ```
-        srun singularity exec /ceph/container/python/python_3.10.sif ~/.local/bin/virtualenv ~/my-virtual-env
-        ```
-
-        In case you are trying to set up the virtual environment inside a [shared project directory](../../system-overview/#shared-project-directories), you will first need to navigate to the project directory and execute the command from there.
-
-    ### Step 2: Install Python packages inside the virtual environment
-
-    With the virtual environment created, you can now install the necessary Python packages within it.
+    Run the following command to create a virtual environment in your current directory. Replace the container, with the one you want to use.
 
     ```
-    srun singularity exec --bind ~/my-virtual-env:/my-virtual-env /ceph/container/python/python_3.10.sif /bin/bash -c "source /my-virtual-env/bin/activate && python3 -m pip install numpy pandas matplotlib"
+    srun singularity exec /ceph/container/python/python_3.9.sif python -m venv --system-site-packages my_venv
     ```
 
-    Here’s what happens in this command:
-    - The `--bind` option mounts the virtual environment directory inside the container.
-    - The virtual environment is activated using `source`.
-    - The required Python packages (`numpy`, `pandas`, `matplotlib`) are installed using `pip`.
+    !!! info "Using a shared project directory?" 
+        If you're working in a shared project directory, first `cd` into that directory and then run the command.
+    
+    ### Step 2: Install Additional Packages
 
-    ### Step 3: Verify the installation
-
-    After installing the packages, you can verify that they are correctly installed inside the virtual environment.
+    Activate the environment inside the container and install the Python packages you need. In this case we will install `openpyxl`:
 
     ```
-    srun singularity exec --bind ~/my-virtual-env:/my-virtual-env /ceph/container/python/python_3.10.sif /bin/bash -c "source /my-virtual-env/bin/activate && python -c 'import matplotlib; print(matplotlib.__version__)'"
+    srun singularity exec --nv -B ~/my_venv /ceph/container/pytorch/pytorch_25.01.sif /bin/bash -c "source my_venv/bin/activate && pip install openpyxl"
     ```
 
-    This command runs a short Python script inside the virtual environment to check if `matplotlib` is properly installed.
+    !!! info "Using a shared project directory?" 
+        Replace `~/my_venv` with the absolute path, e.g. `/ceph/project/my_project/my_venv`.
 
-    ### Step 4: Use the virtual environment for running scripts
+    * `--nv` enables GPU support.
+    * `-B ~/my_venv` binds your virtual environment directory into the container.
+    * `source my_venv/bin/activate` activates the environment.
+    * `pip install openpyxl` installs your chosen package(s).
+  
 
-    Now that the virtual environment is set up and populated with the necessary packages, you can use it to run your Python scripts inside the Singularity container.
+    ### Step 3: Test with a simple Python script
+    Now you can test with a script that uses the packages you've installed. For example:
+
+
+    ```python title="my_script.py"
+    import torch
+    import openpyxl
+
+    print("Torch version:", torch.__version__)
+    print("Openpyxl version:", openpyxl.__version__)
+    ```
+
+    Save this as my_script.py in your working directory.
+
+
+    ### Step 4: Run Your Script Using the Virtual Environment
+    To run the script inside the container using your virtual environment:
 
     ```
-    srun singularity exec --bind ~/my-virtual-env:/my-virtual-env /ceph/container/python/python_3.10.sif /bin/bash -c "source /my-virtual-env/bin/activate && python my_script.py"
+    srun singularity exec --nv -B ~/my_venv /ceph/container/pytorch/pytorch_25.01.sif /bin/bash -c "source my_venv/bin/activate && python my_script.py"
     ```
 
-    This ensures that `my_script.py` runs with the correct Python version and installed dependencies.
+    !!! info "Using a shared project directory?" 
+        Again, make sure to use the full path to `my_venv` if it’s not in your home directory.
 
-    !!! info "Remember to always use the virtual environment when running Python scripts"
-        Always make sure to activate the virtual environment (`source /my-virtual-env/bin/activate`) inside the Singularity container before running any Python scripts to ensure they use the correct dependencies.
+     You’ve now added custom packages to your own isolated Python environment without modifying the base container.
+
+    !!! info "Reminder" 
+        Always activate your virtual environment inside the container before running Python scripts to ensure your packages are available.
 
 
 ## Cancelling jobs
