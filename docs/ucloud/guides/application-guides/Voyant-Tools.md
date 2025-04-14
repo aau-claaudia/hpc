@@ -89,7 +89,7 @@ There are several options here, and it can seem overwhelming. For this example, 
 
 Feel free to test what works best for you.
 
-![VoyantApp](/assets/img/UCloud/Voyant/Billede19.png)
+![VoyantApp](/assets/img/UCloud/Voyant/billede19.png)
 
 Now, you are ready to begin your work. Click **Submit** to start the process.
 
