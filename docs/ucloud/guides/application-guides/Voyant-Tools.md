@@ -2,7 +2,7 @@
 
 
 
-**Approved for data classification level**
+**Approved for data classification levels**
 
 <a href="https://www.security.aau.dk/data-classification" target="_blank" class="icon-container">
     <span class="icon level-0" title="Approved for public data">0</span>
@@ -22,7 +22,6 @@ Voyant is a text reading and analysis environment. It is possible to work with o
 
 * Click on the applications button   
 
-<br>
 
   ![VoyantApp](/assets/img/UCloud/Voyant/Billede1.png)
 
@@ -30,7 +29,7 @@ Voyant is a text reading and analysis environment. It is possible to work with o
 
 * Click on search 
 
-<br>
+
 
   ![VoyantApp](/assets/img/UCloud/Voyant/Billede2.png) 
 
@@ -38,7 +37,7 @@ Voyant is a text reading and analysis environment. It is possible to work with o
 
 * Search ”Voyant” 
 
-<br>
+
 
   ![VoyantApp](/assets/img/UCloud/Voyant/Billede3.png)
 
@@ -80,7 +79,7 @@ There are several options here, and it can seem overwhelming. For this example, 
 
 ### 1.2.3 Pick a machine to use
 
-* We recommend the u1-standard-16.
+* We recommend the u1-standard-1.
 
 <br>
 
@@ -89,6 +88,9 @@ There are several options here, and it can seem overwhelming. For this example, 
 <br>
 
 Feel free to test what works best for you.
+
+![VoyantApp](/assets/img/UCloud/Voyant/Billede19.png)
+
 Now, you are ready to begin your work. Click **Submit** to start the process.
 
 <br>
@@ -107,13 +109,14 @@ Now, you are ready to begin your work. Click **Submit** to start the process.
 
 <br>
 
-Now the application pops op in a new window and you can upload the files you would like to work on. The entire text collection you are working on is called corpus in the application. 
+Now the application pops up in a new window and you can upload the files you would like to work on. The entire text collection you are working on is called corpus in the application. 
 
 There are three main ways of selecting a corpus in Voyant Tools:
 
-1.	type or paste into the main text area, either normal text or a
-2.	insert a URL link to a webpage, one per line. 
+1.	Type or paste into the main text area.
+2.	Insert a URL link to a webpage, one per line. 
 3.	Upload one or more files from your computer. 
+4. Click on “open” if you want to use the pre uploaded texts (Frankenstein or novels by Jane Austin)  
 
 The upload file selector should allow you to choose one or more files using Ctrl and Shift keys. If you have several documents to add at once, it may be easiest to first create a zip archive containing the files and then upload the one zip file.
 
@@ -135,7 +138,7 @@ It can take some time for the application to read the corpus. Once the corpus is
 
 <br>
 
-You can choose other options of analysis here 
+You can choose other options of analysis here. The options are visible when you place the curser in the top bar of the analysis next to the questionmark.  
 
 <br>
 
@@ -143,9 +146,9 @@ You can choose other options of analysis here
 
 <br>
 
-Here’s a link to the different type of analysis called “skins”  [Click Here] (https://voyant-tools.org/docs/tutorial-tools_.html)
+Here’s a link to the different types of “skins”  [Click Here] (https://voyant-tools.org/docs/tutorial-tools_.html)
 
-You can edit the list of “stop words” so the tools will not include the stop words. Click on “Define options for this tool”
+You can edit the list of “stopwords” so the tools will not include the stopwords. Click on “Define options for this tool” 
 
 <br>
 
@@ -153,7 +156,7 @@ You can edit the list of “stop words” so the tools will not include the stop
 
 <br>
 
-This window pops up and click on “Edit List” next to “Stopwords”
+Options pops up. Click on “Edit List” next to “Stopwords” 
 
 <br>
 
