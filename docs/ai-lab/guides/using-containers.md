@@ -58,10 +58,12 @@ This guide walks you through creating a **virtual environment** inside a Singula
 
     ### Step 1: Create a virtual environment inside the container.
 
-    Run the following command to create a virtual environment in your current directory. Replace the container, with the one you want to use.
+    Run the following command to create a virtual environment in your current directory.
+    
+    ** Replace the container**, with the one you want to use. You need to do this thoughout the guide.
 
     ```
-    srun singularity exec /ceph/container/python/python_3.9.sif python -m venv --system-site-packages my_venv
+    srun singularity exec /ceph/container/python/pytorch/pytorch_25.01.sif python -m venv --system-site-packages my_venv
     ```
 
     !!! info "Using a shared project directory?" 
