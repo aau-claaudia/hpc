@@ -1,172 +1,143 @@
 # AI Cloud
 
-##### AI Cloud is Aalborg University's largest GPU cluster - perfect for machine learning and parallel processing tasks.
-
-!!! info "What is AI Cloud?"
-
-    AI Cloud is a GPU cluster made up of a collecton of Nvidia and AMD GPU's, designed for processing GPU-demanding machine learning workloads. 
-
-    The platform is accessed through a terminal application on the user's local machine. From here the user logs in to a front end node, where files management and job submission to the compute nodes takes place.
-
-    AI Cloud is best suited for batch processing workflows, ie. submitting jobs to a queueing mechanism and where they are processed on the compute nodes without user interaction. It is *not* designed for interactive development, where users occupy one or more GPU's while writing scripts.
-
-    [Apply for resources](/ai-cloud/how-to-access/){ .md-button .md-button--primary .not-max-width}
-
-## Introduction to AI Cloud
-
-##### Basic information and instructions for first-time users of AI Cloud.
-
-<div class="grid cards grid-three grid-button-bottom" markdown>
-
-<!--
-Icons can be searched and found here:
-https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/ (best, is to use the ones starting with material)
--->
-
-- :material-key-outline: __How to access__ 
-
-    ---
-
-    Learn how to access AI Cloud.
-  
-    [How to access](/ai-cloud/how-to-access/){ .md-button .md-button--primary }
-
-- :material-clipboard-check-multiple-outline: __Guides for AI Cloud__ 
-
-    ---
-
-    Learn the basics on how to use AI Cloud.
-
-    [Guides for AI Cloud](/ai-cloud/getting-started/){ .md-button .md-button--primary }
-
-- :material-lan: __System Overview__ 
-
-    ---
-
-    Get an overview of AI Cloud's capabilities.
-
-    [System Overview](/ai-cloud/system-overview/){ .md-button .md-button--primary }
-
+<div class="tag-container">
+    <div class="tag-item">
+        <div class="tag">Researchers<i class="bi bi-check-lg"></i></div>
+        <div class="tooltip">Indicates if the platform is accessible for researchers (e.g., PhD students, postdocs, faculty) for research purposes.</div>
+    </div>
+    <div class="tag-item">
+        <div class="tag">Students<i class="bi bi-x-lg"></i></div>
+        <div class="tooltip">Indicates if the platform is accessible to students for educational purposes (e.g., coursework, projects, thesis).</div>
+    </div>
+    <div class="tag-item">
+        <div class="tag">Sensitive Data<i class="bi bi-x-lg"></i></div>
+        <div class="tooltip">Whether the platform supports processing and storing sensitive or confidential data</div>
+    </div>
+    <div class="tag-item">
+        <div class="tag">CPU processing<i class="bi bi-x-lg"></i></div>
+        <div class="tooltip">Indicates if the platform supports computational tasks that only require CPU resources.</div>
+    </div>
+    <div class="tag-item">
+        <div class="tag">GPU processing<i class="bi bi-check-lg"></i></div>
+        <div class="tooltip">Indicates if the platform supports computational tasks that require GPU resources for acceleration (e.g., deep learning).</div>
+    </div>
+    <div class="tag-item">
+        <div class="tag">Unlimited compute<i class="bi bi-check-lg"></i></div>
+        <div class="tooltip">Whether the platform allows unrestricted compute usage, without limitations on the amount of usage time.</div>
+    </div>
+    <div class="tag-item">
+        <div class="tag">Terminal interface<i class="bi bi-check-lg"></i></div>
+        <div class="tooltip">The method used to access the platform.</div>
+    </div>
+    <div class="tag-item">
+        <div class="tag">Pre-installed apps<i class="bi bi-check-lg"></i></div>
+        <div class="tooltip">Indicates if the platform comes with pre-installed applications or frameworks for convenience (e.g., Ansys, PyTorch, TensorFlow).</div>
+    </div>
+    <div class="tag-item">
+        <div class="tag">Collaboration friendly<i class="bi bi-check-lg"></i></div>
+        <div class="tooltip">Indicates if the platform supports collaborative work (e.g., sharing resources, co-editing, team projects).</div>
+    </div>
+    <div class="tag-item">
+        <div class="tag">Working interactively<i class="bi bi-x-lg"></i></div>
+        <div class="tooltip">Indicates if the platform supports interactive workflows where users can interact with running processes (e.g., Jupyter notebooks).</div>
+    </div>
+    <div class="tag-item">
+        <div class="tag">Possible to add GUI<i class="bi bi-x-lg"></i></div>
+        <div class="tooltip">Whether it is possible to run graphical user interfaces (GUIs) on the platform (e.g., remote desktops, JupyterLab).</div>
+    </div>
 </div>
 
+## Introduction
 
-<br> <!-- Just a little break -->
+AI Cloud is a GPU cluster made up of a collecton of NVIDIA GPU's, designed for processing GPU-demanding machine learning workloads. The platform is accessed through a terminal application on the user's local machine. From here the user logs in to a front end node, where files management and job submission to the compute nodes takes place.
 
-<div class="grid" markdown>
-
-=== "Recommended skills & knowledge"
-    Operating AI Cloud successfully involves being able to use the following:
-    
-    * A Linux terminal environment.
-    * [Slurm](/ai-cloud/system-overview/#slurm) - a common mechanism for queueing HPC workloads.
-    * [Singularity](/ai-cloud/system-overview/#singularity) software containers.
-
-=== "Common use"
-    * Training deep learning models for image classification and recognition tasks.
-    * Accelerating natural language processing with large-scale language models.
-    * Running high-resolution visual simulations with GPU-powered parallel computing.
-    * Performing video analysis for object detection and motion tracking in real-time.
-
-
-
-![Image title](/assets/img/ai-cloud/ai-cloud-hero.webp)
-
+<div class="video-container">
+  <iframe src="https://panopto.aau.dk/Panopto/Pages/Embed.aspx?id=bc2671ac-38d8-4e00-9f81-b2b800c519c5&amp;autoplay=false&amp;offerviewer=true&amp;showtitle=false&amp;showbrand=true&amp;captions=false&amp;interactivity=all"
+          allowfullscreen=""
+          allow="autoplay"
+          style="border: 1px solid #464646;"></iframe>
 </div>
 
-## Learn the Key Features
+## Getting Started
 
-##### Discover the essential features of AI Cloud.
-
-
-<div class="grid cards grid-three" markdown>
-
-<!--
-Icons can be searched and found here:
-https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/ (best, is to use the ones starting with material)
--->
-
-
--   :material-speedometer:{ .lg .middle } __High-Performance GPU Cluster__
-
-    ---
-    
-    AI Cloud provides access to a cluster of powerful NVIDIA GPUs, enabling the efficient processing of large datasets and complex models.
-
--   :material-package-variant-closed:{ .lg .middle } __Containerization for Flexibility__
-
-    ---
-    
-    Users operate within containerized environments, ensuring that software dependencies are consistently maintained across different computational nodes.
-
--   :material-human-queue:{ .lg .middle } __Workload Management__
-
-    ---
-    
-    Jobs are managed via a queueing mechanism (Slurm), allowing for effective distribution across the available GPU resources.
-
--   :material-server:{ .lg .middle } __Optimized for Parallel Processing__
-
-    ---
-    
-    AI Cloud is specifically designed to handle large-scale, parallelized tasks, making it ideal for simulations, deep learning, and other high-throughput applications.
-
--   :material-file-document-multiple-outline:{ .lg .middle } __Comprehensive Documentation__
-
-    ---
-    
-    Extensive resources are available to guide users through the setup and usage of AI Cloud, with a focus on accessibility for beginners.
-
--   :material-account-group-outline:{ .lg .middle } __Collaboration-Friendly Environment__
-
-    ---
-    
-    AI Cloud supports file sharing and collaborative work among multiple users, facilitating teamwork on complex projects and enabling seamless integration of contributions from different researchers.
-
+<div class="custom-grid-3">
+    <a href="/ai-cloud/how-to-access/" class="custom-grid-item">
+        <i class="custom-grid-icon bi bi-file-lock2-fill"></i>
+        <p class="custom-grid-title">How to access</p>
+        <p class="custom-grid-content">Learn how to access AI Cloud</p>
+    </a>
+    <a href="/ai-cloud/getting-started/" class="custom-grid-item">
+        <i class="custom-grid-icon bi bi-map-fill"></i>
+        <p class="custom-grid-title">Guides for AI Cloud</p>
+        <p class="custom-grid-content">Learn the basics on how to use AI Cloud</p>
+    </a>
+    <a href="/ai-cloud/terms-and-conditions/" class="custom-grid-item">
+        <i class="custom-grid-icon bi bi-file-text-fill"></i>
+        <p class="custom-grid-title">Terms and Conditions</p>
+        <p class="custom-grid-content">Get an overview of the Terms and Conditions for AI Cloud</p>
+    </a>
 </div>
 
-<br> <!-- Just a little break -->
+## Key Features
 
-<!--
-## Use cases
-
-##### Find out how AI Cloud can be effectively utilized in certain computing practices.
-
-<div class="grid cards grid-three" markdown>
-
--   __Transformer methods with large amount of data__
-
-    ---
-
-    AI Cloud might be a relevant choice when working with transformer methods in deep learning, and when the analysis involves a great amount of data– particularly image or video data. In this scenario, a good practice would be to test your jobs locally on a smaller scale, and involve the HPC afterwards, as it might take a long time to finish – depending how large is the data set you are working on.
-
--   __Electricity price forecasting__
-
-    ---
-
-    Integrate machine learning in your project to identify patterns in electricity price forecasting and develop large models with the use of AI Cloud's access to a powerful GPU, which provides processing power capable of dealing with large and complex datasets.
-
--   __Training large language models__
-
-    ---
-
-    Train large language models thanks to the powerful GPU which AI Cloud provides. You can accelerate various cloud workloads in parallel data processing and develop models for human-robot interaction or image classification. Integrate large datasets in your projects and train your models on HPC servers.
-
--   __Object recognition__
-
-    ---
-
-    Consider involving AI Cloud for training large neural networks for object recognition. The powerful GPU allows for achieving high-performance processing by integrating parallel computing into your project, which will also make the training process faster. With AI Cloud, you can integrate large data sets into your analysis and run short sampling tests to make sure the further processes are correct, fast, and convenient.
-
--   __Running atomistic simulations__
-
-    ---
-
-    Consider involving AI Cloud if in your project you are planning to run atomistic simulations. Powerful GPU processing is relevant when applying various methods for simulating materials and minerals on an atomic level, which might require running parallel simulations or many related scientific computing applications - which are supported by AI Cloud.
-
+<div class="custom-grid-3">
+    <div class="custom-grid-item">
+        <h2>High-Performance GPU Cluster</h2>
+        <p class="custom-grid-feature">Harness powerful NVIDIA GPUs for efficient processing of large datasets and complex models.</p>
+        <img src="/assets/img/ai-cloud/ai-cloud-feature-1.png">
+    </div>
+    <div class="custom-grid-item">
+        <h2>Containerization for Flexibility</h2>
+        <p class="custom-grid-feature">Ensure consistent software environments across nodes, supporting diverse and customizable computational workflows.</p>
+        <img src="/assets/img/ai-cloud/ai-cloud-feature-2.png">
+    </div>
+    <div class="custom-grid-item">
+        <h2>Efficient Batch Processing</h2>
+        <p class="custom-grid-feature">AI Cloud uses Slurm for seamless job scheduling, enabling easy batch processing and background task management.</p>
+        <img src="/assets/img/ai-cloud/ai-cloud-feature-3.png">
+    </div>
 </div>
--->
 
-<!-- <br> --> <!-- Just a little break -->
+## Common Use Cases
+
+<div class="custom-grid-3">
+    <div class="custom-usecase-item">
+        <i class="custom-usecase-icon bi bi-graph-up"></i>
+        <p class="custom-usecase-text">Training deep learning models</p>
+    </div>
+    <div class="custom-usecase-item">
+        <i class="custom-usecase-icon bi bi-cpu"></i>
+        <p class="custom-usecase-text">GPU access for AI projects</p>
+    </div>
+    <div class="custom-usecase-item">
+        <i class="custom-usecase-icon bi bi-gear"></i>
+        <p class="custom-usecase-text">Fine-tuning large language models</p>
+    </div>
+    <div class="custom-usecase-item">
+        <i class="custom-usecase-icon bi bi-mic"></i>
+        <p class="custom-usecase-text">Training speech models for PhD</p>
+    </div>
+    <div class="custom-usecase-item">
+        <i class="custom-usecase-icon bi bi-image"></i>
+        <p class="custom-usecase-text">AI research with CT images</p>
+    </div>
+    <div class="custom-usecase-item">
+        <i class="custom-usecase-icon bi bi-diagram-2"></i>
+        <p class="custom-usecase-text">Drug discovery acceleration</p>
+    </div>
+    <div class="custom-usecase-item">
+        <i class="custom-usecase-icon bi bi-question-circle"></i>
+        <p class="custom-usecase-text">MI models for question answering</p>
+    </div>
+    <div class="custom-usecase-item">
+        <i class="custom-usecase-icon bi bi-diagram-3"></i>
+        <p class="custom-usecase-text">Knowledge graph embedding models</p>
+    </div>
+    <div class="custom-usecase-item">
+        <i class="custom-usecase-icon bi bi-eye"></i>
+        <p class="custom-usecase-text">Machine vision system development</p>
+    </div>
+</div>
 
 ## Important Information
 

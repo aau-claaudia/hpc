@@ -36,7 +36,7 @@ You can download a wide range of pre-built containers by visiting websites such 
 
 Check out the guide below for detailed instructions on how to download the containers.
 
-??? news "Guide on how to download containers"
+??? info "Guide on how to download containers"
 
     ### NVIDIA NGC Catalog
 
@@ -92,7 +92,7 @@ You also have the flexibility to create your own container tailored to your spec
 
 Check out the guide below for detailed instructions on building your own container:
 
-??? news "Guide on how to build your own container"
+??? info "Guide on how to build your own container"
     It is possible to define and build your own container with Singularity. Lets try creating a simple Singularity container with Python and pip installed. 
 
     First we need to create a [Singularity definition file](https://docs.sylabs.io/guides/3.0/user-guide/definition_files.html){target=_blank} (`.def`). This definition file is a blueprint for how Singularity should build the container. It includes information about the base OS to build, which software to install and several other options.
@@ -110,16 +110,28 @@ Check out the guide below for detailed instructions on building your own contain
     From: ubuntu:20.04
 
     %post
-        # This section is where you install additional packages or software
-        # Update package list and install the latest Python and pip version
+        # Set a custom temporary directory (adjust the path as needed)
+        export TMPDIR=/scratch/ry90cd/tmp
+        mkdir -p $TMPDIR
+
         apt-get update
+        apt-get upgrade -y
+
+        # Install Python and pip
         apt-get install -y python3 python3-pip
-        pip install numpy pandas scikit-learn matplotlib
+
+        # Upgrade pip using no-cache-dir
+        pip install --no-cache-dir --upgrade pip
+
+        # Install Python libraries without caching
+        pip install --no-cache-dir numpy matplotlib torch torchtune
 
     %test
-        # Define tests to run after the container is built
+        # Test Python version1~# Test Python version
         python3 --version
     ```
+
+    In the `%post` section, the `--no-cache-dir` flag ensures that pip does not store locally cached packages, which helps reduce disk usage and avoid running out of space.
 
     In this example we will use `docker` to pull `ubuntu:20.04` as the base OS of our container. 
 

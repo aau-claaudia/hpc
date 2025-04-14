@@ -146,7 +146,7 @@ You can choose other options of analysis here. The options are visible when you 
 
 <br>
 
-Here’s a link to the different types of “skins”  [Click Here] (https://voyant-tools.org/docs/tutorial-tools_.html)
+Here’s a link to the different type of analysis called “skins”  [Click Here](https://voyant-tools.org/docs/tutorial-tools_.html)
 
 You can edit the list of “stopwords” so the tools will not include the stopwords. Click on “Define options for this tool” 
 

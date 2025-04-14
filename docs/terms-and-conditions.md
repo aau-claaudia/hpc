@@ -286,19 +286,10 @@ processor](https://aaudk.sharepoint.com/sites/persondata-ressourcer/SitePages/Re
     must ensure that you comply with [GDPR regulations for
     students](https://aaudk.sharepoint.com/sites/GDPR-for-students).
 
-    a.  To assist with GDPR compliance we recommend that students
-        request a supervisor to create a project on their behalf and
-        follow the same procedures as researchers.
-
-    b.  Students cannot apply for project resources on UCloud, and you
-        therefore need a project supervisory to apply on your behalf.
-        This requires that your project supervisor assumes the
-        [responsibilities of a Principal Investigator on
-        UCloud](https://docs.cloud.sdu.dk/guide/project-overview.html#member-roles).
-        This must be discussed with your supervisor.
-
+    
 4.  All applicants for projects on UCloud must complete the [CLAAUDIA
     application form for DeiC Interactive HPC resources](https://forms.office.com/e/8Khbr1TJGC).
+
 
 5.  Once approved, you will receive a UCloud project
     number, and you must [apply for a project in the UCloud
@@ -314,11 +305,12 @@ processor](https://aaudk.sharepoint.com/sites/persondata-ressourcer/SitePages/Re
     b.  If the user is a student, then their supervisor for the student
         project must apply for the project, and so must assume the role
         of Principal Investigator.
-
-    c.  The project must include both the **DeiC project number**, and
-        the **Grants and Contracts** reference number in the "Comments"
-        field of the UCloud project application.
-
+        
+    c. The project must use the same **project title** as provided in the CLAAUDIA application, and both the **DeiC project number** and the **Grants and Contracts reference number** should be included:
+        
+        i. The DeiC project number should be entered in the "DeiC Interactive HPC project number" field.
+        ii. The WorkZone case number should be entered in the "WorkZone reference number" field.
+    
     d.  Once your project is approved, you will get access to project
         storage (Drive(s)) on UCloud that is separate from your "My
         Workspace" storage. No sensitive data may be stored in the "My
@@ -399,12 +391,10 @@ processor](https://aaudk.sharepoint.com/sites/persondata-ressourcer/SitePages/Re
             Write).
 
 11. Permitted applications and uses
-
-    a.  All applications except those labeled as "Virtual Machines" may
-        be used for work on all data.
-
-    b.  Virtual Machine applications may only be used for data
-        classified as level 0 and 1.
+ 
+    a. Only the SDU/K8 provider is permitted for working with data classifications 2 and 3.
+    
+    b. The AAU/K8 and AAU virtual machine providers are only permitted to be used for data classified as level 0 and 1.
 
 12. On completion the project 
 

@@ -10,7 +10,7 @@ This guide explains how to set up checkpointing in various frameworks like Pytho
 
 Checkpointing allows you to periodically save the state of your job so that it can be resumed later, even after an interruption. Different frameworks have different methods for implementing checkpointing. Below are examples for Python, PyTorch, and TensorFlow. 
 
-??? python "Python checkpointing"
+??? info "Python checkpointing"
 
     In Python, you can use the [pickle](https://docs.python.org/3/library/pickle.html) module to periodically save and load the state of your job.
 
@@ -64,7 +64,7 @@ Checkpointing allows you to periodically save the state of your job so that it c
 
     Every 5 iterations (`if data['counter'] % 5 == 0)`, it saves the checkpoint by calling `save_checkpoint`. If the process is interrupted by a keyboard interrupt (Ctrl+C), it saves the current checkpoint and prints a message before exiting.
 
-??? pytorch "PyTorch checkpointing"
+??? info "PyTorch checkpointing"
 
     PyTorch provides native support for saving and loading model and optimizer states during training. More information about PyTorch checkpointing can be found [here](https://pytorch.org/tutorials/recipes/recipes/saving_and_loading_a_general_checkpoint.html). Here's an example that shows how to checkpoint during training of a simple neural network:
 
@@ -158,7 +158,7 @@ Checkpointing allows you to periodically save the state of your job so that it c
     <span style="font-weight:700;">Saving Checkpoints (line 69-75):</span> Saving the model's state, optimizer's state, and current loss at the end of each epoch to a uniquely named file based on the epoch number.
 
 
-??? tensorflow "TensorFlow checkpointing"
+??? info "TensorFlow checkpointing"
 
     TensorFlow offers built-in functionality for saving model weights during training using the `ModelCheckpoint` callback. More information about TensorFlow checkpointing can be found [here](https://www.tensorflow.org/tutorials/keras/save_and_load). Here's an example:
 
