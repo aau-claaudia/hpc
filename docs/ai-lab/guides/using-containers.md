@@ -63,7 +63,7 @@ This guide walks you through creating a **virtual environment** inside a Singula
     ** Replace the container**, with the one you want to use. You need to do this thoughout the guide.
 
     ```
-    srun singularity exec /ceph/container/python/pytorch/pytorch_25.01.sif python -m venv --system-site-packages my_venv
+    srun singularity exec /ceph/container/pytorch/pytorch_25.01.sif python -m venv --system-site-packages my_venv
     ```
 
     !!! info "Using a shared project directory?" 
