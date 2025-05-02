@@ -10,7 +10,7 @@
     *(Sensitive data can only be added to registered and approved project folders and must **NOT** be placed in My Workspace.)*
 
 
-### Before uploading data on UCloud
+### Before starting on UCloud
 - If you are a researcher, and working with data classifications 2 or 3, you must register the research project with Grants and Contracts using  [the relevant registration form](https://aaudk.sharepoint.com/sites/persondata-ressourcer/SitePages/Registrations%20og%20reports%20(Online%20forms).aspx).
 - If you are a student your supervisor must approve the application. 
 - Before you can create a project on UCloud for sensitive data, you must fill out this form [this form](https://forms.office.com/pages/responsepage.aspx?id=Sbrb9QbOb0msPgzxQ2HZNEdKMbCNz_9Lom8_yaZURCNUQVZUQVRXSFVYODBZQkNZWVRYM1lEUEFYTSQlQCN0PWcu&route=shorturl).
