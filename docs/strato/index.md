@@ -45,6 +45,10 @@
         <div class="tag">Possible to add GUI<i class="bi bi-check-lg"></i></div>
         <div class="tooltip">Whether it is possible to run graphical user interfaces (GUIs) on the platform (e.g., remote desktops, JupyterLab).</div>
     </div>
+    <div class="tag-item">
+        <div class="tag">Not for storage<i class="bi bi-x-lg"></i></div>
+        <div class="tooltip">This platform is not designed for long term storage of research data.</div>
+    </div>
 </div>
 
 ## Introduction
