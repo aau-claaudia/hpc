@@ -1,4 +1,4 @@
-## Guidelines for handling Sensitive data on UCloud
+# Guidelines for handling Sensitive data on UCloud
 
 ### Data classification on UCloud
 - On Ucloud you can work with all categories of data form AAUs data classification model.
