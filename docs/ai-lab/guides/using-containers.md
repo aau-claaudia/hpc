@@ -63,7 +63,7 @@ This guide walks you through creating a **virtual environment** inside a Singula
     ** Replace the container**, with the one you want to use. You need to do this thoughout the guide.
 
     ```
-    srun singularity exec /ceph/container/python/pytorch/pytorch_25.01.sif python -m venv --system-site-packages my_venv
+    srun singularity exec /ceph/container/pytorch/pytorch_25.01.sif python -m venv --system-site-packages my_venv
     ```
 
     !!! info "Using a shared project directory?" 
@@ -74,16 +74,17 @@ This guide walks you through creating a **virtual environment** inside a Singula
     Activate the environment inside the container and install the Python packages you need. In this case we will install `openpyxl`:
 
     ```
-    srun singularity exec --nv -B ~/my_venv /ceph/container/pytorch/pytorch_25.01.sif /bin/bash -c "source my_venv/bin/activate && pip install openpyxl"
+    srun singularity exec --nv -B ~/my_venv:/scratch/my_venv -B $HOME/.singularity:/scratch/singularity /ceph/container/pytorch/pytorch_25.01.sif /bin/bash -c "export TMPDIR=/scratch/singularity/tmp && source scratch/my_venv/bin/activate && pip install --no-cache-dir openpyxl"
     ```
 
     !!! info "Using a shared project directory?" 
         Replace `~/my_venv` with the absolute path, e.g. `/ceph/project/my_project/my_venv`.
 
-    * `--nv` enables GPU support.
-    * `-B ~/my_venv` binds your virtual environment directory into the container.
-    * `source my_venv/bin/activate` activates the environment.
-    * `pip install openpyxl` installs your chosen package(s).
+    * `-B ~/my_venv:/scratch/my_venv` mounts your virtual env inside the container at `/scratch/my_venv`.
+    * `-B $HOME/.singularity:/scratch/singularity` mounts a temp/cache directory with enough space.
+    * `export TMPDIR=/scratch/singularity/tmp` tells pip to use that mounted tmp dir instead of the default /tmp
+    * `source scratch/my_venv/bin/activate` activates the environment.
+    * `pip install --no-cache-dir openpyxl` installs your chosen package(s) and saves space by not keeping package files after install.
   
 
     ### Step 3: Test with a simple Python script
