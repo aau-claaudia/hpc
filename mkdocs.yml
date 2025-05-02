@@ -118,9 +118,9 @@ nav:
               - CI/CD with GitHub Actions: ai-lab/guides/ci-cd-with-github-actions.md
 
   - External HPC:
-      - About external HPC resources: external-hpc/index.md
-      - DeiC HPC: external-hpc/deic-hpc.md
-      - EuroHPC: external-hpc/eurohpc.md
+      - External HPC facilities: external-hpc/index.md
+      - Overview of HPC facilities: external-hpc/facilities.md
+      - How to access: external-hpc/access.md 
 
 theme:
   name: material
