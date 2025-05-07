@@ -28,7 +28,7 @@ Search for "chatui" under the apps section of UCloud and select it to begin setu
 Choose a machine with **one** GPU, such as `u3-GPU` (SDU) or `uc1-l4`/`uc1-l40` (AAU/K8). Set the runtime duration in hours and select the previously created folder as `DATA_DIR`.  
 ![Configure server settings](/assets/img/UCloud/ChatUI%203.png){.standard_image_width}
 
-??? news "ChatUI public link for sharing with user outside UCloud"
+??? info "ChatUI public link for sharing with user outside UCloud"
     Note applying a public link will decrease the approved sensitivity level to only 
     <a href="https://www.security.aau.dk/data-classification" target="_blank" class="icon-container">
     <span class="icon level-0" title="Approved for public data">0</span>
@@ -52,7 +52,7 @@ Click the green "Submit" button at the top of the page to start the application.
 ### 5. Set up admin and user roles
 The next step is to create an account by clicking "Sign Up." Enter your name, email, and password, then click "Create Account." The first user (you) will automatically be assigned the admin role. 
 
-??? news "How to give access to other users"
+??? info "How to give access to other users"
 
     There are two options for allowing other users to access the ChatUI interface.
     **1.** Enable the "Allow New Sign-Ups" option in the settings panel. This allows new users to apply for an account, which you can then review and approve.      

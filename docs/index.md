@@ -3,179 +3,78 @@ keywords: Home
 title: Home
 ---
 
-<div class="grid cards hero" markdown>
+<section class="hero">
+    <div class="hero-inner">
+        <div class="hero-left">
+            <h1>High-performance computing at AAU</h1>
+        </div>
+        <div class="hero-right"></div>
+    </div>
+</section>
 
--   # High-performance computing at AAU
+Explore the high-performance computing (HPC) resources available for AAU students and researchers, how they work and what they can be used for in your projects. HPC provides the necessary power to train machine learning models, run simulations, perform data analysis, and conduct modeling, among other tasks
 
-    ##### Explore the high-performance computing (HPC) resources available for AAU students and researchers, how they work and what they can be used for in your projects.
+## AAU HPC
 
-![Image title](/assets/img/hero-img.jpg)
+Find the most suitable system for your project. You can also complete the [HPC Decision Tree Quiz](/hpc-decision-tree/) or check out the [HPC Comparison Table](/hpc-comparison-table/) to assist you in exploring the HPC options fitting your specific needs.
 
+<div class="custom-grid-4">
+    <div class="custom-grid-item">
+        <h2>Strato</h2>
+        <p class="custom-grid-feature">Strato provides virtual machines users can launch as needed, accessible from a terminal on their local computer.</p>
+        <a href="/strato/"><i class="bi bi-info-circle"></i>About Strato</a>
+        <a href="/strato/how-to-access/"><i class="bi bi-key"></i>How to access</a>
+        <a href="https://forms.office.com/e/r1u0QXH4KJ"><i class="bi bi-file-earmark-text"></i>Application form</a>
+    </div>
+    <div class="custom-grid-item">
+        <h2>UCloud</h2>
+        <p class="custom-grid-feature">UCloud is a research platform providing high-performance computing with an easy-to-use interface for data analytics.</p>
+        <a href="/ucloud/"><i class="bi bi-info-circle"></i>About UCloud</a>
+        <a href="/ucloud/how-to-access/"><i class="bi bi-key"></i>How to access</a>
+        <a href="https://forms.office.com/e/8Khbr1TJGC"><i class="bi bi-file-earmark-text"></i>Application form</a>
+    </div>
+    <div class="custom-grid-item">
+        <h2>AI Cloud</h2>
+        <p class="custom-grid-feature">AI Cloud is a GPU cluster designed for demanding machine learning workloads, accessed via terminal for job submission.</p>
+        <a href="/ai-cloud/"><i class="bi bi-info-circle"></i>About AI Cloud</a>
+        <a href="/ai-cloud/how-to-access/"><i class="bi bi-key"></i>How to access</a>
+        <a href="https://forms.office.com/e/ewgvLRbbv7"><i class="bi bi-file-earmark-text"></i>Application form</a>
+    </div>
+    <div class="custom-grid-item">
+        <h2>AI-LAB</h2>
+        <p class="custom-grid-feature">AI-LAB offers Aalborg University students HPC access, ideal for deep learning, simulations, and fast data analysis.</p>
+        <a href="/ai-lab/"><i class="bi bi-info-circle"></i>About AI-LAB</a>
+        <a href="/ai-lab/how-to-access/"><i class="bi bi-key"></i>How to access</a>
+        <a href="https://forms.office.com/e/caEhCRmqVN"><i class="bi bi-file-earmark-text"></i>Application form</a>
+    </div>
 </div>
 
-<br> <!-- Just a little break -->
-
-## What is HPC?
-High-performance computing (HPC) refers to the use of powerful computing resources to tackle complex and resource-intensive tasks that exceed the capabilities of standard computing systems. For researchers and students at AAU, HPC provides the necessary power to train machine learning models, run simulations, perform data analysis, and conduct modeling, among other tasks. This capability is invaluable across a wide range of academic disciplines.
-
-
-#### Benefits from using HPC
-
-<div class="grid cards grid-three" markdown>
-
-<!--
-Icons can be searched and found here:
-https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/ (best, is to use the ones starting with material)
--->
-
--   :material-server-outline:{ .lg .middle } __Parallel computing__
-    
-    AAU HPC provides access to specialized processors that enhance the speed and processing capabilities of the system, enabling the execution of highly parallelizable tasks.
-
--   :material-speedometer:{ .lg .middle } __Fast data processing__
-    
-    HPC allows for much faster calculations than what your local machine can provide. Instead of reducing the data sets - reduce the processing time!
-
--   :material-laptop:{ .lg .middle } __Available at hand__
-    
-    Thanks to HPC, you can access your computing environment from anywhere using your laptop, allowing you to work independently.
-
+<div class="video-container">
+  <iframe src="https://panopto.aau.dk/Panopto/Pages/Embed.aspx?id=cbfb191c-fde8-4dec-998e-b2b800ba6b03&amp;autoplay=false&amp;offerviewer=true&amp;showtitle=false&amp;showbrand=true&amp;captions=false&amp;interactivity=all"
+          allowfullscreen=""
+          allow="autoplay"
+          style="border: 1px solid #464646;"></iframe>
 </div>
 
-<br> <!-- Just a little break -->
+## External HPC
 
-## Platform Overview
-
-##### At AAU, researchers and students can access various HPC platforms to perform simulations, data analysis, and other resource-intensive tasks that would be impractical on standard computers. 
-
-<br> <!-- Just a little break -->
-
-<div class="grid cards grid-three" markdown>
-
-<!--
-Icons can be searched and found here:
-https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/ (best, is to use the ones starting with material)
--->
-
--   __Strato__
-    
-    Built on a Linux-based system, Strato supports data-driven research that requires enhanced processing power with both CPU and GPU capabilities.
-    
-    [:octicons-arrow-right-24: About Strato](/strato/)
-    
-    [:octicons-arrow-right-24: Getting access](/strato/how-to-access/)
-
-    [:octicons-arrow-right-24: Quicklink to application form](https://forms.office.com/e/r1u0QXH4KJ)
-
--   __UCloud__
-    
-    UCloud is a digital research platform developed by the SDU eScience Center, specifically designed to deliver high-performance computing with a strong emphasis on user experience.    
-    
-    [:octicons-arrow-right-24: About UCloud](/ucloud/)
-    
-    [:octicons-arrow-right-24: Getting access](/ucloud/how-to-access/)
-
-    [:octicons-arrow-right-24: Quicklink to application form](https://forms.office.com/e/8Khbr1TJGC)
-
--   __AI Cloud__
-    
-    AI Cloud is Aalborg University's primary GPU resource, tailored for machine learning and parallel processing tasks.
-    
-    [:octicons-arrow-right-24: About AI Cloud](/ai-cloud/)
-    
-    [:octicons-arrow-right-24: Getting access](/ai-cloud/how-to-access/)
-
-    [:octicons-arrow-right-24: Quicklink to application form](https://forms.office.com/e/ewgvLRbbv7)
-
--   __AI-LAB__
-    
-    AI-LAB is designed exclusively for students at Aalborg University, offering high-performance computing (HPC) right at your fingertips.
-
-    [:octicons-arrow-right-24: About AI-LAB](/ai-lab/)
-    
-    [:octicons-arrow-right-24: Getting access](/ai-lab/how-to-access/)
-
-    [:octicons-arrow-right-24: Quicklink to application form](https://forms.office.com/e/caEhCRmqVN)
-
--   __DeiC Throughput HPC__
-    
-    Through the Danish e-Infrastructure Cooperation (DeiC), CLAAUDIA can provide access to three National HPC facilities (Computerome 2.0, DTU Sophia, GenomeDK).
-
-    [:octicons-arrow-right-24: About Deic HPC](/external-hpc/deic-hpc/)
-
-    [:octicons-arrow-right-24: Quicklink to application form](https://forms.office.com/e/DxRA4hPK84)
-
--   __LUMI__
-    
-    Through the Danish e-Infrastructure Cooperation (DeiC), CLAAUDIA can provide access to the pre-exascale LUMI supercomputer in Finland, with AMD based CPU and GPU resources available.
-
-    [:octicons-arrow-right-24: About Deic HPC](/external-hpc/deic-hpc/)
-
-    [:octicons-arrow-right-24: Quicklink to application form](https://forms.office.com/e/4XC48iVu4S)
-
--   __EuroHPC__
-    
-    Aalborg University researchers are eligible to use the supercomputers of the EuroHPC.
-
-    [:octicons-arrow-right-24: About EuroHPC](/external-hpc/eurohpc/)
-    
+<div class="custom-grid-4">
+    <div class="custom-grid-item">
+        <h2>DeiC Throughput HPC</h2>
+        <p class="custom-grid-feature">DeiC Throughput HPC offers queued job execution on large CPU clusters, including DTU Sophia, GenomeDK, and Computerome 2.0.</p>
+        <a href="/external-hpc/deic-hpc/"><i class="bi bi-info-circle"></i>About Deic HPC</a>
+        <a href="https://forms.office.com/e/DxRA4hPK84"><i class="bi bi-file-earmark-text"></i>Application form</a>
+    </div>
+    <div class="custom-grid-item">
+        <h2>LUMI</h2>
+        <p class="custom-grid-feature">LUMI is AAU’s largest supercomputer, providing CPU and GPU processing via a queue-based, containerized job system.</p>
+        <a href="/external-hpc/deic-hpc/"><i class="bi bi-info-circle"></i>About Deic HPC</a>
+        <a href="https://forms.office.com/e/4XC48iVu4S"><i class="bi bi-file-earmark-text"></i>Application form</a>
+    </div>
+    <div class="custom-grid-item">
+        <h2>EuroHPC</h2>
+        <p class="custom-grid-feature">Aalborg University researchers can access EuroHPC supercomputers by applying for computing time, like external research funding.</p>
+        <a href="/external-hpc/eurohpc/"><i class="bi bi-info-circle"></i>About EuroHPC</a>
+    </div>
 </div>
 
-<br> <!-- Just a little break -->
-
-
-
-## Comparison table
-
-##### Dive into the characteristics of the available HPC platforms
-
-| Feature | Strato | UCloud | AI Cloud | AI-LAB |
-| --- | --- | --- | --- | --- |
-| Available to researchers | :material-check: | :material-check: | :material-check: | - |
-| Available to students | :material-check: (CPU processing) | :material-check: | - | :material-check: |
-| Sensitive data | - | :material-check: | - | - |
-| Ideal for | Model training, simulations | First-time users, data processing | Deep learning, large datasets | Student projects, deep learning |
-| CPU processing | :material-check: | :material-check: | - | - |
-| GPU processing | :material-check: | :material-check: | :material-check: | :material-check: |
-| Unlimitted GPU usage | - | - | :material-check: | :material-check: |
-| Access interface | Terminal | Web browser | Terminal | Terminal |
-| Possible to add GUI | :material-check: | :material-check: | - | - |
-| Working interactively | :material-check:  | :material-check:  | - | - |
-| Pre-installed apps | - | :material-check: | - | :material-check: |
-| Recommended skills | Linux, SSH | None | Linux, Containerization | Linux, Containerization |
-| Collaboration friendly | :material-check: | :material-check: | :material-check: | :material-check: |
-
-<br>
-
-<br> <!-- Just a little break -->
-
-#### HPC Decision Tree
-
-<div class="grid cards grid-button-bottom" markdown>
-
--   __find the most suitable system for your project__
-
-    ---
-
-    Complete the HPC Decision Tree Quiz and find the most suitable HPC platform for your project. HPC Decision Tree is a tool which can assist you in exploring the HPC options fitting your specific needs by answering questions related to your project and research data.
-
-    [HPC Decision Tree](/hpc-decision-tree/){ .md-button .md-button--primary }
-
-
-![Image title](/assets/img/hpc-decision-tree.png)
-
-</div>
-
-
-<!-- ## News & Announcements
-
-##### Overview of the new features, enhancements, and important maintenance updates for AAU HPC platforms.
-
-!!! news "17-09-2024 - Service window"
-    We have arranged the automatic security updates for all hosts on our OpenStack platform (Strato and UCloud virtual machines) and AI Cloud. The routine maintenance will start **00:01, 17th of September 2024**. We have reserved the entire day from 00:01 to 23:59, but the time required to restart hosts once all instances have been shut down is only a few minutes. Strato and UCloud virtual machines may still be affected by the maintenance on the CEPH storage, so you should expect some performance impact until that is completed. AI-Cloud will be unavailable throughout most of that day and will come back online towards the end of the workday. 
-
-!!! news "26-08-2024 - 16 new NVIDIA H100 GPUs for UCloud"
-    You can find 16 new NVIDIA H100 GPU resources on UCloud (select machine type u3-gpu). Read more [here](https://escience.sdu.dk/index.php/news/16-new-h100-ai-gpus-arrive-at-sdu/). -->
-
-
-    

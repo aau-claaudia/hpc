@@ -1,26 +1,9 @@
-/* Hide table of contents */
-@media screen and (min-width: 60em) {
-    .md-sidebar--secondary {
-    display: none;
-    }
-}
-/* Hide navigation */
-@media screen and (min-width: 76.25em) {
-  .md-sidebar--primary {
-    display: none;
-  }
-}
 a {
     text-decoration: none;
     color: inherit;
 }
 .md-typeset h1 {
     display: none;
-}
-.md-main, .md-main__inner {
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
 }
 .content {
     width: 80vw;

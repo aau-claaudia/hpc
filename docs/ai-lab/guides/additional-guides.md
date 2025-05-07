@@ -2,7 +2,7 @@
 
 On AI-LAB, jobs are limited to a maximum runtime of 12 hours. Once this time limit is reached, your job will be canceled, and any unsaved data will be lost. To prevent data loss, it’s important to implement checkpointing, which saves data at regular intervals. Additionally, you can set up automatic requeuing so that your job will restart automatically if it gets canceled, removing the need to manually resubmit it.
 
-??? news "Guide on checkpointing"
+??? info "Guide on checkpointing"
 
     This guide explains how to set up checkpointing in various frameworks like Python, PyTorch, and TensorFlow, as well as how to configure automatic requeuing for your jobs.
 
@@ -262,7 +262,7 @@ On AI-LAB, jobs are limited to a maximum runtime of 12 hours. Once this time lim
 After implementing checkpointing in your script, you have the option to set up automatic job requeuing in case your job gets cancelled. This is done by modifying a [bash script](/ai-lab/additional-guides/run-a-bash-script/) that will automatically requeue the job if it's terminated due to exceeding the time limit. You can find an example script, `requeue.sh`, on AI-LAB at `/ceph/course/claaudia/docs/requeue.sh`.
 
 
-??? news "Guide on requeing jobs"
+??? info "Guide on requeing jobs"
 
     !!! info "Disclaimer"
         Using requeuing is done at your own risk. This guide is intended as a reference, but requeuing your jobs is entirely the responsibility of the user. There may be errors or inaccuracies within this guide. If you encounter any issues or discover mistakes, we encourage you to provide feedback so we can improve. You can submit your feedback [here](https://serviceportal.aau.dk/serviceportal?id=sc_cat_item&sys_id=a05e2fb4c3434610f0f3041ad001310e).
@@ -334,7 +334,7 @@ After implementing checkpointing in your script, you have the option to set up a
 ## CI/CD with GitHub Actions
 Below is a step-by-step guide on how to set up a self-hosted GitHub Actions runner on AI-LAB. This allows you to run CI/CD jobs directly from GitHub on AI-LAB.
 
-??? news "Guide on how to setup CI/CD with GitHub Actions on AI-LAB"
+??? info "Guide on how to setup CI/CD with GitHub Actions on AI-LAB"
 
     ### 1. Create a self-hosted runner in GitHub
 

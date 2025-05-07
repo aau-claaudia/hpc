@@ -132,7 +132,7 @@ This guide provides the foundation for running batch LLM inference using vLLM on
 
 Below are additional examples demonstrating different vLLM use cases. More advanced examples can be found in the [vLLM GitHub repository](https://github.com/vllm-project/vllm/tree/main/examples/offline_inference).
 
-??? news "chat.py"
+??? info "chat.py"
     ```py title="chat.py"
     # SPDX-License-Identifier: Apache-2.0
     # Modified by CLAAUDIA, ITS, AAU on 2025-03-04
@@ -238,7 +238,7 @@ Below are additional examples demonstrating different vLLM use cases. More advan
         main(args)
     ```
 
-??? news "classify.py"
+??? info "classify.py"
     ```py title="classify.py"
     # SPDX-License-Identifier: Apache-2.0
     # Modified by CLAAUDIA, ITS, AAU on 2025-03-04
@@ -288,7 +288,7 @@ Below are additional examples demonstrating different vLLM use cases. More advan
     
     ```
 
-??? news "embed.py"
+??? info "embed.py"
     ```py title="embed.py"
     # SPDX-License-Identifier: Apache-2.0
     # Modified by CLAAUDIA, ITS, AAU on 2025-03-04
@@ -338,7 +338,7 @@ Below are additional examples demonstrating different vLLM use cases. More advan
     
     ```
 
-??? news "generate.py"
+??? info "generate.py"
     ```py title="generate.py"
     # SPDX-License-Identifier: Apache-2.0
     # Modified by CLAAUDIA, ITS, AAU on 2025-03-04
@@ -403,7 +403,7 @@ Below are additional examples demonstrating different vLLM use cases. More advan
         main(args)
     ```
 
-??? news "score.py"
+??? info "score.py"
     ```py title="score.py"
     # SPDX-License-Identifier: Apache-2.0
     # Modified by CLAAUDIA, ITS, AAU on 2025-03-04

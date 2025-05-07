@@ -1,122 +1,152 @@
 # UCloud
 
-##### UCloud is a digital research platform developed by the SDU eScience Center, specifically designed to deliver high-performance computing with a strong emphasis on user experience.
+<div class="tag-container">
+    <div class="tag-item">
+        <div class="tag">Researchers<i class="bi bi-check-lg"></i></div>
+        <div class="tooltip">Indicates if the platform is accessible for researchers (e.g., PhD students, postdocs, faculty) for research purposes.</div>
+    </div>
+    <div class="tag-item">
+        <div class="tag">Students<i class="bi bi-check-lg"></i></div>
+        <div class="tooltip">Indicates if the platform is accessible to students for educational purposes (e.g., coursework, projects, thesis).</div>
+    </div>
+    <div class="tag-item">
+        <div class="tag">Lecturers<i class="bi bi-check-lg"></i></div>
+        <div class="tooltip">Indicates if the platform is accessible to lecturers for teaching purposes.</div>
+    </div>
+    <div class="tag-item">
+        <div class="tag">Sensitive Data<i class="bi bi-check-lg"></i></div>
+        <div class="tooltip">Whether the platform supports processing and storing sensitive or confidential data</div>
+    </div>
+    <div class="tag-item">
+        <div class="tag">CPU processing<i class="bi bi-check-lg"></i></div>
+        <div class="tooltip">Indicates if the platform supports computational tasks that only require CPU resources.</div>
+    </div>
+    <div class="tag-item">
+        <div class="tag">GPU processing<i class="bi bi-check-lg"></i></div>
+        <div class="tooltip">Indicates if the platform supports computational tasks that require GPU resources for acceleration (e.g., deep learning).</div>
+    </div>
+    <div class="tag-item">
+        <div class="tag">Unlimited compute<i class="bi bi-x-lg"></i></div>
+        <div class="tooltip">Whether the platform allows unrestricted compute usage, without limitations on the amount of usage time.</div>
+    </div>
+    <div class="tag-item">
+        <div class="tag">Web interface<i class="bi bi-check-lg"></i></div>
+        <div class="tooltip">The method used to access the platform.</div>
+    </div>
+    <div class="tag-item">
+        <div class="tag">Pre-installed apps<i class="bi bi-check-lg"></i></div>
+        <div class="tooltip">Indicates if the platform comes with pre-installed applications or frameworks for convenience (e.g., Ansys, PyTorch, TensorFlow).</div>
+    </div>
+    <div class="tag-item">
+        <div class="tag">Collaboration friendly<i class="bi bi-check-lg"></i></div>
+        <div class="tooltip">Indicates if the platform supports collaborative work (e.g., sharing resources, co-editing, team projects).</div>
+    </div>
+    <div class="tag-item">
+        <div class="tag">Working interactively<i class="bi bi-check-lg"></i></div>
+        <div class="tooltip">Indicates if the platform supports interactive workflows where users can interact with running processes (e.g., Jupyter notebooks).</div>
+    </div>
+    <div class="tag-item">
+        <div class="tag">Possible to add GUI<i class="bi bi-check-lg"></i></div>
+        <div class="tooltip">Whether it is possible to run graphical user interfaces (GUIs) on the platform (e.g., remote desktops, JupyterLab).</div>
+    </div>
+    <div class="tag-item">
+        <div class="tag">Not for storage<i class="bi bi-x-lg"></i></div>
+        <div class="tooltip">This platform is not designed for long term storage of research data.</div>
+    </div>
+</div>
 
-!!! info "What is UCloud?"
+## Introduction
 
-    UCloud is a HPC research platform from the SDU eScience Center, engineered to provide high-performance computing with a focus on ease of use. Through the Danish e-Infrastructure Cooperation (DeiC), CLAAUDIA can provide access to UCloud.
-    
-    UCloud provides an intuitive graphical user interface to powerful interactive high-performance computing and tools for data analytics and visualization. UCloud offers an “Apps” section preloaded with popular applications and more applications can be customized and uploaded on-demand. UCloud gives researchers access to the computing power they need, whenever they need it.
+UCloud is a HPC research platform, engineered to provide high-performance computing with a focus on ease of use. UCloud provides an intuitive graphical user interface to powerful interactive high-performance computing and tools for data analytics and visualization. UCloud offers an “Apps” section preloaded with popular applications and more applications can be customized and uploaded on-demand.
 
-    [Apply for resources](/ucloud/how-to-access/){ .md-button .md-button--primary .not-max-width}
+<div class="video-container">
+  <iframe src="https://panopto.aau.dk/Panopto/Pages/Embed.aspx?id=a99ac46e-bab4-4b2a-809b-b2b800ceb5fc&amp;autoplay=false&amp;offerviewer=true&amp;showtitle=false&amp;showbrand=true&amp;captions=false&amp;interactivity=all"
+          allowfullscreen=""
+          allow="autoplay"
+          style="border: 1px solid #464646;"></iframe>
+</div>
 
-## Introduction to UCloud
+## Getting Started
 
-##### Basic information and instructions for first-time users of UCloud.
-
-<div class="grid cards grid-three grid-button-bottom" markdown>
-
-<!--
-Icons can be searched and found here:
-https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/ (best, is to use the ones starting with material)
--->
-
-- :material-key-outline: __How to access__ 
-
-    ---
-
-    Learn how to access UCloud.
-  
-    [How to access](/ucloud/how-to-access/){ .md-button .md-button--primary }
-
-- :material-clipboard-check-multiple-outline: __Guides for UCloud__ 
-
-    ---
-
-    Learn the basics on how to use UCloud.
-
-    [Guides for UCloud](/ucloud/guides/getting-started/before-you-begin/){ .md-button .md-button--primary }
-
-- :material-lan: __Official documentation__ 
-
-    ---
-
-    Visit the official UCloud documentation pages.
-
-    [Official documentation](https://docs.cloud.sdu.dk/index.html){ .md-button .md-button--primary target="_blank}
-
+<div class="custom-grid-3">
+    <a href="/ucloud/how-to-access/" class="custom-grid-item">
+        <i class="custom-grid-icon bi bi-file-lock2-fill"></i>
+        <p class="custom-grid-title">How to access</p>
+        <p class="custom-grid-content">Learn how to access UCloud</p>
+    </a>
+    <a href="/ucloud/guides/getting-started/before-you-begin/" class="custom-grid-item">
+        <i class="custom-grid-icon bi bi-map-fill"></i>
+        <p class="custom-grid-title">Guides for UCloud</p>
+        <p class="custom-grid-content">Learn the basics on how to use UCloud</p>
+    </a>
+    <a href="/ucloud/terms-and-conditions/" class="custom-grid-item">
+        <i class="custom-grid-icon bi bi-file-text-fill"></i>
+        <p class="custom-grid-title">Terms and Conditions</p>
+        <p class="custom-grid-content">Get an overview of the Terms and Conditions for UCloud</p>
+    </a>
 </div>
 
 
-<br> <!-- Just a little break -->
+## Key Features
 
-<div class="grid" markdown>
-
-=== "Common use"
-    * Transcription of text with [Transcriber](/ucloud/guides/application-guides/transcriber/)
-    * Collaboration on code development
-    * Creation of Jupyter Notebook and RStudio Server hosts
-    * Simulation of physics and biomolecular models
-    * Testing of web applications
-    * Teaching of advanced computational methods
-    * Testing of distributed computing systems
-
-
-![Image title](/assets/img/ucloud-hero.jpg)
-
+<div class="custom-grid-3">
+    <div class="custom-grid-item">
+        <h2>High Accessibility</h2>
+        <p class="custom-grid-feature">Access from any device—workstations, laptops, and tablets—ensuring flexibility and convenience for researchers.</p>
+        <img src="/assets/img/UCloud/ucloud-feature-1.png">
+    </div>
+    <div class="custom-grid-item">
+        <h2>Secure, cloud-based resources</h2>
+        <p class="custom-grid-feature">UCloud is designed to handle data at different [security levels](https://www.security.aau.dk/data-classification), and is especially handy if you’re working with sensitive data.</p>
+        <img src="/assets/img/UCloud/ucloud-feature-2.png">
+    </div>
+    <div class="custom-grid-item">
+        <h2>Preloaded App Section</h2>
+        <p class="custom-grid-feature">Access popular applications like MATLAB, RStudio, Jupyter Notebook, and more, preloaded for efficient workflows.</p>
+        <img src="/assets/img/UCloud/ucloud-feature-3.png">
+    </div>
 </div>
 
-## Learn the Key Features
+## Common Use Cases
 
-##### Discover the essential features of UCloud.
-
-
-<div class="grid cards grid-three" markdown>
-
-<!--
-Icons can be searched and found here:
-https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/ (best, is to use the ones starting with material)
--->
-
--   :material-laptop:{ .lg .middle } __High accessibility__
-
-    ---
-    
-    All cloud services are accessible via every type of device, from workstations to laptops and tablets.
-
--   :material-server-security:{ .lg .middle } __Possibilities to work with different data levels__
-
-    ---
-    
-    UCloud is highly secure and provides a safe environment to analyse each of the data levels, including sensitive and confidential data in accordance with [AAU's data classification model](https://www.security.aau.dk/data-classification/the-four-data-types-at-aau).
-
--   :material-developer-board:{ .lg .middle } __CPU & GPU Support__
-
-    ---
-    
-    Utilize powerful CPU and GPU resources for tasks like machine learning model training and simulations of complex systems.
-
--   :material-account-group-outline:{ .lg .middle } __Collaboration tool__
-
-    ---
-    
-    UCloud makes it easy to share data with your collaborators in secure virtual environments. There is no limit to how many projects you create and how many team members you have in your project.
-
--   :material-feather:{ .lg .middle } __Good fit for first-time users__
-
-    ---
-    
-    UCloud platform is designed to make the interaction with HPC more convenient and easier to understand. If you don't have a prior experience with any other HPC system, UCloud might be a perfect choice for you.
-
--   :material-apps:{ .lg .middle } __App section__
-
-    ---
-    
-    Find popular applications such as openFOAM, Ansys, Comsol, MATLAB, SAS, VS Coder, RStudio, Jupyter Notebook etc.
-
+<div class="custom-grid-3">
+    <div class="custom-usecase-item">
+        <i class="custom-usecase-icon bi bi-text-paragraph"></i>
+        <p class="custom-usecase-text">Automated transcription services</p>
+    </div>
+    <div class="custom-usecase-item">
+        <i class="custom-usecase-icon bi bi-image"></i>
+        <p class="custom-usecase-text">Generative AI for image trends</p>
+    </div>
+    <div class="custom-usecase-item">
+        <i class="custom-usecase-icon bi bi-cpu"></i>
+        <p class="custom-usecase-text">High-performance computing for research</p>
+    </div>
+    <div class="custom-usecase-item">
+        <i class="custom-usecase-icon bi bi-images"></i>
+        <p class="custom-usecase-text">Collaborative image processing</p>
+    </div>
+    <div class="custom-usecase-item">
+        <i class="custom-usecase-icon bi bi-diagram-3"></i>
+        <p class="custom-usecase-text">Simulation and modeling projects</p>
+    </div>
+    <div class="custom-usecase-item">
+        <i class="custom-usecase-icon bi bi-diagram-2"></i>
+        <p class="custom-usecase-text">Monte Carlo simulations</p>
+    </div>
+    <div class="custom-usecase-item">
+        <i class="custom-usecase-icon bi bi-phone"></i>
+        <p class="custom-usecase-text">Mobile applications and enhancements</p>
+    </div>
+    <div class="custom-usecase-item">
+        <i class="custom-usecase-icon bi bi-globe"></i>
+        <p class="custom-usecase-text">Satellite data and Earth models</p>
+    </div>
+    <div class="custom-usecase-item">
+        <i class="custom-usecase-icon bi bi-person"></i>
+        <p class="custom-usecase-text">Virtual avatars and AI synthesis</p>
+    </div>
 </div>
-
-<br> <!-- Just a little break -->
 
 ## Important Information
 
