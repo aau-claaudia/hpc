@@ -102,8 +102,16 @@ This will change the origin from which you pull existing changes and push change
 This step is optional and is only really necessary if there are multiple people editing the same file simultaneously, and potentially committing those changes to the `main`branch. Or there may be some other reason you want to pull and merge any changes made to the `main` branch to your remote new and modified branch.
 
 ```bash
+# Check what branch you are working in
+git branch
+
+# Switch to the branch you want to update (if you are not already there)
 git checkout newbranchname      # gets you "on branch newbranchname"
+
+# Fetch the latest version of the branch you are on
 git fetch origin        # gets you up to date with origin
+
+# Merge in the latest 
 git merge origin/main -m "write_a_good_commit_message_for_why_you_want_to_merge_the_new_main_branch"
 ```
 
@@ -122,7 +130,7 @@ git merge origin/main -m "write_a_good_commit_message_for_why_you_want_to_merge_
 It is also recommended to switch back to your remote "main" branch (i.e. the one on your local machine) and update that with a `git pull`.
 
 ```bash
-git branch main
+git checkout main
 git pull
 ```
 This will automatically fetch and merge all of the changes to the main branch to your local copy.
