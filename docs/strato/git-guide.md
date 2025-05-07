@@ -69,7 +69,7 @@ git add .
 or, for the entire working directory using 
 
 ```bash
-git add —all
+git add --all
 ```
 Alternatively individual files can be added to the commit by specifying them as follows:
 
@@ -95,6 +95,61 @@ This will allow you to see the branch on the web.
 ```bash
 git push --set-upstream origin newbranchname
 ```
+This will change the origin from which you pull existing changes and push changes to, thus `git pull` will no longer result in an update of the branch from the `main`branch.
+
+## Git fetch main branch and merge with local (remote) version
+
+This step is optional and is only really necessary if there are multiple people editing the same file simultaneously, and potentially committing those changes to the `main`branch. Or there may be some other reason you want to pull and merge any changes made to the `main` branch to your remote new and modified branch.
+
+```bash
+git checkout newbranchname      # gets you "on branch newbranchname"
+git fetch origin        # gets you up to date with origin
+git merge origin/main -m "write_a_good_commit_message_for_why_you_want_to_merge_the_new_main_branch"
+```
+
+Following this you will need to commit all of the modifications made to the main branch, into your new branch.
+
+```bash
+git status
+git add --all
+git commit -m "All files merged from main branch back into remote branch committed to new branch"
+```
+
+```bash
+git merge origin/main -m "write_a_good_commit_message_for_why_you_want_to_merge_the_new_main_branch"
+```
+
+It is also recommended to switch back to your remote "main" branch (i.e. the one on your local machine) and update that with a `git pull`.
+
+```bash
+git branch main
+git pull
+```
+This will automatically fetch and merge all of the changes to the main branch to your local copy.
+
+
+!!! info "There is a difference between `git pull` and `git fetch`"
+
+    "The `git pull` command updates both the user’s local Git repository and the files in their working directory.
+    That provides the developer with two benefits:
+
+    - The local Git repo is now in sync with the remote repo.
+    - The local filesystem has the latest, most up to date files.
+    
+    The `git pull` command has one prerequisite: the user cannot be actively editing any tracked files in their local workspace that conflict with what’s on the remote server.
+
+    The benefit of the `git fetch` vs `git pull` is that a fetch enables you to continue editing files in your local working directory without having to merge your code with updates from the remote repo.
+
+    With a `git fetch`, you can finish editing files locally, commit your files and then do a git merge to synchronize your updates with the fetched files. This brings you up to date with the updates the fetch pulled down from the remote machine.
+
+    One of the other benefits of a `git fetch` is that it allows you to find out if the branch you are working on is ahead or behind the branch on the server.
+
+    However, when we perform a `git fetch`, we are informed that we are actually three commits behind the master Git branch on the server.
+
+    If you want to know how far ahead or behind your local branch is compared to what is on the server, the `git fetch` command, along with a `git status`, allows you to know that."
+
+    *See for https://www.theserverside.com/blog/Coffee-Talk-Java-News-Stories-and-Opinions/Git-pull-vs-fetch-Whats-the-difference for a full explanation*
+    
 
 # Github.com: Merging changes with the main branch
 
