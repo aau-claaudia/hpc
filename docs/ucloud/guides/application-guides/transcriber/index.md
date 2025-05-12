@@ -170,8 +170,7 @@ For further assistance, contact CLAAUDIA at [https://serviceportal.aau.dk](https
 
 **Research & development by**
 
-* Nikolaj Andersen, CLAAUDIA, ITS, AAU 
-* Pelle Rosenbeck Gøeg, CLAAUDIA, ITS, AAU 
+* CLAAUDIA, ITS, AAU 
 
 **With support from**
 
