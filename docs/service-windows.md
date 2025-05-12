@@ -57,7 +57,13 @@ for instructions on how to do this.
 Link to Strato's
 web-interface: [strato-new.claaudia.aau.dk](https://strato-new.claaudia.aau.dk/)
 
+
+
 ## AI Cloud
+
+!!! info "Service window canceled on AI Cloud - 13 May"
+    As you may be aware, we recently experienced an incident on AI Cloud involving Nvidia drivers, which were unintentionally updated as part of an unattended security update. As part of the resolution process, we have successfully upgraded the remaining components of the Nvidia software stack to their latest versions, eliminating any version mismatches. The system is now fully operational, and all services are functioning as expected. As a result, the planned service window on 13 May has been canceled fro AI Cloud.
+
 In the days leading up to the service window, a reservation will be put in place for the entire cluster. The entirety of the cluster will therefore be unavailable for that day, but may come back online by the end of the day.
 
 **You can still submit jobs in the days leading up to the service window.**
@@ -67,7 +73,12 @@ To submit a job that runs for 1 day and 8 hours, you can simply add `--time=1-08
 
 Additionally you can read about our recommendations for using [checkpointing](ai-lab/additional-guides/requeuing-and-checkpointing/) to work with time limits.
 
+
 ## AI-LAB
+
+!!! info "Service window canceled on AI-LAB - 13 May"
+    As you may be aware, we recently experienced an incident on AI-LAB involving Nvidia drivers, which were unintentionally updated as part of an unattended security update. As part of the resolution process, we have successfully upgraded the remaining components of the Nvidia software stack to their latest versions, eliminating any version mismatches. The system is now fully operational, and all services are functioning as expected. As a result, the planned service window on 13 May has been canceled for AI-LAB.
+
 In the days leading up to the service window, a time limit will be imposed, which will prevent you from launching jobs with end dates that surpass the date of the service window. 
 
 In this period, you will only be able to launch new jobs, if you add the `--time` parameter to your Slurm command. If the time parameter is not included, Slurm assumes you ask for the default maximum time for the partition. You will thus have to calculate how much time you have before the service window, and then submit a job with this parameter added. 

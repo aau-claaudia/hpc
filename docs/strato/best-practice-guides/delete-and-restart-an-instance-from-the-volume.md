@@ -1,4 +1,4 @@
-This is essentially a 3 step process.
+wThis is essentially a 3 step process.
 
 1. Rename the volume attached to your instance / server.
 2. Delete your instance
