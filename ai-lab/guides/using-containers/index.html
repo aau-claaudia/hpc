@@ -1,0 +1,4001 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="The AAU HPC pages offers comprehensive information on high-performance computing infrastructure, tools, and support available to students and researchers at Aalborg University, helping them maximize their computational capabilities for academic and research purposes.">
+      
+      
+        <meta name="author" content="CLAAUDIA, ITS, Aalborg University">
+      
+      
+      
+        <link rel="prev" href="../getting-containers/">
+      
+      
+        <link rel="next" href="../monitoring/">
+      
+      
+      <link rel="icon" href="../../../assets/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
+    
+    
+      
+        <title>6. Using Containers - AAU HPC</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.342714a4.min.css">
+      
+      
+
+  
+  
+  
+  
+  <style>:root{--md-annotation-icon:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M17%2013h-4v4h-2v-4H7v-2h4V7h2v4h4m-5-9A10%2010%200%200%200%202%2012a10%2010%200%200%200%2010%2010%2010%2010%200%200%200%2010-10A10%2010%200%200%200%2012%202%22/%3E%3C/svg%3E');}</style>
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=barlow:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"barlow";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+     
+  <script
+    src="https://code.jquery.com/jquery-3.7.1.slim.min.js"
+    integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8="
+    crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+  <link href="  https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet" type='text/css'/>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+  <link rel="stylesheet" href="https://cdn.datatables.net/2.1.4/css/dataTables.dataTables.css" />
+  <script src="https://cdn.datatables.net/2.1.4/js/dataTables.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <meta name="{}"></meta>
+  <script data-goatcounter="https://hpc-analytics.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+
+
+
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#adding-python-packages-via-virtual-environment" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<!-- Uncomment this for alert on all hpc pages  -->
+<!-- <div style="background: #ce2020; position: fixed; bottom: 0; left: 0; width: 100%; text-align: center; z-index: 9999;">
+  <p style="text-align: center;font-size: 16px;color: white;max-width: 1500px;margin: auto;padding-left: 30px;padding-right: 30px;font-weight: 600;margin-bottom: 10px;margin-top: 10px;">
+    ⚠️ Important notice: GPU driver issue on AI Cloud and AI-LAB. ⚠️</p>
+  <p style="text-align: center;font-size: 14px;color: white;max-width: 1500px;margin: auto;padding-left: 30px;padding-right: 30px;margin-bottom: 20px;font-weight: 400;">
+    We are currently experiencing issues with GPU access on AI Cloud and AI-LAB. We are working on resolving the issue as soon as possible, which may involve rebooting affected nodes or reloading the drivers. Apologies for the inconvenience. </p>
+</div>
+ -->
+
+<header class="custom-header md-header" data-md-component=header>
+  <div class="custom-header-inner">
+    <div class="custom-nav-left">
+      <label class="md-header__button md-icon" for="__drawer">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+      </label>
+      <a class="custom-logo" href="/">
+        <img src="/assets/img/aau-logo-512x512.png" alt="logo">
+        <div style="display: flex;flex-direction: column;vertical-align: middle;">
+          <p class="custom-title">AAU HPC</p>
+          <p class="custom-title" style="font-size: 12px; font-weight: 400;">By CLAAUDIA</p>
+        </div>
+      </a>
+      <div class="custom-nav">
+        <div class="custom-nav-inner">
+          
+            
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Navigation item with nested items -->
+  
+    
+
+    <!-- Recurse, if the first item has further nested items -->
+    
+        <a href="../../.." class="custom-nav-item">
+          
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  Home
+
+        </a>
+    
+
+  <!-- Navigation item -->
+  
+
+          
+            
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Navigation item with nested items -->
+  
+    
+
+    <!-- Recurse, if the first item has further nested items -->
+    
+        <a href="../../../strato/" class="custom-nav-item">
+          
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  Strato
+
+        </a>
+    
+
+  <!-- Navigation item -->
+  
+
+          
+            
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Navigation item with nested items -->
+  
+    
+
+    <!-- Recurse, if the first item has further nested items -->
+    
+        <a href="../../../ucloud/" class="custom-nav-item">
+          
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  UCloud
+
+        </a>
+    
+
+  <!-- Navigation item -->
+  
+
+          
+            
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Navigation item with nested items -->
+  
+    
+
+    <!-- Recurse, if the first item has further nested items -->
+    
+        <a href="../../../ai-cloud/" class="custom-nav-item">
+          
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  AI Cloud
+
+        </a>
+    
+
+  <!-- Navigation item -->
+  
+
+          
+            
+
+  <!-- Determine classes -->
+  
+  
+    
+  
+
+  <!-- Navigation item with nested items -->
+  
+    
+
+    <!-- Recurse, if the first item has further nested items -->
+    
+        <a href="../../" class="custom-nav-item custom-nav-item--active">
+          
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  AI-LAB
+
+        </a>
+    
+
+  <!-- Navigation item -->
+  
+
+          
+            
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Navigation item with nested items -->
+  
+    
+
+    <!-- Recurse, if the first item has further nested items -->
+    
+        <a href="../../../external-hpc/" class="custom-nav-item">
+          
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  External HPC
+
+        </a>
+    
+
+  <!-- Navigation item -->
+  
+
+          
+        </div>
+      </div>
+    </div>
+    <div class="custom-nav-right">
+      <!-- Button to open search modal -->
+      
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <!-- Search interface -->
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+      <hr class="custom-nav-divider">
+      <div class="custom-buttons">
+        <div class="custom-buttons-inner">
+          <a href="https://serviceportal.aau.dk/serviceportal?id=emp_taxonomy_topic&topic_id=82a253e8838fc21053711d447daad328" class="contact-button" target="_blank">Get Support</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="AAU HPC" class="md-nav__button md-logo" aria-label="AAU HPC" data-md-component="logo">
+      
+  <img src="../../../assets/img/aau-logo-512x512.png" alt="logo">
+
+    </a>
+    AAU HPC
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            Home
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../service-windows/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Service windows
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_3" id="__nav_1_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Tools
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_3">
+            <span class="md-nav__icon md-icon"></span>
+            Tools
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../hpc-decision-tree/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    HPC Decision Tree
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../hpc-comparison-table/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    HPC Comparison Table
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../hpc-cost-estimator/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    HPC Cost Estimator
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Strato
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Strato
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../strato/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    About Strato
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../strato/how-to-access/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    How to access
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../strato/terms-and-conditions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Terms and Conditions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Guides
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            Guides
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4_1" id="__nav_2_4_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Getting started
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_4_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4_1">
+            <span class="md-nav__icon md-icon"></span>
+            Getting started
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../strato/getting-started/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Before you begin
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../strato/getting-started/launch-instance/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Launch instance
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../strato/getting-started/access-instance/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Access instance
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../strato/getting-started/transfer-files/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Transfer files
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../strato/getting-started/shutting-down/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Shutting down
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4_2" id="__nav_2_4_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Application guides
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            Application guides
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../strato/application-guides/strato-applications/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Strato applications
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../strato/application-guides/matlab/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Matlab
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../strato/application-guides/jupyter-notebook/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Jupyter Notebook
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../strato/application-guides/docker/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Docker
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4_3" id="__nav_2_4_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Advanced guides
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            Advanced guides
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../strato/advanced-guides/command-line-interface-access/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Command line interface access
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../strato/advanced-guides/custom-security-groups/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Custom security groups
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../strato/advanced-guides/attaching-a-volume-for-additional-storage/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Attaching a volume for additional storage
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../strato/advanced-guides/persistent-terminal-sessions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Persistent terminal sessions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4_4" id="__nav_2_4_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Best-practice guides
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_4_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4_4">
+            <span class="md-nav__icon md-icon"></span>
+            Best-practice guides
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../strato/best-practice-guides/delete-and-restart-an-instance-from-the-volume/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Delete and restart an instance from the volume
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../strato/best-practice-guides/stop-pause-and-delete-instances/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Stop, pause & delete instances
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../strato/best-practice-guides/create-smaller-volumes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Create smaller volumes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../strato/best-practice-guides/how-to-minimize-the-risk-of-malware/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    How to Minimize the Risk of Malware
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    UCloud
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            UCloud
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ucloud/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    About UCloud
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ucloud/how-to-access/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    How to access
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ucloud/terms-and-conditions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Terms and Conditions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ucloud/external-collaborator/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    External collaborators
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ucloud/providers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Providers
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_6" id="__nav_3_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Guides
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_6">
+            <span class="md-nav__icon md-icon"></span>
+            Guides
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_6_1" id="__nav_3_6_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Getting started
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_6_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_6_1">
+            <span class="md-nav__icon md-icon"></span>
+            Getting started
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ucloud/guides/getting-started/before-you-begin/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Before you begin
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ucloud/guides/getting-started/transfer-files/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    File transfer
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ucloud/guides/sensitive-data-on-ucloud/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Guidelines for handling sensitive data
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_6_3" id="__nav_3_6_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Application guides
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_6_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_6_3">
+            <span class="md-nav__icon md-icon"></span>
+            Application guides
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ucloud/guides/application-guides/ChatUI/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ChatUI
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_6_3_2" id="__nav_3_6_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Transcriber
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_6_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_6_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            Transcriber
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ucloud/guides/application-guides/transcriber/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Transcriber
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ucloud/guides/application-guides/transcriber/transcriber-video/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Transcriber guide videos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ucloud/guides/application-guides/Voyant-Tools/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Voyant Tools
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    AI Cloud
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            AI Cloud
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ai-cloud/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    About AI Cloud
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ai-cloud/how-to-access/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    How to access
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ai-cloud/system-overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    System overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ai-cloud/terms-and-conditions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Terms and Conditions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ai-cloud/fair-usage/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Fair usage
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_6" id="__nav_4_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Guides
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_6">
+            <span class="md-nav__icon md-icon"></span>
+            Guides
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_6_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_6_1" id="__nav_4_6_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Getting started
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_6_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_6_1">
+            <span class="md-nav__icon md-icon"></span>
+            Getting started
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ai-cloud/getting-started/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Before you begin
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ai-cloud/getting-started/login/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Login
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ai-cloud/getting-started/file-transfer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    File transfer
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ai-cloud/getting-started/pulling-containers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Pulling containers
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ai-cloud/getting-started/running-jobs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Running jobs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ai-cloud/getting-started/next-steps/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Next steps
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_6_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_6_2" id="__nav_4_6_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Additional guides
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_6_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_6_2">
+            <span class="md-nav__icon md-icon"></span>
+            Additional guides
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ai-cloud/additional-guides/checkpointing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Checkpointing
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_6_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_6_2_2" id="__nav_4_6_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Container guides
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_4_6_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_6_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Container guides
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ai-cloud/additional-guides/building-your-own-container-image/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Building your own container image
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ai-cloud/additional-guides/download-container-images/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Download container images
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ai-cloud/additional-guides/adding-python-packages-via-virtual-environment/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Adding python packages via virtual environment
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ai-cloud/additional-guides/creating-a-conda-environment/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Creating a conda environment
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ai-cloud/additional-guides/local-scratch-space/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Local scratch space
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_6_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_6_2_4" id="__nav_4_6_2_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Monitoring commands
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_4_6_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_6_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            Monitoring commands
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ai-cloud/additional-guides/checking-the-queue/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Checking the queue
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ai-cloud/additional-guides/checking-the-status-of-compute-nodes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Checking the status of compute nodes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ai-cloud/additional-guides/checking-gpu-usage/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Checking GPU usage
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_6_2_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_6_2_5" id="__nav_4_6_2_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Running jobs
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_4_6_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_6_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            Running jobs
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ai-cloud/additional-guides/run-a-batch-script/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Run a batch script
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ai-cloud/additional-guides/multiple-gpus-with-pytorch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Multiple GPUs with PyTorch
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_6_2_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_6_2_6" id="__nav_4_6_2_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Slurm arguments
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_4_6_2_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_6_2_6">
+            <span class="md-nav__icon md-icon"></span>
+            Slurm arguments
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ai-cloud/additional-guides/cpu-gpu-and-memory-allocation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    CPU, GPU, and memory allocation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ai-cloud/additional-guides/setting-a-time-limit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Setting a time limit
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ai-cloud/additional-guides/cancelling-jobs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Cancelling jobs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ai-cloud/additional-guides/checkpointing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Checkpointing
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ai-cloud/additional-guides/batch-llm-inference/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Batch LLM Inference
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    AI-LAB
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            AI-LAB
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    About AI-LAB
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../how-to-access/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    How to access
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../system-overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    System overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../troubleshooting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Troubleshooting
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../assets/terms-and-conditions-ai-lab.pdf" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Terms and Conditions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fair-usage/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Fair Usage
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_7" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5_7" id="__nav_5_7_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Guides
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_7_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5_7">
+            <span class="md-nav__icon md-icon"></span>
+            Guides
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Index
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../video-onboarding-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Video Onboarding Guide
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_7_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5_7_3" id="__nav_5_7_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Getting started
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_7_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5_7_3">
+            <span class="md-nav__icon md-icon"></span>
+            Getting started
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../prerequisites/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    1. Prerequisites
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../login/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    2. Login
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../file-handling/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    3. File Handling
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../running-jobs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    4. Running Jobs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting-containers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    5. Getting Containers
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    6. Using Containers
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    6. Using Containers
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#adding-python-packages-via-virtual-environment" class="md-nav__link">
+    <span class="md-ellipsis">
+      Adding Python packages via virtual environment
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cancelling-jobs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cancelling jobs
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../monitoring/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    7. Monitoring
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_7_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_7_4" id="__nav_5_7_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Additional Guides
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_7_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_7_4">
+            <span class="md-nav__icon md-icon"></span>
+            Additional Guides
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../batch-llm-inference/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Batch LLM Inference
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../checkpointing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Checkpointing
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../requeuing-jobs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Requeuing jobs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ci-cd-with-github-actions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    CI/CD with GitHub Actions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    External HPC
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            External HPC
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../external-hpc/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    External HPC facilities
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../external-hpc/facilities/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview of HPC facilities
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../external-hpc/access/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    How to access
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+  
+                  
+
+
+
+  <h1>6. Using Containers</h1>
+
+<p>To run a task within a container, we need to add specific parameters to the <code>srun</code> or <code>sbatch</code> command.</p>
+<p>As an example, let's try running <code>print('hello world')</code> using <code>Python3</code> within the <code>python_3.10.sif</code> container from <code>/ceph/container/python</code> directory.</p>
+<h3 id="using-srun">Using <code>srun</code></h3>
+<div class="highlight"><pre><span></span><code>srun --mem=24G --cpus-per-task=15 --gres=gpu:1 --time=01:00:00 singularity exec --nv /ceph/container/python/python_3.10.sif python3 -c &quot;print(&#39;hello world&#39;)&quot;
+</code></pre></div>
+<ul>
+<li><code>singularity</code> is the command for interacting with Singularity.</li>
+<li><code>exec</code> is a sub-command that tells Singularity to execute a command inside the specified container.</li>
+<li><code>--nv</code> is a sub-command that enables NVIDIA drivers in the container (<strong>Important when using GPUs</strong>).</li>
+<li><code>/ceph/container/python/python_3.10.sif</code> is the path to the container.</li>
+<li><code>python3 -c "print('hello world')"</code> is the task that singularity executes.</li>
+</ul>
+<h3 id="using-sbatch">Using <code>sbatch</code></h3>
+<div class="highlight"><span class="filename">my_job.sh</span><pre><span></span><code><span class="ch">#!/bin/bash</span>
+
+<span class="c1">#SBATCH --job-name=my_test_job  # Name of your job</span>
+<span class="c1">#SBATCH --output=my_job.out     # Name of the output file</span>
+<span class="c1">#SBATCH --error=file-my_job.err # Name of the error file</span>
+<span class="c1">#SBATCH --mem=24G               # Memory</span>
+<span class="c1">#SBATCH --cpus-per-task=15      # CPUs per task</span>
+<span class="c1">#SBATCH --gres=gpu:1            # Allocated GPUs</span>
+<span class="c1">#SBATCH --time=01:00:00         # Maximum run time</span>
+
+singularity<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>--nv<span class="w"> </span>/ceph/container/python/python_3.10.sif<span class="w"> </span>python3<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;print(&#39;hello world&#39;)&quot;</span>
+</code></pre></div>
+<p>Then submit the job using <code>sbatch</code>:</p>
+<div class="highlight"><pre><span></span><code>sbatch my_job.sh
+</code></pre></div>
+<p>After the job gets submitted, you should be able to find a file called <code>my_job.out</code> with <code>hello world</code> in it. You can print the content using:</p>
+<div class="highlight"><pre><span></span><code>cat my_job.out
+</code></pre></div>
+<hr>
+
+<h2 id="adding-python-packages-via-virtual-environment">Adding Python packages via virtual environment</h2>
+<p>Sometimes, you’ll need additional Python packages that aren’t included in the container you’re using. The simplest and cleanest way to manage these is by creating a virtual environment within your own directory.</p>
+<p>This guide walks you through creating a <strong>virtual environment</strong> inside a Singularity container and installing additional packages for use in your Python scripts.</p>
+<div class="admonition warning">
+<p class="admonition-title">This guide is recently updated and under testing</p>
+<p>This guide has just been updated to reflect new container paths and best practices. If you encounter any issues, please report them by submitting a ticket through our <a href="https://serviceportal.aau.dk/serviceportal?id=emp_taxonomy_topic&amp;topic_id=82a253e8838fc21053711d447daad328">service portal</a>.</p>
+</div>
+<details class="info">
+<summary>Guide on adding Python packages via virtual environment</summary>
+<h3 id="step-1-create-a-virtual-environment-inside-the-container">Step 1: Create a virtual environment inside the container.</h3>
+<p>Run the following command to create a virtual environment in your current directory.</p>
+<p>** Replace the container**, with the one you want to use. You need to do this thoughout the guide.</p>
+<div class="highlight"><pre><span></span><code>srun singularity exec /ceph/container/pytorch/pytorch_25.01.sif python -m venv --system-site-packages my_venv
+</code></pre></div>
+<div class="admonition info">
+<p class="admonition-title">Using a shared project directory?</p>
+<p>If you're working in a shared project directory, first <code>cd</code> into that directory and then run the command.</p>
+</div>
+<h3 id="step-2-install-additional-packages">Step 2: Install Additional Packages</h3>
+<p>Activate the environment inside the container and install the Python packages you need. In this case we will install <code>openpyxl</code>:</p>
+<div class="highlight"><pre><span></span><code>srun singularity exec --nv -B ~/my_venv:/scratch/my_venv -B $HOME/.singularity:/scratch/singularity /ceph/container/pytorch/pytorch_25.01.sif /bin/bash -c &quot;export TMPDIR=/scratch/singularity/tmp &amp;&amp; source scratch/my_venv/bin/activate &amp;&amp; pip install --no-cache-dir openpyxl&quot;
+</code></pre></div>
+<div class="admonition info">
+<p class="admonition-title">Using a shared project directory?</p>
+<p>Replace <code>~/my_venv</code> with the absolute path, e.g. <code>/ceph/project/my_project/my_venv</code>.</p>
+</div>
+<ul>
+<li><code>-B ~/my_venv:/scratch/my_venv</code> mounts your virtual env inside the container at <code>/scratch/my_venv</code>.</li>
+<li><code>-B $HOME/.singularity:/scratch/singularity</code> mounts a temp/cache directory with enough space.</li>
+<li><code>export TMPDIR=/scratch/singularity/tmp</code> tells pip to use that mounted tmp dir instead of the default /tmp</li>
+<li><code>source scratch/my_venv/bin/activate</code> activates the environment.</li>
+<li><code>pip install --no-cache-dir openpyxl</code> installs your chosen package(s) and saves space by not keeping package files after install.</li>
+</ul>
+<h3 id="step-3-test-with-a-simple-python-script">Step 3: Test with a simple Python script</h3>
+<p>Now you can test with a script that uses the packages you've installed. For example:</p>
+<div class="highlight"><span class="filename">my_script.py</span><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">torch</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">openpyxl</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Torch version:&quot;</span><span class="p">,</span> <span class="n">torch</span><span class="o">.</span><span class="n">__version__</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Openpyxl version:&quot;</span><span class="p">,</span> <span class="n">openpyxl</span><span class="o">.</span><span class="n">__version__</span><span class="p">)</span>
+</code></pre></div>
+<p>Save this as my_script.py in your working directory.</p>
+<h3 id="step-4-run-your-script-using-the-virtual-environment">Step 4: Run Your Script Using the Virtual Environment</h3>
+<p>To run the script inside the container using your virtual environment:</p>
+<div class="highlight"><pre><span></span><code>srun singularity exec --nv -B ~/my_venv /ceph/container/pytorch/pytorch_25.01.sif /bin/bash -c &quot;source my_venv/bin/activate &amp;&amp; python my_script.py&quot;
+</code></pre></div>
+<div class="admonition info">
+<p class="admonition-title">Using a shared project directory?</p>
+<p>Again, make sure to use the full path to <code>my_venv</code> if it’s not in your home directory.</p>
+</div>
+<p>You’ve now added custom packages to your own isolated Python environment without modifying the base container.</p>
+<div class="admonition info">
+<p class="admonition-title">Reminder</p>
+<p>Always activate your virtual environment inside the container before running Python scripts to ensure your packages are available.</p>
+</div>
+</details>
+<details class="info">
+<summary>(OLD) Guide on adding Python packages via virtual environment</summary>
+<p>To enhance the functionality of a containerized environment, you can add additional Python packages using a virtual environment. This guide outlines the steps to create and utilize a virtual environment within a Singularity container to ensure compatibility between different Python versions.</p>
+<h3 id="step-1-create-a-virtual-environment-inside-a-singularity-container">Step 1: Create a virtual environment inside a Singularity container.</h3>
+<p>Create the virtual environment using the installed <code>virtualenv</code> tool. Remember to replace <code>/ceph/container/python/python_3.10.sif</code> with your container path.</p>
+<div class="highlight"><pre><span></span><code>srun singularity exec /ceph/container/python/python_3.10.sif virtualenv ~/my-virtual-env
+</code></pre></div>
+<p>This ensures that the virtual environment is set up using the correct Python version from the container.</p>
+<div class="admonition info">
+<p class="admonition-title">Missing <code>virtualenv</code> package?</p>
+<p>If the command fails due to missing <code>virtualenv</code> dependency, try installing the package in the container:</p>
+<div class="highlight"><pre><span></span><code>srun singularity exec /ceph/container/python/python_3.10.sif pip install --user virtualenv
+</code></pre></div>
+<p>Then run:</p>
+<div class="highlight"><pre><span></span><code>srun singularity exec /ceph/container/python/python_3.10.sif ~/.local/bin/virtualenv ~/my-virtual-env
+</code></pre></div>
+<p>In case you are trying to set up the virtual environment inside a <a href="../../system-overview/#shared-project-directories">shared project directory</a>, you will first need to navigate to the project directory and execute the command from there.</p>
+</div>
+<h3 id="step-2-install-python-packages-inside-the-virtual-environment">Step 2: Install Python packages inside the virtual environment</h3>
+<p>With the virtual environment created, you can now install the necessary Python packages within it.</p>
+<div class="highlight"><pre><span></span><code>srun singularity exec --bind ~/my-virtual-env:/my-virtual-env /ceph/container/python/python_3.10.sif /bin/bash -c &quot;source /my-virtual-env/bin/activate &amp;&amp; python3 -m pip install numpy pandas matplotlib&quot;
+</code></pre></div>
+<p>Here’s what happens in this command:
+- The <code>--bind</code> option mounts the virtual environment directory inside the container.
+- The virtual environment is activated using <code>source</code>.
+- The required Python packages (<code>numpy</code>, <code>pandas</code>, <code>matplotlib</code>) are installed using <code>pip</code>.</p>
+<h3 id="step-3-verify-the-installation">Step 3: Verify the installation</h3>
+<p>After installing the packages, you can verify that they are correctly installed inside the virtual environment.</p>
+<div class="highlight"><pre><span></span><code>srun singularity exec --bind ~/my-virtual-env:/my-virtual-env /ceph/container/python/python_3.10.sif /bin/bash -c &quot;source /my-virtual-env/bin/activate &amp;&amp; python -c &#39;import matplotlib; print(matplotlib.__version__)&#39;&quot;
+</code></pre></div>
+<p>This command runs a short Python script inside the virtual environment to check if <code>matplotlib</code> is properly installed.</p>
+<h3 id="step-4-use-the-virtual-environment-for-running-scripts">Step 4: Use the virtual environment for running scripts</h3>
+<p>Now that the virtual environment is set up and populated with the necessary packages, you can use it to run your Python scripts inside the Singularity container.</p>
+<div class="highlight"><pre><span></span><code>srun singularity exec --bind ~/my-virtual-env:/my-virtual-env /ceph/container/python/python_3.10.sif /bin/bash -c &quot;source /my-virtual-env/bin/activate &amp;&amp; python my_script.py&quot;
+</code></pre></div>
+<p>This ensures that <code>my_script.py</code> runs with the correct Python version and installed dependencies.</p>
+<div class="admonition info">
+<p class="admonition-title">Remember to always use the virtual environment when running Python scripts</p>
+<p>Always make sure to activate the virtual environment (<code>source /my-virtual-env/bin/activate</code>) inside the Singularity container before running any Python scripts to ensure they use the correct dependencies.</p>
+</div>
+</details>
+<h2 id="cancelling-jobs">Cancelling jobs</h2>
+<p>There are several scenarios where you might need to cancel jobs, such as when a job is stuck, running longer than expected, or you realize that the job parameters were set incorrectly. Here’s a guide on how to cancel jobs with Slurm.</p>
+<details class="info">
+<summary>Guide on cancelling jobs</summary>
+<h3 id="checking-job-status">Checking Job Status</h3>
+<p>Before cancelling a job, it’s often useful to check its current status or job ID. You can list your currently running or queued jobs using the squeue command:</p>
+<div class="highlight"><pre><span></span><code>squeue --me
+</code></pre></div>
+<h3 id="cancelling-a-single-job">Cancelling a Single Job</h3>
+<p>To cancel a specific job, use the <code>scancel</code> command followed by the job ID. For example, if your job ID is <code>12345</code>, you can cancel it by running:</p>
+<div class="highlight"><pre><span></span><code>scancel 12345
+</code></pre></div>
+<h3 id="cancelling-multiple-jobs">Cancelling Multiple Jobs</h3>
+<p>If you need to cancel all your jobs, you can cancel all jobs belonging to your user by using:</p>
+<div class="highlight"><pre><span></span><code>scancel --user=$USER
+</code></pre></div>
+<p>This command is particularly useful if you have submitted a batch of jobs and need to cancel them all simultaneously.</p>
+</details>
+<p>Now that you know how to run jobs using containers, let's delve into the last part about <a href="../monitoring/"><strong>monitoring on AI-LAB <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"/></svg></span></strong></a></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+  <footer role="contentinfo" class="container">
+    <div class="footer-container">
+        <div class="footer-row">
+            <div class="footer-social">
+                <ul class="links">
+                    <li>
+                        <a href="https://www.linkedin.com/company/90798480" target="_blank">
+                            <i class="bi bi-linkedin"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.researcher.aau.dk/contact/claaudia" target="_blank">
+                            <i class="bi bi-globe"></i>
+                        </a>                    
+                    </li>
+                    <li>
+                        <a href="https://serviceportal.aau.dk/serviceportal?id=emp_taxonomy_topic&topic_id=82a253e8838fc21053711d447daad328" target="_blank">
+                            <i class="bi bi-chat-dots"></i>
+                        </a>                    
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-row">
+            <ul class="links">
+                <li><a href="https://serviceportal.aau.dk/serviceportal?id=emp_taxonomy_topic&topic_id=82a253e8838fc21053711d447daad328" target="_blank" rel="noopener">Support</a></li>
+                <li><a href="/terms-and-conditions/" rel="noopener">Terms and Conditions</a></li>
+                <li><a href="/service-windows/" rel="noopener">Service Windows</a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+
+
+
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "content.code.copy", "content.code.annotate", "navigation.sections", "toc.integrate"], "search": "../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      
+        <script src="../../../javascripts/conditional.js"></script>
+      
+    
+  </body>
+</html>
