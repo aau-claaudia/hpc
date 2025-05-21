@@ -54,7 +54,7 @@ AI Cloud currently include the following compute nodes:
 | a256-a40-[04-07] | 4              | 3 (NVIDIA A40)   | 32 (AMD EPYC)      | 32             | 256 GB       | 48 GB        | -            | No                             | Large single-GPU jobs                 |
 | i256-a40-[01-02] | 2              | 4 (NVIDIA A40)   | 24 (Intel Xeon)    | 24             | 256 GB       | 48 GB        | 6.4 TB /raid | Yes (2&times;2)                | Large single-/multi-GPU jobs          |
 | a512-mi100-01    | 1              | 8 (AMD MI100)    | 16 (AMD EPYC)      | 32             | 512 GB       | 32 GB        | -            | Yes (Infinity Fabric link)     | Large / batch / multi-GPU jobs        |
-| a512-l4-06       | 6              | 8 (NVIDIA L4)    | 64 (AMD EPYC)      | 128            | 512 GB       | 24 GB        | -            | No                             | Large / batch / multi-GPU jobs        |
+| a512-l4-06       | 1              | 8 (NVIDIA L4)    | 64 (AMD EPYC)      | 128            | 512 GB       | 24 GB        | -            | No                             | Large / batch / multi-GPU jobs        |
 | a768-l40s-[01-06]| 6              | 8 (NVIDIA L40s)  | 64 (AMD EPYC)      | 128            | 768 GB       | 48 GB        | -            | No                             | Large / batch / multi-GPU jobs        |
 | nv-ai-[01-03]    | 3              | 16 (NVIDIA V100) | 48 (Intel Xeon)    | 96             | 1470 GB      | 32 GB        | 30 TB /raid  | Yes                            | Large / batch / multi-GPU jobs        |
 | nv-ai-04         | 1              | 8 (NVIDIA A100)  | 128 (AMD EPYC)     | 256            | 980 GB       | 40 GB        | 14 TB /raid  | Yes                            | Large / batch / multi-GPU jobs        |
