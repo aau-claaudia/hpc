@@ -782,13 +782,13 @@
 
       switch (periodSelect) {
         case "per day":
-          return months * 31 * hours;
+          return months * 20 * hours; // Assuming 20 working days per month
         case "per week":
-          return months * 4.3 * hours;
+          return months * 4.3 * hours; // Approximate weeks per month
         case "per month":
-          return months * hours;
+          return months * hours; // Directly use the monthly hours
         case "in total":
-          return hours;
+          return hours; // Total hours as provided
       }
       return 0;
     }
@@ -851,10 +851,10 @@
       let computeCost = computeUnitCost * machines * totalComputeHours;
 
       // ----- DATA MANAGEMENT COST -----
-      // totalHours * (600000 / (160.33 * 12))
+      // ----- DATA MANAGEMENT COST -----
       let dataMgmtTotalHours = computeTotalHours(dataMgmtHoursInput.value, dataMgmtHoursSelect.value, durationMonths);
       let dataMgmtCost = dataMgmtTotalHours * datastewardListedPrice;
-
+      
       // ----- SUM ALL COSTS IN DKK -----
       let totalCostDKK = storageCost + frontEndCost + computeCost + dataMgmtCost;
 

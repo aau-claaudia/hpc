@@ -170,8 +170,7 @@ For further assistance, contact CLAAUDIA at [https://serviceportal.aau.dk](https
 
 **Research & development by**
 
-* Nikolaj Andersen, CLAAUDIA, ITS, AAU 
-* Pelle Rosenbeck Gøeg, CLAAUDIA, ITS, AAU 
+* CLAAUDIA, ITS, AAU 
 
 **With support from**
 
@@ -183,4 +182,4 @@ For further assistance, contact CLAAUDIA at [https://serviceportal.aau.dk](https
 
 **Citation**
 
-Andersen, Nikolaj (CLAAUDIA); Gøeg, Pelle Rosenbeck (CLAAUDIA) and OpenAI. (2024). Transcriber (Version1.0) [App]. UCloud interactive HPC system, eScience Center at the University of Southern Denmark. https://cloud.sdu.dk/app/jobs/create?app=transcriber&version=1.0  
+CLAAUDIA, ITS, AAU (2024). Transcriber (Version1.0) [App]. UCloud interactive HPC system, eScience Center at the University of Southern Denmark. https://cloud.sdu.dk/app/jobs/create?app=transcriber&version=1.0  
