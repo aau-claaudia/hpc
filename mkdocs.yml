@@ -123,6 +123,7 @@ nav:
       - External HPC facilities: external-hpc/index.md
       - Overview of HPC facilities: external-hpc/facilities.md
       - How to access: external-hpc/access.md 
+      - LUMI: external-hpc/lumi.md 
 
 theme:
   name: material
