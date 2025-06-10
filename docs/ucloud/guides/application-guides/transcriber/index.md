@@ -1,4 +1,10 @@
-# Transcriber User Guide
+# Transcriber batch
+
+!!! success  "New Transcriber interface available!"
+    We are excited to announce the release of a brand new interface for the Transcriber application. The updated interface offers an improved user experience and new features to make your transcription tasks even easier. Find it on UCloud by selection Transcriber and the **Default** version. 
+    
+    If you prefer the previous version and follow this guide, you can still access it by selecting **Batch** on the top of the job page. 
+
 
 **Approved for data classification level**
 
@@ -13,7 +19,7 @@
 
 ---
 
-## 1. Using the Transcriber application
+## 1. Using the Transcriber batch application
 
 ### 1.1 Finding the application
 
