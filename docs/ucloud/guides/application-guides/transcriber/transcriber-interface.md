@@ -7,7 +7,7 @@ Transcriber is an app that turns your audio or video files into text. You can us
 
 ---
 
-## Step 1: Launch the Transcriber job
+### Step 1: Launch the Transcriber job
 
 1. **Go to the UCloud application page** and use the search function to find **Transcriber**.
    ![Transcriber Guide Screen](/assets/img/UCloud/Transcriberguide16.jpg)
@@ -28,7 +28,7 @@ Transcriber is an app that turns your audio or video files into text. You can us
 
 Once you finish, click **Submit** to start the Transcriber job.
 
-## Step 2: Add files to be transcribed
+### Step 2: Add files to be transcribed
 
 Once the app starts, decide how you want to add files for transcription. You have two main options:
 
@@ -43,13 +43,13 @@ Once the app starts, decide how you want to add files for transcription. You hav
 - Multiple files can be added at once.
 
 
-## Step 3: Start the transcription
+### Step 3: Start the transcription
 
 - Once you have added all your desired files to the transcription queue, click **Start Transcription**.  
 - The app will then begin processing your files.
 
 
-## Step 4: Download Your Transcriptions
+### Step 4: Download Your Transcriptions
 
 - **While the job is running**: You can download completed transcriptions directly from the app, either one by one or as a zip file.  
 - **After the job is finished**: All transcriptions will be available in the `/Jobs/Transcriber/<job-id>/TRANSCRIPTIONS/` folder on UCloud.
@@ -67,6 +67,6 @@ Use the [Transcriber batch version](../transcriber/index.md), which offers exten
 
 ---
 
-## Need Help?
+### Need Help?
 
 Contact your support team through the [serviceportal](https://aau.service-now.com/serviceportal).

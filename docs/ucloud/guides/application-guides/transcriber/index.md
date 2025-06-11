@@ -1,9 +1,13 @@
 # Transcriber batch
 
 !!! success  "New Transcriber interface available!"
-    We are excited to announce the release of a brand new interface for the Transcriber application. The updated interface offers an improved user experience and new features to make your transcription tasks even easier. Find it on UCloud by selection Transcriber and the **Default** version. 
+    We are excited to announce the launch of a brand new, user-friendly interface for the Transcriber application! This updated version offers an improved experience and new features to make your transcription tasks even easier. 
+
+    To try it out, go to [UCloud](https://cloud.sdu.dk/app/jobs/create?app=transcriber-gui), select **Transcriber**, and choose the **Default** version. 
+
+    For a step-by-step guide to the new interface, see [Transcriber Interface Guide](https://hpc.aau.dk/ucloud/guides/application-guides/transcriber/transcriber-interface/).
     
-    If you prefer the previous version and follow this guide, you can still access it by selecting **Batch** on the top of the job page. 
+    If you prefer the previous version simply switch the version to **Batch** on the top of the job page.  and follow this guide, you can still access it by selecting **Batch** on the top of the job page. 
 
 
 **Approved for data classification level**
