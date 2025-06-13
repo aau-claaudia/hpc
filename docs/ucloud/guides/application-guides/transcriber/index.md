@@ -39,7 +39,7 @@ There are two ways to use Transcriber on UCloud:
 
 Select the guide of your choice below for step-by-step instructions for each version.
 
-??? info "Transcriber interface (Default version)"
+??? info "Transcriber Interface (Default version)"
 
     This guide will walk you through using the latest **default** version of Transcriber, featuring an improved, user-friendly interface for transcribing your audio and video files on UCloud.
 
@@ -90,7 +90,7 @@ Select the guide of your choice below for step-by-step instructions for each ver
       - Or **click** the upload area to browse your computer and select files.
       - Multiple files can be added at once.
 
-    ![Selecting files to be transcribed](/assets/img/UCloud/TranscriberguideGUI2.jpg)    
+    ![Selecting files to be transcribed](/assets/img/UCloud/TranscriberguideGUI3.jpg)    
 
     #### 1.4 Starting the transcription
 
@@ -100,8 +100,12 @@ Select the guide of your choice below for step-by-step instructions for each ver
 
     #### 1.5 Downloading your transcriptions
 
-    - **While the job is running**: You can download completed transcriptions directly from the app, either one by one or as a zip file.
-    - **After the job is finished**: All transcriptions will be available in the `/Jobs/Transcriber/<job-id>/TRANSCRIPTIONS/` folder on UCloud.
+    - **While the job is running**: You can download completed transcriptions directly from the app, either one by one or as a zip file. When downloading individual files, you can select your preferred output format (TXT, DOCX, VTT, etc.). If you choose to download as a zip file, you'll receive all available output formats for each transcription. 
+      > **Note:** For better readability and to save time on post-processing, you can download a merged speaker format of the transcription that combines consecutive text entries from the same speaker into natural, flowing sentences. This feature helps streamline your workflow by reducing the need for manual text editing.
+    ![Download transcribed files](/assets/img/UCloud/TranscriberguideGUI4.jpg)   
+    
+    - **After the job is finished**: All transcriptions will be available on UCloud in the folder: `/Jobs/Transcriber/<job-id>/TRANSCRIPTIONS/`.
+ 
 
     #### 1.6 Optional: Adjusting settings
 
@@ -114,7 +118,7 @@ Select the guide of your choice below for step-by-step instructions for each ver
     Try the Transcriber batch version, which offers extended configuration possibilities.
 
 
-??? info "Transcriber batch"
+??? info "Transcriber Batch"
     This guide provides step-by-step instructions for using the **Transcriber Batch** application, which offers advanced configuration options and is optimized for efficient, large-scale transcription tasks.
 
     ### 1. Using the Transcriber batch application
