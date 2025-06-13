@@ -54,9 +54,9 @@ nav:
           - Application guides:
               - ChatUI: ucloud/guides/application-guides/ChatUI/index.md
               - Transcriber:
-                  - Transcriber interface: ucloud/guides/application-guides/transcriber/transcriber-interface.md
+#                  - Transcriber interface: ucloud/guides/application-guides/transcriber/transcriber-interface.md
                   - Transcriber batch: ucloud/guides/application-guides/transcriber/index.md
-                  - Transcriber batch videos: ucloud/guides/application-guides/transcriber/transcriber-video.md
+#                  - Transcriber batch videos: ucloud/guides/application-guides/transcriber/transcriber-video.md
               - Voyant Tools: ucloud/guides/application-guides/Voyant-Tools.md
 
   - AI Cloud:
