@@ -1,22 +1,29 @@
+LUMI is a supercomputer located in Kajaani, Finland and ranks among the world's Top 10 supercomputers according to the [Top 500 list](https://top500.org). The true power of the system lies in it's oppurtunity to scale jobs massively, but we also want to encourage our users to experiment with the system, and to think of it as an extension of the compute capacity available to them as researchers at AAU.
 
-LUMI ranks among the Top 10 supercomputer according to the [Top 500 list](https://top500.org), and is the largest HPC facility AAU holds [local resources](external-hpc/access/#hpc-facilities-accessible-with-local-and-national-resources) to.
 
-The true power of LUMI thus lies in it's scaling oppurtunities, but we encourage users to experiment with the system and to think of it as an extension of the capacity that we provide at AAU.
+## Access
+The system is funded by EuroHPC and the [LUMI consortium](https://www.lumi-supercomputer.eu/lumi-consortium/) which Denmark is a member of, and for this reason AAU holds local ressources, which we can use to provide our researchers with **direct access** to the system.
 
-!!! info "Accessing LUMI resources"
+!!! info "Recommendations for acquiring compute time on LUMI"
 
-    There are three different resource pools:
-    
-    - **AAU's local resource pool**: This is recommended for first time users, and can usually be handled within 1 workday. When your application has been accepted, you will receive an email with step-by-step instructions on how to proceed.
-    - **DeiC's national resource pool**: This is option is suitable for users who have some familiarity with the system and want to apply for larger grants.
-    - **A EuroHPC access call**: This is suitable for when you want to apply for larger grants. With a EuroHPC grant, it is also possible to apply for in-depth HPC expertise support from [Epicure](https://epicure-hpc.eu/).
+    1. Find a resource for testing out and gaining familiarity with the system. Make use of either:
+        * **AAU's local resource pool**: Fill out [our application form](https://forms.office.com/e/4XC48iVu4S). We have meticulously crafted the application form, so that it guides you every step of the way. Upon approval you will receive an email with step-by-step instructions on how to log in to the system.
+        * **EuroHPC**: Apply for either [*benchmark*](https://eurohpc-ju.europa.eu/eurohpc-ju-call-proposals-benchmark-access_en) or [*development*](https://eurohpc-ju.europa.eu/eurohpc-ju-call-proposals-development-access_en) access from EuroHPC. Consider the oppurtunity of applying for in-depth HPC-expert-assistance from [Epicure](/external-hpc/access/#epicure).
+        
+    2. If you would need additional resources for the system, you have the following options depending on how much your project requires:
+        * **AAU's local resource pool**: We hand out resources for actual (non-testing) project work on a continuous basis. The amount we can allocate depends on our budget, but we encourage users to fill out [our application form](https://forms.office.com/e/4XC48iVu4S). If the applied amount is not within our budget, we will reach out to you and help you find the resources you need.
+        * **DeiC's national resource pool**: This is a biannual call, suitable for both modest and very large project needs.
+        * **EuroHPC**: Apply for on of the access modes; [*regular*](https://eurohpc-ju.europa.eu/eurohpc-ju-call-proposals-regular-access-mode_en), [*extreme*](https://eurohpc-ju.europa.eu/eurohpc-ju-call-proposals-extreme-scale-access-mode_en) or [*AI for Science and Collaborative EU Projects*](https://eurohpc-ju.europa.eu/eurohpc-ju-call-proposals-ai-science-and-collaborative-eu-projects_en). Consider the oppurtunity of applying for in-depth HPC-expert-assistance from [Epicure](/external-hpc/access/#epicure).
 
-    Read more about this in our [How to access section](external-hpc/access/).
+    Generally we always recommend making use of AAU's resources first, as CLAAUDIA can provide you with the best onboarding oppurtunities, and guide you further along the way as your project grows.
+
+    Make sure to check out our main page for these oppurtunities: [How to access](/external-hpc/access/).
 
 !!! info "User support"
     User support for the system is provided jointly by [CLAAUDIA](https://aau.service-now.com/serviceportal?id=sc_cat_item&sys_id=a05e2fb4c3434610f0f3041ad001310e) and the [LUMI User Support Team (LUST)](https://www.lumi-supercomputer.eu/user-support/).
 
-## Software
+## System overview
+### Software
 
 LUMI utilises two main software components:
 
@@ -25,7 +32,7 @@ LUMI utilises two main software components:
 
 Users familiar with [AI Cloud](/ai-cloud) or [AI-LAB](/ai-lab) will find that operating the system a familiar experience.
 
-## Hardware
+### Hardware
 
 #### Compute nodes
 LUMI consists of three different compute partitions:
@@ -44,7 +51,7 @@ All compute nodes are equipped with an high-speed interconnect which ensures hig
 
   - [Bandwidth measurements between storage and compute nodes](https://docs.lumi-supercomputer.eu/hardware/network/#inter-and-intra-partition-bandwidth)
 
-### Storage
+#### Storage
 
 LUMI also several different storage partitions serving different purposes. Users should note that these have different storage quotas, and different billing rates, ie. the allocated storage units `TB/hrs` are spent at different rates, depending on the storage partition is being used.
 
@@ -52,24 +59,26 @@ LUMI also several different storage partitions serving different purposes. Users
 
 ## Using the system
 
-### Prior to logging in
+### Before logging in
 
-Assuming that you have decided to make use of AAU's local resource pool, follow the instructions in the letter of approval, sent out following your [resource application](/external-hpc/access). This includes following AAU's identity verification procedure and uploading an SSH key to the system. After uploading your SSH-key, you may need to wait ~20 minutes for the server to synchronise.
+Assuming that you have decided to make use of AAU's local resource pool, follow the instructions in the letter of approval, sent out following your [resource application](/external-hpc/access). This involves completing AAU's identity verification procedure and uploading an SSH key to the system.
 
 ### Log in to the system
 
-Log in according to [official instructions](https://docs.lumi-supercomputer.eu/firststeps/loggingin/). 
-
-If this is your first time logging in to the system, you may need to wait ~20 minutes for the system to synchronise after your SSH-key has been uploaded.
+Log in according to [official instructions](https://docs.lumi-supercomputer.eu/firststeps/loggingin/). Please know that after uploading your SSH-key, you may need to wait ~20 minutes for the server to synchronise.
 
 ### Looking around
 
-LUMI's operating system CrayOS is a variant of Linux, and the system can thus be navigated using regular GNU/Linux commands (find some of them [here](https://linuxjourney.com/lesson/the-shell)).
+LUMI's operating system CrayOS is a variant of Linux, and the system can thus be navigated using [regular GNU/Linux commands](https://linuxjourney.com/lesson/the-shell).
 
-LUMI also uses [modules](https://docs.lumi-supercomputer.eu/runjobs/lumi_env/Lmod_modules/) to manage software environments. Loading modules essentially just alters the `$PATH` variable, allowing you to access additional software and/or versions.
+LUMI uses [Modules](https://modules.readthedocs.io/en/stable/module.html#description) to manage software environments. Loading modules essentially just alters the `$PATH` variable, allowing you to access additional software and/or versions. Learn about using modules [here](https://docs.lumi-supercomputer.eu/runjobs/lumi_env/Lmod_modules/).
 
 Each time the user logs in to the system, the [`lumi-tools`](https://lumi-supercomputer.github.io/LUMI-EasyBuild-docs/l/lumi-tools/)-module is automatically loaded, giving you access to commands like `lumi-workspaces`, `lumi-allocations`, `lumi-check-quota`, which will allow you to inspect your project and it's resource consumption.
 
+Optionally `git clone` our LUMI-starter-pack:
+```
+git clone https://github.com/aau-claaudia/lumi-starter-pack.git
+```
 ### Transfer your files
 
 Transfer your files according to the [official instructions](https://docs.lumi-supercomputer.eu/firststeps/movingdata/). We recommend Rsync for it's ability to continue a transfer if gets interrupted.
