@@ -1,4 +1,4 @@
-# Transcriber interface
+# Transcriber default
 
 This guide will help you get started with the new, user-friendly interface for transcribing your audio and video files on UCloud.
 
