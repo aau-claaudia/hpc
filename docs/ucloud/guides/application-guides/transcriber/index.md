@@ -9,6 +9,7 @@
 </a>
 
 !!! success "Exciting news: New Transcriber Interface released!"
+    
     We are excited to announce the release of a brand new, user-friendly interface for the Transcriber application on UCloud! The updated interface offers a significantly improved user experience, streamlined workflows, and new features to make your transcription tasks easier than ever.
 
     **Try it now:**  
@@ -30,7 +31,7 @@ There are two ways to use Transcriber on UCloud:
 
 
 | Interface (Default) | Batch |
-|:-------------------|:-----:|
+|-------------------|-----|
 | Simple, modern screen with buttons | No screen, just settings interface |
 | Designed for most users | Designed for advanced users and batch jobs |
 | Add files by drag and drop from computer or UCloud folders | Add files from UCloud folders only |
@@ -39,8 +40,8 @@ There are two ways to use Transcriber on UCloud:
 
 Select the guide of your choice below for step-by-step instructions for each version.
 
-??? info "Transcriber Interface (Default version)"
-
+=== "Transcriber Interface (Default version)"
+    <br>
     This guide will walk you through using the latest **default** version of Transcriber, featuring an improved, user-friendly interface for transcribing your audio and video files on UCloud.
 
     ### 1. Using the Transcriber default (Interface) application
@@ -106,7 +107,6 @@ Select the guide of your choice below for step-by-step instructions for each ver
     
     - **After the job is finished**: All transcriptions will be available on UCloud in the folder: `/Jobs/Transcriber/<job-id>/TRANSCRIPTIONS/`.
  
-
     #### 1.6 Optional: Adjusting settings
 
     - Click **Show settings** at the top of the page to adjust:
@@ -117,8 +117,8 @@ Select the guide of your choice below for step-by-step instructions for each ver
     **Need more advanced options?**  
     Try the Transcriber batch version, which offers extended configuration possibilities.
 
-
-??? info "Transcriber Batch"
+=== "Transcriber Batch"
+    <br>
     This guide provides step-by-step instructions for using the **Transcriber Batch** application, which offers advanced configuration options and is optimized for efficient, large-scale transcription tasks.
 
     ### 1. Using the Transcriber batch application
@@ -295,3 +295,9 @@ Reachout to CLAAUDIA at [https://serviceportal.aau.dk](https://serviceportal.aau
 **Citation**
 
 CLAAUDIA, ITS, AAU (2024). Transcriber (Version1.0) [App]. UCloud interactive HPC system, eScience Center at the University of Southern Denmark. https://cloud.sdu.dk/app/jobs/create?app=transcriber&version=1.7  
+
+
+
+
+
+
