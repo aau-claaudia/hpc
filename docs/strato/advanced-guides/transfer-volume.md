@@ -19,6 +19,7 @@ This guide explains how to transfer a volume to another user using the Strato we
 
 1. Locate the volume you want to transfer.
 2. Ensure the volume is **available** (not attached to any instance).
+> Note: It is a good idea to name your volumes appropriately before deleting any compute instances that they are attached to. Click the **Edit Volume** button to edit the volume name.
 3. Click the **Create Transfer** button in the **Actions** column for that volume.
 
 ![Create Transfer button in Strato interface](../../assets/img/openstack/transfer-volumes_create%20transfer.png)
