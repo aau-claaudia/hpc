@@ -6,7 +6,7 @@ This guide walks you through verifying whether you are the owner of a **volume**
 ## Prerequisites
 
 - Access to the [Strato dashboard](https://strato-new.claaudia.aau.dk/).
-- Valid OpenStack credentials for the project in question
+- Valid Strato credentials for the project in question
 
 ## Tips
 
@@ -17,15 +17,15 @@ This guide walks you through verifying whether you are the owner of a **volume**
 
 ## Checking Volume Ownership
 
-1. **Log in** to the Horizon dashboard.
+1. **Log in** to the Strato web interface.
 2. Navigate to **Project > Volumes > Volumes**.
 3. In the volume list, locate the volume in question.
 4. Click the volume name to view **detailed metadata**, which includes:
-   - `user_id`
-   - `project_id`
-   - `created_at`
+   a. **User ID**
+   b. **Project ID**
+   c. **Created at**
 
-> If your user or project ID matches the metadata, you are the owner.
+> If your user or **Project ID** matches the metadata, you are the owner.
 
 ## Checking Server (Instance) Ownership
 
@@ -33,8 +33,8 @@ This guide walks you through verifying whether you are the owner of a **volume**
 2. Find the instance in the list.
 3. Click the instance name to open its **details page**.
 4. Under the **"Overview"** tab, check:
-   - **Project ID**
-   - **User ID**
-   - **Launched By**
+   a. **Project ID**
+   b. **User ID**
+   c. **Launched by**
 
 > These fields confirm who launched the instance and under which project.
