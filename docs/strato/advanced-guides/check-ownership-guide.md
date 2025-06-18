@@ -37,6 +37,16 @@ If your **User** and **Project ID** matches the metadata, you are the owner.
 
 ## Checking Volume Ownership
 
+It is unfortunately not possible to check the *user ownership* of a volume, but it is possible to check the *project ownership*.
+
+If you are in doubt about the ownership of the volume you can either:
+
+1. Complete [a volume transfer](transfer-volume.md) from within the project yourself.
+2. Create a ticket in ServicePortal for us to investigate the volume, please include
+      1. Volume ID
+      2. Project ID
+      3. Your User ID
+
 ### 1. **Log in** to the Strato web interface.
 1. Navigate to the [Strato web interface](https://strato-new.claaudia.aau.dk/)
 2. Log in with your AAU (WAYF) credentials.
@@ -54,9 +64,9 @@ If your **User** and **Project ID** matches the metadata, you are the owner.
 > If you have not named the volume appropriately, you can check the **Attached To** column to get the name of the instance it is attached to.
 
 ### 4. Click the volume name to view **detailed metadata**, which includes:
-   1. **User ID**
-   2. **Project ID**
-   3. **Created at**
+   1. **Name**
+   2. **ID**
+   3. **Project ID**
    4. **Attachments**, to identify any server attachments that are registered for the volume.
 
 If your **User** and **Project ID** matches the metadata, you are the owner.
