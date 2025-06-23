@@ -33,6 +33,8 @@ nav:
               - Custom security groups: strato/advanced-guides/custom-security-groups.md
               - Attaching a volume for additional storage: strato/advanced-guides/attaching-a-volume-for-additional-storage.md
               - Persistent terminal sessions: strato/advanced-guides/persistent-terminal-sessions.md
+              - Transfer volumes on Strato: strato/advanced-guides/transfer-volume.md
+              - Check ownership of instances and volumes on Strato: strato/advanced-guides/check-ownership-guide.md
           - Best-practice guides:
               - Delete and restart an instance from the volume: strato/best-practice-guides/delete-and-restart-an-instance-from-the-volume.md
               - Stop, pause & delete instances: strato/best-practice-guides/stop-pause-and-delete-instances.md
@@ -52,9 +54,10 @@ nav:
           - Guidelines for handling sensitive data: ucloud/guides/sensitive-data-on-ucloud.md
           - Application guides:
               - ChatUI: ucloud/guides/application-guides/ChatUI/index.md
-              - Transcriber:
-                  - Transcriber: ucloud/guides/application-guides/transcriber/index.md
-                  - Transcriber guide videos: ucloud/guides/application-guides/transcriber/transcriber-video.md
+              - Transcriber: ucloud/guides/application-guides/transcriber/index.md
+#                  - Transcriber interface: ucloud/guides/application-guides/transcriber/transcriber-interface.md
+#                  - Transcriber: ucloud/guides/application-guides/transcriber/index.md
+#                  - Transcriber batch videos: ucloud/guides/application-guides/transcriber/transcriber-video.md
               - Voyant Tools: ucloud/guides/application-guides/Voyant-Tools.md
 
   - AI Cloud:
@@ -120,7 +123,8 @@ nav:
   - External HPC:
       - External HPC facilities: external-hpc/index.md
       - Overview of HPC facilities: external-hpc/facilities.md
-      - How to access: external-hpc/access.md 
+      - How to access: external-hpc/access.md
+      - LUMI: external-hpc/lumi.md
 
 theme:
   name: material

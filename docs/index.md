@@ -49,6 +49,11 @@ Find the most suitable system for your project. You can also complete the [HPC D
     </div>
 </div>
 
+## News
+!!! info  "New Transcriber interface available!"
+    We are excited to announce the release of a brand new interface for the Transcriber application. The updated interface offers an improved user experience and new features to make your transcription tasks even easier. Check it out [here](https://cloud.sdu.dk/app/jobs/create?app=transcriber-gui) 
+    
+   
 <div class="video-container">
   <iframe src="https://panopto.aau.dk/Panopto/Pages/Embed.aspx?id=cbfb191c-fde8-4dec-998e-b2b800ba6b03&amp;autoplay=false&amp;offerviewer=true&amp;showtitle=false&amp;showbrand=true&amp;captions=false&amp;interactivity=all"
           allowfullscreen=""
