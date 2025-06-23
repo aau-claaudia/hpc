@@ -33,7 +33,8 @@ nav:
               - Custom security groups: strato/advanced-guides/custom-security-groups.md
               - Attaching a volume for additional storage: strato/advanced-guides/attaching-a-volume-for-additional-storage.md
               - Persistent terminal sessions: strato/advanced-guides/persistent-terminal-sessions.md
-              - Transfer volumes using the strato web interface: strato/advanced-guides/transfer-volume.md
+              - Transfer volumes on Strato: strato/advanced-guides/transfer-volume.md
+              - Check ownership of instances and volumes on Strato: strato/advanced-guides/check-ownership-guide.md
           - Best-practice guides:
               - Delete and restart an instance from the volume: strato/best-practice-guides/delete-and-restart-an-instance-from-the-volume.md
               - Stop, pause & delete instances: strato/best-practice-guides/stop-pause-and-delete-instances.md
