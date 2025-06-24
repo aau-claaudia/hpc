@@ -48,6 +48,6 @@ The diagram below outlines the process for getting your project approved and set
 
 
 <a href="https://aau.service-now.com/serviceportal?id=sc_cat_item&sys_id=34e8536083cfc21053711d447daad30a" target="_blank" 
-   style="display: block; background-color: #f87171; color: white; padding: 1em; text-align: center; border-radius: 8px; font-weight: bold; text-decoration: none; font-size: 1.1em; margin: 1em 0;">
+   style="display: block; background-color:rgb(241, 109, 109); color: white; padding: 1em; text-align: center; border-radius: 8px; font-weight: bold; text-decoration: none; font-size: 1.1em; margin: 1em 0;">
    Need assistance? Reach us at the Service Portal
 </a>
