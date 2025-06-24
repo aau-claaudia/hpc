@@ -17,7 +17,7 @@ The diagram below outlines the process for getting your project approved and set
 <div style="display: flex; gap: 2rem; align-items: flex-start; justify-content: center; flex-wrap: wrap;">
 
   <!-- Mermaid Diagram -->
-  <div style="flex: 1; min-width: 300px; text-align: center;">
+  <div style="flex: 1; min-width: 300px; text-align: left;">
     <div class="mermaid">
     ```mermaid
     graph TD
