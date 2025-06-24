@@ -51,6 +51,7 @@ nav:
           - Getting started:
               - Before you begin: ucloud/guides/getting-started/before-you-begin.md
               - File transfer: ucloud/guides/getting-started/transfer-files.md
+              - License Management: ucloud/guides/getting-started/Licens.md
           - Guidelines for handling sensitive data: ucloud/guides/sensitive-data-on-ucloud.md
           - Application guides:
               - ChatUI: ucloud/guides/application-guides/ChatUI/index.md
