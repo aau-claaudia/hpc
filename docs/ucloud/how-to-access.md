@@ -2,14 +2,17 @@
 ## Direct access
 All Aalborg University users automatically have access to UCloud and can simply log in using their WAYF credentials (university logon credentials). This gives you access to **"My Workspace"** with a starting quota of 2000 CPU-hours that can be used in the standard web app environment. This is the quickest and most user-friendly way to access HPC as a first-time user.
 
-[Log in to UCloud](https://cloud.sdu.dk/app/dashboard){ .md-button target="_blank" }
+<a href="https://cloud.sdu.dk/app/dashboard" target="_blank" style="display: inline-block; background: #3F59E4; color: #fff; padding: 0.7em 1.5em; border-radius: 8px; font-weight: 600; text-decoration: none; font-size: 1em; margin: 0.5em 0;">
+  Log in to UCloud
+</a>
 
 ## Projects
 If you require a larger CPU quota, access to GPU resources, a virtual machine, or need to work with sensitive data, you can apply for a project using CLAAUDIA’s local resources.
 The diagram below outlines the process for getting your project approved and set up on UCloud:
- 
-[Apply for UCloud project](https://forms.office.com/e/8Khbr1TJGC){target="_blank}
-[Apply for UCloud project](https://forms.office.com/e/8Khbr1TJGC){ .md-button target="_blank" }
+
+<a href="https://forms.office.com/e/8Khbr1TJGC" target="_blank" style="display: inline-block; background: #3F59E4; color: #fff; padding: 0.7em 1.5em; border-radius: 8px; font-weight: 600; text-decoration: none; font-size: 1em; margin: 0.5em 0;">
+  Apply for UCloud project
+</a>
 
 <div style="display: flex; gap: 2rem; align-items: flex-start; justify-content: center; flex-wrap: wrap;">
 
