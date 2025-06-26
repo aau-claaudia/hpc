@@ -1,11 +1,14 @@
 This section gives an overview of the oppurtunities for accessing national and european HPC facilities. All of the facilities mentioned in this section are available for both researchers and students.
 
-## Local and National HPC resources 
-[DeiC](https://www.deic.dk/en/about-deic) is the overarching national body responsible for coordinating national HPC efforts on across all the danish universities. Among other things, they are responsible for distributing compute time on national HPC facilities.
+## National HPC resources (and local)
 
-DeiC grants a portion of it's resources to the danish universities - these are the local resources to the national HPC facilities.
+!!! info "How it's structured"
 
-Another portion is reserved for a national resource pool, from which researchers can apply twice a year.
+    [DeiC](https://www.deic.dk/en/about-deic) is the overarching national body responsible for coordinating national HPC efforts on across all the danish universities. Among other things, they are responsible for distributing compute time on national HPC facilities.
+
+    - DeiC grants a portion of it's resources to the danish universities for them to hand out. These are the **local resources** to the national HPC facilities.
+
+    - Another portion is reserved for a **national resource pool**, from which researchers can apply twice a year.
 
 ### National HPC facilities
 
@@ -55,9 +58,12 @@ The national application calls are always announced on [DeiC's website](https://
 
     If you have questions regarding <u>an existing</u> national grant - reach out to DeiC's HPC back office through their [service desk](https://deic-backoffice.atlassian.net/servicedesk/customer/portal/1).
 
-## European resources
+## European HPC resources
 
-[EuroHPC](https://eurohpc-ju.europa.eu/about/discover-eurohpc-ju_en) is the body responsible for coordinating HPC efforts on the european level. There is a number of calls from which HPC-resources can be acquired. The following is a brief summary of [the official page for EuroHPC access calls](https://eurohpc-ju.europa.eu/supercomputers/supercomputers-access-calls_en).
+
+!!! info "How it's structured"
+
+    [EuroHPC](https://eurohpc-ju.europa.eu/about/discover-eurohpc-ju_en) is the body responsible for coordinating HPC efforts on the european level. There is a number of calls from which HPC-resources can be acquired. The following is a brief summary of [the official page for EuroHPC access calls](https://eurohpc-ju.europa.eu/supercomputers/supercomputers-access-calls_en).
 
 ### EuroHPC facilities
 
