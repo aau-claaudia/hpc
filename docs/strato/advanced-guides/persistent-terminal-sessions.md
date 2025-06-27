@@ -16,7 +16,7 @@ tmux new
 
 At the bottom of the window, you will see a green pane. This indicates you have entered a Tmux sesison.
 
-Now detach from the session using: ++ctrl+b++ , ++d++ . Please note that this is: ++ctrl+b++ *and then* ++ctrl+d++ .
+Now detach from the session using: ++ctrl+b++ , ++d++ . Please note that this is: ++ctrl+b++ *and then* ++d++ .
 
 List open sessions (if there are any):
 ```
