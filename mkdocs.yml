@@ -123,8 +123,8 @@ nav:
 
   - External HPC:
       - External HPC facilities: external-hpc/index.md
-      - Overview of HPC facilities: external-hpc/facilities.md
-      - How to access: external-hpc/access.md
+      - DeiC HPC resources: external-hpc/deic-resources.md
+      - EuroHPC resources: external-hpc/eurohpc-resources.md
       - LUMI: external-hpc/lumi.md
 
 theme:
