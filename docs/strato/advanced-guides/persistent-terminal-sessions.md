@@ -16,7 +16,7 @@ tmux new
 
 At the bottom of the window, you will see a green pane. This indicates you have entered a Tmux sesison.
 
-Now detach from the session using: `ctrl +b, d`. Please note that this is: `ctrl + b` *and then* `d`.
+Now detach from the session using: ++ctrl+b++ , ++d++ . Please note that this is: ++ctrl+b++ *and then* ++d++ .
 
 List open sessions (if there are any):
 ```
@@ -49,7 +49,7 @@ Accept the terms by pressing `Enter`.
 
 You should now be standing inside a new Screen session.
 
-Detach from the current session using : `ctrl + a, d`  (please note that this is `ctrl + a` *and then* `d`).
+Detach from the current session using : ++ctrl+a++ , ++d++  (please note that this is ++ctrl+a++ *and then* ++d++ ).
 
 You should now be in your login session again.
 

@@ -266,19 +266,19 @@ Select the guide of your choice below for step-by-step instructions for each ver
       
       >  To make the option visible, scroll down in the optional parameter window.
 
-    ## Do you need more guidance? 
+    ### Do you need more guidance? 
 
     Check out our in-depth step-by-step guide that takes you the very start of getting started on UCloud to producing your final transcribed document.
     **[Download the complete Transcriber batch user guide (PDF)](/assets/transcriber-userguide-1-2.pdf)**
 
 
-## Need assitance?
+### Need assitance?
 
 Reachout to CLAAUDIA at [https://serviceportal.aau.dk](https://serviceportal.aau.dk).
 
 ---
 
-## Who made it?
+### Who made it?
 
 **Research & development by**
 

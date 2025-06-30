@@ -17,8 +17,6 @@ The system is funded by EuroHPC and the [LUMI consortium](https://www.lumi-super
 
     Generally we always recommend making use of AAU's resources first, as CLAAUDIA can provide you with the best onboarding oppurtunities, and guide you further along the way as your project grows.
 
-    Make sure to check out our main page for these oppurtunities: [How to access](/external-hpc/access/).
-
 !!! info "User support"
     User support for the system is provided jointly by [CLAAUDIA](https://aau.service-now.com/serviceportal?id=sc_cat_item&sys_id=a05e2fb4c3434610f0f3041ad001310e) and the [LUMI User Support Team (LUST)](https://www.lumi-supercomputer.eu/user-support/).
 
@@ -107,19 +105,19 @@ It is generally recommended to launch your jobs with batch-scripts. We provide t
     #SBATCH --error=err.%x_%j
     
     # Directories
-    PROJECT="/project/${SLURM_JOB_ACCOUNT}"
-    SCRATCH="/scratch/${SLURM_JOB_ACCOUNT}"
-    FLASH="/flash/${SLURM_JOB_ACCOUNT}"
+    PROJECT="/project/$SLURM_JOB_ACCOUNT"
+    SCRATCH="/scratch/$SLURM_JOB_ACCOUNT"
+    FLASH="/flash/$SLURM_JOB_ACCOUNT"
     mkdir -p $PROJECT $SCRATCH $FLASH
 
-    # Container
+    # Container image (here we are targetting one that comes preinstalled on the system)
     lumi_images="/appl/local/containers/sif-images"
-    lumi_pytorch_base="${lumi_images}/lumi-pytorch-rocm-6.2.3-python-3.12-pytorch-v2.5.1.sif"
+    lumi_pytorch_base="$lumi_images/lumi-pytorch-rocm-6.2.3-python-3.12-pytorch-v2.5.1.sif"
     
     CONTAINER="$lumi_pytorch_base"
     
     # Script
-    SCRIPT="${PROJECT_DIR}/torch_bm.py"
+    SCRIPT="$PROJECT_DIR/torch_bm.py"
    
     # The command to execute on the node(s)
     srun --chdir="$PROJECT_DIR" singularity exec --bind="$PROJECT_DIR,$SCRATCH_DIR,$FLASH_DIR" $CONTAINER bash -c "\$WITH_CONDA; python3 $SCRIPT"
@@ -128,7 +126,7 @@ Consider making the following adjustments:
 
 * Decide on a good naming convention for your runs. Pass this to `--job-name`.
 * Find your project account number using the command `lumi-workspaces`. Pass this to the `--account` parameter.
-* Decide on an appropriate compute partition to run on. 
+* Run the job on an appropriate compute partition:
     * View the partitions with the command: `sinfo -o "%25P %5D %l"`
     * Read about [the compute hardware](https://docs.lumi-supercomputer.eu/hardware/lumig/) in the official documentation.
 * Replace the paths to your container image and your script.
