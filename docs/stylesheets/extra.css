@@ -1912,3 +1912,22 @@ footer .links li img {
   box-shadow: 0 0 0 4px #3F59E433;
   outline: none;
 }
+.label {
+    display: inline-block;
+    font-size: 0.85em;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    color: white;
+}
+
+/* Blue label for researchers */
+.label-researcher {
+    background-color: #4A90E2; /* Blue */
+}
+
+/* Green label for students */
+.label-student {
+  background-color: #27AE60; /* Green */
+}

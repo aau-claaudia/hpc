@@ -20,6 +20,7 @@ Find the most suitable system for your project. You can also complete the [HPC D
 
 <div class="custom-grid-4">
     <div class="custom-grid-item">
+        <div class="label label-researcher">For researchers</div>
         <h2>Strato</h2>
         <p class="custom-grid-feature">Strato provides virtual machines users can launch as needed, accessible from a terminal on their local computer.</p>
         <a href="/strato/"><i class="bi bi-info-circle"></i>About Strato</a>
@@ -27,6 +28,7 @@ Find the most suitable system for your project. You can also complete the [HPC D
         <a href="https://forms.office.com/e/r1u0QXH4KJ"><i class="bi bi-file-earmark-text"></i>Application form</a>
     </div>
     <div class="custom-grid-item">
+        <div class="label label-researcher">For researchers</div>
         <h2>UCloud</h2>
         <p class="custom-grid-feature">UCloud is a research platform providing high-performance computing with an easy-to-use interface for data analytics.</p>
         <a href="/ucloud/"><i class="bi bi-info-circle"></i>About UCloud</a>
@@ -34,6 +36,7 @@ Find the most suitable system for your project. You can also complete the [HPC D
         <a href="https://forms.office.com/e/8Khbr1TJGC"><i class="bi bi-file-earmark-text"></i>Application form</a>
     </div>
     <div class="custom-grid-item">
+        <div class="label label-researcher">For researchers</div>
         <h2>AI Cloud</h2>
         <p class="custom-grid-feature">AI Cloud is a GPU cluster designed for demanding machine learning workloads, accessed via terminal for job submission.</p>
         <a href="/ai-cloud/"><i class="bi bi-info-circle"></i>About AI Cloud</a>
@@ -41,6 +44,7 @@ Find the most suitable system for your project. You can also complete the [HPC D
         <a href="https://forms.office.com/e/ewgvLRbbv7"><i class="bi bi-file-earmark-text"></i>Application form</a>
     </div>
     <div class="custom-grid-item">
+        <div class="label label-student">For students</div>
         <h2>AI-LAB</h2>
         <p class="custom-grid-feature">AI-LAB offers Aalborg University students HPC access, ideal for deep learning, simulations, and fast data analysis.</p>
         <a href="/ai-lab/"><i class="bi bi-info-circle"></i>About AI-LAB</a>

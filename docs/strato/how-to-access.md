@@ -8,8 +8,10 @@ Strato Projects allow users to apply for additional quota to access additional p
 
 GPU resources are limited and users are expected to follow a strict policy of deleting all GPU instances when not actively using the GPU. New instances can be very quickly created from existing volumes (boot disks). 
 
-Strato Projects are available primarily to all researchers, and - if there are sufficient resources available - to students that are supporting researchers, and, finally, to student research projects. Each project requires the completion of a project request form.
+<!-- Strato Projects are available primarily to all researchers, and - if there are sufficient resources available - to students that are supporting researchers, and, finally, to student research projects. Each project requires the completion of a project request form.
+ -->
 
+Strato Projects are only available to all researchers. Each project requires the completion of a project request form.
 
 
 ## Important Information
@@ -22,8 +24,8 @@ Strato Projects are available primarily to all researchers, and - if there are s
 !!! info "There are no back-ups"
     It is important that you keep your data backed-up outside of the platform. Data is not backed up on any of our HPC platforms, while the data is kept safe through security copies, all copies are simultaneously updated when you make changes, and all changes are permanent.
 
-!!! info "Student GPU access is limited to 1 NVIDIA T4 instance"
-    Interactive use of larger GPU resources is limited to the [UCloud](/ucloud/) platform for Students.
+<!-- !!! info "Student GPU access is limited to 1 NVIDIA T4 instance"
+    Interactive use of larger GPU resources is limited to the [UCloud](/ucloud/) platform for Students. -->
 
 !!! info "Review the terms and conditions"
     Before getting started, take a few moments to review the [terms and conditions](/strato/terms-and-conditions) of using Strato, and don't hesitate to [reach out](https://serviceportal.aau.dk/serviceportal?id=emp_taxonomy_topic&topic_id=82a253e8838fc21053711d447daad328){target="_blank} to our support team if you have any questions or concerns.
