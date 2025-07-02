@@ -6,10 +6,6 @@
         <div class="tooltip">Indicates if the platform is accessible for researchers (e.g., PhD students, postdocs, faculty) for research purposes.</div>
     </div>
     <div class="tag-item">
-        <div class="tag">Students<i class="bi bi-check-lg"></i></div>
-        <div class="tooltip">Indicates if the platform is accessible to students for educational purposes (e.g., coursework, projects, thesis).</div>
-    </div>
-    <div class="tag-item">
         <div class="tag">Lecturers<i class="bi bi-check-lg"></i></div>
         <div class="tooltip">Indicates if the platform is accessible to lecturers for teaching purposes.</div>
     </div>

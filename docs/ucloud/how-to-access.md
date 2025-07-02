@@ -34,12 +34,11 @@ The diagram below outlines the process for getting your project approved and set
     <div class="admonition info">
       <p class="admonition-title">Sensitive data:</p>
       <ul>
-        <li><strong>Researcher:</strong> You must have a WorkZone case number for your research project.
+        <li> You must have a WorkZone case number for your research project.
           <br>If you don't have one, you can apply through Grants and Contracts using their <a href="#">registration form</a>.
         </li>
-        <li><strong>Student:</strong> Students cannot register projects with Grants and Contracts. You are personally responsible for any data you collect and must comply with <a href="#">GDPR regulations for students</a>.</li>
-        <li><strong>All:</strong> Only SDU compute resources may be used to handle sensitive data.</li>
-        <li><strong>All:</strong> To get started, read <a href="/ucloud/guides/sensitive-data-on-ucloud/">our guide</a> on how to handle sensitive data on UCloud.</li>
+        <li> Only SDU compute resources may be used to handle sensitive data.</li>
+        <li> To get started, read <a href="/ucloud/guides/sensitive-data-on-ucloud/">our guide</a> on how to handle sensitive data on UCloud.</li>
       </ul>
     </div>
   </div>
