@@ -12,7 +12,7 @@
 
 ### Before starting on UCloud
 - If you are a researcher, and working with data classifications 2 or 3, you must register the research project with Grants and Contracts using  [the relevant registration form](https://aaudk.sharepoint.com/sites/persondata-ressourcer/SitePages/Registrations%20og%20reports%20(Online%20forms).aspx).
-- If you are a student your supervisor must approve the application. 
+<!-- - If you are a student your supervisor must approve the application.  -->
 - Before you can create a project on UCloud for sensitive data, you must fill out this form [this form](https://forms.office.com/pages/responsepage.aspx?id=Sbrb9QbOb0msPgzxQ2HZNEdKMbCNz_9Lom8_yaZURCNUQVZUQVRXSFVYODBZQkNZWVRYM1lEUEFYTSQlQCN0PWcu&route=shorturl).
 - When the application is approved you receive an email with details om what to do and information on which resources you have allocated. 
 - If the application is rejected, you will be informed what you need to change in the application.  
@@ -22,7 +22,7 @@
 
   > **Note**:  As project applicant you will be the Principal Investigator for the project, and you should be aware of your roles and responsibilities.
 
-  > **Note**:  If the user is a student, then their supervisor for the student project must apply for the project and so must assume the role of Principal Investigator.
+  <!-- > **Note**:  If the user is a student, then their supervisor for the student project must apply for the project and so must assume the role of Principal Investigator. -->
 
 <br>
 
@@ -31,8 +31,9 @@
 For any research data, or any data owned or acquired by AAU, only participants approved by the department of Grants and Contracts may be included in this project. It is the responsibility of the principal investigator to ensure that this is the case.
 If you don't have a WorkZone case number you can apply Grants and Contracts using [the  registration form](https://aaudk.sharepoint.com/sites/persondata-ressourcer/SitePages/Registrations%20og%20reports%20(Online%20forms).aspx). 
 
-**Student:**
-You cannot register projects with Grants and Contracts. As a student you are personally responsible for any data you collect. You must ensure that you comply with [GDPR regulations for students](https://aaudk.sharepoint.com/sites/GDPR-for-students).
+
+<!-- **Student:**
+You cannot register projects with Grants and Contracts. As a student you are personally responsible for any data you collect. You must ensure that you comply with [GDPR regulations for students](https://aaudk.sharepoint.com/sites/GDPR-for-students). -->
 
 
 <br>
