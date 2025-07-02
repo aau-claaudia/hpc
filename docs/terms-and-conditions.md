@@ -1,7 +1,7 @@
 ##### High-Performance Computing systems at AAU are subjects limited by the ever-changing availability of the resources, dependant on the users. Thus, having resources granted does not consequently mean that it is possible to use them right away. Learn about the guidelines and rules to ensure a smooth and efficient computing experience.
 
 !!! info "General principles and definitions of terms"
-    As a general principle, the HPC resources are intended to provide additional computational power to AAU researchers, staff and students.
+    As a general principle, the HPC resources are intended to provide additional computational power to AAU researchers and staff.
 
     * _We_ refers to CLAAUDIA and or any other part of the Information Technology Services (ITS) department that is responsible for the provision, maintenance or support of HPC RESOURCES at Aalborg University.
     * _You_ refers to you the user, which may be an individual or other legal person.
@@ -16,7 +16,7 @@
     If you are in need of larger research project solutions, production virtual machines, or long term storage, please submit a request [CLAAUDIA support team](https://serviceportal.aau.dk/serviceportal?id=emp_taxonomy_topic&topic_id=82a253e8838fc21053711d447daad328).
 
 ## 1. Access and Responsibility
-The use of HPC RESOURCES requires that you are either a student at, or employed at AAU. You are responsible for any actions taken on these systems including the responsibility for ensuring that access is restricted to the appropriate individuals. Users are responsible for ensuring that their activities align with the guidelines and best practices outlined in the respective documentation of each platform.
+The use of HPC RESOURCES requires that you are employed at AAU. You are responsible for any actions taken on these systems including the responsibility for ensuring that access is restricted to the appropriate individuals. Users are responsible for ensuring that their activities align with the guidelines and best practices outlined in the respective documentation of each platform.
 
 Only users authorized via the CLAAUDIA application form may have administrative access to the applied resources.
 
@@ -48,13 +48,13 @@ If you are interested in using HPC RESOURCES in your research work as an AAU emp
 
 You can find more information at [AAU's website for GDPR related info for employees](https://aaudk.sharepoint.com/sites/gdpr-for-researchers).
 
-#### 3.2. GDPR compliance for AAU students
+<!-- #### 3.2. GDPR compliance for AAU students
 
 As a student you are data controller for the personal data or information that you process while using the HPC RESOURCES, and you have an independent responsibility to comply with the GDPR regulations.
 
 Please visit [AAU's website for GDPR related info for students](https://aaudk.sharepoint.com/sites/GDPR-for-students) and read it carefully. 
 
----
+--- -->
 
 ## 4. Confidentiality and Sensitivity of Data
 
@@ -75,7 +75,7 @@ All Strato and AI Cloud student accounts will be deleted at the end of each seme
 ---
 
 ## 6. Prohibited Usage and Consequences
-HPC RESOURCES may not, under any circumstances, be used for any purpose outside the scope of student or staff research, teaching or administrative functions. Any misuse of the HPC RESOURCES will result in an immediate and permanent ban of the use of any HPC RESOURCES. Criminal or unlawful activity will be reported to the appropriate authorities.
+HPC RESOURCES may not, under any circumstances, be used for any purpose outside the scope of staff research, teaching or administrative functions. Any misuse of the HPC RESOURCES will result in an immediate and permanent ban of the use of any HPC RESOURCES. Criminal or unlawful activity will be reported to the appropriate authorities.
 
 ---
 
@@ -234,23 +234,22 @@ the following codes of conduct and policies:
     GDPR](https://aaudk.sharepoint.com/sites/persondata/SitePages/In%20English.aspx)
     (Available in English for
     [researchers](https://aaudk.sharepoint.com/sites/gdpr-for-researchers)
-    (VIP),
-    [teachers](https://aaudk.sharepoint.com/sites/gdpr-for-teachers)
     (VIP) and
-    [students](https://aaudk.sharepoint.com/sites/GDPR-for-students);
+    [teachers](https://aaudk.sharepoint.com/sites/gdpr-for-teachers)
+    (VIP);
     Only in Danish for [administration (TAP)
     employees](https://aaudk.sharepoint.com/sites/persondata-administration))
 
 4.  [The AAU data management
     recommendations](https://www.researcher.aau.dk/guides/research-data/data-management)
 
-These policies cover the general rules all researchers (and students and
+These policies cover the general rules all researchers (and
 TAP staff for point 3.) should abide by with regards to what kind of
 data may be kept, for how long, whether data can be re-used or recycled,
 and how long it should be archived for, etc.
 
 **Sensitive data: Registration of research projects at Grants and
-Contracts (Excludes students)**
+Contracts**
 
 For researchers at AAU, working with sensitive personal data requires
 that you register your research project with "Grants and Contracts" by
@@ -281,17 +280,17 @@ processor](https://aaudk.sharepoint.com/sites/persondata-ressourcer/SitePages/Re
         Contracts, you will get a receipt that contains a "WorkZone case
         number" (To be included in your UCloud project application).
 
-3.  Students cannot register projects with Grants and Contracts. As a
+<!-- 3.  Students cannot register projects with Grants and Contracts. As a
     student you are personally responsible for any data you collect. You
     must ensure that you comply with [GDPR regulations for
-    students](https://aaudk.sharepoint.com/sites/GDPR-for-students).
+    students](https://aaudk.sharepoint.com/sites/GDPR-for-students). -->
 
     
-4.  All applicants for projects on UCloud must complete the [CLAAUDIA
+3.  All applicants for projects on UCloud must complete the [CLAAUDIA
     application form for DeiC Interactive HPC resources](https://forms.office.com/e/8Khbr1TJGC).
 
 
-5.  Once approved, you will receive a UCloud project
+4.  Once approved, you will receive a UCloud project
     number, and you must [apply for a project in the UCloud
     Interface](https://docs.cloud.sdu.dk/tutorials/tutorial3.html#create-a-project),
     including the resources that you had approved in the CLAAUDIA
@@ -302,21 +301,21 @@ processor](https://aaudk.sharepoint.com/sites/persondata-ressourcer/SitePages/Re
         the project, and you should be aware of your [roles and
         responsibilities.](https://docs.cloud.sdu.dk/guide/project-overview.html#member-roles)
 
-    b.  If the user is a student, then their supervisor for the student
+    <!-- b.  If the user is a student, then their supervisor for the student
         project must apply for the project, and so must assume the role
-        of Principal Investigator.
+        of Principal Investigator. -->
         
-    c. The project must use the same **project title** as provided in the CLAAUDIA application, and both the **DeiC project number** and the **Grants and Contracts reference number** should be included:
+    b. The project must use the same **project title** as provided in the CLAAUDIA application, and both the **DeiC project number** and the **Grants and Contracts reference number** should be included:
         
         i. The DeiC project number should be entered in the "DeiC Interactive HPC project number" field.
         ii. The WorkZone case number should be entered in the "WorkZone reference number" field.
     
-    d.  Once your project is approved, you will get access to project
+    c.  Once your project is approved, you will get access to project
         storage (Drive(s)) on UCloud that is separate from your "My
         Workspace" storage. No sensitive data may be stored in the "My
         workspace" drives.
 
-6.  Adding data to the UCloud platform:
+5.  Adding data to the UCloud platform:
 
     a.  Any data added to the project should be in a project folder and
         this must be marked according to the level of data sensitivity,
@@ -340,12 +339,12 @@ processor](https://aaudk.sharepoint.com/sites/persondata-ressourcer/SitePages/Re
                 registered and approved project folder.) Sensitive data
                 may **NOT** be added to My Workspace.
 
-7.  **Collaboration on UCloud within projects:** Fellow AAU persons
+6.  **Collaboration on UCloud within projects:** Fellow AAU persons
 
     a.  Only persons named in the project registered with Grants and
         Contracts may be added to the UCloud project.
 
-8.  **Collaboration on UCloud within projects:** Persons from outside
+7.  **Collaboration on UCloud within projects:** Persons from outside
     AAU
 
     a.  The collaborator's employer must have a Data Processing
@@ -365,7 +364,7 @@ processor](https://aaudk.sharepoint.com/sites/persondata-ressourcer/SitePages/Re
         agreement or the agreement on joint data controlling may be
         invited to the project.
 
-9.  UCloud project members and roles should be set appropriately.
+8.  UCloud project members and roles should be set appropriately.
 
     a.  Project "admins" can see all member files by activating the
         "show member files" option. The Principal Investigator is
@@ -373,7 +372,7 @@ processor](https://aaudk.sharepoint.com/sites/persondata-ressourcer/SitePages/Re
         responsibilities](https://docs.cloud.sdu.dk/guide/project-overview.html#member-roles)
         are properly assigned.
 
-10. Read and write privileges on UCloud
+9. Read and write privileges on UCloud
 
     a.  If collaborators are only allowed read or write to specific
         parts of the data / dataset, you will need to follow the
@@ -390,13 +389,13 @@ processor](https://aaudk.sharepoint.com/sites/persondata-ressourcer/SitePages/Re
             permissions. Then choose the permissions (None / Read /
             Write).
 
-11. Permitted applications and uses
+10. Permitted applications and uses
  
     a. Only the SDU/K8 provider is permitted for working with data classifications 2 and 3.
     
     b. The AAU/K8 and AAU virtual machine providers are only permitted to be used for data classified as level 0 and 1.
 
-12. On completion the project 
+11. On completion the project 
 
     a.  All data on the UCloud platform should be deleted.
 
