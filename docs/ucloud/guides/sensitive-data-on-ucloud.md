@@ -1,22 +1,5 @@
 # Guidelines for handling Sensitive data on UCloud
 
-### Data classification on UCloud
-- On Ucloud you can work with all categories of data form AAUs data classification model.
-- Store all project data in a designated project folder labeled according to its data sensitivity, following the AAU Data Classification Model. This folder must be labeled according to its data sensitivity, following the [AAU Data Classification Model](https://www.security.aau.dk/data-classification). The equivalent UCloud classifications are:
-    - **AAU Level 0**: Public Information → **UCloud: Inherit**
-    - **AAU Level 1**: Internal Information → **UCloud: Private**
-    - **AAU Level 2**: Confidential Information → **UCloud: Confidential**
-    - **AAU Level 3**: Sensitive Information → **UCloud: Sensitive**  
-    *(Sensitive data can only be added to registered and approved project folders and must **NOT** be placed in My Workspace.)*
-
-
-<!-- ### Procedure sensitive UCloud projects -->
-<!-- - If you are working with data classifications 2 or 3, you must register the research project with Grants and Contracts using  [the relevant registration form](https://aaudk.sharepoint.com/sites/persondata-ressourcer/SitePages/Registrations%20og%20reports%20(Online%20forms).aspx).
-<!-- - If you are a student your supervisor must approve the application.  -->
-<!-- - Before you can create a project on UCloud for sensitive data, you must fill out this form [this form](https://forms.office.com/pages/responsepage.aspx?id=Sbrb9QbOb0msPgzxQ2HZNEdKMbCNz_9Lom8_yaZURCNUQVZUQVRXSFVYODBZQkNZWVRYM1lEUEFYTSQlQCN0PWcu&route=shorturl). -->
-<!-- - When the application is approved you receive an email with details om what to do and information on which resources you have allocated.  -->
-<!-- - If the application is rejected, you will be informed what you need to change in the application.   --> 
-
 ### Procedure sensitive UCloud projects
   <!-- Mermaid Diagram -->
   <div style="flex: 1; min-width: 300px; text-align: left;">
@@ -33,73 +16,27 @@
     </div>
   </div>
 
-
-- Once approved, you will receive a UCloud project number, and you must apply for a project in the UCloud Interface, for the resources that you had approved in the CLAAUDIA application. (You can apply for additional resources later if needed.)
-
   > **Note**:  As project applicant you will be the Principal Investigator for the project, and you should be aware of your roles and responsibilities.
 
-  <!-- > **Note**:  If the user is a student, then their supervisor for the student project must apply for the project and so must assume the role of Principal Investigator. -->
+
+### Data classification on UCloud
+- On Ucloud you can work with all categories of data form AAUs data classification model.
+- Store all project data in a designated project folder labeled according to its data sensitivity, following the AAU Data Classification Model. This folder must be labeled according to its data sensitivity, following the [AAU Data Classification Model](https://www.security.aau.dk/data-classification). The equivalent UCloud classifications are:
+    - **AAU Level 0**: Public Information → **UCloud: Inherit**
+    - **AAU Level 1**: Internal Information → **UCloud: Private**
+    - **AAU Level 2**: Confidential Information → **UCloud: Confidential**
+    - **AAU Level 3**: Sensitive Information → **UCloud: Sensitive**  
+    *(Sensitive data can only be added to registered and approved project folders and must **NOT** be placed in My Workspace.)*
+
+
 
 <br>
 
-### Be aware when working with sensitive data
-**Researcher:**
-For any research data, or any data owned or acquired by AAU, only participants approved by the department of Grants and Contracts may be included in this project. It is the responsibility of the principal investigator to ensure that this is the case.
-If you don't have a WorkZone case number you can apply Grants and Contracts using [the  registration form](https://aaudk.sharepoint.com/sites/persondata-ressourcer/SitePages/Registrations%20og%20reports%20(Online%20forms).aspx). 
-
-
-<!-- **Student:**
-You cannot register projects with Grants and Contracts. As a student you are personally responsible for any data you collect. You must ensure that you comply with [GDPR regulations for students](https://aaudk.sharepoint.com/sites/GDPR-for-students). -->
-
-
-<br>
-
-### Creating a sensitive project folder on UCloud
-
-- Log into the [UCloud platform](https://cloud.sdu.dk/) by using WAYF login. 
-- Go to the navigation bar to the left side of the screen and go to “Project” 
-
-<br>
-
-   ![SensitiveGuide](/assets/img/UCloud/SensitiveGuide/Billede1.png)
-
-<br>
-
-- Click on “Apply for resources” 
-
-<br>
-
-   ![SensitiveGuide](/assets/img/UCloud/SensitiveGuide/Billede2.png)
-
-<br>
-
-- You must name the project the same name as in the application form. You can find it in the email. 
-
-<br>
-
-   ![SensitiveGuide](/assets/img/UCloud/SensitiveGuide/Billede3.png)
-
-<br>
-
-- When you click on Type one, more fields will appear and can fill out the information on what you need, the information should be the same as in the email. 
-
-<br>
-
-   ![SensitiveGuide](/assets/img/UCloud/SensitiveGuide/Billede4.png)
-
-<br>
-
-- If you are working with sensitive data it is important to reference your WorkZone number. 
-
-<br>
-
-   ![SensitiveGuide](/assets/img/UCloud/SensitiveGuide/Billede5.png)
-
-<br>
-
-- Once your project is approved, you will need to add all relevant team members to the project using either their UCloud user names, or the “create link” option. (Not relevant for existing projects). 
-
-<br>
+### Creating a sensitive project on UCloud
+Best practice for handlig sensitive data on UCloud require you to mark the folder with the data "sensitive" You can do this by going to your *files* and right-click on the folder select *Change sensitivity*.
+![Marking a folder as sensitive in UCloud](/docs/assets/img/UCloud/sensitivefolder/SensitiveGuide/FolderSensitive.png){.standard_image_width}
+Now click the dropdown and select *sensitive" and write the reason for the sensitivity change. 
+![Marking a folder as sensitive in UCloud](/docs/assets/img/UCloud/sensitivefolder/SensitiveGuide/FolderSensitive1.png){.standard_image_width}
 
 ### Collaboration within UCloud projects (AAU Members)
 - Only individuals registered with the department of Grants and Contracts or those included via an approved data 
