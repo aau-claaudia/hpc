@@ -10,19 +10,20 @@
     *(Sensitive data can only be added to registered and approved project folders and must **NOT** be placed in My Workspace.)*
 
 
-### Procedure sensitive UCloud projects
+<!-- ### Procedure sensitive UCloud projects -->
 <!-- - If you are working with data classifications 2 or 3, you must register the research project with Grants and Contracts using  [the relevant registration form](https://aaudk.sharepoint.com/sites/persondata-ressourcer/SitePages/Registrations%20og%20reports%20(Online%20forms).aspx).
 <!-- - If you are a student your supervisor must approve the application.  -->
 <!-- - Before you can create a project on UCloud for sensitive data, you must fill out this form [this form](https://forms.office.com/pages/responsepage.aspx?id=Sbrb9QbOb0msPgzxQ2HZNEdKMbCNz_9Lom8_yaZURCNUQVZUQVRXSFVYODBZQkNZWVRYM1lEUEFYTSQlQCN0PWcu&route=shorturl). -->
 <!-- - When the application is approved you receive an email with details om what to do and information on which resources you have allocated.  -->
-<!-- - If the application is rejected, you will be informed what you need to change in the application.   --> -->
+<!-- - If the application is rejected, you will be informed what you need to change in the application.   --> 
 
+### Procedure sensitive UCloud projects
   <!-- Mermaid Diagram -->
   <div style="flex: 1; min-width: 300px; text-align: left;">
     <div class="mermaid">
     ```mermaid
     graph TD
-        A[<a href="https://forms.office.com/e/8Khbr1TJGC" target="_blank">Register your research project with Grants and Contracts</a>] --> B[📝 <a href="https://forms.office.com/e/8Khbr1TJGC" target="_blank">Complete the application form</a>]; 
+        A[<a href="https://forms.office.com/e/8Khbr1TJGC" target="_blank">Register your project with Grants and Contracts</a>] --> B[📝 <a href="https://forms.office.com/e/8Khbr1TJGC" target="_blank">Complete the application form</a>]; 
         B --> C[✅ CLAAUDIA approval];
         C --> D[💻 <a href="https://cloud.sdu.dk/app/dashboard" target="_blank">Enter the approved resources in UCloud</a>];
         D --> E[✅ CLAAUDIA approval];
