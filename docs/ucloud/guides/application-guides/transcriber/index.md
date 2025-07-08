@@ -23,7 +23,7 @@
 
 
 ### What is Transcriber
-Transcriber is an application on [UCloud](https://cloud.sdu.dk/app/jobs/create?app=transcriber-gui) designed to automatically convert audio and video files into accurate, readable text. It leverages advanced speech recognition models to transcribe spoken content, making it easier to analyze, search, and share information from interviews, lectures, meetings, podcasts, and other recordings. Transcriber helps researchers and students save time and effort by providing fast, reliable transcriptions directly within the secure UCloud platform — no technical expertise required. Whether you need simple text output or more advanced features like speaker identification and multiple file formats, Transcriber streamlines the process of turning your recordings into useful, accessible documents.
+Transcriber is an application on [UCloud](https://cloud.sdu.dk/app/jobs/create?app=transcriber-gui) designed to automatically convert audio and video files into accurate, readable text. It leverages advanced speech recognition models to transcribe spoken content, making it easier to analyze, search, and share information from interviews, lectures, meetings, podcasts, and other recordings. Transcriber helps researchers save time and effort by providing fast, reliable transcriptions directly within the secure UCloud platform — no technical expertise required. Whether you need simple text output or more advanced features like speaker identification and multiple file formats, Transcriber streamlines the process of turning your recordings into useful, accessible documents.
 
 #### Which Transcriber should I use?
 

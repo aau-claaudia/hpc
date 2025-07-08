@@ -58,7 +58,7 @@ The next step is to create an account by clicking "Sign Up." Enter your name, em
     **1.** Enable the "Allow New Sign-Ups" option in the settings panel. This allows new users to apply for an account, which you can then review and approve.      
     
     **2.** Create a dedicated account for each user through the settings menu, as shown below. Ensure that new users are assigned the appropriate role — either "User" or "Admin"—to maintain control over the application settings.
-    ![Create a new user for the students](/assets/img/UCloud/ChatUI%209.png){.standard_image_width}  
+    ![How to add users to ChatUI](/assets/img/UCloud/ChatUI%209.png){.standard_image_width}  
 
 ---
 
@@ -92,7 +92,7 @@ Click "New Chat" in the upper-left corner. Select the downloaded model (e.g., ll
 Type a query in the input field. Responses will indicate the source document used in the reply.  
 ![Example query and response](/assets/img/UCloud/ChatUI%2015.png){.standard_image_width}
 
-Students can log in with their designated account to access the same models and knowledge bases.
+<!-- Students can log in with their designated account to access the same models and knowledge bases. -->
 
 ---
 
