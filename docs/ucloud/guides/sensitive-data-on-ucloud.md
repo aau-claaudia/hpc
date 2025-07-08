@@ -32,16 +32,17 @@
 
 <br>
 
-### Creating a sensitive project on UCloud
-Best practice for handlig sensitive data on UCloud require you to mark the folder with the data "sensitive" You can do this by going to your *files* and right-click on the folder select *Change sensitivity*.
-![Marking a folder as sensitive in UCloud](/docs/assets/img/UCloud/sensitivefolder/SensitiveGuide/FolderSensitive.png){.standard_image_width}
+### Creating a sensitive folder on UCloud
+Best practice for handlig sensitive data on UCloud require you to mark the folder with the data "sensitive" You can do this by going to your **files** and right-click on the folder select **Change sensitivity**.
+
+![Marking a folder in a project as sensitive in UCloud](\assets\img\UCloud\SensitiveGuide\FolderSensitive.png){.standard_image_width}
+
 Now click the dropdown and select *sensitive" and write the reason for the sensitivity change. 
-![Marking a folder as sensitive in UCloud](/docs/assets/img/UCloud/sensitivefolder/SensitiveGuide/FolderSensitive1.png){.standard_image_width}
+
+![Marking a folder as sensitive in UCloud](\assets\img\UCloud\SensitiveGuide\FolderSensitive1.png){.standard_image_width}
 
 ### Collaboration within UCloud projects (AAU Members)
-- Only individuals registered with the department of Grants and Contracts or those included via an approved data 
-
-processing agreement may be added to UCloud projects.
+- Only individuals registered with the department of Grants and Contracts or those included via an approved data processing agreement may be added to UCloud projects.
 
 ### Collaboration with external partners (Non-AAU Members)
 - The external collaborator’s employer must have a Data Processing Agreement with SDU (who hosts UCloud through DeiC Interactive HPC), or there must be an Agreement on Joint Data Controlling. In such cases, AAU will be responsible for the data processing agreement with SDU/DeiC.  
@@ -66,9 +67,9 @@ processing agreement may be added to UCloud projects.
 
 ### Completing a Project
 - Upon project completion:
+   - Store all completed datasets and metadata in a data repository according to [AAU's Research Data Management Policy](https://www.ansatte.aau.dk/regler/forskning/politik-for-handtering-af-forskningsdata). You can find more information about out local archiving solution: [DataDeposit](https://www.researcher.aau.dk/guides/research-data-and-software/software-and-tools/datadeposit) 
   - Delete all data from the UCloud platform.
 <!-- - Archive the project, ensuring that the final archiving date matches the GDPR notification with Grants and Contracts. -->
   - Permanently delete any files in trash folders.
-  - Store all completed datasets and metadata in a data repository according to [AAU's Research Data Management Policy](https://www.ansatte.aau.dk/regler/forskning/politik-for-handtering-af-forskningsdata). You can find more information about out local archiving solution: [DataDeposit](https://www.researcher.aau.dk/guides/research-data-and-software/software-and-tools/datadeposit) 
-
+  
 
