@@ -1,19 +1,23 @@
-Before diving into AI Cloud, ensure you have the necessary tools and knowledge for the best experience. Here's a brief overview:
+Before attempting to log in to AI Cloud, please ensure that you have completed the following:
 
-!!! info "Request access"
-      If you haven't done so yet, please visit [how to access](/ai-cloud/how-to-access/) to learn how to get approved for using AI Cloud.
+### Request access
 
-### Preperations
+If you haven't done so yet, please visit [how to access](/ai-cloud/how-to-access/) to learn how to get approved for using AI Cloud.
 
-- Ensure you are connected to the [AAU network](https://www.en.its.aau.dk/instructions/wi-fi). If you are not connected to the AAU network directly - use AAU's [VPN](https://www.en.its.aau.dk/instructions/vpn) or [SSH gateway](https://www.en.its.aau.dk/instructions/ssh).
-- Linux and MacOS users can use their standard *Terminal* applications.
-- Windows users should use *PowerShell* to follow our docs effectively. Alternatively try using [Windows Subsystem for Linux](https://learn.microsoft.com/en-us/windows/wsl/setup/environment).
+### Network
+
+Ensure you are connected to the [AAU network](https://www.en.its.aau.dk/instructions/wi-fi). If you are not connected to the AAU network directly - use AAU's [VPN](https://www.en.its.aau.dk/instructions/vpn) or [SSH gateway](https://www.en.its.aau.dk/instructions/ssh).
+
+### Find an application
+Find an appropriate application for reaching the platform. This will depend on the operating system of your local machine:
+
+If you are a Windows user, we recomend *Powershell*.
+
+If you are a MacOS or Linux user, we recommend the default Terminal application that comes with your OS.
 
 !!! info "Please review our [Terms and Conditions](/ai-cloud/terms-and-conditions/), especially noting the following points:"
-      - AI Cloud is not intended for working with confidential or sensitive data
+      - AI Cloud is not intended for working with [confidential or sensitive data](https://www.security.aau.dk/data-classification/the-four-data-types-at-aau).
       - AI Cloud is not designed for long term storage of research data.
-      - AI Cloud is not designed for production.
-      - AI Cloud is not intended to host long term shared research projects.
 
 <hr>
 
