@@ -37,6 +37,14 @@ In the beginning of every year CLAAUDIA receives an amount of resources to hand 
 
 ## Applications to the national resource pool
 
+!!! tip "OPEN CALL"
+    
+    There is currently an open call for the national resources - learn more on [DeiC's page for national HPC calls](https://www.deic.dk/en/supercomputing/Apply-for-HPC-resources).
+
+    This call will be open from July 15th to September 16th.
+
+    The resources in the pool will be available from January 1st until December 31st 2026.
+
 **Objective:** To allow researchers to apply for medium-large sized resource grants
 
 **Deadline**: March / September
@@ -45,7 +53,7 @@ In the beginning of every year CLAAUDIA receives an amount of resources to hand 
 
 **Proces:**
 
-In the beginning of the year a new call is made available and researchers have a 3-month window in which they can apply. When the window ends there is a period, where a scientific committee evaluates the applications that have been submitted. After this proces has been completed, applicants receive a response on the decision - 6 months after the call opened. This cycle repeats twice a year.
+In the beginning of the year a new call is made available and researchers have a 3-month window in which they can apply. When the window ends there is a period, where [a scientific committee](https://www.deic.dk/en/supercomputing/Apply-for-HPC-resources/E-resource-committee) evaluates the applications that have been submitted based on [criteria](https://www.deic.dk/sites/default/files/Proces%20for%20national%20call%20for%20e-resources.pdf#page=10). After this proces has been completed, applicants receive a response on the decision - 6 months after the call opened. This cycle repeats twice a year.
 
 **How to apply:**
 
