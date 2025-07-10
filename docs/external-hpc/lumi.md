@@ -1,27 +1,45 @@
 LUMI is a supercomputer located in Kajaani, Finland and ranks among the world's Top 10 supercomputers according to the [Top 500 list](https://top500.org). The true power of the system lies in it's oppurtunity to scale jobs massively, but we also want to encourage our users to experiment with the system, and to think of it as an extension of the compute capacity available to them as researchers at AAU.
 
-
 ## Access
-The system is funded by EuroHPC and the [LUMI consortium](https://www.lumi-supercomputer.eu/lumi-consortium/) which Denmark is a member of, and for this reason AAU holds local ressources, which we can use to provide our researchers with **direct access** to the system.
 
-!!! info "Recommendations for acquiring compute time on LUMI"
+The system is funded by [EuroHPC](https://www.lumi-supercomputer.eu/eurohpcju/) and the [LUMI consortium](https://www.lumi-supercomputer.eu/lumi-consortium/) which Denmark is a member of. For this reason AAU-users can acquire compute time for LUMI by:
 
-    1. Find a resource for testing out and gaining familiarity with the system. Make use of either:
-        * **AAU's local resource pool**: Fill out [our application form](https://forms.office.com/e/4XC48iVu4S). We have meticulously crafted the application form, so that it guides you every step of the way. Upon approval you will receive an email with step-by-step instructions on how to log in to the system.
-        * **EuroHPC**: Apply for either [*benchmark*](https://eurohpc-ju.europa.eu/eurohpc-ju-call-proposals-benchmark-access_en) or [*development*](https://eurohpc-ju.europa.eu/eurohpc-ju-call-proposals-development-access_en) access from EuroHPC. Consider the oppurtunity of applying for in-depth HPC-expert-assistance from [Epicure](/external-hpc/access/#epicure).
-        
-    2. If you would need additional resources for the system, you have the following options depending on how much your project requires:
-        * **AAU's local resource pool**: We hand out resources for actual (non-testing) project work on a continuous basis. The amount we can allocate depends on our budget, but we encourage users to fill out [our application form](https://forms.office.com/e/4XC48iVu4S). If the applied amount is not within our budget, we will reach out to you and help you find the resources you need.
-        * **DeiC's national resource pool**: This is a biannual call, suitable for both modest and very large project needs.
-        * **EuroHPC**: Apply for on of the access modes; [*regular*](https://eurohpc-ju.europa.eu/eurohpc-ju-call-proposals-regular-access-mode_en), [*extreme*](https://eurohpc-ju.europa.eu/eurohpc-ju-call-proposals-extreme-scale-access-mode_en) or [*AI for Science and Collaborative EU Projects*](https://eurohpc-ju.europa.eu/eurohpc-ju-call-proposals-ai-science-and-collaborative-eu-projects_en). Consider the oppurtunity of applying for in-depth HPC-expert-assistance from [Epicure](/external-hpc/access/#epicure).
+  - submitting an application to EuroHPC or DeiC
+  - making use of AAU's local ressources, which provides our researchers with **direct access** to the system.
 
-    Generally we always recommend making use of AAU's resources first, as CLAAUDIA can provide you with the best onboarding oppurtunities, and guide you further along the way as your project grows.
+### Recommendations for acquiring compute time on LUMI
 
-!!! info "User support"
-    User support for the system is provided jointly by [CLAAUDIA](https://aau.service-now.com/serviceportal?id=sc_cat_item&sys_id=a05e2fb4c3434610f0f3041ad001310e) and the [LUMI User Support Team (LUST)](https://www.lumi-supercomputer.eu/user-support/).
+Acquiring LUMI-resources should <u>always</u> be a two step proces:
 
-## System overview
-### Software
+  1. **Acquire resources for testing out the system:** 
+
+    It is always good to do a test run on the system prior to reaching out for a larger grant. Being able to demonstrate that you are able to utilise the system effectivly, and that your project fits the system, will greatly help your chances of being awarded the resources.
+    Further acquiring too large a resource, which is left unused, might make this resource unavailable to others who might have been able to put it to good use.
+
+    Make use of one of the following:
+
+      - AAU's local resource pool: Fill out [our application form](https://forms.office.com/e/4XC48iVu4S).
+      - EuroHPC: Read more on [our page dedicated to this option](/external-hpc/eurohpc-resources/).
+
+  2. **Acquire ressources for actual project work:**
+
+    When you have demonstrated that your applicaiton was fit for the system, you may reach out for a larger grant.
+
+    Make use of one of the following:
+
+      - AAU's local resource pool: Fill out [our application form](https://forms.office.com/e/4XC48iVu4S). Suitable for modest/large grants, depending on our budget.
+      - DeiC's national resource pool: Read more on [our page dedicated to this option](/external-hpc/deic-resources/#applications-to-the-national-resource-pool).
+      - EuroHPC: Read more on [our page dedicated to this option](/external-hpc/eurohpc-resources/).
+
+
+
+### User support
+
+User support for the system is provided jointly by [CLAAUDIA](https://aau.service-now.com/serviceportal?id=sc_cat_item&sys_id=a05e2fb4c3434610f0f3041ad001310e) and the [LUMI User Support Team (LUST)](https://www.lumi-supercomputer.eu/user-support/).
+
+With a EuroHPC grant it is possible to apply for in-depth, HPC-expert assistance from [the Epicure project](/external-hpc/eurohpc-resources/#epicure).
+
+## Software
 
 LUMI utilises two main software components:
 
@@ -30,19 +48,22 @@ LUMI utilises two main software components:
 
 Users familiar with [AI Cloud](/ai-cloud) or [AI-LAB](/ai-lab) will find that operating the system a familiar experience.
 
-### Hardware
+## Hardware
 
 #### Compute nodes
-LUMI consists of three different compute partitions:
+LUMI consists of multiple compute partitions. Two of the main ones are:
 
 | Partition | Number of nodes | Purpose | Node configuration |
 | ---       |       ---       |   ---   |   ---         |
 | [LUMI-C](https://docs.lumi-supercomputer.eu/hardware/lumic/) | 2978 | Scaleable, demanding CPU operations | 128 cores AMD EPYC with different RAM capacities 256, 512 and 1024 GB| 
 | [LUMI-G](https://docs.lumi-supercomputer.eu/hardware/lumig/) | 2048 | Scaleable, demanding GPU operations | 4 x AMD MI250x GPU's (128 GB GPU-RAM each)|
-| [LUMI-D](https://docs.lumi-supercomputer.eu/hardware/lumid/) | 8 | Interactive data visualisation | Nvidia A40 |
 
 The table above is intended for the purpose of providing a rough overview of the hardware. 
 A more complete overview can be found in [the official LUMI documentation](https://docs.lumi-supercomputer.eu/hardware/)
+
+!!! info "A note on AMD GPU hardware"
+
+    The AMD ROCM ecosystem has matured a lot in the recent years, and in most cases Nvidia-supported code can be ported to an AMD-system with only minor tweaks.
 
 #### Network
 All compute nodes are equipped with an high-speed interconnect which ensures high transfer speeds between compute nodes and storage partitions.
@@ -67,21 +88,24 @@ Log in according to [official instructions](https://docs.lumi-supercomputer.eu/f
 
 ### Looking around
 
+Optionally `git clone` our [LUMI-starter-pack](https://github.com/aau-claaudia/lumi-starter-pack):
+```
+git clone https://github.com/aau-claaudia/lumi-starter-pack.git
+```
+
 LUMI's operating system CrayOS is a variant of Linux, and the system can thus be navigated using [regular GNU/Linux commands](https://linuxjourney.com/lesson/the-shell).
 
 LUMI uses [Modules](https://modules.readthedocs.io/en/stable/module.html#description) to manage software environments. Loading modules essentially just alters the `$PATH` variable, allowing you to access additional software and/or versions. Learn about using modules [here](https://docs.lumi-supercomputer.eu/runjobs/lumi_env/Lmod_modules/).
 
 Each time the user logs in to the system, the [`lumi-tools`](https://lumi-supercomputer.github.io/LUMI-EasyBuild-docs/l/lumi-tools/)-module is automatically loaded, giving you access to commands like `lumi-workspaces`, `lumi-allocations`, `lumi-check-quota`, which will allow you to inspect your project and it's resource consumption.
 
-Optionally `git clone` our LUMI-starter-pack:
-```
-git clone https://github.com/aau-claaudia/lumi-starter-pack.git
-```
 ### Transfer your files
 
 Transfer your files according to the [official instructions](https://docs.lumi-supercomputer.eu/firststeps/movingdata/). We recommend Rsync for it's ability to continue a transfer if gets interrupted.
 
-Please be mindful of the fact that storage units are spent continuously. There's no need to constantly move files around, but we ask you to be mindful of your storage quota, and to get in touch with us if you are nearing the limits of your quota. We will likely be able to help you find more resources.
+!!! warning "Don't forget - storage units are spent continously"
+    
+    Please be mindful of the fact that storage units are spent continuously. There's no need to constantly move files around, but we ask you to be mindful of your storage quota, and to get in touch with us if you are nearing the limits of your quota. We will likely be able to help you find more resources.
 
 ### Prepare software environment
 
@@ -89,7 +113,7 @@ We recommend creating Singularity images using the tool [Cotainr](https://docs.l
 
 You can also find pre-built container images in: `/appl/local/containers/sif-images`
 
-### Run your job
+### Run your first job
 
 It is generally recommended to launch your jobs with batch-scripts. We provide the following example, which you can use as a basis for your own batch scripts.
 
@@ -129,5 +153,15 @@ Consider making the following adjustments:
 * Run the job on an appropriate compute partition:
     * View the partitions with the command: `sinfo -o "%25P %5D %l"`
     * Read about [the compute hardware](https://docs.lumi-supercomputer.eu/hardware/lumig/) in the official documentation.
-* Replace the paths to your container image and your script.
+* Replace the paths to your `CONTAINER` and `SCRIPT`.
 
+Finally run this batch-script with `sbatch run.sh` (or whatever you called the file).
+
+Confirm that it is running with: 
+```
+squeue --me
+```
+If you are running a GPU-demanding job; find the `jobid` from the `squeue` command and run the following to monitor the GPU-activity:
+```
+srun --jobid=7100665 rocmi-smi
+```
