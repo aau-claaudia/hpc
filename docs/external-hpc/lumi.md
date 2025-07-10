@@ -2,10 +2,7 @@ LUMI is a supercomputer located in Kajaani, Finland and ranks among the world's 
 
 ## Access
 
-The system is funded by [EuroHPC](https://www.lumi-supercomputer.eu/eurohpcju/) and the [LUMI consortium](https://www.lumi-supercomputer.eu/lumi-consortium/) which Denmark is a member of. For this reason AAU-users can acquire compute time for LUMI by:
-
-  - submitting an application to EuroHPC or DeiC
-  - making use of AAU's local ressources, which provides our researchers with **direct access** to the system.
+The system is funded by [EuroHPC](https://www.lumi-supercomputer.eu/eurohpcju/) and the [LUMI consortium](https://www.lumi-supercomputer.eu/lumi-consortium/) which Denmark is a member of. For this reason CLAAUDIA can provide AAU-users with **direct access** to the system. 
 
 ### Recommendations for acquiring compute time on LUMI
 
@@ -30,7 +27,6 @@ Acquiring LUMI-resources should <u>always</u> be a two step proces:
       - AAU's local resource pool: Fill out [our application form](https://forms.office.com/e/4XC48iVu4S). Suitable for modest/large grants, depending on our budget.
       - DeiC's national resource pool: Read more on [our page dedicated to this option](/external-hpc/deic-resources/#applications-to-the-national-resource-pool).
       - EuroHPC: Read more on [our page dedicated to this option](/external-hpc/eurohpc-resources/).
-
 
 
 ### User support
@@ -156,6 +152,8 @@ Consider making the following adjustments:
 * Replace the paths to your `CONTAINER` and `SCRIPT`.
 
 Finally run this batch-script with `sbatch run.sh` (or whatever you called the file).
+
+### Monitor the job
 
 Confirm that it is running with: 
 ```
