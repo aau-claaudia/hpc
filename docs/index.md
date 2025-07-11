@@ -71,19 +71,19 @@ Find the most suitable system for your project. You can also complete the [HPC D
     <div class="custom-grid-item">
         <h2>DeiC Throughput HPC</h2>
         <p class="custom-grid-feature">DeiC Throughput HPC offers queued job execution on large CPU clusters, including DTU Sophia, GenomeDK, and Computerome 2.0.</p>
-        <a href="/external-hpc/deic-hpc/"><i class="bi bi-info-circle"></i>About Deic HPC</a>
+        <a href="/external-hpc/deic-resources/"><i class="bi bi-info-circle"></i>About Deic HPC</a>
         <a href="https://forms.office.com/e/DxRA4hPK84"><i class="bi bi-file-earmark-text"></i>Application form</a>
     </div>
     <div class="custom-grid-item">
         <h2>LUMI</h2>
         <p class="custom-grid-feature">LUMI is AAU’s largest supercomputer, providing CPU and GPU processing via a queue-based, containerized job system.</p>
-        <a href="/external-hpc/deic-hpc/"><i class="bi bi-info-circle"></i>About Deic HPC</a>
+        <a href="/external-hpc/lumi/"><i class="bi bi-info-circle"></i>About LUMI</a>
         <a href="https://forms.office.com/e/4XC48iVu4S"><i class="bi bi-file-earmark-text"></i>Application form</a>
     </div>
     <div class="custom-grid-item">
         <h2>EuroHPC</h2>
         <p class="custom-grid-feature">Aalborg University researchers can access EuroHPC supercomputers by applying for computing time, like external research funding.</p>
-        <a href="/external-hpc/eurohpc/"><i class="bi bi-info-circle"></i>About EuroHPC</a>
+        <a href="/external-hpc/eurohpc-resources/"><i class="bi bi-info-circle"></i>About EuroHPC</a>
     </div>
 </div>
 
