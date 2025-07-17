@@ -1,29 +1,57 @@
 Before you start running jobs, it is important to be aware of the queueing system [Slurm](https://slurm.schedmd.com/quickstart.html).
 
 ## Slurm queue system
-Slurm is a job scheduling system and is used to allocate resources and manage user jobs on AI Cloud. Jobs on AI Cloud can only be run through Slurm. 
+Slurm is a job scheduling system and is used to allocate resources and manage user jobs on AI Cloud. All computationally demanding jobs should take place on the compute nodes, and they are only accessible via Slurm.
 
-The primary method to run a job via Slurm is by utilizing the command `srun`. Let's try launching a job on a compute node:
-
+### The srun command
+One way of running a job via Slurm is by utilizing the `srun` command. Let's try to launch a job on a compute node:
 ```
 srun hostname
 ```
+We might have to wait a little bit, but once a compute node becomes available the `hostname` command is executed on the compute node that was allocated to our job. The output could be something like:
+```
+a256-t4-01.srv.aau.dk
+```
+This also serves as proof that the command was executed on the node `a256-t4-01.srv.aau.dk`, which is indeed a compute node. 
 
-!!! info "Waiting in queue"
+Running the `hostname` again (this witout `srun`) will execute the command on the front end node:
+```
+hostname
+```
+Which will output the hostname of the front end node:
+```
+ai-fe02.srv.aau.dk
+```
+!!! warning "Don't run jobs on the frontend"
+    Please remember to not launch computationally heavy jobs on the front end node. Always delegate them to a compute node.
 
-    Upon execution, you might receive a notification indicating your job has been queued, awaiting resource availability:
+### The sbatch command
 
-    ```
-    srun: job X queued and waiting for resources
-    ```
+Another way of launching a job is with the `sbatch` command. This command can be launched with [a batch-script](/ai-cloud/additional-guides/run-a-batch-script/) or *on-the-fly* with the `--wrap` argument.
 
-    Once a compute node becomes available, you'll receive confirmation:
+Let's try this:
+```
+sbatch --wrap="hostname"
+```
 
-    ```
-    srun: job X has been allocated resources
-    ```
+Notice how the command output is not printed directly to the console. Instead what we get is a message from Slurm, telling us that our job was submitted to the queue:
+```
+Submitted batch job 737186
+```
+We can check the state of our job by [checking the queue](/ai-cloud/additional-guides/checking-the-queue/).
 
-Once a compute node becomes available the `hostname` command executes on the allocated compute node, revealing its identifier (e.g. `a256-t4-02.srv.aau.dk`).
+Once the job is finished, we will be able to find a file in the directory we launched our job in (`slurm-737186.out`). Let's print this file:
+```
+cat slurm-737186.out
+a256-t4-02.srv.aau.dk
+```
+
+!!! info "How are they different: srun vs sbatch"
+    * Where `srun` prints the command output directly to the console, `sbatch` writes it to a file.
+    * A job launched with the `srun` command will run only as long as its output can be printed to the console (ie. it depends on a process on the host node). Some users find a workaround for this, and launch long-running jobs within from Tmux sessions, but these jobs will be stopped if something happens to the host. 
+    * A job launched with `sbatch` is managed entirely by Slurm and does not rely on external processes. It is more robust, and can withstand the host node being rebooted.
+    
+    **Put short:** Use `srun` for short experiments. Always use `sbatch` for long-running jobs.
 
 !!! info "More Slurm commands"
     You can find [additional Slurm commands](../additional-guides/checking-the-queue.md) available to customize your job submissions, such as setting the time limit for a job, specifying the number of CPUs or GPUs, and more.
