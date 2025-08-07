@@ -5,6 +5,19 @@
 
  - Another portion is reserved for a **national resource pool**, from which researchers can apply twice a year.
 
+!!! info "OPEN CALL"
+    
+    There is currently an open call for [**the national resource pool for LUMI**](https://www.deic.dk/en/supercomputing/Apply-for-HPC-resources).
+
+    It will be possible to submit applications from July 15th to September 16th 2025.
+
+    The resources will be available from January 1st until December 31st 2026.
+
+    **Learn more:**
+
+      - Read through the information provided on this page.
+      - Learn more about the LUMI-supercomputer on our [LUMI-page](/external-hpc/lumi/).
+
 ## National HPC facilities
 
 The national HPC facilities are those in which DeiC has a stake and are provided to all universities via the national and local resource pools.
@@ -36,14 +49,6 @@ In the beginning of every year CLAAUDIA receives an amount of resources to hand 
     Reach out to CLAAUDIA via [serviceportal.aau.dk](https://aau.service-now.com/serviceportal?id=sc_cat_item&sys_id=34e8536083cfc21053711d447daad30a).
 
 ## Applications to the national resource pool
-
-!!! tip "OPEN CALL"
-    
-    There is currently an open call for the national resources - learn more on [DeiC's page for national HPC calls](https://www.deic.dk/en/supercomputing/Apply-for-HPC-resources).
-
-    This call will be open from July 15th to September 16th.
-
-    The resources in the pool will be available from January 1st until December 31st 2026.
 
 **Objective:** To allow researchers to apply for medium-large sized resource grants
 

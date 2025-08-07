@@ -1,34 +1,97 @@
-Before you start running jobs, it is important to be aware of the queueing system [Slurm](https://slurm.schedmd.com/quickstart.html).
+In this section, you will learn how to launch on a compute node (see section [System overview](/ai-cloud/system-overview/)). We do this by submitting a job to our queuing system, Slurm. We will be exploring two commands for doing this.
 
-## Slurm queue system
-Slurm is a job scheduling system and is used to allocate resources and manage user jobs on AI Cloud. Jobs on AI Cloud can only be run through Slurm. 
-
-The primary method to run a job via Slurm is by utilizing the command `srun`. Let's try launching a job on a compute node:
-
+## The srun command
+One way of running a job via Slurm is by utilizing the `srun` command. Let's try to launch a job on a compute node:
 ```
 srun hostname
 ```
+We might have to wait a little bit, but once a compute node becomes available the `hostname` command is executed on the compute node that was allocated to our job. The output could be something like:
+```
+a256-t4-01.srv.aau.dk
+```
+This also serves as proof that the command was indeed executed on a compute node `a256-t4-01.srv.aau.dk`.
+Running `hostname` again - this time on the front end node (without `srun`):
+```
+hostname
+```
+Will return the name of the front end node:
+```
+ai-fe02.srv.aau.dk
+```
+## The sbatch command
 
-!!! info "Waiting in queue"
+Another way of launching a job is with the `sbatch` command. This command can be launched with *a batch-script* or *on-the-fly* with the `--wrap` argument.
 
-    Upon execution, you might receive a notification indicating your job has been queued, awaiting resource availability:
+### sbatch - *on the fly*
 
-    ```
-    srun: job X queued and waiting for resources
-    ```
+Let's this approach by entering the follwing command:
+```
+sbatch --wrap="hostname"
+```
 
-    Once a compute node becomes available, you'll receive confirmation:
+Notice how the command output is not printed directly to the console, but instead we get a message from Slurm, telling us that our job was submitted to the queue:
+```
+Submitted batch job 737186
+```
+We can check the state of our job by [checking the queue](/ai-cloud/additional-guides/checking-the-queue/).
 
-    ```
-    srun: job X has been allocated resources
-    ```
+Once the job is finished, we will be able to find a file in the directory we launched our job in (`slurm-737186.out`). Let's print this file:
+```
+cat slurm-737186.out
+a256-t4-02.srv.aau.dk
+```
+### sbatch - with a batch-script
+For better reproducibility it can be a very good idea to launch your job with a batch-script. Let's try this with a minimal example. Assuming that we have the file `hostname.sh` with the following content:
+```
+#!/usr/bin/env bash
 
-Once a compute node becomes available the `hostname` command executes on the allocated compute node, revealing its identifier (e.g. `a256-t4-02.srv.aau.dk`).
+#SBATCH --job-name=hostname
+#SBATCH --partition=prioritized
+#SBATCH --nodelist=a768-l40s-02
+
+srun hostname
+```
+
+Here we will be launching the hostname command on the compute node `a768-l40s-02`. 
+
+We launch a job from these instructions, with:
+```
+sbatch hostname.sh
+```
+This prints:
+```
+Submitted batch job 737223
+```
+Once the job is finished, we can use the `cat` command to print the content of the output file:
+```
+cat slurm-737223.out
+a768-l40s-02.srv.aau.dk
+```
+Proving that our job did indeed run on the node we asked for.
+
+## Which one to use: srun vs sbatch
+
+The most important difference between these two commands is:
+
+* `srun` returns command output directly to the console - `sbatch` writes it to a file.
+
+A job launched with `srun` is therefore dependent on the console session the front end node, and will only run as long as the output can be printed directly to the console. If the console session is interrupted, the job is terminated. A job launched with `sbatch` does not depend on an external process in the same way, and will run until it is explicitly cancelled by the user.
+
+!!! info "Don't launch jobs from within interactive sessions"
+    It is not very good practice to start your jobs from within interactive shell sessions (using `srun --pty`), as this will start that runs until it reaches the time limit in the (6 days in the prioritized partition) - not when the actual job is finished. As a consequence the resources allocated to the job will be occupied for longer than needed.
+
+    As stated in our [Fair usage](/ai-cloud/fair-usage/)-section, we want to encourage our users to be mindful of their resource consumption for the sake of their fellow researchers, and not occupy ressources that others could have put to use.
+
+### Conclusion:
+
+  * `srun` is best suited for development - where you want the command output to be printed directly in the console.
+  * `sbatch` is best suited for long-running unmaintained jobs.
+
+  Try to use `sbatch` as much as possible.
 
 !!! info "More Slurm commands"
     You can find [additional Slurm commands](../additional-guides/checking-the-queue.md) available to customize your job submissions, such as setting the time limit for a job, specifying the number of CPUs or GPUs, and more.
 
-<hr>
 
 ## Executing a containerized job with Singularity
 To run a task within a container using Singularity, we need to add specific parameters to the Slurm command. 
@@ -95,8 +158,8 @@ srun --gres=gpu:1 singularity exec --nv tensorflow_24.03-tf2-py3.sif python3 ben
 
 Note that the above example allocate 1 GPU to the job. It is possible to allocate more, for example `--gres=gpu:2` for two GPUs. Software for computing on GPU is not necessarily able to utilise more than one GPU at a time. It is your responsibility to ensure that the software you run can indeed utilise as many GPUs as you allocate. It is not allowed to allocate more GPUs than your job can utilise. [Here](../additional-guides/multiple-gpus-with-pytorch.md) is an example of a PyTorch script that can handle multiple GPUs. 
 
-<hr>
 
+<hr>
 
 **:material-party-popper: Congratulations! :material-party-popper:**
 
