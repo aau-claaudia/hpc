@@ -1,6 +1,27 @@
 # CLAAUDIA LLM
 This is a PoC for a local LLM platform at AAU. The platform runs on Strato with 6 NVIDIA T4 GPUs and utilizes Open WebUI and Ollama for model management and interaction. Open WebUI provides a user-friendly interface, while Ollama handles model execution and optimization. Researchers can create groups and collaborate on RAG systems by integrating their own datasets. The goal is to create a flexible, GPU-optimized solution for research use.
 
+## Installation
+
+1. Start an instance on Strato with Cuda Ubuntu 24.04 with Docker image
+2. Go to Security Groups and add a new. Make a new TCP rule to port 3000. Add the security Group to the instance.
+3. Install NVIDIA toolkit: 
+   [https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html#installing-with-apt](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html#installing-with-apt)
+4. Configure with Docker: 
+   [https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html#configuring-docker](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html#configuring-docker)
+5. Enter the following to run Open WebUI: 
+   sudo docker run -d --restart unless-stopped -p 3000:8080 --gpus=all -v ollama:/root/.ollama -v open-webui:/app/backend/data --name open-webui-llm --privileged ghcr.io/open-webui/open-webui:ollama
+6. Check that its running at: [http://replace with server IP:3000](http://replace with server IP:3000) (it make take 5 minutes before its running)
+
+Update server:
+1. sudo docker stop open-webui-llm
+2. sudo docker rm open-webui-llm
+3. sudo docker pull ghcr.io/open-webui/open-webui:ollama
+4. sudo docker run -d --restart unless-stopped -p 3000:8080 --gpus=all -v ollama:/root/.ollama -v open-webui:/app/backend/data --name open-webui-llm --privileged ghcr.io/open-webui/open-webui:ollama
+
+Nice commands:
+1. sudo docker ps: checks the status of the Docker container
+
 ## Getting started
 
 To start using the CLAAUDIA LLM platform, please follow these steps:
@@ -36,7 +57,7 @@ curl -X POST http://10.92.1.195:3000/api/chat/completions \
     }'
 ```
 
-## Python Gyude
+## Python Guide
 
 ### Overview
 This guide explains how to use the Ollama OpenWebUI API with Python. It supports two methods:
