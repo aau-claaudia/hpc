@@ -72,6 +72,7 @@ uri = "bolt://10.14.11.155:7687"
 ## Troubleshooting
 
 If the connection doesn't work:
+
 1. Verify both instances are in the same UCloud project
 2. Check that Neo4j is running on the server instance
 3. Ensure the internal IP address is correct
