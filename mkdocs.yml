@@ -73,12 +73,14 @@ nav:
           - Getting started:
               - Prerequisites: ai-cloud/getting-started/index.md
               - Log in: ai-cloud/getting-started/login.md
-              - Look around: ai-cloud/getting-started/look-around.md
               - Transfer files: ai-cloud/getting-started/transfer-files.md
               - Run jobs: ai-cloud/getting-started/run-jobs.md
               - Pull container images: ai-cloud/getting-started/pull-container-images.md
               - Next steps: ai-cloud/getting-started/next-steps.md
           - Additional guides:
+              - Directories:
+                  - Overview of directories: ai-cloud/additional-guides/directories-overview.md
+                  - Local scratch space: ai-cloud/additional-guides/local-storage.md
               - Container guides:
                   - Download container images: ai-cloud/additional-guides/download-container-images.md
                   - Building your own container image: ai-cloud/additional-guides/building-your-own-container-image.md
