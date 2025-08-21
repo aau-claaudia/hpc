@@ -48,6 +48,14 @@ AI Cloud fosters collaborative work through shared project directories in `/home
 
 Users are welcome to create directories for their groups themselves, but they are encouraged to name the directories in a meaningful way (ie. after your group or project name).
 
+Go in to the project directory
+```
+cd /home/project
+```
+Before going ahead and creating a directory for group project, please consider naming the directory in a meaningful manner (ie. after your group or research project). A project directory can be created in the following manner (swap out `<name>` for the actual name of your project).
+```
+mkdir <name> 
+```
 Please remember, that these directories should be deleted when your project is finished, and you no longer need them. They are not intended for long term data storage.
 
 ### Local scratch space
