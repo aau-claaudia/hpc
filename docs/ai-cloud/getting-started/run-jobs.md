@@ -75,12 +75,19 @@ The most important difference between these two commands is:
 
 * `srun` returns command output directly to the console - `sbatch` writes it to a file.
 
-A job launched with `srun` is therefore dependent on the console session the front end node, and will only run as long as the output can be printed directly to the console. If the console session is interrupted, the job is terminated. A job launched with `sbatch` does not depend on an external process in the same way, and will run until it is explicitly cancelled by the user.
+A job launched with `srun` is therefore dependent on the console session the front end node, and will only run as long as the output can be printed directly to the console. If the console session is interrupted, the job is terminated. A job launched with `sbatch` does not depend on an external process, and will run until it is explicitly cancelled by the user.
 
 !!! info "Don't launch jobs from within interactive sessions"
     It is not very good practice to start your jobs from within interactive shell sessions (using `srun --pty`), as this will start that runs until it reaches the time limit in the (6 days in the prioritized partition) - not when the actual job is finished. As a consequence the resources allocated to the job will be occupied for longer than needed.
 
     As stated in our [Fair usage](/ai-cloud/fair-usage/)-section, we want to encourage our users to be mindful of their resource consumption for the sake of their fellow researchers, and not occupy ressources that others could have put to use.
+
+
+!!! info "Persistent terminal sessions"
+    If used correctly terminal multiplexers like Tmux/Screen are great tools! However if they are used to start an interactive job on a compute node, this counts as monopolising resources.
+
+your jobs from within interactive shell sessions (using `srun --pty bash -l`), as this will start that runs until it reaches the time limit in the (6 days in the prioritized partition) - not when the actual job is finished. As a consequence the resources allocated to the job will be occupied for longer than needed.
+
 
 ### Conclusion:
 
@@ -97,7 +104,6 @@ A job launched with `srun` is therefore dependent on the console session the fro
 To run a task within a container using Singularity, we need to add specific parameters to the Slurm command. 
 
 As an example, let's try running `print('hello world')` using `Python3` within a `tensorflow_24.03-tf2-py3.sif` container image.
-
 ```
 srun singularity exec tensorflow_24.03-tf2-py3.sif python3 -c "print('hello world')"
 ```
@@ -112,7 +118,27 @@ While this execution proceeds smoothly, it's important to note that the command 
 
 <hr>
 
+## Resource specifications
+
+The default resource specification
+You can always
+
+`--mem`: Allocate more host memory to your job (this **not** GPU memory)
+
+There's also
+Per task?
+
+`scontrol show node`
+
 ## Allocating a GPU to your job
+
+Allocating a GPU to your job can be done in the following manner.
+
+`srun --gres=gpu:1 nvidia-smi`
+
+
+Please see this section for more in depth guide for resource specification.
+
 You can allocate a GPU to a job using the `--gres=gpu` option for Slurm. Additionally, you need to add the `--nv` option to Singularity to enable NVIDIA drivers in the container.
 
 Let's try running a small Python script that performs a simple matrix multiplication of random data to benchmark TensorFlow computing speed with a GPU allocated.
