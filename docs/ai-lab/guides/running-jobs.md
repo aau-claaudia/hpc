@@ -7,7 +7,7 @@ There are two ways to run jobs using Slurm:
 
 <hr>
 
-## Using `srun`
+## Using srun
 `srun` launches a job and connects your current terminal session directly to the compute node. This is ideal for testing, debugging, or running short commands that require on-the-fly interaction. For example, if you just want to see the hostname of the machine allocated to you:
 
 ```
@@ -40,7 +40,7 @@ srun hostname
 
 <hr>
 
-## Using `sbatch`
+## Using sbatch
 For longer-running jobs, `sbatch` is preferred. You create a job script containing all the commands you want to run. Then you submit the job to the queue. Slurm schedules it, runs it, and writes output to a file. 
 
 
