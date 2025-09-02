@@ -12,7 +12,7 @@ The local scratch space is physically attached to each individual compute nodes,
 !!! warning
     This space is not intended for long term storage. Please remove your files when you are finished. We reserve the right to delete directories that have been left untouched for 90 days.
 
-## Create a directory
+### Create a directory
 
 In order to make use of this drive, we need to identify which node we want to work on.
 
@@ -24,7 +24,7 @@ The following command will create a directory for you on the network drive, and 
 sbatch -w nv-ai-02 --wrap="mkdir -p /raid/$USER && chmod o= /raid/$USER"
 ```
 
-## File transfer
+### File transfer
 
 In order to be able to transfer our files, we will need to be able to SSH in to the node. We can only do this if we have a job running on the node.
 
@@ -45,7 +45,7 @@ Other file transfer methods (as described in the [File transfer](../getting-star
 
 Remember to stay mindful of your fellow resarchers, and cancel the job you created for the file transfer when you are finished.
 
-## Working with the local scratch space
+### Working with the local scratch space
 
 Given that you have acquired a job allocation on the specific node you are working on, just reference this newly created directory.
 

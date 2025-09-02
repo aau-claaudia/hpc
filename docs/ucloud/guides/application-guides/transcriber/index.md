@@ -8,7 +8,7 @@
     <span class="icon level-3" title="Approved for strictly confidential data">3</span>
 </a>
 
-!!! success "Exciting news: New Transcriber Interface released!"
+!!! success "New Transcriber Interface released!"
     
     We are excited to announce the release of a brand new, user-friendly interface for the Transcriber application on UCloud! The updated interface offers a significantly improved user experience, streamlined workflows, and new features to make your transcription tasks easier than ever.
 

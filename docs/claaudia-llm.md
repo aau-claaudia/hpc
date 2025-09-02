@@ -11,7 +11,7 @@ This is a PoC for a local LLM platform at AAU. The platform runs on Strato with 
    [https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html#configuring-docker](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html#configuring-docker)
 5. Enter the following to run Open WebUI: 
    sudo docker run -d --restart unless-stopped -p 3000:8080 --gpus=all -v ollama:/root/.ollama -v open-webui:/app/backend/data --name open-webui-llm --privileged ghcr.io/open-webui/open-webui:ollama
-6. Check that its running at: [http://[replace with server IP]:3000](http://[replace with server IP]:3000) (it make take 5 minutes before its running)
+6. Check that its running at: [http://replace with server IP:3000](http://replace with server IP:3000) (it make take 5 minutes before its running)
 
 Update server:
 1. sudo docker stop open-webui-llm

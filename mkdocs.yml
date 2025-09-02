@@ -60,6 +60,8 @@ nav:
 #                  - Transcriber: ucloud/guides/application-guides/transcriber/index.md
 #                  - Transcriber batch videos: ucloud/guides/application-guides/transcriber/transcriber-video.md
               - Voyant Tools: ucloud/guides/application-guides/Voyant-Tools.md
+          - Advanced guides:
+              - Connect Neo4j to VS Code: ucloud/guides/advanced-guides/connect-neo4j-to-vscode.md
 
   - AI Cloud:
       - About AI Cloud: ai-cloud/index.md
@@ -69,33 +71,34 @@ nav:
       - Fair usage: ai-cloud/fair-usage.md
       - Guides:
           - Getting started:
-              - Before you begin: ai-cloud/getting-started/index.md
-              - Login: ai-cloud/getting-started/login.md
-              - File transfer: ai-cloud/getting-started/file-transfer.md
-              - Pulling containers: ai-cloud/getting-started/pulling-containers.md
-              - Running jobs: ai-cloud/getting-started/running-jobs.md
+              - Prerequisites: ai-cloud/getting-started/index.md
+              - Log in: ai-cloud/getting-started/login.md
+              - Transfer files: ai-cloud/getting-started/transfer-files.md
+              - Run jobs: ai-cloud/getting-started/run-jobs.md
+              - Pull container images: ai-cloud/getting-started/pull-container-images.md
               - Next steps: ai-cloud/getting-started/next-steps.md
           - Additional guides:
-              - Checkpointing: ai-cloud/additional-guides/checkpointing.md
+              - Directories:
+                  - Overview of directories: ai-cloud/additional-guides/directories-overview.md
+                  - Local scratch space: ai-cloud/additional-guides/local-storage.md
               - Container guides:
-                  - Building your own container image: ai-cloud/additional-guides/building-your-own-container-image.md
                   - Download container images: ai-cloud/additional-guides/download-container-images.md
-                  - Adding python packages via virtual environment: ai-cloud/additional-guides/adding-python-packages-via-virtual-environment.md
+                  - Building your own container image: ai-cloud/additional-guides/building-your-own-container-image.md
+                  - Creating a virtual environment: ai-cloud/additional-guides/creating-a-virtual-environment.md
                   - Creating a conda environment: ai-cloud/additional-guides/creating-a-conda-environment.md
-              - Local scratch space: ai-cloud/additional-guides/local-scratch-space.md
+              - Running jobs:
+                  - Run a batch script: ai-cloud/additional-guides/run-a-batch-script.md
+                  - Multiple GPUs with PyTorch: ai-cloud/additional-guides/multiple-gpus-with-pytorch.md
+                  - Checkpointing: ai-cloud/additional-guides/checkpointing.md
+                  - CPU, GPU, and memory allocation: ai-cloud/additional-guides/cpu-gpu-and-memory-allocation.md
+                  - Setting a time limit: ai-cloud/additional-guides/setting-a-time-limit.md
+                  - Cancelling jobs: ai-cloud/additional-guides/cancelling-jobs.md
               - Monitoring commands:
                   - Checking the queue: ai-cloud/additional-guides/checking-the-queue.md
                   - Checking the status of compute nodes: ai-cloud/additional-guides/checking-the-status-of-compute-nodes.md
                   - Checking GPU usage: ai-cloud/additional-guides/checking-gpu-usage.md
-              - Running jobs:
-                  - Run a batch script: ai-cloud/additional-guides/run-a-batch-script.md
-                  - Multiple GPUs with PyTorch: ai-cloud/additional-guides/multiple-gpus-with-pytorch.md
-              - Slurm arguments:
-                  - CPU, GPU, and memory allocation: ai-cloud/additional-guides/cpu-gpu-and-memory-allocation.md
-                  - Setting a time limit: ai-cloud/additional-guides/setting-a-time-limit.md
-                  - Cancelling jobs: ai-cloud/additional-guides/cancelling-jobs.md
-              - Checkpointing: ai-cloud/additional-guides/checkpointing.md
-              - Batch LLM Inference: ai-cloud/additional-guides/batch-llm-inference.md
+              - Application examples:
+                  - Batch LLM Inference: ai-cloud/additional-guides/batch-llm-inference.md
 
   - AI-LAB:
       - About AI-LAB: ai-lab/index.md

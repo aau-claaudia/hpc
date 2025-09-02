@@ -76,7 +76,7 @@ LUMI also several different storage partitions serving different purposes. Users
 
 ### Before logging in
 
-Assuming that you have decided to make use of AAU's local resource pool, follow the instructions in the letter of approval, sent out following your [resource application](/external-hpc/access). This involves completing AAU's identity verification procedure and uploading an SSH key to the system.
+Assuming that you have decided to make use of AAU's local resource pool, follow the instructions in the letter of approval, sent out following your [resource application](/external-hpc/access). This involves completing AAU's identity verification procedure and [uploading an SSH key](https://docs.lumi-supercomputer.eu/firststeps/SSH-keys/) to the system.
 
 ### Log in to the system
 
@@ -97,9 +97,9 @@ Each time the user logs in to the system, the [`lumi-tools`](https://lumi-superc
 
 ### Transfer your files
 
-Transfer your files according to the [official instructions](https://docs.lumi-supercomputer.eu/firststeps/movingdata/). We recommend Rsync for it's ability to continue a transfer if gets interrupted.
+Transfer your files according to the [official instructions](https://docs.lumi-supercomputer.eu/firststeps/movingdata/). We recommend [Rsync](https://linuxjourney.com/lesson/rsync) for it's ability to continue a transfer if gets interrupted.
 
-!!! warning "Don't forget - storage units are spent continously"
+!!! warning "Storage units are spent continously"
     
     Please be mindful of the fact that storage units are spent continuously. There's no need to constantly move files around, but we ask you to be mindful of your storage quota, and to get in touch with us if you are nearing the limits of your quota. We will likely be able to help you find more resources.
 
@@ -151,7 +151,7 @@ Consider making the following adjustments:
     * Read about [the compute hardware](https://docs.lumi-supercomputer.eu/hardware/lumig/) in the official documentation.
 * Replace the paths to your `CONTAINER` and `SCRIPT`.
 
-Finally run this batch-script with `sbatch run.sh` (or whatever you called the file).
+Finally run this batch-script with `sbatch torch_bm.sh` (or whatever you called the file).
 
 ### Monitor the job
 

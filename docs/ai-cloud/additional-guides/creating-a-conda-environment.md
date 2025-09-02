@@ -1,66 +1,68 @@
 
-Creating a conda environment in a container may be easily done using [cotainr](https://cotainr.readthedocs.io/en/stable/). 
+Cotainr is a tool that allows for easily extending Singularity container images with [conda environments](https://www.anaconda.com/docs/tools/working-with-conda/environments).
 
-!!! info "About cotainr"
-    [cotainr](https://cotainr.readthedocs.io/en/stable/) is a tool developed by DeiC to ease building of Singularity containers. It can be used to build custom containers with additional software installable by Conda and Pip. This means it is primarily for adding Python packages to a container. It works from a base container image that you specify and then build additional Anaconda and pip packages which you supply as a conda environment specification.
+Cotainr is relatively straight forward provided that either:
 
-We begin by downloading the latest release from the Cotainr repository. In the example below we are downloading the latest version as of late 2023. Be sure to check for newer versions at the aforementioned repository. Look for the zip archive "Assets" section, and copy the link.
+  1) The package you want to use can be found on either [anaconda.org](https://anaconda.org/) or [PyPI](https://pypi.org/).
 
-```
-wget https://github.com/DeiC-HPC/cotainr/archive/refs/tags/2023.11.0.zip
-```
+  2) Your are able to provide a conda environment YAML-file (eg. by calling `conda export > env.yml` from within your environment) .
 
-You should now have a zip archive, which you can unzip with:
 
-```
-unzip 2023.11.0.zip
-```
+## Where to find it
 
-After this has been done, you should have a directory called `cotainr-2023.11.0`. We should now be able to launch Cotainr and access its commands from within this directory. Next, we will create a conda environment file, `conda_env.yml` that contains the conda channels/repositories and packages you need:
+We have made Cotainr available in `/home/container/cotainr`.
 
-Type `nano` and press `ENTER` (or use the editor of your choice), and enter the packages of your choice in the editor. In this example we will install `python=3.11.0` and `numpy=1.23.5`:
+## Preparing the conda environment to build from
 
-```console
+#### Option 1: Export an existing environment
+If you already have a working conda environment on another platform, simply call `conda env export > conda_env.yml` from within the Conda environment.
+
+#### Option 2: Gather the environment manually
+
+If you do not have a working conda environment, you can create the yaml-file manually. In this case it will be preferable to only specify a minimal number of packages, and rely on Anacondas ability to gather the necessary dependencies in the most stable way.
+
+It is preferable to start by by verifying that the package can be found on [anaconda.org](https://anaconda.org/). If the package can not be found here, check if it can be installed from [PyPI](https://pypi.org/) (using `pip`).
+
+!!! tip "Create the yaml-file with nano"
+    Open a text editor like `nano` to start creating the file. When you are finished, press `CTRL + O` enter a file name, e.g. `conda_env.yml` and exit by pressing `CTRL + X`. Now you should have `conda_env.yml` in your directory. 
+
+If the package can be found on anaconda.org, we would specify it like so:
+
+```yml
 channels:
   - conda-forge
 dependencies:
-  - python=3.11.0
-  - numpy=1.23.5
+  - cupy
+```
+If we want to install modules from Pip, we could say:
+
+```yml
+channels:
+  - conda-forge
+dependencies:
+  - pip
+  pip:
+    - pillow=11.3.0
 ```
 
-!!! info "Instaling pip packages"
-    Cotainr does not allow the direct creation of a container from a pip requirements.txt file. Nevertheless, pip packages can be integrated into a conda environment. For instance, by updating `conda_env.yml` to include them.
 
-    ```console
-    channels:
-      - conda-forge
-    dependencies:
-      - python=3.11.0
-      - numpy=1.23.5
-      - pip
-      - pip:
-        - scipy==1.9.3
-    ```
 
-Save by pressing `CTRL + O` enter a file name, e.g. `conda_env.yml` and exit by pressing `CTRL + X`. Now you should have `conda_env.yml` in your directory. 
+## Build the container image
 
-We can now build a container (Lets call it `conda_container.sif`) containing the conda environment specified in `conda_env.yml` with the following command:
-
+We can now build a container containing the conda environment specified in `conda_env.yml` with the following command:
 ```
-srun cotainr-2023.11.0/bin/cotainr build conda_container.sif --base-image=docker://ubuntu:22.04 --conda-env=conda_env.yml --accept-licenses
+sbatch --wrap="/home/container/cotainr build cupy.sif --base-image=docker://ubuntu:24.04 --conda-env=conda_env.yml --accept-licenses"
 ```
-
-!!! info
-    `--base-image=docker://ubuntu:22.04` is used because we have to use a base image in which [bash](https://www.gnu.org/software/bash/) is installed, like [Ubuntu 22.04 image](https://hub.docker.com/_/ubuntu). 
-
-    `--accept-licenses` is used to acknowledge the [Miniforge license terms](https://github.com/conda-forge/miniforge/blob/main/LICENSE).
-
 After some time you should have `conda_container.sif` container image in your directory. 
 
+!!! failure "Out of memory"
+
+    In case you get an "out of memory" error (sometimes refered to as oom), we can pass the `--mem` parameter to Slurm to ask for more host memory. Try out with 50 gb: `sbatch --mem=50G --wrap...`
+
+## Use the container image
+
 You can access the conda image and run code using the dependencies you set up. Lets try to see if it works by printing the numpy version:
-
 ```
-srun singularity exec conda_container.sif python3 -c "import numpy; print(numpy.__version__)"
+srun singularity exec cupy.sif python3 -c 'import cupy; print(cupy.__version__)'
 ```
-
-The terminal should now print `1.23.5`.
+This should print the package version out to the console.

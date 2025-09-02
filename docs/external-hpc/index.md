@@ -13,20 +13,26 @@ Consider applying for ressources on an external HPC facility if:
 - You have a concrete research project which requires HPC-ressources.
 - You need more compute time time, than you can acquire in our local platform portfolio.
 - You need a specific resource type that is not available in our local platform portfolio.
+
 <hr>
 
-!!! info "OPEN CALL"
-    
-    There is currently an open call for [**the national resource pool for LUMI**](https://www.deic.dk/en/supercomputing/Apply-for-HPC-resources).
+# Open calls
 
-    It will be possible to submit applications from July 15th to September 16th 2025.
+### National ressource pool for LUMI
 
-    The resources will be available from January 1st until December 31st 2026.
+**Call opens:** 15th of July 2025
 
-    **Learn more:**
+**Call closes:** 16th of September 2025.
 
-      - Read through the information provided on our page: [DeiC resources](/external-hpc/deic-resources)
-      - Learn more about the LUMI-supercomputer on our [LUMI-page](/external-hpc/lumi/).
+There is currently an open call for [**the national resource pool for LUMI**](https://www.deic.dk/en/supercomputing/Apply-for-HPC-resources). 
+The resources will be available for consumption from January 1st until December 31st 2026.
 
-# Assistance
+**Learn more:**
+
+  - Learn how to proceed by reading our page: [DeiC resources](/external-hpc/deic-resources)
+  - Learn more about the LUMI-supercomputer on our [LUMI-page](/external-hpc/lumi/).
+
+<hr>
+
+### Questions 
 If you have any questions regarding these applications - please get in touch with the CLAAUDIA team via [serviceportal.aau.dk](https://aau.service-now.com/serviceportal?id=sc_cat_item&sys_id=34e8536083cfc21053711d447daad30a).
