@@ -27,19 +27,49 @@ When prompted, enter your AAU password. Please note that you will not see any ch
 
 When you can see `user@student.aau.dk@ailab-fe01:~$` you are succesfully logged in.
 
+## Faster login with shortcuts (recommended)
+
+Instead of typing the long server addresses every time, you can set up **short commands** such as `ssh ailab-1`, `ssh ailab-2`, or `ssh ailab-vpn`.
+
+### Step 1: Open your SSH configuration file
+
+On your computer, open or create the SSH config file which is located at `~/.ssh/config` (e.g. for windows: `C:/Users/USER/.ssh/config`)
+
+### Step 2: Add AI-LAB shortcuts
+
+Copy and paste the following configuration, and replace `user@student.aau.dk` with your AAU email:
+
+```bash title="config"
+# AI-LAB login nodes
+Host ailab-1
+    HostName ailab-fe01.srv.aau.dk
+    User user@student.aau.dk
+
+Host ailab-2
+    HostName ailab-fe02.srv.aau.dk
+    User user@student.aau.dk
+
+# AI-LAB via SSH Gateway (off campus)
+Host ailab-vpn
+    HostName ailab-fe01.srv.aau.dk
+    User user@student.aau.dk
+    ProxyJump user@student.aau.dk@sshgw.aau.dk
+```
+
+### Step 3: Save and connect
+
+Save the file and test your new shortcuts:
+
+```bash
+ssh ailab-1
+ssh ailab-2
+ssh ailab-vpn # Use when off campus
+```
+
 !!! info "Troubleshooting Windows Login Issues"
     If you cannot log in using Windows PowerShell, try installing [OpenSSH](https://learn.microsoft.com/en-us/windows-server/administration/openssh/openssh_install_firstuse?tabs=gui){target=_blank} or a [Linux subsystem](https://learn.microsoft.com/en-us/windows/wsl/setup/environment){target=_blank}.
 
-!!! info "No access to VPN or AAUs network?"
-    If you do not have access to VPN, it is also possible to connect to your instance by using AAU's SSH gateway as a jump host. This way your connection gets established through the gateway without redirecting the rest of your network traffic. Note that this will ask you for [multifactor authentication](https://www.en.its.aau.dk/instructions/mfa).
 
-    ```
-    ssh -J user@student.aau.dk@sshgw.aau.dk -l user@student.aau.dk ailab-fe01.srv.aau.dk
-    ```
-    
-    Replace `user@student.aau.dk` with your AAU email address.
-
-    
 <hr>
 
 You are now ready to proceed to learn about [**file handling :octicons-arrow-right-24:**](file-handling.md)
