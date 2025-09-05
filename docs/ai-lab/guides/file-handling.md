@@ -1,8 +1,16 @@
-You are now logged into AI-LAB and are in your user directory, which is located at `/ceph/home/domain/user`. You can confirm this by typing `pwd`. 
+# File Handling on AI-LAB
 
-This directory is your private storage space where you can keep all your files. It is stored on a network file system, so you can access your files from any compute node within the platform.
+Now that you're logged into AI-LAB, it's time to learn how to navigate and manage your files. This guide will help you understand the file system structure and essential commands for working with files.
 
-Here is the general file structure on AI-LAB:
+## Understanding Your Environment
+
+When you log into AI-LAB, you're placed in your **user directory** located at `/ceph/home/domain/user`. You can confirm your current location by typing `pwd`.
+
+This directory is your private storage space where you can keep all your files. It's stored on a network file system, so you can access your files from any compute node within the platform.
+
+## AI-LAB File System Structure
+
+Here's how files are organized on AI-LAB:
 
 <div class="tree">
 	<ul>
@@ -33,252 +41,263 @@ For a detailed overview of the AI-LAB storage system, click [here](/ai-lab/syste
 
 <hr>
 
-## Essential Linux commands you should know
+## Essential Linux Commands
 
-As you've properly noticed, working on AI-LAB involves navigating a **Linux** environment. Whether you're managing files or editing scripts, familiarity with a few core Linux commands can make your workflow smoother. If you’re completely new to Linux or just need a quick refresher, explore the commands below.
+AI-LAB runs on Ubuntu Linux, so you'll work primarily through a command-line interface. Don't worry if you're new to Linux - these essential commands will get you started.
 
-??? info "Basic Linux commands to know"
+### Navigation Commands
 
-    Below are some basic commands that will help you navigate and manage files on AI-LAB:
+| Command | Description | Example |
+|---------|-------------|---------|
+| `pwd` | Show current directory | `pwd` |
+| `ls` | List files and folders | `ls -la` (detailed list) |
+| `cd` | Change directory | `cd /ceph/project` |
 
-    ### 1. Navigation
-    - `pwd`: Prints the current working directory.  
-    - `cd`: Changes the current directory. E.g. `cd /ceph/home/student.aau.dk/user/folder`
-    - `ls`: Lists files and directories.  
+### File and Directory Management
 
-    ### 2. Working with directories and files
-    - `mkdir`: Creates a new directory. E.g `mkdir my_new_folder`
-    - `rm`: Removes files or directories.  
-      ```bash
-      rm myfile.txt  # remove a file
-      rm -r myfolder  # remove a directory and its contents
-      ```
-    - `cp` Copies files or directories.  
-      ```bash
-      cp target_folder/file1.txt destination_folder/file2.txt # copy a file
-      cp -r target_folder/folder1 destination_folder/folder2  # copy a directory
-      ```
-    - `mv`: Moves or renames files/directories.  
-      ```bash
-      mv file1.txt file2.txt # rename
-      mv target_folder/file.txt destination_folder/ # move to a new location
-      ```
-	- `cat`: Displays file content. E.g. `cat file.txt`    
+| Command | Description | Example |
+|---------|-------------|---------|
+| `mkdir` | Create directory | `mkdir my_project` |
+| `rm` | Remove file | `rm old_file.txt` |
+| `rm -r` | Remove directory | `rm -r old_folder` |
+| `cp` | Copy file | `cp file.txt backup/` |
+| `cp -r` | Copy directory | `cp -r project/ backup/` |
+| `mv` | Move/rename | `mv old_name.txt new_name.txt` |
+| `cat` | Display file content | `cat script.py` |
 
-	### 3: A simple text editor
-	Nano is a beginner-friendly text editor. It is easy to use, making it a good choice for new users.
-	
-	- `nano myfile.txt`: Create a new file or edit an existing file.
+### Text Editing with Nano
 
-	Once inside Nano, use the following commands:
+Nano is a beginner-friendly text editor perfect for creating and editing scripts:
 
-	* Move the cursor: Use the arrow keys.
-	* Save the file: Press `Ctrl + O`, then hit `Enter`.
-	* Exit Nano: Press `Ctrl + X`.
-	* Cut and Paste:
-		* To cut: `Ctrl + K` cuts the current line.
-		* To paste: `Ctrl + U` pastes the cut text.
-	* Search within the file: Press `Ctrl + W`, type the search term, and hit `Enter`.
+```bash
+nano my_script.py  # Create or edit a file
+```
 
-	!!! info "Tips for Nano"
-		* The commands at the bottom of the Nano screen start with the `^` symbol, which stands for the `Ctrl` key.
-		* For more advanced editing, Nano has flags like syntax highlighting and can open files as read-only using the `-v` flag:
-		```
-		nano -v myfile.txt
-		```
-    ---
-    **Tip:** Use `man <command>` (e.g., `man ls`) or `--help` (e.g., `ls --help`) to learn more about a specific command and its options.
+**Nano Keyboard Shortcuts:**
+
+- **Save**: `Ctrl + O`, then `Enter`
+- **Exit**: `Ctrl + X`
+- **Cut line**: `Ctrl + K`
+- **Paste**: `Ctrl + U`
+- **Search**: `Ctrl + W`
+- **Help**: `Ctrl + G`
 
 <hr>
 
-## Transfer files between your local computer and AI-LAB
+## Transferring Files
+
+You'll often need to move files between your local computer and AI-LAB. Here are the best methods for each operating system.
 
 ===+ "Windows"
-	You can transfer files between your local computer and AI-LAB using [WinSCP](https://winscp.net/eng/download.php){target=_blank}. Other popular solutions are [PuTTY](https://www.putty.org/){target=_blank} and [FileZilla](https://filezilla-project.org/){target=_blank}. Alternatively, you can use the `scp` command, as shown for [Linux/MacOS](#__tabbed_1_2) users.
 
-	When you open WinSCP, you will be greeted by a *Login* modal. Follow the instructions in the image above to establish a connection to the server.
+	<br>
+
+	**Recommended: WinSCP (Graphical Interface)**
+
+	1. **Download and install** [WinSCP](https://winscp.net/eng/download.php){target=_blank}
+	2. **Open WinSCP** and configure the connection:
+		- **Host name**: `ailab-fe01.srv.aau.dk` or `ailab-fe02.srv.aau.dk`
+		- **User name**: Your AAU email address
+		- **Password**: Your AAU password
+	3. **Connect** and you'll see a split-screen interface
+	4. **Drag and drop** files between your computer (left) and AI-LAB (right)
+
 	![Screenshot of WinSCP setup](/assets/img/ai-lab/winscp-setup.png)
-		
-	You can now drag and drop files between your local computer and the AI-LAB platform.
 
-	!!! info
-		You might want to display hidden files in WinSCP (such as files starting with a dot on Linux systems). Go to Options → Preferences... → Panels and turn on "Show hidden files".
+	**Alternative: Command Line (PowerShell)**
 
-===+ "Linux/MacOS"
+	```bash
+	# Upload file to AI-LAB
+	scp myfile.txt user@student.aau.dk@ailab-fe01.srv.aau.dk:~/
 
-	You can transfer files between your local computer and AI-LAB using the command line utility `scp` from your local computer (**note:** You have to be logged out from AI-LAB to use `scp`).
+	# Upload entire directory
+	scp -r my_project/ user@student.aau.dk@ailab-fe01.srv.aau.dk:~/
 
-	```console
-	scp -r some-file user@student.aau.dk@ailab-fe01.srv.aau.dk:~/some-dir
+	# Download file from AI-LAB
+	scp user@student.aau.dk@ailab-fe01.srv.aau.dk:~/myfile.txt .
+
+	# Download entire directory
+	scp -r user@student.aau.dk@ailab-fe01.srv.aau.dk:~/my_project/ .
 	```
 
-	Replace `user@student.aau.dk` with your AAU email address.
-	
-	Here, `~` represents your user directory on AI-LAB and `/some-dir` a folder in your directory. 
+===+ "macOS/Linux"
 
-	<hr>
+	<br>
 
-	To copy files from AI-LAB to your local computer, use:
+	**Command Line with scp**
 
+	```bash
+	# Upload file to AI-LAB
+	scp myfile.txt user@student.aau.dk@ailab-fe01.srv.aau.dk:~/
 
-	```console
-	scp -r user@student.aau.dk@ailab-fe01.srv.aau.dk:~/some-folder/some-subfolder/some-file .
+	# Upload entire directory
+	scp -r my_project/ user@student.aau.dk@ailab-fe01.srv.aau.dk:~/
+
+	# Download file from AI-LAB
+	scp user@student.aau.dk@ailab-fe01.srv.aau.dk:~/myfile.txt .
+
+	# Download entire directory
+	scp -r user@student.aau.dk@ailab-fe01.srv.aau.dk:~/my_project/ .
 	```
 
-	Replace `user@student.aau.dk` with your AAU email address.
 
-	Here, `.` represents the current directory on your local computer.
+!!! info "File Transfer Tips"
+
+	- **Multiple files**: Compress files into a `.zip` or `.tar.gz` archive first
+	- **Hidden files**: In WinSCP, enable "Show hidden files" in Options → Preferences → Panels
+	- **Network issues**: If transfers fail, try the other login node (`ailab-fe02`)
 
 <hr>
 
-## Creating shared project directories
+## Creating Shared Project Directories
 
-On AI-LAB, semester groups can collaborate by creating shared project directories in `/ceph/project`. Follow the guide below to set up a project directory and ensure that only group members can access it.
+AI-LAB allows semester groups to collaborate by creating shared project directories in `/ceph/project`. This guide will help you set up a secure, group-only project directory.
 
-??? info "Guide on how to create shared project directories"
+### Who Can Create Shared Directories?
 
-	!!! info "Note: This guide only works between users in a semester group"
-		Unfortunately you cannot create a private shared directory for specific users that are not part of a semester group. Therefore, you can only create a public available project directory.
+!!! info "Semester Group Requirement"
+    You can only create private shared directories with users in your **semester group**. If you need to collaborate with users outside your semester group, you can create a public project directory (accessible to all AI-LAB users).
 
-		Navigate to the `/ceph/project` directory:
+### Step 1: Create Your Project Directory
 
-		```
-		cd /ceph/project
-		```
+Navigate to the project directory and create your project folder:
 
-		Create your project directory (replace [project_name] with the name of your project):
+```bash
+cd /ceph/project
+mkdir my_project  # Replace 'my_project' with your project name
+```
 
-		```
-		mkdir [project_name]
-		```
+### Step 2: Set Up Group Permissions
 
-	### Step 1: Create a Project Directory
-	Navigate to the `/ceph/project` directory:
+#### Check Your Group
+First, find out which semester group you belong to:
 
-	```
-	cd /ceph/project
-	```
+```bash
+groups
+```
 
-	Create your project directory (replace [project_name] with the name of your project):
+You'll see output like: `user@student.aau.dk xx-43-xx-9-01@student.aau.dk`
 
-	```
-	mkdir [project_name]
-	```
+The semester group is typically the second entry (e.g., `xx-43-xx-9-01@student.aau.dk`).
 
-	### Step 2: Set Directory Permissions
-	Next, set the directory permissions so that only users in your group can access and collaborate in the project directory.
+#### Set Group Ownership
+Assign your project directory to your semester group:
 
-	Check your group (you can confirm the group with this command):
+```bash
+chgrp xx-43-xx-9-01@student.aau.dk my_project  # Replace with your actual group
+```
 
-	```
-	groups
-	```
+#### Set Directory Permissions
+Make the directory accessible only to you and your group members:
 
-	A semester group could be something like `xx-43-xx-9-01@student.aau.dk`.
+```bash
+chmod 770 my_project
+```
 
-	Assign the group ownership to your project directory (replace [your_group] with your group’s name):
+**What `770` means:**
+- **7** (owner): read, write, execute
+- **7** (group): read, write, execute  
+- **0** (others): no access
 
-	```
-	chgrp [your_group] [project_name]
-	```
+#### Enable Group Inheritance
+Set the setgid bit so new files automatically belong to the group:
 
-	Set the directory permissions to allow full access for the group:
+```bash
+chmod g+s my_project
+```
 
-	```
-	chmod 770 [project_name]
-	```
+### Step 3: Verify Your Setup
 
-	!!! info "What does `770` mean?"
+Check that everything is configured correctly:
 
-		`770` means:
+```bash
+ls -ld my_project
+```
 
-		* rwx (read, write, execute) for the owner and the group.
-		* No permissions for others.
+You should see output like:
+```
+drwxrws--- 2 your_username xx-43-xx-9-01@student.aau.dk 4096 Sep 17 12:34 my_project
+```
 
-	### Step 3: Ensure New Files Inherit Group Permissions
-	To make collaboration easier, you can set the setgid (set group ID) bit on the directory. This ensures that all files and subdirectories created inside will inherit the same group.
+The `s` in the group permissions indicates the setgid bit is active.
 
-	Set the setgid bit on your project directory:
+### Step 4: Collaboration is Ready!
 
-	```
-	chmod g+s [project_name]
-	```
+Now your project directory is set up for collaboration:
 
-	This ensures that any new files or directories created inside the project will automatically belong to the group.
+✅ **Group members can:**
 
-	
-	### Step 4: Verify Permissions
-	You can verify that the permissions are correctly set by listing the directory details:
+- Access the directory
+- Read, write, and create files
+- Edit files created by other group members
 
-	```
-	ls -ld [project_name]
-	```
+❌ **Non-group members cannot:**
 
-	You should see something like:
+- Access the directory
+- See or modify any files
 
-	```
-	drwxrws--- 2 [your_username] [your_group] 4096 Sep 17 12:34 [project_name]
-	```
+### Step 5: Handle File Upload Permissions (optional)
 
-	`s` under the group permissions indicates the setgid bit is enabled.
+When you upload files from your computer, they might not have the correct group permissions. Here's how to fix this:
 
-	The directory is now only accessible by the owner and the group members.
+#### Option 1: Manual Fix (Quick)
+Fix permissions for uploaded files manually:
 
-	### Step 5: Collaboration
-	Now that the project directory is set up:
+```bash
+chmod -R g+rwX /ceph/project/my_project
+```
 
-	* Any group member can access, read, write, and create files within the directory.
-	* Users who are not in the group cannot access the directory.
+#### Option 2: Automatic Fix (Recommended)
+Set up automatic permission fixing for ongoing collaboration:
 
-	!!! info "Important: Fix Permission Issues for Uploaded Files:"
-		When uploading existing files from your own computer, they may **not** automatically get the correct permissions, preventing other group members from editing them.
+**Create a permission fix script:**
 
-		To **automatically fix permissions**, follow these steps:
+```bash
+nano /ceph/project/my_project/fix_permissions.sh
+```
 
-		#### **1. Create an Automatic Fix Script**
-		Create a script that will regularly correct the permissions of uploaded files.
+Add this content:
+```bash
+#!/bin/bash
+chmod -R g+rwX /ceph/project/my_project
+```
 
-		1. Open a terminal and create a new script file, e.g. inside the project directory:
-	
-			```
-			nano /ceph/project/[project_name]/fix_permissions.sh
-			```
+Make it executable:
+```bash
+chmod +x /ceph/project/my_project/fix_permissions.sh
+```
 
-		2. Add the following content to the file:
-		
-			```
-			#!/bin/bash
-			chmod -R g+rwX /ceph/project/[project_name]
-			```
+**Set up automatic execution:**
+```bash
+crontab -e
+```
 
-		3. Save the file (`CTRL + X`, then `Y`, then `ENTER`).
+Add this line at the bottom:
+```bash
+*/5 * * * * /ceph/project/my_project/fix_permissions.sh
+```
 
-		4. Make the script executable:
+This will automatically fix permissions every 5 minutes.
 
-			```
-			chmod +x /ceph/project/fix_permissions.sh
-			```
+### Best Practices for Collaboration
 
-		#### **2. Set Up a Cron Job to Run the Script Automatically**
-		A cron job will run the script **every 5 minutes**, ensuring tht all uploaded files get the correct permissions.
+1. **Communicate with your group** about who's working on what files
+2. **Use descriptive filenames** to avoid conflicts
+3. **Create subdirectories** for different parts of the project
+4. **Regularly check permissions** if files aren't accessible to group members
+5. **Test access** by having another group member try to access the directory
 
-		1. Open the cron job editor:
+### Troubleshooting
 
-			```
-			crontab -e
-			```
+**"Permission denied" when group members try to access files:**
+- Run the permission fix script: `chmod -R g+rwX /ceph/project/my_project`
 
-		2. Add this line at the bottom:
+**Group members can't see the directory:**
+- Check group ownership: `ls -ld my_project`
+- Verify group membership: `groups`
 
-			```
-			*/5 * * * * /ceph/project/[project_name]/fix_permissions.sh
-			```
-
-		**Remember to replace [project_name] with the name of your project folder throughout the guide**
-		
-		3. Save the file (`CTRL + X`, then `Y`, then `ENTER`).
-
-		Now, every **5 minutes**, the script will automatically fix permissions for any uploaded files.
+**Files uploaded via WinSCP aren't accessible:**
+- This is normal - use the permission fix script to resolve
 
 
 Now that you know the basics of file handling, lets proceed to learn how to [**run jobs on AI-LAB :octicons-arrow-right-24:**](running-jobs.md)

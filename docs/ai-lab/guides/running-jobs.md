@@ -1,125 +1,224 @@
-Before you start running jobs, it is important to be aware of the queueing system [Slurm](https://slurm.schedmd.com/quickstart.html){target=_blank}. Slurm is a job scheduling system and is used to allocate resources and manage user jobs on AI-LAB.
+# Running Jobs on AI-LAB
 
-There are two ways to run jobs using Slurm:
+This guide will teach you how to run computational tasks on AI-LAB using the Slurm job scheduler. Slurm manages all the computing resources and ensures fair access for all users.
 
-1. [srun](/ai-lab/guides/running-jobs/#using-srun) – Primarily for interactive or short, immediate tasks.
-2. [sbatch](/ai-lab/guides/running-jobs/#using-sbatch) – For non-interactive, batch jobs where you submit a script and let Slurm handle the rest.
+## Understanding Slurm
+
+[Slurm](https://slurm.schedmd.com/quickstart.html){target=_blank} is a job scheduling system that:
+
+- **Manages resources**: Allocates CPUs, GPUs, and memory to your jobs
+- **Queues jobs**: Organizes jobs when resources are busy
+- **Ensures fairness**: Prevents any single user from monopolizing resources
+
+## Two Ways to Run Jobs
+
+AI-LAB offers two methods for running jobs:
+
+1. **[srun](#using-srun)** - Interactive jobs for testing and debugging
+2. **[sbatch](#using-sbatch)** - Batch jobs for longer computations
+
+### When to Use Each Method
+
+| Method | Best For | Duration | Interaction |
+|--------|----------|----------|-------------|
+| `srun` | Testing, debugging, quick tasks | Short (< 1 hour) | Interactive |
+| `sbatch` | Training models, long computations | Long (> 1 hours) | Non-interactive |
 
 <hr>
 
-## Using srun
-`srun` launches a job and connects your current terminal session directly to the compute node. This is ideal for testing, debugging, or running short commands that require on-the-fly interaction. For example, if you just want to see the hostname of the machine allocated to you:
+## Using srun (Interactive Jobs)
 
-```
+`srun` runs commands interactively on a compute node. Your terminal connects directly to the compute node, making it perfect for testing and debugging.
+
+### Basic srun Example
+
+Let's start with a simple test:
+
+```bash
 srun hostname
 ```
 
-!!! info "Waiting in queue"
+This command will:
 
-    Upon execution, you might receive a notification indicating your job has been queued, awaiting resource availability:
+1. Request a compute node
+2. Run the `hostname` command on that node
+3. Display the result
+4. Return you to the front-end node
 
-    ```
-    srun: job X queued and waiting for resources
-    ```
+### What You'll See
 
-    Once a compute node becomes available, you'll receive confirmation:
+When you run an srun command, you might see:
 
-    ```
-    srun: job X has been allocated resources
-    ```
+```bash
+srun: job 12345 queued and waiting for resources
+srun: job 12345 has been allocated resources
+ailab-l4-01
+```
 
-**Why use `srun`?**
+This shows:
 
-* You can quickly test commands and code.
-* You get an interactive session on the compute node (helpful for debugging).
+- Your job ID (12345)
+- The job was queued (waiting for resources)
+- Resources were allocated
+- The hostname of the compute node (ailab-l4-01)
 
-**Drawbacks of `srun`**
+### When to Use srun
 
-* Ties up your terminal session until the job finishes.
-* Not ideal for long-running jobs where you might lose connection or want to log out.
+✅ **Good for:**
+
+- Testing commands and scripts
+- Debugging code
+- Quick computations
+- Interactive exploration
+
+❌ **Not ideal for:**
+
+- Long-running jobs (hours/days)
+- Jobs that need to run without you being connected
+- Production model training
 
 <hr>
 
-## Using sbatch
-For longer-running jobs, `sbatch` is preferred. You create a job script containing all the commands you want to run. Then you submit the job to the queue. Slurm schedules it, runs it, and writes output to a file. 
+## Using sbatch (Batch Jobs)
 
+`sbatch` is perfect for longer-running jobs. You create a script with your commands, submit it to the queue, and Slurm runs it when resources are available.
 
-1. First [create a file](/ai-lab/guides/file-handling/#essential-linux-commands-you-should-know), say `my_job.sh`, Slurm directives at the top (these configure your job settings), and then lets print the hostname of the machine allocated to you:
+### Creating a Job Script
 
-    ```bash title="my_job.sh"
-    #!/bin/bash
+Let's create a simple job script:
 
-    #SBATCH --job-name=my_test_job  # Name of your job
-    #SBATCH --output=my_job.out     # Name of the output file
-    #SBATCH --error=file-my_job.err # Name of the error file
-
-    hostname # Print the hostname of the node
-    ```
-    
-2. Submit the job using `sbatch`:
-
-    ```
-    sbatch my_job.sh
-    ```
-
-
-    !!! info "What happens now?"
-
-        * Slurm will display a job ID, for example:
-
-            ```
-            Submitted batch job 12345
-            ```
-        
-        * You can log out or close your terminal — Slurm will run your job when resources are available.
-        * You can monitor the job’s status with `squeue --me`.
-
-3. Once it completes, check the output file using the `cat` commando.
-
-    ```
-    cat my_job.out
-    ``` 
-
-**Why use `sbatch`?**
-
-* Does not require you to remain logged in — ideal for long or resource-intensive jobs.
-* Easy to repeat or modify by adjusting the job script.
-
-<hr>
-
-## Specifying job options
-In addition to simply running commands with Slurm, you can (and often must) specify options to clearly define the resources and constraints your job requires. These options ensure that Slurm can efficiently schedule and allocate the appropriate compute nodes to handle your job. You can set options either as command-line flags or within a job script. Some commonly used options include:
-
-* `--mem`: The total memory requested for your job (e.g. `--mem=24G`). Maximum value is 24 GB per GPU.
-* `--cpus-per-task`: The number of CPU cores required per task (e.g. `--cpus-per-task=15`). Maximum value is 15 CPUs per GPU.
-* `--gres`: The generic resources required, such as GPUs (e.g. `--gres=gpu:1` for a single GPU). 
-* `--time`: The maximum runtime for your job (e.g. `--time=01:00:00` for 1 hour).
-
-!!! info "Multi GPU allocation"
-    It is possible to allocate more than 1 GPU per job, for example `--gres=gpu:2` for two GPUs. **However**, your software and scripts are not necessarily able to utilise more than one GPU at a time. It is your responsibility to ensure that the software you run can indeed utilise as many GPUs as you allocate. It is not allowed to allocate more GPUs than your job can utilise (according to our [Fair Usage Policy](https://hpc.aau.dk/ai-lab/fair-usage/){target=_blank}).
-
-### Setting options for `srun` jobs
-When using `srun`, you can specify job options directly in the command to request resources for your job, like:
-
-```
-srun --mem=24G --cpus-per-task=15 --gres=gpu:1 --time=01:00:00 hostname
+```bash
+nano my_job.sh
 ```
 
-### Setting options for `sbatch` jobs
-For `sbatch`, you specify job options at the top of your batch script using `#SBATCH` directives, like:
+Add this content:
 
 ```bash title="my_job.sh"
 #!/bin/bash
 
 #SBATCH --job-name=my_test_job  # Name of your job
-#SBATCH --output=my_job.out     # Name of the output file
-#SBATCH --error=file-my_job.err # Name of the error file
-#SBATCH --mem=24G               # Memory
-#SBATCH --cpus-per-task=15      # CPUs per task
-#SBATCH --gres=gpu:1            # Allocated GPUs
-#SBATCH --time=01:00:00         # Maximum run time
+#SBATCH --output=my_job.out     # Output file
+#SBATCH --error=my_job.err      # Error file
 
-hostname # Print the hostname of the node
+# Your commands go here
+hostname
+echo "Hello from AI-LAB!"
+date
+```
+
+### Understanding the Script
+
+- **`#!/bin/bash`**: Tells the system to use bash shell
+- **`#SBATCH` lines**: Slurm directives that configure your job
+- **Commands below**: What you want to run
+
+### Submitting the Job
+
+```bash
+sbatch my_job.sh
+```
+
+You'll see:
+```bash
+Submitted batch job 12345
+```
+
+### What Happens Next
+
+1. **Job is queued**: Slurm adds your job to the queue
+2. **Resources allocated**: When available, Slurm assigns compute resources
+3. **Job runs**: Your script executes on the compute node
+4. **Output saved**: Results are written to your specified output file
+
+### Checking Results
+
+Once the job completes, check the output:
+
+```bash
+cat my_job.out    # View the output
+cat my_job.err    # View any errors (if empty, no errors occurred)
+```
+
+### When to Use sbatch
+
+✅ **Perfect for:**
+
+- Training machine learning models
+- Long data processing tasks
+- Jobs that take hours or days
+- Running jobs overnight or while you're away
+
+❌ **Not needed for:**
+
+- Quick tests or debugging
+- Interactive exploration
+- Commands that finish in minutes
+
+<hr>
+
+## Specifying Job Resources
+
+Most jobs need specific resources like GPUs, memory, or time limits. You specify these using Slurm options.
+
+### Common Resource Options
+
+| Option | Description | Example | Notes |
+|--------|-------------|---------|-------|
+| `--mem` | Memory allocation | `--mem=24G` | Max 24GB per GPU |
+| `--cpus-per-task` | CPU cores | `--cpus-per-task=15` | Max 15 CPUs per GPU |
+| `--gres` | GPUs | `--gres=gpu:1` | Request 1 GPU |
+| `--time` | Time limit | `--time=01:00:00` | 1 hour (HH:MM:SS) |
+
+### Resource Guidelines
+
+**Memory**: Request enough memory for your data and model
+
+- Small models: `--mem=8G`
+- Large models: `--mem=24G`
+
+**CPUs**: More CPUs can speed up data loading and preprocessing
+
+- Basic: `--cpus-per-task=4`
+- Intensive: `--cpus-per-task=15`
+
+**GPUs**: Essential for deep learning
+
+- Single GPU: `--gres=gpu:1`
+- Multiple GPUs: `--gres=gpu:2` (only if your code supports it)
+
+**Time**: Set realistic time limits
+
+- Quick tests: `--time=00:30:00` (30 minutes)
+- Training: `--time=04:00:00` (4 hours)
+
+!!! warning "Multi-GPU Usage"
+    You can request multiple GPUs with `--gres=gpu:2`, but **only if your code actually uses them**. Allocating unused GPUs violates our [Fair Usage Policy](https://hpc.aau.dk/ai-lab/fair-usage/){target=_blank}.
+
+### Using Options with srun
+
+Add options directly to your srun command:
+
+```bash
+srun --mem=24G --cpus-per-task=15 --gres=gpu:1 --time=01:00:00 hostname
+```
+
+### Using Options with sbatch
+
+Add options as `#SBATCH` directives in your script:
+
+```bash title="my_job.sh"
+#!/bin/bash
+
+#SBATCH --job-name=my_training_job
+#SBATCH --output=training.out
+#SBATCH --error=training.err
+#SBATCH --mem=24G
+#SBATCH --cpus-per-task=15
+#SBATCH --gres=gpu:1
+#SBATCH --time=04:00:00
+
+# Your training commands here
+python train_model.py
 ```
 
 <hr>

@@ -1,216 +1,165 @@
 
-To run a task within a container, we need to add specific parameters to the `srun` or `sbatch` command.
+# Using Containers to Run Jobs
 
-As an example, let's try running `print('hello world')` using `Python3` within the `python_3.10.sif` container from `/ceph/container/python` directory.
+Now that you know how to get containers, let's learn how to use them to run your computational tasks on AI-LAB.
 
-### Using `srun`
+## Basic Container Usage
 
+To run commands inside a container, you use `singularity exec` with either `srun` or `sbatch`.
+
+### Running a Simple Command
+
+Let's start with a basic example using a Python container:
+
+```bash
+srun --mem=24G --cpus-per-task=15 --gres=gpu:1 --time=01:00:00 singularity exec --nv /ceph/container/python/python_3.10.sif python3 -c "print('Hello from AI-LAB!')"
 ```
-srun --mem=24G --cpus-per-task=15 --gres=gpu:1 --time=01:00:00 singularity exec --nv /ceph/container/python/python_3.10.sif python3 -c "print('hello world')"
-```
 
-- `singularity` is the command for interacting with Singularity.
-- `exec` is a sub-command that tells Singularity to execute a command inside the specified container.
-- `--nv` is a sub-command that enables NVIDIA drivers in the container (**Important when using GPUs**).
-- `/ceph/container/python/python_3.10.sif` is the path to the container.
-- `python3 -c "print('hello world')"` is the task that singularity executes.
+**Command breakdown:**
 
-### Using `sbatch`
+- `srun`: Run on a compute node with specified resources
+- `singularity exec`: Execute a command inside a container
+- `--nv`: Enable NVIDIA GPU drivers (required for GPU jobs)
+- `/ceph/container/python/python_3.10.sif`: Path to the container
+- `python3 -c "print('Hello from AI-LAB!')"`: Command to run
+
+### Using Containers with sbatch
+
+For longer jobs, create a batch script:
 
 ```bash title="my_job.sh"
 #!/bin/bash
 
-#SBATCH --job-name=my_test_job  # Name of your job
-#SBATCH --output=my_job.out     # Name of the output file
-#SBATCH --error=file-my_job.err # Name of the error file
-#SBATCH --mem=24G               # Memory
-#SBATCH --cpus-per-task=15      # CPUs per task
-#SBATCH --gres=gpu:1            # Allocated GPUs
-#SBATCH --time=01:00:00         # Maximum run time
+#SBATCH --job-name=my_python_job
+#SBATCH --output=my_job.out
+#SBATCH --error=my_job.err
+#SBATCH --mem=24G
+#SBATCH --cpus-per-task=15
+#SBATCH --gres=gpu:1
+#SBATCH --time=01:00:00
 
-singularity exec --nv /ceph/container/python/python_3.10.sif python3 -c "print('hello world')"
+# Run Python script in container
+singularity exec --nv /ceph/container/python/python_3.10.sif python3 my_script.py
 ```
 
-Then submit the job using `sbatch`:
+Submit the job:
 
-```
+```bash
 sbatch my_job.sh
 ```
 
-After the job gets submitted, you should be able to find a file called `my_job.out` with `hello world` in it. You can print the content using:
+Check the results:
 
+```bash
+cat my_job.out  # View output
+cat my_job.err  # View errors (if any)
 ```
-cat my_job.out
-```
+
 
 <hr>
 
-## Adding Python packages via virtual environment
-Sometimes, you’ll need additional Python packages that aren’t included in the container you’re using. The simplest and cleanest way to manage these is by creating a virtual environment within your own directory.
+## Adding Python Packages
 
-This guide walks you through creating a **virtual environment** inside a Singularity container and installing additional packages for use in your Python scripts.
+Sometimes you need additional Python packages that aren't included in the container. The best way to handle this is by creating a virtual environment.
 
-!!! warning "This guide is recently updated and under testing" 
-    This guide has just been updated to reflect new container paths and best practices. If you encounter any issues, please report them by submitting a ticket through our [service portal](https://serviceportal.aau.dk/serviceportal?id=emp_taxonomy_topic&topic_id=82a253e8838fc21053711d447daad328).
+### Quick Setup Guide
 
-
-??? info "Guide on adding Python packages via virtual environment"
-
-    ### Step 1: Create a virtual environment inside the container.
-
-    Run the following command to create a virtual environment in your current directory.
-    
-    ** Replace the container**, with the one you want to use. You need to do this thoughout the guide.
-
-    ```
-    srun singularity exec /ceph/container/pytorch/pytorch_25.01.sif python -m venv --system-site-packages my_venv
-    ```
-
-    !!! info "Using a shared project directory?" 
-        If you're working in a shared project directory, first `cd` into that directory and then run the command.
-    
-    ### Step 2: Install Additional Packages
-
-    Activate the environment inside the container and install the Python packages you need. In this case we will install `openpyxl`:
-
-    ```
-    srun singularity exec --nv -B ~/my_venv:/scratch/my_venv -B $HOME/.singularity:/scratch/singularity /ceph/container/pytorch/pytorch_25.01.sif /bin/bash -c "export TMPDIR=/scratch/singularity/tmp && source scratch/my_venv/bin/activate && pip install --no-cache-dir openpyxl"
-    ```
-
-    !!! info "Using a shared project directory?" 
-        Replace `~/my_venv` with the absolute path, e.g. `/ceph/project/my_project/my_venv`.
-
-    * `-B ~/my_venv:/scratch/my_venv` mounts your virtual env inside the container at `/scratch/my_venv`.
-    * `-B $HOME/.singularity:/scratch/singularity` mounts a temp/cache directory with enough space.
-    * `export TMPDIR=/scratch/singularity/tmp` tells pip to use that mounted tmp dir instead of the default /tmp
-    * `source scratch/my_venv/bin/activate` activates the environment.
-    * `pip install --no-cache-dir openpyxl` installs your chosen package(s) and saves space by not keeping package files after install.
-  
-
-    ### Step 3: Test with a simple Python script
-    Now you can test with a script that uses the packages you've installed. For example:
+Here's the simplest way to add packages to your container:
 
 
-    ```python title="my_script.py"
-    import torch
-    import openpyxl
+#### Step 1: Create Virtual Environment
 
-    print("Torch version:", torch.__version__)
-    print("Openpyxl version:", openpyxl.__version__)
-    ```
+Create a virtual environment in your current directory:
 
-    Save this as my_script.py in your working directory.
+```bash
+# Create virtual environment
+srun singularity exec /ceph/container/pytorch/pytorch_24.09.sif python -m venv --system-site-packages my_venv
+```
 
+#### Step 2: Install Additional Packages
 
-    ### Step 4: Run Your Script Using the Virtual Environment
-    To run the script inside the container using your virtual environment:
+Install packages in your virtual environment:
 
-    ```
-    srun singularity exec --nv -B ~/my_venv /ceph/container/pytorch/pytorch_25.01.sif /bin/bash -c "source my_venv/bin/activate && python my_script.py"
-    ```
+```bash
+# Install packages (example: openpyxl)
+srun singularity exec --nv \
+     -B ~/my_venv:/scratch/my_venv \
+     -B $HOME/.singularity:/scratch/singularity \
+     /ceph/container/pytorch/pytorch_24.09.sif \
+     /bin/bash -c "export TMPDIR=/scratch/singularity/tmp && \
+                   source /scratch/my_venv/bin/activate && \
+                   pip install --no-cache-dir openpyxl"
+```
 
-    !!! info "Using a shared project directory?" 
-        Again, make sure to use the full path to `my_venv` if it’s not in your home directory.
+#### Step 3: Use Your Virtual Environment
 
-     You’ve now added custom packages to your own isolated Python environment without modifying the base container.
+Run scripts with your additional packages:
 
-    !!! info "Reminder" 
-        Always activate your virtual environment inside the container before running Python scripts to ensure your packages are available.
+```bash
+# Run script with virtual environment
+srun singularity exec --nv \
+     -B ~/my_venv:/scratch/my_venv \
+     /ceph/container/pytorch/pytorch_24.09.sif \
+     /bin/bash -c "source /scratch/my_venv/bin/activate && python my_script.py"
+```
 
+### Virtual Environment Tips
 
-??? info "(OLD) Guide on adding Python packages via virtual environment"
-    To enhance the functionality of a containerized environment, you can add additional Python packages using a virtual environment. This guide outlines the steps to create and utilize a virtual environment within a Singularity container to ensure compatibility between different Python versions.
-
-    ### Step 1: Create a virtual environment inside a Singularity container.
-
-    Create the virtual environment using the installed `virtualenv` tool. Remember to replace `/ceph/container/python/python_3.10.sif` with your container path.
-
-    ```
-    srun singularity exec /ceph/container/python/python_3.10.sif virtualenv ~/my-virtual-env
-    ```
-
-    This ensures that the virtual environment is set up using the correct Python version from the container.
-
-    !!! info "Missing `virtualenv` package?"
-        If the command fails due to missing `virtualenv` dependency, try installing the package in the container:
-
-        ```
-        srun singularity exec /ceph/container/python/python_3.10.sif pip install --user virtualenv
-        ```
-
-        Then run:
-
-        ```
-        srun singularity exec /ceph/container/python/python_3.10.sif ~/.local/bin/virtualenv ~/my-virtual-env
-        ```
-
-        In case you are trying to set up the virtual environment inside a [shared project directory](../../system-overview/#shared-project-directories), you will first need to navigate to the project directory and execute the command from there.
-
-    ### Step 2: Install Python packages inside the virtual environment
-
-    With the virtual environment created, you can now install the necessary Python packages within it.
-
-    ```
-    srun singularity exec --bind ~/my-virtual-env:/my-virtual-env /ceph/container/python/python_3.10.sif /bin/bash -c "source /my-virtual-env/bin/activate && python3 -m pip install numpy pandas matplotlib"
-    ```
-
-    Here’s what happens in this command:
-    - The `--bind` option mounts the virtual environment directory inside the container.
-    - The virtual environment is activated using `source`.
-    - The required Python packages (`numpy`, `pandas`, `matplotlib`) are installed using `pip`.
-
-    ### Step 3: Verify the installation
-
-    After installing the packages, you can verify that they are correctly installed inside the virtual environment.
-
-    ```
-    srun singularity exec --bind ~/my-virtual-env:/my-virtual-env /ceph/container/python/python_3.10.sif /bin/bash -c "source /my-virtual-env/bin/activate && python -c 'import matplotlib; print(matplotlib.__version__)'"
-    ```
-
-    This command runs a short Python script inside the virtual environment to check if `matplotlib` is properly installed.
-
-    ### Step 4: Use the virtual environment for running scripts
-
-    Now that the virtual environment is set up and populated with the necessary packages, you can use it to run your Python scripts inside the Singularity container.
-
-    ```
-    srun singularity exec --bind ~/my-virtual-env:/my-virtual-env /ceph/container/python/python_3.10.sif /bin/bash -c "source /my-virtual-env/bin/activate && python my_script.py"
-    ```
-
-    This ensures that `my_script.py` runs with the correct Python version and installed dependencies.
-
-    !!! info "Remember to always use the virtual environment when running Python scripts"
-        Always make sure to activate the virtual environment (`source /my-virtual-env/bin/activate`) inside the Singularity container before running any Python scripts to ensure they use the correct dependencies.
+- **Use absolute paths** when working in shared project directories
+- **Always activate** the environment before running Python scripts
+- **Use `--no-cache-dir`** to save disk space
+- **Mount directories** with `-B` to access your virtual environment inside the container
 
 
+## Cancelling Jobs
 
-## Cancelling jobs
-There are several scenarios where you might need to cancel jobs, such as when a job is stuck, running longer than expected, or you realize that the job parameters were set incorrectly. Here’s a guide on how to cancel jobs with Slurm.
+Sometimes you need to cancel jobs that are running too long, stuck, or have incorrect parameters.
 
-??? info "Guide on cancelling jobs"
+### Check Your Jobs First
 
-    ### Checking Job Status
-    Before cancelling a job, it’s often useful to check its current status or job ID. You can list your currently running or queued jobs using the squeue command:
+Before cancelling, see what jobs you have running:
 
-    ```
-    squeue --me
-    ```
+```bash
+squeue --me
+```
 
-    ### Cancelling a Single Job
-    To cancel a specific job, use the `scancel` command followed by the job ID. For example, if your job ID is `12345`, you can cancel it by running:
+This shows all your jobs with their IDs and status.
 
-    ```
-    scancel 12345
-    ```
+### Cancel a Specific Job
 
-    ### Cancelling Multiple Jobs
-    If you need to cancel all your jobs, you can cancel all jobs belonging to your user by using:
+To cancel a single job, use its job ID:
 
-    ```
-    scancel --user=$USER
-    ```
+```bash
+scancel 12345  # Replace 12345 with your actual job ID
+```
 
-    This command is particularly useful if you have submitted a batch of jobs and need to cancel them all simultaneously.
+### Cancel All Your Jobs
+
+To cancel all your jobs at once:
+
+```bash
+scancel --user=$USER
+```
+
+### Common Scenarios
+
+**Job is stuck or running too long:**
+```bash
+squeue --me  # Find the job ID
+scancel 12345  # Cancel it
+```
+
+**Wrong parameters in batch script:**
+```bash
+scancel 12345  # Cancel the job
+nano my_job.sh  # Edit the script
+sbatch my_job.sh  # Resubmit with correct parameters
+```
+
+**Emergency - cancel everything:**
+```bash
+scancel --user=$USER  # Cancel all your jobs
+```
 
 
 Now that you know how to run jobs using containers, let's delve into the last part about [**monitoring on AI-LAB :octicons-arrow-right-24:**](monitoring.md)
