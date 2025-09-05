@@ -290,15 +290,19 @@ This will automatically fix permissions every 5 minutes.
 ### Troubleshooting
 
 **"Permission denied" when group members try to access files:**
+
 - Run the permission fix script: `chmod -R g+rwX /ceph/project/my_project`
 
 **Group members can't see the directory:**
+
 - Check group ownership: `ls -ld my_project`
 - Verify group membership: `groups`
 
 **Files uploaded via WinSCP aren't accessible:**
+
 - This is normal - use the permission fix script to resolve
 
+<hr>
 
 Now that you know the basics of file handling, lets proceed to learn how to [**run jobs on AI-LAB :octicons-arrow-right-24:**](running-jobs.md)
 
