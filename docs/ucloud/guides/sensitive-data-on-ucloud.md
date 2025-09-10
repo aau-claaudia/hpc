@@ -6,7 +6,7 @@
     <div class="mermaid">
     ```mermaid
     graph TD
-        A[<a href="https://forms.office.com/e/8Khbr1TJGC" target="_blank">Register your project with Grants and Contracts</a>] --> B[📝 <a href="https://forms.office.com/e/8Khbr1TJGC" target="_blank">Complete the application form</a>]; 
+        A[<a href="https://aaudk.sharepoint.com/sites/persondata-ressourcer/SitePages/Registrations%20og%20reports%20(Online%20forms).aspx" target="_blank">Register your project with Grants and Contracts</a>] --> B[📝 <a href="https://forms.office.com/e/8Khbr1TJGC" target="_blank">Complete the application form</a>]; 
         B --> C[✅ CLAAUDIA approval];
         C --> D[💻 <a href="https://cloud.sdu.dk/app/dashboard" target="_blank">Enter the approved resources in UCloud</a>];
         D --> E[✅ CLAAUDIA approval];
