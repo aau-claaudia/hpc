@@ -63,7 +63,7 @@ The next step is to create an account by clicking "Sign Up." Enter your name, em
 ---
 
 ### 6. Download and manage models  
-Go to **Settings** > **Models** to download models. If you’re unsure of the model name, use the provided link to explore available options. For example, type "llama3" or "mistral:7b" and click the download button.  
+Go to **Adminstrationpanel > Settings** > **Models** to download models. If you’re unsure of the model name, use the provided link to explore available options. For example, type "llama3" or "mistral:7b" and click the download button.  
 ![Download a model](/assets/img/UCloud/ChatUI download models1.png){.standard_image_width}  
 ![Download a model step2](/assets/img/UCloud/ChatUI download models2.png){width=250}   
 
