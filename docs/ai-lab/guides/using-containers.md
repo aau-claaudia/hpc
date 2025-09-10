@@ -73,7 +73,7 @@ Create a virtual environment in your current directory:
 
 ```bash
 # Create virtual environment
-srun singularity exec /ceph/container/pytorch/pytorch_24.09.sif python -m venv --system-site-packages my_venv
+srun singularity exec /ceph/container/pytorch/pytorch_25.08.sif python -m venv --system-site-packages my_venv
 ```
 
 #### Step 2: Install Additional Packages
@@ -85,7 +85,7 @@ Install packages in your virtual environment:
 srun singularity exec --nv \
      -B ~/my_venv:/scratch/my_venv \
      -B $HOME/.singularity:/scratch/singularity \
-     /ceph/container/pytorch/pytorch_24.09.sif \
+     /ceph/container/pytorch/pytorch_25.08.sif \
      /bin/bash -c "export TMPDIR=/scratch/singularity/tmp && \
                    source /scratch/my_venv/bin/activate && \
                    pip install --no-cache-dir openpyxl"
@@ -99,7 +99,7 @@ Run scripts with your additional packages:
 # Run script with virtual environment
 srun singularity exec --nv \
      -B ~/my_venv:/scratch/my_venv \
-     /ceph/container/pytorch/pytorch_24.09.sif \
+     /ceph/container/pytorch/pytorch_25.08.sif \
      /bin/bash -c "source /scratch/my_venv/bin/activate && python my_script.py"
 ```
 
