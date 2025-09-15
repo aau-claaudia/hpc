@@ -54,9 +54,10 @@ Find the most suitable system for your project. You can also complete the [HPC D
 </div>
 
 ## News
-!!! info  "New Transcriber interface available!"
-    We are excited to announce the release of a brand new interface for the Transcriber application. The updated interface offers an improved user experience and new features to make your transcription tasks even easier. Check it out [here](https://cloud.sdu.dk/app/jobs/create?app=transcriber-gui) 
-    
+!!! info  "Service Window Tomorrow – Important Changes for Strato Users"
+    **Reminder:** There will be a scheduled service window **tomorrow** affecting AI Cloud, strato og UCloud VM. **Strato users:** Please note that a new usage management system is in effect from the 16th. 
+
+    For full details and instructions, see the [Service window message](/service-windows).
    
 <div class="video-container">
   <iframe src="https://panopto.aau.dk/Panopto/Pages/Embed.aspx?id=cbfb191c-fde8-4dec-998e-b2b800ba6b03&amp;autoplay=false&amp;offerviewer=true&amp;showtitle=false&amp;showbrand=true&amp;captions=false&amp;interactivity=all"

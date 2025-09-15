@@ -51,26 +51,34 @@ A service window will take place on the following dates:
 
 ## Strato and UCloud virtual machines
 
-**Remember to save your work on Strato and UCloud Virtual Machines (VMs).**  All hosts will be rebooted, and to do this all Strato virtual machines will be shut off
-If you have active work on your virtual machines that has not been saved. 
+**Be sure to save your work** no later than the end of the day before the service window begins, as all virtual machines will be automatically shut down during the service window and any unsaved data will be lost.
 
-**Please make sure you save your work** by the latest end of 
-the day before the service window. All virtual machines will automatically undergo the
-equivalent of shutting down your computer, so any unsaved data will be
-lost.
+!!! warning "New Usage Management Process - Effective 16th September 2025"
+    
+    **1. Servers will NOT restart automatically after service windows**
+        - All servers in the AAU availability zone will be shut down during service windows and will not restart automatically, unless they have been registered for automatic restart before the service window.
+        - You can easily restart your servers manually after the service window.
 
-Virtual machines that are running at the start of the window will be
-automatically restarted after the host has been rebooted. This includes
-all virtual machines on the UCloud platform.
+    **2. Automatic server resizing after 48 hours of inactivity**
+        - Servers that remain shut down for more than 48 hours will be automatically resized to the smallest CPU configuration.
+        - You will receive a notification when your instance has been resized.
+
+    **3. Automatic server deletion after 30 days of inactivity**
+        - Servers that remain shut down for 30 days will be permanently deleted, but their volumes will be preserved.
+        - You will be notified in advance about any affected instances.
+
+    **4. Unused volume cleanup**
+        - Volumes not attached to any server for 30 days will be deleted.
+        - A notification will be sent before deletion.
 
 **All virtual machines should be removed when not in use.** 
 Basic rule: keep your volumes, delete your unused VMs, and only run a VM with the size you really need right now.
 Please consult the page ['Delete and restart an instance from the volume'](strato/best-practice-guides/delete-and-restart-an-instance-from-the-volume/)
 for instructions on how to do this.
 
+
 Link to Strato's
 web-interface: [strato-new.claaudia.aau.dk](https://strato-new.claaudia.aau.dk/)
-
 
 
 ## AI Cloud
