@@ -51,6 +51,8 @@ A service window will take place on the following dates:
 
 ## Strato and UCloud virtual machines
 
+**Status: Ongoing**
+
 **Be sure to save your work** no later than the end of the day before the service window begins, as all virtual machines will be automatically shut down during the service window and any unsaved data will be lost.
 
 !!! warning "New Usage Management Process - Effective 16th September 2025"
@@ -82,7 +84,7 @@ web-interface: [strato-new.claaudia.aau.dk](https://strato-new.claaudia.aau.dk/)
 
 
 ## AI Cloud
-
+**Status: Ongoing**
 In the days leading up to the service window, a reservation will be put in place for the entire cluster. The entirety of the cluster will therefore be unavailable for that day, but may come back online by the end of the day.
 
 **You can still submit jobs in the days leading up to the service window.**
@@ -108,7 +110,8 @@ If you have any questions, please open a case with us on [serviceportal.aau.dk](
 
 
 ## UCloud (AAU/K8s)
-
+**Status: Completed**
 The UCloud (AAU/K8s) cluster will be unavailable for the entire duration of the service window and may become available again by the end of the day. While it may be technically possible to start jobs on the day of the service window, please note that any running jobs will be terminated as part of the scheduled maintenance activities performed by the administrators. We recommend planning your work accordingly to avoid interruptions.
+
 
 
