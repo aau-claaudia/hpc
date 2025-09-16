@@ -104,3 +104,11 @@ To submit a job that runs for 12 hours, you should add: `--time=12:00:00`. Not s
 **IMPORTANT:** You can still run jobs in the days leading up to the service window
 
 If you have any questions, please open a case with us on [serviceportal.aau.dk](https://serviceportal.aau.dk/serviceportal?id=sc_cat_item&sys_id=a05e2fb4c3434610f0f3041ad001310e)
+
+
+
+## UCloud (AAU/K8s)
+
+The UCloud (AAU/K8s) cluster will be unavailable for the entire duration of the service window and may become available again by the end of the day. While it may be technically possible to start jobs on the day of the service window, please note that any running jobs will be terminated as part of the scheduled maintenance activities performed by the administrators. We recommend planning your work accordingly to avoid interruptions.
+
+
