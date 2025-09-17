@@ -20,8 +20,8 @@ A service window will take place on the following dates:
 | ---   | ---   | ---   | ---   |
 | <s>11/02</s> | 10/02 | 09/02 | 08/02 |
 | <s>13/05</s> | 12/05 | 11/05 | 09/05 |
-| <span style="background:#211a52; color:white; font-weight:bold; border:2px solid #211a52; border-radius:4px; padding:2px 8px; display:inline-block;">16/09</span> | 15/09 | 14/09 | 12/09 |
-| 02/12 | 01/12 | 30/11 | 28/11 |
+| <s>16/09</s> | 15/09 | 14/09 | 12/09 |
+| <span style="background:#211a52; color:white; font-weight:bold; border:2px solid #211a52; border-radius:4px; padding:2px 8px; display:inline-block;">02/12</span> | 01/12 | 30/11 | 28/11 |
 
 </div>
 
@@ -51,7 +51,7 @@ A service window will take place on the following dates:
 
 ## Strato and UCloud virtual machines
 
-**Status: Ongoing**
+**Status: Completed**
 
 **Be sure to save your work** no later than the end of the day before the service window begins, as all virtual machines will be automatically shut down during the service window and any unsaved data will be lost.
 
@@ -84,7 +84,8 @@ web-interface: [strato-new.claaudia.aau.dk](https://strato-new.claaudia.aau.dk/)
 
 
 ## AI Cloud
-**Status: Ongoing**
+**Status:** Main cluster complete. Nv-ai nodes are ongoing.
+
 In the days leading up to the service window, a reservation will be put in place for the entire cluster. The entirety of the cluster will therefore be unavailable for that day, but may come back online by the end of the day.
 
 **You can still submit jobs in the days leading up to the service window.**
