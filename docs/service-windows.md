@@ -33,8 +33,8 @@ A service window will take place on the following dates:
 | ---   | ---   | ---   | ---   |
 | <s>13/02</s> | 12/02 | 11/02 | 10/02 |
 | <s>15/05</s> | 14/05 | 13/05 | 11/05 |
-| <span style="background:#211a52; color:white; font-weight:bold; border:2px solid #211a52; border-radius:4px; padding:2px 8px; display:inline-block;">18/09</span> | 17/09 | 16/09 | 14/09 |
-| 04/12 | 03/12 | 02/12 | 30/11 |
+| <s>18/09</s> | 17/09 | 16/09 | 14/09 |
+| <span style="background:#211a52; color:white; font-weight:bold; border:2px solid #211a52; border-radius:4px; padding:2px 8px; display:inline-block;">04/12</span>| 03/12 | 02/12 | 30/11 |
 
 </div>
 
@@ -50,8 +50,6 @@ A service window will take place on the following dates:
 ### Platform specific information
 
 ## Strato and UCloud virtual machines
-
-**Status: Completed**
 
 **Be sure to save your work** no later than the end of the day before the service window begins, as all virtual machines will be automatically shut down during the service window and any unsaved data will be lost.
 
@@ -84,8 +82,6 @@ web-interface: [strato-new.claaudia.aau.dk](https://strato-new.claaudia.aau.dk/)
 
 
 ## AI Cloud
-**Status:** Main cluster complete. Nv-ai nodes are ongoing.
-
 In the days leading up to the service window, a reservation will be put in place for the entire cluster. The entirety of the cluster will therefore be unavailable for that day, but may come back online by the end of the day.
 
 **You can still submit jobs in the days leading up to the service window.**
@@ -111,7 +107,6 @@ If you have any questions, please open a case with us on [serviceportal.aau.dk](
 
 
 ## UCloud (AAU/K8s)
-**Status: Completed**
 The UCloud (AAU/K8s) cluster will be unavailable for the entire duration of the service window and may become available again by the end of the day. While it may be technically possible to start jobs on the day of the service window, please note that any running jobs will be terminated as part of the scheduled maintenance activities performed by the administrators. We recommend planning your work accordingly to avoid interruptions.
 
 
