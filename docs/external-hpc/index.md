@@ -6,9 +6,11 @@ In addition to the HPC platforms that we provide locally at AAU, users can gain 
 
 * **The european HPC resources** are made available through EuroHPC. To learn more about these facilities and how to gain access - read our page on [EuroHPC resources](/external-hpc/eurohpc-resources/)
 
-We encourage users to reach out for these resources - especially if they have large or continuous long-stretched resource needs
+We encourage all users to reach out for these resources - especially if they have large or continuous long-stretched resource needs. 
 
-Consider applying for ressources on an external HPC facility if:
+Researchers with less resource-demanding research projects are also welcome to apply for resources.
+
+**Consider applying for ressources** on an external HPC facility when:
 
 - You have a concrete research project which requires HPC-ressources.
 - You need more compute time time, than you can acquire in our local platform portfolio.
