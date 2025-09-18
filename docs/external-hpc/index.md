@@ -15,22 +15,10 @@ Consider applying for ressources on an external HPC facility if:
 - You need a specific resource type that is not available in our local platform portfolio.
 
 <hr>
-
 # Open calls
 
-### National ressource pool for LUMI
-
-**Call opens:** 15th of July 2025
-
-**Call closes:** 16th of September 2025.
-
-There is currently an open call for [**the national resource pool for LUMI**](https://www.deic.dk/en/supercomputing/Apply-for-HPC-resources). 
-The resources will be available for consumption from January 1st until December 31st 2026.
-
-**Learn more:**
-
-  - Learn how to proceed by reading our page: [DeiC resources](/external-hpc/deic-resources)
-  - Learn more about the LUMI-supercomputer on our [LUMI-page](/external-hpc/lumi/).
+* **Deic national HPC ressource calls**: There are currently none open. The next one is expected to open in January 2026.
+* **EuroHPC ressource calls**: calls open and close on a continuous basis - learn more on our [EuroHPC section](/external-hpc/eurohpc-resources/#applicatons-to-eurohpc)
 
 <hr>
 
