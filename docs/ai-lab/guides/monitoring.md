@@ -69,7 +69,7 @@ vmware             up          10:00          4       idle        vmware[01-04]
 |--------|-------------|---------|
 | `PARTITION` | Queue/partition name | `l4*`, `vmware` |
 | `AVAIL` | Partition availability | `up` (available) |
-| `TIMELIMIT` | Maximum job time | `12:00:00` (12 hours) |
+| `TIMELIMIT` | Maximum job time | `12:00:00` (12 hours max, 1 hour default) |
 | `NODES` | Number of nodes | `11` |
 | `STATE` | Node status | `idle`, `mix`, `allocated` |
 | `NODELIST` | Specific nodes | `ailab-l4-[01-11]` |

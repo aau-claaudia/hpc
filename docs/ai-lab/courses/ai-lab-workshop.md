@@ -97,7 +97,7 @@ A GPU cluster available to students and teachers
 ## Terms of use
 
 * Access is removed at August 1st
-* 12 hour limit on jobs
+* 1 hour default, 12 hour maximum limit on jobs
 * Must not be used for confidential or sensitive data
 
 ---
