@@ -6,31 +6,21 @@ In addition to the HPC platforms that we provide locally at AAU, users can gain 
 
 * **The european HPC resources** are made available through EuroHPC. To learn more about these facilities and how to gain access - read our page on [EuroHPC resources](/external-hpc/eurohpc-resources/)
 
-We encourage users to reach out for these resources - especially if they have large or continuous long-stretched resource needs
+We encourage all users to reach out for these resources - especially if they have large or continuous long-stretched resource needs. 
 
-Consider applying for ressources on an external HPC facility if:
+Researchers with less resource-demanding research projects are also welcome to apply for resources.
+
+**Consider applying for ressources** on an external HPC facility when:
 
 - You have a concrete research project which requires HPC-ressources.
 - You need more compute time time, than you can acquire in our local platform portfolio.
 - You need a specific resource type that is not available in our local platform portfolio.
 
 <hr>
-
 # Open calls
 
-### National ressource pool for LUMI
-
-**Call opens:** 15th of July 2025
-
-**Call closes:** 16th of September 2025.
-
-There is currently an open call for [**the national resource pool for LUMI**](https://www.deic.dk/en/supercomputing/Apply-for-HPC-resources). 
-The resources will be available for consumption from January 1st until December 31st 2026.
-
-**Learn more:**
-
-  - Learn how to proceed by reading our page: [DeiC resources](/external-hpc/deic-resources)
-  - Learn more about the LUMI-supercomputer on our [LUMI-page](/external-hpc/lumi/).
+* **Deic national HPC ressource calls**: There are currently none open. The next one is expected to open in January 2026.
+* **EuroHPC ressource calls**: calls open and close on a continuous basis - learn more on our [EuroHPC section](/external-hpc/eurohpc-resources/#applicatons-to-eurohpc)
 
 <hr>
 
