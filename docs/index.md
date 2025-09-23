@@ -54,10 +54,10 @@ Find the most suitable system for your project. You can also complete the [HPC D
 </div>
 
 ## News
-!!! info  "Service Window Tomorrow – Important Changes for Strato Users"
-    **Reminder:** There will be a scheduled service window **tomorrow** affecting AI Cloud, strato og UCloud VM. **Strato users:** Please note that a new usage management system is in effect from the 16th. 
+!!! info "New: Strato usage management now in effect"
+    **Notice:** Strato now has a new [usage management system](/strato/usage-management/) in effect from September 16th. This system automatically manages inactive servers and storage to ensure fair resource availability for all users.
 
-    For full details and instructions, see the [Service window message](/service-windows).
+    Please review the [Strato Usage Management page](/strato/usage-management/) for details on how this affects your virtual machines and data retention.
    
 <div class="video-container">
   <iframe src="https://panopto.aau.dk/Panopto/Pages/Embed.aspx?id=cbfb191c-fde8-4dec-998e-b2b800ba6b03&amp;autoplay=false&amp;offerviewer=true&amp;showtitle=false&amp;showbrand=true&amp;captions=false&amp;interactivity=all"
