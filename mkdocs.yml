@@ -125,6 +125,9 @@ nav:
               - Requeuing jobs: ai-lab/guides/requeuing-jobs.md
               - CI/CD with GitHub Actions: ai-lab/guides/ci-cd-with-github-actions.md
 
+  # - TAAURUS:
+  #   - Guides: taaurus/index.md
+
   - External HPC:
       - External HPC facilities: external-hpc/index.md
       - DeiC HPC resources: external-hpc/deic-resources.md

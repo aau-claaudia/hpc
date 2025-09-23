@@ -37,7 +37,7 @@ Before using AI-LAB, please familiarize yourself with our policies:
 - AI-LAB is for **educational and research purposes only**
 - **No sensitive or confidential data** is allowed (use [UCloud](/ucloud/) for sensitive data)
 - **GPU resources are shared** - be considerate of other users
-- **Jobs have time limits** - plan your work accordingly
+- **Jobs have time limits** - default 1 hour, maximum 12 hours - plan your work accordingly
 
 ## Step 4: Basic Requirements
 

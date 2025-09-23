@@ -190,6 +190,8 @@ Most jobs need specific resources like GPUs, memory, or time limits. You specify
 
 - Quick tests: `--time=00:30:00` (30 minutes)
 - Training: `--time=04:00:00` (4 hours)
+- Default: 1 hour (if not specified)
+- Maximum: 12 hours
 
 !!! warning "Multi-GPU Usage"
     You can request multiple GPUs with `--gres=gpu:2`, but **only if your code actually uses them**. Allocating unused GPUs violates our [Fair Usage Policy](https://hpc.aau.dk/ai-lab/fair-usage/){target=_blank}.

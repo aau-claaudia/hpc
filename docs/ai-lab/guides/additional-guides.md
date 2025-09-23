@@ -1,6 +1,6 @@
 ## Checkpointing
 
-On AI-LAB, jobs are limited to a maximum runtime of 12 hours. Once this time limit is reached, your job will be canceled, and any unsaved data will be lost. To prevent data loss, it’s important to implement checkpointing, which saves data at regular intervals. Additionally, you can set up automatic requeuing so that your job will restart automatically if it gets canceled, removing the need to manually resubmit it.
+On AI-LAB, jobs have a default time limit of 1 hour and a maximum runtime of 12 hours. Once this time limit is reached, your job will be canceled, and any unsaved data will be lost. To prevent data loss, it's important to implement checkpointing, which saves data at regular intervals. Additionally, you can set up automatic requeuing so that your job will restart automatically if it gets canceled, removing the need to manually resubmit it.
 
 ??? info "Guide on checkpointing"
 
@@ -327,7 +327,7 @@ After implementing checkpointing in your script, you have the option to set up a
 
     In this script, we will run a PyTorch script (located at `/ceph/course/claaudia/docs/torch_bm.py`) using the PyTorch container `/ceph/container/pytorch/pytorch_24.09.sif`. You can modify this to run any script or container you need. Key parameters to pay attention to are:
 
-    * `#SBATCH --time=00:01:00`: This sets the time limit for your job. If your job exceeds this limit, it will be cancelled. If not specified, the default time limit is 12 hours.
+    * `#SBATCH --time=00:01:00`: This sets the time limit for your job. If your job exceeds this limit, it will be cancelled. If not specified, the default time limit is 1 hour (maximum 12 hours).
     * `#SBATCH --signal=B:SIGTERM@30`: This tells Slurm to send a SIGTERM signal 30 seconds before the job reaches the time limit, giving the job time to handle termination gracefully.
     * `max_restarts=4`: This defines the maximum number of times your job will be automatically requeued if it gets cancelled. In this example, the job will be requeued up to four times before it is finally terminated.
 
