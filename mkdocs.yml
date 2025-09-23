@@ -16,6 +16,7 @@ nav:
       - About Strato: strato/index.md
       - How to access: strato/how-to-access.md
       - Terms and Conditions: strato/terms-and-conditions.md
+      - Usage Management: strato/usage-management.md
       - Guides:
           - Getting started:
               - Before you begin: strato/getting-started/index.md
@@ -157,6 +158,8 @@ extra_css:
 
 extra_javascript:
   - javascripts/conditional.js
+  - https://unpkg.com/mermaid@10.9.1/dist/mermaid.min.js
+  - javascripts/mermaid-init.js
 
 markdown_extensions:
   - footnotes

@@ -72,7 +72,9 @@ With regards to data stored on any of the HPC RESOURCES, it will automatically b
 
 All Strato and AI Cloud student accounts will be deleted at the end of each semester (01 February, and 01 August). Students are responsible for the extraction or saving of all data that is of value to them prior to these dates.
 
----
+#### 5.2 Extract or delete inactive data 
+
+Once you’ve finished processing your data, please make sure to either extract it or delete it—“finished data” means anything you’re no longer actively working on. HPC platforms aren’t meant for long-term storage, so when you’re done, move your data to a dedicated storage solution like [Datadeposit](https://datadeposit.dk/).
 
 ## 6. Prohibited Usage and Consequences
 HPC RESOURCES may not, under any circumstances, be used for any purpose outside the scope of staff research, teaching or administrative functions. Any misuse of the HPC RESOURCES will result in an immediate and permanent ban of the use of any HPC RESOURCES. Criminal or unlawful activity will be reported to the appropriate authorities.
