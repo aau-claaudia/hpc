@@ -2,20 +2,6 @@
 
 ### Procedure sensitive UCloud projects
   ```mermaid
-  %%{init: {
-    'themeVariables': {
-      'fontSize': '16px',
-      'nodeBorderRadius': 16
-    },
-    'flowchart': {
-      'htmlLabels': true,
-      'wrap': true,
-      'useMaxWidth': false,
-      'diagramPadding': 8,
-      'nodeSpacing': 40,
-      'rankSpacing': 40
-    }
-  }}%%
   graph TD
       A[Register your project with Grants and Contracts] --> B[📝 Complete the application form]
       B --> C[✅ CLAAUDIA approval]
@@ -26,6 +12,17 @@
       click A "https://aaudk.sharepoint.com/sites/persondata-ressourcer/SitePages/Registrations%20og%20reports%20(Online%20forms).aspx" "Open Grants and Contracts registration" _blank
       click B "https://forms.office.com/e/8Khbr1TJGC" "Open application form" _blank
       click D "https://cloud.sdu.dk/app/dashboard" "Open UCloud dashboard" _blank
+
+
+          %% Define classes for colors
+    classDef User fill:#e6f3ff,stroke:#1d70b8,color:#0b0c0c,font-size:14px;
+    classDef CLAAUDIA fill:#ffe5b4,stroke:#ff9900,color:#0b0c0c,font-size:14px;
+    classDef Completed fill:#66ff66,stroke:#006600,color:#0b0c0c,font-size:14px;
+
+    %% Assign classes
+    class A,B,D User;
+    class C,E CLAAUDIA;
+    class F Completed;
   ```
 
   > **Note**:  As project applicant you will be the Principal Investigator for the project, and you should be aware of your roles and responsibilities.
