@@ -18,15 +18,28 @@ The diagram below outlines the process for getting your project approved and set
 
   <!-- Mermaid Diagram -->
   <div style="flex: 1; min-width: 300px; text-align: left;">
-    <div class="mermaid">
-    ```mermaid
-    graph TD
-        A[📝 <a href="https://forms.office.com/e/8Khbr1TJGC" target="_blank">Complete the application form</a>] --> B[✅ CLAAUDIA approval];
-        B --> C[💻 <a href="https://cloud.sdu.dk/app/dashboard" target="_blank">Enter the approved resources in UCloud</a>];
-        C --> D[✅ CLAAUDIA approval];
-        D --> E[⭐ The project is now available]
-    ```
-    </div>
+```mermaid
+%%{init: {
+  'themeVariables': {
+    'fontSize': '16px',
+    'nodeBorderRadius': 12
+  },
+  'flowchart': {
+    'htmlLabels': true,
+    'wrap': false,
+    'nodeSpacing': 40,
+    'rankSpacing': 40
+  }
+}}%%
+graph TD
+    A["📝 Complete the application form"] --> B["✅ CLAAUDIA approval"]
+    B --> C["💻 Enter the approved resources in UCloud"]
+    C --> D["✅ CLAAUDIA approval"]
+    D --> E["⭐ The project is now available"]
+
+    click A "https://forms.office.com/e/8Khbr1TJGC" "Open application form" _blank
+    click C "https://cloud.sdu.dk/app/dashboard" "Open UCloud dashboard" _blank
+```
   </div>
 
   <!-- Info Box -->
