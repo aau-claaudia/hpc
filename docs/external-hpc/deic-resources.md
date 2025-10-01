@@ -5,19 +5,6 @@
 
  - Another portion is reserved for a **national resource pool**, from which researchers can apply twice a year.
 
-!!! info "OPEN CALL"
-    
-    There is currently an open call for [**the national resource pool for LUMI**](https://www.deic.dk/en/supercomputing/Apply-for-HPC-resources).
-
-    It will be possible to submit applications from July 15th to September 16th 2025.
-
-    The resources will be available from January 1st until December 31st 2026.
-
-    **Learn more:**
-
-      - Read through the information provided on this page.
-      - Learn more about the LUMI-supercomputer on our [LUMI-page](/external-hpc/lumi/).
-
 ## National HPC facilities
 
 The national HPC facilities are those in which DeiC has a stake and are provided to all universities via the national and local resource pools.
