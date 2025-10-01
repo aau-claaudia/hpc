@@ -2,19 +2,21 @@
 
 In addition to the HPC platforms that we provide locally at AAU, users can gain access to several powerful platforms made available through national and european cooperation.
 
-* **The national HPC ressources** are made available through DeiC (abbr. Danish e-infrastructure Consortium). To learn more about these facilities and how to gain access - read our page on [DeiC HPC resources](/external-hpc/deic-resources/).
+### National HPC ressources:
+Available via applications to DeiC calls (abbr. Danish e-infrastructure Consortium). Learn more about these facilities and how to gain access - read our page on [DeiC HPC resources](/external-hpc/deic-resources/).
 
-* **The european HPC resources** are made available through EuroHPC. To learn more about these facilities and how to gain access - read our page on [EuroHPC resources](/external-hpc/eurohpc-resources/)
+### European HPC resources:
+Available via applications to EuroHPC calls. Learn more about these facilities and how to gain access - read our page on [EuroHPC resources](/external-hpc/eurohpc-resources/)
 
 We encourage all users to reach out for these resources - especially if they have large or continuous long-stretched resource needs. 
 
 Researchers with less resource-demanding research projects are also welcome to apply for resources.
 
-**Consider applying for ressources** on an external HPC facility when:
+!!! info "Consider applying for ressources on an external HPC facility when:"
 
-- You have a concrete research project which requires HPC-ressources.
-- You need more compute time time, than you can acquire in our local platform portfolio.
-- You need a specific resource type that is not available in our local platform portfolio.
+    - You have a concrete research project which requires HPC-ressources.
+    - You need more compute time time, than you can acquire in our local platform portfolio.
+    - You need a specific resource type that is not available in our local platform portfolio.
 
 <hr>
 # Open calls
