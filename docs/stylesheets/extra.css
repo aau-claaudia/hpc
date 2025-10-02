@@ -942,6 +942,11 @@ del {
   margin-left: 16px;
   margin-right: 16px;
 }
+/* Mermaid flowcharts: keep text inside boxes without underline on clickable nodes */
+.mermaid .nodeLabel, .mermaid .label, .mermaid a, .mermaid .node text, .mermaid .label text {
+  text-decoration: none !important;
+}
+.mermaid .node { cursor: pointer; }
 .not-max-width {
   width: auto !important;
 }

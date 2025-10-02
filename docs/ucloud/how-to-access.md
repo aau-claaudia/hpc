@@ -17,16 +17,27 @@ The diagram below outlines the process for getting your project approved and set
 <div style="display: flex; gap: 2rem; align-items: flex-start; justify-content: center; flex-wrap: wrap;">
 
   <!-- Mermaid Diagram -->
-  <div style="flex: 1; min-width: 300px; text-align: left;">
-    <div class="mermaid">
-    ```mermaid
-    graph TD
-        A[📝 <a href="https://forms.office.com/e/8Khbr1TJGC" target="_blank">Complete the application form</a>] --> B[✅ CLAAUDIA approval];
-        B --> C[💻 <a href="https://cloud.sdu.dk/app/dashboard" target="_blank">Enter the approved resources in UCloud</a>];
-        C --> D[✅ CLAAUDIA approval];
-        D --> E[⭐ The project is now available]
-    ```
-    </div>
+  <div style="flex: 1; max-width: 1500px; min-width: 400px; text-align: left;">
+```mermaid
+graph TD
+    A["📝 Complete the <br/>application form"] --> B["✅ CLAAUDIA approval"]
+    B --> C["💻 Enter the approved <br/>resources in UCloud"]
+    C --> D["✅ CLAAUDIA approval"]
+    D --> E["⭐ The project is now available"]
+
+    click A "https://forms.office.com/e/8Khbr1TJGC" "Open application form" _blank
+    click C "https://cloud.sdu.dk/app/dashboard" "Open UCloud dashboard" _blank
+
+    %% Define classes for colors
+    classDef User fill:#e6f3ff,stroke:#1d70b8,color:#0b0c0c,font-size:14px;
+    classDef CLAAUDIA fill:#ffe5b4,stroke:#ff9900,color:#0b0c0c,font-size:14px;
+    classDef Completed fill:#66ff66,stroke:#006600,color:#0b0c0c,font-size:14px;
+
+    %% Assign classes
+    class A,C User;
+    class B,D CLAAUDIA;
+    class E Completed;
+```
   </div>
 
   <!-- Info Box -->

@@ -84,10 +84,7 @@ A job launched with `srun` is therefore dependent on the console session the fro
 
 
 !!! info "Persistent terminal sessions"
-    If used correctly terminal multiplexers like Tmux/Screen are great tools! However if they are used to start an interactive job on a compute node, this counts as monopolising resources.
-
-your jobs from within interactive shell sessions (using `srun --pty bash -l`), as this will start that runs until it reaches the time limit in the (6 days in the prioritized partition) - not when the actual job is finished. As a consequence the resources allocated to the job will be occupied for longer than needed.
-
+    If used correctly terminal multiplexers like Tmux/Screen are great tools! However if they are used to start an interactive job on a compute node, this counts as monopolising resources (which is not allowed).
 
 ### Conclusion:
 

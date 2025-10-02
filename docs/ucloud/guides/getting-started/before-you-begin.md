@@ -5,7 +5,7 @@ Before diving into UCloud, ensure you have the necessary tools and knowledge for
 
 ### Preperations
 
-!!! info "Please review our [Terms and Conditions](/Ucloud/terms-and-conditions/), especially noting the following points:"
+!!! info "Please review our [Terms and Conditions](/ucloud/terms-and-conditions/), especially noting the following points:"
       - Only part of UCloud is  intended for working with confidential or sensitive data
       - UCloud is not designed for long term storage of research data.
       - UCloud is not designed for production.
