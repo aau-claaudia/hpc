@@ -41,7 +41,7 @@ Find the most suitable system for your project. You can also complete the [HPC D
         <p class="custom-grid-feature">AI Cloud is a GPU cluster designed for demanding machine learning workloads, accessed via terminal for job submission.</p>
         <a href="/ai-cloud/"><i class="bi bi-info-circle"></i>About AI Cloud</a>
         <a href="/ai-cloud/how-to-access/"><i class="bi bi-key"></i>How to access</a>
-        <a href="https://forms.office.com/e/ewgvLRbbv7"><i class="bi bi-file-earmark-text"></i>Application form</a>
+        <a href="https://serviceportal.aau.dk/serviceportal?id=sc_cat_item&sys_id=37b26fd4c3afee10f0f3041ad00131d0"><i class="bi bi-file-earmark-text"></i>Application form</a>
     </div>
     <div class="custom-grid-item">
         <div class="label label-student">For students</div>
