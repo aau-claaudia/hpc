@@ -86,7 +86,7 @@ nav:
                   - Download container images: ai-cloud/additional-guides/download-container-images.md
                   - Building your own container image: ai-cloud/additional-guides/building-your-own-container-image.md
                   - Creating a virtual environment: ai-cloud/additional-guides/creating-a-virtual-environment.md
-                  - Creating a Conda environment: ai-cloud/additional-guides/creating-a-conda-environment.md
+                  # - Creating a Conda environment: ai-cloud/additional-guides/creating-a-conda-environment.md
               - Running jobs:
                   - Run a batch script: ai-cloud/additional-guides/run-a-batch-script.md
                   - Multiple GPUs with PyTorch: ai-cloud/additional-guides/multiple-gpus-with-pytorch.md
