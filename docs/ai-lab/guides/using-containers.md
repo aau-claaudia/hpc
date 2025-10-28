@@ -76,9 +76,17 @@ Create a virtual environment in your current directory:
 srun singularity exec /ceph/container/pytorch/pytorch_25.08.sif python -m venv --system-site-packages my_venv
 ```
 
+!!! info "Explanation"
+     `srun`: Runs your command on a compute node via Slurm
+     `singularity exec`: Executes a command inside the container
+     `/ceph/container/pytorch/pytorch_25.08.sif`: The PyTorch container image (you can change the version if needed)
+     `python -m venv`: Creates a Python virtual environment
+     `--system-site-packages`: Lets your venv see the preinstalled PyTorch packages from the container
+     `~/my_venv`: Location of your virtual environment — this folder will appear in your home directory
+
 #### Step 2: Install Additional Packages
 
-Install packages in your virtual environment:
+Install packages in your virtual environment, e.g. numpy pandas matplotlib: 
 
 ```bash
 # Install packages (example: openpyxl)
@@ -88,10 +96,30 @@ srun singularity exec --nv \
      /ceph/container/pytorch/pytorch_25.08.sif \
      /bin/bash -c "export TMPDIR=/scratch/singularity/tmp && \
                    source /scratch/my_venv/bin/activate && \
-                   pip install --no-cache-dir openpyxl"
+                   pip install --no-cache-dir numpy pandas matplotlib"
 ```
 
-#### Step 3: Use Your Virtual Environment
+!!! info "Explanation"
+     `--nv`: Enables GPU access (NVIDIA) inside the container
+     `-B ~/my_venv:/scratch/my_venv`: “Binds” your local folder `~/my_venv` into `/scratch/my_venv` inside the container — this is where the container can find your environment
+     `-B $HOME/.singularity:/scratch/singularity`: Temporary folder for pip’s build files
+     `/bin/bash -c "..."`: Tells Singularity to open a shell and run multiple commands
+     `source /scratch/my_venv/bin/activate`: Activates your virtual environment inside the container
+     `pip install --no-cache-dir openpyxl`: Installs your desired package (replace openpyxl with any other)
+
+
+#### Step 3: Verify packages
+
+To verify that your packages installed correctly:
+
+```bash
+srun singularity exec --nv \
+    -B ~/my_venv:/scratch/my_venv \
+    /ceph/container/pytorch/pytorch_25.08.sif \
+    /bin/bash -c "source /scratch/my_venv/bin/activate && pip list"
+```
+
+#### Step 4: Use Your Virtual Environment
 
 Run scripts with your additional packages:
 
