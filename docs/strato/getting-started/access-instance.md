@@ -31,7 +31,7 @@ ssh -i ~/.ssh/my_ssh_key ubuntu@10.92.1.99
 
 **Usernames for other distribution images**
 
-The default user name for Ubuntu-instances is always *"ubuntu"*. If you decide to try out a different distribution image, this would change. A list of default usernames for other images can be found [here](insert_link).
+The default user name for Ubuntu-instances is always *"ubuntu"*. If you decide to try out a different distribution image, this would change. 
 
 **Connecting via AAU's SSH-gateway**
 

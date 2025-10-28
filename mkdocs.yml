@@ -11,7 +11,7 @@ nav:
       - Tools:
         - HPC Decision Tree: hpc-decision-tree.md
         - HPC Comparison Table: hpc-comparison-table.md
-        - HPC Cost Estimator: hpc-cost-estimator.md
+        #- HPC Cost Estimator: hpc-cost-estimator.md
   - Strato:
       - About Strato: strato/index.md
       - How to access: strato/how-to-access.md
@@ -125,8 +125,18 @@ nav:
               - Requeuing jobs: ai-lab/guides/requeuing-jobs.md
               - CI/CD with GitHub Actions: ai-lab/guides/ci-cd-with-github-actions.md
 
-  # - TAAURUS:
-  #   - Guides: taaurus/index.md
+#   - TAAURUS:
+#       - About TAAURUS: taaurus/index.md
+#       - Applying for a TAAURUS project: taaurus/guides/applying-for-a-taaurus-project.md
+#       - Guides:
+#           - How to log in: taaurus/guides/login.md
+#           - Navigating TAAURUS: taaurus/guides/navigating-taaurus.md
+#           - Import & export of data: taaurus/guides/import-export-of-data.md
+#           - Slurm cluster:
+#               - Running Jobs: taaurus/guides/running-jobs.md
+#               - Getting Containers: taaurus/guides/getting-containers.md
+#               - Using Containers: taaurus/guides/using-containers.md
+#               - Monitoring: taaurus/guides/monitoring.md
 
   - External HPC:
       - External HPC facilities: external-hpc/index.md
