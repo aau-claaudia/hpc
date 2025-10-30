@@ -17,7 +17,8 @@ Enter your AAU password when prompted.
     This key is not known by any other names.
     Are you sure you want to continue connecting (yes/no/[fingerprint])?
     ```
-    Confirm by typing 'yes' to proceed with the connection.
+
+    Confirm by typing `yes` to proceed with the connection.
 
 
 ### Success!
@@ -66,4 +67,4 @@ When your prompt changes to: `user@domain.aau.dk@ai-fe02:~$` - you are successfu
     ```
 <hr>
 
-You are now ready to proceed to learn about [**file management :octicons-arrow-right-24:**](file-management.md)
+You are now ready to proceed to [**look around :octicons-arrow-right-24:**](file-management.md)

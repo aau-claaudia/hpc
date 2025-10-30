@@ -74,21 +74,19 @@ nav:
           - Getting started:
               - Prerequisites: ai-cloud/getting-started/index.md
               - Log in: ai-cloud/getting-started/login.md
-              - Transfer files: ai-cloud/getting-started/transfer-files.md
+              - Look around: ai-cloud/getting-started/look-around.md
+              - File transfer: ai-cloud/getting-started/file-management.md
+              - Container images: ai-cloud/getting-started/container-images.md
               - Run jobs: ai-cloud/getting-started/run-jobs.md
-              - Pull container images: ai-cloud/getting-started/pull-container-images.md
-              - Next steps: ai-cloud/getting-started/next-steps.md
           - Additional guides:
-              - Directories:
-                  - Overview of directories: ai-cloud/additional-guides/directories-overview.md
-                  - Local scratch space: ai-cloud/additional-guides/local-storage.md
+              - Understanding the Linux CLI: ai-cloud/additional-guides/understanding-linux-cli.md
+              - Directories overview: ai-cloud/additional-guides/directories-overview.md
               - Container guides:
-                  - Download container images: ai-cloud/additional-guides/download-container-images.md
+                  - Pulling container images from the internet: ai-cloud/additional-guides/download-container-images.md
                   - Building your own container image: ai-cloud/additional-guides/building-your-own-container-image.md
                   - Creating a virtual environment: ai-cloud/additional-guides/creating-a-virtual-environment.md
                   # - Creating a Conda environment: ai-cloud/additional-guides/creating-a-conda-environment.md
               - Running jobs:
-                  - Run a batch script: ai-cloud/additional-guides/run-a-batch-script.md
                   - Multiple GPUs with PyTorch: ai-cloud/additional-guides/multiple-gpus-with-pytorch.md
                   - Checkpointing: ai-cloud/additional-guides/checkpointing.md
                   - CPU, GPU, and memory allocation: ai-cloud/additional-guides/cpu-gpu-and-memory-allocation.md
@@ -97,7 +95,7 @@ nav:
               - Monitoring commands:
                   - Checking the queue: ai-cloud/additional-guides/checking-the-queue.md
                   - Checking the status of compute nodes: ai-cloud/additional-guides/checking-the-status-of-compute-nodes.md
-                  - Checking GPU usage: ai-cloud/additional-guides/checking-gpu-usage.md
+                  # - Checking GPU usage: ai-cloud/additional-guides/checking-gpu-usage.md
               - Application examples:
                   - Batch LLM Inference: ai-cloud/additional-guides/batch-llm-inference.md
 

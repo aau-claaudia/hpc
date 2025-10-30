@@ -1,4 +1,4 @@
-Monitoring GPU usage is a good practice for optimizing the performance of your jobs running, particularly if you intend to utilize multiple GPUs and verify their usage. This guide will provide step-by-step instructions on how to monitor GPU usage using the `nvidia-smi` tool.
+Monitoring GPU usage is good practice for optimizing the performance of your jobs running, particularly if you intend to utilise one or more GPUs and verify their usage. This guide will provide step-by-step instructions on how to monitor GPU usage using the `nvidia-smi` tool.
 
 ### Start a job with GPU allocation
 
