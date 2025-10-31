@@ -1,14 +1,29 @@
-### Why do I get `Error generating job credential` or `unknown userid` when running a job?
+## Why do I get `Error generating job credential` or `unknown userid` when running a job?
 Sometimes there are challenges with Active Directory (AD) at Aalborg University where AD fails to translate UIDs to people's usernames. Consequently, Slurm may encounter authentication issues, preventing you from running a job, and you may notice the job hanging when you run `sinfo`.
 
 **Solution:** Often, the problem resolves itself after some time (~20 minutes), and you will be able to run jobs again. You can also try running the `refresh-nodes` command to translate the username to UID, which usually gets cached and starts working after a while.
 
 <hr>
 
-### Why do I get `\r` error when running my Python script?
+## Why do I get `\r` error when running my Python script?
 If you encounter an error message like: `/usr/bin/env python3/r: bad interpreter: No such file or directory` while running a .py file, it might be because the file was edited on your local Windows computer before moving it to AI-LAB. Line endings often get converted when files are moved between Linux and Windows. This conversion is a frequent issue as Linux and Unix-like systems use `\n` for line breaks, whereas Windows uses `\r\n` (CRLF, Carriage Return + Line Feed). 
 
 **Solution:** In code editors such as VS Code or PyCharm, you can switch between LF (Linux endings) and CRLF (Windows endings) from the right-hand side of the status bar at the bottom of the window. Therefore, use LF endings if you wish to move a file to AI-LAB.
+
+<hr>
+
+## Why can't I connect to AI-LAB?
+If you encounter an error like `ssh: Could not resolve hostname ailab-fe01.srv.aau.dk: No such host is known.`, you may need to connect through AAU's jump host (SSH gateway).
+
+**Solution:** Use the jump host option with the `-J` flag:
+
+```bash
+ssh -J user@student.aau.dk@sshgw.aau.dk -l user@student.aau.dk ailab-fe01.srv.aau.dk
+```
+
+Replace `user@student.aau.dk` with your actual AAU email address. You will need to enter your password twice and use Microsoft Authenticator in between.
+
+If you still encounter issues, try using [PuTTY terminal](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html) software as an alternative.
 
 <hr>
 
