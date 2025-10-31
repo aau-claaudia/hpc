@@ -1,72 +1,72 @@
-It is possible to define and build your own container with Singularity. Lets try creating a simple Singularity container with Python and pip installed. 
 
-!!! info "Another way to build containers using Cotainr"
-    You also have the option to use a software called [cotainr](creating-a-conda-environment.md) to build containers. We have a guide on how to install a Conda environment with Cotainr [here](creating-a-conda-environment.md).
+It is generally considered good practice to build your own Singularity containers, to contain the software environment for a project you wish to run on an HPC system. This is because containers represent a solution that allows robustness and reproducibility.
 
-First we need to create a [Singularity definition file](https://docs.sylabs.io/guides/3.0/user-guide/definition_files.html){target=_blank} (`.def`). This definition file is a blueprint for how Singularity should build the container. It includes information about the base OS to build, which software to install and several other options.
 
-Lets create an empty text file by using the `nano` command:
+## Create a definition file
 
-```
-nano
-```
+First we need to create a definition to build our container image from. We will provide a basic example, but it also be helpful to read the official documentation page on [building container images](https://docs.sylabs.io/guides/3.0/user-guide/definition_files.html).
 
-Now we can enter the blueprint needed to install our application:
 
-```
+```bash title="torch.def"
 Bootstrap: docker
-From: ubuntu:20.04
+From: ubuntu:22.04
 
 %post
-    # This section is where you install additional packages or software
-    # Update package list and install the latest Python and pip version
-    apt-get update
-    apt-get install -y python3 python3-pip
-    pip install numpy pandas scikit-learn matplotlib
+    # This section is where you install software packages
 
-%test
-    # Define tests to run after the container is built
-    python3 --version
+    # Update the package manager (apt)
+    apt update
+
+    # install the latest Python and pip version
+    apt install -y python3-pip python3-dev
+
+    # use pip to install torch
+    pip3 install torch torchvision torchaudio
 ```
 
-In this example we will use `docker` to pull `ubuntu:20.04` as the base OS of our container. 
+## Create a batch script to build from
 
-In the next section,`%post`, we can define commands that will be executed after the base OS has been installed. In this example, we will update the container and install `python3` and `pip` along with `numpy pandas scikit-learn matplotlib` packages. 
+We can now create a batch script to launch our build:
 
-After that we can define commands to run after the container is built in the `%test` section. Lets try with `python3 --version`.
+```bash title="build_torch.sh"
+#!/usr/bin/env bash
 
-You can find more options to use in definition file in the [Singularity definition file documentation](https://docs.sylabs.io/guides/3.0/user-guide/definition_files.html){target=_blank}.
+#SBATCH --job-name=build_torch
+#SBATCH --output=build_torch.out
+#SBATCH --error=build_torch.err
+#SBATCH --cpus-per-task=32
+#SBATCH --mem=80G
 
-To save the file press `CTRL + O` and enter a filename ending with `.def` and hit `ENTER`. In this example, lets call it `python3.def`.
-
-#### Setting environment variables
-Before building the container, we need to set the `SINGULARITY_TMPDIR` and `SINGULARITY_CACHEDIR` environment variables, to speed up repeated operations. We will use these variables to a temporary directory (`$HOME/.singularity/tmp/` and `$HOME/.singularity/cache/`) inside your home directory. Singularity will use this directory for storing temporary files and cached data during container operations.
-
-```
-export SINGULARITY_TMPDIR="$HOME/.singularity/tmp/"
-export SINGULARITY_CACHEDIR="$HOME/.singularity/cache/"
-```
-
-Then we need to create the directories defined by `SINGULARITY_CACHEDIR` and `SINGULARITY_TMPDIR`, if they don’t already exist. The -p flag ensures that the command does not return an error if the directories are already in place.
-
-```
+export SINGULARITY_TMPDIR=$HOME/.singularity/tmp
+export SINGULARITY_CACHEDIR=$HOME/.singularity/cache
 mkdir -p $SINGULARITY_CACHEDIR $SINGULARITY_TMPDIR
+
+# The path to the definition file
+input_def="torch.def"
+
+# The resulting container image
+output_sif="torch.sif"
+
+singularity build --fakeroot $output_sif $input_def
 ```
 
-### Building the container
+We can now build the container by launching our batch script with: 
 
-You can now build container from the `python3.def` file:
-
-```
-srun singularity build --fakeroot python3.sif python3.def
+```bash
+sbatch build_torch.sh
 ```
 
-After some time you should see the `Python X.X.X` version be printed in the terminal, and you should now have a `python3.sif` container image ready to run.
+After our file has been built we can test it with:
 
-Lets for example print the matplotlib version:
-
-```
-srun singularity exec python3.sif python3 -c "import matplotlib; print('Matplotlib version:', matplotlib.__version__)"
+```bash
+srun --gres=gpu:1 singularity exec --nv torch.sif python3 -c "import torch ; print(torch.cuda.is_available())"
 ```
 
-You can find more information about building containers from Singularity definition files [here](https://docs.sylabs.io/guides/3.0/user-guide/definition_files.html){target=_blank}.
+Which should output:
+
+```bash
+srun: job 767374 queued and waiting for resources
+srun: job 767374 has been allocated resources
+True
+```
+

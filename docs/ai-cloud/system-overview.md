@@ -1,9 +1,8 @@
 
 
-## Hardware
-The AI Cloud platform is built around several key components, including a front-end node for managing tasks and code, and 27 compute nodes equipped with diverse hardware options.
+AI Cloud platform is built around several key components, including a front-end node for managing tasks and code, and 27 compute nodes equipped with diverse hardware options. In this overview, you will find a description of each of the platforms major components.
 
-In this overview, you will find a description of each major component of AI Cloud. Below, is a diagram illustrating the architecture of the AI Cloud platform.
+Below, is a diagram illustrating the architecture of the AI Cloud platform:
 
 ``` mermaid
 flowchart LR
@@ -32,6 +31,9 @@ flowchart LR
   F[<span><img src="/assets/img/person.svg" width='25' height='25'>User laptop</span>]-- SSH --> id3
 
 ```
+
+
+## Hardware
 <hr>
 
 ### Front-end node
@@ -43,19 +45,19 @@ You start by logging into a front-end node, `ai-fe02.srv.aau.dk`. This node acts
 ### Compute nodes
 AI Cloud consists the following compute nodes:
 
-| Name             | Nodes in total | CPU cores per node| CPU type  | RAM per node | GPUs per node    | GPU type    | RAM per GPU  | Local Disk   | NVLINK |
-| ---              | ---            | ---               |           | ---          | ---              | ---         | ---          | ---          | ---    |
-| a256-t4-[01-03]  | 3              | 32                |AMD EPYC   | 256 GB       | 6                | NVIDIA T4   | 16 GB        | -            | No     |
-| a256-a40-[04-07] | 4              | 32                |AMD EPYC   | 256 GB       | 3                | NVIDIA A40  | 48 GB        | -            | No     |
-| i256-a10-[06-10] | 5              | 32                |Intel Xeon | 256 GB       | 4                | NVIDIA A10  | 24 GB        | -            | No     |
-| i256-a40-[01-02] | 2              | 24                |Intel Xeon | 256 GB       | 4                | NVIDIA A40  | 48 GB        | 6.4 TB /raid | Yes    |
-| a512-l4-06       | 1              | 64                |AMD EPYC   | 512 GB       | 8                | NVIDIA L4   | 24 GB        | -            | No     |
-| a768-l40s-[01-06]| 6              | 64                |AMD EPYC   | 768 GB       | 8                | NVIDIA L40s | 48 GB        | -            | No     |
-| nv-ai-[01-03]    | 3              | 48                |Intel Xeon | 1470 GB      | 16               | NVIDIA V100 | 32 GB        | 30 TB /raid  | Yes    |
-| nv-ai-04         | 1              | 128               |AMD EPYC   | 980 GB       | 8                | NVIDIA A100 | 40 GB        | 14 TB /raid  | Yes    |
+| Nodes              | Nodes in total | CPU cores per node| CPU type  | RAM per node | GPUs per node    | GPU type    | RAM per GPU  | Local Disk   | NVLINK           |
+| ---                | ---            | ---               |           | ---          | ---              | ---         | ---          | ---          | ---              |
+| `a256-t4-[01-03]`  | 3              | 32                |AMD EPYC   | 256 GB       | 6                | NVIDIA T4   | 16 GB        |              |                  |
+| `a256-a40-[04-07]` | 4              | 32                |AMD EPYC   | 256 GB       | 3                | NVIDIA A40  | 48 GB        |              |                  |
+| `i256-a10-[06-10]` | 5              | 32                |Intel Xeon | 256 GB       | 4                | NVIDIA A10  | 24 GB        |              |                  |
+| `i256-a40-[01-02]` | 2              | 24                |Intel Xeon | 256 GB       | 4                | NVIDIA A40  | 48 GB        | 6.4 TB       | :material-check: |
+| `a512-l4-06`       | 1              | 64                |AMD EPYC   | 512 GB       | 8                | NVIDIA L4   | 24 GB        |              |                  |
+| `a768-l40s-[01-06]`| 6              | 64                |AMD EPYC   | 768 GB       | 8                | NVIDIA L40s | 48 GB        |              |                  |
+| `nv-ai-[02-03]`    | 3              | 48                |Intel Xeon | 1470 GB      | 16               | NVIDIA V100 | 32 GB        | 30 TB        | :material-check: |
+| `nv-ai-04`         | 1              | 128               |AMD EPYC   | 980 GB       | 8                | NVIDIA A100 | 40 GB        | 14 TB        | :material-check: |
 
 
-??? info "Further inspection of hardware"
+!!! info "Further inspection of hardware"
 
     It's also possible to inspect the compute node hardware using the following commands:
     

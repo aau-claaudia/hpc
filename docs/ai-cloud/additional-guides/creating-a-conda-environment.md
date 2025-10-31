@@ -1,5 +1,4 @@
-
-Cotainr is a tool that allows for easily extending Singularity container images with [conda environments](https://www.anaconda.com/docs/tools/working-with-conda/environments).
+[Cotainr](https://github.com/DeiC-HPC/cotainr) is a tool that allows for easily extending Singularity container images with conda environments.
 
 ## Requirements
 
@@ -10,11 +9,11 @@ Cotainr is relatively straight forward provided that either:
   2) Your are able to provide a conda environment YAML-file (eg. by calling `conda export > environment.yml` from within your environment) .
 
 
-## Where to find Cotainr
+!!! note "Where to find Cotainr"
 
-We have made Cotainr available in `/home/container/cotainr`.
+    We have made Cotainr available in `/home/container/cotainr`.
 
-Cotainr can also be found on [their official Github](https://github.com/DeiC-HPC/cotainr) - note that on AI Cloud the newest supported version is 2024.10.0.
+    Cotainr can also be found on [their official Github](https://github.com/DeiC-HPC/cotainr) - note that on AI Cloud the newest supported version is 2024.10.0.
 
 ## Prepare the Conda environment
 
@@ -85,9 +84,7 @@ output_sif="cupy.sif"
 $cotainr_path build $output_sif --base-image=$base_image --conda-env=$requirements --accept-licenses
 ```
 
-Choose an appropriate name for the file, like `build_cupy.sh`.
-
-To initiate the build, call:
+Initiate the build proces with:
 
 ```bash
 sbatch build_cupy.sh
@@ -102,37 +99,40 @@ You can access the conda image and run code using the dependencies you set up. L
 srun singularity exec cupy.sif python3 -c 'import cupy; print(cupy.__version__)'
 ```
 
-    This should print the Cupy version out to the console, verifying that was indeed installed to our Container image.
+This should print the Cupy version out to the console, verifying that was indeed installed to our Container image.
 
 <hr>
 
 ## Troubleshooting
 !!! failure "Out of memory?"
-    In case you run into an "out of memory" error (sometimes refered to as the *OOM-killer*), we can attempt to allocate more memory to our build job. We don't want to be overly greedy, so let's try bumping up from the default 40G to 60G. Adjust
 
-!!! failure "Attempting to build an environment, that works on a Windows system?"
-    Ensure the [character encoding](https://en.wikipedia.org/wiki/Character_encoding) is correct. This is a common error when migrating between Windows and MacOS/Linux. 
-    After having uploaded the file in question to the server, inspect the file with:
+    In case your build did not complete, and exited with an "out of memory" error (the *OOM-killer*), we can attempt to allocate more memory to our job. Remember we don't want to be overly greedy, so let's try bumping up from the default 40G to 60G. Adjust this incrementally as you need.
+
+!!! failure "Ensure the character encoding is correct"
+
+    If you are trying to build from an environment export from a Windows system, you should ensure that the [character encoding](https://en.wikipedia.org/wiki/Character_encoding) is correct.
+    After having uploaded the file to the server, inspect the file with:
     ```
     file environment.yml
     ``` 
 
-    If this command outputs: `ASCII text, with CRLF line terminators` you will have to convert the file to a Linux supported character encoding. From within a shell session on AI Cloud call:
+    If this command outputs: `ASCII text, with CRLF line terminators` you need to convert the file to a Linux supported character encoding:
     ```
     iconv -ct ascii environment.yml | sed 's/\r$//' > converted_environment.yml`
     ```
 
 !!! failure "Create a YAML-file with only *installed on request*"
 
-    When we install a Python package with Conda, dependencies specific to your system may be installed. If you encounter difficulties building the container image, it may be helpful to export only the modules that were explicitly installed (excluding dependencies installed automatically by Conda).
-
-    Create the simplified environment export:
+    If you encounter difficulties building the container image, it may be helpful to export only the modules that were explicitly installed (ie. excluding dependencies installed automatically by Conda).
 
     ```
     conda env export --from-history > environment.yml
     ```
 
-    This should result in a much shorter list - without pinned version numbers.
+    This should result in a shorter list without pinned version numbers.
+
+
+<hr>
 
 ### Are you still experiencing issues?
 Reach out to CLAAUDIA at [serviceportal.aau.dk](https://serviceportal.aau.dk/serviceportal?id=sc_cat_item&sys_id=a05e2fb4c3434610f0f3041ad001310e)

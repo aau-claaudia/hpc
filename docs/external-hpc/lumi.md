@@ -8,25 +8,28 @@ The system is funded by [EuroHPC](https://www.lumi-supercomputer.eu/eurohpcju/) 
 
 Acquiring LUMI-resources should <u>always</u> be a two step proces:
 
-  1. **Acquire resources for testing out the system:** 
+  1. **<u>Acquire resources for testing out the system</u>:** 
 
     It is always good to do a test run on the system prior to reaching out for a larger grant. Being able to demonstrate that you are able to utilise the system effectivly, and that your project fits the system, will greatly help your chances of being awarded the resources.
     Further acquiring too large a resource, which is left unused, might make this resource unavailable to others who might have been able to put it to good use.
 
     Make use of one of the following:
 
-      - AAU's local resource pool: Fill out [our application form](https://forms.office.com/e/4XC48iVu4S).
-      - EuroHPC: Read more on [our page dedicated to this option](/external-hpc/eurohpc-resources/).
+      - **AAU's local resource pool:** Fill out [our application form](https://forms.office.com/e/4XC48iVu4S).
 
-  2. **Acquire ressources for actual project work:**
+      - **EuroHPC:** Read more on [our page dedicated to this option](/external-hpc/eurohpc-resources/).
+
+2. **<u>Acquire resources for actual project work</u>:** 
 
     When you have demonstrated that your applicaiton was fit for the system, you may reach out for a larger grant.
 
     Make use of one of the following:
 
-      - AAU's local resource pool: Fill out [our application form](https://forms.office.com/e/4XC48iVu4S). Suitable for modest/large grants, depending on our budget.
-      - DeiC's national resource pool: Read more on [our page dedicated to this option](/external-hpc/deic-resources/#applications-to-the-national-resource-pool).
-      - EuroHPC: Read more on [our page dedicated to this option](/external-hpc/eurohpc-resources/).
+      - **AAU's local resource pool**: Fill out [our application form](https://forms.office.com/e/4XC48iVu4S). Suitable for modest/large grants, depending on our budget.
+
+      - **DeiC's national resource pool**: Read more on [our page dedicated to this option](/external-hpc/deic-resources/#applications-to-the-national-resource-pool).
+
+      - **EuroHPC**: Read more on [our page dedicated to this option](/external-hpc/eurohpc-resources/).
 
 
 ### User support

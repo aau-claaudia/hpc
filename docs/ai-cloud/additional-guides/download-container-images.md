@@ -1,43 +1,70 @@
-You can download a large range of container images by visiting [NVIDIA GPU Cloud (NGC)](https://catalog.ngc.nvidia.com/) and check whether NVIDIA provides a container image with the application you need.
+In this section we explain, how we can pull Docker containers from online repositories. 
 
-![Screenshot of NGC website](/assets/img/ai-cloud/ngc.png)
+Using the command `singularity pull`, we can download them and automatically convert them into Singularity containers.
 
-As an example, this could be TensorFlow. You can search on NGC and find [TensorFlow](https://catalog.ngc.nvidia.com/orgs/nvidia/containers/tensorflow). Here you can choose the desired version from the "Copy image path" dropdown menu:
+## Find a container
 
-![Screenshot of NGC TensorFlow page](/assets/img/ai-cloud/ngc-tf-detail.png)
+#### Find a container on the **NVIDIA NGC Catalog:**
 
-This copies a link to the container image which we will use in the following example.
+1. Visit [NGC Catalog](https://catalog.ngc.nvidia.com/){target=_blank}
+2. Search for your framework (e.g., "TensorFlow", "PyTorch")
+3. Click "Get Container" to get the URL
+4. Copy the URL (e.g., `nvcr.io/nvidia/tensorflow:24.11-tf2-py3`)
 
-#### Setting `SINGULARITY_TMPDIR` and `SINGULARITY_CACHEDIR`:
-Before downloading the container image, we need to set the `SINGULARITY_TMPDIR` and `SINGULARITY_CACHEDIR` environment variables, to speed up repeated operations. We will use these variables to a temporary directory (`$HOME/.singularity/tmp/` and `$HOME/.singularity/cache/`) inside your home directory. Singularity will use this directory for storing temporary files and cached data during container operations.
+![Screenshot of NGC](/assets/img/ai-lab/download-image-1.png)
 
-```
-export SINGULARITY_TMPDIR="$HOME/.singularity/tmp/"
-export SINGULARITY_CACHEDIR="$HOME/.singularity/cache/"
-```
+#### Find a container on **Docker Hub:**
 
-Then we need to create the directories defined by `SINGULARITY_CACHEDIR` and `SINGULARITY_TMPDIR`, if they don’t already exist. The -p flag ensures that the command does not return an error if the directories are already in place.
+1. Visit [Docker Hub](https://hub.docker.com/){target=_blank}
+2. Search for your container
+3. Click on "Tags" to see available versions
+4. Copy the URL (e.g., `tensorflow/tensorflow:nightly-jupyter`)
 
-```
-mkdir -p $SINGULARITY_CACHEDIR $SINGULARITY_TMPDIR
-```
+![Screenshot of Docker Hub](/assets/img/ai-lab/download-image-2.png)
 
 ## Downloading the container image
 
-We need to use Singularity to download the container image and in order to run Singularity, we must run it through the Slurm queueing system using the command `srun`. 
+Now that we have found a container image, we can create the following batch script:
 
-To download the container image to your directory paste the url to the container image like so:
+```bash title="pull-pytorch.sh"
+#!/bin/bash
 
-`srun --mem 40G singularity pull docker://nvcr.io/nvidia/tensorflow:24.03-tf2-py3`
+#SBATCH --job-name=build_basic
+#SBATCH --cpus-per-task=32
+#SBATCH --mem=60G
+#SBATCH --time=02:00:00
+#SBATCH --output=out.%x
+#SBATCH --error=err.%x
 
-NOTE: The container image could take ~20 minutes to download. 
+export SINGULARITY_TMPDIR=$HOME/.singularity/tmp
+export SINGULARITY_CACHEDIR=$HOME/.singularity/cache
+mkdir -p $SINGULARITY_CACHEDIR $SINGULARITY_TMPDIR
 
-The above example consists of the following parts:
+# URI of container to pull
+uri="nvcr.io/nvidia/pytorch:25.10-py3"
 
-- `srun`: the Slurm command which gets the following command executed on a compute node.
-- `mem`: a Slurm command that allows you allocate memory to your process, in this case 40GB of memory. A higher amount of memory than the default is needed specifically for this TensorFlow container image.
-- `singularity pull`: the Singularity command which downloads a specified container image.
-- `docker://nvcr.io/nvidia/tensorflow:24.03-tf2-py3`: this part of the command itself consists of two parts. `docker://` tells Singularity that we are downloading a Docker container image and Singularity
-automatically converts this to a Singularity container image upon download. `nvcr.io/nvidia/tensorflow:24.03-tf2-py3` is the container image label copied from the NGC webpage which identifies the particular container image and version that we want.
+# Name of the resulting container
+output_sif="pytorch_25.10.sif"
 
-Once the `singularity pull` command has completed, you should have a file called `tensorflow_24.03-tf2-py3.sif` in your user directory (use the command `ls` to see the files in your current directory).
+# Call the build instructions
+singularity pull $output_sif docker://$uri
+```
+
+Some options we can set in the batch script.
+
+* **The memory paramater:**
+
+    From experience we know that the conversion between Docker and Singularity formats can be a memory consuming operation. If our build fails because of insufficient memory, we may need to adjust the memory parameter. In this example we have set it to 60 gb.
+
+
+* **Environment variables:**
+
+    Before pulling the container image, we need to set the `SINGULARITY_TMPDIR` and `SINGULARITY_CACHEDIR` environment variables. If these are not set, Singularity assumes that we have lots of space in `/tmp` on the host system - which is not the case. If they are set, Singularity will use this directory for storing temporary files and cached data during container operations. These are mandatory.
+
+Launch the batch script to pull the container image:
+
+```
+sbatch pull-pytorch.sh
+```
+
+Note that this may take ~20-30 minutes to complete.
