@@ -1,0 +1,221 @@
+[
+    {
+        "question": "What is your primary role at AAU in using HPC resources?",
+        "description": "",
+        "options": ["Student", "Researcher", "Lecturer"],
+        "next": [
+            {
+                "question": "What type of project are you working on?",
+                "description": "",
+                "options": ["Deep learning (e.g., neural networks, image classification)", "Data analysis (e.g., large datasets, simulations)", "Collaboration and code development (e.g., Jupyter notebooks, RStudio, web apps)", "I need to transcribe or process text/speech (e.g., audio or video transcription)", "I need to train or test algorithms, simulations, or run CPU-heavy tasks", "Other"],
+                "next": [
+                    {
+                        "question": "Which capability is most crucial for your work?",
+                        "description": "",
+                        "options": ["I need a lot of GPU power for training models", "I need to perform smaller experiments or test models interactively"],
+                        "next": ["AI-LAB", "UCloud"
+                        ]
+                    },
+                    {
+                        "question": "Do you require specialized software or specific applications for your project?",
+                        "description": "",
+                        "options": ["Yes, I need pre-installed software (e.g., Jupyter Notebook, MATLAB, RStudio, etc.)", "No, I want to install and configure my own software environment"],
+                        "next": [
+                            "UCloud",
+                            {
+                                "question": "Do you need to process or store confidential or sensitive data?",
+                                "description": "Not sure what type your data is? </span><a target='_blank' href='https://www.security.aau.dk/data-classification'>Click here</a><span> to learn more about how to classify your information according to the AAU data classification model.</span>",
+                                "options": ["No, I do not need to handle confidential or sensitive data", "Yes, my project involves confidential or sensitive data (<span><a href='https://www.security.aau.dk/data-classification/the-four-data-types-at-aau' target='_blank'>type 2 or 3</a></span>)."],
+                                "next": [
+                                    {
+                                        "question": "Which capability is most crucial for your work?",
+                                        "description": "",
+                                        "options": ["I need a lot of GPU power for training models", "I need to perform smaller experiments or test models interactively"],
+                                        "next": ["AI-LAB", "Strato"
+                                        ]
+                                    },
+                                    "UCloud"
+                                ]
+                            }
+                        ]
+                    },
+                    "UCloud",
+                    "UCloud",
+                    {
+                        "question": "Do you require specialized software or specific applications for your project?",
+                        "description": "",
+                        "options": ["Yes, I need pre-installed software (e.g., Jupyter Notebook, MATLAB, RStudio, etc.)", "No, I want to install and configure my own software environment"],
+                        "next": [
+                            "UCloud",
+                            {
+                                "question": "Do you need to process or store confidential or sensitive data?",
+                                "description": "Not sure what type your data is? </span><a target='_blank' href='https://www.security.aau.dk/data-classification'>Click here</a><span> to learn more about how to classify your information according to the AAU data classification model.</span>",
+                                "options": ["No, I do not need to handle confidential or sensitive data", "Yes, my project involves confidential or sensitive data (<span><a href='https://www.security.aau.dk/data-classification/the-four-data-types-at-aau' target='_blank'>type 2 or 3</a></span>)."],
+                                "next": ["Strato", "UCloud"]
+                            }
+                        ]
+                    },
+                    {
+                        "question": "Do you need help understanding what type of resources your project might require?",
+                        "description": "",
+                        "options": ["Yes, I need help figuring out what kind of computing power I need", "No, I have a good idea of my resource needs"],
+                        "next": [
+                            "CLAAUDIA",
+                            {
+                                "question": "Do you need special hardware (like a GPU, which is great for tasks involving images, videos, or complex calculations)?",
+                                "description": "",
+                                "options": [
+                                    "Yes, I’m working with images, videos, AI, or similar tasks",
+                                    "No, my tasks are more basic, like processing text or analyzing small datasets"
+                                ],
+                                "next": [
+                                    {
+                                        "question": "Do you prefer using simple, easy-to-use tools?",
+                                        "description": "",
+                                        "options": [
+                                            "Yes, I prefer something user-friendly with minimal technical requirements",
+                                            "I’m comfortable using command-line tools and advanced software"
+                                        ],
+                                        "next": ["UCloud", "AI-LAB"]
+                                    },
+                                    "UCloud"
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "question": "What type of project are you working on?",
+                "description": "",
+                "options": ["Deep learning (e.g., neural networks, image classification)", "Data analysis (e.g., large datasets, simulations)", "Collaboration and code development (e.g., Jupyter notebooks, RStudio, web apps)", "I need to transcribe or process text/speech (e.g., audio or video transcription)", "I need to train or test algorithms, simulations, or run CPU-heavy tasks", "Other"],
+                "next": [
+                    {
+                        "question": "Which capability is most crucial for your work?",
+                        "description": "",
+                        "options": ["I need a lot of GPU power for training models", "I need to perform smaller experiments or test models interactively", "I need flexibility and want to configure my own virtual machines"],
+                        "next": [
+                            {
+                                "question": "Are you working on a project that requires supercomputing power for extremely large datasets or very long computations?",
+                                "description": "",
+                                "options": ["No, I believe the university’s resources should be enough for my project (AI Cloud is very powerful, especially for tasks like deep learning, image processing, and parallel computing with large datasets.)", "Yes, I’m working with extremely large datasets, complex simulations, or need long-term supercomputing resources (If you’re unsure, consider if your project involves huge amounts of data or will run for many days or weeks.)"],
+                                "next": ["AI Cloud", "CLAAUDIA"]
+                            },
+                            {
+                                "question": "Do you require specialized software or specific applications for your project?",
+                                "description": "",
+                                "options": ["Yes, I need pre-installed software (e.g., Jupyter Notebook, MATLAB, RStudio, etc.)", "No, I want to install and configure my own software environment"],
+                                "next": [
+                                    "UCloud",
+                                    {
+                                        "question": "Do you need to process or store confidential or sensitive data?",
+                                        "description": "Not sure what type your data is? </span><a target='_blank' href='https://www.security.aau.dk/data-classification'>Click here</a><span> to learn more about how to classify your information according to the AAU data classification model.</span>",
+                                        "options": ["No, I do not need to handle confidential or sensitive data", "Yes, my project involves confidential or sensitive data (<span><a href='https://www.security.aau.dk/data-classification/the-four-data-types-at-aau' target='_blank'>type 2 or 3</a></span>)."],
+                                        "next": ["Strato", "UCloud"]
+                                    }
+                                ]
+                            },
+                            {
+                            "question": "Do you need to process or store confidential or sensitive data?",
+                            "description": "Not sure what type your data is? </span><a target='_blank' href='https://www.security.aau.dk/data-classification'>Click here</a><span> to learn more about how to classify your information according to the AAU data classification model.</span>",
+                            "options": ["No, I do not need to handle confidential or sensitive data", "Yes, my project involves confidential or sensitive data (<span><a href='https://www.security.aau.dk/data-classification/the-four-data-types-at-aau' target='_blank'>type 2 or 3</a></span>)."],
+                            "next": ["Strato", "UCloud"]
+                            }
+                        ]
+                    },
+                    {
+                        "question": "Do you require specialized software or specific applications for your project?",
+                        "description": "",
+                        "options": ["Yes, I need pre-installed software (e.g., Jupyter Notebook, MATLAB, RStudio, etc.)", "No, I want to install and configure my own software environment"],
+                        "next": [
+                            "UCloud",
+                            {
+                                "question": "Do you need to process or store confidential or sensitive data?",
+                                "description": "Not sure what type your data is? </span><a target='_blank' href='https://www.security.aau.dk/data-classification'>Click here</a><span> to learn more about how to classify your information according to the AAU data classification model.</span>",
+                                "options": ["No, I do not need to handle confidential or sensitive data", "Yes, my project involves confidential or sensitive data (<span><a href='https://www.security.aau.dk/data-classification/the-four-data-types-at-aau' target='_blank'>type 2 or 3</a></span>)."],
+                                "next": ["Strato", "UCloud"]
+                            }
+                        ]
+                    },
+                    {
+                        "question": "Do you require specialized software or specific applications for your project?",
+                        "description": "",
+                        "options": ["Yes, I need pre-installed software (e.g., Jupyter Notebook, MATLAB, RStudio, etc.)", "No, I want to install and configure my own software environment"],
+                        "next": [
+                            "UCloud",
+                            {
+                                "question": "Do you need to process or store confidential or sensitive data?",
+                                "description": "Not sure what type your data is? </span><a target='_blank' href='https://www.security.aau.dk/data-classification'>Click here</a><span> to learn more about how to classify your information according to the AAU data classification model.</span>",
+                                "options": ["No, I do not need to handle confidential or sensitive data", "Yes, my project involves confidential or sensitive data (<span><a href='https://www.security.aau.dk/data-classification/the-four-data-types-at-aau' target='_blank'>type 2 or 3</a></span>)."],
+                                "next": ["Strato", "UCloud"]
+                            }
+                        ]
+                    },
+                    "UCloud",
+                    {
+                        "question": "Do you require specialized software or specific applications for your project?",
+                        "description": "",
+                        "options": ["Yes, I need pre-installed software (e.g., Jupyter Notebook, MATLAB, RStudio, etc.)", "No, I want to install and configure my own software environment"],
+                        "next": [
+                            "UCloud",
+                            {
+                                "question": "Do you need to process or store confidential or sensitive data?",
+                                "description": "Not sure what type your data is? </span><a target='_blank' href='https://www.security.aau.dk/data-classification'>Click here</a><span> to learn more about how to classify your information according to the AAU data classification model.</span>",
+                                "options": ["No, I do not need to handle confidential or sensitive data", "Yes, my project involves confidential or sensitive data (<span><a href='https://www.security.aau.dk/data-classification/the-four-data-types-at-aau' target='_blank'>type 2 or 3</a></span>)."],
+                                "next": ["Strato", "UCloud"]
+                            }
+                        ]
+                    },
+                    {
+                        "question": "Do you need help understanding what type of resources your project might require?",
+                        "description": "",
+                        "options": ["Yes, I need help figuring out what kind of computing power I need", "No, I have a good idea of my resource needs"],
+                        "next": [
+                            "CLAAUDIA",
+                            {
+                                "question": "Do you need special hardware (like a GPU, which is great for tasks involving images, videos, or complex calculations)?",
+                                "description": "",
+                                "options": [
+                                    "Yes, I’m working with images, videos, AI, or similar tasks",
+                                    "No, my tasks are more basic, like processing text or analyzing small datasets"
+                                ],
+                                "next": [
+                                    {
+                                        "question": "Do you prefer using simple, easy-to-use tools?",
+                                        "description": "",
+                                        "options": [
+                                            "Yes, I prefer something user-friendly with minimal technical requirements",
+                                            "I’m comfortable using command-line tools and advanced software"
+                                        ],
+                                        "next": ["UCloud", "AI-LAB"]
+                                    },
+                                    "UCloud"
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "question": "What type of compilation resources do your students need for their coursework and research projects?",
+                "description": "",
+                "options": [
+                    "My students are engaged in projects involving training and deploying ML models using TensorFlow and PyTorch.",
+                    "My students use a versatile platform for scientific applications and visualization, prioritizing ease of use and collaboration."
+                ],
+                "next": [
+                        {
+                        "question": "Do you need to work interactively with a graphical interface (e.g., Jupyter Notebooks, RStudio, or similar tools) for your teaching?",
+                        "description": "",
+                        "options": [
+                            "Yes, I need a graphical interface and real-time interaction with my project (e.g., Jupyter, RStudio, etc.)",
+                            "No, I’m fine with submitting tasks through a terminal without real-time interaction"
+                        ],
+                        "next": ["UCloud", "AI-LAB"]
+                    },
+                    "UCloud"
+                ]
+            }
+        ]
+    }
+]
