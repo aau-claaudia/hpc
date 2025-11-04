@@ -1,11 +1,12 @@
 [EuroHPC](https://eurohpc-ju.europa.eu/about/discover-eurohpc-ju_en) is the body responsible for coordinating HPC efforts on the european level. There is a number of calls from which HPC-resources can be acquired. The following is a brief summary of [the official page for EuroHPC access calls](https://eurohpc-ju.europa.eu/supercomputers/supercomputers-access-calls_en).
 
-## EuroHPC facilities
+## Which HPC platforms can be applied to?
 
 Find an overview of the HPC facilities accessible with EuroHPC resources on EuroHPC page ["Our Supercomputers"](https://eurohpc-ju.europa.eu/supercomputers/our-supercomputers_en).
 
-## EPICURE
-Together with a EuroHPC grant it is also possible to apply for HPC expert assistance from [EPICURE](https://epicure-hpc.eu/support-services/). This is in-depth support from an expert user, who will sit down with you and help port your application to the HPC facility, help you with code refactoring, benchmarking and optimization in order to improve performance and enable scaling across multiple nodes.
+!!! tip "EPICURE"
+
+    Together with a EuroHPC grant it is also possible to apply for HPC expert assistance from [EPICURE](https://epicure-hpc.eu/support-services/). This is in-depth support from an expert user, who will sit down with you and help port your application to the HPC facility, help you with code refactoring, benchmarking and optimization in order to improve performance and enable scaling across multiple nodes.
 
 ## Applicatons to EuroHPC
 
