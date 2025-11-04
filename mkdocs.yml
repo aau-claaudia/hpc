@@ -122,6 +122,26 @@ nav:
               - Checkpointing: ai-lab/guides/checkpointing.md
               - Requeuing jobs: ai-lab/guides/requeuing-jobs.md
               - CI/CD with GitHub Actions: ai-lab/guides/ci-cd-with-github-actions.md
+          - Workshop:
+              - 1. Introduction to AI-LAB: ai-lab/workshop/1-Introduction-to-ai-lab.md
+              - 2. What is AI-LAB?: ai-lab/workshop/2-what-is-ai-lab.md
+              - 3. AI-LAB Under the Hood: ai-lab/workshop/3-ai-lab-under-the-hood.md
+              - 4. The AI-LAB Workflow: ai-lab/workshop/4-the-ai-lab-workflow.md
+              - 5. Logging into AI-LAB: ai-lab/workshop/5-logging-into-ai-lab.md
+              - 6. File Handling on AI-LAB: ai-lab/workshop/6-file-handling-on-ai-lab.md
+              - 7. Essential Linux Commands: ai-lab/workshop/7-essential-linux-commands.md
+              - 8. Transferring Files: ai-lab/workshop/8-transferring-files.md
+              - 9. Slurm: ai-lab/workshop/9-slurm.md
+              - 10. Two Ways of Running Jobs: ai-lab/workshop/10-two-ways-of-running-jobs.md
+              - 11. Exercise 1: ai-lab/workshop/11-exercise-1.md
+              - 12. Creating a job script: ai-lab/workshop/12-creating-a-sbatch-script.md
+              - 13. Exercise 2: ai-lab/workshop/13-exercise-2.md
+              - 14. Allocating Resources: ai-lab/workshop/14-allocating-resources.md
+              - 15. Containers: ai-lab/workshop/15-containers.md
+              - 16. Getting Containers: ai-lab/workshop/16-getting-containers.md
+              - 17. Using Containers: ai-lab/workshop/17-using-containers.md
+              - 18. Exercise 3: ai-lab/workshop/18-exercise-3.md
+              - 19. Final pointers: ai-lab/workshop/19-final-pointers.md
 
 #   - TAAURUS:
 #       - About TAAURUS: taaurus/index.md

@@ -198,11 +198,14 @@ Configure Singularity for building:
 
 ```bash
 # Set up directories
-export SINGULARITY_TMPDIR="$HOME/.singularity/tmp/"
-export SINGULARITY_CACHEDIR="$HOME/.singularity/cache/"
+mkdir -p $HOME/.singularity/tmp
+mkdir -p $HOME/.singularity/cache
 
-# Create directories
-mkdir -p $SINGULARITY_CACHEDIR $SINGULARITY_TMPDIR
+export SINGULARITY_TMPDIR=$HOME/.singularity/tmp
+export SINGULARITY_CACHEDIR=$HOME/.singularity/cache
+export TMPDIR=$HOME/.singularity/tmp
+export TEMP=$HOME/.singularity/tmp
+export TMP=$HOME/.singularity/tmp
 ```
 
 #### Step 3: Build the Container
@@ -210,7 +213,7 @@ mkdir -p $SINGULARITY_CACHEDIR $SINGULARITY_TMPDIR
 Build your container using `srun`:
 
 ```bash
-srun singularity build --fakeroot my_container.sif my_container.def
+srun --mem=40G singularity build --fakeroot --tmpdir $SINGULARITY_TMPDIR my_container.sif my_container.def
 ```
 
 This process may take 10-30 minutes depending on the complexity.
