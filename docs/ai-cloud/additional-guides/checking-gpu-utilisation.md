@@ -1,10 +1,22 @@
-## Checking GPU usage
-
 When you have launched a job on a GPU, it is good practice to verify that it is indeed utilising the GPU.
 
 We can do this by logging in to the compute node, and calling the `nvidia-smi` command.
 
-Start by locating the node, that your job is running on. Then log in to the node:
+Start by locating the node, that your job is running on:
+```
+squeue --me
+
+```
+
+Which returns the following table:
+```
+             JOBID  PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
+            768059  prioritiz  aicloud   nobody  R    0:06:02      1 a256-t4-01
+```
+
+In the column `NODELIST(REASON)` read which node your job is running on.
+
+Then log in to the node:
 
 ```
 ssh -l user@domain.aau.dk a256-t4-01.srv.aau.dk
@@ -32,9 +44,9 @@ Which prints a table:
 +-----------------------------------------+------------------------+----------------------+
 ```
 
-This table is a snapshot of the GPU devices (physical GPU's) allocated to your Slurm job. The values represent measures of a sampling period of 1 second.
+This table is a snapshot of the GPU devices (physical GPU's) allocated to your Slurm job, and the values represent measures of a sampling period of 1 second.
 
-the most important parameters to note:
+The most important parameters to note are:
 
 * **Volatile GPU-Util**: How much of the sampling period the GPU was actively computing. As computations normally take place in batches, it is normal to see this value fluctuate.
 
