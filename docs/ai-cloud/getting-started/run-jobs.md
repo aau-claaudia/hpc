@@ -89,12 +89,12 @@ In order to launch this job, we can reference it in our batch script:
 #SBATCH --time=00:01:00
 
 # The container image we want to launch:
-container="/home/container/pytorch/pytorch_25.04.sif"
+container_image="/home/container/pytorch/pytorch_25.04.sif"
 
 # The file we want to process on the compute node:
 file="is-available.py"
 
-singularity exec --nv $container python3 $file
+singularity exec --nv $container_image python3 $file
 ```
 
 We can now launch the job with:
@@ -122,7 +122,7 @@ True
 
 Proving that we did indeed manage to launch the job on a GPU node.
 
-!!! tip "Bonus tip: Launch unattended jobs *on-the-fly**"
+!!! tip "Bonus tip: Launch unattended jobs *on-the-fly*"
     It's also possible to launch unattended jobs without a batch script. To do this, we can simply enter the `sbatch` command (optionally with a resource specification), and then wrapping the command we want to execute:
     
     ```
@@ -154,30 +154,6 @@ Our recommendation: Try to use `sbatch` as much as possible.
 
 !!! info "More Slurm commands"
     You can find [additional Slurm commands](../additional-guides/checking-the-queue.md) available to customize your job submissions, such as setting the time limit for a job, specifying the number of CPUs or GPUs, and more.
-
-
-<hr>
-
-
-## Checking GPU usage
-
-When you have launched a job on a GPU, it is good practice to verify that it is indeed utilising the GPU.
-
-We can do this by logging in to the compute node, and calling the `nvidia-smi` command.
-
-Start by locating the node, that your job is running on. Then log in to the node:
-
-```
-ssh -l user@domain.aau.dk a256-t4-01.srv.aau.dk
-```
-
-And call:
-
-```
-nvidia-smi
-```
-
-You should be looking for the parameter "Volatile GPU util". This number should be larger than 0 %.
 
 
 <hr>
