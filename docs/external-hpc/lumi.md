@@ -21,7 +21,7 @@ Acquiring LUMI-resources should <u>always</u> be a two step proces:
 
 2. **<u>Acquire resources for actual project work</u>:** 
 
-    When you have demonstrated that your applicaiton was fit for the system, you may reach out for a larger grant.
+    When you have demonstrated that your applicaiton is fit for the system, you can reach out for a larger grant.
 
     Make use of one of the following:
 
@@ -30,6 +30,16 @@ Acquiring LUMI-resources should <u>always</u> be a two step proces:
       - **DeiC's national resource pool**: Read more on [our page dedicated to this option](/external-hpc/deic-resources/#applications-to-the-national-resource-pool).
 
       - **EuroHPC**: Read more on [our page dedicated to this option](/external-hpc/eurohpc-resources/).
+
+!!! info "LUMI's resource cutter"
+
+    In order to ensure consistency in the availability of resources, LUMI has imposed a *resource cutting* mechanism that affects projects that run for more than 6 months (ie. projects with a shorter lifespan are not affected). If 40 % of the allocated resources have not been consumed within 6 months, an amount up to 40 % is cut from the total allocation. To clarify:
+
+    * If the project has consumed 39 % of the total allocation after 6 months, 1 % is cut.
+    
+    * If the project has consumed 45 % of the total allocation after 6 months, nothing is cut.
+
+    * If the project's lifespan is 6 months or shorter, nothing is cut.
 
 
 ### User support

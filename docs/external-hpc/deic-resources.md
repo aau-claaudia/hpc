@@ -5,7 +5,7 @@
 
  - Another portion is reserved for a **national resource pool**, from which researchers can apply twice a year.
 
-## National HPC facilities
+## Which HPC platforms can be applied to?
 
 The national HPC facilities are those in which DeiC has a stake and are provided to all universities via the national and local resource pools.
 

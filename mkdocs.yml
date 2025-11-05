@@ -95,7 +95,7 @@ nav:
               - Monitoring commands:
                   - Checking the queue: ai-cloud/additional-guides/checking-the-queue.md
                   - Checking the status of compute nodes: ai-cloud/additional-guides/checking-the-status-of-compute-nodes.md
-                  # - Checking GPU usage: ai-cloud/additional-guides/checking-gpu-usage.md
+                  - Checking GPU utilisation: ai-cloud/additional-guides/checking-gpu-utilisation.md
               - Application examples:
                   - Batch LLM Inference: ai-cloud/additional-guides/batch-llm-inference.md
 
