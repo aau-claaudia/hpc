@@ -99,6 +99,7 @@ Host ailab-2
     User user@student.aau.dk
 
 # AI-LAB via SSH Gateway (for off-campus access)
+# For this to work, you need to have set up AAU MFA (https://www.its.aau.dk/vejledninger/mfa)
 Host ailab-vpn
     HostName ailab-fe01.srv.aau.dk
     User user@student.aau.dk
@@ -112,7 +113,7 @@ Save the file and test your new shortcuts:
 ```bash
 ssh ailab-1
 ssh ailab-2
-ssh ailab-vpn  # Connect via VPN (off-campus)
+ssh ailab-vpn  # Connect via VPN (off-campus) # For this to work, you need to have set up AAU MFA (https://www.its.aau.dk/vejledninger/mfa)
 ```
 
 Now you can log in with just `ssh ailab-1` instead of the full command!
