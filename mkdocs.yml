@@ -79,7 +79,10 @@ nav:
               - Container images: ai-cloud/getting-started/container-images.md
               - Run jobs: ai-cloud/getting-started/run-jobs.md
           - Additional guides:
-              - Understanding the Linux CLI: ai-cloud/additional-guides/understanding-linux-cli.md
+              - Using the Linux CLI: 
+                  - Understanding the Linux CLI: ai-cloud/additional-guides/understanding-linux-cli.md
+                  - Edit text files with Nano: ai-cloud/additional-guides/edit-text-files-with-nano.md
+                  - Useful commands: ai-cloud/additional-guides/useful-commands.md
               - Directories overview: ai-cloud/additional-guides/directories-overview.md
               - Container guides:
                   - Pulling container images from the internet: ai-cloud/additional-guides/download-container-images.md

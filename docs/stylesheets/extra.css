@@ -1936,3 +1936,22 @@ footer .links li img {
 .label-student {
   background-color: #27AE60; /* Green */
 }
+
+/* Custom formatting for displaying nano */
+
+.fixed-width-4-nano pre > code {
+      display: block;
+      width: 750px;
+      max-width: 750px;
+      overflow-x: auto;
+}
+
+/* Style for the first line */
+.fixed-width-4-nano pre > code::first-line {
+      background-color: black; /* Black background */
+      color: white;           /* White text */
+}
+
+.fixed-width-4-nano pre > code::before {
+      content: none; /* Hides the pseudo-element if it's added as icons */
+}

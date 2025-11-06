@@ -4,7 +4,7 @@ Jobs can be delegated to compute nodes, by submitting them to the queueing mecha
 * `srun`: the output is printed directly to the console.
 * `sbatch`: the output is written to a file.
 
-## Run attended jobs with srun
+## Run jobs with srun
 
 First we will be exploring how we can launch attended jobs with the srun command
 
@@ -65,7 +65,7 @@ srun: job 767221 has been allocated resources
 True
 ```
 
-## Run unattended jobs with sbatch
+## Run jobs with sbatch
 
 In most cases we do not want to print the output directly to the console, but to write it to a file. We can do this with an batch script, which we can launch with the `sbatch` command.
 
