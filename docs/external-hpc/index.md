@@ -18,7 +18,7 @@ In addition to the HPC platforms that we provide locally at AAU, users can gain 
 
 * :flag_dk: National resource pool
 * :material-file-document: Available via applications to DeiC calls (abbr. Danish e-infrastructure Consortium).
-* Learn more about this oppurtunity :octicons-arrow-right-16: [External HPC > DeiC HPC resources](/external-hpc/deic-resources/).
+* Learn more :octicons-arrow-right-16: [DeiC HPC resources](/external-hpc/deic-resources/).
 
 !!! abstract "Open calls for DeiC's National HPC ressources"
 
@@ -30,7 +30,7 @@ In addition to the HPC platforms that we provide locally at AAU, users can gain 
 
 * :flag_eu: European resource pool 
 * :material-file-document: Available via applications to EuroHPC calls.
-* Learn more about this oppurtunity :octicons-arrow-right-16: [EuroHPC resources](/external-hpc/eurohpc-resources/)
+* Learn more :octicons-arrow-right-16: [EuroHPC resources](/external-hpc/eurohpc-resources/)
 
 !!! abstract "Open calls for EuroHPC ressources"
 
