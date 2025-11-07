@@ -53,11 +53,22 @@ Find the most suitable system for your project. You can also complete the [HPC D
     </div>
 </div>
 
-## News
-!!! info "New: Strato usage management now in effect"
-    **Notice:** Strato now has a new [usage management system](/strato/usage-management/) in effect from September 16th. This system automatically manages inactive servers and storage to ensure fair resource availability for all users.
 
-    Please review the [Strato Usage Management page](/strato/usage-management/) for details on how this affects your virtual machines and data retention.
+!!! success "News: Upcoming Free Webinars – Learn about UCloud & Dictaphone"
+    **Title:** Record and Transcribe with Dictaphone
+    **Date:** November 26, 2025  
+    **Time:** 12:30–13:30  
+    **What you'll learn:**  
+    Get a hands-on introduction to the secure interview recording & transcription app, **Dictaphone**, on UCloud—ideal for researchers working with interviews.  
+    [:octicons-arrow-right-24: Sign up for Dictaphone webinar](https://www.researcher.aau.dk/webinar-learn-to-record-and-transcribe-with-the-dictaphone-application-e152840)
+    
+    **Title:** Get Started with UCloud  
+    **Date:** November 19, 2025  
+    **Time:** 13:00–14:30  
+    **What you'll learn:**  
+    A hands-on introduction to UCloud, covering key features, new tools, and how you can accelerate your research with user-friendly HPC resources.  
+    [:octicons-arrow-right-24: Sign up for UCloud webinar](https://www.researcher.aau.dk/webinar-get-started-with-ucloud-e152847)
+
    
 <div class="video-container">
   <iframe src="https://panopto.aau.dk/Panopto/Pages/Embed.aspx?id=cbfb191c-fde8-4dec-998e-b2b800ba6b03&amp;autoplay=false&amp;offerviewer=true&amp;showtitle=false&amp;showbrand=true&amp;captions=false&amp;interactivity=all"

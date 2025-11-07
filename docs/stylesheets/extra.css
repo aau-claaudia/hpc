@@ -1850,73 +1850,49 @@ footer .links li img {
 
 
 
-.md-typeset .admonition.success, .md-typeset details.success {
-  border-color: #1e90ff;
-  background: linear-gradient(90deg, #e0f7fa 0%, #e8f5e9 100%);
-  border-width: 0px;
-  border-style: solid;
-  border-radius: 16px;
-  box-shadow: 0 6px 32px 0 rgba(33, 26, 81, 0.10), 0 1.5px 6px 0 rgba(33, 26, 81, 0.10);
-  font-size: 18px;
-  padding: 32px 32px 32px 48px;
-  margin: 32px 0;
-  position: relative;
-  overflow: hidden;
-  animation: big-news-pop 0.7s cubic-bezier(.68,-0.55,.27,1.55);
+/* Main box styling – matches .custom-grid-item */
+.md-typeset .admonition.success,
+.md-typeset details.success {
+  background: rgba(0,0,0,0.04);
+  border: 1px solid rgba(0,0,0,0.05);
+  border-radius: 10px;
+  padding: 24px;
+  margin: 28px 0;
+  color: #242424;
+  font-size: 17px;
 }
 
-@keyframes big-news-pop {
-  0% { transform: scale(0.95) translateY(30px); opacity: 0; }
-  70% { transform: scale(1.03) translateY(-8px); opacity: 1; }
-  100% { transform: scale(1) translateY(0); opacity: 1; }
+/* Title style – blue text, no background, no shadow, no padding */
+.md-typeset .success > .admonition-title,
+.md-typeset .success > summary {
+  font-size: 1.25em !important;
+  font-weight: 700 !important;
+  color: #1e2a7b !important;
+  background: none !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  margin-bottom: 12px !important;
 }
 
-.md-typeset .success>.admonition-title, .md-typeset .success>summary {
-  background: linear-gradient(90deg, #15157c 0%, #3F59E4 100%);
-  color: #fff;
-  font-size: 1.6em;
-  font-weight: 800;
-  letter-spacing: 1px;
-  padding: 24px 32px 24px 80px;
-  border-radius: 16px 16px 0 0;
-  margin: -32px -32px 24px -48px;
-  position: relative;
-  box-shadow: 0 2px 12px 0 rgba(33, 26, 81, 0.08);
-  min-height: 64px;
-  display: flex;
-  align-items: center;
+/* ✅ Remove icon completely */
+.md-typeset .success > .admonition-title::before,
+.md-typeset .success > summary::before {
+  content: "" !important;
+  mask-image: none !important;
+  -webkit-mask-image: none !important;
+  background: none !important;
+  width: 0 !important;
+  height: 0 !important;
+  display: none !important;
 }
 
-.md-typeset .success>.admonition-title:before, .md-typeset .success>summary:before {
-  content: "🟢";
-  font-size: 0em;
-  position: absolute;
-  left: 32px;
-  top: 50%;
-  transform: translateY(-50%);
-  background: none;
-  height: auto;
-  width: auto;
-  box-shadow: none;
-}
+/* Remove marker for collapsible lists */
+.md-typeset details.success[open] > summary { list-style: none; }
+.md-typeset details.success > summary::-webkit-details-marker { display: none; }
 
-[dir=ltr] .md-typeset .admonition-title, [dir=ltr] .md-typeset summary {
-  padding-left: 2.4rem;
-  padding-top: 8px;
-}
 
-.md-typeset .success>.admonition-title:after, .md-typeset .success>summary:after {
-  color: #fff;
-  content: "✨";
-  font-size: 1.5em;
-  margin-left: 16px;
-  vertical-align: middle;
-}
 
-.md-typeset .admonition.success:focus-within, .md-typeset details.success:focus-within {
-  box-shadow: 0 0 0 4px #3F59E433;
-  outline: none;
-}
 .label {
     display: inline-block;
     font-size: 0.85em;
