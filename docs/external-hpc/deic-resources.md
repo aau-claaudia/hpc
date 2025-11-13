@@ -1,17 +1,19 @@
 
  [DeiC](https://www.deic.dk/en/about-deic) is the overarching national body responsible for coordinating national HPC efforts on across all the danish universities. Among other things, they are responsible for distributing compute time on national HPC facilities.
 
- - DeiC grants a portion of it's resources to the danish universities for them to hand out. These are the **local resources** to the national HPC facilities.
+ - DeiC grants a portion of it's resources to the danish universities, for the purpose of providing direct access for their researchers. These are the **local resources** to the national HPC facilities.
 
- - Another portion is reserved for a **national resource pool**, from which researchers can apply twice a year.
+ - Another portion is reserved for a larger **national resource pool**, from which researchers can apply twice a year.
 
-## Which HPC platforms can be applied to?
+!!! info "Which HPC platforms can be applied to?"
 
-The national HPC facilities are those in which DeiC has a stake and are provided to all universities via the national and local resource pools.
+    The national HPC facilities are those in which DeiC has a stake and are provided to all universities via the national and local resource pools.
+    
+    - DeiC Interactive HPC: [UCloud](/ucloud)
+    - DeiC Throughput HPC: [Computerome](https://computerome.dk/about), [GenomeDK](https://genome.au.dk/), [Sophia](https://dtu-sophia.github.io/docs/)
+    - LUMI Capability HPC: [LUMI](/external-hpc/lumi)
 
-- DeiC Interactive HPC: [UCloud](/ucloud)
-- DeiC Throughput HPC: [Computerome](https://computerome.dk/about), [GenomeDK](https://genome.au.dk/), [Sophia](https://dtu-sophia.github.io/docs/)
-- LUMI Capability HPC: [LUMI](/external-hpc/lumi)
+<hr>
 
 ## Applications to the local resource pool
 
@@ -35,6 +37,8 @@ In the beginning of every year CLAAUDIA receives an amount of resources to hand 
 !!! questions "Questions regarding the local pool for national HPC facilities"
     Reach out to CLAAUDIA via [serviceportal.aau.dk](https://aau.service-now.com/serviceportal?id=sc_cat_item&sys_id=34e8536083cfc21053711d447daad30a).
 
+<hr>
+
 ## Applications to the national resource pool
 
 **Objective:** To allow researchers to apply for medium-large sized resource grants
@@ -56,3 +60,5 @@ The national application calls are always announced on [DeiC's website](https://
     If you have questions about <u>an application</u> to a national grant - reach out to CLAAUDIA via [serviceportal.aau.dk](https://aau.service-now.com/serviceportal?id=sc_cat_item&sys_id=34e8536083cfc21053711d447daad30a).
 
     If you have questions regarding <u>an existing</u> national grant - reach out to DeiC's HPC back office through their [service desk](https://deic-backoffice.atlassian.net/servicedesk/customer/portal/1).
+
+<hr>
