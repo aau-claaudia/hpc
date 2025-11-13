@@ -38,6 +38,8 @@
     *(Sensitive data can only be added to registered and approved project folders and must **NOT** be placed in My Workspace.)*
 
 
+### Sensitive data only allowed in dedicated projects 
+Sensitive data may only be handled within a dedicated UCloud research project and must **never** be stored or processed inside your personal "My Workspace." This ensures that all sensitive data is properly registered, tracked, and linked to a project with a workzone number for compliance.
 
 <br>
 
