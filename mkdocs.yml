@@ -57,9 +57,7 @@ nav:
           - Application guides:
               - ChatUI: ucloud/guides/application-guides/ChatUI/index.md
               - Transcriber: ucloud/guides/application-guides/transcriber/index.md
-#                  - Transcriber interface: ucloud/guides/application-guides/transcriber/transcriber-interface.md
-#                  - Transcriber: ucloud/guides/application-guides/transcriber/index.md
-#                  - Transcriber batch videos: ucloud/guides/application-guides/transcriber/transcriber-video.md
+              - Dictaphone: ucloud/guides/application-guides/Dictaphone.md
               - Voyant Tools: ucloud/guides/application-guides/Voyant-Tools.md
           - Advanced guides:
               - Connect Neo4j to VS Code: ucloud/guides/advanced-guides/connect-neo4j-to-vscode.md

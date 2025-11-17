@@ -107,6 +107,8 @@ Select the guide of your choice below for step-by-step instructions for each ver
     #### 1.5 Downloading your transcriptions
 
     - **While the job is running**: You can download completed transcriptions directly from the app, either one by one or as a zip file. When downloading individual files, you can select your preferred output format (TXT, DOCX, VTT, etc.). If you choose to download as a zip file, you'll receive all available output formats for each transcription. 
+        - **Important:** If you are working with confidential or sensitive data, remember that you may **not** download it directly to any personal or nonapproved devices.
+      
       > **Note:** For better readability and to save time on post-processing, you can download a merged speaker format of the transcription that combines consecutive text entries from the same speaker into natural, flowing sentences. This feature helps streamline your workflow by reducing the need for manual text editing.
     ![Download transcribed files](/assets/img/UCloud/TranscriberguideGUI4.jpg)   
     
