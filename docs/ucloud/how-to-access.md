@@ -8,6 +8,9 @@ All Aalborg University users automatically have access to UCloud and can simply 
 
 ## Projects
 If you require a larger CPU quota, access to GPU resources, a virtual machine, or need to work with sensitive data, you can apply for a project using CLAAUDIA’s local resources.
+
+**Important:** If your project involves sensitive data, you must register your data with the Grant and Contract Unit. You can find detailed instructions for this process in our [guide on handling sensitive data on UCloud](/ucloud/guides/sensitive-data-on-ucloud/).
+
 The diagram below outlines the process for getting your project approved and set up on UCloud:
 
 <a href="https://forms.office.com/e/8Khbr1TJGC" target="_blank" style="display: inline-block; background: #3F59E4; color: #fff; padding: 0.7em 1.5em; border-radius: 8px; font-weight: 600; text-decoration: none; font-size: 1em; margin: 0.5em 0;">
