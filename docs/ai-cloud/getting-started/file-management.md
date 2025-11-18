@@ -1,16 +1,38 @@
 
 ### Transfer files between a server and a local computer
 
+On this page you will learn how to transfer files from your local computer to AI Cloud.
+
+
 ===+ "Windows"
-	You can transfer files between your local computer and AI Cloud using [WinSCP](https://winscp.net/eng/download.php). Other popular solutions are [PuTTY](https://www.putty.org/) and [FileZilla](https://filezilla-project.org/). Alternatively, you can install [OpenSSH](https://learn.microsoft.com/en-us/windows-server/administration/openssh/openssh_install_firstuse?tabs=gui) to use the `scp` command, as shown for [Linux/MacOS](#__tabbed_1_2) users.
 
-	When you open WinSCP, you will be greeted by a *Login* modal. Follow the instructions in the image above to establish a connection to the server.
-	![Screenshot of WinSCP setup](/assets/img/ai-cloud/winscp-setup.png)
-		
-	You can now drag and drop files between your local computer and the AI Cloud platform.
+    From a Windows PC you can transfer files to AI Cloud using [WinSCP](https://winscp.net/eng/download.php) - or in the command line using `scp`.
 
-	!!! info
-		You might want to display hidden files in WinSCP (such as files starting with a dot on Linux systems). Go to Options → Preferences... → Panels and turn on "Show hidden files".
+	1. Start by downloading and installing [WinSCP](https://winscp.net/eng/download.php).
+
+    2. Open WinSCp - this will greet you with a *login interface*.
+
+	   ![Screenshot of WinSCP setup](/assets/img/ai-cloud/winscp-setup.png)
+
+    Configure the connection as follows:
+
+	- **Host name**: `ai-fe02.srv.aau.dk`
+	- **User name**: Your AAU email address
+	- **Password**: Your AAU password
+
+    3. Click **Login** and a new window should open.
+
+    ### Success! 
+	You should now be able to drag and drop files between your local computer and AI Cloud.
+
+    <hr>
+
+	!!! tip
+		Yay want to display hidden files in WinSCP (such as files starting with a dot on Linux systems). Go to Options → Preferences... → Panels and turn on "Show hidden files".
+
+    !!! failure "Can't login?"
+        Please keep in mind that this a network operation, where files are transferred over the SSH protocol. Before attempting to reach the server with WinSCP, please ensure that you are conencted to the AAU network - either by being physically on campus grounds or using the [VPN service](https://www.en.its.aau.dk/instructions/vpn)
+
 
 ===+ "Linux/MacOS"
 
@@ -35,6 +57,9 @@
 	Replace `user@domain.aau.dk` with your AAU email address.
 
 	Here, `.` represents the current directory on your local computer.
+
+    !!! error
+        Please keep in mind that this a network operation, where files are transferred over the SSH protocol. Before attempting to reach the server with WinSCP, please ensure that you are conencted to the AAU network - either by being physically on campus grounds or using the [VPN service](https://www.en.its.aau.dk/instructions/vpn)
 
 
 <hr>
