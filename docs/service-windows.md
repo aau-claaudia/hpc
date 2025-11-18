@@ -53,10 +53,10 @@ A service window will take place on the following dates:
 
 **Be sure to save your work** no later than the end of the day before the service window begins, as all virtual machines will be automatically shut down during the service window and any unsaved data will be lost.
 
-!!! warning "New Usage Management Process - Effective 16th September 2025"
+Usage Management Process 
     
     **1. Servers will NOT restart automatically after service windows**
-        - All servers in the AAU availability zone will be shut down during service windows and will not restart automatically, unless they have been registered for automatic restart before the service window.
+        - All servers in the *AAU availability zone* will be shut down during service windows and will not restart automatically, unless they have been registered for automatic restart before the service window. 
         - You can easily restart your servers manually after the service window.
 
     **2. Automatic server resizing after 48 hours of inactivity**
