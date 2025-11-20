@@ -76,6 +76,24 @@ Basic rule: keep your volumes, delete your unused VMs, and only run a VM with th
 Please consult the page ['Delete and restart an instance from the volume'](strato/best-practice-guides/delete-and-restart-an-instance-from-the-volume/)
 for instructions on how to do this.
 
+**Apply for automatic restart of your Strato server** 
+You can request automatic restarts for your server if it meets all of the following conditions:
+    - The server is part of a **Strato Project**
+    - You can provide a **valid motivation** for needing automatic restart
+    - The server is in one of these availability zones:
+        - **AAU**
+        - **AAU-T4**
+        - **AAU-A10**
+        - **AAU-A40**
+
+Servers running in personal project spaces (such as default quota projects, e.g. `GK83DJ@aau.dk`) **cannot be included**.  
+If you want to move your project, you can find instructions on [how to apply for a Strato Project](https://hpc.aau.dk/strato/how-to-access/)
+
+If your server meets these requirements, you can apply to be included in the automatic restart list by filling out the following form **before November 25th**:  
+[Strato service window: Automatic server restart inclusion form](https://forms.office.com/e/0geuYrC1dZ)
+
+
+
 
 Link to Strato's
 web-interface: [strato-new.claaudia.aau.dk](https://strato-new.claaudia.aau.dk/)
