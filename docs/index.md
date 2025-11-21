@@ -60,14 +60,14 @@ Find the most suitable system for your project. You can also complete the [HPC D
     **Time:** 12:30–13:30  
     **What you'll learn:**  
     Get a hands-on introduction to the secure interview recording & transcription app, **Dictaphone**, on UCloud—ideal for researchers working with interviews.  
-    [:octicons-arrow-right-24: Sign up for Dictaphone webinar](https://www.researcher.aau.dk/webinar-learn-to-record-and-transcribe-with-the-dictaphone-application-e152840)
+    [:octicons-arrow-right-24: Read more and sign up for Dictaphone webinar](https://www.researcher.aau.dk/webinar-learn-to-record-and-transcribe-with-the-dictaphone-application-e152840)
     
-    **Title:** Get Started with UCloud  
-    **Date:** November 19, 2025  
-    **Time:** 13:00–14:30  
+    **Title:** Building intelligent knowledge assistants with RAGFlow on UCloud  
+    **Date:** December 4, 2025  
+    **Time:** 13:00–14:00  
     **What you'll learn:**  
-    A hands-on introduction to UCloud, covering key features, new tools, and how you can accelerate your research with user-friendly HPC resources.  
-    [:octicons-arrow-right-24: Sign up for UCloud webinar](https://www.researcher.aau.dk/webinar-get-started-with-ucloud-e152847)
+    Join us for a hands-on webinar introducing RAGFlow, an advanced Retrieval-Augmented Generation (RAG) platform available on UCloud. RAGFlow enables you to build your own intelligent assistants by combining document retrieval, embeddings, and large language models – all within a user-friendly visual interface.
+    [:octicons-arrow-right-24: Read more and sign up for UCloud webinar](https://interactivehpc.dk/?p=2315)
 
    
 <div class="video-container">
