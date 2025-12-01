@@ -27,6 +27,9 @@
 
   > **Note**:  As project applicant you will be the Principal Investigator for the project, and you should be aware of your roles and responsibilities.
 
+### Providers
+Sensitive data must **only** be handled on SDU/K8s provider hardware. For more information about the differences between providers, see the [provider page](docs\ucloud\providers.md).
+
 
 ### Data classification on UCloud
 - On Ucloud you can work with all categories of data form AAUs data classification model.
@@ -38,6 +41,8 @@
     *(Sensitive data can only be added to registered and approved project folders and must **NOT** be placed in My Workspace.)*
 
 
+### Sensitive data only allowed in dedicated projects 
+Sensitive data may only be handled within a dedicated UCloud research project and must **never** be stored or processed inside your personal "My Workspace." This ensures that all sensitive data is properly registered, tracked, and linked to a project with a workzone number for compliance.
 
 <br>
 

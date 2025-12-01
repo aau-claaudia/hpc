@@ -53,11 +53,22 @@ Find the most suitable system for your project. You can also complete the [HPC D
     </div>
 </div>
 
-## News
-!!! info "New: Strato usage management now in effect"
-    **Notice:** Strato now has a new [usage management system](/strato/usage-management/) in effect from September 16th. This system automatically manages inactive servers and storage to ensure fair resource availability for all users.
 
-    Please review the [Strato Usage Management page](/strato/usage-management/) for details on how this affects your virtual machines and data retention.
+!!! success "News: Upcoming Free Webinars – Learn about UCloud & Dictaphone"
+    **Title:** Record and Transcribe with Dictaphone
+    **Date:** November 26, 2025  
+    **Time:** 12:30–13:30  
+    **What you'll learn:**  
+    Get a hands-on introduction to the secure interview recording & transcription app, **Dictaphone**, on UCloud—ideal for researchers working with interviews.  
+    [:octicons-arrow-right-24: Read more and sign up for Dictaphone webinar](https://www.researcher.aau.dk/webinar-learn-to-record-and-transcribe-with-the-dictaphone-application-e152840)
+    
+    **Title:** Building intelligent knowledge assistants with RAGFlow on UCloud  
+    **Date:** December 4, 2025  
+    **Time:** 13:00–14:00  
+    **What you'll learn:**  
+    Join us for a hands-on webinar introducing RAGFlow, an advanced Retrieval-Augmented Generation (RAG) platform available on UCloud. RAGFlow enables you to build your own intelligent assistants by combining document retrieval, embeddings, and large language models – all within a user-friendly visual interface.
+    [:octicons-arrow-right-24: Read more and sign up for UCloud webinar](https://interactivehpc.dk/?p=2315)
+
    
 <div class="video-container">
   <iframe src="https://panopto.aau.dk/Panopto/Pages/Embed.aspx?id=cbfb191c-fde8-4dec-998e-b2b800ba6b03&amp;autoplay=false&amp;offerviewer=true&amp;showtitle=false&amp;showbrand=true&amp;captions=false&amp;interactivity=all"

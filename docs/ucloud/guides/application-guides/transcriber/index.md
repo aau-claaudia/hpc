@@ -25,6 +25,11 @@
 ### What is Transcriber
 Transcriber is an application on [UCloud](https://cloud.sdu.dk/app/jobs/create?app=transcriber-gui) designed to automatically convert audio and video files into accurate, readable text. It leverages advanced speech recognition models to transcribe spoken content, making it easier to analyze, search, and share information from interviews, lectures, meetings, podcasts, and other recordings. Transcriber helps researchers save time and effort by providing fast, reliable transcriptions directly within the secure UCloud platform — no technical expertise required. Whether you need simple text output or more advanced features like speaker identification and multiple file formats, Transcriber streamlines the process of turning your recordings into useful, accessible documents.
 
+### Handling sensitive data
+  **Review UCloud guidelines:**  
+   Please make sure to review and follow our [guidelines for handling sensitive data](https://hpc.aau.dk/ucloud/guides/sensitive-data-on-ucloud/) to ensure you understand how to work securely and meet all data protection requirements when using UCloud.
+
+
 #### Which Transcriber should I use?
 
 There are two ways to use Transcriber on UCloud:
@@ -102,6 +107,8 @@ Select the guide of your choice below for step-by-step instructions for each ver
     #### 1.5 Downloading your transcriptions
 
     - **While the job is running**: You can download completed transcriptions directly from the app, either one by one or as a zip file. When downloading individual files, you can select your preferred output format (TXT, DOCX, VTT, etc.). If you choose to download as a zip file, you'll receive all available output formats for each transcription. 
+        - **Important:** If you are working with confidential or sensitive data, remember that you may **not** download it directly to any personal or nonapproved devices.
+      
       > **Note:** For better readability and to save time on post-processing, you can download a merged speaker format of the transcription that combines consecutive text entries from the same speaker into natural, flowing sentences. This feature helps streamline your workflow by reducing the need for manual text editing.
     ![Download transcribed files](/assets/img/UCloud/TranscriberguideGUI4.jpg)   
     
@@ -265,12 +272,6 @@ Select the guide of your choice below for step-by-step instructions for each ver
     - When enabled, the app generates additional files with merged text in **docx**, **dote**, **json**, and **csv** formats. These files are named `filename_merged` and are created alongside the original files.
       
       >  To make the option visible, scroll down in the optional parameter window.
-
-    ### Do you need more guidance? 
-
-    Check out our in-depth step-by-step guide that takes you the very start of getting started on UCloud to producing your final transcribed document.
-    **[Download the complete Transcriber batch user guide (PDF)](/assets/transcriber-userguide-1-2.pdf)**
-
 
 ### Need assitance?
 

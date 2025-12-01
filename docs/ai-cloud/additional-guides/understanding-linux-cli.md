@@ -1,108 +1,139 @@
+On this page our goal is to help you understand the most fundamental concepts of operating a Linux server. This page is not designed as a collection of useful commands, and neither is this a tutorial on operating a Linux server. Think of this page as a *concept glossary* that will help you understand how a Linux server works.
 
-## Sessions
-Each time you log in to the system, you start an *interactive shell session*.
-An interactive shell session is kept alive for as long as you keep it open.
-You can exit the session with the command `exit` or by pressing ++ctrl+d++.
+After having read this page you should be much better equipped to work on AI Cloud (and other HPC systems).
 
-## File structure
-
-The Linux file structure is structured in a tree-like fashion. Every file and directory on the system can be referenced absolutely or relatively to the current working directory.
-
-### The file tree
+## :octicons-file-directory-16: Referencing file paths 
 
 The directory `/home/domain/user/subdirectory` can thus be broken up into: `/`, `home`, `domain`, `user`. 
-
 Note that the first `/` is the root, and the following directories are subdirectories to each other.
-
-### Referencing paths
 
 We can reference file paths in two ways. Suppose we want to list the files in `/home/domain/user/subdirectory`
 
-* **Relatively:** If we are standing in `user`, we can call `ls -l subdirectory`
+* **Relative paths:** If we are standing in `/home/domain/user`, we can call `ls -l subdirectory`
     
-* **Absolutely:** Regardless of where we are standing, we can `ls -l /home/domain/user/subdirectory`
+* **Absolute paths:** If we are standing in a completely different location, we can always target its' absolute path `ls -l /home/domain/user/subdirectory`
 
-## Commands
+!!! note "Why is this useful knowledge"
 
-* `ls`: list files in the current directory
-* `ls -al`: list all files in the current directory (including dotfiles).
-* `pwd`: print the current working directory
-* `cd`: change directory (if no input is given, go to `$HOME`)
-* `cd mydir`: change directory to `mydir` (if no input is given, go to `$HOME`)
-* `mkdir`: create (make) directory
-* `rm`: remove file
-* `rm -r`: remove directory
-* `rmdir`: remove directory
-* `cp`: copy file
-* `cp -r`: copy file (or directory) *recursively* (including all it's subdirectories)
-* `mv target-file target-location`: move file
-* `mv old-filename new-filename`: rename file (think about this, as if you are editing the filepath)
-* `touch filename`: create an empty file
-* `cat filename`: print file content
-* `head filename`: print the first 5 lines of a file
-* `head -n 2 filename`: print the first 2 lines of a file
-* `tail filename`: print the last 5 lines of a file
-* `tail -n 2 filename`: print the last 2 lines of a file
-* `tail -f filename`: print the last 5 lines of a file *continously* (follow newly written lines)
+    This is the most fundamental concept of navigating the command line - not much can be done without this understanding.
 
-!!! tip "Tips and tricks"
+## :octicons-command-palette-16: Executing commands and programs
 
-    * Use tab completion as much as you can. This is both easier and decreases the risk of mistyping. 
+Commands can either be *shell builtins* or *programs*. For the most part it is not important to be able to distinguish between them, but it is important to understand that in most cases commands are programs, which we can execute because the system knows where to find them. In other words: every command is an executable file with a valid filepath on the system (technically with a few exceptions - but don't worry about that right now).
 
-    * Avoid using spaces when naming files and directories.
+When we call a command, the operating system will search for it in the directories in the `$PATH` variable. If there is not a matching executable in one of these directories we can not call the program. If there are multiple matches, the first one will be selected.
 
-## Variables
+Consider this: we can print the full path to `python3` with:
 
-Variables are attached to your *shell session* and are stored in memory.
+```bash
+❯ which python3
+/usr/bin/python3
+```
 
-Some variables are set, when you log into your session, eg. `$HOME`, `$USER`, `$PATH`. Others can be set by the user to interact with programs, or to be referenced in scripts.
+But as we see here, there are multiple python executables in `$PATH`.
 
-Call the command `env` to see which variables are loaded into your current shell session.
+```bash
+❯ type -a python3
+python3 is /usr/bin/python3
+python3 is /bin/python3
+```
 
-Variable assignment can be done in the following manner:
+Calling `wich` is useful for confirming which version we are getting.
+
+But how do we target a specific executable then? There are two solutions:
+
+* Referencing the absolute path to the executable. In the example above calling `python3` is equivalent to calling `/usr/bin/python3`. This is the most straight forward solution.
+
+* Adding the directory with the executable to the environment variable `$PATH` so that it comes first, with: `export PATH="/path/to/dir:$PATH"`.
+
+!!! note "Why is this useful knowledge?"
+
+    This is important to understand because operating an HPC system involves jumping between sessions/environments (eg. nodes and software containers), whereby the software environment changes, and we may want to confirm that we are indeed calling the desired command (ie. from *the desired path*).
+
+
+!!! note "Enviroment managing"
+
+    In essence this is also how environment managers like `conda` or `venv` work. However our goal here is to demonstrate how Linux operating systems work - not to make recomendations for working with Python. If you want to activate a Python virtual environment or a Conda environment, please refer to more specific instructions.
+
+## :fontawesome-regular-window-maximize: Processes
+
+Whenever a program (or command) is executed it uses system resources (cpu, gpu, ram, disk) to deliver on the programs instructions. This is called a *proces*.
+
+In Linux operating systems, we can get an overview of all running processes with a program called `top`, and we can view our own processes only with `top -u $USER`. The latter command is especially convenient on a multi user system. It should be noted, that is normal for programs to launch one or more child/sister processes, and therefore monitoring the exact resource consumption may not always be straight forward.
+
+!!! notes "Why is this useful knowledge?"
+
+    We can use this view to get an indication of what the system is doing under the hood, and wether or not our program has actually started. 
+
+
+## :fontawesome-solid-window-restore: Sessions
+
+When you log in to the system, you start in an *interactive shell session*. This means that you are *standing* somewhere on a host system, and you can interact with the system by executing commands and viewing their outputs.
+
+Interactive shell sessions are kept alive, for as long as the user keeps it alive. You can exit a shell session with the keybinding ++ctrl+d++ or with the command `exit`.
+
+Sessions can be nested inside each other - meaning that a session can be started from within another session. This is useful to understand because: Whenever we start a job on a compute node with `srun`, we start a new session on the compute node. This session on the compute node is nested inside the session on the front-end node, meaning that it will only run for as long as the parent session is alive.
+
+!!! note "Why is this useful knowledge?"
+
+    It's also useful to understand this, because sessions can differ from each other with regards to which variables are loaded or which commmands/programs can be executed. When we understand this, we can work with it.
+
+## :fontawesome-solid-dollar-sign: Variables
+
+A number of variables are loaded into the *session* when you log in to the system. Additional variables can be set by the user in order to set paths or options.
+
+```bash
+env
+```
+
+Assign a variable:
 ```bash
 var="hello world"
 ```
 
-Variables can be printed with
-```
+Print the content of a variable:
+```bash
 ❯ echo $var
 hello world
 ```
 
-Prepending `export` to the assignment makes the variable accessible to child processes. This can be useful if you are delegating a job to a compute node.
+Notice that after the variable has been assigned, we must reference it with a prepended `$`. When we make the assignment, we must not do this.
 
-## Additional info on calling commands
+Prepending `export` to the assignment makes the variable accessible to child processes (and nested sessions). Suppose we prepended `export` to the assignment of `$var` in a [batch-script](/ai-cloud/getting-started/run-jobs/#__code_5):
 
-Commands can either be *shell builtins* or *programs*. This can be checked with the command `type`:
-
+```bash
+export var="hello world"
 ```
-❯ type echo
-echo is a shell builtin
-```
-```
-❯ type ls
-ls is /bin/ls
-```
-For the most part it is not important to be able to distinguish between them, but it is important to understand that in most cases commands are programs, which we can execute because the system knows where to find them.
 
-This is important to understand because operating an HPC system involves jumping between nodes and software containers, whereby the software environment changes, and we may want to confirm that we are indeed calling the correct command or the correct path.
+This makes `$var` accessible on the compute node. We can confirm this by calling `env` (or in Python with: `ìmport os ; os.environ.items()`).
 
-In Linux, programs can be made available in two ways:
+!!! note "Why is this useful knowledge?"
 
-**1: We can call them because they are located in one of the directories in the `$PATH` variable.**
+    * **<u>We can control program settings</u>**:
+    
+        When we build Singularity containers, we can set the variables [`SINGULARITY_TMPDIR`](https://docs.sylabs.io/guides/3.0/user-guide/build_env.html#temporary-folders) and [`SINGULARITY_CACHEDIR`](https://docs.sylabs.io/guides/3.0/user-guide/build_env.html#cache-folders) to override the default directories for these. This serves as an example of a program, that reads settings from variables. [See these in action here](/ai-cloud/additional-guides/building-your-own-container-image/#downloading-the-container-image).
+    
+    * **<u>We can gather information on the current session</u>**:
+    
+        Notice that calling `srun env` (printing all variables in a compute node job), shows a large number of `SLURM` variables. These variables convey information about the current session, and we can use them to gather (or log) details about our job.
+    
+    * **<u>Increase script readability</u>**:
+    
+        Using variables to reference files and directories is good practice, because it increases readability and maintainability:
+    
+        ```
+        # Project directory
+        project_dir=/home/domain/user/project_1    
+    
+        # The container image we want to launch:
+        container_image="$project_dir/pytorch_25.04.sif"
+    
+        # The file we want to process on the compute node:
+        file="$project_dir/is-available.py"
+    
+        # Execute job
+        srun singularity exec --nv $container_image python3 $file
+        ```
 
-Consider the following:
+<hr>
 
- * We can call `squeue`
- * `which squeue` will return `/usr/local/bin/squeue`
- * `echo $PATH` will verify that `/usr/local/bin` is indeed in `$PATH`
-
-**2: We can call them by referencing their paths.**
-
-If a program is not in `$PATH`, we can execute it by referencing it's path:
-
-* Calling `/bin/ls` is equivalent to calling `ls`
-* If we are standing in `/bin`, calling `./ls` is equivalent to calling `ls`.
-
-This can be useful for calling a specific version of a program or for verifying that you are indeed calling the program, you intend to call.

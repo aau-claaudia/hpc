@@ -53,28 +53,49 @@ A service window will take place on the following dates:
 
 **Be sure to save your work** no later than the end of the day before the service window begins, as all virtual machines will be automatically shut down during the service window and any unsaved data will be lost.
 
-!!! warning "New Usage Management Process - Effective 16th September 2025"
-    
-    **1. Servers will NOT restart automatically after service windows**
-        - All servers in the AAU availability zone will be shut down during service windows and will not restart automatically, unless they have been registered for automatic restart before the service window.
-        - You can easily restart your servers manually after the service window.
+Usage Management Process 
 
-    **2. Automatic server resizing after 48 hours of inactivity**
-        - Servers that remain shut down for more than 48 hours will be automatically resized to the smallest CPU configuration.
-        - You will receive a notification when your instance has been resized.
+**1. Servers will NOT restart automatically after service windows**
+    - All servers in the *AAU availability zone* will be shut down during service windows and will not restart automatically, unless they have been registered for automatic restart before the service window. 
+    - You can easily restart your servers manually after the service window.
 
-    **3. Automatic server deletion after 30 days of inactivity**
-        - Servers that remain shut down for 30 days will be permanently deleted, but their volumes will be preserved.
-        - You will be notified in advance about any affected instances.
+**2. Automatic server resizing after 48 hours of inactivity**
+    - Servers that remain shut down for more than 48 hours will be automatically resized to the smallest CPU configuration.
+    - You will receive a notification when your instance has been resized.
 
-    **4. Unused volume cleanup**
-        - Volumes not attached to any server for 30 days will be deleted.
-        - A notification will be sent before deletion.
+**3. Automatic server deletion after 30 days of inactivity**
+    - Servers that remain shut down for 30 days will be permanently deleted, but their volumes will be preserved.
+    - You will be notified in advance about any affected instances.
+
+**4. Unused volume cleanup**
+    - Volumes not attached to any server for 30 days will be deleted.
+    - A notification will be sent before deletion.
 
 **All virtual machines should be removed when not in use.** 
 Basic rule: keep your volumes, delete your unused VMs, and only run a VM with the size you really need right now.
 Please consult the page ['Delete and restart an instance from the volume'](strato/best-practice-guides/delete-and-restart-an-instance-from-the-volume/)
 for instructions on how to do this.
+
+**Apply for automatic restart of your Strato server**
+
+You can request automatic restarts for your server if **all** of the following conditions are met:
+
+- The server is part of a **Strato Project**
+- You can provide a **valid motivation** for needing automatic restart
+- The server is in one of these availability zones:
+    - AAU
+    - AAU-T4
+    - AAU-A10
+    - AAU-A40
+
+
+Servers running in personal project spaces (such as default quota projects, e.g. `GK83DJ@aau.dk`) **cannot be included**.  
+If you want to move your project, you can find instructions on [how to apply for a Strato Project](https://hpc.aau.dk/strato/how-to-access/)
+
+If your server meets these requirements, you can apply to be included in the automatic restart list by filling out the following form **before November 25th**:  
+[Strato service window: Automatic server restart inclusion form](https://forms.office.com/e/0geuYrC1dZ)
+
+
 
 
 Link to Strato's
