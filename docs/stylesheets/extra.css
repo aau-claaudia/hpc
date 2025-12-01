@@ -1,3 +1,8 @@
+/* TEMPORARY UNTIL TAAURUS IS LAUNCHED! */
+
+/* TEMPORARY UNTIL TAAURUS IS LAUNCHED! */
+
+
 :root {
   --aau-primary: rgb(33, 26, 81);
   --aau-primary-hover: rgb(44,0,143);
@@ -1935,4 +1940,25 @@ footer .links li img {
 /* Green label for students */
 .label-student {
   background-color: #27AE60; /* Green */
+}
+
+/* Hide TAAURUS tab from header navigation */
+.md-tabs__link[href*="taaurus"] {
+  display: none !important;
+}
+
+.md-tabs__item:has(.md-tabs__link[href*="taaurus"]) {
+  display: none !important;
+}
+
+/* Also hide from custom navigation if used */
+.custom-nav-item:has(a[href*="taaurus"]),
+a.custom-nav-item[href*="taaurus"] {
+  display: none !important;
+}
+
+/* Also hide from custom navigation if used */
+.custom-nav-item--active:has(a[href*="taaurus"]),
+a.custom-nav-item--active[href*="taaurus"] {
+  display: none !important;
 }

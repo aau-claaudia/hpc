@@ -3,75 +3,178 @@
 This guide will help you connect to TAAURUS using Remote Desktop Protocol (RDP).
 
 ## Prerequisites
+- [Access to TAAURUS platform](/taaurus/guides/applying-for-a-taaurus-project/)
+- Remote Desktop Protocol (RDP) client installed (see the guides below)
+- AAU email
+- Microsoft Authenticator app for 2FA authentication ([instructions for setting it up](https://www.en.its.aau.dk/instructions/mfa))
+- AAU network connection
+    - If off campus please follow [these instructions](https://www.en.its.aau.dk/instructions/vpn) to set up VPN at AAU
 
-- Windows computer with Remote Desktop Connection installed
-- AAU email address and password
-- Microsoft Authenticator app for 2FA authentication
-- Access to TAAURUS platform
+===+ "Windows"
 
-## Step 1: Open Remote Desktop Connection
+    ### Step 1: Connecting from Windows
 
-On your local Windows PC:
+    On your local Windows PC:
 
-1. Open the Start menu and search for **Remote Desktop Connection**
-2. Select **Remote Desktop Connection** from the results
-      - *Danish users: Look for "Forbindelse til Fjernskrivebord"*
+    1. Open the Start menu and search for **Remote Desktop Connection**
+    2. Select **Remote Desktop Connection** from the results
+        - *Danish users: Look for "Forbindelse til Fjernskrivebord"*
 
-## Step 2: Enter Server Details
+    ### Step 2: Enter Server Details
 
-1. In the Remote Desktop Connection window, enter the server address:
-   ```
-   sp-test05.srv.aau.dk
-   ```
-2. Click **Show Options** to access advanced settings
+    3. In the Remote Desktop Connection window, enter the server address:
+    ```
+    sp-test05.srv.aau.dk
+    ```
+    4. Click **Show Options** to access **Advanced** settings in the tab
 
-![Screenshot of RDP](/assets/img/taaurus/rdp-1.png)
+    ![Screenshot of RDP](/assets/img/taaurus/rdp-1.png){style=max-height:600px;}
 
-## Step 3: Configure Gateway Settings
+    ### Step 3: Configure Gateway Settings
 
-1. Go to the **Advanced** tab
-2. Click **Settings...** under "Connect from anywhere"
-3. In the Connection settings dialog:
-   - **Uncheck** "Use these RD Gateway server settings"
-   - Enter **rdgw.taaurus.aau.dk** in the Server name field
-   - Select **Ask for password** from the Logon method dropdown
-4. Click **OK** to save settings
-5. Click **Connect** to initiate the connection
+    5. Go to the **Advanced** tab
+    6. Click **Settings...** under "Connect from anywhere"
+    7. In the Connection settings dialog:
+        - Enter `rdgw.taaurus.aau.dk` in the Server name field
+        - Select **Ask for password** from the Logon method dropdown
+        - **Uncheck** "Use these RD Gateway server settings"
+    8. Click **OK** to save settings
+    9. Click **Connect** to initiate the connection
 
-![Screenshot of RDP](/assets/img/taaurus/rdp-2.png)
+    ![Screenshot of RDP](/assets/img/taaurus/rdp-2.png){style=max-height:600px;}
 
-## Step 4: Authentication Process
+    ### Step 4: Authentication Process
 
-You will go through a multi-step authentication process:
+    You will go through a multi-step authentication process:
 
-### First Authentication
-- A Windows Security popup will appear
-- Enter your **AAU email address** and **password**
-- Click **OK**
+    ### First Authentication
+    - A Windows Security popup will appear
+    - Click **More choices** and then **Use a different account**
+    - Enter your **AAU email address** and **password**
+    - Click **OK**
 
-### Second Authentication (2FA)
-- You will be prompted to authenticate using your **Microsoft Authenticator app**
-- Open the app and approve the login request
+    ![Screenshot of RDP](/assets/img/taaurus/rdp-windows-security-1.png){style=max-height:600px;}
 
-### Final Authentication
-- You may need to authenticate once more with your **AAU email and password**
+    ### Second Authentication (2FA)
+    - You will be prompted to authenticate using your **Microsoft Authenticator app**
+        - If you need help setting up AAU MFA please follow these [instructions](https://www.en.its.aau.dk/instructions/mfa)
+    - Open the app and approve the login request
 
-![Screenshot of RDP](/assets/img/taaurus/rdp-3.png)
+    ### Final Authentication
+    - You may need to authenticate once more with your **AAU email and password**
 
-## Step 5: Success!
+    ![Screenshot of RDP](/assets/img/taaurus/rdp-3.png){style=max-height:600px;}
 
-Once authenticated, you will be connected to the TAAURUS remote desktop environment. You should see the desktop interface of the TAAURUS server.
+    ### Step 5: Success!
 
-![Screenshot of RDP](/assets/img/taaurus/taaurus-server.png)
+    Once authenticated, you will be connected to the TAAURUS remote desktop environment. You should see the desktop interface of the TAAURUS server.
 
-## Troubleshooting
+    ![Screenshot of RDP](/assets/img/taaurus/taaurus-server.png){style=max-height:600px;}
 
-If you encounter any issues during the login process:
+    ### Troubleshooting
 
-1. **Connection fails**: Check your internet connection and try again
-2. **Authentication errors**: Verify your AAU credentials and 2FA setup
-3. **Gateway issues**: Ensure you've correctly configured the RD Gateway settings
-4. **Still having problems**: Contact CLAAUDIA support at [serviceportal.aau.dk](https://serviceportal.aau.dk/serviceportal?id=sc_cat_item&sys_id=a05e2fb4c3434610f0f3041ad00131d0)
+    If you encounter any issues during the login process:
+
+    1. **Connection fails**: Check that you are connected to AAU network and try again
+    2. **Authentication errors**: Verify your AAU credentials and MFA setup
+    3. **Gateway issues**: Ensure you've correctly configured the RD Gateway settings
+    4. **Still having problems**: Contact CLAAUDIA support at [serviceportal.aau.dk](https://serviceportal.aau.dk/serviceportal?id=sc_cat_item&sys_id=a05e2fb4c3434610f0f3041ad00131d0)
+
+===+ "macOS"
+
+    ### Step 1: Connecting from macOS
+
+    TAAURUS provides access through a **Windows Remote Desktop environment**, which means all operating systems must connect using the **Remote Desktop Protocol (RDP)**.
+
+    Because only Windows includes an RDP client by default, **macOS users must install one** before connecting.
+
+    ### Install Microsoft Remote Desktop
+
+    1. Open the **Mac App Store**
+    2. Search for **Microsoft Remote Desktop**
+    3. Install the application
+
+    [NEED IMAGE HERE]
+
+    ### Step 2: Configure the connection
+
+    1. Open **Microsoft Remote Desktop**
+    2. Click **Add PC**
+    3. Enter the server address:
+
+    [NEED IMAGE HERE]
+
+    ```
+    sp-test05.srv.aau.dk
+    ```
+
+    4. Under **Gateway**, choose **Add Gateway…**
+
+        - **Server**: `rdgw.taaurus.aau.dk`
+        - **User account**: *Ask when required*
+
+    [NEED IMAGE HERE]
+
+    Save the connection and double-click it to connect.
+
+    ### Step 3: Authentication Process
+
+    You will be prompted to log in with your **AAU email and password**, followed by approval in **Microsoft Authenticator**.
+
+===+ "Linux"
+
+    ### Step 1: Connecting from Linux
+
+    TAAURUS provides access through a **Windows Remote Desktop environment**, which means all operating systems must connect using the **Remote Desktop Protocol (RDP)**.
+
+    Because only Windows includes an RDP client by default, **Linux users must install one** before connecting.
+    
+    We recommend using **Remmina remote desktop client**:
+
+    ### Step 1: Install Remmina
+
+    === "Ubuntu / Debian"
+        ```bash
+        sudo apt install remmina remmina-plugin-rdp
+        ```
+
+    === "Fedora"
+        ```bash
+        sudo dnf install remmina
+        ```
+
+    === "Arch Linux"
+        ```bash
+        sudo pacman -S remmina
+        ```
+    
+    ### Step 2: Configure the connection
+
+    1. Open **Remmina**
+    2. Click **+** to add a new connection
+    3. Set:
+       - **Protocol:** RDP  
+       - **Server:**  
+           ```
+           sp-test05.srv.aau.dk
+           ```
+
+    [NEED IMAGE HERE]
+
+    4. Under **Advanced**:
+       - Enable **Use RD Gateway**
+       - **Gateway server:** `rdgw.taaurus.aau.dk`
+
+    [NEED IMAGE HERE]
+
+    Save and connect.  
+
+    ### Step 3: Authentication Process
+    
+    Authenticate with **AAU email + password**, then approve via **Microsoft Authenticator**.
+
+
+
 
 ## Next Steps
 

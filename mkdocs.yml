@@ -143,18 +143,21 @@ nav:
               - 18. Exercise 3: ai-lab/workshop/18-exercise-3.md
               - 19. Final pointers: ai-lab/workshop/19-final-pointers.md
 
-#   - TAAURUS:
-#       - About TAAURUS: taaurus/index.md
-#       - Applying for a TAAURUS project: taaurus/guides/applying-for-a-taaurus-project.md
-#       - Guides:
-#           - How to log in: taaurus/guides/login.md
-#           - Navigating TAAURUS: taaurus/guides/navigating-taaurus.md
-#           - Import & export of data: taaurus/guides/import-export-of-data.md
-#           - Slurm cluster:
-#               - Running Jobs: taaurus/guides/running-jobs.md
-#               - Getting Containers: taaurus/guides/getting-containers.md
-#               - Using Containers: taaurus/guides/using-containers.md
-#               - Monitoring: taaurus/guides/monitoring.md
+  - TAAURUS:
+      - About TAAURUS: taaurus/index.md
+      - Applying for a TAAURUS project: taaurus/guides/applying-for-a-taaurus-project.md
+      - System overview: taaurus/system-overview.md
+      - Terms and Conditions: https://serviceportal.aau.dk/now/nav/ui/classic/params/target/kb_view.do%3Fsys_kb_id%3D7de0759b83783650e1c9f665eeaad396%26sysparm_rank%3D2%26sysparm_tsqueryId%3D09f45a0d8355f290e1c9f665eeaad392
+      - Guides:
+          - How to log in: taaurus/guides/login.md
+          - Navigating TAAURUS: taaurus/guides/navigating-taaurus.md
+          - Import & export of data: taaurus/guides/import-export-of-data.md
+          - Run GPU jobs:
+              - Before running jobs: taaurus/guides/before-running-jobs.md
+              - Running Jobs: taaurus/guides/running-jobs.md
+              - Getting Containers: taaurus/guides/getting-containers.md
+              - Using Containers: taaurus/guides/using-containers.md
+              - Monitoring: taaurus/guides/monitoring.md
 
   - External HPC:
       - External HPC facilities: external-hpc/index.md
@@ -172,6 +175,7 @@ theme:
     - content.code.annotate
     - navigation.sections
     - toc.integrate
+    - navigation.external_links
 
   logo: assets/img/aau-logo-512x512.png
   favicon: assets/favicon.ico
