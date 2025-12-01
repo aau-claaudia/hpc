@@ -1,6 +1,6 @@
-# Running Jobs on AI-LAB
+# Running jobs on TAAURUS
 
-This guide will teach you how to run computational tasks on AI-LAB using the Slurm job scheduler. Slurm manages all the computing resources and ensures fair access for all users.
+This guide will teach you how to run computational tasks on TAAURUS using the Slurm job scheduler. Slurm manages all the computing resources and ensures fair access for all users.
 
 ## Understanding Slurm
 
@@ -12,7 +12,7 @@ This guide will teach you how to run computational tasks on AI-LAB using the Slu
 
 ## Two Ways to Run Jobs
 
-AI-LAB offers two methods for running jobs:
+Slurm offers two methods for running jobs:
 
 1. **[srun](#using-srun)** - Interactive jobs for testing and debugging
 2. **[sbatch](#using-sbatch)** - Batch jobs for longer computations
@@ -34,7 +34,7 @@ AI-LAB offers two methods for running jobs:
 
 Let's start with a simple test:
 
-```bash
+```
 srun hostname
 ```
 
@@ -49,18 +49,11 @@ This command will:
 
 When you run an srun command, you might see:
 
-```bash
-srun: job 12345 queued and waiting for resources
-srun: job 12345 has been allocated resources
-ailab-l4-01
+```
+sp-l40s-01
 ```
 
-This shows:
-
-- Your job ID (12345)
-- The job was queued (waiting for resources)
-- Resources were allocated
-- The hostname of the compute node (ailab-l4-01)
+This shows the hostname of one of the compute nodes (in this case `sp-l40s-01`)
 
 ### When to Use srun
 
@@ -87,7 +80,7 @@ This shows:
 
 Let's create a simple job script:
 
-```bash
+```
 nano my_job.sh
 ```
 
@@ -102,7 +95,7 @@ Add this content:
 
 # Your commands go here
 hostname
-echo "Hello from AI-LAB!"
+echo "Hello from TAAURUS!"
 date
 ```
 
@@ -114,12 +107,12 @@ date
 
 ### Submitting the Job
 
-```bash
+```
 sbatch my_job.sh
 ```
 
 You'll see:
-```bash
+```
 Submitted batch job 12345
 ```
 
@@ -134,25 +127,19 @@ Submitted batch job 12345
 
 Once the job completes, check the output:
 
-```bash
+```
 cat my_job.out    # View the output
 cat my_job.err    # View any errors (if empty, no errors occurred)
 ```
 
 ### When to Use sbatch
 
-✅ **Perfect for:**
+✅ **Perfect for most jobs:**
 
 - Training machine learning models
 - Long data processing tasks
 - Jobs that take hours or days
 - Running jobs overnight or while you're away
-
-❌ **Not needed for:**
-
-- Quick tests or debugging
-- Interactive exploration
-- Commands that finish in minutes
 
 <hr>
 
@@ -164,44 +151,24 @@ Most jobs need specific resources like GPUs, memory, or time limits. You specify
 
 | Option | Description | Example | Notes |
 |--------|-------------|---------|-------|
-| `--mem` | Memory allocation | `--mem=24G` | Max 24GB per GPU |
-| `--cpus-per-task` | CPU cores | `--cpus-per-task=15` | Max 15 CPUs per GPU |
-| `--gres` | GPUs | `--gres=gpu:1` | Request 1 GPU |
-| `--time` | Time limit | `--time=01:00:00` | 1 hour (HH:MM:SS) |
+| `--mem` | Memory allocation | `--mem=32G` | Per‑job request; node total 768 GB |
+| `--cpus-per-task` | CPU cores | `--cpus-per-task=6` | Per‑task; node total 64 cores |
+| `--gres` | GPUs | `--gres=gpu:1` | 8 GPUs per node (L40S, 48 GB) |
+| `--time` | Time limit | `--time=01:00:00` | HH:MM:SS |
 
-### Resource Guidelines
+### Not sure what to request?
 
-**Memory**: Request enough memory for your data and model
-
-- Small models: `--mem=8G`
-- Large models: `--mem=24G`
-
-**CPUs**: More CPUs can speed up data loading and preprocessing
-
-- Basic: `--cpus-per-task=4`
-- Intensive: `--cpus-per-task=15`
-
-**GPUs**: Essential for deep learning
-
-- Single GPU: `--gres=gpu:1`
-- Multiple GPUs: `--gres=gpu:2` (only if your code supports it)
-
-**Time**: Set realistic time limits
-
-- Quick tests: `--time=00:30:00` (30 minutes)
-- Training: `--time=04:00:00` (4 hours)
-- Default: 1 hour (if not specified)
-- Maximum: 12 hours
-
-!!! warning "Multi-GPU Usage"
-    You can request multiple GPUs with `--gres=gpu:2`, but **only if your code actually uses them**. Allocating unused GPUs violates our [Fair Usage Policy](https://hpc.aau.dk/ai-lab/fair-usage/){target=_blank}.
+- Start with `--gres=gpu:1`, `--cpus-per-task=4–8`, `--mem=16–48G`
+- Increase CPUs if data loading or preprocessing is a bottleneck
+- Increase memory for larger batches or models
+- Only request multiple GPUs if your code supports it
 
 ### Using Options with srun
 
 Add options directly to your srun command:
 
-```bash
-srun --mem=24G --cpus-per-task=15 --gres=gpu:1 --time=01:00:00 hostname
+```
+srun --mem=32G --cpus-per-task=6 --gres=gpu:1 --time=01:00:00 hostname
 ```
 
 ### Using Options with sbatch
@@ -214,8 +181,8 @@ Add options as `#SBATCH` directives in your script:
 #SBATCH --job-name=my_training_job
 #SBATCH --output=training.out
 #SBATCH --error=training.err
-#SBATCH --mem=24G
-#SBATCH --cpus-per-task=15
+#SBATCH --mem=32G
+#SBATCH --cpus-per-task=6
 #SBATCH --gres=gpu:1
 #SBATCH --time=04:00:00
 
@@ -225,4 +192,4 @@ python train_model.py
 
 <hr>
 
-Now that you know how to run jobs on AI-LAB, let's delve into [**how to get applications/containers :octicons-arrow-right-24:**](getting-containers.md)
+Now that you know how to run jobs on TAAURUS, let's delve into [**how to get applications/containers :octicons-arrow-right-24:**](getting-containers.md)
