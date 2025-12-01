@@ -56,7 +56,7 @@
 </div>
 
 
-!!!warning "UCloud will be down for maintenance On the **1st of December 2025** between **07:00** and **16:00** [See more](https://cloud.sdu.dk/app/news/detailed/395){ target=_blank }"
+!!!warning "The UCloud platform will be down for maintenance on the **1st of December 2025** between **07:00** and **16:00**. [See more](https://cloud.sdu.dk/app/news/detailed/395){ target=_blank } Please note: The  **aau/k8** and **aau/VM** providers will also be down for maintenance on the **2nd of December 2025**."
 
 
 

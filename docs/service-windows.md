@@ -78,7 +78,9 @@ for instructions on how to do this.
 
 **Apply for automatic restart of your Strato server**
 
-You can request automatic restarts for your server if **all** of the following conditions are met:
+> **Note:** The deadline for requesting inclusion in the automatic restart list has now passed for the service window on the 2nd december.
+
+You could request automatic restarts for your server if **all** of the following conditions were met:
 
 - The server is part of a **Strato Project**
 - You can provide a **valid motivation** for needing automatic restart
@@ -92,7 +94,7 @@ You can request automatic restarts for your server if **all** of the following c
 Servers running in personal project spaces (such as default quota projects, e.g. `GK83DJ@aau.dk`) **cannot be included**.  
 If you want to move your project, you can find instructions on [how to apply for a Strato Project](https://hpc.aau.dk/strato/how-to-access/)
 
-If your server meets these requirements, you can apply to be included in the automatic restart list by filling out the following form **before November 25th**:  
+The application form for inclusion in the automatic restart list closed on **November 25th**:  
 [Strato service window: Automatic server restart inclusion form](https://forms.office.com/e/0geuYrC1dZ)
 
 
