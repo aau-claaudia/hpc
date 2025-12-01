@@ -121,6 +121,26 @@ This guide will help you connect to TAAURUS using Remote Desktop Protocol (RDP).
 
     You will be prompted to log in with your **AAU email and password**, followed by approval in **Microsoft Authenticator**.
 
+    ### Step 4: Final Authentication
+    - You may need to authenticate once more with your **AAU email and password**
+
+    ![Screenshot of RDP](/assets/img/taaurus/rdp-3.png){style=max-height:600px;}
+
+    ### Step 5: Success!
+
+    Once authenticated, you will be connected to the TAAURUS remote desktop environment. You should see the desktop interface of the TAAURUS server.
+
+    ![Screenshot of RDP](/assets/img/taaurus/taaurus-server.png){style=max-height:600px;}
+
+    ### Troubleshooting
+
+    If you encounter any issues during the login process:
+
+    1. **Connection fails**: Check that you are connected to AAU network and try again
+    2. **Authentication errors**: Verify your AAU credentials and MFA setup
+    3. **Gateway issues**: Ensure you've correctly configured the RD Gateway settings
+    4. **Still having problems**: Contact CLAAUDIA support at [serviceportal.aau.dk](https://serviceportal.aau.dk/serviceportal?id=sc_cat_item&sys_id=a05e2fb4c3434610f0f3041ad00131d0)
+
 ===+ "Linux"
 
     ### Step 1: Connecting from Linux
@@ -172,6 +192,26 @@ This guide will help you connect to TAAURUS using Remote Desktop Protocol (RDP).
     ### Step 3: Authentication Process
     
     Authenticate with **AAU email + password**, then approve via **Microsoft Authenticator**.
+
+    ### Step 4: Final Authentication
+    - You may need to authenticate once more with your **AAU email and password**
+
+    ![Screenshot of RDP](/assets/img/taaurus/rdp-3.png){style=max-height:600px;}
+
+    ### Step 5: Success!
+
+    Once authenticated, you will be connected to the TAAURUS remote desktop environment. You should see the desktop interface of the TAAURUS server.
+
+    ![Screenshot of RDP](/assets/img/taaurus/taaurus-server.png){style=max-height:600px;}
+
+    ### Troubleshooting
+
+    If you encounter any issues during the login process:
+
+    1. **Connection fails**: Check that you are connected to AAU network and try again
+    2. **Authentication errors**: Verify your AAU credentials and MFA setup
+    3. **Gateway issues**: Ensure you've correctly configured the RD Gateway settings
+    4. **Still having problems**: Contact CLAAUDIA support at [serviceportal.aau.dk](https://serviceportal.aau.dk/serviceportal?id=sc_cat_item&sys_id=a05e2fb4c3434610f0f3041ad00131d0)
 
 
 
