@@ -55,11 +55,6 @@
     </div>
 </div>
 
-
-!!!warning "The UCloud platform will be down for maintenance on the **1st of December 2025** between **07:00** and **16:00**. [See more](https://cloud.sdu.dk/app/news/detailed/395){ target=_blank } Please note: The  **aau/k8** and **aau/VM** providers will also be down for maintenance on the **2nd of December 2025**."
-
-
-
 ## Introduction
 
 UCloud is a HPC research platform, engineered to provide high-performance computing with a focus on ease of use. UCloud provides an intuitive graphical user interface to powerful interactive high-performance computing and tools for data analytics and visualization. UCloud offers an “Apps” section preloaded with popular applications and more applications can be customized and uploaded on-demand.
