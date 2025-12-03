@@ -1373,12 +1373,12 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   white-space: nowrap;
   min-width: unset;
   padding: 4px 10px;
-  background-color: var(--link-color);
+  background-color: var(--aau-primary);
   color: #FFFFFF;
   text-transform: none;
 }
 .contact-button:active, .contact-button:hover {
-  background-color: var(--link-dark-color);
+  background-color: var(--aau-primary-hover);
   box-shadow: none;
 }
 .contact-button:focus {
