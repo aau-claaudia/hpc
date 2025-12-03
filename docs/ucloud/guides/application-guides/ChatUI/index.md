@@ -1,4 +1,9 @@
-# ChatUI 
+<div class="guide-page-header">
+  <h1 class="guide-page-header__title">ChatUI</h1>
+  <a class="guide-page-header__cta" href="https://docs.cloud.sdu.dk/Apps/chat-ui.html" target=_blank>
+    Technical specifications
+  </a>
+</div>
     
 **Approved for data classification level**
 

@@ -1,4 +1,10 @@
-# Transcriber
+<div class="guide-page-header">
+  <h1 class="guide-page-header__title">Transcriber</h1>
+  <a class="guide-page-header__cta" href="https://docs.cloud.sdu.dk/Apps/transcriber.html" target=_blank>
+    Technical specifications
+  </a>
+</div>
+
 **Approved for data classification level**
 
 <a href="https://www.security.aau.dk/data-classification" target="_blank" class="icon-container">

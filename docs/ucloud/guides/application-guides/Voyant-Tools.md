@@ -1,4 +1,9 @@
-# Voyant Tools Guide
+<div class="guide-page-header">
+  <h1 class="guide-page-header__title">Voyant Tools</h1>
+  <a class="guide-page-header__cta" href="https://docs.cloud.sdu.dk/Apps/voyantserver.html" target=_blank>
+    Technical specifications
+  </a>
+</div>
 
 
 
