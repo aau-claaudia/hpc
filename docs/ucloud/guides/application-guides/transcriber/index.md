@@ -85,16 +85,19 @@ Select the guide of your choice below for step-by-step instructions for each ver
 
     Once the app starts, decide how you want to add files for transcription. You have two main options:
 
+
     - **Use files from UCloud folders**
-      - If you **selected folders** in the launch step, the app will automatically list the files detected there.
-      - **Choose** the files you want and click **Add UCloud files** to add them to your transcription queue.
-      - If you add new files to the folder after the job has started, click **Scan UCloud folder** to refresh the list.
-        > **Note:** This section is only visible if you selected a folder when launching your Transcriber job on UCloud.
+        - If you **selected folders** in the launch step, the app will automatically list the files detected there.
+        - **Choose** the files you want and click **Add UCloud files** to add them to your transcription queue.
+        - If you add new files to the folder after the job has started, click **Scan UCloud folder** to refresh the list.
+          > **Note:** This section is only visible if you selected a folder when launching your Transcriber job on UCloud.
 
     - **Upload files from your computer**
-      - **Drag and Drop** your files directly into the upload area of the Transcriber app.
-      - Or **click** the upload area to browse your computer and select files.
-      - Multiple files can be added at once.
+        - **Drag and Drop** your files directly into the upload area of the Transcriber app.
+        - Or **click** the upload area to browse your computer and select files.
+        - Multiple files can be added at once.
+    
+    > **Info:** The app can only process `.mp3`, `.mp4`, `.m4a`, `.wav`, and `.mpg` files. If your file is in another format, we recommend using VLC to convert it. VLC can be downloaded from the Software Center/Company Portal.
 
     ![Selecting files to be transcribed](/assets/img/UCloud/TranscriberguideGUI3.jpg)    
 
