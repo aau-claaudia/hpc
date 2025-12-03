@@ -1,18 +1,20 @@
 <div class="guide-page-header">
-  <h1 class="guide-page-header__title">Transcriber</h1>
+  <div>
+    <h1 class="guide-page-header__title">Transcriber</h1>
+    <p><strong>Approved for data classification level</strong></p>
+    <a href="https://www.security.aau.dk/data-classification" target="_blank" class="icon-container">
+      <span class="icon level-0" title="Approved for public data">0</span>
+      <span class="icon level-1" title="Approved for internal data">1</span>
+      <span class="icon level-2" title="Approved for confidential data">2</span>
+      <span class="icon level-3" title="Approved for strictly confidential data">3</span>
+    </a>
+  </div>
   <a class="guide-page-header__cta" href="https://docs.cloud.sdu.dk/Apps/transcriber.html" target=_blank>
     Technical specifications
   </a>
 </div>
 
-**Approved for data classification level**
-
-<a href="https://www.security.aau.dk/data-classification" target="_blank" class="icon-container">
-    <span class="icon level-0" title="Approved for public data">0</span>
-    <span class="icon level-1" title="Approved for internal data">1</span>
-    <span class="icon level-2" title="Approved for confidential data">2</span>
-    <span class="icon level-3" title="Approved for strictly confidential data">3</span>
-</a>
+---
 
 !!! success "New Transcriber Interface released!"
     
