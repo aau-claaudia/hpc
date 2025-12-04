@@ -54,6 +54,7 @@ Find the most suitable system for your project. You can also complete the [HPC D
 </div>
 
 
+<!--
 !!! success "News: Upcoming Free Webinars – Learn about UCloud & Dictaphone"
     **Title:** Record and Transcribe with Dictaphone
     **Date:** November 26, 2025  
@@ -68,6 +69,7 @@ Find the most suitable system for your project. You can also complete the [HPC D
     **What you'll learn:**  
     Join us for a hands-on webinar introducing RAGFlow, an advanced Retrieval-Augmented Generation (RAG) platform available on UCloud. RAGFlow enables you to build your own intelligent assistants by combining document retrieval, embeddings, and large language models – all within a user-friendly visual interface.
     [:octicons-arrow-right-24: Read more and sign up for UCloud webinar](https://interactivehpc.dk/?p=2315)
+-->
 
    
 <div class="video-container">
