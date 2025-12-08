@@ -232,7 +232,7 @@ To execute the multi-GPU training script we will use a Bash script (submit_job.s
 #SBATCH --time=02:00:00
 #SBATCH --output=ddp_training.out
 
-# Number of GPUs to allocate (adjust this value as needed)
+# Number of GPUs to allocate (adjust this value as needed, maximum 4 GPUs per job)
 num_gpus=4
 
 # Set the number of tasks and GPUs accordingly
@@ -249,6 +249,14 @@ srun singularity exec --nv /ceph/container/pytorch/pytorch_24.09.sif python3 mul
 - `--cpus-per-task`: Specifies the number of CPUs allocated to each task.
 - `--mem`: Specifies the memory allocated to the job.
 - `--time`: Adjust these settings based on your specific resource requirements.
-- `num_gpus`: Modify this variable to specify the number of GPUs (--ntasks and --gres=gpu) allocated for your job.
+- `num_gpus`: Modify this variable to specify the number of GPUs (--ntasks and --gres=gpu) allocated for your job. **Note: Maximum 4 GPUs per job, and maximum 8 GPUs per user across all running jobs.**
 - `srun singularity exec --nv /ceph/container/pytorch/pytorch_24.09.sif python3 multi_gpu.py --world_size=$num_gpus`: Executes the job inside the specified Singularity container (`pytorch_24.09.sif`) with Python 3, running the `multi_gpu.py` script and passing `--world_size=$num_gpus` as an argument to specify the number of GPUs for distributed training.
+
+!!! warning "GPU Resource Limits"
+    To ensure fair access for all users, AI-LAB enforces two important limits:
+    
+    - **Maximum 4 GPUs per job**: A single job can request no more than 4 GPUs (e.g., `--gres=gpu:4` or `-G 4`)
+    - **Maximum 8 GPUs per user**: Each user can run jobs using a total of up to 8 GPUs simultaneously across all their running jobs
+    
+    We strongly encourage inexperienced users to allocate only 1 GPU, as most workloads do not speed up automatically with more GPUs. For advanced users who know how to configure multi-GPU training correctly, up to 4 GPUs per job remain available.
 

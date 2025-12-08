@@ -21,13 +21,19 @@ srun --cpus-per-task=15 singularity exec --nv /ceph/container/pytorch/pytorch_24
 
 ### GPUs per job
 
-`--gres=gpu` specifies the number of GPUs required for the jobs. Maximum value is 8 GPUs per job. Example:
+`--gres=gpu` specifies the number of GPUs required for the jobs. **Maximum value is 4 GPUs per job.** Example:
 
 ```
-run --gres=gpu:4 singularity exec --nv /ceph/container/pytorch/pytorch_24.09.sif python3 /ceph/course/claaudia/docs/torch_bm.py
+srun --gres=gpu:4 singularity exec --nv /ceph/container/pytorch/pytorch_24.09.sif python3 /ceph/course/claaudia/docs/torch_bm.py
 ```
 
-
+!!! info "GPU Resource Limits"
+    To ensure fair access for all users, AI-LAB enforces two important limits:
+    
+    - **Maximum 4 GPUs per job**: A single job can request no more than 4 GPUs (e.g., `--gres=gpu:4` or `-G 4`)
+    - **Maximum 8 GPUs per user**: Each user can run jobs using a total of up to 8 GPUs simultaneously across all their running jobs
+    
+    We strongly encourage inexperienced users to allocate only 1 GPU, as most workloads do not speed up automatically with more GPUs. For advanced users who know how to configure multi-GPU training correctly, up to 4 GPUs per job remain available.
 
 Request only the number of GPUs your job can effectively utilize. Over-requesting can lead to resource underutilization and longer queue times. Some applications may need adjustments to scale effectively across multiple GPUs. [Here](multiple-gpus-with-pytorch.md) is an example of a PyTorch script that can handle multiple GPUs. 
 
