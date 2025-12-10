@@ -90,36 +90,31 @@ This guide will help you connect to TAAURUS using Remote Desktop Protocol (RDP).
 
     ### Install Microsoft Remote Desktop
 
-    1. Open the **Mac App Store**
-    2. Search for **Microsoft Remote Desktop**
+    1. Open the **Software Center**
+    2. Search for **Windows App**
     3. Install the application
 
-    [NEED IMAGE HERE]
+    ![Screenshot of Software Center](/assets/img/taaurus/mac-software-center-1.png){style=max-height:600px;}
 
     ### Step 2: Configure the connection
 
     1. Open **Microsoft Remote Desktop**
-    2. Click **Add PC**
-    3. Enter the server address:
+    ![Screenshot of Software Center](/assets/img/taaurus/mac-rdp-0.png){style=max-height:600px;}
 
-    [NEED IMAGE HERE]
+    2. Open Settings in top menu (⌘ ,)
+    3. Add Gateway in "Gateways", use gateway name:     ```rdgw.taaurus.aau.dk```
+      ![Screenshot of remote desktop add pc](/assets/img/taaurus/mac-rdp-1.png){style=max-height:600px;}
+    4. Click **Connections** -> **Add PC** (⌘ N) use server address: ```sp-test05.srv.aau.dk```
+      ![Screenshot of remote desktop add pc](/assets/img/taaurus/mac-rdp-2.png){style=max-height:600px;}
 
-    ```
-    sp-test05.srv.aau.dk
-    ```
-
-    4. Under **Gateway**, choose **Add Gateway…**
-
-        - **Server**: `rdgw.taaurus.aau.dk`
-        - **User account**: *Ask when required*
-
-    [NEED IMAGE HERE]
 
     Save the connection and double-click it to connect.
+      ![Screenshot of remote desktop add pc](/assets/img/taaurus/mac-rdp-3.png){style=max-height:600px;}
 
     ### Step 3: Authentication Process
 
     You will be prompted to log in with your **AAU email and password**, followed by approval in **Microsoft Authenticator**.
+      ![Screenshot of remote desktop add pc](/assets/img/taaurus/mac-rdp-4.png){style=max-height:600px;}
 
     ### Step 4: Final Authentication
     - You may need to authenticate once more with your **AAU email and password**
