@@ -28,7 +28,7 @@ This guide will help you connect to TAAURUS using Remote Desktop Protocol (RDP).
     ```
     4. Click **Show Options** to access **Advanced** settings in the tab
 
-    ![Screenshot of RDP](/assets/img/taaurus/rdp-1.png){style=max-height:600px;}
+    ![Screenshot of RDP](/assets/img/taaurus/windows-rdp-1.png){style=max-height:600px;}
 
     ### Step 3: Configure Gateway Settings
 
@@ -41,7 +41,7 @@ This guide will help you connect to TAAURUS using Remote Desktop Protocol (RDP).
     8. Click **OK** to save settings
     9. Click **Connect** to initiate the connection
 
-    ![Screenshot of RDP](/assets/img/taaurus/rdp-2.png){style=max-height:600px;}
+    ![Screenshot of RDP](/assets/img/taaurus/windows-rdp-2.png){style=max-height:600px;}
 
     ### Step 4: Authentication Process
 
@@ -63,7 +63,7 @@ This guide will help you connect to TAAURUS using Remote Desktop Protocol (RDP).
     ### Final Authentication
     - You may need to authenticate once more with your **AAU email and password**
 
-    ![Screenshot of RDP](/assets/img/taaurus/rdp-3.png){style=max-height:600px;}
+    ![Screenshot of RDP](/assets/img/taaurus/general-rdp-3.png){style=max-height:600px;}
 
     ### Step 5: Success!
 
@@ -119,7 +119,7 @@ This guide will help you connect to TAAURUS using Remote Desktop Protocol (RDP).
     ### Step 4: Final Authentication
     - You may need to authenticate once more with your **AAU email and password**
 
-    ![Screenshot of RDP](/assets/img/taaurus/rdp-3.png){style=max-height:600px;}
+    ![Screenshot of RDP](/assets/img/taaurus/general-rdp-3.png){style=max-height:600px;}
 
     ### Step 5: Success!
 
