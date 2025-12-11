@@ -2,6 +2,10 @@
 
 <div class="tag-container">
     <div class="tag-item">
+        <div class="tag">SUND<i class="bi bi-check-lg"></i></div>
+        <div class="tooltip">Indicates that the platform is only for the Faculty of Medicine (SUND) researchers.</div>
+    </div>
+    <div class="tag-item">
         <div class="tag">Researchers<i class="bi bi-check-lg"></i></div>
         <div class="tooltip">Indicates if the platform is accessible for researchers (e.g., PhD students, postdocs, faculty) for research purposes.</div>
     </div>
@@ -56,15 +60,15 @@ TAAURUS provides a robust and future-proof infrastructure that can be adapted to
 ## Getting Started
 
 <div class="custom-grid-3">
-    <a href="/taaurus/how-to-access/" class="custom-grid-item">
+    <a href="/taaurus/guides/applying-for-a-taaurus-project/" class="custom-grid-item">
         <i class="custom-grid-icon bi bi-file-earmark-text-fill"></i>
         <p class="custom-grid-title">How to apply</p>
         <p class="custom-grid-content">Learn how to apply for access to TAAURUS</p>
     </a>
     <a href="/taaurus/guides/login/" class="custom-grid-item">
         <i class="custom-grid-icon bi bi-key-fill"></i>
-        <p class="custom-grid-title">How to access</p>
-        <p class="custom-grid-content">Learn how to connect to TAAURUS</p>
+        <p class="custom-grid-title">How to login</p>
+        <p class="custom-grid-content">Learn how to login to TAAURUS</p>
     </a>
     <a href="/taaurus/guides/navigating-taaurus/" class="custom-grid-item">
         <i class="custom-grid-icon bi bi-map-fill"></i>

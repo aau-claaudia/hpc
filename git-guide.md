@@ -186,7 +186,7 @@ In the Github interface, inside the [hpc page repo](https://github.com/aau-claau
 4. Click **Create pull request**
 
 > Provide a title if you wish to change the title from the commit message, and notes about the changes.
-Current internal processes are that pull requests do not require a review before merging.
+Current internal processes are that pull requests do not require a review before merging for the hpc.aau.du site, but they must be reviewed for any code bases.
 
 
 ### 2. Check the changes in the pull request

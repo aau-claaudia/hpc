@@ -1,12 +1,20 @@
-# Transcriber
-**Approved for data classification level**
+<div class="guide-page-header">
+  <div>
+    <h1 class="guide-page-header__title">Transcriber</h1>
+    <p><strong>Approved for data classification level</strong></p>
+    <a href="https://www.security.aau.dk/data-classification" target="_blank" class="icon-container">
+      <span class="icon level-0" title="Approved for public data">0</span>
+      <span class="icon level-1" title="Approved for internal data">1</span>
+      <span class="icon level-2" title="Approved for confidential data">2</span>
+      <span class="icon level-3" title="Approved for strictly confidential data">3</span>
+    </a>
+  </div>
+  <a class="guide-page-header__cta" href="https://docs.cloud.sdu.dk/Apps/transcriber.html" target=_blank>
+    Technical specifications
+  </a>
+</div>
 
-<a href="https://www.security.aau.dk/data-classification" target="_blank" class="icon-container">
-    <span class="icon level-0" title="Approved for public data">0</span>
-    <span class="icon level-1" title="Approved for internal data">1</span>
-    <span class="icon level-2" title="Approved for confidential data">2</span>
-    <span class="icon level-3" title="Approved for strictly confidential data">3</span>
-</a>
+---
 
 !!! success "New Transcriber Interface released!"
     
@@ -85,16 +93,19 @@ Select the guide of your choice below for step-by-step instructions for each ver
 
     Once the app starts, decide how you want to add files for transcription. You have two main options:
 
+
     - **Use files from UCloud folders**
-      - If you **selected folders** in the launch step, the app will automatically list the files detected there.
-      - **Choose** the files you want and click **Add UCloud files** to add them to your transcription queue.
-      - If you add new files to the folder after the job has started, click **Scan UCloud folder** to refresh the list.
-        > **Note:** This section is only visible if you selected a folder when launching your Transcriber job on UCloud.
+        - If you **selected folders** in the launch step, the app will automatically list the files detected there.
+        - **Choose** the files you want and click **Add UCloud files** to add them to your transcription queue.
+        - If you add new files to the folder after the job has started, click **Scan UCloud folder** to refresh the list.
+          > **Note:** This section is only visible if you selected a folder when launching your Transcriber job on UCloud.
 
     - **Upload files from your computer**
-      - **Drag and Drop** your files directly into the upload area of the Transcriber app.
-      - Or **click** the upload area to browse your computer and select files.
-      - Multiple files can be added at once.
+        - **Drag and Drop** your files directly into the upload area of the Transcriber app.
+        - Or **click** the upload area to browse your computer and select files.
+        - Multiple files can be added at once.
+    
+    > **Info:** The app can only process `.mp3`, `.mp4`, `.m4a`, `.wav`, and `.mpg` files. If your file is in another format, we recommend using VLC to convert it. VLC can be downloaded from the Software Center/Company Portal.
 
     ![Selecting files to be transcribed](/assets/img/UCloud/TranscriberguideGUI3.jpg)    
 

@@ -166,7 +166,7 @@ Most jobs need specific resources like GPUs, memory, or time limits. You specify
 |--------|-------------|---------|-------|
 | `--mem` | Memory allocation | `--mem=24G` | Max 24GB per GPU |
 | `--cpus-per-task` | CPU cores | `--cpus-per-task=15` | Max 15 CPUs per GPU |
-| `--gres` | GPUs | `--gres=gpu:1` | Request 1 GPU |
+| `--gres` | GPUs | `--gres=gpu:1` | Max 4 GPUs per job, max 8 GPUs per user |
 | `--time` | Time limit | `--time=01:00:00` | 1 hour (HH:MM:SS) |
 
 ### Resource Guidelines
@@ -183,8 +183,16 @@ Most jobs need specific resources like GPUs, memory, or time limits. You specify
 
 **GPUs**: Essential for deep learning
 
-- Single GPU: `--gres=gpu:1`
-- Multiple GPUs: `--gres=gpu:2` (only if your code supports it)
+- Single GPU: `--gres=gpu:1` (recommended for most users)
+- Multiple GPUs: `--gres=gpu:2` to `--gres=gpu:4` (only if your code supports it)
+
+!!! info "GPU Resource Limits"
+    To ensure fair access for all users, AI-LAB enforces two important limits:
+    
+    - **Maximum 4 GPUs per job**: A single job can request no more than 4 GPUs (e.g., `--gres=gpu:4` or `-G 4`)
+    - **Maximum 8 GPUs per user**: Each user can run jobs using a total of up to 8 GPUs simultaneously across all their running jobs
+    
+    We strongly encourage inexperienced users to allocate only 1 GPU, as most workloads do not speed up automatically with more GPUs. For advanced users who know how to configure multi-GPU training correctly, up to 4 GPUs per job remain available.
 
 **Time**: Set realistic time limits
 
@@ -193,8 +201,8 @@ Most jobs need specific resources like GPUs, memory, or time limits. You specify
 - Default: 1 hour (if not specified)
 - Maximum: 12 hours
 
-!!! warning "Multi-GPU Usage"
-    You can request multiple GPUs with `--gres=gpu:2`, but **only if your code actually uses them**. Allocating unused GPUs violates our [Fair Usage Policy](https://hpc.aau.dk/ai-lab/fair-usage/){target=_blank}.
+!!! info "Multi-GPU Usage"
+    You can request multiple GPUs with `--gres=gpu:2` (up to 4), but **only if your code actually uses them**. Allocating unused GPUs violates our [Fair Usage Policy](https://hpc.aau.dk/ai-lab/fair-usage/){target=_blank}.
 
 ### Using Options with srun
 

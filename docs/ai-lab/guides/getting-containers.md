@@ -163,10 +163,6 @@ Bootstrap: docker
 From: ubuntu:20.04
 
 %post
-    # Set temporary directory
-    export TMPDIR=/tmp
-    mkdir -p $TMPDIR
-
     # Update system
     apt-get update
     apt-get upgrade -y
