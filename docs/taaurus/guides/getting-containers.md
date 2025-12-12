@@ -221,15 +221,8 @@ Think of it as a complete, portable computer environment that works the same way
 
     ### Converting the Container to Singularity
 
-    On TAAURUS, we need to set the `SINGULARITY_TMPDIR` and `SINGULARITY_CACHEDIR` environment variables, to speed up repeated operations. We will use these variables to a temporary directory (`/media/project/work/.singularity/tmp/` and `/media/project/work/.singularity/cache/`). 
-      
-    Remember to replace `project` with your projects name.
-
-    ```
-    export SINGULARITY_TMPDIR="/media/project/work/.singularity/tmp/"
-    export SINGULARITY_CACHEDIR="/media/project/work/.singularity/cache/"
-    mkdir -p $SINGULARITY_CACHEDIR $SINGULARITY_TMPDIR
-    ```
+    !!! info "Environment Variables Set by Default"
+        The `SINGULARITY_TMPDIR` and `SINGULARITY_CACHEDIR` environment variables are set as default on TAAURUS, so you don't need to set them manually. These variables are configured to use temporary directories (`/media/project/work/.singularity/tmp/` and `/media/project/work/.singularity/cache/`) to speed up repeated operations.
 
     Now, convert the Podman image into a Singularity image:
 
