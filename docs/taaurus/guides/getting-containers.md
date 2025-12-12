@@ -227,7 +227,7 @@ Think of it as a complete, portable computer environment that works the same way
     Now, convert the Podman image into a Singularity image:
 
     ```
-    srun singularity build my-python-app.sif docker-archive://my-python-app.tar
+    singularity build my-python-app.sif docker-archive://my-python-app.tar
     ```
 
     This will convert the container into a Singularity Image File (.sif) that can be used in the cluster.

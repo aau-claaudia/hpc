@@ -3,6 +3,8 @@
 !!! info "Temporary solution"
     Currently, to import or export data to/from your TAAURUS project, you need to submit a service request.
 
+    **Important:** The service request must be submitted by the **Principal Investigator (PI)** of the project.
+
     **Submit a service request at:** 
     [https://serviceportal.aau.dk/](https://serviceportal.aau.dk/serviceportal?id=emp_taxonomy_topic&topic_id=82a253e8838fc21053711d447daad328)
 

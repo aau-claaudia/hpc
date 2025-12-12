@@ -6,7 +6,10 @@ This guide will help you connect to TAAURUS using Remote Desktop Protocol (RDP).
 - [Access to TAAURUS platform](/taaurus/guides/applying-for-a-taaurus-project/)
 - Remote Desktop Protocol (RDP) client installed (see the guides below)
 - AAU email
-- Microsoft Authenticator app for 2FA authentication ([instructions for setting it up](https://www.en.its.aau.dk/instructions/mfa))
+- Microsoft Authenticator app for 2FA authentication
+    - **Default sign-in method**: Must be set to **App based authentication** (can be changed at [https://aka.ms/mfasetup](https://aka.ms/mfasetup))
+    - **Notification type**: You must have Microsoft Authenticator **push notifications** set up — **NOT SMS**
+    - Make sure to follow the complete setup guide: [https://www.en.its.aau.dk/instructions/mfa](https://www.en.its.aau.dk/instructions/mfa)
 - AAU network connection
     - If off campus please follow [these instructions](https://www.en.its.aau.dk/instructions/vpn) to set up VPN at AAU
 
