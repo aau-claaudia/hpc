@@ -53,7 +53,7 @@ This guide will help you connect to TAAURUS using Remote Desktop Protocol (RDP).
     ### First Authentication
     - A Windows Security popup will appear
     - Click **More choices** and then **Use a different account**
-    - Enter your **AAU email address** and **password**
+    - Enter your **AAU email address** (You need to use the 6-digit email, like `xx11yy@domain.aau.dk`) and **password**
     - Click **OK**
 
     ![Screenshot of RDP](/assets/img/taaurus/rdp-windows-security-1.png){style=max-height:600px;}
@@ -64,7 +64,7 @@ This guide will help you connect to TAAURUS using Remote Desktop Protocol (RDP).
     - Open the app and approve the login request
 
     ### Final Authentication
-    - You may need to authenticate once more with your **AAU email and password**
+    - You may need to authenticate once more with your **AAU email (You need to use the 6-digit email, like `xx11yy@domain.aau.dk`) and password**
 
     ![Screenshot of RDP](/assets/img/taaurus/general-rdp-3.png){style=max-height:600px;}
 
@@ -107,7 +107,7 @@ This guide will help you connect to TAAURUS using Remote Desktop Protocol (RDP).
     2. Open Settings in top menu (⌘ ,)
     3. Add Gateway in "Gateways", use gateway name:     ```rdgw.taaurus.aau.dk```
       ![Screenshot of remote desktop add pc](/assets/img/taaurus/mac-rdp-1.png){style=max-height:600px;}
-    4. Click **Connections** -> **Add PC** (⌘ N) use server address: ```sp-test05.srv.aau.dk```
+    4. Click **Connections** -> **Add PC** (⌘ N) use **the server address for your project**, fx `sp-test05.srv.aau.dk`: ```sp-test05.srv.aau.dk```
       ![Screenshot of remote desktop add pc](/assets/img/taaurus/mac-rdp-2.png){style=max-height:600px;}
 
 
@@ -116,11 +116,11 @@ This guide will help you connect to TAAURUS using Remote Desktop Protocol (RDP).
 
     ### Step 3: Authentication Process
 
-    You will be prompted to log in with your **AAU email and password**, followed by approval in **Microsoft Authenticator**.
+    You will be prompted to log in with your **AAU email (You need to use the 6-digit email, like `xx11yy@domain.aau.dk`) and password**, followed by approval in **Microsoft Authenticator**.
       ![Screenshot of remote desktop add pc](/assets/img/taaurus/mac-rdp-4.png){style=max-height:600px;}
 
     ### Step 4: Final Authentication
-    - You may need to authenticate once more with your **AAU email and password**
+    - You may need to authenticate once more with your **AAU email (You need to use the 6-digit email, like `xx11yy@domain.aau.dk`) and password**
 
     ![Screenshot of RDP](/assets/img/taaurus/general-rdp-3.png){style=max-height:600px;}
 
@@ -201,16 +201,17 @@ This guide will help you connect to TAAURUS using Remote Desktop Protocol (RDP).
 
     Replace `SERVER-NAME` with your TAAURUS projects server name. 
 
-    Replace `AAU-EMAIL` with your AAU Email.
+    Replace `AAU-EMAIL` with your AAU Email. You need to use the 6-digit email, like `xx11yy@domain.aau.dk`.
 
     **Parameter explanation:**
-    - `/v:` – Target TAAURUS server
-    - `/f` – Fullscreen mode
-    - `/u:` – Your AAU username (email format)
-    - `/g:` – RD Gateway used for secure access
+
+        - `/v:` – Target TAAURUS server
+        - `/f` – Fullscreen mode
+        - `/u:` – Your AAU username (email format)
+        - `/g:` – RD Gateway used for secure access
 
     When prompted:
-    1. Enter your **AAU password**
+    1. Enter your **AAU password**.
     2. Approve the login in **Microsoft Authenticator**
 
     You may be asked to authenticate more than once — this is expected.
