@@ -139,17 +139,104 @@ This guide will help you connect to TAAURUS using Remote Desktop Protocol (RDP).
     3. **Gateway issues**: Ensure you've correctly configured the RD Gateway settings
     4. **Still having problems**: Contact CLAAUDIA support at [serviceportal.aau.dk](https://serviceportal.aau.dk/serviceportal?id=sc_cat_item&sys_id=a05e2fb4c3434610f0f3041ad00131d0)
 
-===+ "Linux"
+===+ "Linux"-
 
-    ### Linux Support Notice
+    ### Connecting from Linux 
 
-    This guide is **not available for Linux**.
+    TAAURUS provides access through a **Windows Remote Desktop environment**, which means all operating systems must connect using the **Remote Desktop Protocol (RDP)**.
 
-    Connecting to TAAURUS requires a specific Remote Desktop (RDP) setup with AAU authentication and RD Gateway configuration, which is **not documented for Linux clients yet**.
+    Because only Windows includes an RDP client by default, **Linux users must install one** before connecting.
 
-    If you need to access TAAURUS from a Linux system, please **submit a support ticket**, and we will help you find a suitable solution or workaround.
+    Linux desktop environments use a **display server** to handle windows, input, and graphics.  
+    The two most common ones are:
 
-    👉 Submit a ticket via the [AAU Service Portal]https://serviceportal.aau.dk/serviceportal?id=sc_cat_item&sys_id=a05e2fb4c3434610f0f3041ad00131d0
+    - **X11 (X.Org)** – Older, very widely supported
+    - **Wayland** – Newer, more secure, and default on many modern distributions
+
+    To check which one you are running, open a terminal and run:
+
+    ```bash
+    echo $XDG_SESSION_TYPE
+    ```
+
+    - Output `x11` → follow **X11 instructions**
+    - Output `wayland` → follow **Wayland instructions**
+
+    ---
+
+    ### Step 1: Install FreeRDP
+
+    FreeRDP is an open-source Remote Desktop (RDP) client for Linux.
+
+    #### For X11
+    ```bash
+    sudo apt install freerdp2-x11
+    ```
+
+    This installs the `xfreerdp` command.
+
+    #### For Wayland
+    ```bash
+    sudo apt install freerdp2-wayland
+    ```
+
+    This installs the `wlfreerdp` command  
+    *(note: **not** `wfreerdp` — this is a common mistake)*
+
+    ---
+
+    ### Step 2: Connect to TAAURUS
+
+    Use the command that matches your display server.
+
+    #### Wayland
+    ```bash
+    wlfreerdp /v:SERVER-NAME /f /u:AAU-EMAIL /g:rdgw.taaurus.aau.dk
+    ```
+
+    #### X11
+    ```bash
+    xfreerdp /v:SERVER-NAME /f /u:AAU-EMAIL /g:rdgw.taaurus.aau.dk
+    ```
+
+    Replace `SERVER-NAME` with your TAAURUS projects server name. 
+
+    Replace `AAU-EMAIL` with your AAU Email.
+
+    **Parameter explanation:**
+    - `/v:` – Target TAAURUS server
+    - `/f` – Fullscreen mode
+    - `/u:` – Your AAU username (email format)
+    - `/g:` – RD Gateway used for secure access
+
+    When prompted:
+    1. Enter your **AAU password**
+    2. Approve the login in **Microsoft Authenticator**
+
+    You may be asked to authenticate more than once — this is expected.
+
+    ---
+
+    ### Known Notes & Limitations
+
+    - MFA **must** be set up with Microsoft Authenticator push notifications
+    - VPN may be required if you are off campus
+    - Clipboard and drive redirection may behave differently than on Windows/macOS
+    - This setup is **not guaranteed** to work on all Linux distributions
+
+    ---
+
+    ### Need Help?
+
+    If this does not work for you, please submit a support ticket and include:
+    - Your Linux distribution
+    - Whether you use X11 or Wayland
+    - The full command you tried
+    - Any error output from the terminal
+
+    👉 Submit a ticket via the AAU Service Portal:  
+    https://serviceportal.aau.dk/serviceportal?id=sc_cat_item&sys_id=a05e2fb4c3434610f0f3041ad00131d0
+
 
 
 ## Next Steps
