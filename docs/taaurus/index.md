@@ -53,9 +53,9 @@
 
 ## Introduction
 
-TAAURUS is a secure, flexible, and scalable platform designed to support research and innovation in environments with high requirements for data processing and information security. The platform serves as a strategic foundation that unifies quality, user-friendliness, and compliance in one integrated solution.
+TAAURUS is a secure, flexible, and scalable platform that supports research and innovation in environments with high requirements for data processing and information security. The platform combines user-friendliness, quality, and compliance in one integrated solution, which can be adapted to different research projects and workflows. 
 
-TAAURUS provides a robust and future-proof infrastructure that can be adapted to different needs while ensuring high confidence in data handling and system operations. The platform is specifically designed for researchers working with sensitive data that requires secure processing and storage.
+TAAURUS provides a solid and future-proof infrastructure that can be expanded and adapted as needs for data, users, and capacity grow — without compromising security or system operations. The platform is specifically designed for researchers working with sensitive data who require secure processing and storage. 
 
 ## Getting Started
 
