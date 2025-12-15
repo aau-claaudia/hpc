@@ -139,7 +139,7 @@ This guide will help you connect to TAAURUS using Remote Desktop Protocol (RDP).
     3. **Gateway issues**: Ensure you've correctly configured the RD Gateway settings
     4. **Still having problems**: Contact CLAAUDIA support at [serviceportal.aau.dk](https://serviceportal.aau.dk/serviceportal?id=sc_cat_item&sys_id=a05e2fb4c3434610f0f3041ad00131d0)
 
-===+ "Linux"-
+===+ "Linux"
 
     ### Connecting from Linux 
 
