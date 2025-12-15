@@ -141,77 +141,15 @@ This guide will help you connect to TAAURUS using Remote Desktop Protocol (RDP).
 
 ===+ "Linux"
 
-    ### Step 1: Connecting from Linux
+    ### Linux Support Notice
 
-    TAAURUS provides access through a **Windows Remote Desktop environment**, which means all operating systems must connect using the **Remote Desktop Protocol (RDP)**.
+    This guide is **not available for Linux**.
 
-    Because only Windows includes an RDP client by default, **Linux users must install one** before connecting.
-    
-    We recommend using **Remmina remote desktop client**:
+    Connecting to TAAURUS requires a specific Remote Desktop (RDP) setup with AAU authentication and RD Gateway configuration, which is **not documented for Linux clients yet**.
 
-    ### Step 1: Install Remmina
+    If you need to access TAAURUS from a Linux system, please **submit a support ticket**, and we will help you find a suitable solution or workaround.
 
-    === "Ubuntu / Debian"
-        ```bash
-        sudo apt install remmina remmina-plugin-rdp
-        ```
-
-    === "Fedora"
-        ```bash
-        sudo dnf install remmina
-        ```
-
-    === "Arch Linux"
-        ```bash
-        sudo pacman -S remmina
-        ```
-    
-    ### Step 2: Configure the connection
-
-    1. Open **Remmina**
-    2. Click **+** to add a new connection
-    3. Set:
-       - **Protocol:** RDP  
-       - **Server:**  
-           ```
-           sp-test05.srv.aau.dk
-           ```
-
-    [NEED IMAGE HERE]
-
-    4. Under **Advanced**:
-       - Enable **Use RD Gateway**
-       - **Gateway server:** `rdgw.taaurus.aau.dk`
-
-    [NEED IMAGE HERE]
-
-    Save and connect.  
-
-    ### Step 3: Authentication Process
-    
-    Authenticate with **AAU email + password**, then approve via **Microsoft Authenticator**.
-
-    ### Step 4: Final Authentication
-    - You may need to authenticate once more with your **AAU email and password**
-
-    ![Screenshot of RDP](/assets/img/taaurus/rdp-3.png){style=max-height:600px;}
-
-    ### Step 5: Success!
-
-    Once authenticated, you will be connected to the TAAURUS remote desktop environment. You should see the desktop interface of the TAAURUS server.
-
-    ![Screenshot of RDP](/assets/img/taaurus/taaurus-server.png){style=max-height:600px;}
-
-    ### Troubleshooting
-
-    If you encounter any issues during the login process:
-
-    1. **Connection fails**: Check that you are connected to AAU network and try again
-    2. **Authentication errors**: Verify your AAU credentials and MFA setup
-    3. **Gateway issues**: Ensure you've correctly configured the RD Gateway settings
-    4. **Still having problems**: Contact CLAAUDIA support at [serviceportal.aau.dk](https://serviceportal.aau.dk/serviceportal?id=sc_cat_item&sys_id=a05e2fb4c3434610f0f3041ad00131d0)
-
-
+    👉 Submit a ticket via the [AAU Service Portal]https://serviceportal.aau.dk/serviceportal?id=sc_cat_item&sys_id=a05e2fb4c3434610f0f3041ad00131d0
 
 
 ## Next Steps
