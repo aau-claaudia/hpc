@@ -107,7 +107,7 @@ This guide will help you connect to TAAURUS using Remote Desktop Protocol (RDP).
     2. Open Settings in top menu (⌘ ,)
     3. Add Gateway in "Gateways", use gateway name:     ```rdgw.taaurus.aau.dk```
       ![Screenshot of remote desktop add pc](/assets/img/taaurus/mac-rdp-1.png){style=max-height:600px;}
-    4. Click **Connections** -> **Add PC** (⌘ N) use **the server address for your project**, fx `sp-test05.srv.aau.dk`: ```sp-test05.srv.aau.dk```
+    4. Click **Connections** -> **Add PC** (⌘ N) use **the server address for your project**, fx `sp-test05.srv.aau.dk`
       ![Screenshot of remote desktop add pc](/assets/img/taaurus/mac-rdp-2.png){style=max-height:600px;}
 
 
@@ -181,7 +181,6 @@ This guide will help you connect to TAAURUS using Remote Desktop Protocol (RDP).
     ```
 
     This installs the `wlfreerdp` command  
-    *(note: **not** `wfreerdp` — this is a common mistake)*
 
     ---
 
