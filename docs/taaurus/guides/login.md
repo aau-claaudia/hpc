@@ -6,12 +6,23 @@ This guide will help you connect to TAAURUS using Remote Desktop Protocol (RDP).
 - [Access to TAAURUS platform](/taaurus/guides/applying-for-a-taaurus-project/)
 - Remote Desktop Protocol (RDP) client installed (see the guides below)
 - AAU email
-- Microsoft Authenticator app for 2FA authentication
-    - **Default sign-in method**: Must be set to **App based authentication** (can be changed at [https://aka.ms/mfasetup](https://aka.ms/mfasetup))
-    - **Notification type**: You must have Microsoft Authenticator **push notifications** set up — **NOT SMS**
-    - Make sure to follow the complete setup guide: [https://www.en.its.aau.dk/instructions/mfa](https://www.en.its.aau.dk/instructions/mfa)
+- Microsoft Authenticator app for 2FA authentication (see [MFA Setup Requirements](#mfa-setup-requirements) below)
 - AAU network connection
     - If off campus please follow [these instructions](https://www.en.its.aau.dk/instructions/vpn) to set up VPN at AAU
+- MFA setup
+    - If you haven't set up MFA yet, please follow [this setup guide](https://www.en.its.aau.dk/instructions/mfa)
+    - Make sure to choose the **notification method** (push notifications) during setup, **not the code method**.
+
+        !!! info "Changing from Code Method to Notification Method"
+
+            If you already have MFA set up but are using the code method, you need to change it to the notification method:
+
+            1. **Open a new incognito/private browser window**
+            2. Go to [https://aka.ms/mfasetup](https://aka.ms/mfasetup) and log in
+            3. Change **"Default sign-in method"** to **"App based authentication - notification"**
+            4. Click **"Confirm"**
+
+            This will enable push notifications in your Microsoft Authenticator app, which is required for TAAURUS login.
 
 ===+ "Windows"
 
