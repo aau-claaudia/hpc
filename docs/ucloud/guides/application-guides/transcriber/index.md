@@ -16,18 +16,12 @@
 
 ---
 
-!!! success "New Transcriber Interface released!"
-    
-    We are excited to announce the release of a brand new, user-friendly interface for the Transcriber application on UCloud! The updated interface offers a significantly improved user experience, streamlined workflows, and new features to make your transcription tasks easier than ever.
+!!! info "New feature: Transcribe and stop"
 
-    **Try it now:**  
-    - Go to [UCloud](https://cloud.sdu.dk/app/jobs/create?app=transcriber-gui), select **Transcriber**, and choose the **Default** version.
+    **Transcribe and stop** is a new option in the Transcriber interface application that automatically stops the job once all selected files have been transcribed. Enabling this setting saves compute resources by ensuring the job only runs while actual transcription is taking place—making your allocation more efficient and freeing up resources so you can complete more transcriptions overall.
 
-    **Need help?**  
-    - Scroll down the step-by-step Transcriber interface Guide for detailed instructions.
-
-    **Prefer the classic version?**  
-    - You can still use the previous batch interface by switching the version to [**Batch**](https://cloud.sdu.dk/app/jobs/create?app=transcriber) at the top of the job page on UCloud. Scroll down to the **Transcriber Batch** section below for instructions.
+    - **How it works:** When this feature is enabled, the job will finish and automatically shut down as soon as all transcriptions are complete.
+    - **Access your results:** Your transcribed files are always available in the UCloud filesystem, either in the job folder or in your chosen output folder at startup.
 
 
 ### What is Transcriber
