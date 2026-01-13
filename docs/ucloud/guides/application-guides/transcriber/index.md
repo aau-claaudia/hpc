@@ -128,6 +128,9 @@ Select the guide of your choice below for step-by-step instructions for each ver
     #### 1.6 Optional: Adjusting settings
 
     - Click **Show settings** at the top of the page to adjust:
+      
+      - **New feature:** Transcribe and stop This setting allows the job to stop automatically once all selected files have been transcribed. Enabling this option is highly efficient in terms of compute hours allocated to your project, as the job remains active only while work is being performed. As always, the transcribed files can be found in the UCloud filesystem, either in the job folder or in the folder selected at startup.
+      
       - The transcription model (default is "large-v3").
       - The language (default is "Automatic").
     > **Note:** If you're unsure, the default settings are usually best.
