@@ -9,8 +9,9 @@ nav:
       - Home: index.md
       - Service windows: service-windows.md
       - Tools:
-        - HPC Decision Tree: hpc-decision-tree.md
-        - HPC Comparison Table: hpc-comparison-table.md
+          - HPC Decision Tree: hpc-decision-tree.md
+          - HPC Comparison Table: hpc-comparison-table.md
+          - Other research softwares: https://www.researcher.aau.dk/guides/research-data-and-software/software-and-tools
         #- HPC Cost Estimator: hpc-cost-estimator.md
   - Strato:
       - About Strato: strato/index.md
@@ -79,7 +80,7 @@ nav:
               - Container images: ai-cloud/getting-started/container-images.md
               - Run jobs: ai-cloud/getting-started/run-jobs.md
           - Additional guides:
-              - Using the Linux CLI: 
+              - Using the Linux CLI:
                   - Understanding the Linux CLI: ai-cloud/additional-guides/understanding-linux-cli.md
                   - Edit text files with Nano: ai-cloud/additional-guides/edit-text-files-with-nano.md
                   - Useful commands: ai-cloud/additional-guides/useful-commands.md

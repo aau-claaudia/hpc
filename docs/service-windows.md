@@ -18,10 +18,10 @@ A service window will take place on the following dates:
 
 | 2025  | 2026  | 2027  | 2028  |
 | ---   | ---   | ---   | ---   |
-| <s>11/02</s> | 10/02 | 09/02 | 08/02 |
+| <s>11/02</s> | <span style="background:#211a52; color:white; font-weight:bold; border:2px solid #211a52; border-radius:4px; padding:2px 8px; display:inline-block;">10/02</span>  | 09/02 | 08/02 |
 | <s>13/05</s> | 12/05 | 11/05 | 09/05 |
 | <s>16/09</s> | 15/09 | 14/09 | 12/09 |
-| <span style="background:#211a52; color:white; font-weight:bold; border:2px solid #211a52; border-radius:4px; padding:2px 8px; display:inline-block;">02/12</span> | 01/12 | 30/11 | 28/11 |
+| <s>02/12</s> | 01/12 | 30/11 | 28/11 |
 
 </div>
 
@@ -31,10 +31,10 @@ A service window will take place on the following dates:
 
 | 2025  | 2026  | 2027  | 2028  |
 | ---   | ---   | ---   | ---   |
-| <s>13/02</s> | 12/02 | 11/02 | 10/02 |
+| <s>13/02</s> | <span style="background:#211a52; color:white; font-weight:bold; border:2px solid #211a52; border-radius:4px; padding:2px 8px; display:inline-block;">12/02</span> | 11/02 | 10/02 |
 | <s>15/05</s> | 14/05 | 13/05 | 11/05 |
 | <s>18/09</s> | 17/09 | 16/09 | 14/09 |
-| <span style="background:#211a52; color:white; font-weight:bold; border:2px solid #211a52; border-radius:4px; padding:2px 8px; display:inline-block;">04/12</span>| 03/12 | 02/12 | 30/11 |
+| <s>04/12</s> | 03/12 | 02/12 | 30/11 |
 
 </div>
 

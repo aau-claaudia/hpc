@@ -11,6 +11,102 @@
   </p>
 </div> -->
 
+<!-- Holiday Support Banner with Snow Effect -->
+<!-- <style>
+  @keyframes snow {
+    0% {
+      transform: translateY(0) rotate(0deg);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(100vh) rotate(360deg);
+      opacity: 0;
+    }
+  }
+  
+  .snowflake {
+    position: absolute;
+    top: -10px;
+    color: white;
+    font-size: 1em;
+    font-family: Arial, sans-serif;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
+    animation: snow linear infinite;
+    pointer-events: none;
+  }
+  
+  .holiday-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(135deg, #1976d2 0%, #1565c0 100%);
+    text-align: center;
+    z-index: 9999;
+    box-shadow: 0 -2px 12px rgba(0,0,0,0.08);
+    overflow: hidden;
+  }
+</style>
+
+<div class="holiday-banner">
+  <div id="snow-container" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none;"></div>
+  <p style="text-align: center; font-size: 16px; color: white; max-width: 1500px; margin: auto; padding-left: 30px; padding-right: 30px; font-weight: 600; margin-bottom: 10px; margin-top: 10px; position: relative; z-index: 1;">
+    <span style="color: #fff;">
+      Our support team will be on holiday from 22nd December to 5th January. Support requests will be handled when the team returns on 5th January.<br>
+      <strong>Merry Christmas and Happy New Year!</strong> 🎄🎉
+    </span>
+  </p>
+  <script>
+    (function() {
+      const snowContainer = document.getElementById('snow-container');
+      if (!snowContainer) return;
+      
+      const snowflakes = ['❄', '❅', '❆', '✻', '✼', '✽', '✾', '✿'];
+      const numSnowflakes = 30;
+      
+      for (let i = 0; i < numSnowflakes; i++) {
+        setTimeout(() => {
+          const snowflake = document.createElement('div');
+          snowflake.className = 'snowflake';
+          snowflake.textContent = snowflakes[Math.floor(Math.random() * snowflakes.length)];
+          snowflake.style.left = Math.random() * 100 + '%';
+          snowflake.style.animationDuration = (Math.random() * 6 + 6) + 's';
+          snowflake.style.animationDelay = Math.random() * 2 + 's';
+          snowflake.style.fontSize = (Math.random() * 10 + 10) + 'px';
+          snowContainer.appendChild(snowflake);
+          
+          // Remove snowflake after animation
+          setTimeout(() => {
+            if (snowflake.parentNode) {
+              snowflake.parentNode.removeChild(snowflake);
+            }
+          }, 12000);
+        }, i * 200);
+      }
+      
+      // Continuously add new snowflakes
+      setInterval(() => {
+        if (snowContainer.children.length < numSnowflakes) {
+          const snowflake = document.createElement('div');
+          snowflake.className = 'snowflake';
+          snowflake.textContent = snowflakes[Math.floor(Math.random() * snowflakes.length)];
+          snowflake.style.left = Math.random() * 100 + '%';
+          snowflake.style.animationDuration = (Math.random() * 6 + 6) + 's';
+          snowflake.style.animationDelay = '0s';
+          snowflake.style.fontSize = (Math.random() * 10 + 10) + 'px';
+          snowContainer.appendChild(snowflake);
+          
+          setTimeout(() => {
+            if (snowflake.parentNode) {
+              snowflake.parentNode.removeChild(snowflake);
+            }
+          }, 12000);
+        }
+      }, 300);
+    })();
+  </script>
+</div>
+-->
 
 
 <header class="custom-header md-header" data-md-component=header>

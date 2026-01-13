@@ -22,6 +22,14 @@ When running jobs, you can request specific resources like memory, CPUs, and GPU
 --gres=gpu:1
 ```
 
+!!! info "GPU Resource Limits"
+    To ensure fair access for all users, AI-LAB enforces two important limits:
+    
+    - **Maximum 4 GPUs per job**: A single job can request no more than 4 GPUs (e.g., `--gres=gpu:4`)
+    - **Maximum 8 GPUs per user**: Each user can run jobs using a total of up to 8 GPUs simultaneously across all their running jobs
+    
+    We strongly encourage inexperienced users to allocate only 1 GPU, as most workloads do not speed up automatically with more GPUs.
+
 ---
 
 ## 🚀 Example: Allocating resources with srun

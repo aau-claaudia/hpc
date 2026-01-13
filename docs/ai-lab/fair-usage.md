@@ -11,6 +11,22 @@ In exceptional cases, if we are unable to reach you, or if your jobs significant
 ## Ressource consumption
 The overall demand for GPU ressources fluctuates throughout the year, and we understand that demand is also dependent on the schedule of the individual student. We therefore prefer not to set a fixed limit on how many ressources an individual student can consume, as there may be times where they have a legitimate reason for high consumption. Instead we ask our users to be mindful of the overall supply, by making frequent asssesments of the queue.
 
+### GPU Resource Limits
+
+To ensure fair and efficient use of GPU resources for all users, we have introduced two global limits:
+
+**1. Maximum 8 GPUs per user at any given time**
+
+Several users have recently occupied a disproportionate share of the cluster. To guarantee equal access for everyone, each user can now run jobs using a total of up to 8 GPUs simultaneously. This ensures shorter queues and a better experience for the entire community.
+
+**2. Maximum 4 GPUs per job**
+
+A single job can now request no more than 4 GPUs, meaning a maximum of `--gres=gpu:4` or `-G 4`. We have introduced this limit because many users are not familiar with proper multi-GPU configuration, which often leads to inefficient GPU usage and longer queue times for others.
+
+We strongly encourage inexperienced users to allocate only 1 GPU, as most workloads do not speed up automatically with more GPUs. For advanced users who do know how to configure multi-GPU training correctly, up to 4 GPUs per job remain available.
+
+These measures help ensure that GPU capacity is shared fairly and used effectively.
+
 Responsible ressource consumption also involves taking care with multi-GPU allocations. We encourage our users to experiment with this, but they should take great care to test their applications in order to verify that they can indeed make use of the ressources allocated to their jobs.
 
 If possible, we recomend making good use of times with low consumption - ie. times outside of office hours; on weekends, during holidays, during the night, etc. The parameter `--begin` can be added to your Slurm command for this purpose.

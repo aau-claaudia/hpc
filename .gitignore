@@ -1,3 +1,6 @@
 site
 *~
 venv
+.DS_Store
+.idea
+.venv

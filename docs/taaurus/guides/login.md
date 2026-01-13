@@ -6,9 +6,23 @@ This guide will help you connect to TAAURUS using Remote Desktop Protocol (RDP).
 - [Access to TAAURUS platform](/taaurus/guides/applying-for-a-taaurus-project/)
 - Remote Desktop Protocol (RDP) client installed (see the guides below)
 - AAU email
-- Microsoft Authenticator app for 2FA authentication ([instructions for setting it up](https://www.en.its.aau.dk/instructions/mfa))
+- Microsoft Authenticator app for 2FA authentication (see [MFA Setup Requirements](#mfa-setup-requirements) below)
 - AAU network connection
     - If off campus please follow [these instructions](https://www.en.its.aau.dk/instructions/vpn) to set up VPN at AAU
+- MFA setup
+    - If you haven't set up MFA yet, please follow [this setup guide](https://www.en.its.aau.dk/instructions/mfa)
+    - Make sure to choose the **notification method** (push notifications) during setup, **not the code method**.
+
+        !!! info "Changing from Code Method to Notification Method"
+
+            If you already have MFA set up but are using the code method, you need to change it to the notification method:
+
+            1. **Open a new incognito/private browser window**
+            2. Go to [https://aka.ms/mfasetup](https://aka.ms/mfasetup) and log in
+            3. Change **"Default sign-in method"** to **"App based authentication - notification"**
+            4. Click **"Confirm"**
+
+            This will enable push notifications in your Microsoft Authenticator app, which is required for TAAURUS login.
 
 ===+ "Windows"
 
@@ -28,7 +42,7 @@ This guide will help you connect to TAAURUS using Remote Desktop Protocol (RDP).
     ```
     4. Click **Show Options** to access **Advanced** settings in the tab
 
-    ![Screenshot of RDP](/assets/img/taaurus/rdp-1.png){style=max-height:600px;}
+    ![Screenshot of RDP](/assets/img/taaurus/windows-rdp-1.png){style=max-height:600px;}
 
     ### Step 3: Configure Gateway Settings
 
@@ -41,7 +55,7 @@ This guide will help you connect to TAAURUS using Remote Desktop Protocol (RDP).
     8. Click **OK** to save settings
     9. Click **Connect** to initiate the connection
 
-    ![Screenshot of RDP](/assets/img/taaurus/rdp-2.png){style=max-height:600px;}
+    ![Screenshot of RDP](/assets/img/taaurus/windows-rdp-2.png){style=max-height:600px;}
 
     ### Step 4: Authentication Process
 
@@ -50,7 +64,7 @@ This guide will help you connect to TAAURUS using Remote Desktop Protocol (RDP).
     ### First Authentication
     - A Windows Security popup will appear
     - Click **More choices** and then **Use a different account**
-    - Enter your **AAU email address** and **password**
+    - Enter your **AAU email address** (You need to use the 6-digit email, like `xx11yy@domain.aau.dk`) and **password**
     - Click **OK**
 
     ![Screenshot of RDP](/assets/img/taaurus/rdp-windows-security-1.png){style=max-height:600px;}
@@ -61,9 +75,9 @@ This guide will help you connect to TAAURUS using Remote Desktop Protocol (RDP).
     - Open the app and approve the login request
 
     ### Final Authentication
-    - You may need to authenticate once more with your **AAU email and password**
+    - You may need to authenticate once more with your **AAU email (You need to use the 6-digit email, like `xx11yy@domain.aau.dk`) and password**
 
-    ![Screenshot of RDP](/assets/img/taaurus/rdp-3.png){style=max-height:600px;}
+    ![Screenshot of RDP](/assets/img/taaurus/general-rdp-3.png){style=max-height:600px;}
 
     ### Step 5: Success!
 
@@ -90,41 +104,36 @@ This guide will help you connect to TAAURUS using Remote Desktop Protocol (RDP).
 
     ### Install Microsoft Remote Desktop
 
-    1. Open the **Mac App Store**
-    2. Search for **Microsoft Remote Desktop**
+    1. Open the **Software Center**
+    2. Search for **Windows App**
     3. Install the application
 
-    [NEED IMAGE HERE]
+    ![Screenshot of Software Center](/assets/img/taaurus/mac-software-center-1.png){style=max-height:600px;}
 
     ### Step 2: Configure the connection
 
     1. Open **Microsoft Remote Desktop**
-    2. Click **Add PC**
-    3. Enter the server address:
+    ![Screenshot of Software Center](/assets/img/taaurus/mac-rdp-0.png){style=max-height:600px;}
 
-    [NEED IMAGE HERE]
+    2. Open Settings in top menu (⌘ ,)
+    3. Add Gateway in "Gateways", use gateway name:     ```rdgw.taaurus.aau.dk```
+      ![Screenshot of remote desktop add pc](/assets/img/taaurus/mac-rdp-1.png){style=max-height:600px;}
+    4. Click **Connections** -> **Add PC** (⌘ N) use **the server address for your project**, fx `sp-test05.srv.aau.dk`
+      ![Screenshot of remote desktop add pc](/assets/img/taaurus/mac-rdp-2.png){style=max-height:600px;}
 
-    ```
-    sp-test05.srv.aau.dk
-    ```
-
-    4. Under **Gateway**, choose **Add Gateway…**
-
-        - **Server**: `rdgw.taaurus.aau.dk`
-        - **User account**: *Ask when required*
-
-    [NEED IMAGE HERE]
 
     Save the connection and double-click it to connect.
+      ![Screenshot of remote desktop add pc](/assets/img/taaurus/mac-rdp-3.png){style=max-height:600px;}
 
     ### Step 3: Authentication Process
 
-    You will be prompted to log in with your **AAU email and password**, followed by approval in **Microsoft Authenticator**.
+    You will be prompted to log in with your **AAU email (You need to use the 6-digit email, like `xx11yy@domain.aau.dk`) and password**, followed by approval in **Microsoft Authenticator**.
+      ![Screenshot of remote desktop add pc](/assets/img/taaurus/mac-rdp-4.png){style=max-height:600px;}
 
     ### Step 4: Final Authentication
-    - You may need to authenticate once more with your **AAU email and password**
+    - You may need to authenticate once more with your **AAU email (You need to use the 6-digit email, like `xx11yy@domain.aau.dk`) and password**
 
-    ![Screenshot of RDP](/assets/img/taaurus/rdp-3.png){style=max-height:600px;}
+    ![Screenshot of RDP](/assets/img/taaurus/general-rdp-3.png){style=max-height:600px;}
 
     ### Step 5: Success!
 
@@ -143,76 +152,101 @@ This guide will help you connect to TAAURUS using Remote Desktop Protocol (RDP).
 
 ===+ "Linux"
 
-    ### Step 1: Connecting from Linux
+    ### Connecting from Linux 
 
     TAAURUS provides access through a **Windows Remote Desktop environment**, which means all operating systems must connect using the **Remote Desktop Protocol (RDP)**.
 
     Because only Windows includes an RDP client by default, **Linux users must install one** before connecting.
-    
-    We recommend using **Remmina remote desktop client**:
 
-    ### Step 1: Install Remmina
+    Linux desktop environments use a **display server** to handle windows, input, and graphics.  
+    The two most common ones are:
 
-    === "Ubuntu / Debian"
-        ```bash
-        sudo apt install remmina remmina-plugin-rdp
-        ```
+    - **X11 (X.Org)** – Older, very widely supported
+    - **Wayland** – Newer, more secure, and default on many modern distributions
 
-    === "Fedora"
-        ```bash
-        sudo dnf install remmina
-        ```
+    To check which one you are running, open a terminal and run:
 
-    === "Arch Linux"
-        ```bash
-        sudo pacman -S remmina
-        ```
-    
-    ### Step 2: Configure the connection
+    ```bash
+    echo $XDG_SESSION_TYPE
+    ```
 
-    1. Open **Remmina**
-    2. Click **+** to add a new connection
-    3. Set:
-       - **Protocol:** RDP  
-       - **Server:**  
-           ```
-           sp-test05.srv.aau.dk
-           ```
+    - Output `x11` → follow **X11 instructions**
+    - Output `wayland` → follow **Wayland instructions**
 
-    [NEED IMAGE HERE]
+    ---
 
-    4. Under **Advanced**:
-       - Enable **Use RD Gateway**
-       - **Gateway server:** `rdgw.taaurus.aau.dk`
+    ### Step 1: Install FreeRDP
 
-    [NEED IMAGE HERE]
+    FreeRDP is an open-source Remote Desktop (RDP) client for Linux.
 
-    Save and connect.  
+    #### For X11
+    ```bash
+    sudo apt install freerdp2-x11
+    ```
 
-    ### Step 3: Authentication Process
-    
-    Authenticate with **AAU email + password**, then approve via **Microsoft Authenticator**.
+    This installs the `xfreerdp` command.
 
-    ### Step 4: Final Authentication
-    - You may need to authenticate once more with your **AAU email and password**
+    #### For Wayland
+    ```bash
+    sudo apt install freerdp2-wayland
+    ```
 
-    ![Screenshot of RDP](/assets/img/taaurus/rdp-3.png){style=max-height:600px;}
+    This installs the `wlfreerdp` command  
 
-    ### Step 5: Success!
+    ---
 
-    Once authenticated, you will be connected to the TAAURUS remote desktop environment. You should see the desktop interface of the TAAURUS server.
+    ### Step 2: Connect to TAAURUS
 
-    ![Screenshot of RDP](/assets/img/taaurus/taaurus-server.png){style=max-height:600px;}
+    Use the command that matches your display server.
 
-    ### Troubleshooting
+    #### Wayland
+    ```bash
+    wlfreerdp /v:SERVER-NAME /f /u:AAU-EMAIL /g:rdgw.taaurus.aau.dk
+    ```
 
-    If you encounter any issues during the login process:
+    #### X11
+    ```bash
+    xfreerdp /v:SERVER-NAME /f /u:AAU-EMAIL /g:rdgw.taaurus.aau.dk
+    ```
 
-    1. **Connection fails**: Check that you are connected to AAU network and try again
-    2. **Authentication errors**: Verify your AAU credentials and MFA setup
-    3. **Gateway issues**: Ensure you've correctly configured the RD Gateway settings
-    4. **Still having problems**: Contact CLAAUDIA support at [serviceportal.aau.dk](https://serviceportal.aau.dk/serviceportal?id=sc_cat_item&sys_id=a05e2fb4c3434610f0f3041ad00131d0)
+    Replace `SERVER-NAME` with your TAAURUS projects server name. 
 
+    Replace `AAU-EMAIL` with your AAU Email. You need to use the 6-digit email, like `xx11yy@domain.aau.dk`.
+
+    **Parameter explanation:**
+
+        - `/v:` – Target TAAURUS server
+        - `/f` – Fullscreen mode
+        - `/u:` – Your AAU username (email format)
+        - `/g:` – RD Gateway used for secure access
+
+    When prompted:
+    1. Enter your **AAU password**.
+    2. Approve the login in **Microsoft Authenticator**
+
+    You may be asked to authenticate more than once — this is expected.
+
+    ---
+
+    ### Known Notes & Limitations
+
+    - MFA **must** be set up with Microsoft Authenticator push notifications
+    - VPN may be required if you are off campus
+    - Clipboard and drive redirection may behave differently than on Windows/macOS
+    - This setup is **not guaranteed** to work on all Linux distributions
+
+    ---
+
+    ### Need Help?
+
+    If this does not work for you, please submit a support ticket and include:
+    - Your Linux distribution
+    - Whether you use X11 or Wayland
+    - The full command you tried
+    - Any error output from the terminal
+
+    👉 Submit a ticket via the AAU Service Portal:  
+    https://serviceportal.aau.dk/serviceportal?id=sc_cat_item&sys_id=a05e2fb4c3434610f0f3041ad00131d0
 
 
 
