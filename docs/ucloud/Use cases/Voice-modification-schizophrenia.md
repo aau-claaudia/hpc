@@ -1,4 +1,4 @@
-# Use case: How UCloud supports research in voice modification for virtual reality therapy for people with schizophrenia
+# How UCloud supports research in voice modification for virtual reality therapy for people with schizophrenia
 
 *How does research create impact in the real world?* *In this use case, we explore how research into voice-modification algorithms can make a positive difference for people with schizophrenia — and how the High Performance Computing platform UCloud helps support this research.*
 
