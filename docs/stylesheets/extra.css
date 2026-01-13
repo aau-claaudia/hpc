@@ -1055,6 +1055,15 @@ del {
   width: 650px;
 }
 
+/* Center block-level images via markdown attr_list, e.g.
+ * ![Alt text](/path/to/img){.standard_image_width .centered_image}
+ */
+.centered_image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 
 .custom-tabs {
   display: grid;
