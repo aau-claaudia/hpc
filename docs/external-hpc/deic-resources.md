@@ -13,8 +13,7 @@
     The platforms in question are: *UCloud, Sophia, GenomeDK, Computerrome 2* and *LUMI.*
 
     Find the official call page :octicons-arrow-right-16: [DeiC "H2-2026"](https://www.deic.dk/en/grants/h2-2026-call-applications-access-national-e-resources).
-
-    Find more information on CLAAUDIA's page dedicated to this :octicons-arrow-right-16: [DeiC HPC resources](/external-hpc/deic-resources/).
+    
 
 !!! info "Which HPC platforms can be applied to?"
 
