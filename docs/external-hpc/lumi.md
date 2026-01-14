@@ -1,5 +1,14 @@
 LUMI is a supercomputer located in Kajaani, Finland and ranks among the world's Top 10 supercomputers according to the [Top 500 list](https://top500.org). The true power of the system lies in it's oppurtunity to scale jobs massively, but we also want to encourage our users to experiment with the system, and to think of it as an extension of the compute capacity available to them as researchers at AAU.
 
+
+!!! abstract "Call open: Possible to apply for national resources"
+
+    Call "H2-2026" is open from the 13th of January 2026, and will close 10th of March 2026.
+
+    Find the official call page :octicons-arrow-right-16: [DeiC "H2-2026"](https://www.deic.dk/en/grants/h2-2026-call-applications-access-national-e-resources).
+
+    Find more information on CLAAUDIA's page dedicated to this :octicons-arrow-right-16: [DeiC HPC resources](/external-hpc/deic-resources/).
+
 ## Access
 
 The system is funded by [EuroHPC](https://www.lumi-supercomputer.eu/eurohpcju/) and the [LUMI consortium](https://www.lumi-supercomputer.eu/lumi-consortium/) which Denmark is a member of. For this reason CLAAUDIA can provide AAU-users with **direct access** to the system. 
