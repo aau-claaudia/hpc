@@ -8,7 +8,9 @@
 
 !!! abstract "Call open: Possible to apply for national resources"
 
-    Call "H2-2026" is open from the 13th of January 2026, and will close 10th of March 2026. The platforms in question are: *UCloud, Sophia, GenomeDK, Computerrome 2 and LUMI.*
+    Call "H2-2026" is open from the 13th of January 2026, and will close 10th of March 2026. 
+
+    The platforms in question are: *UCloud, Sophia, GenomeDK, Computerrome 2* and *LUMI.*
 
     Find the official call page :octicons-arrow-right-16: [DeiC "H2-2026"](https://www.deic.dk/en/grants/h2-2026-call-applications-access-national-e-resources).
 
