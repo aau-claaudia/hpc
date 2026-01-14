@@ -65,7 +65,11 @@ To learn more about this oppurtunity, please find our page dedicated to this pos
 
 !!! abstract "Open call for DeiC's National HPC ressources"
 
-    Call "H2-2026" is open from the 13th of January 2026, and will close 10th of March 2026. Find the official call page :octicons-arrow-right-16: [DeiC "H2-2026"](https://www.deic.dk/en/grants/h2-2026-call-applications-access-national-e-resources).
+    Call "H2-2026" is open from the 13th of January 2026, and will close 10th of March 2026.
+
+    * Find more information on CLAAUDIA's page dedicated to this :octicons-arrow-right-16: [DeiC HPC resources](/external-hpc/deic-resources/).
+    
+    * Find the official call page :octicons-arrow-right-16: [DeiC "H2-2026"](https://www.deic.dk/en/grants/h2-2026-call-applications-access-national-e-resources).
 
 <hr>
 
