@@ -54,22 +54,18 @@ Find the most suitable system for your project. You can also complete the [HPC D
 </div>
 
 
-<!--
-!!! success "News: Upcoming Free Webinars – Learn about UCloud & Dictaphone"
-    **Title:** Record and Transcribe with Dictaphone
-    **Date:** November 26, 2025  
-    **Time:** 12:30–13:30  
-    **What you'll learn:**  
-    Get a hands-on introduction to the secure interview recording & transcription app, **Dictaphone**, on UCloud—ideal for researchers working with interviews.  
-    [:octicons-arrow-right-24: Read more and sign up for Dictaphone webinar](https://www.researcher.aau.dk/webinar-learn-to-record-and-transcribe-with-the-dictaphone-application-e152840)
-    
-    **Title:** Building intelligent knowledge assistants with RAGFlow on UCloud  
-    **Date:** December 4, 2025  
-    **Time:** 13:00–14:00  
-    **What you'll learn:**  
-    Join us for a hands-on webinar introducing RAGFlow, an advanced Retrieval-Augmented Generation (RAG) platform available on UCloud. RAGFlow enables you to build your own intelligent assistants by combining document retrieval, embeddings, and large language models – all within a user-friendly visual interface.
-    [:octicons-arrow-right-24: Read more and sign up for UCloud webinar](https://interactivehpc.dk/?p=2315)
--->
+
+!!! success "News: National DeiC HPC call H2-2026 now open"
+    Has your research outgrown your computer’s capacity and do our local facilities and budgets no longer meet your computational needs?  
+
+    Then this news is for you. Through competitive calls, researchers can apply for access to **DeiC National HPC resources**, Denmark’s national pool of high-performance computing systems.
+
+    - **Application period:** 13 January 2026 – 10 March 2026
+    - **Resources available:** 1 July 2026
+    - **HPC systems in the call:** DeiC Interactive HPC/UCloud, Sophia, GenomeDK, Computerome 2 andLUMI
+
+    For more information, see: [DeiC national resources page](https://hpc.aau.dk/external-hpc/deic-resources/) and the [official DeiC H2-2026 call announcement](https://www.deic.dk/en/grants/h2-2026-call-applications-access-national-e-resources)
+
 
    
 <div class="video-container">
