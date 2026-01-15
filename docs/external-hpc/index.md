@@ -22,7 +22,13 @@ In addition to the HPC platforms that we provide locally at AAU, users can gain 
 
 !!! abstract "Open calls for DeiC's National HPC ressources"
 
-    There are currently no open calls. The next call is expected to open in January 2026.
+    Call "H2-2026" is open from the 13th of January 2026, and will close 10th of March 2026.
+
+    The platforms in question are: *UCloud, Sophia, GenomeDK, Computerrome 2* and *LUMI.*
+
+    * Find more information on CLAAUDIA's page dedicated to this :octicons-arrow-right-16: [DeiC HPC resources](/external-hpc/deic-resources/).
+    
+    * Find the official call page :octicons-arrow-right-16: [DeiC "H2-2026"](https://www.deic.dk/en/grants/h2-2026-call-applications-access-national-e-resources).
 
 <hr>
 

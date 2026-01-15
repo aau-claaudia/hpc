@@ -66,6 +66,22 @@ UCloud is a HPC research platform, engineered to provide high-performance comput
           style="border: 1px solid #464646;"></iframe>
 </div>
 
+<hr>
+
+!!! abstract "Open call for DeiC's National HPC ressources"
+
+    Call "H2-2026" is open from the 13th of January 2026, and will close 10th of March 2026.
+
+    This possibility is especially well suited for projects with large resource requirements.
+
+    * Find more information on CLAAUDIA's page dedicated to this :octicons-arrow-right-16: [DeiC HPC resources](/external-hpc/deic-resources/).
+    
+    * Find the official call page :octicons-arrow-right-16: [DeiC "H2-2026"](https://www.deic.dk/en/grants/h2-2026-call-applications-access-national-e-resources).
+
+<hr>
+
+
+
 ## Getting Started
 
 <div class="custom-grid-3">

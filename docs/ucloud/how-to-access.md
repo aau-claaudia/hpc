@@ -55,5 +55,22 @@ graph TD
 
 </div>
 
+<hr>
+
+## National HPC Resources
+
+Twice a year it's possible to apply for a share in DeiC's National HPC resources. This possibility is especially well suited for projects with large resource requirements.
+To learn more about this oppurtunity, please find our page dedicated to this possibility: [DeiC HPC resources](/external-hpc/deic-resources/).
+
+
+!!! abstract "Open call for DeiC's National HPC ressources"
+
+    Call "H2-2026" is open from the 13th of January 2026, and will close 10th of March 2026.
+
+    * Find more information on CLAAUDIA's page dedicated to this :octicons-arrow-right-16: [DeiC HPC resources](/external-hpc/deic-resources/).
+    
+    * Find the official call page :octicons-arrow-right-16: [DeiC "H2-2026"](https://www.deic.dk/en/grants/h2-2026-call-applications-access-national-e-resources).
+
+<hr>
 
 [Need assistance? Reach us at the Service Portal](https://aau.service-now.com/serviceportal?id=sc_cat_item&sys_id=34e8536083cfc21053711d447daad30a){ .md-button .md-button--primary target=_blank }
