@@ -80,6 +80,7 @@ nav:
               - Container images: ai-cloud/getting-started/container-images.md
               - Run jobs: ai-cloud/getting-started/run-jobs.md
           - Additional guides:
+              - Additional resources: ai-cloud/additional-guides/additional-resources.md 
               - Using the Linux CLI:
                   - Understanding the Linux CLI: ai-cloud/additional-guides/understanding-linux-cli.md
                   - Edit text files with Nano: ai-cloud/additional-guides/edit-text-files-with-nano.md
