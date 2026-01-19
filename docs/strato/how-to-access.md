@@ -14,8 +14,6 @@ GPU resources are limited and users are expected to follow a strict policy of de
 Strato Projects are only available to all researchers. Each project requires the completion of a project request form.
 
 
-## Important Information
-
 !!! info "Not for confidential or sensitive data"
     With Strato you are only allowed to work with public or internal information according to [AAU’s data classification model](https://www.security.aau.dk/data-classification){target="_blank} (classified as levels 0 and 1, respectively).
 
