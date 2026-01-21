@@ -21,8 +21,9 @@ There are multiple calls throughout the year. Find them in the table below:
 | [Extreme Scale](https://eurohpc-ju.europa.eu/eurohpc-ju-call-proposals-extreme-scale-access-mode_en) | For very large resource needs. | 2 times each year | 6 months |
 | [AI for Science and Collaborative EU projects](https://eurohpc-ju.europa.eu/eurohpc-ju-call-proposals-ai-science-and-collaborative-eu-projects_en) | Intended for projects that focus on AI/ML - especially foundation models and generative AI | Every two months | 1 month |
 
-!!! tip "Assistance with writing applications to EuroHPC"
-    [The Danish National Competency Centre for HPC](https://www.deic.dk/en/EuroCC2) provides support for researchers interested in submitting applications to EuroHPC. Their guidance includes selecting an HPC facility that fits your objectives together with an appropriate resource type. They give detailed advice before submitting applications to EuroHPC. 
+!!! tip "Assistance with writing applications to EuroHPC" 
+
+    [The Danish National Competency Centre for HPC](https://www.deic.dk/da/supercomputing-hpc/national-competence-center/eurocc-2) provides support for researchers interested in submitting applications to EuroHPC. Their guidance includes selecting an HPC facility that fits your objectives together with an appropriate resource type. They give detailed advice before submitting applications to EuroHPC. 
 
     If you are interested in this oppurtunity - [reach out to them here](mailto:dennis.wollbrink@deic.dk) 
 
