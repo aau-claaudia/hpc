@@ -48,7 +48,7 @@ A service window will take place on the following dates:
 
 | 2026  | 2027  | 2028  | 2029  |
 | ---   | ---   | ---   | ---   |
-| 03/02 | - | - | - |
+| <span style="background:#211a52; color:white; font-weight:bold; border:2px solid #211a52; border-radius:4px; padding:2px 8px; display:inline-block;">03/02</span> | - | - | - |
 | - | - | - | - |
 | - | - | - | - |
 | - | - | - | - |
