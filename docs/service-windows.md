@@ -38,6 +38,20 @@ A service window will take place on the following dates:
 
 </div>
 
+<div markdown>
+
+**TAAURUS**
+
+| 2026  | 2027  | 2028  | 2029  |
+| ---   | ---   | ---   | ---   |
+| 03/02 | - | - | - |
+| - | - | - | - |
+| - | - | - | - |
+| - | - | - | - |
+
+</div>
+
+
 </div>
 
 !!! info "Sign up for notifications on serviceinfo.dk"
