@@ -38,6 +38,10 @@ A service window will take place on the following dates:
 
 </div>
 
+</div>
+
+<div class="grid" markdown>
+
 <div markdown>
 
 **TAAURUS**
@@ -50,7 +54,6 @@ A service window will take place on the following dates:
 | - | - | - | - |
 
 </div>
-
 
 </div>
 
