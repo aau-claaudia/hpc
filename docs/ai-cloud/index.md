@@ -146,9 +146,9 @@ AI Cloud is a GPU cluster made up of a collecton of NVIDIA GPU's, designed for p
 ## Important Information
 
 !!! info "Not for confidential or sensitive data"
-    With AI Cloud you are only allowed to work with public or internal information according to [AAU’s data classification model](https://www.security.aau.dk/data-classification){target="_blank} (classified as levels 0 and 1, respectively).
+    With AI Cloud you are only allowed to work with level 1 data according to [AAU’s data classification model](https://www.security.aau.dk/data-classification){target="_blank}.
 
-    If you would like to work with confidential or sensitive data (classified as levels 2 and 3), then we support another HPC platform called [UCloud](/ucloud/).
+    If you would like to work with level 2 or 3 data, then we support using another HPC platform called [UCloud](/ucloud/).
 
 !!! info "Not suitable for CPU-only computational tasks"
     The powerful GPU processors allow users to process large datasets much more efficiently than would be the case with pure CPU processing - given that your application can be parallelised in a GPU compatible manner. At the same time, the AI Cloud platform is not designed for CPU-only computational tasks, and we have alternative recommended platforms, such as [UCloud](/ucloud/) or [Strato](/strato/) for those needs.

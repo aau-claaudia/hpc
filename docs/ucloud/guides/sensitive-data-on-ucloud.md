@@ -1,4 +1,8 @@
-# Guidelines for handling Sensitive data on UCloud
+# Guidelines for handling level 2 and 3 data on UCloud
+
+If you are working with data level 2 or 3 in relation to [AAU data classification](https://www.security.aau.dk/data-classification) please read the listed guidelines below. 
+
+<!-- Have to implement an better description of personally identifiable information and it's relation to register data. -->
 
 ### Procedure sensitive UCloud projects
   ```mermaid
@@ -28,16 +32,16 @@
   > **Note**:  As project applicant you will be the Principal Investigator for the project, and you should be aware of your roles and responsibilities.
 
 ### Providers
-Sensitive data must **only** be handled on SDU/K8s provider hardware. For more information about the differences between providers, see the [provider page](docs\ucloud\providers.md).
+Level 2 and 3 data must **only** be handled on SDU/K8s provider hardware. For more information about the differences between providers, see the [provider page](docs\ucloud\providers.md).
 
 
 ### Data classification on UCloud
-- On Ucloud you can work with all categories of data form AAUs data classification model.
+- On Ucloud you can work with level 1,2 and 3 categories of data form AAUs data classification model.
 - Store all project data in a designated project folder labeled according to its data sensitivity, following the AAU Data Classification Model. This folder must be labeled according to its data sensitivity, following the [AAU Data Classification Model](https://www.security.aau.dk/data-classification). The equivalent UCloud classifications are:
-    - **AAU Level 0**: Public Information → **UCloud: Inherit**
-    - **AAU Level 1**: Internal Information → **UCloud: Private**
-    - **AAU Level 2**: Confidential Information → **UCloud: Confidential**
-    - **AAU Level 3**: Sensitive Information → **UCloud: Sensitive**  
+    - **AAU Level 1**  → **UCloud: Inherit**
+    - **AAU Level 2**  → **UCloud: Private/Confidential**
+    - **AAU Level 3**  → **UCloud: Sensitive**
+    - **AAU Level 4**  → **Not allowed**  
     *(Sensitive data can only be added to registered and approved project folders and must **NOT** be placed in My Workspace.)*
 
 
@@ -74,7 +78,7 @@ Now click the dropdown and select *sensitive" and write the reason for the sensi
   3. Name the drive, then modify its permissions by clicking the “…” button. Set permissions as either **None / Read / Write**.
 
 ### Applications  
--  It is **not allowed** to add a public link when running applications. 
+-  It is **not allowed** to add a public link when running applications with data classified as level 2 and 3. 
 
 ### Guides 
 - When using our guides, please check the "Approved Data Classification Level" icons at the top of each guide to ensure it is approved for sensitive data.

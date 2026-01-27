@@ -213,12 +213,12 @@ UCloud:**
 1.  For employed researchers at AAU (VIP)
 
     a.  Sensitive data: All work on the UCloud platform that involves
-        research data in classification levels 2 or 3.
+        research data in classification levels 2.
 a
 2.  All users
 
     a.  GPU access on UCloud: All access to GPU resources on UCloud
-        require a project. (Only data classification levels 0 and 1)
+        require a project.
 
     b.  Additional compute resources that are allocated out of the AAU
         pool of UCloud resources.
@@ -268,13 +268,10 @@ processor](https://aaudk.sharepoint.com/sites/persondata-ressourcer/SitePages/Re
 **Steps required to working with projects on the UCloud platform**
 
 1.  Identify the data classification of your data by reviewing the [AAU
-    data classification
-    model.](https://aaudk.sharepoint.com/sites/ForskIT/Delte%20dokumenter/General/01%20-%20Administration/03%20-%20Policies%20and%20procedures/DeiC%20Interactive%20HPC/i.%09https:/www.security.aau.dk/dataclassification/model)
-    ([Classify your data at Aalborg University - Aalborg University
-    (aau.dk)](https://www.security.aau.dk/data-classification))
+    data classification](https://www.security.aau.dk/data-classification)
+    model.
 
-2.  If you are a researcher, and working with data classifications 2 or
-    3, you must register a research project with Grants and Contracts
+2.  If you are a researcher, and working with personally identifiable information, you must register a research project with Grants and Contracts
     using [the relevant registration
     form.](https://aaudk.sharepoint.com/sites/persondata-ressourcer/SitePages/Registrations%20og%20reports%20(Online%20forms).aspx)
 
@@ -326,20 +323,14 @@ processor](https://aaudk.sharepoint.com/sites/persondata-ressourcer/SitePages/Re
 
         i.  On the UCloud platform the corresponding classifications are
             as follows: 
+ 
+            - AAU Level 1  → UCloud: Inherit
+            - AAU Level 2  → UCloud: Private/Confidential
+            - AAU Level 3  → UCloud: Sensitive (Only permitted to be added to your registered 
+            and approved project folder.) Sensitive data may **NOT** be added to My Workspace.
+            - AAU Level 4  → Not allowed  
 
-            1.  **AAU Level 0:** Public information = **UCloud:**
-                Inherit.
-
-            2.  **AAU Level 1:** Internal information = **UCloud:**
-                Private.
-
-            3.  **AAU Level 2:** Confidential information - **UCloud:**
-                Confidential.
-
-            4.  **AAU Level 3:** Sensitive information - **UCloud:**
-                Sensitive. (Only permitted to be added to your
-                registered and approved project folder.) Sensitive data
-                may **NOT** be added to My Workspace.
+          
 
 6.  **Collaboration on UCloud within projects:** Fellow AAU persons
 
@@ -395,7 +386,7 @@ processor](https://aaudk.sharepoint.com/sites/persondata-ressourcer/SitePages/Re
  
     a. Only the SDU/K8 provider is permitted for working with data classifications 2 and 3.
     
-    b. The AAU/K8 and AAU virtual machine providers are only permitted to be used for data classified as level 0 and 1.
+    b. The AAU/K8 and AAU virtual machine providers are only permitted to be used for data classified as level 1.
 
 11. On completion the project 
 

@@ -5,7 +5,7 @@ Before attempting to log in to AI Cloud, please ensure that you have completed t
   - Read through our [Fair usage](/ai-cloud/fair-usage/) guidelines.
   - Read our [Terms and Conditions](/ai-cloud/terms-and-conditions/) - especially noting the following points:
   
-    - AI Cloud is not intended for working with [confidential or sensitive data](https://www.security.aau.dk/data-classification/the-four-data-types-at-aau).
+    - AI Cloud is not intended for working with [level 2 and level 3 data](https://www.security.aau.dk/data-classification/the-four-data-types-at-aau).
     - AI Cloud is not designed for long term storage of research data.
 
 

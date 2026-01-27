@@ -15,7 +15,7 @@ Strato Projects are only available to all researchers. Each project requires the
 
 
 !!! info "Not for confidential or sensitive data"
-    With Strato you are only allowed to work with public or internal information according to [AAU’s data classification model](https://www.security.aau.dk/data-classification){target="_blank} (classified as levels 0 and 1, respectively).
+    With Strato you are only allowed to work with data classified as level 1 according to [AAU’s data classification model](https://www.security.aau.dk/data-classification){target="_blank}.
 
     If you would like to work with confidential or sensitive data (classified as levels 2 and 3), then we support another HPC platform called [UCloud](/ucloud/).
 
