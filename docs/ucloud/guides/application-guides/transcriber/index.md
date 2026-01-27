@@ -69,7 +69,7 @@ Select the guide of your choice below for step-by-step instructions for each ver
     - **Set the duration**: Specify how many hours the job should run. For reference, a 1-hour audio typically takes about 1 hour to transcribe on a `u1-standard-16` machine.
         - You can stop the machine early or add more time later if needed.
 
-    - **Choose a machine**: We recommend `u3-gpu-1` if available, otherwise use `u1-standard-16`.
+    - **Choose a machine**: We recommend <span class="machine-name">u3-gpu-1</span> if available, otherwise use <span class="machine-name">u1-standard-16</span>.
 
     - **(Optional) Select folders to use**: If you want to use UCloud folders, select the folder(s) containing your files.
       - The app will scan these folders for compatible files.
@@ -169,7 +169,7 @@ Select the guide of your choice below for step-by-step instructions for each ver
       > **Note**: If you run out of allocated time, the file being transcribed will fail. You can allocate more time after starting the job if needed.
 
     ##### 1.2.3 Pick a machine to use
-    - We recommend the `u3-gpu-1` machine, which performed best in our tests. If the option is unavailable we recommend the `u1-standard-16` as an alternative.
+    - We recommend the <span class="machine-name">u3-gpu-1</span> machine, which performed best in our tests. If the option is unavailable we recommend the <span class="machine-name">u1-standard-16</span> as an alternative.
       
       > Feel free to test with sample files to see what works best for you.
 

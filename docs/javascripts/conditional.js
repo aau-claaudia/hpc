@@ -3,6 +3,7 @@ document$.subscribe(function() {
 
     // Put your code here
     applyConditionalRendering();
+    addTranscriberTabClass();
 });
 
 function applyConditionalRendering() {
@@ -36,3 +37,37 @@ function updateVisibility() {
         element.style.display = showOnAiCloud ? 'block' : 'none';
     });
 }
+
+// Add class to Transcriber guide tabs for enhanced styling
+function addTranscriberTabClass() {
+    // Check if we're on the transcriber page by checking URL or page content
+    var isTranscriberPage = window.location.pathname.includes('transcriber') && 
+                           (window.location.pathname.includes('index') || window.location.pathname.endsWith('transcriber/'));
+    
+    if (isTranscriberPage) {
+        // Find tabs that have labels containing "Transcriber Interface" and "Transcriber Batch"
+        var tabSets = document.querySelectorAll('.tabbed-set');
+        tabSets.forEach(function(tabSet) {
+            var labels = tabSet.querySelectorAll('.tabbed-labels > label');
+            if (labels.length === 2) {
+                var labelTexts = Array.from(labels).map(function(label) {
+                    return label.textContent.trim();
+                });
+                // Check if this is the Transcriber Interface/Batch selection
+                if (labelTexts.some(function(text) { return text.includes('Transcriber Interface'); }) &&
+                    labelTexts.some(function(text) { return text.includes('Transcriber Batch'); })) {
+                    tabSet.classList.add('transcriber-tab-selection');
+                }
+            }
+        });
+    }
+}
+
+// Fallback for standard DOMContentLoaded if document$ is not available
+if (typeof document$ === 'undefined') {
+    document.addEventListener('DOMContentLoaded', function() {
+        applyConditionalRendering();
+        addTranscriberTabClass();
+    });
+}
+
