@@ -60,7 +60,7 @@ TAAURUS provides a solid and future-proof infrastructure that can be expanded an
 ## Getting Started
 
 <div class="custom-grid-3">
-    <a href="/taaurus/guides/applying-for-a-taaurus-project/" class="custom-grid-item">
+    <a href="/taaurus/how-to-access/" class="custom-grid-item">
         <i class="custom-grid-icon bi bi-file-earmark-text-fill"></i>
         <p class="custom-grid-title">How to apply</p>
         <p class="custom-grid-content">Learn how to apply for access to TAAURUS</p>
