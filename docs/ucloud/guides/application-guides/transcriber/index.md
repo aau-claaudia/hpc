@@ -3,10 +3,9 @@
     <h1 class="guide-page-header__title">Transcriber</h1>
     <p><strong>Approved for data classification level</strong></p>
     <a href="https://www.security.aau.dk/data-classification" target="_blank" class="icon-container">
-      <span class="icon level-0" title="Approved for public data">0</span>
-      <span class="icon level-1" title="Approved for internal data">1</span>
-      <span class="icon level-2" title="Approved for confidential data">2</span>
-      <span class="icon level-3" title="Approved for strictly confidential data">3</span>
+      <span class="icon level-1" title="Click to see data-classification">0</span>
+      <span class="icon level-2" title="Click to see data-classification">1</span>
+      <span class="icon level-3" title="Click to see data-classification">2</span>
     </a>
   </div>
   <a class="guide-page-header__cta" href="https://docs.cloud.sdu.dk/Apps/transcriber.html" target=_blank>
@@ -69,7 +68,7 @@ Select the guide of your choice below for step-by-step instructions for each ver
     - **Set the duration**: Specify how many hours the job should run. For reference, a 1-hour audio typically takes about 1 hour to transcribe on a `u1-standard-16` machine.
         - You can stop the machine early or add more time later if needed.
 
-    - **Choose a machine**: We recommend `u3-gpu-1` if available, otherwise use `u1-standard-16`.
+    - **Choose a machine**: We recommend <span class="machine-name">u3-gpu-1</span> if available, otherwise use <span class="machine-name">u1-standard-16</span>.
 
     - **(Optional) Select folders to use**: If you want to use UCloud folders, select the folder(s) containing your files.
       - The app will scan these folders for compatible files.
@@ -169,7 +168,7 @@ Select the guide of your choice below for step-by-step instructions for each ver
       > **Note**: If you run out of allocated time, the file being transcribed will fail. You can allocate more time after starting the job if needed.
 
     ##### 1.2.3 Pick a machine to use
-    - We recommend the `u3-gpu-1` machine, which performed best in our tests. If the option is unavailable we recommend the `u1-standard-16` as an alternative.
+    - We recommend the <span class="machine-name">u3-gpu-1</span> machine, which performed best in our tests. If the option is unavailable we recommend the <span class="machine-name">u1-standard-16</span> as an alternative.
       
       > Feel free to test with sample files to see what works best for you.
 
@@ -225,6 +224,8 @@ Select the guide of your choice below for step-by-step instructions for each ver
     #### 1.3 Transcription output formats
 
     You will have several different files with your transcription. Commonly used formats include `.txt` and `.docx`. You can choose the format that suits your needs best. If you want a specific output format, refer to the "output_format" section under "Other Options".
+
+    > **Note**: It is not possible to preview `.docx` files directly within UCloud. To view the transcription in `.docx` format, you must first download the file to your own computer and open it with Microsoft Word or another compatible program.
 
     ---
 

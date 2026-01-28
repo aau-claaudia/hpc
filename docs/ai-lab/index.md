@@ -151,8 +151,8 @@ AI-LAB is designed exclusively for students at Aalborg University, offering high
 ## Important Information
 
 !!! info "Not for confidential or sensitive data"
-    With AI-LAB you are only allowed to work with public or internal information according to [AAU’s data classification model](https://www.security.aau.dk/data-classification){target="\_blank} (classified as levels 0 and 1, respectively).
-    If you would like to work with confidential or sensitive data (classified as levels 2 and 3), then we support another HPC platform called [UCloud](/ucloud/).
+    With AI-LAB you are only allowed to work with data classified as level 1 according to [AAU’s data classification model](https://www.security.aau.dk/data-classification){target="\_blank}.
+    If you would like to work with data classified as levels 2 and 3, then we support another HPC platform called [UCloud](/ucloud/).
 
 !!! info "Not suitable for CPU-only computational tasks"
     The powerful GPU processors allow users to process large datasets much more efficiently than would be the case with pure CPU processing - given that your application can be parallelised in a GPU compatible manner. At the same time, the AI-LAB platform is not designed for CPU-only computational tasks, and we have alternative recommended platforms, such as [UCloud](/ucloud/) for those needs.

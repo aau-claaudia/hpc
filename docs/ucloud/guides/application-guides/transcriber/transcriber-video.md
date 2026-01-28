@@ -2,10 +2,9 @@
 **Approved for data classification level**
 
 <a href="https://www.security.aau.dk/data-classification" target="_blank" class="icon-container">
-    <span class="icon level-0" title="Approved for public data">0</span>
-    <span class="icon level-1" title="Approved for internal data">1</span>
-    <span class="icon level-2" title="Approved for confidential data">2</span>
-    <span class="icon level-3" title="Approved for strictly confidential data">3</span>
+    <span class="icon level-1" title="Click to see data-classification">0</span>
+    <span class="icon level-2" title="Click to see data-classification">1</span>
+    <span class="icon level-3" title="Click to see data-classification">2</span>
 </a>
 
 Transcriber is an app for transcribing audio into text. Many apps can do this, but like it’s sister transcription app, Whisper, Transcriber is a little different in a big way. Located on UCloud on the DeiC Interactive HPC it can handle sensitive data. Transcriber is developed to support features not available with the Whisper-based technology, such as speech recognition. Transcriber is available for everyone with access to UCloud. 
@@ -105,10 +104,10 @@ How to get these numbers is described [here](/ucloud/how-to-access/#Projects).
 
 UCloud’s data classification maps to the AAU data classification model in the following way:​
 
-* AAU Level 0: Public information = UCloud: Inherit.
-* AAU Level 1: Internal information = UCloud: Private.
-* AAU Level 2: Confidential information - UCloud: Confidential.
-* AAU Level 3: Sensitive information - UCloud: Sensitive. (Only permitted to be added to your registered and approved project folder.) Sensitive data may NOT be added to My Workspace.
+   - **AAU Level 1**  → **UCloud: Inherit**
+    - **AAU Level 2**  → **UCloud: Private/Confidential**
+    - **AAU Level 3**  → **UCloud: Sensitive** (Only permitted to be added to your registered and approved project folder.) Sensitive data may NOT be added to My Workspace.
+    - **AAU Level 4**  → **Not allowed**  
 
 
 ## News and key features

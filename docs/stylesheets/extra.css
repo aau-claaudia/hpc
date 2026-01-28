@@ -1744,6 +1744,78 @@ footer .links li img {
 .md-typeset .tabbed-labels--linked>label>a {
   font-size: 14px;
 }
+
+/* Enhanced tab styling for Transcriber guide selection - only applies to tabs within .transcriber-tab-selection */
+.transcriber-tab-selection {
+  overflow: visible !important;
+}
+
+.transcriber-tab-selection .tabbed-set {
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+  border-radius: 12px;
+  padding: 1.5rem;
+  background: linear-gradient(to bottom, rgba(33, 26, 81, 0.02), transparent);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  overflow: visible !important;
+  position: relative;
+  z-index: 1;
+}
+
+.transcriber-tab-selection .tabbed-labels {
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  display: flex;
+  gap: 0.75rem;
+}
+
+.transcriber-tab-selection .tabbed-labels>label {
+  font-size: 24px !important;
+  font-weight: 600 !important;
+  padding: 14px 28px !important;
+  margin-right: 0;
+  border-radius: 8px;
+  transition: all 0.25s ease;
+  background-color: rgba(33, 26, 81, 0.08);
+  border: 2px solid transparent;
+  cursor: pointer;
+  position: relative;
+  flex: 1;
+  text-align: center;
+  min-width: 200px;
+  color: var(--aau-primary);
+}
+
+.transcriber-tab-selection .tabbed-labels>label:hover {
+  background-color: rgba(33, 26, 81, 0.15);
+  border-color: var(--aau-primary);
+  box-shadow: 0 4px 12px rgba(33, 26, 81, 0.15);
+}
+
+/* Active/checked tab styling - keeps hover appearance */
+.transcriber-tab-selection .tabbed-labels>input[type="radio"]:checked + label {
+  background-color: rgba(33, 26, 81, 0.15) !important;
+  color: var(--aau-primary) !important;
+  border: 2px solid var(--aau-primary) !important;
+  box-shadow: 0 4px 12px rgba(33, 26, 81, 0.15);
+  transform: translateY(-3px);
+  z-index: 1;
+}
+
+.transcriber-tab-selection .tabbed-labels>label>span {
+  font-size: 30px !important;
+  font-weight: 600 !important;
+  color: var(--aau-primary);
+  display: block;
+}
+
+.transcriber-tab-selection .tabbed-labels>input[type="radio"]:checked + label>span {
+  color: var(--aau-primary) !important;
+  font-weight: 700 !important;
+}
+
+/* End of Enhanced tab styling for Transcriber guide selection - only applies to tabs within .transcriber-tab-selection */
+
 .md-typeset h3 code {
   font-size: 20px;
 }
@@ -1972,4 +2044,18 @@ footer .links li img {
 
 .fixed-width-4-nano pre > code::before {
       content: none; /* Hides the pseudo-element if it's added as icons */
+}
+
+/* Machine name highlighting */
+.machine-name {
+  font-family: "Roboto Mono", sans-serif;
+  font-size: 1.05em;
+  font-weight: 600;
+  color: var(--aau-primary);
+  background-color: rgba(33, 26, 81, 0.06);
+  padding: 2px 6px;
+  border-radius: 3px;
+  border: 1px solid rgba(33, 26, 81, 0.15);
+  display: inline-block;
+  margin: 0 1px;
 }

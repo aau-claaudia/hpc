@@ -36,8 +36,7 @@ Choose a machine with **one** GPU, such as `u3-GPU` (SDU) or `uc1-l4`/`uc1-l40` 
 ??? info "ChatUI public link for sharing with user outside UCloud"
     Note applying a public link will decrease the approved sensitivity level to only 
     <a href="https://www.security.aau.dk/data-classification" target="_blank" class="icon-container">
-    <span class="icon level-0" title="Approved for public data">0</span>
-    <span class="icon level-1" title="Approved for internal data">1</span>
+    <span class="icon level-1" title="Approved for level 1 data">1</span>
     </a>
 
 

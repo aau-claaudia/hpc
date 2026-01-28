@@ -40,6 +40,23 @@ A service window will take place on the following dates:
 
 </div>
 
+<div class="grid" markdown>
+
+<div markdown>
+
+**TAAURUS**
+
+| 2026  | 2027  | 2028  | 2029  |
+| ---   | ---   | ---   | ---   |
+| <span style="background:#211a52; color:white; font-weight:bold; border:2px solid #211a52; border-radius:4px; padding:2px 8px; display:inline-block;">03/02</span> | - | - | - |
+| - | - | - | - |
+| - | - | - | - |
+| - | - | - | - |
+
+</div>
+
+</div>
+
 !!! info "Sign up for notifications on serviceinfo.dk"
     Click this link to go to serviceinfo.dk. Then select *Aalborg University*,
     and under the tab *Subscribe* (or *Abonnér*), select *CLAAUDIA*.
