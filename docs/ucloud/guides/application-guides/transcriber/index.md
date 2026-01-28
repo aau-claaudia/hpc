@@ -225,6 +225,8 @@ Select the guide of your choice below for step-by-step instructions for each ver
 
     You will have several different files with your transcription. Commonly used formats include `.txt` and `.docx`. You can choose the format that suits your needs best. If you want a specific output format, refer to the "output_format" section under "Other Options".
 
+    > **Note**: It is not possible to preview `.docx` files directly within UCloud. To view the transcription in `.docx` format, you must first download the file to your own computer and open it with Microsoft Word or another compatible program.
+
     ---
 
     ### 2. Optional parameters
