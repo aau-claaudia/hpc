@@ -1,3 +1,5 @@
+# How to access
+
 ## Who can get access?
 
 At this time, access to TAAURUS is available to researchers affiliated with the Faculty of Medicine (SUND) at Aalborg University.
@@ -19,7 +21,7 @@ A long with this you should:
 - [Initiate GDPR registration for the project](https://aaudk.sharepoint.com/sites/persondata-ressourcer/SitePages/Anmeldelse%20og%20registreringer.aspx)
 - [Initiate the relevant ethical approvals](https://forms-intern.aau.dk/dialogue/AAU084/Ansgning_om_forskningsetisk_godkendelse)
 - [Start a data management plan (DMP)](https://www.researcher.aau.dk/guides/research-data-and-software/data-management/data-management-planning)
-    
+
     >For writing a Data Management Plan (DMP), we recommend using [DeiC DMP](https://dmp.deic.dk/plans/new), but other DMP tools are also acceptable. At CLAAUDIA, we support the use of DeiC DMP and can guide you in using the system. We also offer [consulting and guidance](https://serviceportal.aau.dk/serviceportal?id=sc_cat_item&sys_id=66738c41c3c34610f0f3041ad001310d) on how to write a DMP.
 
 !!! info "Timing of approvals"
@@ -59,4 +61,6 @@ If you have questions during the process, contact CLAAUDIA via the [AAU Service 
 ---
 
 ## After approval: next steps
+
 Once your project is active, you are ready to start using TAAURUS. To get started, we recommend that you begin by reading the [TAAURUS guides](/taaurus/guides/login/).
+

@@ -3,7 +3,7 @@
 This guide will help you connect to TAAURUS using Remote Desktop Protocol (RDP).
 
 ## Prerequisites
-- [Access to TAAURUS platform](/taaurus/guides/applying-for-a-taaurus-project/)
+- [Access to TAAURUS platform](/taaurus/how-to-access/)
 - Remote Desktop Protocol (RDP) client installed (see the guides below)
 - AAU email
 - Microsoft Authenticator app for 2FA authentication (see [MFA Setup Requirements](#mfa-setup-requirements) below)
