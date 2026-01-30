@@ -1,0 +1,171 @@
+{% import "partials/tabs-item.html" as item with context %}
+
+<!-- Uncomment this for alert on all hpc pages  read color: #ce2020; -->
+<!-- <div style="background: #ce2020; position: fixed; bottom: 0; left: 0; width: 100%; text-align: center; z-index: 9999; box-shadow: 0 -2px 12px rgba(0,0,0,0.08);">
+  <p style="text-align: center; font-size: 16px; color: white; max-width: 1500px; margin: auto; padding-left: 30px; padding-right: 30px; font-weight: 600; margin-bottom: 10px; margin-top: 10px;">
+    <span style="color: #fff;">
+      Today, 2nd December 2025, a service window is scheduled for the majority of our platforms (AI Cloud, Strato, UCloud VMs, UCloud Kubernetes). 
+      Platforms may be offline throughout the day from 00:01 until 23:59, with the possibility of coming online towards the end of the day.<br>
+      For questions or updates, please visit the <a href="https://serviceportal.aau.dk" target="_blank" style="color: #fff; text-decoration: underline;">AAU Service Portal</a>.
+    </span>
+  </p>
+</div> -->
+
+<!-- Holiday Support Banner with Snow Effect -->
+<!-- <style>
+  @keyframes snow {
+    0% {
+      transform: translateY(0) rotate(0deg);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(100vh) rotate(360deg);
+      opacity: 0;
+    }
+  }
+  
+  .snowflake {
+    position: absolute;
+    top: -10px;
+    color: white;
+    font-size: 1em;
+    font-family: Arial, sans-serif;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
+    animation: snow linear infinite;
+    pointer-events: none;
+  }
+  
+  .holiday-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(135deg, #1976d2 0%, #1565c0 100%);
+    text-align: center;
+    z-index: 9999;
+    box-shadow: 0 -2px 12px rgba(0,0,0,0.08);
+    overflow: hidden;
+  }
+</style>
+
+<div class="holiday-banner">
+  <div id="snow-container" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none;"></div>
+  <p style="text-align: center; font-size: 16px; color: white; max-width: 1500px; margin: auto; padding-left: 30px; padding-right: 30px; font-weight: 600; margin-bottom: 10px; margin-top: 10px; position: relative; z-index: 1;">
+    <span style="color: #fff;">
+      Our support team will be on holiday from 22nd December to 5th January. Support requests will be handled when the team returns on 5th January.<br>
+      <strong>Merry Christmas and Happy New Year!</strong> 🎄🎉
+    </span>
+  </p>
+  <script>
+    (function() {
+      const snowContainer = document.getElementById('snow-container');
+      if (!snowContainer) return;
+      
+      const snowflakes = ['❄', '❅', '❆', '✻', '✼', '✽', '✾', '✿'];
+      const numSnowflakes = 30;
+      
+      for (let i = 0; i < numSnowflakes; i++) {
+        setTimeout(() => {
+          const snowflake = document.createElement('div');
+          snowflake.className = 'snowflake';
+          snowflake.textContent = snowflakes[Math.floor(Math.random() * snowflakes.length)];
+          snowflake.style.left = Math.random() * 100 + '%';
+          snowflake.style.animationDuration = (Math.random() * 6 + 6) + 's';
+          snowflake.style.animationDelay = Math.random() * 2 + 's';
+          snowflake.style.fontSize = (Math.random() * 10 + 10) + 'px';
+          snowContainer.appendChild(snowflake);
+          
+          // Remove snowflake after animation
+          setTimeout(() => {
+            if (snowflake.parentNode) {
+              snowflake.parentNode.removeChild(snowflake);
+            }
+          }, 12000);
+        }, i * 200);
+      }
+      
+      // Continuously add new snowflakes
+      setInterval(() => {
+        if (snowContainer.children.length < numSnowflakes) {
+          const snowflake = document.createElement('div');
+          snowflake.className = 'snowflake';
+          snowflake.textContent = snowflakes[Math.floor(Math.random() * snowflakes.length)];
+          snowflake.style.left = Math.random() * 100 + '%';
+          snowflake.style.animationDuration = (Math.random() * 6 + 6) + 's';
+          snowflake.style.animationDelay = '0s';
+          snowflake.style.fontSize = (Math.random() * 10 + 10) + 'px';
+          snowContainer.appendChild(snowflake);
+          
+          setTimeout(() => {
+            if (snowflake.parentNode) {
+              snowflake.parentNode.removeChild(snowflake);
+            }
+          }, 12000);
+        }
+      }, 300);
+    })();
+  </script>
+</div>
+-->
+<!-- {# MATLAB license server notice banner – shown only on UCloud pages #}
+{% if page and page.url and page.url.startswith('ucloud/') %}
+  <div style="background: #ce2020; position: fixed; bottom: 0; left: 0; width: 100%; text-align: center; z-index: 9999; box-shadow: 0 -2px 12px rgba(0,0,0,0.08);">
+    <p style="text-align: center; font-size: 16px; color: white; max-width: 1500px; margin: auto; padding-left: 30px; padding-right: 30px; font-weight: 600; margin-bottom: 10px; margin-top: 10px;">
+      <span style="color: #fff;">
+        Service notice: MATLAB is currenct unavailable through UCloud. We are investigating and working on a resolution.
+      </span>
+    </p>
+  </div>
+{% endif %} -->
+
+<!-- Service notice: UCloud VM start/stop issues -->
+<!-- <div style="background: #ce2020; position: fixed; bottom: 0; left: 0; width: 100%; text-align: center; z-index: 9999; box-shadow: 0 -2px 12px rgba(0,0,0,0.08);">
+  <p style="text-align: center; font-size: 16px; color: white; max-width: 1500px; margin: auto; padding-left: 30px; padding-right: 30px; font-weight: 600; margin-bottom: 10px; margin-top: 10px;">
+    <span style="color: #fff;">
+      Service notice: Following the maintenance window, we are experiencing issues with starting and stopping AAU virtual machines via UCloud. We are currently investigating the underlying cause.<br>
+      Only start and stop operations are affected; virtual machines that are already running continue to operate normally.
+    </span>
+  </p>
+</div> -->
+
+<header class="custom-header md-header" data-md-component=header>
+  <div class="custom-header-inner">
+    <div class="custom-nav-left">
+      <label class="md-header__button md-icon" for="__drawer">
+        {% set icon = config.theme.icon.menu or "material/menu" %}
+        {% include ".icons/" ~ icon ~ ".svg" %}
+      </label>
+      <a class="custom-logo" href="/">
+        <img src="/assets/img/aau-logo-512x512.png" alt="logo">
+        <div style="display: flex;flex-direction: column;vertical-align: middle;">
+          <p class="custom-title">AAU HPC</p>
+          <p class="custom-title" style="font-size: 12px; font-weight: 400;">By CLAAUDIA</p>
+        </div>
+      </a>
+      <div class="custom-nav">
+        <div class="custom-nav-inner">
+          {% for nav_item in nav %}
+            {{ item.render(nav_item) }}
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+    <div class="custom-nav-right">
+      <!-- Button to open search modal -->
+      {% if "material/search" in config.plugins %}
+      <label class="md-header__button md-icon" for="__search">
+        {% set icon = config.theme.icon.search or "material/magnify" %}
+        {% include ".icons/" ~ icon ~ ".svg" %}
+      </label>
+      <!-- Search interface -->
+      {% include "partials/search.html" %}
+      {% endif %}
+      <hr class="custom-nav-divider">
+      <div class="custom-buttons">
+        <div class="custom-buttons-inner">
+          <a href="https://serviceportal.aau.dk/serviceportal?id=emp_taxonomy_topic&topic_id=82a253e8838fc21053711d447daad328" class="contact-button" target="_blank">Get Support</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
