@@ -253,3 +253,4 @@ extra:
 extra_watch:
   - docs/overrides/home.html
   - docs/overrides/hpc-decision-tree.html
+  - docs/overrides/hpc-decision-tree-v2.html
