@@ -17,10 +17,10 @@ This returns a long list of environment variables that describe the settings our
 
 ## Unprivileged mode
 
-An infinite number of jobs can be launched using the flag `--qos=unprivileged`. This is available to all users.
+An infinite number of jobs can be launched using the flag `--qos=unprivileged`. You will also have to specify your expected walltime (currently a maximum of 6 days - `6-00-00-00`)  This is available to all users.
 
 ```
-srun --qos=unprivileged bash -c 'env | grep SLURM'
+srun --qos=unprivileged --time=2-00:00:00 bash -c 'env | grep SLURM'
 ```
 
 It's important to be aware of the conditions for launching your jobs with the `unprivileged` QOS; if a request for the same resources is made, the job will be interrupted and placed in the queue, where it will remain until the resources become available again.
