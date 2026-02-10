@@ -1038,14 +1038,17 @@
         },
         {
           id: "gpuScale",
-          text:
-            "Are you working on extremely large datasets or very long computations that need supercomputing power?",
+          text: "How demanding are your computing needs?",
           type: "single",
           options: [
-            { label: "Yes – supercomputing scale required", scores: { "External HPC": 2 } },
             {
-              label: "No – desktop-scale multi-GPU is enough",
+              label: "Moderate: tasks that can run on a powerful workstation with a few GPUs",
               scores: { "AI Cloud": 1, TAAURUS: 1, "AI-LAB": 1 },
+            },
+            {
+              label:
+                "Very demanding: large datasets or computations that run for many hours or days",
+              scores: { "External HPC": 2 },
             },
           ],
           next: "cpuIntensive",
