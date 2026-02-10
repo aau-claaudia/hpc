@@ -833,7 +833,7 @@
             { label: "TECH (IT and Design)", setContext: { faculty: "TECH" } },
             { label: "Other", setContext: { faculty: "Other" } },
           ],
-          next: "funding",
+          next: "teachingStudents",
         },
         {
           id: "funding",
@@ -1143,7 +1143,7 @@
             { id: "collab", label: "Collaboration tools", scores: { UCloud: 1, Strato: 1 } },
             { id: "control", label: "Custom software / full control", scores: { Strato: 1, "AI Cloud": 1, "External HPC": 1 } },
           ],
-          next: "teachingStudents",
+          next: null,
         },
         {
           id: "workstyle",
@@ -1181,7 +1181,7 @@
         },
         {
           id: "teachingStudents",
-          text: "Teaching-specific branch: How many students will use the platform?",
+          text: "How many students will use the platform?",
           type: "single",
           options: [
             { label: "< 20 students", scores: { UCloud: 1, "AI-LAB": 1 }, setContext: { teachingStudents: "<20" } },
@@ -1192,7 +1192,7 @@
         },
         {
           id: "teachingIndividual",
-          text: "Teaching-specific branch: Do students need personal environments, or can they share a common workspace?",
+          text: "Do students need personal environments, or can they share a common workspace?",
           type: "single",
           options: [
             { label: "Each learner needs their own environment", scores: { Strato: 1, UCloud: 1 }, setContext: { teachingEnv: "individual" } },
@@ -1202,12 +1202,13 @@
         },
         {
           id: "teachingInterface",
-          text: "Teaching-specific branch: Do you want a GUI/notebook experience for the students?",
+          text: "Do you want a GUI/notebook experience for the students?",
           type: "single",
           options: [
             { label: "Yes", scores: { UCloud: 1 }, setContext: { teachingGui: "yes" } },
             { label: "No, terminal is okay", scores: { Strato: 1, "AI Cloud": 1, "External HPC": 1 }, setContext: { teachingGui: "no" } },
           ],
+          next: "funding",
         },
         {
           id: "funding",
@@ -1418,8 +1419,9 @@
         if (question.type === "single") {
           options.forEach((opt) => {
             const btn = document.createElement("button");
+            btn.type = "button";
             btn.className = "option-btn";
-            btn.innerHTML = opt.label;
+            btn.textContent = opt.label;
             btn.addEventListener("click", () => handleSingleSelection(question, opt));
             currentOptionsContainer.appendChild(btn);
           });
@@ -1492,7 +1494,7 @@
           return null;
         }
         if (candidate === "teachingStudents" && !context.isTeacher) {
-          return null;
+          return "funding";
         }
         return candidate;
       };
@@ -1517,7 +1519,7 @@
           return;
         }
         if (question.id === "teachingStudents" && !context.isTeacher) {
-          nextQuestion(null);
+          nextQuestion("funding");
           return;
         }
         renderQuestionBlock(question);
