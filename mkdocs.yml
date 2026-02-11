@@ -72,6 +72,7 @@ nav:
       - System overview: ai-cloud/system-overview.md
       - Terms and Conditions: ai-cloud/terms-and-conditions.md
       - Fair usage: ai-cloud/fair-usage.md
+      - Resource quotas: ai-cloud/resource-quotas.md
       - Guides:
           - Getting started:
               - Prerequisites: ai-cloud/getting-started/index.md
@@ -94,7 +95,7 @@ nav:
                   # - Creating a Conda environment: ai-cloud/additional-guides/creating-a-conda-environment.md
               - Running jobs:
                   - Run jobs beyond the default quota: ai-cloud/additional-guides/run-jobs-beyond-the-default-qota.md
-                  - Run jobs on special access nodes: ai-cloud/additional-guides/run-jobs-on-special-access-nodes.md
+                  - Run jobs on proprietary nodes: ai-cloud/additional-guides/run-jobs-on-proprietary-nodes.md
                   - Setting a time limit: ai-cloud/additional-guides/setting-a-time-limit.md
                   - Cancelling jobs: ai-cloud/additional-guides/cancelling-jobs.md
                   - Multiple GPUs with PyTorch: ai-cloud/additional-guides/multiple-gpus-with-pytorch.md
