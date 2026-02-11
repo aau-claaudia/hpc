@@ -9,7 +9,7 @@ If we find indications of violations of the rules and principles layed out on th
 
 As a general rule CLAAUDIA does not cancel jobs without the user's permission. That being said - we do reserve the right to do so, if the situation compromises the platform or service we are able to provide. We will always get in touch with the user.
 
-We also want ask our users, not to interfere with our system administration. It is entirely up to CLAAUDIA to make objections to our users and no individual user has the authority to do so. Should you have any concerns, you are very welcome to get in touch with us.
+We also want ask our users not to interfere with our system administration. It is entirely up to CLAAUDIA to make objections to our users and no individual user has the authority to do so. Should you have any concerns, you are very welcome to get in touch with us.
 
 
 ## Distribution of resources
