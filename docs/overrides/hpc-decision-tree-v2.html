@@ -795,16 +795,16 @@
         },
         {
           id: "role",
-          text: "What best describes you?",
+          text: "What is your role and main reason for using a computing platform?",
           type: "single",
           options: [
             {
-              label: "Using HPC as a bachelor or master student",
+              label: "Bachelor or master student",
               scores: { "AI-LAB": 1, UCloud: 1, "External HPC": 1 },
               setContext: { roleType: "student", isTeacher: false },
             },
             {
-              label: "Using HPC as a researcher",
+              label: "Researcher",
               scores: {
                 "AI Cloud": 1,
                 UCloud: 1,
@@ -815,7 +815,7 @@
               setContext: { roleType: "researcher", isTeacher: false },
             },
             {
-              label: "Using HPC as a teacher for students",
+              label: "Teacher / lecturer",
               scores: { "AI-LAB": 1, UCloud: 1, Strato: 1 },
               setContext: { roleType: "teacher", isTeacher: true },
             },
@@ -833,7 +833,7 @@
             { label: "TECH (IT and Design)", setContext: { faculty: "TECH" } },
             { label: "Other", setContext: { faculty: "Other" } },
           ],
-          next: "funding",
+          next: "teachingStudents",
         },
         {
           id: "funding",
@@ -1038,14 +1038,17 @@
         },
         {
           id: "gpuScale",
-          text:
-            "Are you working on extremely large datasets or very long computations that need supercomputing power?",
+          text: "How demanding are your computing needs?",
           type: "single",
           options: [
-            { label: "Yes – supercomputing scale required", scores: { "External HPC": 2 } },
             {
-              label: "No – desktop-scale multi-GPU is enough",
+              label: "Moderate: tasks that can run on a powerful workstation with a few GPUs",
               scores: { "AI Cloud": 1, TAAURUS: 1, "AI-LAB": 1 },
+            },
+            {
+              label:
+                "Very demanding: large datasets or computations that run for many hours or days",
+              scores: { "External HPC": 2 },
             },
           ],
           next: "cpuIntensive",
@@ -1140,7 +1143,7 @@
             { id: "collab", label: "Collaboration tools", scores: { UCloud: 1, Strato: 1 } },
             { id: "control", label: "Custom software / full control", scores: { Strato: 1, "AI Cloud": 1, "External HPC": 1 } },
           ],
-          next: "teachingStudents",
+          next: null,
         },
         {
           id: "workstyle",
@@ -1178,7 +1181,7 @@
         },
         {
           id: "teachingStudents",
-          text: "Teaching-specific branch: How many students will use the platform?",
+          text: "How many students will use the platform?",
           type: "single",
           options: [
             { label: "< 20 students", scores: { UCloud: 1, "AI-LAB": 1 }, setContext: { teachingStudents: "<20" } },
@@ -1189,7 +1192,7 @@
         },
         {
           id: "teachingIndividual",
-          text: "Teaching-specific branch: Do students need personal environments, or can they share a common workspace?",
+          text: "Do students need personal environments, or can they share a common workspace?",
           type: "single",
           options: [
             { label: "Each learner needs their own environment", scores: { Strato: 1, UCloud: 1 }, setContext: { teachingEnv: "individual" } },
@@ -1199,12 +1202,13 @@
         },
         {
           id: "teachingInterface",
-          text: "Teaching-specific branch: Do you want a GUI/notebook experience for the students?",
+          text: "Do you want a GUI/notebook experience for the students?",
           type: "single",
           options: [
             { label: "Yes", scores: { UCloud: 1 }, setContext: { teachingGui: "yes" } },
             { label: "No, terminal is okay", scores: { Strato: 1, "AI Cloud": 1, "External HPC": 1 }, setContext: { teachingGui: "no" } },
           ],
+          next: "funding",
         },
         {
           id: "funding",
@@ -1415,8 +1419,9 @@
         if (question.type === "single") {
           options.forEach((opt) => {
             const btn = document.createElement("button");
+            btn.type = "button";
             btn.className = "option-btn";
-            btn.innerHTML = opt.label;
+            btn.textContent = opt.label;
             btn.addEventListener("click", () => handleSingleSelection(question, opt));
             currentOptionsContainer.appendChild(btn);
           });
@@ -1489,7 +1494,7 @@
           return null;
         }
         if (candidate === "teachingStudents" && !context.isTeacher) {
-          return null;
+          return "funding";
         }
         return candidate;
       };
@@ -1514,7 +1519,7 @@
           return;
         }
         if (question.id === "teachingStudents" && !context.isTeacher) {
-          nextQuestion(null);
+          nextQuestion("funding");
           return;
         }
         renderQuestionBlock(question);

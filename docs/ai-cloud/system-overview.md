@@ -110,7 +110,7 @@ On AI Cloud, Slurm and Singularity work together. Slurm handles the job scheduli
 flowchart LR
   A[<span><img src="/assets/img/person.svg" width='25' height='25'>User laptop</span>]
   B["<span><img src="/assets/img/server.svg" width='25' height='25'>Front-end node</span>"]
-  C["<span><img src="/assets/img/container.svg" width='25' height='25'>Singularity container job</span>"]
+  C["<span><img src="/assets/img/container.svg" width='25' height='25'>Singularity container</span>"]
   D["<span><img src="/assets/img/queue.svg" width='25' height='25'>Slurm</span>"]
   E["<span><img src="/assets/img/server.svg" width='25' height='25'>Compute node</span>"]
   
