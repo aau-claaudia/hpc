@@ -22,7 +22,7 @@
         srun -u python3 simple_script.py
         ```
 
-4. Wait ~30 seconds and you should get:
+4. ...and you should get:
 
 ```
 ...
