@@ -1,31 +1,49 @@
-### System administration principles
-The CLAAUDIA team is responsible for system administration and support. We work closely with the infrastructure team in ITS on maintainance of the system.
+The CLAAUDIA team is responsible for system administration and user support. We work closely with the infrastructure team in ITS, which takes care of hardware and system maintainance.
 
-The overarching principle in our ressource administration is that we aim to strike a balance between high ressource utilisation, while still leaving the majority of users with the feeling that they can get their work done on the platform.
+It is a priority for us to help our users utilise the platform, and we are therefore happy to help you get started. Don't hesistate to reach out to us if you have any questions (find the "Get Support" button in the top right corner of this page).
 
-In time periods of high resource consumption CLAAUDIA may reach out to you and ask about your consumption.
 
-### Violations
-If we find indications of violations of these principles, CLAAUDIA will contact you to learn more about your situation. 
+## Enforcement of rules
 
-As a general rule CLAAUDIA does not cancel jobs without the user's permission. We do however reserve the right to do so, if the situation is characterised by a degree of severity or urgency, and we can not get a hold of the user.
+If we find indications of violations of the rules and principles layed out on this page, CLAAUDIA will contact you to learn more about your situation.
 
-## Ressource consumption
-The overall demand for GPU ressources fluctuates throughout the year, and we understand that demand is also dependent on the schedule of the individual researcher. We therefore prefer not to set a fixed limit on how many ressources an individual researcher can consume, as there may be times where they have a legitimate reason for high consumption. Instead we ask our users to be mindful of the overall supply, by making frequent asssesments of the queue.
+As a general rule CLAAUDIA does not cancel jobs without the user's permission. That being said - we do reserve the right to do so, if the situation compromises the platform or service we are able to provide. We will always get in touch with the user.
 
-Responsible ressource consumption also involves taking care with multi-GPU allocations. We encourage our users to experiment with this, but they should take great care to test their applications in order to verify that they can indeed make use of the ressources allocated to their jobs.
+We ask our users not to interfere with our system administration. It is entirely up to CLAAUDIA to make objections to our users and no individual user has the authority to do so. Should you have any concerns, you are very welcome to get in touch with us.
 
-If possible, we recomend making good use of times with low consumption - ie. times outside of office hours; on weekends, during holidays, during the night, etc. The parameter ```--begin``` can be added to your Slurm command for this purpose.
+## Responsible use of the platform
 
-## Not allowed
-AI Cloud is designed for processing GPU-demanding batch jobs, that can be executed without the need for user interaction:
+In addition to the default resource limitations that are in place on the platform, we encourage you to use the resources responsibly. We want our users to make not of the following recomendations:
+
+* Always launch your jobs as batch-jobs that require no interference from the user.
+
+* Ensure that your jobs occupy resources only as long as they are needed.
+
+* Do not allocate GPU's do your job, if it does not need them. Run on them on the CPU partition.
+
+* If you intend to allocate multiple GPU's to your job, it is your responsibility to ensure that your project is able to make use of the increased number of GPU-devices in a meaningful way.
+
+* If possible, we recomend making good use of the time scheduler features in Slurm. Launch jobs in periods with low demand - ie. times outside of office hours; on weekends, during holidays, during the night, etc. The parameter `--begin` can be added to your Slurm command for this purpose.
+
+* Keep in mind that AI Cloud is a multi-user system, and that it is entirely possible for one user to destabilize the front-end node by launching resource-intensive operations. Ensuring that we have a stable platform is a shared responsibility.
+
+It should also be noted, that we do recognise that we are a learning institution, and that much of the work carried out on AI Cloud is *learning-by-doing*. We welcome this. Users are encouraged to experiment with features that they do not yet master, and we encourage them to reach out to us if they want our help with utilising the platform.
+
+## Disencouraged use of the platform
 
 ### Interactive development sessions
-By *interactive development* we mean opening jobs, where you have a GPU available to you, but you only ocassinally run commands on the GPU. This results in a very ineffective utilisation of the GPU's, risks  and decreases overall availability. Examples of interactive development session, could be connecting a Jupyter Notebook, Spyder, VS Code to a compute node. 
 
-Launching interactive jobs directly in the console is not allowed either - this could be something like: `srun --pty -G 1 singularity --nv shell`. Going in to an interactive session on a compute node, before launching your job will not release the resources automatically, when they are finished.
+AI Cloud is designed for launching unattended batch jobs, and interactive development sessions are therefore not allowed. An interactive development session is defined by opening a session 
+
+
+We understand that this can sometimes be necessary for very specific troubleshooting cases, but even this is in most cases preferable to do from within an unattended batch job (launched with `sbatch`). The reason for this is that interactive development sessions have very ineffective utilisation of resources, which inhibits the overall availability of the system.
 
 Interactive development is allowed on [UCloud](/ucloud/).
 
-### High memory or CPU-demanding operations
-If your application can not make use of the GPU's - or does not require one, AI Cloud is not the correct platform for your job. Memory or CPU-demanding operations are currently not allowed on the platform, and we refer to UCloud or LUMI for these purposes. Have a look around this website, or [contact CLAAUDIA for guidance](https://aau.service-now.com/serviceportal?id=sc_cat_item&sys_id=34e8536083cfc21053711d447daad30a) on the alternatives.
+#### Launching jobs from within interactive session
+
+It is considered bad practice to launch unattended jobs from within interactive shell sessions. This would be opening a job with `srun --pty`, interactively loading the container and executing the training process by interactively typing the commands. This not only occupies resources for longer than needed, but also makes it dependent on the shell session on the front end node, which will crash your job if the front end node were to crash. Read our guide [Getting started > Run Jobs](ai-cloud/getting-started/run-jobs/) to learn what to do instead.
+
+#### Interactive development sessions on compute nodes
+
+We do not allow interactive development sessions. By *interactive development* we mean opening an interactive shell session with something like `srun --pty -G 1 singularity --nv <shell/exec> image.sif`, and only occassionally execute commands be that directly from the console or from an IDE like Jupyter Notebook, Spyder or VS Code. This does not guarantee that resources are released automatically, when they are no longer needed, and thus resources are occupied for longer than needed.
