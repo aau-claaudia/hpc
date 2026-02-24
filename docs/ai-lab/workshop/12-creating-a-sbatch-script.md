@@ -9,7 +9,7 @@ Batch scripts tell Slurm what to run and which resources to use.
 Create your script using nano or your preferred editor:
 
 ```bash
-nano run.sh
+micro run.sh
 ```
 
 ```bash title="run.sh"
@@ -37,7 +37,7 @@ sleep 60                          # Wait for 60 seconds
 echo "Done sleeping"              # Print another message
 ```
 
-Save and exit (`Ctrl+O`, Enter, `Ctrl+X`).
+Save and exit (`Ctrl+S`, Enter, `Ctrl+Q`).
 
 ---
 

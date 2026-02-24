@@ -28,14 +28,14 @@ cat file.txt       # Display file contents
 
 ## ✏️ Editing Files
 
-Use the **nano** editor:
+Use the **micro** editor:
 
 ```bash
-nano myscript.sh
+micro myscript.sh
 ```
 
-* Save: `Ctrl + O` then Enter
-* Exit: `Ctrl + X`
+* Save: `Ctrl + S` then Enter
+* Exit: `Ctrl + Q`
 
 ---
 

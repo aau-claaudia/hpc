@@ -46,7 +46,7 @@ In a batch script, add resource requests using `#SBATCH` directives:
 
 ```bash title="run.sh"
 #!/bin/bash
-#SBATCH --gres=gpu:1          # Request 1 GPU
+#SBATCH --gres=gpu:1         # Request 1 GPU
 #SBATCH --cpus-per-task=4    # Request 4 CPUs
 #SBATCH --mem=8G             # Request 8 GB memory
 

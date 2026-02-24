@@ -23,7 +23,6 @@ Visit the **AAU Service Portal**:
 
 ## 🚀 Coming soon
 
-* Improved resource monitoring
 * VS Code integration on compute nodes
 * Web-based AI-LAB interface
 
