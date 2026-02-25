@@ -1,0 +1,2319 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>HPC Decision Tree</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      :root {
+        --bg: #ffffff;
+        --panel: #ffffff;
+        --accent: #4f46e5;
+        --accent-hover: #4338ca;
+        --text: #1f2937;
+        --text-light: #6b7280;
+        --muted: #9ca3af;
+        --border: rgba(0, 0, 0, 0.1);
+        --border-light: rgba(0, 0, 0, 0.05);
+        --surface: #f9fafb;
+        --surface-hover: #f3f4f6;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        font-family: "Inter", system-ui, -apple-system, sans-serif;
+        background: rgb(33, 26, 81);
+        color: var(--text);
+        padding: 20px;
+      }
+
+      /* Modal Overlay */
+      .modal-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgb(33, 26, 81);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+        padding: 20px;
+      }
+
+      .app-shell {
+        width: min(100%, 900px);
+        height: 90vh;
+        max-height: 90vh;
+        background: var(--panel);
+        border-radius: 16px;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+        border: 1px solid var(--border-light);
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        position: relative;
+      }
+
+      .modal-close {
+        position: absolute;
+        top: 16px;
+        right: 16px;
+        width: 32px;
+        height: 32px;
+        border: none;
+        background: var(--surface);
+        border-radius: 8px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 20px;
+        color: var(--text-light);
+        transition: all 0.2s ease;
+        z-index: 10;
+      }
+
+      .modal-close:hover {
+        background: var(--surface-hover);
+        color: var(--text);
+      }
+
+      a.modal-close {
+        text-decoration: none;
+      }
+
+      .decision-tree-footer {
+        flex-shrink: 0;
+        padding: 14px 24px;
+        border-top: 1px solid var(--border-light);
+        background: var(--panel);
+        text-align: center;
+      }
+
+      .decision-tree-footer a {
+        color: var(--accent);
+        text-decoration: none;
+        font-size: 0.95rem;
+        font-weight: 500;
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        transition: color 0.2s ease;
+      }
+
+      .decision-tree-footer a:hover {
+        color: var(--accent-hover);
+        text-decoration: underline;
+      }
+
+      header {
+        padding: 24px 24px 20px;
+        border-bottom: 1px solid var(--border-light);
+        background: var(--panel);
+        flex-shrink: 0;
+      }
+
+      header h1 {
+        margin: 0;
+        font-size: 1.75rem;
+        font-weight: 600;
+        color: var(--text);
+      }
+
+      header p {
+        margin: 6px 0 0;
+        color: var(--text-light);
+        font-size: 0.95rem;
+      }
+
+      .chat-window {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        min-height: 0;
+        max-height: 100%;
+      }
+
+      .messages {
+        flex: 1;
+        overflow-y: scroll !important;
+        overflow-x: hidden;
+        padding: 20px 24px;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        scrollbar-gutter: stable;
+        scroll-behavior: smooth;
+        min-height: 0;
+        max-height: 100%;
+      }
+
+      .messages::-webkit-scrollbar {
+        width: 10px;
+      }
+
+      .messages::-webkit-scrollbar-track {
+        background: var(--surface);
+        border-radius: 5px;
+      }
+
+      .messages::-webkit-scrollbar-thumb {
+        background: var(--muted);
+        border-radius: 5px;
+        border: 2px solid var(--surface);
+      }
+
+      .messages::-webkit-scrollbar-thumb:hover {
+        background: var(--text-light);
+      }
+
+      /* Firefox scrollbar */
+      .messages {
+        scrollbar-width: thin;
+        scrollbar-color: var(--muted) var(--surface);
+      }
+
+      /* Force scrollbar to be visible */
+      .messages {
+        overflow-y: scroll !important;
+      }
+
+      .message {
+        max-width: 90%;
+        padding: 16px;
+        border-radius: 16px;
+        line-height: 1.4;
+      }
+
+      /* Single box for question + options */
+      .question-box {
+        background: var(--surface);
+        border: 1px solid var(--border-light);
+        border-radius: 14px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+      }
+
+      .question-box__text {
+        padding: 20px;
+        color: var(--text);
+        line-height: 1.55;
+        font-size: 0.98rem;
+      }
+
+      .question-box__text a {
+        color: var(--accent);
+        text-decoration: none;
+        font-weight: 500;
+      }
+
+      .question-box__text a:hover {
+        text-decoration: underline;
+      }
+
+      .question-box__options {
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+
+      .question-box__options > *:first-child {
+        margin-top: 24px;
+      }
+
+
+      .question-box .option-btn {
+        width: 100%;
+        padding: 12px 16px;
+        border-radius: 10px;
+        border: 1px solid var(--border);
+        background: white;
+        color: var(--text);
+        font-size: 0.95rem;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        text-align: left;
+        font-weight: 400;
+      }
+
+      .question-box .option-btn:hover {
+        background: #f0f4ff;
+        border-color: var(--accent);
+        transform: translateY(-1px);
+        box-shadow: 0 2px 8px rgba(79, 70, 229, 0.12);
+      }
+
+      .question-box .multi-select label {
+        background: white;
+        border-radius: 10px;
+        padding: 12px 16px;
+      }
+
+      .question-box .multi-select label:hover {
+        border-color: var(--accent);
+        background: #fafbff;
+      }
+
+      .question-box .rating-chip {
+        margin-top: 6px;
+      }
+
+      .question-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+      }
+
+      .options-block {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+
+      .inline-options {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .message.assistant {
+        background: var(--surface);
+        border: 1px solid var(--border-light);
+      }
+
+      .message.user {
+        background: var(--accent);
+        color: white;
+        align-self: flex-end;
+      }
+
+      .inline-options .option-btn {
+        width: 100%;
+        padding: 12px 16px;
+        border-radius: 10px;
+        border: 1px solid var(--border);
+        background: white;
+        color: var(--text);
+        font-size: 0.95rem;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        text-align: left;
+        font-weight: 400;
+      }
+
+      .inline-options .option-btn:hover {
+        background: var(--surface-hover);
+        border-color: var(--accent);
+        transform: translateY(-1px);
+        box-shadow: 0 2px 8px rgba(79, 70, 229, 0.1);
+      }
+
+      .multi-select {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-bottom: 12px;
+      }
+
+      .multi-select label {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        cursor: pointer;
+        border: 1px solid var(--border);
+        padding: 10px 16px;
+        border-radius: 12px;
+      }
+
+      .multi-select input {
+        accent-color: var(--accent);
+      }
+
+      .submit-btn {
+        padding: 12px 18px;
+        border-radius: 10px;
+        border: none;
+        background: var(--accent);
+        color: #fff;
+        font-weight: 500;
+        cursor: pointer;
+        width: 100%;
+        transition: all 0.2s ease;
+        font-size: 0.95rem;
+      }
+
+      .submit-btn:hover {
+        background: var(--accent-hover);
+        transform: translateY(-1px);
+        box-shadow: 0 4px 12px rgba(79, 70, 229, 0.3);
+      }
+
+      .summary-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 12px;
+      }
+
+      .summary-table th,
+      .summary-table td {
+        padding: 8px;
+        border-bottom: 1px solid var(--border-light);
+      }
+
+      .platform-summary {
+        margin-top: 20px;
+        border-top: 1px solid var(--border-light);
+        padding-top: 16px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .platform-summary div {
+        padding: 16px;
+        border-radius: 12px;
+        background: rgba(79, 70, 229, 0.05);
+        border: 1px solid rgba(79, 70, 229, 0.1);
+      }
+
+      .legend {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+        margin: 16px 0 20px 0;
+        padding: 14px 18px;
+        background: rgba(79, 70, 229, 0.04);
+        border-radius: 10px;
+        border: 1px solid rgba(79, 70, 229, 0.1);
+        color: var(--text);
+        font-size: 0.9rem;
+      }
+
+      .legend-item {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .legend-icon {
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        flex-shrink: 0;
+      }
+
+      .legend-icon--ok {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%2210b981'%3E%3Cpath d='M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z'/%3E%3C/svg%3E");
+      }
+
+      .legend-icon--warn {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%22f59e0b'%3E%3Cpath d='M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z'/%3E%3C/svg%3E");
+      }
+
+      .legend-icon--no {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%22ef4444'%3E%3Cpath d='M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z'/%3E%3C/svg%3E");
+      }
+
+      .recommended-block {
+        border: 2px solid var(--accent);
+        border-radius: 14px;
+        padding: 20px;
+        background: linear-gradient(135deg, rgba(79, 70, 229, 0.08) 0%, rgba(79, 70, 229, 0.05) 100%);
+        margin-bottom: 20px;
+        box-shadow: 0 4px 12px rgba(79, 70, 229, 0.15);
+      }
+
+      .recommended-block h3 {
+        margin: 0 0 8px 0;
+        font-size: 1.25rem;
+        color: var(--accent);
+        font-weight: 700;
+      }
+
+      .recommended-block ul {
+        padding-left: 24px;
+        margin: 12px 0 0;
+        color: var(--text);
+        line-height: 1.7;
+      }
+
+      .recommended-block a {
+        color: var(--accent);
+        font-weight: 500;
+        text-decoration: none;
+      }
+
+      .recommended-block a:hover {
+        text-decoration: underline;
+      }
+
+      .accordion summary {
+        cursor: pointer;
+        padding: 16px 20px;
+        border-radius: 12px;
+        background: white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 12px;
+        font-weight: 600;
+        transition: all 0.2s ease;
+        color: var(--text);
+        border: 1px solid var(--border-light);
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+      }
+
+      .accordion summary span:first-child {
+        font-size: 1.05rem;
+        color: var(--text);
+      }
+
+      .accordion summary span:last-child {
+        font-size: 0.9rem;
+        color: var(--muted);
+        font-weight: 500;
+      }
+
+      .accordion.accordion--recommended summary span:last-child {
+        color: #000;
+      }
+
+      .accordion summary:hover {
+        background: #f8f9ff;
+        border-color: var(--accent);
+        box-shadow: 0 2px 8px rgba(79, 70, 229, 0.1);
+        transform: translateY(-1px);
+      }
+
+      .accordion summary::-webkit-details-marker {
+        display: none;
+      }
+
+      .accordion[open] summary {
+        border-color: var(--accent);
+        background: #f8f9ff;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+        margin-bottom: 0;
+      }
+
+      .accordion div {
+        padding: 20px;
+        background: white;
+        border-radius: 0 0 12px 12px;
+        margin-bottom: 12px;
+        border: 1px solid var(--accent);
+        border-top: none;
+        box-shadow: 0 2px 8px rgba(79, 70, 229, 0.08);
+      }
+
+      .accordion div ul {
+        margin: 12px 0 0;
+        padding-left: 0;
+        list-style: none;
+      }
+
+      .accordion div li {
+        margin: 8px 0;
+        line-height: 1.6;
+        color: var(--text);
+        padding-left: 24px;
+        position: relative;
+        font-size: 14px;
+      }
+
+      .accordion div li.accordion-bullet {
+        padding-left: 26px;
+      }
+
+      .accordion div li .bullet-label {
+        font-weight: 600;
+      }
+
+      .accordion div li.accordion-bullet::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0.35em;
+        width: 16px;
+        height: 16px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+
+      .accordion div li.accordion-bullet--ok::before {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%2210b981'%3E%3Cpath d='M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z'/%3E%3C/svg%3E");
+      }
+
+      .accordion div li.accordion-bullet--warn::before {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%22f59e0b'%3E%3Cpath d='M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z'/%3E%3C/svg%3E");
+      }
+
+      .accordion div li.accordion-bullet--no::before {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%22ef4444'%3E%3Cpath d='M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z'/%3E%3C/svg%3E");
+      }
+
+      .accordion div li.accordion-bullet--info::before {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%236366f1'%3E%3Cpath d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z'/%3E%3C/svg%3E");
+      }
+
+      .accordion div p {
+        margin: 0 0 12px;
+        color: var(--text);
+        line-height: 1.6;
+      }
+
+      .fit-line {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+
+      .summary-table th {
+        text-align: left;
+        font-weight: 600;
+        color: var(--muted);
+      }
+
+      .summary-table tr.best-score td {
+        color: var(--text);
+        font-weight: 600;
+      }
+
+      .link-bubble a {
+        color: var(--accent);
+        text-decoration: underline;
+      }
+
+      .rating-chip {
+        font-size: 0.85rem;
+        padding: 4px 12px;
+        border-radius: 999px;
+        background: rgba(79, 70, 229, 0.1);
+        color: var(--accent);
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        font-weight: 500;
+      }
+
+      .restart {
+        margin-top: 16px;
+        font-size: 0.9rem;
+        color: var(--accent);
+        cursor: pointer;
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.2s ease;
+      }
+
+      .restart:hover {
+        color: var(--accent-hover);
+        text-decoration: underline;
+      }
+
+      .link-bubble a {
+        color: var(--accent);
+        text-decoration: none;
+        font-weight: 500;
+      }
+
+      .link-bubble a:hover {
+        text-decoration: underline;
+      }
+
+      .platform-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-top: 20px;
+        padding-top: 16px;
+        border-top: 1px solid var(--border-light);
+        align-items: center;
+      }
+
+      .platform-link {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 6px 14px;
+        border-radius: 6px;
+        font-size: 0.8rem;
+        font-weight: 500;
+        text-decoration: none;
+        transition: all 0.2s ease;
+        border: 1px solid;
+        white-space: nowrap;
+      }
+
+      .platform-link--about {
+        background: white;
+        color: var(--accent);
+        border-color: var(--border);
+      }
+
+      .platform-link--about:hover {
+        background: rgba(79, 70, 229, 0.05);
+        border-color: var(--accent);
+      }
+
+      .platform-link--access {
+        background: white;
+        color: var(--accent);
+        border-color: var(--border);
+      }
+
+      .platform-link--access:hover {
+        background: rgba(79, 70, 229, 0.05);
+        border-color: var(--accent);
+      }
+
+      @media (max-width: 600px) {
+        .modal-overlay {
+          padding: 0;
+        }
+
+        .app-shell {
+          border-radius: 0;
+          height: 100vh;
+          max-height: 100vh;
+        }
+
+        .messages {
+          padding: 16px;
+        }
+
+        .options {
+          padding: 16px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="modal-overlay">
+      <div class="app-shell">
+        <a class="modal-close" href="/" aria-label="Close">×</a>
+        <header>
+          <h1>HPC Decision Tree</h1>
+          <p>Welcome! Let me guide you to the HPC platform that fits your project. Just answer a few questions.</p>
+        </header>
+        <div class="chat-window">
+          <div class="messages" id="messages"></div>
+        </div>
+        <div class="decision-tree-footer">
+          <a href="/">← Return to hpc.aau.dk</a>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const platforms = ["AI-LAB", "AI Cloud", "UCloud", "Strato", "External HPC", "TAAURUS"];
+
+      const resetScores = () => {
+        const map = {};
+        platforms.forEach((p) => (map[p] = 0));
+        return map;
+      };
+
+      let scores = resetScores();
+      let currentQuestionId = null;
+      let answered = [];
+      const context = {
+        isTeacher: false,
+        roleType: null,
+        faculty: null,
+        hasFunding: null,
+        dataLevel: 1,
+        projectTypes: [],
+        gpuNeeded: null,
+        cpuWork: null,
+        dataVolume: null,
+        dataGrowth: null,
+        tools: new Set(),
+        workstyle: null,
+        skill: null,
+        control: null,
+        teachingStudents: null,
+        teachingEnv: null,
+        teachingGui: null,
+        projectTypeFollowUpOptions: null,
+        toolsFollowUpOptions: null,
+        priorities: [],
+      };
+
+      const applyContext = (updates) => {
+        if (!updates) return;
+        Object.entries(updates).forEach(([key, value]) => {
+          if (key === "addTool" && value) {
+            context.tools.add(value);
+            return;
+          }
+          if (key === "projectTypes" && Array.isArray(value)) {
+            value.forEach((item) => {
+              if (!context.projectTypes.includes(item)) {
+                context.projectTypes.push(item);
+              }
+            });
+            return;
+          }
+          context[key] = value;
+        });
+      };
+
+      const chatElement = document.getElementById("messages");
+      let currentOptionsContainer = null;
+
+      const questions = [
+        {
+          id: "help",
+          text: "I'll help you find the right HPC platform for your project. Let's get started!",
+          type: "single",
+          options: [
+            {
+              label: "Start the platform selection quiz",
+              next: "role",
+            },
+          ],
+        },
+        {
+          id: "role",
+          text: "What is your role and main reason for using a computing platform?",
+          type: "single",
+          options: [
+            {
+              label: "Bachelor or master student",
+              scores: { "AI-LAB": 1, UCloud: 1, "External HPC": 1 },
+              setContext: { roleType: "student", isTeacher: false },
+            },
+            {
+              label: "Researcher",
+              scores: {
+                "AI Cloud": 1,
+                UCloud: 1,
+                Strato: 1,
+                "External HPC": 1,
+                TAAURUS: 1,
+              },
+              setContext: { roleType: "researcher", isTeacher: false },
+            },
+            {
+              label: "Teacher / lecturer",
+              scores: { "AI-LAB": 1, UCloud: 1, Strato: 1 },
+              setContext: { roleType: "teacher", isTeacher: true },
+            },
+          ],
+          next: "faculty",
+        },
+        {
+          id: "faculty",
+          text: "Which AAU faculty do you belong to?",
+          type: "single",
+          options: [
+            { label: "SSH (Social Sciences and Humanities)", setContext: { faculty: "SSH" } },
+            { label: "ENG (Engineering and Science)", setContext: { faculty: "ENG" } },
+            { label: "SUND (Medicine)", setContext: { faculty: "SUND" } },
+            { label: "TECH (IT and Design)", setContext: { faculty: "TECH" } },
+            { label: "Other", setContext: { faculty: "Other" } },
+          ],
+          next: "teachingStudents",
+        },
+        {
+          id: "funding",
+          text: "Do you have funding available to buy dedicated hardware for your project?",
+          type: "single",
+          options: [
+            {
+              label: "No, I need to use existing shared resources",
+              scores: {},
+              setContext: { hasFunding: false },
+              next: "projectType",
+            },
+            {
+              label: "Yes, I have funding for hardware",
+              scores: {},
+              setContext: { hasFunding: true },
+              final: true,
+              reply: `<p>We recommend contacting CLAAUDIA directly to specify your needs (compute, storage, or raw hour usage).</p><p><a href="https://serviceportal.aau.dk/serviceportal?id=sc_cat_item&sys_id=a05e2fb4c3434610f0f3041ad001310e" target="_blank" rel="noreferrer" class="platform-link platform-link--about">Contact CLAAUDIA</a></p>`,
+            },
+            {
+              label: "Not sure / Not applicable",
+              scores: {},
+              setContext: { hasFunding: null },
+              next: "projectType",
+            },
+          ],
+          next: "projectType",
+        },
+        {
+          id: "projectType",
+          text: "What best describes your project?",
+          type: "single",
+          options: [
+            {
+              label: "Deep learning (neural networks, image classification)",
+              scores: { "AI-LAB": 1, "AI Cloud": 1, TAAURUS: 1, "External HPC": 1 },
+              setContext: { projectTypes: ["deep learning"] },
+              followUpOptions: [
+                { label: "Image / vision (e.g. CNNs, object detection)", scores: { "AI-LAB": 1, "AI Cloud": 1 }, setContext: { addProjectType: "deep learning" } },
+                { label: "NLP / language models", scores: { "AI Cloud": 1, TAAURUS: 1, "External HPC": 1 }, setContext: { addProjectType: "deep learning" } },
+                { label: "Other deep learning", scores: { "AI-LAB": 1, "AI Cloud": 1 }, setContext: { addProjectType: "deep learning" } },
+              ],
+            },
+            {
+              label: "Data analysis or statistics (large datasets, simulations)",
+              scores: { UCloud: 1, Strato: 1, TAAURUS: 1, "External HPC": 1 },
+              setContext: { projectTypes: ["simulation"] },
+              followUpOptions: [
+                { label: "Large datasets / analytics", scores: { UCloud: 1, Strato: 1 }, setContext: { addProjectType: "simulation" } },
+                { label: "Simulations (scientific computing)", scores: { Strato: 1, TAAURUS: 1, "External HPC": 1 }, setContext: { addProjectType: "simulation" } },
+                { label: "Statistics", scores: { UCloud: 1, TAAURUS: 1 }, setContext: { addProjectType: "simulation" } },
+                { label: "Other data work", scores: { UCloud: 1 }, setContext: { addProjectType: "simulation" } },
+              ],
+            },
+            {
+              label: "Collaboration or code development (Jupyter, RStudio, web apps)",
+              scores: { UCloud: 1, Strato: 1, TAAURUS: 1 },
+              setContext: { projectTypes: ["collaboration"] },
+              followUpOptions: [
+                { label: "Jupyter / RStudio / notebooks", scores: { UCloud: 1, TAAURUS: 1 }, setContext: { addProjectType: "collaboration" } },
+                { label: "Web apps or services", scores: { Strato: 1, UCloud: 1 }, setContext: { addProjectType: "collaboration" } },
+                { label: "Code development / version control", scores: { Strato: 1, TAAURUS: 1 }, setContext: { addProjectType: "collaboration" } },
+              ],
+            },
+            {
+              label: "Transcribe or process text/speech (audio or video)",
+              scores: { UCloud: 2 },
+              setContext: { projectTypes: ["transcription"] },
+              followUpOptions: [
+                { label: "Audio transcription", scores: { UCloud: 1 }, setContext: { addProjectType: "transcription" } },
+                { label: "Video transcription", scores: { UCloud: 1 }, setContext: { addProjectType: "transcription" } },
+                { label: "Other speech/text processing", scores: { UCloud: 1 }, setContext: { addProjectType: "transcription" } },
+              ],
+            },
+            {
+              label: "CPU-heavy tasks (simulations, CFD, long-running jobs)",
+              scores: { Strato: 1, UCloud: 1, TAAURUS: 1, "External HPC": 1 },
+              setContext: { projectTypes: ["cpu-heavy"] },
+              followUpOptions: [
+                { label: "Scientific simulations", scores: { Strato: 1, TAAURUS: 1, "External HPC": 1 }, setContext: { addProjectType: "cpu-heavy" } },
+                { label: "CFD or engineering workloads", scores: { Strato: 1, "External HPC": 1 }, setContext: { addProjectType: "cpu-heavy" } },
+                { label: "Other CPU-heavy", scores: { Strato: 1, UCloud: 1 }, setContext: { addProjectType: "cpu-heavy" } },
+              ],
+            },
+            {
+              label: "Other / not sure yet",
+              scores: { UCloud: 1 },
+              setContext: { projectTypes: ["other"] },
+              followUpOptions: [
+                { label: "Not sure yet – exploring options", scores: { UCloud: 1 }, setContext: { addProjectType: "other" } },
+                { label: "Other type of project", scores: { UCloud: 1 }, setContext: { addProjectType: "other" } },
+              ],
+            },
+          ],
+          next: "dataSecurity",
+        },
+        {
+          id: "projectTypeFollowUp",
+          text: "Can you specify a bit more what you'll be doing?",
+          type: "single",
+          options: [],
+          next: "dataSecurity",
+        },
+        {
+          id: "dataSecurity",
+          text:
+            "Choose the highest data classification you will work with (AAU levels 1–4). Read more at <a href=\"https://www.security.aau.dk/data-classification\" target=\"_blank\" rel=\"noreferrer\">AAU data classification</a>.",
+          type: "single",
+          options: [
+            {
+              label: "Level 1 (public or internal data, low risk)",
+              scores: { "AI-LAB": 1, "AI Cloud": 1, Strato: 1, UCloud: 1 },
+              setContext: { dataLevel: 1 },
+            },
+            {
+              label: "Level 2 (confidential; moderate sensitivity)",
+              scores: { UCloud: 2, TAAURUS: 2 },
+              setContext: { dataLevel: 2 },
+            },
+            {
+              label: "Level 3 (sensitive data; restricted access)",
+              scores: { UCloud: 3, TAAURUS: 3 },
+              setContext: { dataLevel: 3 },
+            },
+            {
+              label: "Level 4 (highly confidential/catastrophic risk)",
+              scores: { UCloud: 3 },
+              setContext: { dataLevel: 4 },
+              reply:
+                'Level 4 data requires special handling. Please fill out this <a href="https://serviceportal.aau.dk/serviceportal?id=sc_cat_item&sys_id=81b8e38f97b40210789af5efe153afb6" target="_blank" rel="noreferrer">form</a> describing your project.',
+              final: true,
+            },
+          ],
+          next: "dataVolume",
+        },
+        {
+          id: "dataVolume",
+          text: "Do you need to store more than 10TB of data?",
+          type: "single",
+          options: [
+            {
+              label: "No, less than 10TB",
+              scores: {},
+              setContext: { dataVolume: "under10TB" },
+            },
+            {
+              label: "Yes, more than 10TB",
+              scores: { "External HPC": 3, TAAURUS: 2 },
+              setContext: { dataVolume: "over10TB" },
+            },
+          ],
+          next: "dataGrowth",
+        },
+        {
+          id: "dataGrowth",
+          text: "Expected data growth during the project?",
+          type: "single",
+          options: [
+            { label: "Static (single import)", scores: { UCloud: 1, "AI-LAB": 1 }, setContext: { dataGrowth: 1 } },
+            {
+              label: "Periodic data imports",
+              scores: { Strato: 1, UCloud: 1, "AI Cloud": 1 },
+              setContext: { dataGrowth: 2 },
+            },
+            {
+              label: "Continuous data generation",
+              scores: { Strato: 1, "External HPC": 1 },
+              setContext: { dataGrowth: 3 },
+            },
+          ],
+          next: "gpu",
+        },
+        {
+          id: "gpu",
+          text: "Does the project require GPU resources?",
+          type: "single",
+          options: [
+            {
+              label: "Yes, GPU acceleration is essential",
+              scores: {
+                "AI-LAB": 1,
+                "AI Cloud": 1,
+                "External HPC": 1,
+                TAAURUS: 1,
+              },
+              setContext: { gpuNeeded: "yes" },
+              next: "gpuScale",
+            },
+            {
+              label: "No, CPU-only is sufficient",
+              scores: { Strato: 1, UCloud: 1, TAAURUS: 1, "External HPC": 1 },
+              setContext: { gpuNeeded: "no" },
+              next: "cpuIntensive",
+            },
+            {
+              label: "Not sure yet",
+              scores: { UCloud: 1 },
+              setContext: { gpuNeeded: "unsure" },
+              next: "cpuIntensive",
+            },
+          ],
+        },
+        {
+          id: "gpuScale",
+          text: "How demanding are your computing needs?",
+          type: "single",
+          options: [
+            {
+              label: "Moderate: tasks that can run on a powerful workstation with a few GPUs",
+              scores: { "AI Cloud": 1, TAAURUS: 1, "AI-LAB": 1 },
+            },
+            {
+              label:
+                "Very demanding: large datasets or computations that run for many hours or days",
+              scores: { "External HPC": 2 },
+            },
+          ],
+          next: "cpuIntensive",
+        },
+        {
+          id: "cpuIntensive",
+          text: "Does the project involve CPU-intensive workloads (simulations, CFD, language models, etc.)?",
+          type: "single",
+          options: [
+            {
+              label: "No",
+              scores: {},
+            },
+            {
+              label: "Yes",
+              scores: { Strato: 1, UCloud: 1, TAAURUS: 1, "External HPC": 2 },
+            },
+            {
+              label: "Not sure yet",
+              scores: { UCloud: 1 },
+            },
+          ],
+          next: "tools",
+        },
+        {
+          id: "tools",
+          text: "What best describes your software environment?",
+          type: "single",
+          options: [
+            {
+              label: "Open-source (Python, R, Julia)",
+              scores: { UCloud: 1, Strato: 1 },
+              setContext: { addTool: "Open-source" },
+              followUpOptions: [
+                { label: "Mostly Python", scores: { UCloud: 1, "AI-LAB": 1 }, setContext: {} },
+                { label: "R or statistics", scores: { UCloud: 1 }, setContext: {} },
+                { label: "Julia or other open-source", scores: { Strato: 1 }, setContext: {} },
+              ],
+            },
+            {
+              label: "Commercial software (MATLAB, ANSYS, Abaqus)",
+              scores: { UCloud: 1, Strato: 1, TAAURUS: 1 },
+              setContext: { addTool: "Commercial" },
+              followUpOptions: [
+                { label: "MATLAB", scores: { UCloud: 1, TAAURUS: 1 }, setContext: {} },
+                { label: "RStudio / Stata", scores: { TAAURUS: 1 }, setContext: {} },
+                { label: "Engineering (ANSYS, Abaqus, etc.)", scores: { Strato: 1 }, setContext: {} },
+                { label: "Other commercial", scores: { UCloud: 1, Strato: 1, TAAURUS: 1 }, setContext: {} },
+              ],
+            },
+            {
+              label: "Custom or self-compiled software",
+              scores: { Strato: 1, "External HPC": 1 },
+              setContext: { addTool: "Custom" },
+              followUpOptions: [
+                { label: "Self-compiled HPC codes", scores: { "External HPC": 2 }, setContext: {} },
+                { label: "Containers / VMs", scores: { Strato: 1 }, setContext: {} },
+                { label: "Other custom stack", scores: { Strato: 1 }, setContext: {} },
+              ],
+            },
+            {
+              label: "Not sure yet",
+              scores: { UCloud: 1 },
+              setContext: { addTool: "Unspecified" },
+              followUpOptions: [
+                { label: "Still exploring", scores: { UCloud: 1 }, setContext: {} },
+                { label: "Mix of several", scores: { UCloud: 1 }, setContext: {} },
+              ],
+            },
+          ],
+          next: "workstyle",
+        },
+        {
+          id: "toolsFollowUp",
+          text: "Can you specify a bit more?",
+          type: "single",
+          options: [],
+          next: "workstyle",
+        },
+        {
+          id: "priorities",
+          text: "Select the 3 most important things to you (this helps us rank platforms).",
+          type: "pickExactly3",
+          options: [
+            { id: "gpu", label: "GPU power", scores: { "AI-LAB": 2, "AI Cloud": 2, TAAURUS: 2, "External HPC": 1, Strato: 1, UCloud: 1 } },
+            { id: "cpu", label: "CPU power", scores: { Strato: 2, UCloud: 1, TAAURUS: 1, "External HPC": 1 } },
+            { id: "easy", label: "Easy to use", scores: { UCloud: 2 } },
+            { id: "hosting", label: "Server hosting / managed service", scores: { Strato: 2, UCloud: 1 } },
+            { id: "sensitive", label: "Support for sensitive data", scores: { UCloud: 2, TAAURUS: 1 } },
+            { id: "scale", label: "Scale / supercomputing", scores: { "External HPC": 2 } },
+            { id: "cost", label: "Cost-effective / free tier", scores: { "AI-LAB": 1, UCloud: 1 } },
+            { id: "collab", label: "Collaboration tools", scores: { UCloud: 1, Strato: 1 } },
+            { id: "control", label: "Custom software / full control", scores: { Strato: 1, "AI Cloud": 1, "External HPC": 1 } },
+          ],
+          next: null,
+        },
+        {
+          id: "workstyle",
+          text: "How do you prefer to work?",
+          type: "single",
+          options: [
+            { label: "JupyterLab or notebook interface", scores: { UCloud: 1 }, setContext: { workstyle: "Jupyter" } },
+            { label: "Terminal / SSH workflow", scores: { "AI Cloud": 1, "AI-LAB": 1, Strato: 1 }, setContext: { workstyle: "Terminal" } },
+            { label: "Graphical user interface (point-and-click)", scores: { UCloud: 1, Strato: 1, TAAURUS: 1 }, setContext: { workstyle: "GUI" } },
+            { label: "Web interface", scores: { Strato: 1, UCloud: 1 }, setContext: { workstyle: "Web" } },
+          ],
+          next: "skill",
+        },
+        {
+          id: "skill",
+          text: "How comfortable are you with Linux & the command line?",
+          type: "single",
+          options: [
+            { label: "Beginner", scores: { UCloud: 1 }, setContext: { skill: "Beginner" } },
+            { label: "Intermediate", scores: { "AI-LAB": 1, "AI Cloud": 1 }, setContext: { skill: "Intermediate" } },
+            { label: "Advanced", scores: { "AI Cloud": 1, "External HPC": 1 }, setContext: { skill: "Advanced" } },
+          ],
+          next: "control",
+        },
+        {
+          id: "control",
+          text: "Do you want a “click-and-run” setup or full control?",
+          type: "single",
+          options: [
+            { label: "As simple as possible", scores: { UCloud: 1 }, setContext: { control: "Simple" } },
+            { label: "Some setup is okay", scores: { "AI-LAB": 1, Strato: 1 }, setContext: { control: "Moderate" } },
+            { label: "Full control/configuration", scores: { Strato: 1, "External HPC": 1, "AI Cloud": 1 }, setContext: { control: "Full" } },
+          ],
+          next: "priorities",
+        },
+        {
+          id: "teachingStudents",
+          text: "How many students will use the platform?",
+          type: "single",
+          options: [
+            { label: "< 20 students", scores: { UCloud: 1, "AI-LAB": 1 }, setContext: { teachingStudents: "<20" } },
+            { label: "20–100 students", scores: { Strato: 1, UCloud: 1 }, setContext: { teachingStudents: "20-100" } },
+            { label: "100+ students", scores: { Strato: 2, "External HPC": 1 }, setContext: { teachingStudents: "100+" } },
+          ],
+          next: "teachingIndividual",
+        },
+        {
+          id: "teachingIndividual",
+          text: "Do students need personal environments, or can they share a common workspace?",
+          type: "single",
+          options: [
+            { label: "Each learner needs their own environment", scores: { Strato: 1, UCloud: 1 }, setContext: { teachingEnv: "individual" } },
+            { label: "Shared environment is fine", scores: { UCloud: 1, "AI-LAB": 1 }, setContext: { teachingEnv: "shared" } },
+          ],
+          next: "teachingInterface",
+        },
+        {
+          id: "teachingInterface",
+          text: "Do you want a GUI/notebook experience for the students?",
+          type: "single",
+          options: [
+            { label: "Yes", scores: { UCloud: 1 }, setContext: { teachingGui: "yes" } },
+            { label: "No, terminal is okay", scores: { Strato: 1, "AI Cloud": 1, "External HPC": 1 }, setContext: { teachingGui: "no" } },
+          ],
+          next: "funding",
+        },
+        {
+          id: "funding",
+          text:
+            "Do you already have funding for compute resources? (This branch is for pricing questions.)",
+          type: "single",
+          options: [
+            {
+              label: "No funding yet",
+              scores: { "AI-LAB": 1, UCloud: 1 },
+            },
+            {
+              label: "Yes, internal funding",
+              scores: { Strato: 1, "AI Cloud": 1 },
+            },
+            {
+              label: "Yes, external funding (e.g., DeiC or EuroHPC)",
+              scores: { "External HPC": 2 },
+            },
+          ],
+          next: "fundingGoal",
+        },
+        {
+          id: "fundingGoal",
+          text: "What is your goal with the funding?",
+          type: "single",
+          options: [
+            { label: "Buy dedicated hardware", scores: { Strato: 1 } },
+            { label: "Pay for shared compute", scores: { "AI Cloud": 1, "External HPC": 1 } },
+            { label: "Not sure yet", scores: { UCloud: 1 } },
+          ],
+          next: "fundingDuration",
+        },
+        {
+          id: "fundingDuration",
+          text: "How long will you need the resources?",
+          type: "single",
+          options: [
+            { label: "Short-term (<6 months)", scores: { UCloud: 1, "AI-LAB": 1 } },
+            {
+              label: "Medium-term (6–24 months)",
+              scores: { "AI Cloud": 1, Strato: 1 },
+            },
+            {
+              label: "Long-term (>2 years)",
+              scores: { "External HPC": 2 },
+            },
+          ],
+          next: "summary",
+        },
+      ];
+
+      const scrollChatToBottom = () => {
+        if (chatElement) {
+          chatElement.scrollTop = chatElement.scrollHeight;
+        }
+      };
+
+      const ensureScrolling = () => {
+        const messages = document.getElementById('messages');
+        const appShell = document.querySelector('.app-shell');
+        const header = document.querySelector('header');
+        
+        if (messages && appShell && header) {
+          const appShellHeight = appShell.offsetHeight;
+          const headerHeight = header.offsetHeight;
+          const availableHeight = appShellHeight - headerHeight;
+          
+          if (availableHeight > 0) {
+            messages.style.maxHeight = availableHeight + 'px';
+            messages.style.height = availableHeight + 'px';
+            messages.style.overflowY = 'scroll';
+          }
+        }
+      };
+
+      window.addEventListener('resize', ensureScrolling);
+      setTimeout(ensureScrolling, 100);
+
+      const appendAssistantMessage = (text, options = {}) => {
+        const last = chatElement.lastElementChild;
+        const merge = options.mergeWithPrevious === true;
+        const isLastAssistant = last && last.classList && last.classList.contains("message") && last.classList.contains("assistant");
+        const isLastWrapper = last && last.classList && last.classList.contains("question-wrapper");
+        const lastAssistant = isLastAssistant ? last : (isLastWrapper && last.firstElementChild && last.firstElementChild.classList.contains("assistant") ? last.firstElementChild : null);
+
+        if (merge && lastAssistant) {
+          lastAssistant.innerHTML = lastAssistant.innerHTML + "<br><br>" + text;
+          if (options.htmlClass) lastAssistant.classList.add(options.htmlClass);
+        } else {
+          const div = document.createElement("div");
+          div.className = "message assistant";
+          div.innerHTML = text;
+          if (options.htmlClass) div.classList.add(options.htmlClass);
+          chatElement.appendChild(div);
+        }
+        scrollChatToBottom();
+        setTimeout(ensureScrolling, 50);
+      };
+
+      const appendUserMessage = (text) => {
+        const div = document.createElement("div");
+        div.className = "message user";
+        div.textContent = text;
+        chatElement.appendChild(div);
+        scrollChatToBottom();
+        setTimeout(ensureScrolling, 50);
+      };
+
+      const clearCurrentOptions = () => {
+        if (currentOptionsContainer) {
+          currentOptionsContainer.innerHTML = "";
+          currentOptionsContainer = null;
+        }
+      };
+
+      const renderQuestionBlock = (question) => {
+        if (!question) return;
+        const last = chatElement.lastElementChild;
+        let previousContent = "";
+        let existingBox = null;
+        const hasUserMessage = chatElement.querySelector(".message.user");
+
+        // If there's a user message, always create a new question box (don't reuse)
+        if (hasUserMessage) {
+          // If last is an assistant message (reply), we can merge it with the question
+          if (last && last.classList.contains("message") && last.classList.contains("assistant")) {
+            previousContent = last.innerHTML;
+            last.remove();
+          }
+          // Otherwise, start fresh with just the question
+        } else if (last && last.classList.contains("question-box")) {
+          // Only reuse box if there's no user message (first question)
+          const textEl = last.querySelector(".question-box__text");
+          if (textEl) previousContent = textEl.innerHTML;
+          existingBox = last;
+        } else if (last && last.classList.contains("question-wrapper")) {
+          const textEl = last.querySelector(".message.assistant") || last.querySelector(".question-box__text");
+          if (textEl) previousContent = textEl.innerHTML;
+          last.remove();
+        }
+
+        // Remove section descriptions (e.g., "Section 1 – Research Activity Type: " or "Section 4 – How do you prefer to work?")
+        const cleanQuestionText = question.text.replace(/^Section\s+\d+\s*[–-]\s*[^?]*[?:]\s*/i, '');
+        
+        // Ensure we always have question content
+        const questionContent = (cleanQuestionText || question.text).replace(/\n/g, "<br />") +
+          (question.type === "multi"
+            ? "<br><span class='rating-chip'>You can select multiple options</span>"
+            : "");
+
+        const fullText = previousContent
+          ? previousContent + "<br><br>" + questionContent
+          : questionContent;
+
+        let textDiv, optionsContainer;
+
+        if (existingBox) {
+          textDiv = existingBox.querySelector(".question-box__text");
+          optionsContainer = existingBox.querySelector(".question-box__options");
+          if (textDiv) {
+            // Remove old options container if it exists
+            if (optionsContainer) {
+              optionsContainer.remove();
+            }
+            textDiv.innerHTML = fullText;
+          }
+        } else {
+          const box = document.createElement("div");
+          box.className = "question-box";
+          textDiv = document.createElement("div");
+          textDiv.className = "question-box__text";
+          textDiv.innerHTML = fullText;
+          box.appendChild(textDiv);
+          chatElement.appendChild(box);
+        }
+
+        // Create options container inside the text div
+        optionsContainer = document.createElement("div");
+        optionsContainer.className = "question-box__options options-block";
+        optionsContainer.classList.remove("options-block--multi", "options-block--priorities");
+        if (question.type === "multi") optionsContainer.classList.add("options-block--multi");
+        else if (question.type === "pickExactly3") optionsContainer.classList.add("options-block--priorities");
+        
+        textDiv.appendChild(optionsContainer);
+        currentOptionsContainer = optionsContainer;
+        renderOptions(question);
+        requestAnimationFrame(() => {
+          scrollChatToBottom();
+          ensureScrolling();
+        });
+      };
+
+      const getQuestionOptions = (question) => {
+        if (question.id === "projectTypeFollowUp" && context.projectTypeFollowUpOptions?.length)
+          return context.projectTypeFollowUpOptions;
+        if (question.id === "toolsFollowUp" && context.toolsFollowUpOptions?.length)
+          return context.toolsFollowUpOptions;
+        return question.options || [];
+      };
+
+      const renderOptions = (question) => {
+        if (!question || !currentOptionsContainer) return;
+        currentOptionsContainer.innerHTML = "";
+        const options = getQuestionOptions(question);
+        if (!options.length && question.type !== "pickExactly3") return;
+
+        if (question.type === "single") {
+          options.forEach((opt) => {
+            const btn = document.createElement("button");
+            btn.type = "button";
+            btn.className = "option-btn";
+            btn.textContent = opt.label;
+            btn.addEventListener("click", () => handleSingleSelection(question, opt));
+            currentOptionsContainer.appendChild(btn);
+          });
+        } else if (question.type === "multi") {
+          const form = document.createElement("form");
+          form.className = "multi-select";
+          options.forEach((opt, index) => {
+            const label = document.createElement("label");
+            const input = document.createElement("input");
+            input.type = "checkbox";
+            input.name = "multiOption";
+            input.value = index;
+            label.appendChild(input);
+            const span = document.createElement("span");
+            span.textContent = opt.label;
+            label.appendChild(span);
+            form.appendChild(label);
+          });
+
+          const submit = document.createElement("button");
+          submit.type = "button";
+          submit.className = "submit-btn";
+          submit.textContent = "Submit";
+          submit.addEventListener("click", () => handleMultiSelection(question));
+          currentOptionsContainer.appendChild(form);
+          currentOptionsContainer.appendChild(submit);
+        } else if (question.type === "pickExactly3") {
+          const form = document.createElement("form");
+          form.className = "multi-select pick-exactly-3";
+          const hint = document.createElement("p");
+          hint.className = "rating-chip";
+          hint.textContent = "Select exactly 3 that matter most to you";
+          hint.style.marginBottom = "10px";
+          currentOptionsContainer.appendChild(hint);
+          const allPriorityInputs = [];
+          options.forEach((opt, index) => {
+            const label = document.createElement("label");
+            const input = document.createElement("input");
+            input.type = "checkbox";
+            input.name = "priorityOption";
+            input.value = index;
+            allPriorityInputs.push(input);
+            const updateDisabled = () => {
+              const checked = allPriorityInputs.filter((i) => i.checked).length;
+              allPriorityInputs.forEach((i) => {
+                i.parentElement.style.opacity = i.checked || checked < 3 ? "1" : "0.5";
+                i.disabled = !i.checked && checked >= 3;
+              });
+            };
+            input.addEventListener("change", updateDisabled);
+            label.appendChild(input);
+            const span = document.createElement("span");
+            span.textContent = opt.label;
+            label.appendChild(span);
+            form.appendChild(label);
+          });
+          const submit = document.createElement("button");
+          submit.type = "button";
+          submit.className = "submit-btn";
+          submit.textContent = "Submit my 3 priorities";
+          submit.addEventListener("click", () => handlePickExactly3(question));
+          currentOptionsContainer.appendChild(form);
+          currentOptionsContainer.appendChild(submit);
+        }
+      };
+
+      const resolveNextQuestionId = (question, option) => {
+        const candidate = option?.next ?? question.next;
+        if (!candidate) {
+          return null;
+        }
+        if (candidate === "teachingStudents" && !context.isTeacher) {
+          return "funding";
+        }
+        return candidate;
+      };
+
+      const applyScores = (scoreObj) => {
+        if (!scoreObj) return;
+        Object.entries(scoreObj).forEach(([platform, value]) => {
+          if (!platforms.includes(platform)) return;
+          scores[platform] += value;
+        });
+      };
+
+      const nextQuestion = (nextId) => {
+        if (!nextId) {
+          if (currentQuestionId !== "summary") showSummary();
+          return;
+        }
+        currentQuestionId = nextId;
+        const question = questions.find((q) => q.id === nextId);
+        if (!question) {
+          showSummary();
+          return;
+        }
+        if (question.id === "teachingStudents" && !context.isTeacher) {
+          nextQuestion("funding");
+          return;
+        }
+        renderQuestionBlock(question);
+      };
+
+      const handleSingleSelection = (question, option) => {
+        appendUserMessage(option.label);
+        if (option.reply) {
+          appendAssistantMessage(
+            option.isLink ? `<span class="link-bubble">${option.reply}</span>` : option.reply
+          );
+        }
+        if (option.scores) applyScores(option.scores);
+        if (option.setContext) applyContext(option.setContext);
+        
+        // Conditional scoring: AI Cloud gets extra points if user has funding and needs >10TB
+        if (question.id === "dataVolume" && option.setContext?.dataVolume === "over10TB" && context.hasFunding === true && context.roleType === "researcher") {
+          applyScores({ "AI Cloud": 2 });
+        }
+        
+        answered.push(question.id);
+        if (option.final) {
+          clearCurrentOptions();
+          const restartBtn = document.createElement("div");
+          restartBtn.className = "restart";
+          restartBtn.textContent = "Restart the quiz";
+          restartBtn.onclick = restart;
+          chatElement.appendChild(restartBtn);
+          requestAnimationFrame(() => {
+            scrollChatToBottom();
+            ensureScrolling();
+          });
+          return;
+        }
+        clearCurrentOptions();
+        let nextId = resolveNextQuestionId(question, option);
+        if (question.id === "projectType" && option.followUpOptions?.length) {
+          context.projectTypeFollowUpOptions = option.followUpOptions;
+          nextId = "projectTypeFollowUp";
+        }
+        if (question.id === "tools" && option.followUpOptions?.length) {
+          context.toolsFollowUpOptions = option.followUpOptions;
+          nextId = "toolsFollowUp";
+        }
+        if (question.id === "projectTypeFollowUp") context.projectTypeFollowUpOptions = null;
+        if (question.id === "toolsFollowUp") context.toolsFollowUpOptions = null;
+        nextQuestion(nextId);
+      };
+
+      const handleMultiSelection = (question) => {
+        if (!currentOptionsContainer) return;
+        const options = getQuestionOptions(question);
+        const checked = [
+          ...currentOptionsContainer.querySelectorAll("input[name=multiOption]:checked"),
+        ];
+        if (checked.length === 0) {
+          alert("Please select at least one option.");
+          return;
+        }
+        const selectedLabels = [];
+        checked.forEach((checkbox) => {
+          const opt = options[parseInt(checkbox.value, 10)];
+          selectedLabels.push(opt.label);
+          if (opt.scores) applyScores(opt.scores);
+          if (opt.setContext) applyContext(opt.setContext);
+        });
+        appendUserMessage(selectedLabels.join(" | "));
+        answered.push(question.id);
+        clearCurrentOptions();
+        const nextId = resolveNextQuestionId(question);
+        nextQuestion(nextId);
+      };
+
+      const handlePickExactly3 = (question) => {
+        if (!currentOptionsContainer) return;
+        const options = getQuestionOptions(question);
+        const checked = [
+          ...currentOptionsContainer.querySelectorAll("input[name=priorityOption]:checked"),
+        ];
+        if (checked.length !== 3) {
+          alert("Please select exactly 3 options that matter most to you.");
+          return;
+        }
+        const selectedLabels = [];
+        const selectedIds = [];
+        checked.forEach((checkbox) => {
+          const opt = options[parseInt(checkbox.value, 10)];
+          selectedLabels.push(opt.label);
+          if (opt.id) selectedIds.push(opt.id);
+          if (opt.scores) applyScores(opt.scores);
+        });
+        context.priorities = selectedIds.length ? selectedIds : selectedLabels;
+        appendUserMessage(selectedLabels.join(", "));
+        answered.push(question.id);
+        clearCurrentOptions();
+        nextQuestion(question.next);
+      };
+
+      const dataLevelLimits = {
+        "AI-LAB": 1,
+        "AI Cloud": 1,
+        Strato: 1,
+        "External HPC": 1,
+        UCloud: 3,
+        TAAURUS: 3,
+      };
+      const sensitivePlatforms = new Set(["UCloud", "TAAURUS"]);
+
+      const supportsDataLevel = (platform) => {
+        const limit = dataLevelLimits[platform] ?? 1;
+        const level = context.dataLevel || 1;
+        if (level === 4) {
+          return {
+            allowed: false,
+            allowedReason: "",
+            blockReason:
+              "Level 4 data requires explicit approval — submit the IT Security form.",
+          };
+        }
+        if (level > limit) {
+          return {
+            allowed: false,
+            allowedReason: "",
+            blockReason: `Only UCloud/TAAURUS handle data above level ${limit}.`,
+          };
+        }
+        return {
+          allowed: true,
+          allowedReason: level > 1 ? "Designed for sensitive data" : "Standard data support",
+          blockReason: "",
+        };
+      };
+
+      const platformLinks = {
+        "AI-LAB": "https://hpc.aau.dk/ai-lab/",
+        "AI-LAB-how": "https://hpc.aau.dk/ai-lab/how-to-access/",
+        "AI Cloud": "https://hpc.aau.dk/ai-cloud/",
+        "AI Cloud-how": "https://hpc.aau.dk/ai-cloud/how-to-access/",
+        UCloud: "https://hpc.aau.dk/ucloud/",
+        "UCloud-how": "https://hpc.aau.dk/ucloud/how-to-access/",
+        Strato: "https://hpc.aau.dk/strato/",
+        "Strato-how": "https://hpc.aau.dk/strato/how-to-access/",
+        TAAURUS: "https://hpc.aau.dk/taaurus/",
+        "TAAURUS-how": "https://hpc.aau.dk/taaurus/how-to-access/",
+        "External HPC": "https://hpc.aau.dk/external-hpc/",
+      };
+
+      const platformRules = {
+        "AI-LAB": (ctx) => {
+        const dataRule = supportsDataLevel("AI-LAB");
+        if (!dataRule.allowed) return dataRule;
+          if (ctx.roleType === "researcher") {
+            return {
+              allowed: false,
+              allowedReason: "",
+              blockReason: "AI-LAB is reserved for students and teachers, not researchers.",
+            };
+          }
+          return {
+            allowed: true,
+            allowedReason:
+              "Student-friendly GPU cluster with unlimited GPU usage, ideal for coursework and smaller research projects. Uses containers and batch jobs via Linux/Terminal.",
+            blockReason: "Restricted to students/teachers, data level 1 only, ~7TB data guideline (more in edge cases), not for CPU processing or server hosting.",
+          };
+        },
+      "AI Cloud": (ctx) => {
+        const dataRule = supportsDataLevel("AI Cloud");
+        if (!dataRule.allowed) return dataRule;
+          if (ctx.roleType === "student") {
+            return {
+              allowed: false,
+              allowedReason: "",
+              blockReason: "AI Cloud is intended for researchers, not students.",
+            };
+          }
+          // If researcher has funding to buy hardware, AI Cloud is a good option
+          if (ctx.hasFunding === true) {
+            return {
+              allowed: true,
+              allowedReason:
+                "Research-grade GPU cluster with unlimited GPU usage, well-suited for large AI workloads. Uses containers and batch jobs via Linux/Terminal. Can buy dedicated hardware for your project.",
+              blockReason: "Data level 1 only, max ~7TB data (more in edge cases), not for CPU processing or server hosting. Researchers only.",
+            };
+          }
+          return {
+            allowed: true,
+            allowedReason:
+              "Research-grade GPU cluster with unlimited GPU usage, well-suited for large AI workloads. Uses containers and batch jobs via Linux/Terminal.",
+            blockReason: "Data level 1 only, max ~7TB data (more in edge cases), not for CPU processing or server hosting. Researchers only.",
+          };
+        },
+        UCloud: () => ({
+          allowed: true,
+          allowedReason:
+            "GUI-based environment with web interface, supports data levels 1-3, wide range of apps (Jupyter, MATLAB, Whisper, VS Code). Great for interactive jobs. Can host servers (not full-time).",
+          blockReason: "Max 3TB data, limited GPU/CPU (need to apply), harder application process for sensitive data. Jobs killed after time limit.",
+        }),
+        Strato: (ctx) => {
+          const dataRule = supportsDataLevel("Strato");
+          if (!dataRule.allowed) return dataRule;
+          return {
+            allowed: true,
+            allowedReason:
+              "Custom virtual machines for bespoke software, services, and CPU-heavy pipelines. Can host servers. Instances won't be killed. ~7TB data guideline (more in edge cases). Possible GUI.",
+            blockReason: "Data level 1 only. Limited GPUs (need to apply for specific period), not unlimited like AI Cloud/AI-LAB.",
+          };
+        },
+        "External HPC": (ctx) => {
+          const dataRule = supportsDataLevel("External HPC");
+          if (!dataRule.allowed) return dataRule;
+          
+          // Check if user needs more than local platforms can provide
+          const needsMoreResources = 
+            ctx.dataVolume === "over10TB" ||
+            (ctx.gpuNeeded === "yes" && ctx.gpuScale === "supercomputing") ||
+            (ctx.cpuIntensive === "yes" && ctx.needsLargeScale);
+          
+          return {
+            allowed: true,
+            allowedReason:
+              "External HPC facilities (LUMI, Computerome, GenomeDK, Sophia) provide massive CPU/GPU scaling beyond local platforms. Perfect for large experiments, national grants, and when local platforms become too small. ~15TB data guideline.",
+            blockReason:
+              "Data level 1 only. Requires application for resources (DeiC/EuroHPC calls). Consider if you need more compute time/storage than local platforms or specific resource types not available locally.",
+          };
+        },
+        TAAURUS: (ctx) => {
+          if (ctx.roleType === "student") {
+            return {
+              allowed: false,
+              allowedReason: "",
+              blockReason: "TAAURUS is reserved for researchers and cannot be used by students.",
+            };
+          }
+          if (ctx.faculty !== "SUND") {
+            return {
+              allowed: false,
+              allowedReason: "",
+              blockReason: "Only SUND faculty may use TAAURUS.",
+            };
+          }
+          const dataRule = supportsDataLevel("TAAURUS");
+          if (!dataRule.allowed) return dataRule;
+          // If SUND researcher has funding to buy hardware, TAAURUS is a good option
+          if (ctx.hasFunding === true) {
+            return {
+              allowed: true,
+              allowedReason:
+                "Extra sensitive platform (servers at AAU, approved by security). Supports data levels 1-3. Unlimited GPU usage. GUI desktop with apps like RStudio, MATLAB, Stata. Can buy dedicated hardware for your project. Batch and interactive jobs.",
+              blockReason: "SUND faculty only, researchers only. ~5TB unpaid guideline (more can be charged). Harder access (GDPR registration + Data Management Plan). Not for server hosting.",
+            };
+          }
+          return {
+            allowed: true,
+              allowedReason:
+                "Extra sensitive platform (servers at AAU, approved by security). Supports data levels 1-3. Unlimited GPU usage. GUI desktop with apps like RStudio, MATLAB, Stata. Batch and interactive jobs.",
+            blockReason: "SUND faculty only, researchers only. ~5TB unpaid guideline (more can be charged). Harder access (GDPR registration + Data Management Plan). Not for server hosting.",
+          };
+        },
+      };
+
+      const evaluatePlatform = (platform) => {
+        const rule = platformRules[platform];
+        if (!rule) {
+          return {
+            allowed: true,
+            allowedReason: "General HPC option available for diverse workloads.",
+            blockReason: "",
+          };
+        }
+        return rule(context);
+      };
+
+      const iconFor = (level) => {
+        if (level === "ok") return "ok";
+        if (level === "warn") return "warn";
+        if (level === "no") return "no";
+        return "info";
+      };
+
+      const cleanText = (value) => value.replace(/,+\s*$/, "");
+
+      const makeLine = (iconKey, text, note) => {
+        const safeText = cleanText(text);
+        const safeNote = note ? cleanText(note) : "";
+        const key = typeof iconKey === "string" ? iconKey : iconFor(iconKey);
+        return `${key}\t${safeText}${safeNote ? ` (${safeNote})` : ""}`;
+      };
+
+      const listFromSet = (set) => {
+        if (!set || set.size === 0) return [];
+        return Array.from(set);
+      };
+
+      const buildLink = (platform) => {
+        const mainUrl = platformLinks[platform] || "";
+        const howUrl = platform === "External HPC" ? "" : (platformLinks[`${platform}-how`] || "");
+        if (!mainUrl) return "";
+        const parts = [];
+        parts.push(`<a href="${mainUrl}" target="_blank" rel="noreferrer" class="platform-link platform-link--about">Read more about ${platform}</a>`);
+        if (howUrl) {
+          parts.push(`<a href="${howUrl}" target="_blank" rel="noreferrer" class="platform-link platform-link--access">How to access</a>`);
+        }
+        return ` <span class="platform-links">${parts.join("")}</span>`;
+      };
+
+      const featureLines = (platform, evaluation, allEvaluations) => {
+        const lines = [];
+        const maxScore = Math.max(...allEvaluations.map(e => e.score));
+        const platformScore = evaluation.score;
+        
+        // Role analysis
+        const roleMismatch =
+          (platform === "AI-LAB" && context.roleType === "researcher") ||
+          (["AI Cloud", "TAAURUS"].includes(platform) && context.roleType === "student");
+        const roleScore = roleMismatch ? 0 : (context.roleType ? 1 : 0);
+        if (roleMismatch) {
+          lines.push(
+            makeLine(
+              iconFor("no"),
+              `Role restriction: ${platform === "AI-LAB" ? "Only for students/teachers" : "Only for researchers"}`,
+              "This platform doesn't match your role"
+            )
+          );
+        } else if (context.roleType) {
+          const roleMatch = platform === "AI-LAB" && (context.roleType === "student" || context.roleType === "teacher") ||
+                           ["AI Cloud", "TAAURUS"].includes(platform) && context.roleType === "researcher" ||
+                           ["UCloud", "Strato", "External HPC"].includes(platform);
+          lines.push(
+            makeLine(
+              iconFor(roleMatch ? "ok" : "warn"),
+              `Role match: ${context.roleType}`,
+              roleMatch ? "Your role aligns with this platform" : "Platform accepts your role but isn't optimized for it"
+            )
+          );
+        }
+
+        // Project type analysis - show which platforms excel at user's project type
+        if (context.projectTypes && context.projectTypes.length > 0) {
+          const projectType = context.projectTypes[0];
+          const projectStrengths = {
+            "deep learning": ["AI-LAB", "AI Cloud", "TAAURUS", "External HPC"],
+            "simulation": ["Strato", "UCloud", "TAAURUS", "External HPC"],
+            "collaboration": ["UCloud", "Strato", "TAAURUS"],
+            "transcription": ["UCloud"],
+            "cpu-heavy": ["Strato", "UCloud", "TAAURUS", "External HPC"],
+          };
+          const isStrongMatch = projectStrengths[projectType]?.includes(platform);
+          lines.push(
+            makeLine(
+              iconFor(isStrongMatch ? "ok" : "warn"),
+              `Project type "${projectType}": ${isStrongMatch ? "Strong match" : "Limited support"}`,
+              isStrongMatch 
+                ? "This platform specializes in this project type"
+                : `Better suited for: ${projectStrengths[projectType]?.join(", ") || "other platforms"}`
+            )
+          );
+        }
+
+        // Data classification - critical difference
+        const dataLevel = context.dataLevel || 1;
+        const sensitivePlatforms = new Set(["UCloud", "TAAURUS"]);
+        if (dataLevel >= 2) {
+          const supportsSensitive = sensitivePlatforms.has(platform);
+          lines.push(
+            makeLine(
+              iconFor(supportsSensitive ? "ok" : "no"),
+              `Sensitive data (Level ${dataLevel}): ${supportsSensitive ? "Supported" : "Not supported"}`,
+              supportsSensitive 
+                ? "This platform can handle your data classification"
+                : "Only UCloud/TAAURUS support Level 2+ data"
+            )
+          );
+        } else {
+          lines.push(
+            makeLine(
+              iconFor("ok"),
+              `Data classification: Level ${dataLevel}`,
+              "Standard data - all platforms support this"
+            )
+          );
+        }
+
+        // Data volume - show if platform is suited for user's volume
+        const dataVolume = context.dataVolume;
+        
+        if (dataVolume === "over10TB") {
+          // User needs more than 10TB
+          const supportsLargeVolume = ["External HPC", "TAAURUS"].includes(platform) ||
+            (platform === "AI Cloud" && context.hasFunding === true && context.roleType === "researcher");
+          
+          if (supportsLargeVolume) {
+            lines.push(
+              makeLine(
+                iconFor("ok"),
+                `Data volume (>10TB): Well-suited`,
+                platform === "AI Cloud"
+                  ? "AI Cloud can accommodate >10TB when you buy dedicated hardware for your project"
+                  : platform === "TAAURUS"
+                  ? "TAAURUS can handle >10TB (may have charges for amounts above ~5TB unpaid guideline)"
+                  : "External HPC facilities are ideal for large data volumes (~15TB guideline)"
+              )
+            );
+          } else {
+            lines.push(
+              makeLine(
+                iconFor("no"),
+                `Data volume (>10TB): Not suitable`,
+                "This platform's guideline is below 10TB. Consider External HPC, TAAURUS, or AI Cloud (if researcher with funding for hardware)"
+              )
+            );
+          }
+        } else if (dataVolume === "under10TB") {
+          // User needs less than 10TB - all platforms can handle this
+          lines.push(
+            makeLine(
+              iconFor("ok"),
+              `Data volume (<10TB): Suitable`,
+              "This platform can handle your data volume needs"
+            )
+          );
+        }
+
+        // GPU/Compute requirements - major scoring factor
+        const gpuNeed = context.gpuNeeded;
+        if (gpuNeed === "yes") {
+          const unlimitedGPUPlatforms = new Set(["AI-LAB", "AI Cloud", "TAAURUS"]);
+          const limitedGPUPlatforms = new Set(["UCloud", "Strato", "External HPC"]);
+          const hasUnlimitedGPU = unlimitedGPUPlatforms.has(platform);
+          const hasLimitedGPU = limitedGPUPlatforms.has(platform);
+          
+          if (hasUnlimitedGPU) {
+            lines.push(
+              makeLine(
+                iconFor("ok"),
+                `GPU requirement: Unlimited GPU access`,
+                "This platform provides unlimited GPU usage (may have queue wait time) - ideal for GPU-intensive work"
+              )
+            );
+          } else if (hasLimitedGPU) {
+            const limitation = platform === "UCloud" 
+              ? "Limited GPU (hard to get large GPUs, long wait times)"
+              : platform === "Strato"
+              ? "Limited GPUs (need to apply for specific period)"
+              : "Need to apply for GPU resources (not unlimited)";
+            lines.push(
+              makeLine(
+                iconFor("warn"),
+                `GPU requirement: Limited GPU access`,
+                limitation + ". For unlimited GPU, consider AI-LAB, AI Cloud, or TAAURUS"
+              )
+            );
+          } else {
+            lines.push(
+              makeLine(
+                iconFor("no"),
+                `GPU requirement: Not available`,
+                "This platform doesn't offer GPU - consider AI-LAB, AI Cloud, TAAURUS, UCloud, Strato, or External HPC"
+              )
+            );
+          }
+        } else if (gpuNeed === "no") {
+          const cpuPlatforms = new Set(["Strato", "UCloud", "TAAURUS", "External HPC"]);
+          const notForCPU = new Set(["AI-LAB", "AI Cloud"]);
+          const optimizedForCPU = cpuPlatforms.has(platform);
+          const notMeantForCPU = notForCPU.has(platform);
+          
+          if (optimizedForCPU) {
+            lines.push(
+              makeLine(
+                iconFor("ok"),
+                `CPU-focused workload: Well-suited`,
+                "This platform is designed for CPU-intensive tasks"
+              )
+            );
+          } else if (notMeantForCPU) {
+            lines.push(
+              makeLine(
+                iconFor("no"),
+                `CPU-focused workload: Not meant for CPU processing`,
+                "This platform is GPU-focused - consider Strato, UCloud, TAAURUS, or External HPC for CPU work"
+              )
+            );
+          } else {
+            lines.push(
+              makeLine(
+                iconFor("warn"),
+                `CPU-focused workload: Can handle but not specialized`,
+                "Platform works but Strato/UCloud/TAAURUS are better for CPU-heavy work"
+              )
+            );
+          }
+        }
+
+        // Priorities analysis - show how well platform matches user priorities
+        if (context.priorities && context.priorities.length > 0) {
+          const priorityMatches = [];
+          const priorityMismatches = [];
+          
+          if (context.priorities.includes("gpu")) {
+            if (["AI-LAB", "AI Cloud", "TAAURUS"].includes(platform)) {
+              priorityMatches.push("GPU power (unlimited)");
+            } else if (["UCloud", "Strato", "External HPC"].includes(platform)) {
+              priorityMatches.push("GPU power (limited)");
+            } else {
+              priorityMismatches.push("GPU power");
+            }
+          }
+          if (context.priorities.includes("cpu")) {
+            if (["Strato", "UCloud", "TAAURUS"].includes(platform)) {
+              priorityMatches.push("CPU power");
+            } else if (["AI-LAB", "AI Cloud"].includes(platform)) {
+              priorityMismatches.push("CPU power (not meant for CPU processing)");
+            } else {
+              priorityMismatches.push("CPU power");
+            }
+          }
+          if (context.priorities.includes("easy")) {
+            if (platform === "UCloud") {
+              priorityMatches.push("Easy to use");
+            } else {
+              priorityMismatches.push("Easy to use");
+            }
+          }
+          if (context.priorities.includes("sensitive")) {
+            if (["UCloud", "TAAURUS"].includes(platform)) {
+              priorityMatches.push("Sensitive data support");
+            } else {
+              priorityMismatches.push("Sensitive data support");
+            }
+          }
+          if (context.priorities.includes("scale")) {
+            if (platform === "External HPC") {
+              priorityMatches.push("Supercomputing scale");
+            } else {
+              priorityMismatches.push("Supercomputing scale");
+            }
+          }
+          if (context.priorities.includes("cost")) {
+            if (["AI-LAB", "UCloud"].includes(platform)) {
+              priorityMatches.push("Cost-effective/free tier");
+            } else {
+              priorityMismatches.push("Cost-effective/free tier");
+            }
+          }
+          if (context.priorities.includes("collab")) {
+            if (["UCloud", "Strato", "TAAURUS", "AI-LAB", "AI Cloud", "External HPC"].includes(platform)) {
+              priorityMatches.push("Collaboration tools (shared folders)");
+            } else {
+              priorityMismatches.push("Collaboration tools");
+            }
+          }
+          if (context.priorities.includes("control")) {
+            if (["Strato", "AI Cloud", "External HPC"].includes(platform)) {
+              priorityMatches.push("Custom software/full control");
+            } else {
+              priorityMismatches.push("Custom software/full control");
+            }
+          }
+          if (context.priorities.includes("hosting")) {
+            if (platform === "Strato") {
+              priorityMatches.push("Server hosting (full support)");
+            } else if (platform === "UCloud") {
+              priorityMatches.push("Server hosting (limited - not full-time)");
+            } else {
+              priorityMismatches.push("Server hosting (not supported)");
+            }
+          }
+
+          if (priorityMatches.length > 0) {
+            lines.push(
+              makeLine(
+                iconFor("ok"),
+                `Matches your priorities: ${priorityMatches.join(", ")}`,
+                "Strong alignment with what matters to you"
+              )
+            );
+          }
+          if (priorityMismatches.length > 0) {
+            lines.push(
+              makeLine(
+                iconFor("warn"),
+                `Doesn't match priorities: ${priorityMismatches.join(", ")}`,
+                "This platform lacks some features you prioritized"
+              )
+            );
+          }
+        }
+
+        // Workstyle match
+        const workstyle = context.workstyle;
+        if (workstyle) {
+          const workstyleMatch = 
+            (workstyle === "Jupyter" && ["UCloud", "External HPC"].includes(platform)) ||
+            (workstyle === "Terminal" && ["AI Cloud", "AI-LAB", "TAAURUS", "External HPC", "Strato"].includes(platform)) ||
+            (workstyle === "GUI" && ["UCloud", "Strato", "TAAURUS"].includes(platform)) ||
+            (workstyle === "Web" && ["Strato", "UCloud"].includes(platform));
+          const workstyleLabel = workstyle === "Jupyter" ? "JupyterLab/notebooks" : workstyle;
+          lines.push(
+            makeLine(
+              iconFor(workstyleMatch ? "ok" : "warn"),
+              `Workstyle "${workstyleLabel}": ${workstyleMatch ? "Native support" : "Available but not primary"}`,
+              workstyleMatch 
+                ? "This platform is optimized for your preferred workflow"
+                : "Platform supports this but may require more setup"
+            )
+          );
+        }
+
+        // Skill level match
+        const skill = context.skill;
+        if (skill === "Beginner" && platform !== "UCloud") {
+          lines.push(
+            makeLine(
+              iconFor("warn"),
+              `Skill level: Beginner-friendly`,
+              "UCloud is more beginner-friendly; this platform requires more technical knowledge"
+            )
+          );
+        } else if (skill === "Advanced" && platform === "UCloud") {
+          lines.push(
+            makeLine(
+              iconFor("warn"),
+              `Skill level: Advanced user`,
+              "You may prefer platforms with more control like AI Cloud or Strato"
+            )
+          );
+        }
+
+        // External HPC recommendation logic
+        if (platform === "External HPC") {
+          const needsMoreStorage = context.dataVolume === "over10TB";
+          const needsMoreCompute = context.priorities && context.priorities.includes("scale");
+          const needsSpecificResources = context.cpuIntensive === "yes" || (context.gpuNeeded === "yes" && platformScore > 0);
+          
+          if (needsMoreStorage || needsMoreCompute || needsSpecificResources) {
+            lines.push(
+              makeLine(
+                iconFor("ok"),
+                `External HPC recommendation: Strong match`,
+                "You need more compute time/storage than local platforms or specific resource types - External HPC (LUMI, Computerome, GenomeDK, Sophia) is ideal"
+              )
+            );
+          } else {
+            lines.push(
+              makeLine(
+                iconFor("warn"),
+                `External HPC recommendation: Consider if local platforms become insufficient`,
+                "External HPC provides massive CPU/GPU scaling. Consider if you need more resources than local platforms can provide or specific resource types not available locally"
+              )
+            );
+          }
+        }
+
+        return lines;
+      };
+
+      const showSummary = () => {
+        const evaluations = platforms.map((platform) => {
+          const rule = evaluatePlatform(platform);
+          const finalScore = scores[platform];
+          return {
+            platform,
+            allowed: rule.allowed,
+            allowedReason: rule.allowedReason,
+            blockReason: rule.blockReason,
+            score: finalScore,
+          };
+        });
+
+        const effectiveScore = (evaluation) =>
+          evaluation.allowed ? evaluation.score : evaluation.score * 0.1;
+        const effectiveValues = evaluations.map(effectiveScore);
+        const maxScore = Math.max(...effectiveValues);
+        const minScore = Math.min(...effectiveValues);
+        const calcPercent = (evaluation, effectiveVal) =>
+          maxScore === minScore
+            ? effectiveVal > 0
+              ? 100
+              : 0
+            : Math.round(
+                ((effectiveVal - minScore) / (maxScore - minScore || 1)) * 100
+              );
+
+        const recommended =
+          evaluations
+            .filter((e) => e.allowed && e.score > 0)
+            .sort((a, b) => b.score - a.score)[0] || evaluations[0];
+
+        const accordionItems = evaluations
+          .sort((a, b) => {
+            // First sort by allowed status (allowed platforms first)
+            if (a.allowed !== b.allowed) {
+              return (b.allowed ? 1 : 0) - (a.allowed ? 1 : 0);
+            }
+            // Then sort by effective score (higher effective score first)
+            const effA = effectiveScore(a);
+            const effB = effectiveScore(b);
+            return effB - effA;
+          })
+          .map(({ platform, allowed, allowedReason, blockReason, score }) => {
+            const eff = effectiveScore({ platform, allowed, score });
+            const percent = calcPercent({ platform, allowed, score }, eff);
+            const reason = allowed
+              ? allowedReason || "Fits your answers."
+              : blockReason || "Not recommended based on your answers.";
+            
+            return `
+              <details class="accordion${platform === recommended.platform ? " accordion--recommended" : ""}" ${platform === recommended.platform ? "open" : ""}>
+                <summary>
+                  <span>${platform}${platform === recommended.platform ? " (Recommended)" : ""}</span>
+                  <span>${percent}% fit</span>
+                </summary>
+                <div>
+                  <p>${reason}</p>
+                  <ul>
+                    ${featureLines(platform, { ...{ allowed }, score }, evaluations)
+                      .map((line) => {
+                        const tabIdx = line.indexOf("\t");
+                        if (tabIdx > 0) {
+                          const icon = line.slice(0, tabIdx);
+                          const text = line.slice(tabIdx + 1);
+                          const colonIdx = text.indexOf(":");
+                          const content = colonIdx >= 0
+                            ? `<span class="bullet-label">${text.slice(0, colonIdx)}</span>: ${text.slice(colonIdx + 1).trim()}`
+                            : text;
+                          return `<li class="accordion-bullet accordion-bullet--${icon}" data-icon="${icon}">${content}</li>`;
+                        }
+                        const colonIdx = line.indexOf(":");
+                        const content = colonIdx >= 0
+                          ? `<span class="bullet-label">${line.slice(0, colonIdx)}</span>: ${line.slice(colonIdx + 1).trim()}`
+                          : line;
+                        return `<li class="accordion-bullet">${content}</li>`;
+                      })
+                      .join("")}
+                  </ul>
+                  ${buildLink(platform)}
+                </div>
+              </details>
+            `;
+          })
+          .join("");
+
+        appendAssistantMessage(
+          `<strong>Summary:</strong><br />
+          <p>These percentages show how well each platform fits your answers. Expand each platform below to see detailed explanations of why it scored what it did.</p>
+          <p><strong>Understanding the differences:</strong> Each platform receives points based on how well your answers align with its specific strengths. The bullet points below show exactly where each platform matches or doesn't match your requirements, explaining why scores differ.</p>
+          <div class="legend">
+            <span class="legend-item"><span class="legend-icon legend-icon--ok"></span> Strong match – aligns well with your needs.</span>
+            <span class="legend-item"><span class="legend-icon legend-icon--warn"></span> Partial match – works but not ideal.</span>
+            <span class="legend-item"><span class="legend-icon legend-icon--no"></span> Doesn't match – missing key requirement.</span>
+          </div>
+          ${accordionItems}
+          <div class="restart" onclick="restart()">Restart the quiz</div>`
+        );
+        requestAnimationFrame(scrollChatToBottom);
+        clearCurrentOptions();
+      };
+
+      const restart = () => {
+        scores = resetScores();
+        currentQuestionId = null;
+        answered = [];
+        context.isTeacher = false;
+        context.roleType = null;
+        context.faculty = null;
+        context.hasFunding = null;
+        context.dataLevel = 1;
+        context.projectTypes = [];
+        context.gpuNeeded = null;
+        context.cpuWork = null;
+        context.dataVolume = null;
+        context.dataGrowth = null;
+        context.tools = new Set();
+        context.workstyle = null;
+        context.skill = null;
+        context.control = null;
+        context.teachingStudents = null;
+        context.teachingEnv = null;
+        context.teachingGui = null;
+        context.projectTypeFollowUpOptions = null;
+        context.toolsFollowUpOptions = null;
+        context.priorities = [];
+        clearCurrentOptions();
+        chatElement.innerHTML = "";
+        startQuiz();
+      };
+
+      const startQuiz = () => {
+        nextQuestion("help");
+        setTimeout(ensureScrolling, 200);
+      };
+
+      window.restart = restart;
+      startQuiz();
+    </script>
+  </body>
+</html>

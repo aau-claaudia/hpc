@@ -1,0 +1,753 @@
+{% extends "main.html" %}
+
+{% block header %}
+<header class="md-header md-header--shadow" data-md-component="header"></header>
+{% endblock %}
+
+{% block tabs %}{% endblock %}
+
+{% block container %}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<link rel="stylesheet" href="../stylesheets/hpc-cost-estimator.css">
+
+<div style="height: 100%; margin-top: 1rem;">
+  <div class="estimator-header">
+    <h1>Transcriber Calculator</h1>
+    <a href="#" class="d-inline-block" data-bs-toggle="tooltip" data-bs-placement="right"
+      data-bs-title="This tool helps you estimate the resource needs for your Transcriber project.">
+      <i class="bi bi-info-circle"></i>
+    </a>
+  </div>
+
+  <div style="display: flex; gap: 32px; margin-bottom: 36px; min-height: inherit;">
+    <!-- LEFT COLUMN -->
+    <div style="flex: 1; padding-bottom: 24px; position: relative; width: 640px;">
+      <div class="accordion shadow-sm" id="accordionExample">
+
+        <!-- PROJECT DURATION -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingDuration">
+            <button class="accordion-button" type="button" data-bs-target="#collapseDuration"
+              aria-expanded="true" aria-controls="collapseDuration">
+              Audio or video duration
+            </button>
+          </h2>
+          <div id="collapseDuration" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <div class="accordion-element">
+                <div class="item-title" style="margin-bottom: 5px;">
+                  <div>
+                    <h3>Duration</h3>
+                  </div>
+                </div>
+                <div class="item-description">
+                  <h4>Please enter the number of hours of audio or video that you would like to transcribe.</h4>
+                </div>
+                <div class="input-group mb-3 mt-3">
+                  <span class="input-group-text">Total duration</span>
+                  <input style="flex-basis: content;" type="number" class="form-control" id="storageInput" aria-label="storage" placeholder="0">
+                  <span class="input-group-text">hours</span>
+                </div>
+              </div>
+              <hr>
+              <div class="accordion-element">
+                <div class="item-title" style="margin-bottom: 5px;">
+                  <div>
+                    <h3>Storage</h3>
+                  </div>
+                </div>
+                <div class="item-description">
+                  <h4>Please enter the number of gigabytes (GB) of data that you need to store</h4>
+                  <a href="#" class="d-inline-block" data-bs-toggle="tooltip" data-bs-placement="right"
+                    data-bs-title="We will add 20% to make sure you have enough space to run the Transcriber application.">
+                    <i class="bi bi-info-circle"></i>
+                  </a>
+                </div>
+                <div class="input-group mb-3 mt-3">
+                  <span class="input-group-text">Total amount of storage</span>
+                  <input style="flex-basis: content;" type="number" class="form-control" id="storageInput" aria-label="storage" placeholder="0">
+                  <span class="input-group-text">GB</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> <!-- /accordion -->
+    </div>
+
+    <!-- RIGHT COLUMN (COST DETAILS) -->
+    <div style="flex: 0 0 380px; min-height: inherit;">
+      <div class="cost shadow-sm">
+        <div class="cost-details">
+          <div class="cost-header">
+            <div class="cost-header-element">
+              <i class="bi bi-filetype-pdf"></i>
+              <span class="print-txt" id="print-btn">Print to pdf</span>
+            </div>
+          </div>
+          <div class="cost-details-title">
+            <h2>Cost details</h2>
+            <select class="form-select" id="currencySelect" aria-label="Default select example" style="max-width: 100px;">
+              <option value="DKK" selected>DKK</option>
+              <option value="EUR">EUR</option>
+            </select>
+          </div>
+          <hr class="price-divider">
+          <div class="price-elements">
+            <!-- STORAGE COST DISPLAY -->
+            <div class="price-element">
+              <div class="price-content">
+                <div class="price-text">Storage</div>
+                <div class="price-value" id="storageCostDisplay"></div>
+              </div>
+            </div>
+
+            <!-- FRONT-END COST DISPLAY -->
+            <div class="price-element">
+              <div class="price-content">
+                <div class="price-text">Front-end</div>
+                <div class="price-value" id="frontEndCostDisplay"></div>
+              </div>
+            </div>
+
+            <!-- COMPUTE COST DISPLAY -->
+            <div class="price-element">
+              <div class="price-content">
+                <div class="price-text">Compute</div>
+                <div class="price-value" id="computeCostDisplay"></div>
+              </div>
+            </div>
+
+            <!-- DATA MANAGEMENT COST DISPLAY -->
+            <div class="price-element">
+              <div class="price-content">
+                <div class="price-text">Data management</div>
+                <div class="price-value" id="dataMgmtCostDisplay"></div>
+              </div>
+            </div>
+          </div>
+
+          
+          <!-- TOTAL COST DISPLAY -->
+          <hr class="price-divider">
+          <div class="cost-total">
+            <div class="cost-total-text">
+              <div class="price-text">Cost</div>
+              <div class="price-value" id="totalCostDisplay"></div>
+            </div>
+            <div class="cost-total-text">
+              <div class="price-text">Overhead (32%)</div>
+              <div class="price-value" id="overheadCostDisplay"></div>
+            </div>
+            <div class="cost-total-text">
+              <div style="color: rgb(32, 33, 36) !important; text-transform: uppercase;" class="price-text">Total</div>
+              <div style="color: rgb(32, 33, 36) !important;" class="price-value" id="totalCostWithOverheadDisplay"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> <!-- /Right column -->
+  </div>
+</div>
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    // Initialize Bootstrap tooltips
+    const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+    [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
+
+    document.getElementById('print-btn').addEventListener('click', () => {
+      window.print();
+    });
+
+    // Grab references
+    const durationMonthsInput = document.getElementById("durationMonthsInput");
+    const durationYearsInput = document.getElementById("durationYearsInput");
+
+    const storageInput = document.getElementById("storageInput");
+    const storageUnitSelect = document.getElementById("storageUnitSelect");
+
+    const frontEndSelect = document.getElementById("frontEndSelect");
+    const frontEndSelectLabel = document.getElementById("frontEndSelectLabel");
+
+    const cpuInput = document.getElementById("cpuInput");
+    const memoryInput = document.getElementById("memoryInput");
+    const gpuInput = document.getElementById("gpuInput");
+
+    const machinesInput = document.getElementById("machinesInput");
+    const computeHoursInput = document.getElementById("computeHoursInput");
+    const computeHoursSelect = document.getElementById("computeHoursSelect");
+
+    const dataMgmtHoursInput = document.getElementById("dataMgmtHoursInput");
+    const dataMgmtHoursSelect = document.getElementById("dataMgmtHoursSelect");
+
+    const storageCostDisplay = document.getElementById("storageCostDisplay");
+    const frontEndCostDisplay = document.getElementById("frontEndCostDisplay");
+    const computeCostDisplay = document.getElementById("computeCostDisplay");
+    const dataMgmtCostDisplay = document.getElementById("dataMgmtCostDisplay");
+    const totalCostDisplay = document.getElementById("totalCostDisplay");
+    const overheadCostDisplay = document.getElementById("overheadCostDisplay");
+    const totalCostWithOverheadDisplay = document.getElementById("totalCostWithOverheadDisplay");
+
+    const storagePrice = document.getElementById("storagePrice");
+    const cpuPrice = document.getElementById("cpuPrice");
+    const memoryPrice = document.getElementById("memoryPrice");
+    const gpuPrice = document.getElementById("gpuPrice");
+    const stewardPrice = document.getElementById("stewardPrice");
+
+    const currencySelect = document.getElementById("currencySelect");
+
+    // Pricelist from NGC: https://www.ngc.dk/forskning-og-internationalt-samarbejde/ngc-forskerservice
+    storageListedPrice = 750 // DKK/TB/year (backup included)
+    cpuListedPrice = 0.12 // DKK/CPU/hour
+    memoryListedPrice = 0.12/8 // DKK/GB/hour
+    gpuListedPrice = 6.00 // DKK/GPU/hour
+    datastewardListedPrice = 311.00 // DKK/hour
+
+    // Constants
+    const DKK_TO_EUR = 1 / 7.45;  // approximate
+
+    // Format a numeric amount with commas and 2 decimals
+    function formatNumber(num) {
+      return Number(num).toLocaleString("en-US", {
+        minimumFractionDigits: 2,
+        maximumFractionDigits: 2
+      });
+    }
+
+    // Convert cost in DKK to the chosen currency
+    function formatCurrency(dkkAmount) {
+      // Decide which currency is selected
+      const currency = currencySelect.value;  // "DKK" or "EUR"
+
+      // Convert from DKK to EUR if needed
+      let amount = dkkAmount;
+      if (currency === "EUR") {
+        amount *= DKK_TO_EUR;
+      }
+
+      // Convert to a nice string with commas and 2 decimals
+      const formattedNumber = Number(amount).toLocaleString("en-US", {
+        minimumFractionDigits: 2,
+        maximumFractionDigits: 2
+      });
+
+      // Append the correct currency label
+      return currency === "DKK" 
+        ? `kr.${formattedNumber}`
+        : `€${formattedNumber}`;
+    }
+
+    // Convert user “hours” input to total hours based on day/week/month/total
+    function computeTotalHours(userHours, periodSelect, durationMonths) {
+      let hours = parseFloat(userHours) || 0;
+      let months = parseFloat(durationMonths) || 0;
+
+      switch (periodSelect) {
+        case "per day":
+          return months * 31 * hours;
+        case "per week":
+          return months * 4.3 * hours;
+        case "per month":
+          return months * hours;
+        case "in total":
+          return hours;
+      }
+      return 0;
+    }
+
+    // Update all cost displays
+    function updateAllCosts() {
+      // Project duration in months
+      let durMonths = parseFloat(durationMonthsInput.value) || 0;
+      let durYears = parseFloat(durationYearsInput.value) || 0;
+
+      const durationMonths = durMonths + (durYears*12);
+
+      // ----- STORAGE COST -----
+      let storageAmount = parseFloat(storageInput.value) || 0;
+      let storageCost = 0;
+
+      if (storageUnitSelect.value === "TB") {
+        storageCost = storageAmount * (storageListedPrice / 12) * durationMonths;
+      } else {
+        storageCost = storageAmount * ((storageListedPrice/1000) / 12) * durationMonths;
+      }
+
+      // ----- FRONT-END COST -----
+      // default = (2 CPU * cpuListedPrice + 4 GB * memoryListedPrice) * 24h * 31d * months
+      // medium = (4 CPU * cpuListedPrice + 8 GB * memoryListedPrice) * 24h * 31d * months
+      // large = (8 CPU * cpuListedPrice + 16 GB * memoryListedPrice) * 24h * 31d * months
+      let frontEndType = frontEndSelect.value;
+      let frontEndCost = 0;
+      let hoursPerMonth = 24 * 31; // continuous usage each month
+
+      if (frontEndType === "default-frontend") {
+        frontEndCost =
+          (2 * cpuListedPrice * hoursPerMonth * durationMonths) +
+          (4 * memoryListedPrice * hoursPerMonth * durationMonths);
+          frontEndSelectLabel.textContent = "Default";
+      } else if (frontEndType === "medium-frontend") {
+        frontEndCost =
+          (4 * cpuListedPrice * hoursPerMonth * durationMonths) +
+          (8 * memoryListedPrice * hoursPerMonth * durationMonths);
+          frontEndSelectLabel.textContent = "Medium";
+      } else if (frontEndType === "large-frontend") {
+        frontEndCost =
+          (8 * cpuListedPrice * hoursPerMonth * durationMonths) +
+          (16 * memoryListedPrice * hoursPerMonth * durationMonths);
+          frontEndSelectLabel.textContent = "Large";
+      }
+
+      // ----- COMPUTE COST -----
+      // ((vCPUs*cpuListedPrice) + (memory*memoryListedPrice) + (GPUs*gpuListedPrice)) * machines * totalHours
+      let vcpus = parseFloat(cpuInput.value) || 0;
+      let mem = parseFloat(memoryInput.value) || 0;
+      let gpus = parseFloat(gpuInput.value) || 0;
+      let machines = parseFloat(machinesInput.value) || 0;
+      let totalComputeHours = computeTotalHours(computeHoursInput.value, computeHoursSelect.value, durationMonths);
+
+      let computeUnitCost = (vcpus * cpuListedPrice) + (mem * memoryListedPrice) + (gpus * gpuListedPrice);
+      let computeCost = computeUnitCost * machines * totalComputeHours;
+
+      // ----- DATA MANAGEMENT COST -----
+      // totalHours * (600000 / (160.33 * 12))
+      let dataMgmtTotalHours = computeTotalHours(dataMgmtHoursInput.value, dataMgmtHoursSelect.value, durationMonths);
+      let dataMgmtCost = dataMgmtTotalHours * datastewardListedPrice;
+
+      // ----- SUM ALL COSTS IN DKK -----
+      let totalCostDKK = storageCost + frontEndCost + computeCost + dataMgmtCost;
+
+      // ------ CALCULATE OVERHEAD -----
+      let overheadDKK = totalCostDKK * 0.32
+
+      // ------- TOTAL COST WITH OVERHEAD -----
+      let totalCostWithOverheadDKK = totalCostDKK + overheadDKK
+
+      // Update the individual displays in the correct currency
+      storageCostDisplay.textContent = formatCurrency(storageCost);
+      frontEndCostDisplay.textContent = formatCurrency(frontEndCost);
+      computeCostDisplay.textContent = formatCurrency(computeCost);
+      dataMgmtCostDisplay.textContent = formatCurrency(dataMgmtCost);
+      totalCostDisplay.textContent = formatCurrency(totalCostDKK);
+      overheadCostDisplay.textContent = formatCurrency(overheadDKK);
+      totalCostWithOverheadDisplay.textContent = formatCurrency(totalCostWithOverheadDKK);
+
+      storagePrice.textContent = formatCurrency(storageListedPrice);
+      cpuPrice.textContent = formatCurrency(cpuListedPrice);
+      memoryPrice.textContent = formatCurrency(memoryListedPrice);
+      gpuPrice.textContent = formatCurrency(gpuListedPrice);
+      stewardPrice.textContent = formatCurrency(datastewardListedPrice);
+
+    }
+
+    // Set up event listeners
+
+    // Project duration
+    durationMonthsInput.addEventListener("input", updateAllCosts);
+    durationYearsInput.addEventListener("input", updateAllCosts);
+
+    // Storage
+    storageInput.addEventListener("input", updateAllCosts);
+    storageUnitSelect.addEventListener("change", updateAllCosts);
+
+    // Front-end selection
+    frontEndSelect.addEventListener("change", updateAllCosts);
+
+    // Compute inputs
+    cpuInput.addEventListener("input", updateAllCosts);
+    memoryInput.addEventListener("input", updateAllCosts);
+    gpuInput.addEventListener("input", updateAllCosts);
+
+    // Machines, Compute hours & dropdown
+    machinesInput.addEventListener("input", updateAllCosts);
+    computeHoursInput.addEventListener("input", updateAllCosts);
+    computeHoursSelect.addEventListener("change", updateAllCosts);
+
+    // Data management
+    dataMgmtHoursInput.addEventListener("input", updateAllCosts);
+    dataMgmtHoursSelect.addEventListener("change", updateAllCosts);
+
+    // Currency switch
+    currencySelect.addEventListener("change", updateAllCosts);
+
+    // Initialize everything on load
+    updateAllCosts();
+
+    ////////////////////////////////////////////////////////////////////////////////
+    // MULTI-STEP QUIZ WIZARD
+    ////////////////////////////////////////////////////////////////////////////////
+    (function() {
+      // We store user answers in a small object
+      let answers = {
+        projectType: null,      // question 1
+        dataSize: null,         // question 2
+        jobLength: null,        // question 3
+        gpuNeeded: null,        // question 4
+        concurrency: null,      // question 5
+        realTimeNeeded: null,   // question 6
+        concurrentUsers: null,  // question 7
+        dailyHours: 0           // question 8
+      };
+
+      // STEP references
+      const step1 = document.getElementById("quizStep1");
+      const step2 = document.getElementById("quizStep2");
+      const step3 = document.getElementById("quizStep3");
+      const step4 = document.getElementById("quizStep4");
+      const step5 = document.getElementById("quizStep5");
+      const step6 = document.getElementById("quizStep6");
+      const step7 = document.getElementById("quizStep7");
+      const step8 = document.getElementById("quizStep8");
+      const stepSummary = document.getElementById("quizSummary");
+
+      // Buttons
+      const btnNext1   = document.getElementById("btnNext1");
+      const btnNext2   = document.getElementById("btnNext2");
+      const btnPrev2   = document.getElementById("btnPrev2");
+      const btnNext3   = document.getElementById("btnNext3");
+      const btnPrev3   = document.getElementById("btnPrev3");
+      const btnNext4   = document.getElementById("btnNext4");
+      const btnPrev4   = document.getElementById("btnPrev4");
+      const btnNext5   = document.getElementById("btnNext5");
+      const btnPrev5   = document.getElementById("btnPrev5");
+      const btnNext6   = document.getElementById("btnNext6");
+      const btnPrev6   = document.getElementById("btnPrev6");
+      const btnNext7   = document.getElementById("btnNext7");
+      const btnPrev7   = document.getElementById("btnPrev7");
+      const btnNext8   = document.getElementById("btnShowSummary");
+      const btnPrev8   = document.getElementById("btnPrev8");
+
+      const quizSummaryText = document.getElementById("quizSummaryText");
+      const btnCancelQuiz   = document.getElementById("btnCancelQuiz");
+      const btnApplyQuiz    = document.getElementById("applyQuizBtn");
+
+      const quizComputeHours = document.getElementById("quizComputeHours");
+
+      // A helper to get a radio value by name
+      function getRadioValue(name) {
+        const radios = document.getElementsByName(name);
+        for (let i = 0; i < radios.length; i++) {
+          if (radios[i].checked) return radios[i].value;
+        }
+        return null;
+      }
+
+      // A helper to show/hide steps
+      function showStep(current, next) {
+        current.style.display = "none";
+        next.style.display    = "block";
+      }
+
+      //////////////////////////////////////////////////////////////////////////
+      // STEP-BY-STEP NAVIGATION
+      //////////////////////////////////////////////////////////////////////////
+
+      // Step 1 -> Step 2
+      btnNext1.addEventListener("click", function() {
+        const val = getRadioValue("questionProjectType");
+        if (!val) {
+          alert("Please select an answer to continue.");
+          return;
+        }
+        answers.projectType = val;
+        showStep(step1, step2);
+      });
+
+      // Step 2 -> Next or Back
+      btnNext2.addEventListener("click", function() {
+        const val = getRadioValue("questionDataSize");
+        if (!val) {
+          alert("Please select an answer to continue.");
+          return;
+        }
+        // If "dontknow", we default to "small"
+        answers.dataSize = (val === "dontknow") ? "small" : val;
+        showStep(step2, step3);
+      });
+      btnPrev2.addEventListener("click", function() {
+        showStep(step2, step1);
+      });
+
+      // Step 3 -> Next or Back
+      btnNext3.addEventListener("click", function() {
+        const val = getRadioValue("questionJobLength");
+        if (!val) {
+          alert("Please select an answer to continue.");
+          return;
+        }
+        // If "dontknow", default to "short"
+        answers.jobLength = (val === "dontknow") ? "short" : val;
+        showStep(step3, step4);
+      });
+      btnPrev3.addEventListener("click", function() {
+        showStep(step3, step2);
+      });
+
+      // Step 4 -> Next or Back
+      btnNext4.addEventListener("click", function() {
+        const val = getRadioValue("questionGpuNeeded");
+        if (!val) {
+          alert("Please select an answer to continue.");
+          return;
+        }
+        // If "dontknow", default to "no" (CPU-only)
+        answers.gpuNeeded = (val === "dontknow") ? "no" : val;
+        showStep(step4, step5);
+      });
+      btnPrev4.addEventListener("click", function() {
+        showStep(step4, step3);
+      });
+
+      // Step 5 -> Next or Back
+      btnNext5.addEventListener("click", function() {
+        const val = getRadioValue("questionConcurrency");
+        if (!val) {
+          alert("Please select an answer to continue.");
+          return;
+        }
+        // If "dontknow", default to "no" (single machine)
+        answers.concurrency = (val === "dontknow") ? "no" : val;
+        showStep(step5, step6);
+      });
+      btnPrev5.addEventListener("click", function() {
+        showStep(step5, step4);
+      });
+
+      // Step 6 -> Next or Back
+      btnNext6.addEventListener("click", function() {
+        const val = getRadioValue("questionRealTime");
+        if (!val) {
+          alert("Please select an answer to continue.");
+          return;
+        }
+        // If "dontknow", default to "yes" (interactive)
+        answers.realTimeNeeded = (val === "dontknow") ? "yes" : val;
+        showStep(step6, step7);
+      });
+      btnPrev6.addEventListener("click", function() {
+        showStep(step6, step5);
+      });
+
+      // Step 7 -> Next or Back
+      btnNext7.addEventListener("click", function() {
+        const val = getRadioValue("questionConcurrentUsers");
+        if (!val) {
+          alert("Please select an answer to continue.");
+          return;
+        }
+        answers.concurrentUsers = val;
+        showStep(step7, step8);
+      });
+      btnPrev7.addEventListener("click", function() {
+        showStep(step7, step6);
+      });
+
+      // Step 8 -> Show Summary or Back
+      btnNext8.addEventListener("click", function() {
+        // daily hours
+        const dh = parseFloat(quizComputeHours.value) || 0;
+        answers.dailyHours = dh;
+
+        // Move to summary
+        showStep(step8, stepSummary);
+
+        // Now compute recommended HPC config so we can display it
+        const { recommendedVCPUs, recommendedMemoryGB, recommendedGPUs, recommendedMachines } 
+          = computeRecommendation(answers);
+
+        // Fill the summary text
+        const summary = 
+          `For your project, we estimate:\n\n` +
+          `- vCPUs: ${recommendedVCPUs}\n` +
+          `- Memory (GB): ${recommendedMemoryGB}\n` +
+          `- GPUs: ${recommendedGPUs}\n` +
+          `- Number of machines: ${recommendedMachines}\n` +
+          `- Daily usage hours: ${dh}\n\n` +
+          `Click "Apply Settings" to use these values, or "Cancel" to discard.`;
+
+        quizSummaryText.textContent = summary;
+      });
+      btnPrev8.addEventListener("click", function() {
+        showStep(step8, step7);
+      });
+
+      // CANCEL
+      btnCancelQuiz.addEventListener("click", function() {
+        resetWizard();
+      });
+
+      // APPLY SETTINGS
+      btnApplyQuiz.addEventListener("click", function() {
+        // Actually set the HPC form
+        const { recommendedVCPUs, recommendedMemoryGB, recommendedGPUs, recommendedMachines } 
+          = computeRecommendation(answers);
+
+        // 1) daily usage => "per day"
+        computeHoursSelect.value = "per day";
+        computeHoursInput.value  = answers.dailyHours.toString();
+
+        // 2) Inputs
+        cpuInput.value = recommendedVCPUs;
+        memoryInput.value = recommendedMemoryGB;
+        gpuInput.value = recommendedGPUs;
+
+        machinesInput.value = recommendedMachines;
+
+        // 3) Trigger cost update
+        updateAllCosts();
+
+        // For convenience, you might also close the dropdown:
+        const quizForm = document.getElementById("quizForm");
+        quizForm.classList.remove("show");
+
+        resetWizard();
+      });
+
+      //////////////////////////////////////////////////////////////////////////
+      // HPC RECOMMENDATION LOGIC
+      //////////////////////////////////////////////////////////////////////////
+      function computeRecommendation(a) {
+        // a = { projectType, dataSize, jobLength, gpuNeeded, concurrency, realTimeNeeded, concurrentUsers, dailyHours }
+        let recommendedVCPUs     = 4;
+        let recommendedMemoryGB = 8;
+        let recommendedGPUs      = 0;
+        let recommendedMachines  = 1;
+
+        // -- Project type
+        switch (a.projectType) {
+          case "ml-ai":
+            recommendedVCPUs     = 8;
+            recommendedMemoryGB = 32;
+            break;
+          case "data-analysis":
+            recommendedVCPUs     = 8;
+            recommendedMemoryGB = 16;
+            break;
+          case "simulations":
+            recommendedVCPUs     = 16;
+            recommendedMemoryGB = 64;
+            break;
+          case "general":
+            recommendedVCPUs     = 4;
+            recommendedMemoryGB = 8;
+            break;
+        }
+
+        // -- Data size
+        switch (a.dataSize) {
+          case "medium":
+            recommendedMemoryGB = Math.max(recommendedMemoryGB, 16);
+            break;
+          case "large":
+            recommendedMemoryGB = Math.max(recommendedMemoryGB, 32);
+            break;
+          case "massive":
+            recommendedMemoryGB = Math.max(recommendedMemoryGB, 64);
+            break;
+          // "small" => do nothing
+        }
+
+        // -- Job length
+        if (a.jobLength === "medium") {
+          recommendedVCPUs     = Math.max(recommendedVCPUs, 8);
+          recommendedMemoryGB = Math.max(recommendedMemoryGB, 16);
+        } else if (a.jobLength === "long") {
+          recommendedVCPUs     = Math.max(recommendedVCPUs, 16);
+          recommendedMemoryGB = Math.max(recommendedMemoryGB, 32);
+        }
+        // "short" => do nothing
+
+        // -- GPU usage
+        if (a.gpuNeeded === "yes") {
+          recommendedGPUs = (a.projectType === "ml-ai") ? 2 : 1;
+        }
+        // "no" => do nothing
+
+        // -- Parallelism
+        if (a.concurrency === "yes") {
+          if (a.projectType === "simulations") {
+            recommendedMachines = 8;
+          } else if (a.projectType === "data-analysis" || a.projectType === "ml-ai") {
+            recommendedMachines = 4;
+          } else {
+            recommendedMachines = 2;
+          }
+        }
+        // "no" => do nothing
+
+        // -- Real-time
+        if (a.realTimeNeeded === "yes") {
+          recommendedVCPUs += 4;
+        }
+        // "no" => do nothing
+
+        // -- Concurrent users
+        if (a.concurrentUsers === "small") {
+          recommendedMachines = Math.max(recommendedMachines, 2);
+          recommendedVCPUs    = Math.max(recommendedVCPUs, 8);
+        } else if (a.concurrentUsers === "large") {
+          recommendedMachines  = Math.max(recommendedMachines, 4);
+          recommendedVCPUs     = Math.max(recommendedVCPUs, 16);
+          recommendedMemoryGB = Math.max(recommendedMemoryGB, 32);
+        }
+        // "1" => do nothing
+
+        return { recommendedVCPUs, recommendedMemoryGB, recommendedGPUs, recommendedMachines };
+      }
+
+      function resetWizard() {
+        // 1) Hide all steps
+        step1.style.display      = "none";
+        step2.style.display      = "none";
+        step3.style.display      = "none";
+        step4.style.display      = "none";
+        step5.style.display      = "none";
+        step6.style.display      = "none";
+        step7.style.display      = "none";
+        step8.style.display      = "none";
+        stepSummary.style.display= "none";
+
+        // 2) Show the first step again
+        step1.style.display = "block";
+
+        // 3) Clear all radio-button selections
+        const radios = quizForm.querySelectorAll('input[type="radio"]');
+        radios.forEach(radio => {
+          radio.checked = false;
+        });
+
+        // 4) Clear daily hours
+        quizComputeHours.value = "";
+
+        // 5) Optionally close the dropdown:
+        //    If you want to close the dropdown after Apply or Cancel, remove the "show" class:
+        quizForm.classList.remove("show");
+
+        // You could also reset your `answers` object if you keep it in a higher scope
+        answers = {
+          projectType: null,     
+          dataSize: null,        
+          jobLength: null,       
+          gpuNeeded: null,       
+          concurrency: null,     
+          realTimeNeeded: null,  
+          concurrentUsers: null, 
+          dailyHours: 0          
+        };
+      }
+
+
+    })();
+
+  });
+
+  
+</script>
+{% endblock %}
