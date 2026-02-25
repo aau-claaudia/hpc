@@ -5,11 +5,11 @@ Practice creating and submitting batch scripts.
 ---
 
 
-1. Use `nano` text editor (or any other if you're an experienced Linux user) to open the script `run.sh` that already exist in the workshop directory.
+1. Use `micro` text editor (or any other if you're an experienced Linux user) to open the script `run.sh` that already exist in the workshop directory.
 
     ??? info "Hint"
         ```bash
-        nano run.sh
+        micro run.sh
         ```
 
 2. In the bottom of the script, add:
@@ -18,7 +18,7 @@ Practice creating and submitting batch scripts.
       python3 simple_script.py
       ```
    
-3. Save it by hitting `CTRL + O`, then hit Enter to confirm the name and changes, and then `CTRL + X` to exit nano.
+3. Save it by hitting `CTRL + S` and then `CTRL + Q` to exit nano.
 
 
 4. Submit the job using `sbatch`
