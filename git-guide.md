@@ -27,16 +27,37 @@ git pull
 
 ## Create a new branch and switch over to it
 
-```bash
-git checkout -b newbranchname
+### Naming conventions
+
+The name should follow the following structure:
+
 ```
+[change-type]_[change-name-separated-by-dashes]
+```
+
+#### Change type options
+1. feature
+2. update
+3. bugfix
+4. duplicate
+
+
+
+### creating a new branch
+
+```bash
+git checkout -b change-type_new-branch-name (outdated)
+git switch -c changetype_new-branch-name
+```
+
 Alternatively, you can do this after using the longhand option
 
 ```bash
-git branch newbranchname
-git checkout newbranchname
-```
+git switch change-type_new-branch-name
 
+git branch change-type_new-branch-name
+git checkout change-type_new-branch-name (outdated)
+```
 
 For now everything will exist on only on a local branch. 
 
@@ -93,9 +114,18 @@ Once the branch has been created, remember to push it to the web and set the ori
 This will allow you to see the branch on the web.
 
 ```bash
-git push --set-upstream origin newbranchname
+git push --set-upstream origin change-type_new-branch-name
 ```
 This will change the origin from which you pull existing changes and push changes to, thus `git pull` will no longer result in an update of the branch from the `main`branch.
+
+### For GitLab 
+In the GitLab environment you may have defined the upstream origin differently, and when pushing your branch up to the web server, you must provide the same names as you define locally.
+
+For example, if your gitlab online repo was defined as `gitlab` rather than `origin`, which would otherwise be the default for GitHub you should push your new branch, for example `update_documentation-improvements` up to the server with:
+
+```bash
+git push --set-upstream gitlab update_documentation-improvements
+```
 
 ## Git fetch main branch and merge with local (remote) version
 
@@ -106,16 +136,16 @@ This step is optional and is only really necessary if there are multiple people 
 git branch
 
 # Switch to the branch you want to update (if you are not already there)
-git checkout newbranchname      # gets you "on branch newbranchname"
+git checkout change-type_new-branch-name      # gets you "on branch change-type_new-branch-name"
 
 # Fetch the latest version of the branch you are on
-git fetch origin        # gets you up to date with origin
+git fetch origin        # gets you up to date with remote origin
 
 # Merge in the latest 
 git merge origin/main -m "write_a_good_commit_message_for_why_you_want_to_merge_the_new_main_branch"
 ```
 
-Following this you will need to commit all of the modifications made to the main branch, into your new branch.
+Following this you will need to commit all of the modifications made, into your new branch.
 
 ```bash
 git status
@@ -127,7 +157,7 @@ git commit -m "All files merged from main branch back into remote branch committ
 git merge origin/main -m "write_a_good_commit_message_for_why_you_want_to_merge_the_new_main_branch"
 ```
 
-It is also recommended to switch back to your remote "main" branch (i.e. the one on your local machine) and update that with a `git pull`.
+It is also recommended to switch back to your local "main" branch (i.e. the one on your local machine) and update that with a `git pull`.
 
 ```bash
 git checkout main
@@ -204,7 +234,7 @@ Current internal processes are that pull requests do not require a review before
 
 Once the pull request has been merged, there is a button available to delete the branch.
 
-*If you miss this opportunity, then you find and delete the branch from the repo.*
+*If you miss this opportunity, then you find and delete the branch from the GitHub repo.*
 
 1. Return to the [hpc page repo](https://github.com/aau-claaudia/hpc/).
 2. Click on the [branches](https://github.com/aau-claaudia/hpc/branches) button under the [Code tab](https://github.com/aau-claaudia/hpc).

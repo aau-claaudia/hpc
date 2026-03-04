@@ -15,14 +15,14 @@
         cd ~/workshop
         ```
 
-3. Run the script `simple_script.py` with `python3` using `srun`
+3. Run the script `simple_script.py` with `python3` using `srun -u`
 
     ??? info "Hint"
         ```bash
-        srun python3 simple_script.py
+        srun -u python3 simple_script.py
         ```
 
-4. Wait ~30 seconds and you should get:
+4. ...and you should get:
 
 ```
 ...

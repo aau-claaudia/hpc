@@ -10,11 +10,11 @@ We enforce a standard quota which allows each user to run 12 simultaneous jobs, 
 ## Beyond the default quota
 Once you have submitted the maximum number of jobs allowed by the default quota, you can launch additional jobs in other access modes:
 
-| Name          | Additional max jobs  | Additional max GPU's    |  Access requirement    | Special notes          |
-| ---           | ---                  | ---                     |  ---                   | ---                    | 
-| Deadline      | 12                  | 12                     |  Approved applicants   | [Requires application](https://aau.service-now.com/serviceportal?id=sc_cat_item&sys_id=22a816638322be5053711d447daad379)   |
-| Unprivileged  | Infinite            | Infinite               |  None                  | Jobs are preemptible   |
-| AI Centre     | Infinite            | Infinite               |  AI Center affiliation | -                      |
+| Name          | Additional jobs  | Additional GPU's  |  Access requirement     | Special notes          |
+| ---           | ---              | ---               |  ---                    | ---                    | 
+| Deadline      | 12               | 12                |  Approved applicants    | [Requires application](https://aau.service-now.com/serviceportal?id=sc_cat_item&sys_id=22a816638322be5053711d447daad379)  |
+| Unprivileged  | Infinite         | Infinite          |  None                   | Jobs are preemptible   |
+| AI Centre     | Infinite         | Infinite          |  AI Center affiliation  | -                      |
 
 
 #### Deadline access
