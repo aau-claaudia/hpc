@@ -73,6 +73,7 @@ nav:
       - System overview: ai-cloud/system-overview.md
       - Terms and Conditions: ai-cloud/terms-and-conditions.md
       - Fair usage: ai-cloud/fair-usage.md
+      - Resource quotas: ai-cloud/resource-quotas.md
       - Guides:
           - Getting started:
               - Prerequisites: ai-cloud/getting-started/index.md
@@ -82,7 +83,6 @@ nav:
               - Container images: ai-cloud/getting-started/container-images.md
               - Run jobs: ai-cloud/getting-started/run-jobs.md
           - Additional guides:
-              - Additional resources: ai-cloud/additional-guides/additional-resources.md 
               - Using the Linux CLI:
                   - Understanding the Linux CLI: ai-cloud/additional-guides/understanding-linux-cli.md
                   - Edit text files with Nano: ai-cloud/additional-guides/edit-text-files-with-nano.md
@@ -94,15 +94,21 @@ nav:
                   - Creating a virtual environment: ai-cloud/additional-guides/creating-a-virtual-environment.md
                   # - Creating a Conda environment: ai-cloud/additional-guides/creating-a-conda-environment.md
               - Running jobs:
+                  - Run jobs beyond the default quota: ai-cloud/additional-guides/run-jobs-beyond-the-default-qota.md
+                  - Run jobs on proprietary nodes: ai-cloud/additional-guides/run-jobs-on-proprietary-nodes.md
+                  - Setting a time limit: ai-cloud/additional-guides/setting-a-time-limit.md
+                  - Cancelling jobs: ai-cloud/additional-guides/cancelling-jobs.md
                   - Multiple GPUs with PyTorch: ai-cloud/additional-guides/multiple-gpus-with-pytorch.md
                   - Checkpointing: ai-cloud/additional-guides/checkpointing.md
                   - CPU, GPU, and memory allocation: ai-cloud/additional-guides/cpu-gpu-and-memory-allocation.md
-                  - Setting a time limit: ai-cloud/additional-guides/setting-a-time-limit.md
-                  - Cancelling jobs: ai-cloud/additional-guides/cancelling-jobs.md
-              - Monitoring commands:
+              - Monitoring jobs:
                   - Checking the queue: ai-cloud/additional-guides/checking-the-queue.md
                   - Checking the status of compute nodes: ai-cloud/additional-guides/checking-the-status-of-compute-nodes.md
                   - Checking GPU utilisation: ai-cloud/additional-guides/checking-gpu-utilisation.md
+              - Learn the Linux CLI:
+                  - Understanding the Linux CLI: ai-cloud/additional-guides/understanding-linux-cli.md
+                  - Useful commands: ai-cloud/additional-guides/useful-commands.md
+                  - Edit text files with Nano: ai-cloud/additional-guides/edit-text-files-with-nano.md
               - Application examples:
                   - Batch LLM Inference: ai-cloud/additional-guides/batch-llm-inference.md
 
@@ -153,6 +159,7 @@ nav:
   - TAAURUS:
       - About TAAURUS: taaurus/index.md
       - How to access: taaurus/how-to-access.md
+      - Try TAAURUS: taaurus/try-taaurus.md
       - System overview: taaurus/system-overview.md
       - Terms and Conditions: https://serviceportal.aau.dk/now/nav/ui/classic/params/target/kb_view.do%3Fsys_kb_id%3D7de0759b83783650e1c9f665eeaad396%26sysparm_rank%3D2%26sysparm_tsqueryId%3D09f45a0d8355f290e1c9f665eeaad392
       - Guides:
@@ -254,3 +261,4 @@ extra:
 extra_watch:
   - docs/overrides/home.html
   - docs/overrides/hpc-decision-tree.html
+  - docs/overrides/hpc-decision-tree-v2.html

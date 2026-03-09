@@ -140,22 +140,16 @@ Another important difference has to do with the robustness of your job. If it's 
 
   * `srun` is best suited for when you are testing and you want the command output to be printed directly in the console.
   * `sbatch` is best suited for long-running unmaintained jobs.
-
-Our recommendation: Try to use `sbatch` as much as possible.
-
-
-!!! tip "Check GPU utilisation"
-
-    Read our page [Additional Guides > Check GPU utilisation](/ai-cloud/additional-guides/checking-gpu-utilisation/) to learn how to check how well your job is utilising the GPU's.
-
-!!! warning "Don't launch jobs from within interactive sessions"
-
-    It is not very good practice to start your jobs from within interactive shell sessions (using `srun --pty`), as this will start that runs until it reaches the time limit in the (6 days in the prioritized partition) - <u>not</u> when the actual job is finished. As a consequence the resources allocated to the job will be occupied for longer than needed.
-
-    As stated in our [Fair usage](/ai-cloud/fair-usage/)-section, we want to encourage our users to be mindful of their resource consumption for the sake of their fellow researchers, and not occupy ressources that others could have put to use.
+  * Our recomendation is clear - try to use `sbatch` as much as possible.
 
 <hr>
 
 **:material-party-popper: Congratulations! :material-party-popper:**
 
-You've mastered the fundamentals of AI Cloud! Do check our additional guides for more, or reach out to us at [serviceportal.aau.dk](serviceportal.aau.dk) if you are having any issues.
+You've mastered the fundamentals of AI Cloud!
+
+* Make sure to find our pages in the "Additional Guides" (look in the menu on the left) to learn more about running jobs.
+* Do also make sure to respect our rules and recomendations on [Fair Usage](ai-cloud/fair-usage/).
+* Don't forget that you are always welcome to reach out to us at [serviceportal.aau.dk](serviceportal.aau.dk) if you encounter any issues, or if you just need help getting started.
+
+<hr>

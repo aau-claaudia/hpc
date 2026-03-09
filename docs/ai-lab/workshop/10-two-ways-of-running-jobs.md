@@ -9,10 +9,12 @@ You can run compute tasks in two main ways on AI-LAB: **interactive (srun)** or 
 Runs immediately in your terminal session.
 
 ```bash
-srun --job-name=hello echo "Hello from compute node"
+srun -u echo "Hello from compute node"
 ```
 
 Use for quick tests or debugging.
+
+`-u` forces srun to print outputs immediately
 
 ---
 
@@ -22,8 +24,6 @@ Submit a script to run in the background.
 
 ```bash title="run.sh"
 #!/bin/bash
-#SBATCH --job-name=hello
-#SBATCH --output=hello.out
 echo "Hello from compute node"
 ```
 
