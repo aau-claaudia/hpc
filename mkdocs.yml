@@ -50,6 +50,7 @@ nav:
       - Terms and Conditions: ucloud/terms-and-conditions.md
       - External collaborators: ucloud/external-collaborator.md
       - Providers: ucloud/providers.md
+      - SDU Datacenter Migration: ucloud/sdu-datacenter-migration.md
       - Guides:
           - Getting started:
               - Before you begin: ucloud/guides/getting-started/before-you-begin.md
