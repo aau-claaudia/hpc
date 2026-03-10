@@ -1,5 +1,7 @@
 # UCloud
 
+
+
 <div class="tag-container">
     <div class="tag-item">
         <div class="tag">Researchers<i class="bi bi-check-lg"></i></div>
@@ -54,6 +56,13 @@
         <div class="tooltip">This platform is not designed for long term storage of research data.</div>
     </div>
 </div>
+
+
+!!! info "Upcoming migration to new SDU datacenter"
+    UCloud is moving to a new SDU datacenter. If you have data in the **AAU/K8s** or **AAU/VM** providers, you will need to transfer it to **SDU/K8s** before the migration deadline.  
+    
+    * Read the step-by-step **AAU/K8s / AAU/VM migration guide** :octicons-arrow-right-16: [SDU Datacenter Migration](/ucloud/sdu-datacenter-migration/).  
+    * See the full, technical description from SDU :octicons-arrow-right-16: [New SDU Datacenter](https://docs.cloud.sdu.dk/intro/new_datacenter.html#sphx-glr-new-datacenter).
 
 ## Introduction
 
