@@ -54,19 +54,6 @@ Find the most suitable system for your project. You can also complete the [HPC D
 </div>
 
 
-
-!!! success "News: National DeiC HPC call H2-2026 now open"
-    Has your research outgrown your computer’s capacity and do our local facilities and budgets no longer meet your computational needs?  
-
-    Then this news is for you. Through competitive calls, researchers can apply for access to **DeiC National HPC resources**, Denmark’s national pool of high-performance computing systems.
-
-    - **Application period:** 13 January 2026 – 10 March 2026
-    - **Resources available:** 1 July 2026
-    - **HPC systems in the call:** DeiC Interactive HPC/UCloud, Sophia, GenomeDK, Computerome 2 andLUMI
-
-    For more information, see: [DeiC national resources page](https://hpc.aau.dk/external-hpc/deic-resources/) and the [official DeiC H2-2026 call announcement](https://www.deic.dk/en/grants/h2-2026-call-applications-access-national-e-resources)
-
-
    
 <div class="video-container">
   <iframe src="https://panopto.aau.dk/Panopto/Pages/Embed.aspx?id=cbfb191c-fde8-4dec-998e-b2b800ba6b03&amp;autoplay=false&amp;offerviewer=true&amp;showtitle=false&amp;showbrand=true&amp;captions=false&amp;interactivity=all"
