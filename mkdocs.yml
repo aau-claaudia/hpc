@@ -166,7 +166,7 @@ nav:
           - How to log in: taaurus/guides/login.md
           - Navigating TAAURUS: taaurus/guides/navigating-taaurus.md
           - Import & export of data: taaurus/guides/import-export-of-data.md
-          - Python: taaurus/guides/application-guides/python.md
+          #- Python: taaurus/guides/application-guides/python.md
           - Run GPU jobs:
               - Before running jobs: taaurus/guides/before-running-jobs.md
               - Running Jobs: taaurus/guides/running-jobs.md
