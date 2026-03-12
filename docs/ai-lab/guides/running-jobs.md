@@ -160,6 +160,9 @@ cat my_job.err    # View any errors (if empty, no errors occurred)
 
 Most jobs need specific resources like GPUs, memory, or time limits. You specify these using Slurm options.
 
+!!! info "Job count limit"
+    To ensure fair use of the cluster, each user may have **a maximum of 8 jobs** running at any given time.
+
 ### Common Resource Options
 
 | Option | Description | Example | Notes |
