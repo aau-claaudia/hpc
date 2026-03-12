@@ -179,6 +179,15 @@ nav:
       - EuroHPC resources: external-hpc/eurohpc-resources.md
       - LUMI: external-hpc/lumi.md
 
+  - Mistral:
+      - About Mistral: mistral/index.md
+      - How to access: mistral/how-to-access.md
+      - Terms and Conditions: mistral/terms-and-conditions.md
+      - Guides:
+          - Overview: mistral/guides/index.md
+          - Le Chat: mistral/guides/le-chat.md
+          - AI Studio: mistral/guides/ai-studio.md
+
 theme:
   name: material
   custom_dir: docs/overrides
