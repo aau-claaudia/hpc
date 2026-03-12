@@ -19,11 +19,21 @@ For technical details on the new hardware and machine types, see the [official S
 
 ## Do I need to do anything?
 
-It depends on where your files and projects are stored. UCloud has different *providers* (storage locations). Check which one your project uses—you can see this in the UCloud interface when you browse your files or manage your project.0
+Yes. All users with research projects must apply for resources in the new SDU datacenter.
 
-### If your data is in SDU/K8s — No action needed
+We have updated the [application form](https://forms.office.com/pages/responsepage.aspx?id=Sbrb9QbOb0msPgzxQ2HZNEdKMbCNz_9Lom8_yaZURCNUQVZUQVRXSFVYODBZQkNZWVRYM1lEUEFYTSQlQCN0PWcu&route=shorturl) to include the new resource types. In the form, select **Existing project**, enter your **DeiC project number**, and apply for the following:
 
-Your data will be moved automatically during the downtime. Once UCloud is back online, everything will be there as before. You don't need to do anything.
+* Storage: `u1-cephfs`
+* CPU machine type: `cpu-amd-zen5`
+* GPU machine type: `gpu-nvidia-b200`
+
+You can already apply for these resources now to make sure you can continue working after the new datacenter goes live. When submitting the application, set the **start date to May 1**.
+
+To secure your data, the actions you need to take depend on which *provider* stores your files and project resources. In the next sections, you can read more about the required actions for each provider.
+
+### If your data is in SDU/K8s — Data will be automatic migrated 
+
+Your data will be moved automatically during the downtime. Once UCloud is back online your data will be available directely. 
 
 ### If your data is in AAU/K8s — You must transfer it
 
