@@ -31,7 +31,7 @@ In addition to the default resource limitations that are in place on the platfor
 * Keep in mind that AI Cloud is a multi-user system, and that it is entirely possible for one user to destabilize the front-end node by launching resource-intensive operations. Ensuring that we have a stable platform is a shared responsibility.
 
 
-## Disencouraged use of the platform
+## Disallowed use of the platform
 
 ### Interactive sessions
 
