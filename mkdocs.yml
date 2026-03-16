@@ -50,7 +50,7 @@ nav:
       - Terms and Conditions: ucloud/terms-and-conditions.md
       - External collaborators: ucloud/external-collaborator.md
       - Providers: ucloud/providers.md
-      - SDU Datacenter Migration: ucloud/sdu-datacenter-migration.md
+      - UCloud datacenter migration: ucloud/sdu-datacenter-migration.md
       - Guides:
           - Getting started:
               - Before you begin: ucloud/guides/getting-started/before-you-begin.md
@@ -166,6 +166,7 @@ nav:
           - How to log in: taaurus/guides/login.md
           - Navigating TAAURUS: taaurus/guides/navigating-taaurus.md
           - Import & export of data: taaurus/guides/import-export-of-data.md
+          #- Python: taaurus/guides/application-guides/python.md
           - Run GPU jobs:
               - Before running jobs: taaurus/guides/before-running-jobs.md
               - Running Jobs: taaurus/guides/running-jobs.md

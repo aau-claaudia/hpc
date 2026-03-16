@@ -61,8 +61,8 @@
 !!! info "Upcoming migration to new SDU datacenter"
     UCloud is moving to a new SDU datacenter. If you have data in the **AAU/K8s** or **AAU/VM** providers, you will need to transfer it to **SDU/K8s** before the migration deadline.  
     
-    * Read the step-by-step **AAU/K8s / AAU/VM migration guide** :octicons-arrow-right-16: [SDU Datacenter Migration](/ucloud/sdu-datacenter-migration/).  
-    * See the full, technical description from SDU :octicons-arrow-right-16: [New SDU Datacenter](https://docs.cloud.sdu.dk/intro/new_datacenter.html#sphx-glr-new-datacenter).
+    * Read the step-by-step **AAU/K8s / AAU/VM migration guide** :octicons-arrow-right-16: [UCloud datacenter migration](/ucloud/sdu-datacenter-migration/).  
+    * See the full, technical description from the consortium behind UCloud :octicons-arrow-right-16: [New SDU Datacenter](https://docs.cloud.sdu.dk/intro/new_datacenter.html#sphx-glr-new-datacenter).
 
 ## Introduction
 
@@ -74,22 +74,6 @@ UCloud is a HPC research platform, engineered to provide high-performance comput
           allow="autoplay"
           style="border: 1px solid #464646;"></iframe>
 </div>
-
-<hr>
-
-!!! abstract "Open call for DeiC's National HPC ressources"
-
-    Call "H2-2026" is open from the 13th of January 2026, and will close 10th of March 2026.
-
-    This possibility is especially well suited for projects with large resource requirements.
-
-    * Find more information on CLAAUDIA's page dedicated to this :octicons-arrow-right-16: [DeiC HPC resources](/external-hpc/deic-resources/).
-    
-    * Find the official call page :octicons-arrow-right-16: [DeiC "H2-2026"](https://www.deic.dk/en/grants/h2-2026-call-applications-access-national-e-resources).
-
-<hr>
-
-
 
 ## Getting Started
 
