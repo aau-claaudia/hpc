@@ -45,15 +45,15 @@ Follow these steps:
 2. Right-click the folder or file you want to transfer (for example, a folder called `Data`).
 3. In the menu that appears, click **Transfer to…**.
 
-     ![Right‑click the folder on AAU/K8s](/assets/img/UCloud/Datacenter-migration/aauk8_1.png)
+     ![Right‑click the folder on AAU/K8s](/assets/img/UCloud/datacenter-migration/aauk8_1.png)
 
 4. In the pop-up window, choose a destination **SDU/K8s** drive from the dropdown and confirm.
 
-     ![Choose \"Transfer to…\"](/assets/img/UCloud/Datacenter-migration/aauk8_2.png)
+     ![Choose \"Transfer to…\"](/assets/img/UCloud/datacenter-migration/aauk8_2.png)
 
 5. Click **Transfer**
 
-     ![Select an SDU/K8s drive as destination](/assets/img/UCloud/Datacenter-migration/aauk8_3.png)
+     ![Select an SDU/K8s drive as destination](/assets/img/UCloud/datacenter-migration/aauk8_3.png)
 
 6. Wait for the transfer to complete. The files will then appear on the selected SDU/K8s drive and will be included in the automatic migration to the new SDU datacenter.
 
