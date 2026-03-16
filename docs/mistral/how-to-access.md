@@ -1,37 +1,31 @@
 # How to Access Mistral
 
-!!! info "Starter draft"
-    Replace the generic access description below with the exact AAU sign-in flow, support ownership, and any approved entry links before publishing as final guidance.
+## 
+Before we go to access it's important you can comply with our [terms and conditions](terms-and-conditions.md) and mistrals [terms and conditions](https://chat.mistral.ai/legal/terms) 
 
-## Who is this for?
+## Access to Le chat and AI Studio except api keys
+All reserachers at Aalborg University can login though mistral [login page](https://v2.auth.mistral.ai/login)  
 
-This section is currently written for **AAU staff and researchers** who have been informed that Mistral is available to them through AAU.
+Type in your email address and click continue. 
 
-If the service is later opened more broadly, this page should be updated to clearly state whether students, lecturers, or external collaborators are included.
+![Mistral login page](/assets/img/mistral/m_login_1.png)
 
-## Expected access flow
+Now click on *Continue with AAU - SSO* 
 
-The exact onboarding process depends on how AAU has configured access to Mistral. A simple first version of the guidance can be:
+![Mistral login page](/assets/img/mistral/m_login_2.png)
 
-1. Open the AAU-approved Mistral entry point.
-2. Sign in using the approved authentication method.
-3. Choose **Le Chat** if you want a conversational assistant.
-4. Choose **AI Studio** if you want to test prompts, compare setups, or build a more repeatable workflow.
+Now login with you AAU login. Remember to use your AAU ID eg. *ab12cd@domain.aau.dk*. 
 
-## If you do not have access
+When you have typed in your AAU ID and password the system requires you to login with 2 factor approval. If you haven't used Multifactor approval before read more about how to [set it up](https://www.en.its.aau.dk/instructions/mfa)
 
-If you expected to have access but cannot sign in, contact the team responsible for the service rollout or use the general HPC support channel:
+You now have access to all features except Ai studio api keys. 
 
-[Need assistance? Reach us at the Service Portal](https://aau.service-now.com/serviceportal?id=sc_cat_item&sys_id=34e8536083cfc21053711d447daad30a){ .md-button .md-button--primary target=_blank }
+## Access to AI Studio api keys 
 
-## Before you start using the service
+To get access to AI Studio api keys feature you need to first complete the [Access to Le Chat and AI Studio except api keys](#access-to-le-chat-and-ai-studio-except-api-keys)
 
-Before using Mistral in research or teaching workflows, make sure you know:
+When you have been logged in you can go to the service portal and fill out the form [mistral workspace acccess](**INSERT LINKE HERE**).  
 
-* what type of data you are allowed to enter
-* whether prompts or outputs are stored
-* whether there are quotas or usage limits
-* which product is best for your task: [Le Chat](/mistral/guides/le-chat/) or [AI Studio](/mistral/guides/ai-studio/)
+When the application form the CLAAUDIA team will review your application and if approved create a workspace for your project. The workspace can now be found under AI Studio  
 
-!!! warning "Data responsibility"
-    Until the service rules are documented in more detail, avoid entering confidential, personal, or otherwise sensitive information into Mistral.
+![Mistral login page](/assets/img/mistral/m_crete_workspace.png)

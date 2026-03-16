@@ -17,15 +17,8 @@
         <div class="tag">Web interface<i class="bi bi-check-lg"></i></div>
         <div class="tooltip">The service is accessed through a browser-based interface.</div>
     </div>
-    <div class="tag-item">
-        <div class="tag">Pre-installed apps<i class="bi bi-x-lg"></i></div>
-        <div class="tooltip">Mistral is a software service, not a platform with installable applications for end users.</div>
-    </div>
-    <div class="tag-item">
-        <div class="tag">Collaboration friendly<i class="bi bi-x-lg"></i></div>
-        <div class="tooltip">Collaboration features should be described only once the AAU-supported workflow is known.</div>
-    </div>
- </div>
+</div>
+
 
 ## Introduction
 
@@ -49,12 +42,9 @@ Mistral is an AI service that gives AAU researchers access to generative AI tool
         <p class="custom-grid-title">AI Studio</p>
         <p class="custom-grid-content">Work more systematically with prompts, models, and reusable setups</p>
     </a>
-    <a href="/mistral/terms-and-conditions/" class="custom-grid-item">
-        <i class="custom-grid-icon bi bi-file-text-fill"></i>
-        <p class="custom-grid-title">Terms and Conditions</p>
-        <p class="custom-grid-content">Get an overview of the Terms and Conditions for using Mistral at AAU</p>
-    </a>
+
 </div>
+
 
 ## Key Features
 
