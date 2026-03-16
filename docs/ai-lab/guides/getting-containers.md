@@ -143,114 +143,78 @@ srun singularity exec --nv tensorflow_24.03-tf2-py3.sif python my_script.py
 
 <hr>
 
-## 3. Build Your Own Container (Advanced)
+## 3. Build Your Own Container
 
-For specialized requirements or custom environments, you can build your own containers using Singularity definition files.
+It is generally considered good practice to build your own Singularity containers, to contain the software environment for a project you wish to run on an HPC system. This is because containers represent a solution that allows robustness and reproducibility.
 
 
-#### Step 1: Create a Definition File
+## Create a definition file
 
-Create a Singularity definition file (`.def`) that describes your container:
+First we need to create a definition to build our container image from. We will provide a basic example, but it also be helpful to read the official documentation page on [building container images](https://docs.sylabs.io/guides/3.0/user-guide/definition_files.html).
 
-```bash
-nano my_container.def
-```
 
-Here's a simple example for a Python container:
-
-```bash title="my_container.def"
+```bash title="torch.def"
 Bootstrap: docker
-From: ubuntu:20.04
+From: ubuntu:22.04
 
 %post
-    # Update system
-    apt-get update
-    apt-get upgrade -y
+    # This section is where you install software packages
 
-    # Install Python and pip
-    apt-get install -y python3 python3-pip
+    # Update the package manager (apt)
+    apt update
 
-    # Upgrade pip
-    pip install --no-cache-dir --upgrade pip
+    # install the latest Python and pip version
+    apt install -y python3-pip python3-dev
 
-    # Install Python packages
-    pip install --no-cache-dir numpy matplotlib torch
-
-%test
-    # Test that Python works
-    python3 --version
-    python3 -c "import numpy, matplotlib, torch; print('All packages imported successfully')"
+    # use pip to install torch
+    pip3 install torch torchvision torchaudio
 ```
 
-**Definition file sections:**
-- `Bootstrap: docker`: Use Docker as the base
-- `From: ubuntu:20.04`: Base operating system
-- `%post`: Commands to run during build
-- `%test`: Commands to test the container
+## Create a batch script to build from
 
-#### Step 2: Set Up Environment
+We can now create a batch script to launch our build:
 
-Configure Singularity for building:
+```bash title="build_torch.sh"
+#!/usr/bin/env bash
 
-```bash
-# Set up directories
-mkdir -p $HOME/.singularity/tmp
-mkdir -p $HOME/.singularity/cache
+#SBATCH --job-name=build_torch
+#SBATCH --output=build_torch.out
+#SBATCH --error=build_torch.err
+#SBATCH --cpus-per-task=32
+#SBATCH --mem=80G
 
 export SINGULARITY_TMPDIR=$HOME/.singularity/tmp
 export SINGULARITY_CACHEDIR=$HOME/.singularity/cache
-export TMPDIR=$HOME/.singularity/tmp
-export TEMP=$HOME/.singularity/tmp
-export TMP=$HOME/.singularity/tmp
+mkdir -p $SINGULARITY_CACHEDIR $SINGULARITY_TMPDIR
+
+# The path to the definition file
+input_def="torch.def"
+
+# The resulting container image
+output_sif="torch.sif"
+
+singularity build --fakeroot $output_sif $input_def
 ```
 
-#### Step 3: Build the Container
-
-Build your container using `srun`:
+We can now build the container by launching our batch script with: 
 
 ```bash
-srun --mem=40G singularity build --fakeroot --tmpdir $SINGULARITY_TMPDIR my_container.sif my_container.def
+sbatch build_torch.sh
 ```
 
-This process may take 10-30 minutes depending on the complexity.
-
-#### Step 4: Test Your Container
-
-Test that your container works:
+After our file has been built we can test it with:
 
 ```bash
-# Test basic functionality
-srun singularity exec my_container.sif python3 --version
-
-# Test package imports
-srun singularity exec my_container.sif python3 -c "import torch; print('PyTorch version:', torch.__version__)"
+srun --gres=gpu:1 singularity exec --nv torch.sif python3 -c "import torch ; print(torch.cuda.is_available())"
 ```
 
-#### Step 5: Use Your Container
-
-Use your custom container just like any other:
+Which should output:
 
 ```bash
-srun singularity exec --nv my_container.sif python3 my_script.py
+srun: job 767374 queued and waiting for resources
+srun: job 767374 has been allocated resources
+True
 ```
-
-!!! info "Tips for Building Containers"
-
-    - **Start simple**: Begin with basic containers and add complexity gradually
-    - **Use `--no-cache-dir`**: Prevents pip from storing package files
-    - **Test thoroughly**: Use the `%test` section to verify everything works
-    - **Document your choices**: Add comments explaining why you chose specific versions
-
-### Advanced Definition File Options
-
-For more complex containers, you can use additional sections:
-
-- `%environment`: Set environment variables
-- `%runscript`: Define what happens when the container runs
-- `%labels`: Add metadata to your container
-- `%help`: Add help text
-
-See the [Singularity documentation](https://docs.sylabs.io/guides/3.0/user-guide/definition_files.html){target=_blank} for complete details.
 
 <hr>
 
