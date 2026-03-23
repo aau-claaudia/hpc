@@ -22,7 +22,7 @@
 
 ## Introduction
 
-Mistral is an AI service that gives AAU researchers access to generative AI tools. In this section you can read more about the two services: **Le Chat** for conversational AI assistance and **AI Studio** for larger generative tasks, including API-based integration with custom AI workflows.
+Mistral is an AI service that gives AAU researchers access to generative AI tools. In this section you can read more about the two services: Le Chat for conversational AI assistance and AI Studio for larger generative tasks, including API-based integration with custom AI workflows.
 
 ## Getting Started
 
@@ -68,49 +68,49 @@ Mistral is an AI service that gives AAU researchers access to generative AI tool
 <div class="custom-grid-3">
     <div class="custom-usecase-item">
         <i class="custom-usecase-icon bi bi-pencil-square"></i>
-        <p class="custom-usecase-text">Drafting and rewriting text in Le Chat</p>
+        <p class="custom-usecase-text">Draft manuscripts, grants, and outlines</p>
     </div>
     <div class="custom-usecase-item">
-        <i class="custom-usecase-icon bi bi-journal-text"></i>
-        <p class="custom-usecase-text">Summarizing articles, meetings, and project material</p>
+        <i class="custom-usecase-icon bi bi-journal-check"></i>
+        <p class="custom-usecase-text">Screen and summarise literature for systematic reviews</p>
     </div>
     <div class="custom-usecase-item">
-        <i class="custom-usecase-icon bi bi-sliders"></i>
-        <p class="custom-usecase-text">Testing prompts and workflows in AI Studio</p>
+        <i class="custom-usecase-icon bi bi-bar-chart-line"></i>
+        <p class="custom-usecase-text">Analyse large text corpora for themes and classification</p>
     </div>
     <div class="custom-usecase-item">
-        <i class="custom-usecase-icon bi bi-plug"></i>
-        <p class="custom-usecase-text">Building API-based AI integrations and assistants</p>
+        <i class="custom-usecase-icon bi bi-file-image"></i>
+        <p class="custom-usecase-text">Turn scans and images into searchable text with OCR</p>
     </div>
     <div class="custom-usecase-item">
-        <i class="custom-usecase-icon bi bi-file-earmark-text"></i>
-        <p class="custom-usecase-text">Document AI and OCR for extracting text and tables from files</p>
+        <i class="custom-usecase-icon bi bi-mic"></i>
+        <p class="custom-usecase-text">Transcribe interviews for analysis</p>
     </div>
     <div class="custom-usecase-item">
-        <i class="custom-usecase-icon bi bi-collection"></i>
-        <p class="custom-usecase-text">Batch processing for summarization, extraction, or classification</p>
+        <i class="custom-usecase-icon bi bi-table"></i>
+        <p class="custom-usecase-text">Extract tables and fields from complex documents</p>
     </div>
     <div class="custom-usecase-item">
-        <i class="custom-usecase-icon bi bi-braces"></i>
-        <p class="custom-usecase-text">Building and testing AI prototypes through the API</p>
+        <i class="custom-usecase-icon bi bi-diagram-3"></i>
+        <p class="custom-usecase-text">Automate tagging, classification, and formatting via API</p>
     </div>
     <div class="custom-usecase-item">
-        <i class="custom-usecase-icon bi bi-easel"></i>
-        <p class="custom-usecase-text">Preparing research notes, project outlines, and working drafts</p>
+        <i class="custom-usecase-icon bi bi-code-slash"></i>
+        <p class="custom-usecase-text">Generate and test code for analysis and simulations</p>
     </div>
     <div class="custom-usecase-item">
-        <i class="custom-usecase-icon bi bi-lightbulb"></i>
-        <p class="custom-usecase-text">Brainstorming ideas and exploring use cases before implementation</p>
+        <i class="custom-usecase-icon bi bi-database"></i>
+        <p class="custom-usecase-text">RAG &amp; semantic search for grounded Q&amp;A over your documents</p>
     </div>
 </div>
 
 ## Important Information
 
 !!! warning "Level 1 data only"
-    Only data classified as Level 1 under [AAU's data classification policy](https://www.security.aau.dk/data-classification) may be used with Mistral. Data classified as Level 2 or Level 3 must never be entered into Le Chat or AI Studio. See the full [Terms and Conditions](/mistral/terms-and-conditions/) for details.
+    Currently, only data classified as Level 1 under [AAU's data classification policy](https://www.security.aau.dk/data-classification) may be used with Mistral. Data classified as Level 2 or Level 3 must not be entered into Le Chat or AI Studio at this time. We are in the process of conducting risk assessments for handling higher data categories. See the full [Terms and Conditions](/mistral/terms-and-conditions/) for details.
 
 !!! info "Choose the right product for the task"
     Use [Le Chat](/mistral/guides/le-chat/) when you need quick conversational assistance. Use [AI Studio](/mistral/guides/ai-studio/) when you want to test prompts more systematically or work with repeatable AI configurations.
 
 !!! info "AI output always requires human review"
-    Mistral can save time, but the user remains responsible for checking correctness, bias, citations, compliance, and academic suitability before reusing generated content.
+    Mistral can save time, but the user remains responsible for checking correctness, bias, citations, compliance, and academic suitability before using generated content.

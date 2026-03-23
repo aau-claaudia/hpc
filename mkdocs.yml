@@ -185,8 +185,14 @@ nav:
       - Terms and Conditions: mistral/terms-and-conditions.md
       - Guides:
           - Overview: mistral/guides/index.md
-          - Le Chat: mistral/guides/le-chat.md
-          - AI Studio: mistral/guides/ai-studio.md
+          - Le Chat:
+              - Overview: mistral/guides/le-chat/index.md
+              - Getting started: mistral/guides/le-chat/getting-started.md
+              - Workflows and tips: mistral/guides/le-chat/workflows-and-tips.md
+          - AI Studio:
+              - Overview: mistral/guides/ai-studio/index.md
+              - Getting started: mistral/guides/ai-studio/getting-started.md
+              - Prompt workflows: mistral/guides/ai-studio/prompt-workflows.md
 
 theme:
   name: material

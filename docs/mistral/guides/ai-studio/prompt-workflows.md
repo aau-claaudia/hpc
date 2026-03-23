@@ -1,26 +1,4 @@
-# AI Studio
-
-## What is AI Studio?
-
-AI Studio is the part of Mistral intended for more structured experimentation. It is a better fit than Le Chat when you want to work deliberately with prompts, model behavior, and repeatable AI-assisted workflows.
-
-## When to use AI Studio
-
-AI Studio is especially useful when you want to:
-
-* test several prompt variants against the same task
-* compare different model behaviors
-* develop reusable prompt structures
-* move from casual exploration toward a more repeatable workflow
-* prototype AI-assisted tasks before integrating them elsewhere
-
-## A simple workflow
-
-1. Define the task you want to solve.
-2. Write a clear prompt or instruction set.
-3. Test the prompt on a few representative examples.
-4. Adjust the wording until the output becomes more consistent.
-5. Document the prompt pattern that works best for your use case.
+# Prompt workflows
 
 ## Good practices
 

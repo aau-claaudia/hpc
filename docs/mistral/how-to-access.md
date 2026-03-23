@@ -1,31 +1,25 @@
 # How to Access Mistral
 
-## 
-Before we go to access it's important you can comply with our [terms and conditions](terms-and-conditions.md) and mistrals [terms and conditions](https://chat.mistral.ai/legal/terms) 
+## Prerequisites
+Before you get access, it is important that you can comply with both our [terms and conditions](terms-and-conditions.md) and Mistral’s [terms and conditions](https://chat.mistral.ai/legal/terms).
 
-## Access to Le chat and AI Studio except api keys
-All reserachers at Aalborg University can login though mistral [login page](https://v2.auth.mistral.ai/login)  
+## Access to Le Chat and AI Studio (without API keys)
+1. All researchers at Aalborg University can log in through the Mistral [login page](https://v2.auth.mistral.ai/login).  
+2. Enter your AAU email address and click **Continue**.  
+   ![Mistral login page](/assets/img/mistral/login/m_login_1.png)
+3. Then click **Continue with AAU – SSO**.  
+   ![Mistral login page](/assets/img/mistral/login/m_login_2.png)
+4. Log in with your AAU credentials (for example: `ab12cd@domain.aau.dk`).
+5. After entering your AAU ID and password, you will be asked to approve the login using multi-factor authentication (MFA). If you have not used MFA before, you can read more about how to [set it up](https://www.en.its.aau.dk/instructions/mfa).
 
-Type in your email address and click continue. 
+You now have access to all features except AI Studio API keys. 
 
-![Mistral login page](/assets/img/mistral/m_login_1.png)
+## Access to AI Studio API keys 
 
-Now click on *Continue with AAU - SSO* 
+1. To get access to the AI Studio API keys feature, you must first complete the steps above in the [Access to Le Chat and AI Studio (without API keys)](#access-to-le-chat-and-ai-studio-without-api-keys) section.
 
-![Mistral login page](/assets/img/mistral/m_login_2.png)
+2. Once you are logged in, go to the service portal and fill out the form **Mistral workspace access** (link to be inserted).  
 
-Now login with you AAU login. Remember to use your AAU ID eg. *ab12cd@domain.aau.dk*. 
+3. The CLAAUDIA team will review your application and, if approved, create a workspace for your project. You can find the workspace in AI Studio by clicking **Default Workspace**, which opens a menu where you can select your new workspace. 
 
-When you have typed in your AAU ID and password the system requires you to login with 2 factor approval. If you haven't used Multifactor approval before read more about how to [set it up](https://www.en.its.aau.dk/instructions/mfa)
-
-You now have access to all features except Ai studio api keys. 
-
-## Access to AI Studio api keys 
-
-To get access to AI Studio api keys feature you need to first complete the [Access to Le Chat and AI Studio except api keys](#access-to-le-chat-and-ai-studio-except-api-keys)
-
-When you have been logged in you can go to the service portal and fill out the form [mistral workspace acccess](**INSERT LINKE HERE**).  
-
-When the application form the CLAAUDIA team will review your application and if approved create a workspace for your project. The workspace can now be found under AI Studio  
-
-![Mistral login page](/assets/img/mistral/m_crete_workspace.png)
+![Mistral create workspace](/assets/img/mistral/login/m_create_workspcae.png)
