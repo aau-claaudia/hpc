@@ -23,8 +23,7 @@
     - Project Member (Read-Only access)
 
 ??? info "Can access privileges be updated after access is granted?"
-    Yes. You can modify an active project using this form:
-    [Modify existing TAAURUS project](https://serviceportal.aau.dk/serviceportal?id=sc_cat_item&sys_id=6e3aa12a838ee61053711d447daad3c1)
+    Yes. It will be possible to modify an active project via a form on serviceportal.aau.dk.
 
     This form supports (PI only):
 
@@ -34,12 +33,10 @@
 ## Project lifecycle and administration
 
 ??? info "Can I extend a running project?"
-    Yes. You can request an extension through:
-    [Modify existing TAAURUS project](https://serviceportal.aau.dk/serviceportal?id=sc_cat_item&sys_id=6e3aa12a838ee61053711d447daad3c1)
+    Yes. It will be possible to request an extension via a form on serviceportal.aau.dk.
 
 ??? info "Can I add or remove members once a project is running?"
-    Yes. Use:
-    [Modify existing TAAURUS project](https://serviceportal.aau.dk/serviceportal?id=sc_cat_item&sys_id=6e3aa12a838ee61053711d447daad3c1)
+    Yes. It will be possible to add or remove members via a form on serviceportal.aau.dk.
 
     This form supports (PI only):
 
@@ -47,8 +44,7 @@
     - role and rights changes
 
 ??? info "Can I request software that is not currently available on TAAURUS?"
-    Yes. You can request additional software through:
-    [Modify existing TAAURUS project](https://serviceportal.aau.dk/serviceportal?id=sc_cat_item&sys_id=6e3aa12a838ee61053711d447daad3c1)
+    Yes. It will be possible to request additional software via a form on serviceportal.aau.dk.
 
 ## Data and compliance
 
