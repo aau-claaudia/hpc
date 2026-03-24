@@ -10,12 +10,12 @@ For technical details on the new hardware and machine types, see the [official S
 
 | When | What happens |
 |------|--------------|
-| **Before April 20, 2026** | If you have data in AAU/K8s or AAU/VM, you must finish transferring it to SDU/K8s by this date. After this, any data left behind will be permanently deleted. |
-| **Last week of April 2026** | UCloud will be offline for up to 72 hours while the migration takes place. You will not be able to access the platform during this time. |
+| **Before April 27 8:00 am, 2026** | If you have data in AAU/K8s or AAU/VM, you must finish transferring it to SDU/K8s by this time. After this, any data left behind will be permanently deleted. |
+| ** From April to 27  May 4** | Downtime for all UCloud services.  You will not be able to access the platform during this time. |
 | **May 4, 2026** | The new datacenter is up and running. UCloud is back online with your migrated data. |
 
 !!! warning "Important deadline"
-    If you use AAU/K8s or AAU/VM, **April 20, 2026** is the last day to transfer your data. After that, it cannot be recovered. Transferring large amounts of data can take time—start early to avoid problems.
+    If you use AAU/K8s or AAU/VM, **April 27, 2026** is the last day to transfer your data. After that, it cannot be recovered. Transferring large amounts of data can take time—start early to avoid problems.
 
 ## Do I need to do anything?
 
@@ -37,7 +37,7 @@ Your data will be moved automatically during the downtime. Once UCloud is back o
 
 ### If your data is in AAU/K8s — You must transfer it
 
-AAU/K8s is being decommissioned. You therefor need to move your files and folders to SDU/K8s before April 20, 2026. The easiest way is to use the **Transfer to** option in the UCloud file browser.
+AAU/K8s is being decommissioned. You therefor need to move your files and folders to SDU/K8s before April 27, 2026. The easiest way is to use the **Transfer to** option in the UCloud file browser.
 
 Follow these steps:
 
@@ -45,15 +45,15 @@ Follow these steps:
 2. Right-click the folder or file you want to transfer (for example, a folder called `Data`).
 3. In the menu that appears, click **Transfer to…**.
 
-     ![Right‑click the folder on AAU/K8s](/assets/img/UCloud/Datacenter-migration/aauk8_1.png)
+     ![Right‑click the folder on AAU/K8s](/assets/img/UCloud/datacenter-migration/aauk8_1.png)
 
 4. In the pop-up window, choose a destination **SDU/K8s** drive from the dropdown and confirm.
 
-     ![Choose \"Transfer to…\"](/assets/img/UCloud/Datacenter-migration/aauk8_2.png)
+     ![Choose \"Transfer to…\"](/assets/img/UCloud/datacenter-migration/aauk8_2.png)
 
 5. Click **Transfer**
 
-     ![Select an SDU/K8s drive as destination](/assets/img/UCloud/Datacenter-migration/aauk8_3.png)
+     ![Select an SDU/K8s drive as destination](/assets/img/UCloud/datacenter-migration/aauk8_3.png)
 
 6. Wait for the transfer to complete. The files will then appear on the selected SDU/K8s drive and will be included in the automatic migration to the new SDU datacenter.
 
