@@ -7,11 +7,15 @@
     </div>
     <div class="tag-item">
         <div class="tag">Students<i class="bi bi-x-lg"></i></div>
-        <div class="tooltip">Student availability should be confirmed before publishing this page broadly.</div>
+        <div class="tooltip">Students does not have access to Mistral.</div>
     </div>
     <div class="tag-item">
-        <div class="tag">Sensitive Data<i class="bi bi-x-lg"></i></div>
-        <div class="tooltip">Do not assume the service is approved for confidential or sensitive data unless this has been explicitly confirmed.</div>
+        <div class="tag">Teaching<i class="bi bi-x-lg"></i></div>
+        <div class="tooltip">Mistral is only for academic reserach activities.</div>
+    </div>
+    <div class="tag-item">
+        <div class="tag">Sensitive data<i class="bi bi-x-lg"></i></div>
+        <div class="tooltip">Mistral is only approved for public data (level 1).</div>
     </div>
     <div class="tag-item">
         <div class="tag">Web interface<i class="bi bi-check-lg"></i></div>

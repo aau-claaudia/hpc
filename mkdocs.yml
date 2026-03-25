@@ -183,8 +183,9 @@ nav:
       - About Mistral: mistral/index.md
       - How to access: mistral/how-to-access.md
       - Terms and Conditions: mistral/terms-and-conditions.md
+      - "Support": mistral/guides/ai-studio/support.md
       - Guides:
-          - Overview: mistral/guides/index.md
+          - When to use Le Chat vs. AI Studio: mistral/guides/index.md
           - Le Chat:
               - Overview: mistral/guides/le-chat/index.md
               - Getting started: mistral/guides/le-chat/getting-started.md
@@ -192,6 +193,9 @@ nav:
           - AI Studio:
               - Overview: mistral/guides/ai-studio/index.md
               - Getting started: mistral/guides/ai-studio/getting-started.md
+              - Models and pricing: mistral/guides/ai-studio/models-and-pricing.md
+              - Using the API: mistral/guides/ai-studio/using-the-api.md
+              - Tokens and Seats: mistral/guides/ai-studio/tokens-and-seats.md
               - Prompt workflows: mistral/guides/ai-studio/prompt-workflows.md
 
 theme:
