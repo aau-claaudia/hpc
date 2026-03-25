@@ -50,6 +50,8 @@ Acquiring LUMI-resources should <u>always</u> be a two step proces:
 
     * If the project's lifespan is 6 months or shorter, nothing is cut.
 
+    Reference: ["LUMI - REsource cut-off policy"](https://lumi-supercomputer.eu/wp-content/uploads/2026/03/LUMI-Resource_cut-off_policy_2026.pdf)
+
 
 ### User support
 
