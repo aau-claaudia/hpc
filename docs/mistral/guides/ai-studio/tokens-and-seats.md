@@ -110,7 +110,7 @@ Token usage at the workspace level is visible in AI Studio's Usage section. If y
 ### What happens when you approach the limit
 
 - Monitor usage regularly during active development and batch runs.
-- If your project requires more tokens than originally requested, submit a revised request through the CLAAUDIA service portal.
+- If your project requires more tokens than originally requested, submit a revised request through the CLAAUDIA Serviceportal.
 - Unexpected overruns may be caused by inefficient prompts, long context windows, or unintended loops in code — check the per-key breakdown in the Usage view.
 
 ### Token rotation and expiry

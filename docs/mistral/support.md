@@ -16,8 +16,8 @@ For everything else â€” technical questions, API errors, or product behaviour â€
 
 | Channel | Link |
 |---|---|
-| Serviceportal | [serviceportal.aau.dk](https://serviceportal.aau.dk/serviceportal?id=emp_taxonomy_topic&topic_id=82a253e8838fc21053711d447daad328) |
-| Web | [researcher.aau.dk/contact/claaudia](https://www.researcher.aau.dk/contact/claaudia) |
+| Serviceportal | [serviceportal.aau.dk](https://serviceportal.aau.dk/serviceportal?id=emp_taxonomy_topic&topic_id=82a253e8838fc21053711d447daad328){target="_blank"} |
+| Web | [researcher.aau.dk/contact/claaudia](https://www.researcher.aau.dk/contact/claaudia){target="_blank"} |
 
 
 ## When to contact Mistral
@@ -38,13 +38,14 @@ Mistral support is accessed through a chat window built into both Le Chat and AI
 
 ### Documentation
 
-Mistral have a thorough documentation site covering both Le Chat and AI Studio:
+Mistral have a thorough documentation covering both Le Chat and AI Studio:
 
 | Resource | URL | Description |
 |---|---|---|
-| Documentation hub | [docs.mistral.ai](https://docs.mistral.ai/) | Models, capabilities, Le Chat, AI Studio, agents, and deployment |
-| API reference | [docs.mistral.ai/api](https://docs.mistral.ai/api) | Full API reference and endpoint specs |
-| Cookbooks | [docs.mistral.ai/cookbooks](https://docs.mistral.ai/cookbooks/) | Practical code examples for common use cases |
+| Help centre | [help.mistral.ai](https://help.mistral.ai/en/){target="_blank"} | FAQs and articles covering Le Chat, AI Studio, accounts, and troubleshooting |
+| Documentation hub | [docs.mistral.ai](https://docs.mistral.ai/){target="_blank"} | Models, capabilities, AI Studio, agents, and deployment |
+| API reference | [docs.mistral.ai/api](https://docs.mistral.ai/api){target="_blank"} | Full API reference and endpoint specs |
+| Cookbooks | [docs.mistral.ai/cookbooks](https://docs.mistral.ai/cookbooks/){target="_blank"} | Practical code examples for common use cases |
 
 ### Community
 
@@ -58,11 +59,11 @@ The Mistral Discord server is a good place to ask technical questions and get qu
 
 | Problem | Where to go |
 |---|---|
-| Cannot log in to Le Chat | Contact CLAAUDIA via the [Serviceportal](https://aau.service-now.com/serviceportal) |
-| Cannot access AI Studio workspace | Contact CLAAUDIA via the [Serviceportal](https://aau.service-now.com/serviceportal) |
-| Token quota exceeded | Contact CLAAUDIA via the [Serviceportal](https://aau.service-now.com/serviceportal) |
-| I cannot create API key | Contact CLAAUDIA via the [Serviceportal](https://aau.service-now.com/serviceportal) |
-| Data classification questions | Contact CLAAUDIA via the [Serviceportal](https://aau.service-now.com/serviceportal) |
+| Cannot log in to Le Chat | Contact CLAAUDIA via the [Serviceportal](https://aau.service-now.com/serviceportal){target="_blank"} |
+| Cannot access AI Studio workspace | Contact CLAAUDIA via the [Serviceportal](https://aau.service-now.com/serviceportal){target="_blank"} |
+| Token quota exceeded | Contact CLAAUDIA via the [Serviceportal](https://aau.service-now.com/serviceportal){target="_blank"} |
+| I have a a project workspace but cannot create API key | Contact CLAAUDIA via the [Serviceportal](https://aau.service-now.com/serviceportal){target="_blank"} |
+| Data classification questions | Contact CLAAUDIA via the [Serviceportal](https://aau.service-now.com/serviceportal){target="_blank"} |
 | API key not working | Contact Mistral via the in-app *Help and Resources* chat |
 | How to use an mistral api key in your own software | Contact Mistral via the in-app *Help and Resources* chat |
 | Le Chat not behaving as expected (e.g. wrong output, missing feature) | Contact Mistral via the in-app *Help and Resources* chat in Le Chat |

@@ -1,10 +1,10 @@
-# When to Use Le Chat vs. AI Studio
+# When to use Le Chat vs. AI Studio
 
 Mistral offers two distinct interfaces under the same login. This page explains what each one is, how they differ in access and cost, and when to use which.
 
 ---
 
-## At a Glance
+## Quick overview
 
 | | Le Chat | AI Studio |
 |---|---|---|
@@ -12,7 +12,6 @@ Mistral offers two distinct interfaces under the same login. This page explains 
 | **Who it's for** | Anyone using Mistral for writing, research, or day-to-day tasks | Researchers and developers building structured workflows or using the API |
 | **Access required** | AAU SSO login (immediate) | AAU SSO login + optional workspace application for API keys |
 | **Interface** | [chat.mistral.ai](https://chat.mistral.ai) | [console.mistral.ai](https://console.mistral.ai) |
-| **Metering** | Seat-based | Token-based  |
 
 ---
 
@@ -25,8 +24,8 @@ Think of Le Chat like a smarter version of a search engine you have a conversati
 - Get help writing or editing — abstracts, emails, reports, grant sections
 - Summarise a paper, document, or set of notes
 - Ask questions and explore a topic through conversation
-- Upload a PDF and ask questions about it *(this is RAG — see below)*
-- Give the model a standing instruction it always follows *(via Projects)*
+- Upload a PDF and ask questions about it 
+- Give the model a standing instruction it always follows 
 - Generate images or get research ideas quickly
 
 **Do not use Le Chat when you need to:**
@@ -155,7 +154,7 @@ At AAU, API token usage within an approved project workspace is covered by the i
 |---|---|
 | Use Le Chat for writing and research assistance | Log in via AAU SSO — no application needed |
 | Test models in the AI Studio Playground | Log in via AAU SSO — no application needed |
-| Use the API from code | Log in first, then apply for workspace access via the CLAAUDIA service portal |
+| Use the API from code | Log in first, then apply for workspace access via the CLAAUDIA Serviceportal |
 | Understand token costs | See [Models and Pricing](/mistral/guides/ai-studio/models-and-pricing/) |
 | Get help | See [Support](/mistral/guides/ai-studio/support/) or contact CLAAUDIA |
 

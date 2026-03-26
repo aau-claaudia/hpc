@@ -73,4 +73,4 @@ To learn more about this oppurtunity, please find our page dedicated to this pos
 
 <hr>
 
-[Need assistance? Reach us at the Service Portal](https://aau.service-now.com/serviceportal?id=sc_cat_item&sys_id=34e8536083cfc21053711d447daad30a){ .md-button .md-button--primary target=_blank }
+[Need assistance? Reach us at the Serviceportal](https://aau.service-now.com/serviceportal?id=sc_cat_item&sys_id=34e8536083cfc21053711d447daad30a){ .md-button .md-button--primary target=_blank }

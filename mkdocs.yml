@@ -183,9 +183,10 @@ nav:
       - About Mistral: mistral/index.md
       - How to access: mistral/how-to-access.md
       - Terms and Conditions: mistral/terms-and-conditions.md
-      - "Support": mistral/guides/ai-studio/support.md
+      - "Support": mistral/support.md
       - Guides:
-          - When to use Le Chat vs. AI Studio: mistral/guides/index.md
+          - Mistral Guides and Documentation: mistral/guides/index.md
+          - Le Chat vs. AI Studio: mistral/guides/le-chat-vs-ai-studio.md
           - Le Chat:
               - Overview: mistral/guides/le-chat/index.md
               - Getting started: mistral/guides/le-chat/getting-started.md

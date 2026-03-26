@@ -18,14 +18,14 @@ Understanding the difference between access levels helps you request the right o
 
 ---
 
-## Step 1 — Log in (Le Chat and AI Studio without API Keys)
+## Level 1 — Log in (Le Chat and AI Studio without API Keys)
 
 All AAU **academic staff** can log in immediately via SSO. No application needed.
 
 ??? info "Not employed as academic staff?"
     Access is granted based on the academic staff role at AAU. If you hold a different employment category — such as technical, administrative, or external staff — but need access to support ongoing academic research activities, you must request access manually.
 
-    Contact CLAAUDIA through the [AAU service portal](https://aau.service-now.com/serviceportal?id=sc_cat_item&sys_id=a05e2fb4c3434610f0f3041ad001310e) and include a short description of:
+    Contact CLAAUDIA through the [AAU Serviceportal](https://aau.service-now.com/serviceportal?id=sc_cat_item&sys_id=a05e2fb4c3434610f0f3041ad001310e) and include a short description of:
 
     - your role and department
     - which research project or activity you are supporting
@@ -55,7 +55,7 @@ After completing these steps, you have access to:
 
 ---
 
-## Step 2 — Request API key access
+## Level 2 — Request API key access
 
 API keys allow you to call Mistral models programmatically from your own code. This requires an additional approval step.
 
@@ -66,7 +66,7 @@ Complete Step 1 and verify that you can log in to both Le Chat and AI Studio bef
 ### How to apply
 
 1. Log in to AI Studio at [console.mistral.ai](https://console.mistral.ai).
-2. Go to the CLAAUDIA service portal and fill out the form **Mistral workspace request form** *(link to be inserted)*.
+2. Go to the CLAAUDIA Serviceportal and fill out the form **Mistral workspace request form** *(link to be inserted)*.
 3. The CLAAUDIA team will review your request. If approved, they will create a workspace named your title for your project.
 4. You will receive a notification when the workspace is ready.
 
