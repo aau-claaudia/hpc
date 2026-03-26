@@ -1,5 +1,13 @@
 # TAAURUS
 
+[:material-check-circle-outline: SUND]("Indicates that the platform is only for the Faculty of Medicine (SUND) researchers."){ .md-button .md-button--primary }
+[:material-check-circle-outline: SUND]("Indicates that the platform is only for the Faculty of Medicine (SUND) researchers."){ .md-button .md-button--primary }
+[:material-check-circle-outline: SUND]("Indicates that the platform is only for the Faculty of Medicine (SUND) researchers."){ .md-button .md-button--primary }
+[:material-check-circle-outline: SUND]("Indicates that the platform is only for the Faculty of Medicine (SUND) researchers."){ .md-button .md-button--primary }
+[:material-check-circle-outline: SUND]("Indicates that the platform is only for the Faculty of Medicine (SUND) researchers."){ .md-button .md-button--primary }
+[:material-check-circle-outline: SUND]("Indicates that the platform is only for the Faculty of Medicine (SUND) researchers."){ .md-button .md-button--primary }
+[:material-check-circle-outline: SUND]("Indicates that the platform is only for the Faculty of Medicine (SUND) researchers."){ .md-button .md-button--primary }
+
 <div class="tag-container">
     <div class="tag-item">
         <div class="tag">SUND<i class="bi bi-check-lg"></i></div>
