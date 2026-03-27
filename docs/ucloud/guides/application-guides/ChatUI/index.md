@@ -3,10 +3,9 @@
     <h1 class="guide-page-header__title">ChatUI</h1>
     <p><strong>Approved for data classification level</strong></p>
     <a href="https://www.security.aau.dk/data-classification" target="_blank" class="icon-container">
-      <span class="icon level-0" title="Approved for public data">0</span>
-      <span class="icon level-1" title="Approved for internal data">1</span>
-      <span class="icon level-2" title="Approved for confidential data">2</span>
-      <span class="icon level-3" title="Approved for strictly confidential data">3</span>
+      <span class="icon level-1" title="Click to see data-classification">1</span>
+      <span class="icon level-2" title="Click to see data-classification">2</span>
+      <span class="icon level-3" title="Click to see data-classification">3</span>
     </a>
   </div>
   <a class="guide-page-header__cta" href="https://docs.cloud.sdu.dk/Apps/chat-ui.html" target=_blank>
@@ -15,6 +14,12 @@
 </div>
 
 ---
+
+!!! warning "Important: Sensitive data must be processed in a project"
+
+    If you are working with sensitive data, you must run ChatUI from a **dedicated project** in UCloud — **not** from *My Workspace*.
+
+    Using a dedicated project helps ensure proper access control and compliance with data protection requirements.
 
 ## Introduction  
 ChatUI on UCloud is an intuitive application designed for working with large language models (LLMs). This guide will walk you through the process of setting up, configuring, and effectively using ChatUI. It covers both personal use—where ChatUI can handle sensitive data securely—and shared use, where you can provide multiple users access via a public link, making it ideal for teaching or similar collaborative scenarios.

@@ -3,9 +3,9 @@
     <h1 class="guide-page-header__title">Transcriber</h1>
     <p><strong>Approved for data classification level</strong></p>
     <a href="https://www.security.aau.dk/data-classification" target="_blank" class="icon-container">
-      <span class="icon level-1" title="Click to see data-classification">0</span>
-      <span class="icon level-2" title="Click to see data-classification">1</span>
-      <span class="icon level-3" title="Click to see data-classification">2</span>
+      <span class="icon level-1" title="Click to see data-classification">1</span>
+      <span class="icon level-2" title="Click to see data-classification">2</span>
+      <span class="icon level-3" title="Click to see data-classification">3</span>
     </a>
   </div>
   <a class="guide-page-header__cta" href="https://docs.cloud.sdu.dk/Apps/transcriber.html" target=_blank>
@@ -15,12 +15,11 @@
 
 ---
 
-!!! info "New feature: Transcribe and stop"
+!!! warning "Important: Sensitive data must be processed in a project"
 
-    **Transcribe and stop** is a new option in the Transcriber interface application that automatically stops the job once all selected files have been transcribed. Enabling this setting saves compute resources by ensuring the job only runs while actual transcription is taking place—making your allocation more efficient and freeing up resources so you can complete more transcriptions overall.
+    If you are working with sensitive data, you must run Transcriber from a **dedicated project** in UCloud — **not** from *My Workspace*.
 
-    - **How it works:** When this feature is enabled, the job will finish and automatically shut down as soon as all transcriptions are complete.
-    - **Access your results:** Your transcribed files are always available in the UCloud filesystem, either in the job folder or in your chosen output folder at startup.
+    Using a dedicated project helps ensure proper access control and compliance with data protection requirements.
 
 
 ### What is Transcriber

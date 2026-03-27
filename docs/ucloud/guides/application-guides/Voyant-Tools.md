@@ -3,9 +3,9 @@
     <h1 class="guide-page-header__title">Voyant Tools</h1>
     <p><strong>Approved for data classification levels</strong></p>
     <a href="https://www.security.aau.dk/data-classification" target="_blank" class="icon-container">
-      <span class="icon level-1" title="Click to see data-classification">0</span>
-      <span class="icon level-2" title="Click to see data-classification">1</span>
-      <span class="icon level-3" title="Click to see data-classification">2</span>
+      <span class="icon level-1" title="Click to see data-classification">1</span>
+      <span class="icon level-2" title="Click to see data-classification">2</span>
+      <span class="icon level-3" title="Click to see data-classification">3</span>
     </a>
   </div>
   <a class="guide-page-header__cta" href="https://docs.cloud.sdu.dk/Apps/voyantserver.html" target=_blank>
@@ -15,6 +15,11 @@
 
 ---
 
+!!! warning "Important: Sensitive data must be processed in a project"
+
+    If you are working with sensitive data, you must run Voyant Tools from a **dedicated project** in UCloud — **not** from *My Workspace*.
+
+    Using a dedicated project helps ensure proper access control and compliance with data protection requirements.
 
 Voyant is a text reading and analysis environment. It is possible to work with one or more texts in a variety of formats. 
 
