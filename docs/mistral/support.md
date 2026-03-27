@@ -26,7 +26,7 @@ For technical questions about the products — API errors, model behaviour, inte
 
 ### Submit a support ticket
 
-Mistral support is accessed through a chat window built into both Le Chat and AI Studio. When you open it, you will be asked to set the priority of your request and describe your issue. A ticket is then created and the Mistral support team will respond. You can always return to a ticket through the same *Help and Resources* interface.
+Mistral support is accessed through a chat window built into both Le Chat and AI Studio. When you open it, you will be asked to set the priority of your request and describe your issue. A ticket is then created and the Mistral support team will respond. You can always return to a ticket through the same *Help and Resources* interface. [See more](https://help.mistral.ai/en/articles/347458-how-do-i-contact-support){target="_blank"}
 
 **In Le Chat**, click the small icon in the bottom right corner and select *Contact us*.
 

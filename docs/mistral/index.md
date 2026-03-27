@@ -71,40 +71,52 @@ Mistral is an AI service that gives AAU researchers access to generative AI tool
 
 <div class="custom-grid-3">
     <div class="custom-usecase-item">
-        <i class="custom-usecase-icon bi bi-pencil-square"></i>
-        <p class="custom-usecase-text">Draft manuscripts, grants, and outlines</p>
-    </div>
-    <div class="custom-usecase-item">
-        <i class="custom-usecase-icon bi bi-journal-check"></i>
-        <p class="custom-usecase-text">Screen and summarise literature for systematic reviews</p>
-    </div>
-    <div class="custom-usecase-item">
-        <i class="custom-usecase-icon bi bi-bar-chart-line"></i>
-        <p class="custom-usecase-text">Analyse large text corpora for themes and classification</p>
-    </div>
-    <div class="custom-usecase-item">
         <i class="custom-usecase-icon bi bi-file-image"></i>
-        <p class="custom-usecase-text">Turn scans and images into searchable text with OCR</p>
+        <p class="custom-usecase-text">From images to structured data</p>
     </div>
     <div class="custom-usecase-item">
         <i class="custom-usecase-icon bi bi-mic"></i>
-        <p class="custom-usecase-text">Transcribe interviews for analysis</p>
+        <p class="custom-usecase-text">From audio to text</p>
+    </div>
+    <div class="custom-usecase-item">
+        <i class="custom-usecase-icon bi bi-bar-chart-line"></i>
+        <p class="custom-usecase-text">Large-scale text analysis</p>
+    </div>
+    <div class="custom-usecase-item">
+        <i class="custom-usecase-icon bi bi-journal-check"></i>
+        <p class="custom-usecase-text">Automated document screening</p>
     </div>
     <div class="custom-usecase-item">
         <i class="custom-usecase-icon bi bi-table"></i>
-        <p class="custom-usecase-text">Extract tables and fields from complex documents</p>
+        <p class="custom-usecase-text">Data extraction from complex documents</p>
     </div>
     <div class="custom-usecase-item">
         <i class="custom-usecase-icon bi bi-diagram-3"></i>
-        <p class="custom-usecase-text">Automate tagging, classification, and formatting via API</p>
+        <p class="custom-usecase-text">Workflow automation</p>
     </div>
     <div class="custom-usecase-item">
         <i class="custom-usecase-icon bi bi-code-slash"></i>
-        <p class="custom-usecase-text">Generate and test code for analysis and simulations</p>
+        <p class="custom-usecase-text">Code assistance and execution</p>
+    </div>
+    <div class="custom-usecase-item">
+        <i class="custom-usecase-icon bi bi-sliders2"></i>
+        <p class="custom-usecase-text">Model adaptation for specialised research tasks</p>
+    </div>
+    <div class="custom-usecase-item">
+        <i class="custom-usecase-icon bi bi-layers"></i>
+        <p class="custom-usecase-text">Multimodal research analysis</p>
+    </div>
+    <div class="custom-usecase-item">
+        <i class="custom-usecase-icon bi bi-pencil-square"></i>
+        <p class="custom-usecase-text">Content and material creation</p>
+    </div>
+    <div class="custom-usecase-item">
+        <i class="custom-usecase-icon bi bi-pen"></i>
+        <p class="custom-usecase-text">Research design and text refinement</p>
     </div>
     <div class="custom-usecase-item">
         <i class="custom-usecase-icon bi bi-database"></i>
-        <p class="custom-usecase-text">RAG &amp; semantic search for grounded Q&amp;A over your documents</p>
+        <p class="custom-usecase-text">RAG and semantic search</p>
     </div>
 </div>
 
