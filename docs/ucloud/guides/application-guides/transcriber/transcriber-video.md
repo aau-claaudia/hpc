@@ -85,7 +85,7 @@ Transcriber is an app for transcribing audio into text. Many apps can do this, b
 </div>
 
 !!! info "Feedback is appreciated"
-    Transcriber is still under development and getting new features. Please give us your feedback via the [AAU service portal](https://serviceportal.aau.dk/serviceportal?id=sc_cat_item&sys_id=0a246b54c353f150f5575dcd2b013105).
+    Transcriber is still under development and getting new features. Please give us your feedback via the [AAU Serviceportal](https://serviceportal.aau.dk/serviceportal?id=sc_cat_item&sys_id=0a246b54c353f150f5575dcd2b013105).
 
 
 ## Sensitive data?

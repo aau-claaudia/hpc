@@ -181,6 +181,20 @@ nav:
       - EuroHPC resources: external-hpc/eurohpc-resources.md
       - LUMI: external-hpc/lumi.md
 
+  - Mistral:
+      - About Mistral: mistral/index.md
+      - How to access: mistral/how-to-access.md
+      - Terms and Conditions: mistral/terms-and-conditions.md
+      - "Support": mistral/support.md
+      - Guides:
+          - Mistral guides and aocumentation: mistral/guides/index.md
+          - Le Chat:
+              - Overview: mistral/guides/le-chat/index.md
+              - Log in: mistral/guides/le-chat/getting-started.md
+          - AI Studio:
+              - Overview: mistral/guides/ai-studio/index.md
+              - Log in: mistral/guides/ai-studio/getting-started.md
+
 theme:
   name: material
   custom_dir: docs/overrides
