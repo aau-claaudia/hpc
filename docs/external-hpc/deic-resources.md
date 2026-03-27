@@ -28,7 +28,7 @@
 
 **Proces:**
 
-In the beginning of the year a new call is made available and researchers have a 3-month window in which they can apply. When the window ends there is a period, where [a scientific committee](https://www.deic.dk/en/e-resource-committee-hpc) evaluates the applications that have been submitted based on [predefined criteria](https://www.deic.dk/sites/default/files/2025-09/Proces%20for%20national%20call%20for%20e-resources.pdf#page=10). After this proces has been completed, applicants receive a response on the decision - 6 months after the call opened. This cycle repeats twice a year.
+In the beginning of the year a new call is made available and researchers have a 3-month window in which they can apply. When the window ends there is a period, where a scientific committee evaluates the applications that have been submitted based on [predefined criteria](https://www.deic.dk/sites/default/files/2025-09/Proces%20for%20national%20call%20for%20e-resources.pdf#page=10). After this proces has been completed, applicants receive a response on the decision - 6 months after the call opened. This cycle repeats twice a year.
 
 **How to apply:**
 
