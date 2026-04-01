@@ -48,7 +48,7 @@ nav:
       - About UCloud: ucloud/index.md
       - How to access: 
           - Access options: ucloud/how-to-access.md
-          - Expanded application guide: ucloud/expanded-application-guide.md
+          - Expanded UCloud project application guide: ucloud/expanded-application-guide.md
       - Terms and Conditions: ucloud/terms-and-conditions.md
       - External collaborators: ucloud/external-collaborator.md
       - Providers: ucloud/providers.md
