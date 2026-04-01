@@ -7,18 +7,18 @@ This is a detailed guide for project applications in on UCloud platform
 If you need additional resources (GPU, VMs, larger quotas, or sensitive data access),
 you must apply for a project.
 
-Before applying for a project you must ensure that you understand the [classification level of your data](https://www.security.aau.dk/data-classification), and that you understand the [restrictions and limitations of the platform (T's & C's)](https://hpc.aau.dk/ucloud/terms-and-conditions/).
+Before applying for a project you must ensure that you understand the [classification level of your data](https://www.security.aau.dk/data-classification), and that you understand the [restrictions on and limitations of the platform (Terms and Conditions)](https://hpc.aau.dk/ucloud/terms-and-conditions/).
 
 !!! info "Data classifications 2 and 3"
     
-    * If you have data with classification 2 or above, you must follow the [Procedure for working with sensitive data on UCloud projects](https://hpc.aau.dk/ucloud/terms-and-conditions/#appendix)
-    * At AAU, if your project includes any data with classifications levels 2 or higher, you are required to have your research [registered for the inclusion of GDPR sensitive data with the Department of Grants and Contracts](https://aaudk.sharepoint.com/sites/persondata-ressourcer/SitePages/Registrations%20og%20reports%20(Online%20forms).aspx). Once registered you will be informed of the WorkZone case number that is allocated to your case before you will be permitted a project on UCloud.
+    * If you have data with classification 2 or above, you must follow the [Procedure for working with sensitive data on UCloud projects](https://hpc.aau.dk/ucloud/terms-and-conditions/#appendix).
+    * At AAU, if your project includes any data with classification levels 2 or higher, you are required to have your research [registered for the inclusion of GDPR sensitive data with the Department of Grants and Contracts](https://aaudk.sharepoint.com/sites/persondata-ressourcer/SitePages/Registrations%20og%20reports%20(Online%20forms).aspx). Once registered you will be informed of the WorkZone case number that is allocated to your case before you will be permitted a project on UCloud.
     * Students are excluded from this registration process.
 
 
-### Step 1: Open the project application page
+### Step 1: Open the project application form
 
-Browse to [hpc.aau.dk](https://hpc.aau.dk), and scroll down to reveal the platform tabs.
+Browse to [hpc.aau.dk](https://hpc.aau.dk), scroll down to reveal the platform tabs, find the UCloud tab, and click on the link to the Application form.
 
 ![Project application entry point](/assets/img/UCloud/expanded-application-guide/ucloud-expanded-project-application-image-01.png){.standard_image_width}
 
@@ -28,12 +28,12 @@ Browse to [hpc.aau.dk](https://hpc.aau.dk), and scroll down to reveal the platfo
 
 ### Step 2: Fill in the application form
 
-There is information provided in the application form regarding the individual products and resources.
+There is information provided in the application form regarding the individual products and resources, that you should read before making product selections.
 
 !!! info "**Transcription section**"
 
     * There is a special section dedicated to projects that wish to use transcription services. This is to simplify the process of selecting the correct underlying resources for people who just want to run some transcriptions.
-    * If you are not are not using Transcriber, or if you just want to choose your own selection of compute and storage resources, you can just answer "No" to whether this is a Transcriber project.
+    * If you are not are not using Transcriber, or if you just want to choose your own selection of compute and storage resources, you can just answer "No" to whether or not this is a Transcriber project.
 
 !!! info "**NOTE:** Allocations are made for whole calendar months, starting from the first day of the current month"
 
@@ -41,7 +41,7 @@ There is information provided in the application form regarding the individual p
 
 !!! info "**UCloud migration warning**"
     
-    Ensure that you are aware of that the start date for your project application matches the time-frames where resources are available.
+    Ensure that you are aware that the start date for your project application matches the timeframes where resources are available.
 
 ![Project application form](/assets/img/UCloud/expanded-application-guide/ucloud-expanded-project-application-image-02.png){.standard_image_width}
 
@@ -61,7 +61,7 @@ There is information provided in the application form regarding the individual p
 
 You will receive an email from CLAAUDIA, including basic instructions for what to do next, and a summary of the resources that you have been approved to add to your UCloud project.
 
-Included in this mail is your **DeiC project number**. This is the number you will need to use in future if you need to apply for *additional resources* in your project.
+Included in this mail is your **DeiC project number**. This is the number you will need to use in future if you need to apply for **additional resources** in your project.
 
 ![Check your approval mail](/assets/img/UCloud/expanded-application-guide/ucloud-expanded-project-application-image-03a.png){.standard_image_width}
 
@@ -71,7 +71,7 @@ Included in this mail is your **DeiC project number**. This is the number you wi
 
 ### Step 5: UCloud interface project application
 
-Browse to [the UCloud interface](cloud.sdu.dk) and navigate to the project icon in the left-hand side menu.
+Browse to [the UCloud interface](cloud.sdu.dk) and navigate to the **project icon** in the left-hand side menu.
 
 ![Find the project item in the side menu bar on UCloud](/assets/img/UCloud/expanded-application-guide/ucloud-expanded-project-application-image-04.png){.standard_image_width}
 
@@ -93,7 +93,7 @@ Select the "Apply for resources" option to open a project application form.
 
 1. The project title must be identical to the project title that you used in your CLAAUDIA application form.
 
-2. The timeframe selected in the UCloud interface must match the timeframe that you applied for in your CLAAUDIA application.
+2. The timeframe (start date and duration) selected in the UCloud interface must match the timeframe that you applied for in your CLAAUDIA application.
 
 3. You must check the box for **Type 1 - AAU** resources.
 
@@ -128,17 +128,17 @@ The SDU resources are clearly marked for whether they are available before or af
 
 3. All projects with data classification levels over 1, must submit the WorkZone case number related to the registration of the research with GDPR sensitive data.
 
-    Some research groups have data processing agreements that apply to all sub-projects within the scope of those agreements. If your project is governed by a broader data processing agreement, you should submit the case number related to this GDPR registration in the second field, and leave the first field blank.
+    Some research groups have data processing agreements that apply to all sub-projects within the scope of those agreements. If your project is governed by a broader data processing agreement, you should submit the case number related to this GDPR registration in the **Separate data processing agreement** field, and leave the **WorkZone reference number** field blank.
 
 !!! info "GDPR registration of projects"
     
-    * At AAU, if your project includes any data with classifications levels 2 or higher, you are required to have your research registered for the inclusion of GDPR sensitive data with the Department of Grants and Contracts. Once registered you will be informed of the WorkZone case number that is allocated to your case.
+    * At AAU, if your project includes any data with classifications levels 2 or higher, you are required to have your research [registered for the inclusion of GDPR sensitive data with the Department of Grants and Contracts](https://aaudk.sharepoint.com/sites/persondata-ressourcer/SitePages/Registrations%20og%20reports%20(Online%20forms).aspx). Once registered you will be informed of the WorkZone case number that is allocated to your case.
     * We require the WorkZone case number.
     * Students are excluded from this registration process.
 
 !!! info "Motivation not necessary"
 
-    * All AAU applications are pre-approved in the CLAAUDIA application process. It is therefore not necessary to complete the **Introduction**
+    * All AAU UCloud applications are pre-approved by CLAAUDIA via the Application form that must be submitted from hpc.aau.dk. It is therefore not necessary to complete the **Introduction** field in the form.
 
 ![Add DeiC project number and WorkZone case number if relevant](/assets/img/UCloud/expanded-application-guide/ucloud-expanded-project-application-image-08.png){.standard_image_width}
 
@@ -147,6 +147,8 @@ The SDU resources are clearly marked for whether they are available before or af
 ---
 
 ### Step 10: Find your new project once approved
+
+Once you project is approved, you will be able to find your new project space by navigating to the UCloud landing page (by clicking the **UCloud icon** in the top-left corner of the page), and then clicking on the project workspace dropdown in the top-right corner of the landing page.
 
 ![Add DeiC project number and WorkZone case number if relevant](/assets/img/UCloud/expanded-application-guide/ucloud-expanded-project-application-image-09.png){.standard_image_width}
 
