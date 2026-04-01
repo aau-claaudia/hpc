@@ -13,6 +13,7 @@ Before applying for a project you must ensure that you understand the [classific
     
     * If you have data with classification 2 or above, you must follow the [Procedure for working with sensitive data on UCloud projects](https://hpc.aau.dk/ucloud/terms-and-conditions/#appendix)
     * At AAU, if your project includes any data with classifications levels 2 or higher, you are required to have your research [registered for the inclusion of GDPR sensitive data with the Department of Grants and Contracts](https://aaudk.sharepoint.com/sites/persondata-ressourcer/SitePages/Registrations%20og%20reports%20(Online%20forms).aspx). Once registered you will be informed of the WorkZone case number that is allocated to your case before you will be permitted a project on UCloud.
+    * Students are excluded from this registration process.
 
 
 ### Step 1: Open the project application page
@@ -133,6 +134,7 @@ The SDU resources are clearly marked for whether they are available before or af
     
     * At AAU, if your project includes any data with classifications levels 2 or higher, you are required to have your research registered for the inclusion of GDPR sensitive data with the Department of Grants and Contracts. Once registered you will be informed of the WorkZone case number that is allocated to your case.
     * We require the WorkZone case number.
+    * Students are excluded from this registration process.
 
 !!! info "Motivation not necessary"
 
