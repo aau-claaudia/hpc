@@ -3,9 +3,9 @@
     <h1 class="guide-page-header__title">Dictaphone</h1>
     <p><strong>Approved for data classification level</strong></p>
     <a href="https://www.security.aau.dk/data-classification" target="_blank" class="icon-container">
-      <span class="icon level-1" title="Click to see data-classification">0</span>
-      <span class="icon level-2" title="Click to see data-classification">1</span>
-      <span class="icon level-3" title="Click to see data-classification">2</span>
+      <span class="icon level-1" title="Click to see data-classification">1</span>
+      <span class="icon level-2" title="Click to see data-classification">2</span>
+      <span class="icon level-3" title="Click to see data-classification">3</span>
     </a>
   </div>
   <a class="guide-page-header__cta" href="https://docs.cloud.sdu.dk/Apps/dictaphone.html" target=_blank>
@@ -14,6 +14,12 @@
 </div>
 
 ---
+
+!!! warning "Important: Sensitive data must be processed in a project"
+
+    If you are working with sensitive data, you must run Dictaphone from a **dedicated project** in UCloud — **not** from *My Workspace*.
+
+    Using a dedicated project helps ensure proper access control and compliance with data protection requirements.
 
 ## What is Dictaphone?
 
