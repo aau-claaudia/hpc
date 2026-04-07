@@ -1,4 +1,3 @@
-
 <!-- !!! warning "Next Service window: 13th and 15th of May 2025" -->
 
 Four times a year, all of our platforms are subject to *service windows* where changes and security upgrades are implemented.

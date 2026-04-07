@@ -1,3 +1,8 @@
+---
+icon: lucide/info
+---
+
+
 # AI Cloud
 
 <div class="tag-container">

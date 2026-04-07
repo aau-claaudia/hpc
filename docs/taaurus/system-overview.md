@@ -1,4 +1,7 @@
-# TAAURUS system overview
+---
+icon: lucide/cog
+---
+
 
 Key characteristics:
 

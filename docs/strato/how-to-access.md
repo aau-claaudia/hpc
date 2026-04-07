@@ -1,3 +1,8 @@
+---
+icon: lucide/lock-keyhole-open
+---
+
+
 1. **Go to Strato web interface:** Strato servers are managed via the Strato web interface, to log go to the [Strato web interface](https://strato-new.claaudia.aau.dk/auth/login/?next=/project/){target="_blank} go to with your favourite browser.
 2. **Authenticate:** Ensure the Authenticate Using is set to WAYF and click Connect. You will be redirected to signon.aau.dk/... 
 3. **Log in:** You must login with your Aalborg University credentials, click LOGIN and now you should be redirected to the cloud dashboard.

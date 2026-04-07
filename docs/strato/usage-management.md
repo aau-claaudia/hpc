@@ -1,3 +1,7 @@
+---
+icon: lucide/server-cog
+---
+
 Effective from 16th September 2025
 > **Note:** Usage management as described on this page is only applicable to the **AAU Availability Zone**. 
 

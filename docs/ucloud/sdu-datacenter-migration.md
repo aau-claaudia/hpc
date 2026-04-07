@@ -1,3 +1,7 @@
+---
+icon: lucide/server-cog
+---
+
 # UCloud datacenter migration
 
 UCloud is moving to a new datacenter at SDU in Sønderborg. This improves capacity and service, but it also means some changes for you depending on where your data and projects are stored.

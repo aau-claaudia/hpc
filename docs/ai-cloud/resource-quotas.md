@@ -1,3 +1,8 @@
+---
+icon: lucide/key
+---
+
+
 ## The default quota
 
 We enforce a standard quota which allows each user to run 12 simultaneous jobs, with a maximum of 12 GPU's. An unlimited number of jobs can be queued.

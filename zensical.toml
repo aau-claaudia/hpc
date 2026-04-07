@@ -43,11 +43,13 @@ copyright = "&copy; 2026 CLAAUDIA"
 #
 # Read more: https://zensical.org/docs/setup/navigation/
 
+#repo_url = "https://serviceportal.aau.dk/serviceportal?id=sc_cat_item&sys_id=a05e2fb4c3434610f0f3041ad001310e"
+#repo_name = "Get support"
 
 nav = [
   {"Home" = [
     "index.md",
-    "service-windows.md",
+    {"Support" = "https://serviceportal.aau.dk/serviceportal?id=sc_cat_item&sys_id=a05e2fb4c3434610f0f3041ad001310e"},
     {"Tools" = [
       "hpc-decision-tree.md",
       "hpc-comparison-table.md",
@@ -55,10 +57,12 @@ nav = [
     ]},
   ]},
   {"Strato" = [
-    "strato/index.md",
+    {"About" = "strato/index.md"},
     "strato/how-to-access.md",
     "strato/terms-and-conditions.md",
     "strato/usage-management.md",
+    "strato/service-windows.md",
+    {"Support" = "https://serviceportal.aau.dk/serviceportal?id=sc_cat_item&sys_id=a05e2fb4c3434610f0f3041ad001310e"},
     {"Guides" = [
       {"Getting started" = [
         "strato/getting-started/index.md",
@@ -91,12 +95,14 @@ nav = [
     ]},
   ]},
   {"UCloud" = [
-    "ucloud/index.md",
+    {"About" = "ucloud/index.md"},
     "ucloud/how-to-access.md",
     "ucloud/terms-and-conditions.md",
     "ucloud/external-collaborator.md",
     "ucloud/providers.md",
     "ucloud/sdu-datacenter-migration.md",
+    "ucloud/service-windows.md",
+    {"Support" = "https://serviceportal.aau.dk/serviceportal?id=sc_cat_item&sys_id=a05e2fb4c3434610f0f3041ad001310e"},
     {"Guides" = [
       {"Getting started" = [
         "ucloud/guides/getting-started/before-you-begin.md",
@@ -115,16 +121,18 @@ nav = [
       ]},
     ]},
     {"Use cases" = [
-      "ucloud/use-cases/voice-modification-schizophrenia.md",
+      {"Voice modification for schizophrenia therapy" = "ucloud/use-cases/voice-modification-schizophrenia.md"},
     ]},
   ]},
   {"AI Cloud" = [
-    "ai-cloud/index.md",
+    {"About" = "ai-cloud/index.md"},
     "ai-cloud/how-to-access.md",
-    "ai-cloud/system-overview.md",
     "ai-cloud/terms-and-conditions.md",
+    "ai-cloud/system-overview.md",
     "ai-cloud/fair-usage.md",
     "ai-cloud/resource-quotas.md",
+    "ai-cloud/service-windows.md",
+    {"Support" = "https://serviceportal.aau.dk/serviceportal?id=sc_cat_item&sys_id=a05e2fb4c3434610f0f3041ad001310e"},
     {"Guides" = [
       {"Getting started" = [
         "ai-cloud/getting-started/index.md",
@@ -172,12 +180,14 @@ nav = [
     ]},
   ]},
   {"AI-LAB" = [
-    "ai-lab/index.md",
+    {"About" = "ai-lab/index.md"},
     "ai-lab/how-to-access.md",
+    "ai-lab/terms-and-conditions.md",
     "ai-lab/system-overview.md",
-    "ai-lab/troubleshooting.md",
-    "assets/terms-and-conditions-ai-lab.pdf",
+    "ai-lab/faqs.md",
     "ai-lab/fair-usage.md",
+    "ai-lab/service-windows.md",
+    {"Support" = "https://serviceportal.aau.dk/serviceportal?id=sc_cat_item&sys_id=a05e2fb4c3434610f0f3041ad001310e"},
     {"Guides" = [
       "ai-lab/guides/index.md",
       "ai-lab/guides/video-onboarding-guide.md",
@@ -220,12 +230,14 @@ nav = [
     ]},
   ]},
   {"TAAURUS" = [
-    "taaurus/index.md",
+    {"About" = "taaurus/index.md"},
     "taaurus/how-to-access.md",
-    "taaurus/faq.md",
-    "taaurus/try-taaurus.md",
+    "taaurus/terms-and-conditions.md",
     "taaurus/system-overview.md",
-    "https://serviceportal.aau.dk/now/nav/ui/classic/params/target/kb_view.do%3Fsys_kb_id%3D7de0759b83783650e1c9f665eeaad396%26sysparm_rank%3D2%26sysparm_tsqueryId%3D09f45a0d8355f290e1c9f665eeaad392",
+    "taaurus/faqs.md",
+    "taaurus/get-a-demo.md",
+    "taaurus/service-windows.md",
+    {"Support" = "https://serviceportal.aau.dk/serviceportal?id=sc_cat_item&sys_id=a05e2fb4c3434610f0f3041ad001310e"},
     {"Guides" = [
       "taaurus/guides/login.md",
       "taaurus/guides/navigating-taaurus.md",
@@ -240,10 +252,11 @@ nav = [
     ]},
   ]},
   {"External HPC" = [
-    "external-hpc/index.md",
+    {"About" = "external-hpc/index.md"},
     "external-hpc/deic-resources.md",
     "external-hpc/eurohpc-resources.md",
     "external-hpc/lumi.md",
+    {"Support" = "https://serviceportal.aau.dk/serviceportal?id=sc_cat_item&sys_id=a05e2fb4c3434610f0f3041ad001310e"},
   ]},
 ]
 
@@ -378,7 +391,7 @@ features = [
     # When section index pages are enabled, documents can be directly attached
     # to sections, which is particularly useful for providing overview pages.
     # https://zensical.org/docs/setup/navigation/#section-index-pages
-    "navigation.indexes",
+    #"navigation.indexes",
 
     # When instant navigation is enabled, clicks on all internal links will be
     # intercepted and dispatched via XHR without fully reloading the page.
@@ -464,7 +477,8 @@ logo = "assets/img/aau-logo-512x512.png"
 # - https://zensical.org/docs/setup/logo-and-icons
 # - https://github.com/zensical/ui/tree/master/dist/.icons
 # ----------------------------------------------------------------------------
-#[project.theme.icon]
+[project.theme.icon]
+#repo = "lucide/message-circle-question-mark"
 #logo = "lucide/smile"
 
 # ----------------------------------------------------------------------------
@@ -503,15 +517,19 @@ toggle.name = "Switch to light mode"
 generator = false
 
 [[project.extra.social]]
-icon = "material/message-question-outline"
+icon = "lucide/message-circle-question-mark"
 link = "https://serviceportal.aau.dk/serviceportal?id=sc_cat_item&sys_id=a05e2fb4c3434610f0f3041ad001310e"
 name = "Get support"
 
-
+[project.markdown_extensions.pymdownx.snippets]
+base_path = ["docs"]
+check_paths = true
+[project.markdown_extensions.admonition]
+[project.markdown_extensions.pymdownx.details]
+[project.markdown_extensions.pymdownx.superfences]
 [project.markdown_extensions.abbr]
 [project.markdown_extensions.attr_list]
 [project.markdown_extensions.pymdownx.emoji]
 emoji_index = "zensical.extensions.emoji.twemoji" 
 emoji_generator = "zensical.extensions.emoji.to_svg"
 
-[project.markdown_extensions.pymdownx.snippets]

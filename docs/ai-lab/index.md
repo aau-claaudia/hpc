@@ -1,3 +1,8 @@
+---
+icon: lucide/info
+---
+
+
 # AI-LAB
 
 <div class="tag-container">

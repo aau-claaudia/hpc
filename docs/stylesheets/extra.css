@@ -1,3 +1,10 @@
+
+:root {
+  --button-blue: #007bff;
+  --button-blue-dark: #0069d9;
+}
+
+
 .announce-bar {
   display: flex;
   flex-wrap: wrap;
@@ -39,4 +46,38 @@
 
 .announce-bar__link:hover {
   opacity: 0.85;
+}
+
+
+/* Custom admonition styles */
+.md-typeset .admonition.info, .md-typeset details.info {
+  background-color: #448aff1a !important;
+}
+.md-typeset .info>.admonition-title:before, .md-typeset .info>summary:before {
+  background-color: #448aff !important;
+}
+
+.md-typeset .admonition.question, .md-typeset details.question {
+  background-color: #00b0ff1a !important;
+}
+.md-typeset .question>.admonition-title:before, .md-typeset .question>summary:before {
+  background-color: #00b0ff !important;
+}
+
+/* Support icon */
+.md-nav__link[href*="serviceportal?id=sc_cat_item&sys_id=a05e2fb4c3434610f0f3041ad001310e"] .md-ellipsis {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+.md-nav__link[href*="serviceportal?id=sc_cat_item&sys_id=a05e2fb4c3434610f0f3041ad001310e"] .md-ellipsis::before {
+  content: "";
+  width: 0.95rem;
+  height: 0.95rem;
+  flex: 0 0 0.95rem;
+  /* Icon follows text color */
+  opacity: .5;
+  background-color: currentColor;
+  -webkit-mask: url("/assets/icons/message-circle-question-mark.svg") no-repeat center / contain;
+  mask: url("/assets/icons/message-circle-question-mark.svg") no-repeat center / contain;
 }

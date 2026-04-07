@@ -1,12 +1,11 @@
+---
+icon: lucide/info
+---
+
+
 # TAAURUS
 
-[:material-check-circle-outline: SUND]("Indicates that the platform is only for the Faculty of Medicine (SUND) researchers."){ .md-button .md-button--primary }
-[:material-check-circle-outline: SUND]("Indicates that the platform is only for the Faculty of Medicine (SUND) researchers."){ .md-button .md-button--primary }
-[:material-check-circle-outline: SUND]("Indicates that the platform is only for the Faculty of Medicine (SUND) researchers."){ .md-button .md-button--primary }
-[:material-check-circle-outline: SUND]("Indicates that the platform is only for the Faculty of Medicine (SUND) researchers."){ .md-button .md-button--primary }
-[:material-check-circle-outline: SUND]("Indicates that the platform is only for the Faculty of Medicine (SUND) researchers."){ .md-button .md-button--primary }
-[:material-check-circle-outline: SUND]("Indicates that the platform is only for the Faculty of Medicine (SUND) researchers."){ .md-button .md-button--primary }
-[:material-check-circle-outline: SUND]("Indicates that the platform is only for the Faculty of Medicine (SUND) researchers."){ .md-button .md-button--primary }
+[SUND :material-check:]("Indicates that the platform is only for the Faculty of Medicine (SUND) researchers."){ .hpc-tag }
 
 <div class="tag-container">
     <div class="tag-item">

@@ -1,3 +1,8 @@
+---
+icon: lucide/info
+---
+
+
 # Strato
 
 <div class="tag-container">

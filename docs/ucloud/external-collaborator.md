@@ -1,3 +1,6 @@
+---
+icon: lucide/users
+---
 
 If your UCloud project involves an external collaborator who does not have standard WAYF access to UCloud, you need to follow the procedure below.
 

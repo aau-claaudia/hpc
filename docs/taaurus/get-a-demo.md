@@ -1,4 +1,6 @@
-# Try TAAURUS
+---
+icon: lucide/search-check
+---
 
 You can try TAAURUS before investing time in applying for a project. A **demo environment** gives you access to a simulated instance with the same default applications as a regular TAAURUS instance, plus preloaded test data so you can explore the platform.
 
