@@ -94,8 +94,13 @@ nav = [
       ]},
     ]},
   ]},
+
   {"UCloud" = [
     {"About" = "ucloud/index.md"},
+    {"How to access" = [
+      "ucloud/how-to-access.md",
+      "ucloud/expanded-application-guide.mdd",
+    ]},
     "ucloud/how-to-access.md",
     "ucloud/terms-and-conditions.md",
     "ucloud/external-collaborator.md",
@@ -257,6 +262,23 @@ nav = [
     "external-hpc/eurohpc-resources.md",
     "external-hpc/lumi.md",
     {"Support" = "https://serviceportal.aau.dk/serviceportal?id=sc_cat_item&sys_id=a05e2fb4c3434610f0f3041ad001310e"},
+  ]},
+  {"Mistral" = [
+    {"About" = "mistral/index.md"},
+    "mistral/how-to-access.md",
+    "mistral/terms-and-conditions.md",
+    {"Support" = "mistral/support.md"},
+    {"Guides" = [
+      "mistral/guides/index.md",
+      {"Le Chat" = [
+        "mistral/guides/le-chat/index.md",
+        "mistral/guides/le-chat/getting-started.md",
+      ]},
+      {"AI Studio" = [
+        "mistral/guides/ai-studio/index.md",
+        "mistral/guides/ai-studio/getting-started.md",
+      ]},
+    ]},
   ]},
 ]
 
