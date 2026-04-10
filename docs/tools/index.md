@@ -7,6 +7,16 @@ icon: lucide/layout-grid
 
 <div class="grid cards" markdown>
 
+-   __Mistral__
+
+    Generative AI services for AAU researchers, including Le Chat and AI Studio for browser-based and API-driven workflows.
+
+    ---
+
+    ![Mistral](/assets/img/mistral/mistral-feature-1.png)
+
+    [:octicons-arrow-right-24: Mistral](/mistral/)
+
 -   __HPC Decision Tree__
 
     Use this guide to identify the HPC platform that best matches your project requirements and research workflows.
