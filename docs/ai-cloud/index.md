@@ -1,5 +1,9 @@
 ---
 icon: lucide/info
+hide:
+    - toc
+    - path
+    - footer
 ---
 
 

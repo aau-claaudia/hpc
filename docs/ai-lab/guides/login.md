@@ -1,7 +1,3 @@
----
-comments: true
----
-
 # Logging into AI-LAB
 
 This guide will help you connect to AI-LAB using SSH (Secure Shell). SSH is a secure way to access remote computers over a network.

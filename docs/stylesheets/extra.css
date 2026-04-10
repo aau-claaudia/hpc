@@ -63,14 +63,19 @@
 .md-typeset .question>.admonition-title:before, .md-typeset .question>summary:before {
   background-color: #00b0ff !important;
 }
-
-/* Support icon */
-.md-nav__link[href*="serviceportal?id=sc_cat_item&sys_id=a05e2fb4c3434610f0f3041ad001310e"] .md-ellipsis {
+/* Custom icons */
+.md-nav__link[href*="serviceportal?id=sc_cat_item&sys_id=a05e2fb4c3434610f0f3041ad001310e"] .md-ellipsis,
+.md-nav__link[href*="hpc-decision-tree"] .md-ellipsis,
+.md-nav__link[href*="https://www.researcher.aau.dk/contact/claaudia"] .md-ellipsis,
+.md-nav__link[href*="https://serviceportal.aau.dk/kb/en/taaurus-terms-of-use?sys_kb_id=7de0759b83783650e1c9f665eeaad396&id=kb_article_view&sysparm_rank=3&sysparm_tsqueryId=efed437733a1fe50d95cab273e5c7b19"] .md-ellipsis {
   display: inline-flex;
   align-items: center;
   gap: 0.6rem;
 }
-.md-nav__link[href*="serviceportal?id=sc_cat_item&sys_id=a05e2fb4c3434610f0f3041ad001310e"] .md-ellipsis::before {
+.md-nav__link[href*="serviceportal?id=sc_cat_item&sys_id=a05e2fb4c3434610f0f3041ad001310e"] .md-ellipsis::before,
+.md-nav__link[href*="hpc-decision-tree"] .md-ellipsis::before,
+.md-nav__link[href*="https://www.researcher.aau.dk/contact/claaudia"] .md-ellipsis::before,
+.md-nav__link[href*="https://serviceportal.aau.dk/kb/en/taaurus-terms-of-use?sys_kb_id=7de0759b83783650e1c9f665eeaad396&id=kb_article_view&sysparm_rank=3&sysparm_tsqueryId=efed437733a1fe50d95cab273e5c7b19"] .md-ellipsis::before {
   content: "";
   width: 0.95rem;
   height: 0.95rem;
@@ -78,8 +83,22 @@
   /* Icon follows text color */
   opacity: .5;
   background-color: currentColor;
+}
+.md-nav__link[href*="serviceportal?id=sc_cat_item&sys_id=a05e2fb4c3434610f0f3041ad001310e"] .md-ellipsis::before {
   -webkit-mask: url("/assets/icons/message-circle-question-mark.svg") no-repeat center / contain;
   mask: url("/assets/icons/message-circle-question-mark.svg") no-repeat center / contain;
+}
+.md-nav__link[href*="https://www.researcher.aau.dk/contact/claaudia"] .md-ellipsis::before {
+  -webkit-mask: url("/assets/icons/users.svg") no-repeat center / contain;
+  mask: url("/assets/icons/users.svg") no-repeat center / contain;
+}
+.md-nav__link[href*="https://serviceportal.aau.dk/kb/en/taaurus-terms-of-use?sys_kb_id=7de0759b83783650e1c9f665eeaad396&id=kb_article_view&sysparm_rank=3&sysparm_tsqueryId=efed437733a1fe50d95cab273e5c7b19"] .md-ellipsis::before {
+  -webkit-mask: url("/assets/icons/scale.svg") no-repeat center / contain;
+  mask: url("/assets/icons/scale.svg") no-repeat center / contain;
+}
+.md-nav__link[href*="hpc-decision-tree"] .md-ellipsis::before {
+  -webkit-mask: url("/assets/icons/network.svg") no-repeat center / contain;
+  mask: url("/assets/icons/network.svg") no-repeat center / contain;
 }
 
 .service-window-next-date {
@@ -267,4 +286,40 @@
 
 .md-header__source {
   display: none !important;
+}
+
+.grid.cards.three {
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 12rem), 1fr));
+}
+
+/* Homepage */
+.home-actions .md-typeset p,
+.home-actions > p {
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
+}
+
+.md-typeset .home-platform-table-wrap table {
+  width: 100%;
+  display: table;
+}
+
+/* Homepage table column sizing */
+.md-typeset .home-platform-table-wrap table th:nth-child(1),
+.md-typeset .home-platform-table-wrap table td:nth-child(1) {
+  width: 16%;
+}
+.md-typeset .home-platform-table-wrap table th:nth-child(2),
+.md-typeset .home-platform-table-wrap table td:nth-child(2) {
+  width: 42%;
+}
+.md-typeset .home-platform-table-wrap table th:nth-child(3),
+.md-typeset .home-platform-table-wrap table td:nth-child(3) {
+  width: 14%;
+}
+.md-typeset .home-platform-table-wrap table th:nth-child(4),
+.md-typeset .home-platform-table-wrap table td:nth-child(4) {
+  width: 28%;
+}
+.md-typeset .home-platform-table-wrap .md-typeset__table {
+  width: 100%;
 }

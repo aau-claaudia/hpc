@@ -1,5 +1,9 @@
 ---
 icon: lucide/info
+hide:
+    - toc
+    - path
+    - footer
 ---
 
 # Strato
@@ -44,8 +48,7 @@ Not for storage :lucide-ban:
 
 </div>
 
-
-# Introduction
+## Introduction
 
 Strato is a cluster of hardware that is virtualised to create instances that essentially function as a regular computer environment. Strato Instances are virtual machines, that can be launched by the user when they need it. When the instance has been created, it can be accessed from a terminal application on the user's local computer. 
 

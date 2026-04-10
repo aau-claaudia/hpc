@@ -72,5 +72,7 @@ icon: lucide/layout-grid
 
     Explore additional software and services in the [AAU Software and Tools page](https://www.researcher.aau.dk/guides/research-data-and-software/software-and-tools).
 
+    [:octicons-arrow-right-24: Additional tools](https://www.researcher.aau.dk/guides/research-data-and-software/software-and-tools)
+
 
 </div>

@@ -1,5 +1,5 @@
 ---
-icon: lucide/map-pinned
+icon: lucide/cpu
 ---
 
 # DeiC resources

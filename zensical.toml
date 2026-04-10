@@ -33,7 +33,14 @@ site_url = "https://www.hpc.aau.dk/"
 # fragment.
 #
 # Read more: https://zensical.org/docs/setup/basics/#copyright
-copyright = "&copy; 2026 CLAAUDIA"
+#copyright = """
+#  Copyright &copy; 2026 CLAAUDIA –
+#  <a href="#__consent">Change cookie settings</a>
+#"""
+
+copyright = """
+  Copyright &copy; 2026 CLAAUDIA
+"""
 
 # Zensical supports both implicit navigation and explicitly defined navigation.
 # If you decide not to define a navigation here then Zensical will simply
@@ -49,6 +56,11 @@ copyright = "&copy; 2026 CLAAUDIA"
 nav = [
   {"Home" = [
     "index.md",
+    {"About CLAAUDIA" = "https://www.researcher.aau.dk/contact/claaudia"},
+    "ideas.md",
+    "hpc-comparison-table.md",
+    {"HPC Decision Tree" = "hpc-decision-tree"},
+    {"Support" = "https://serviceportal.aau.dk/serviceportal?id=sc_cat_item&sys_id=a05e2fb4c3434610f0f3041ad001310e"},
   ]},
   {"Strato" = [
     {"About" = "strato/index.md"},
@@ -226,7 +238,7 @@ nav = [
   {"TAAURUS" = [
     {"About" = "taaurus/index.md"},
     "taaurus/how-to-access.md",
-    "taaurus/terms-and-conditions.md",
+    {"Terms and conditions" = "https://serviceportal.aau.dk/kb/en/taaurus-terms-of-use?sys_kb_id=7de0759b83783650e1c9f665eeaad396&id=kb_article_view&sysparm_rank=3&sysparm_tsqueryId=efed437733a1fe50d95cab273e5c7b19"},
     "taaurus/system-overview.md",
     "taaurus/faqs.md",
     "taaurus/get-a-demo.md",
@@ -472,7 +484,7 @@ features = [
     # When navigation integration for the table of contents is enabled, it is
     # always rendered as part of the navigation sidebar on the left.
     # https://zensical.org/docs/setup/navigation/#navigation-integration
-    #"toc.integrate",
+    # "toc.integrate",
 ]
 
 # ----------------------------------------------------------------------------
@@ -531,6 +543,11 @@ toggle.name = "Switch to light mode"
 generator = false
 
 [[project.extra.social]]
+icon = "material/linkedin"
+link = "https://www.linkedin.com/company/90798480"
+name = "Visit our LinkedIn"
+
+[[project.extra.social]]
 icon = "lucide/message-circle-question-mark"
 link = "https://serviceportal.aau.dk/serviceportal?id=sc_cat_item&sys_id=a05e2fb4c3434610f0f3041ad001310e"
 name = "Get support"
@@ -567,3 +584,16 @@ pygments_lang_class = true
 [project.markdown_extensions.pymdownx.keys]
 [project.markdown_extensions.pymdownx.mark]
 [project.markdown_extensions.pymdownx.tilde]
+
+[project.markdown_extensions.toc]
+toc_depth = 2
+
+
+#[project.extra.consent]
+#title = "Cookie consent"
+#description = """
+#    We use cookies to recognize your repeated visits and preferences, as well
+#    as to measure the effectiveness of our documentation and whether users
+#    find what they're searching for. With your consent, you're helping us to
+#    make our documentation better.
+#""" 

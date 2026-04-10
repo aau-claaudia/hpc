@@ -1,5 +1,5 @@
 ---
-icon: lucide/cpu
+icon: lucide/globe
 ---
 
 # EuroHPC resources

@@ -1,4 +1,5 @@
 ---
+icon: lucide/grid-2x2-check
 hide:
     - navigation
     - toc

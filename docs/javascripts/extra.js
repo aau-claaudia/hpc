@@ -74,3 +74,32 @@ document.addEventListener("DOMContentLoaded", updateServiceWindowDates);
 if (window.document$?.subscribe) {
   window.document$.subscribe(updateServiceWindowDates);
 }
+
+/**
+ * Open external (other-origin) http(s) links in a new tab. Skips links that
+ * already have a target, anchors, mailto, tel, and javascript URLs.
+ */
+function setExternalLinksNewTab() {
+  const originHost = window.location.hostname;
+  document.querySelectorAll('a[href]:not([target])').forEach((anchor) => {
+    const href = anchor.getAttribute("href");
+    if (!href || href.startsWith("#")) return;
+    let url;
+    try {
+      url = new URL(href, window.location.origin);
+    } catch {
+      return;
+    }
+    if (url.protocol !== "http:" && url.protocol !== "https:") return;
+    if (url.hostname === originHost) return;
+    anchor.target = "_blank";
+    const extra = "noopener noreferrer";
+    const existing = (anchor.getAttribute("rel") || "").trim();
+    anchor.setAttribute("rel", existing ? `${existing} ${extra}` : extra);
+  });
+}
+
+document.addEventListener("DOMContentLoaded", setExternalLinksNewTab);
+if (window.document$?.subscribe) {
+  window.document$.subscribe(setExternalLinksNewTab);
+}
