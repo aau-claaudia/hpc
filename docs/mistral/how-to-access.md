@@ -6,11 +6,6 @@ icon: lucide/lock-keyhole-open
 Access to Mistral is granted in two stages — the base login works for both Le Char and AI Studio interfaces, while API key access requires an additional application.
 
 
-!!! info "Not sure which product to use?"
-    See [When to use Le Chat vs AI Studio](/mistral/le-chat-vs-ai-studio/) for a full comparison of Le Chat and AI Studio.
-
----
-
 ## Access Levels
 
 Understanding the difference between access levels helps you request the right one and use the service correctly.
