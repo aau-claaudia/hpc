@@ -99,4 +99,4 @@ UCloud is a HPC research platform, engineered to provide high-performance comput
 </div>
 
 !!! tip "Ideas for new UCloud apps?"
-    If you have an idea for a new application or improvement on UCloud, share it on the [**Ideas** page](/ideas/) so we can see community needs and prioritise development.
+    If you have an idea for a new application or improvement on UCloud, share it on the [**Ideas page**](/ideas/) so we can see community needs and prioritise development.
