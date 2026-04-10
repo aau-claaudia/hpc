@@ -57,7 +57,7 @@ hide:
 
 ## AAU HPC overview
 
-Choose among AAU-managed platforms for virtual machines, GPU computing, student projects, and sensitive-data workflows.
+Choose among **AAU-managed platforms** for virtual machines, GPU computing, student projects, and sensitive-data workflows.
 
 <div class="home-platform-table-wrap" markdown>
 
