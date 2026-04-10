@@ -58,8 +58,7 @@ nav = [
     "index.md",
     {"About CLAAUDIA" = "https://www.researcher.aau.dk/contact/claaudia"},
     "ideas.md",
-    "hpc-comparison-table.md",
-    {"HPC Decision Tree" = "hpc-decision-tree"},
+    "tools.md,
     {"Support" = "https://serviceportal.aau.dk/serviceportal?id=sc_cat_item&sys_id=a05e2fb4c3434610f0f3041ad001310e"},
   ]},
   {"Strato" = [
@@ -280,9 +279,6 @@ nav = [
     "external-hpc/eurohpc-resources.md",
     "external-hpc/lumi.md",
     {"Support" = "https://serviceportal.aau.dk/serviceportal?id=sc_cat_item&sys_id=a05e2fb4c3434610f0f3041ad001310e"},
-  ]},
-  {"Tools" = [
-    {"Tools" = "tools/index.md"}
   ]}
 ]
 
