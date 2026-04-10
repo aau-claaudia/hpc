@@ -1,3 +1,7 @@
+---
+icon: lucide/message-circle-question-mark
+---
+
 # Support
 
 Support on Mistral is seperated into CLAAUDIA and Mistral support. In the section below you can read more about who to request support based on the nature of your question. 

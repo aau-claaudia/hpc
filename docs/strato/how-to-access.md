@@ -39,4 +39,4 @@ Strato Projects are only available to all researchers. Each project requires the
     If you are going to use a machine with multiple GPUs you must benchmark the performance of your code by resizing between single and multiple GPU flavours and comparing the performance.
 
 
-[Access and complete the project request form for Strato Projects](https://forms.office.com/pages/responsepage.aspx/?id=Sbrb9QbOb0msPgzxQ2HZNEdKMbCNz_9Lom8_yaZURCNUNkE1NEYxMkw4UllRVllZTkFLVjRNUzJUTCQlQCN0PWcu){target="_blank}
+[Access and complete the project request form for Strato Projects](https://forms.office.com/pages/responsepage.aspx/?id=Sbrb9QbOb0msPgzxQ2HZNEdKMbCNz_9Lom8_yaZURCNUNkE1NEYxMkw4UllRVllZTkFLVjRNUzJUTCQlQCN0PWcu){target="_blan .md-button .md-button--primary}

@@ -1,3 +1,10 @@
+---
+icon: lucide/paw-print
+---
+
+
+# LUMI
+
 LUMI is a supercomputer located in Kajaani, Finland and ranks among the world's Top 10 supercomputers according to the [Top 500 list](https://top500.org). The true power of the system lies in it's oppurtunity to scale jobs massively, but we also want to encourage our users to experiment with the system, and to think of it as an extension of the compute capacity available to them as researchers at AAU.
 
 

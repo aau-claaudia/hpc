@@ -1,3 +1,5 @@
+# Before you begin
+
 Before attempting to log in to AI Cloud, please ensure that you have completed the following:
 
 ### 1. Review our terms and conditions and fair usage guidelines

@@ -1,35 +1,24 @@
-| Feature | Strato | UCloud | AI Cloud | AI-LAB |
-| --- | --- | --- | --- | --- |
-| Available to researchers | :material-check: | :material-check: | :material-check: | - |
-| Available to students | - | - | - | :material-check: |
-| Sensitive data | - | :material-check: | - | - |
-| Ideal for | Model training, simulations | First-time users, data processing | Deep learning, large datasets | Student projects, deep learning |
-| CPU processing | :material-check: | :material-check: | - | - |
-| GPU processing | :material-check: | :material-check: | :material-check: | :material-check: |
-| Unlimitted GPU usage | - | - | :material-check: | :material-check: |
-| Access interface | Terminal | Web browser | Terminal | Terminal |
-| Possible to add GUI | :material-check: | :material-check: | - | - |
-| Working interactively | :material-check:  | :material-check:  | - | - |
-| Pre-installed apps | - | :material-check: | - | :material-check: |
-| Recommended skills | Linux, SSH | None | Linux, Containerization | Linux, Containerization |
-| Collaboration friendly | :material-check: | :material-check: | :material-check: | :material-check: |
+---
+hide:
+    - navigation
+    - toc
+    - path
+    - footer
+---
 
-<!-- OLD FROM WHEN STUDENTS WERE ALLOWED
-| Feature | Strato | UCloud | AI Cloud | AI-LAB |
-| --- | --- | --- | --- | --- |
-| Available to researchers | :material-check: | :material-check: | :material-check: | - |
-| Available to students | :material-check: (CPU processing) | :material-check: | - | :material-check: |
-| Sensitive data | - | :material-check: | - | - |
-| Ideal for | Model training, simulations | First-time users, data processing | Deep learning, large datasets | Student projects, deep learning |
-| CPU processing | :material-check: | :material-check: | - | - |
-| GPU processing | :material-check: | :material-check: | :material-check: | :material-check: |
-| Unlimitted GPU usage | - | - | :material-check: | :material-check: |
-| Access interface | Terminal | Web browser | Terminal | Terminal |
-| Possible to add GUI | :material-check: | :material-check: | - | - |
-| Working interactively | :material-check:  | :material-check:  | - | - |
-| Pre-installed apps | - | :material-check: | - | :material-check: |
-| Recommended skills | Linux, SSH | None | Linux, Containerization | Linux, Containerization |
-| Collaboration friendly | :material-check: | :material-check: | :material-check: | :material-check: |
+# HPC Comparison Table
 
-
- -->
+| Feature | Strato | UCloud | AI Cloud | AI-LAB | TAAURUS |
+| --- | --- | --- | --- | --- | --- |
+| Available to researchers | :material-check: | :material-check: | :material-check: | - | :material-check: |
+| Available to students | - | - | - | :material-check: | - |
+| Supports sensitive data | - | :material-check: | - | - | :material-check: |
+| Best suited for | Virtual machines, simulations, flexible setups | Beginner-friendly workflows, apps, data processing | Deep learning, large GPU workloads, batch jobs | Student projects, coursework, deep learning | Sensitive data workflows, secure GPU analysis |
+| CPU processing | :material-check: | :material-check: | - | -- | :material-check: |
+| GPU processing | :material-check: | :material-check: | :material-check: | :material-check: | :material-check: |
+| High or dedicated GPU availability | - | - | :material-check: | :material-check: | :material-check: |
+| Access interface | Terminal | Web browser | Terminal | Terminal | RDP (Windows server) |
+| Interactive work support | :material-check: | :material-check: | - | - | :material-check: |
+| Pre-installed applications | - | :material-check: | - | :material-check: | :material-check: |
+| Recommended skills | Linux, SSH | Minimal | Linux, containers, job scheduling | Linux, containers, job scheduling | Basic Linux, secure data handling |
+| Collaboration support | :material-check: | :material-check: | :material-check: | :material-check: | :material-check: |

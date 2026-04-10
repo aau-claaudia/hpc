@@ -81,3 +81,190 @@
   -webkit-mask: url("/assets/icons/message-circle-question-mark.svg") no-repeat center / contain;
   mask: url("/assets/icons/message-circle-question-mark.svg") no-repeat center / contain;
 }
+
+.service-window-next-date {
+  background: #211a52;
+  color: white;
+  font-weight: bold;
+  border: 2px solid #211a52;
+  border-radius: 4px;
+  padding: 2px 8px;
+  display: inline-block;
+}
+
+/* Page tags */
+.hpc-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  background: rgba(0, 0, 0, 0.04);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  padding: 5px 9px;
+  border-radius: 5px;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1;
+  margin: 0rem;
+  text-decoration: none;
+  color: inherit;
+}
+.tag-container {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+.lucide-check {
+  color: green;
+}
+.lucide-ban {
+  color: red;
+}
+
+
+.md-typeset .grid>p {
+  border: .05rem solid var(--md-default-fg-color--lightest);
+  border-radius: .4rem;
+  display: block;
+  margin: 0;
+  padding: .8rem;
+  transition: background-color .25s, border .25s, box-shadow .25s;
+}
+.md-typeset .grid>p>a {
+  color: rgba(0, 0, 0, 0.87);
+}
+
+
+/* data classification icons */
+.icon-container {
+  display: flex;
+  gap: 15px;
+  text-decoration: none !important;
+}
+
+.icon {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 50%;
+}
+
+.level-0 {
+  background-color: green;
+}
+
+.level-1 {
+  background-color: blue;
+}
+
+.level-2 {
+  background-color: orange;
+}
+
+.level-3 {
+  background-color: red;
+}
+
+
+.icon-container {
+  display: flex; /* Aligns icons in a row */
+  gap: 10px; /* Optional: Adds space between the icons */
+  text-decoration: none; /* Removes underline from the link */
+}
+
+.icon-container .icon:hover::after {
+  content: attr(title);
+  position: absolute;
+  top: 35px;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+  color: white;
+  padding: 5px;
+  border-radius: 4px;
+  white-space: nowrap;
+  font-size: 10px;
+  z-index: 1;
+}
+
+
+/* Shared guide page header with CTA button */
+.guide-page-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+.guide-page-header__title {
+  margin: 0;
+  font-weight: 600;
+  font-size: 40px;
+  color: var(--font-color);
+}
+.guide-page-header__cta,
+.md-typeset .guide-page-header__cta {
+  background-color: var(--button-blue);
+  color: #fff !important;
+  padding: 8px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.6rem;
+  box-shadow: 0 1px 2px rgba(23,95,180,0.10);
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+.guide-page-header__cta:hover {
+  background-color: var(--button-blue-dark);
+  color: #fff;
+  box-shadow: 0 3px 8px rgba(23,95,180,0.25);
+}
+.guide-page-header div p {
+  margin-top: 0;
+}
+
+/* Custom formatting for displaying nano */
+
+.fixed-width-4-nano pre > code {
+  display: block !important;
+  overflow-x: auto;
+}
+
+.fixed-width-4-nano pre > nav {
+  display: none;
+}
+
+
+/* Style for the first line */
+.fixed-width-4-nano pre > code::first-line {
+  background-color: black; /* Black background */
+  color: white;           /* White text */
+  box-sizing: content-box;
+}
+
+.fixed-width-4-nano pre > code::before {
+  content: none; /* Hides the pseudo-element if it's added as icons */
+}
+
+/* Machine name highlighting */
+.machine-name {
+  font-family: "Roboto Mono", sans-serif;
+  font-size: 1.05em;
+  font-weight: 600;
+  color: var(--aau-primary);
+  background-color: rgba(33, 26, 81, 0.06);
+  padding: 2px 6px;
+  border-radius: 3px;
+  border: 1px solid rgba(33, 26, 81, 0.15);
+  display: inline-block;
+  margin: 0 1px;
+}
+
+.md-header__source {
+  display: none !important;
+}

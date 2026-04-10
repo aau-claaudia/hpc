@@ -1,4 +1,4 @@
 ---
-template: hpc-decision-tree-v2.html
+template: hpc-decision-tree.html
 ---
 

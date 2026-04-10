@@ -1,4 +1,4 @@
-##### High-Performance Computing systems at AAU are subjects limited by the ever-changing availability of the resources, dependant on the users. Thus, having resources granted does not consequently mean that it is possible to use them right away. Learn about the guidelines and rules to ensure a smooth and efficient computing experience.
+High-Performance Computing systems at AAU are subjects limited by the ever-changing availability of the resources, dependant on the users. Thus, having resources granted does not consequently mean that it is possible to use them right away. Learn about the guidelines and rules to ensure a smooth and efficient computing experience.
 
 !!! info "General principles and definitions of terms"
     As a general principle, the HPC resources are intended to provide additional computational power to AAU researchers and staff.

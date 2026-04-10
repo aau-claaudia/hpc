@@ -1,86 +1,140 @@
 ---
 keywords: Home
 title: Home
+hide:
+    - navigation
+    - toc
+    - path
+    - footer
 ---
 
-<section class="hero">
-    <div class="hero-inner">
-        <div class="hero-left">
-            <h1>High-performance computing at AAU</h1>
-        </div>
-        <div class="hero-right"></div>
-    </div>
-</section>
+# High-performance computing at AAU
 
-Explore the high-performance computing (HPC) resources available for AAU students and researchers, how they work and what they can be used for in your projects. HPC provides the necessary power to train machine learning models, run simulations, perform data analysis, and conduct modeling, among other tasks
+AAU High-Performance Computing (HPC) gives researchers and students access to advanced computing platforms for large-scale analysis, simulations, and AI workloads.
+
+<div class="grid cards" markdown>
+
+-   :lucide-sparkles:{ .lg .middle } __Start with guidance__
+
+    ---
+
+    Not sure where to begin? Use the guided flow to identify the most suitable platform for your workload.
+
+    [:lucide-git-fork: HPC Decision Tree Quiz](/hpc-decision-tree/)
+
+-   :lucide-table:{ .lg .middle } __Compare options__
+
+    ---
+
+    Compare capabilities, access model, and use cases across all HPC platforms in one overview.
+
+    [:lucide-list-checks: HPC Comparison Table](/hpc-comparison-table/)
+
+-   :lucide-life-buoy:{ .lg .middle } __Get support__
+
+    ---
+
+    Need help choosing a platform or planning your setup? Contact CLAAUDIA for guidance and support.
+
+    [:lucide-message-circle-question-mark: Contact support](https://serviceportal.aau.dk/serviceportal?id=sc_cat_item&sys_id=a05e2fb4c3434610f0f3041ad001310e)
+
+</div>
+
+!!! info "Service status and planning"
+    - Check upcoming maintenance in [Service windows](/service-windows/).
+    - See access and onboarding details in each platform's **How to access** page.
+    - Use [Support](https://serviceportal.aau.dk/serviceportal?id=sc_cat_item&sys_id=a05e2fb4c3434610f0f3041ad001310e) for help with platform selection, setup, and troubleshooting.
 
 ## AAU HPC
 
-Find the most suitable system for your project. You can also complete the [HPC Decision Tree Quiz](/hpc-decision-tree/) or check out the [HPC Comparison Table](/hpc-comparison-table/) to assist you in exploring the HPC options fitting your specific needs.
+Choose among AAU-managed platforms for virtual machines, GPU computing, student projects, and sensitive-data workflows.
 
-<div class="custom-grid-4">
-    <div class="custom-grid-item">
-        <div class="label label-researcher">For researchers</div>
-        <h2>Strato</h2>
-        <p class="custom-grid-feature">Strato provides virtual machines users can launch as needed, accessible from a terminal on their local computer.</p>
-        <a href="/strato/"><i class="bi bi-info-circle"></i>About Strato</a>
-        <a href="/strato/how-to-access/"><i class="bi bi-key"></i>How to access</a>
-        <a href="https://forms.office.com/e/r1u0QXH4KJ"><i class="bi bi-file-earmark-text"></i>Application form</a>
-    </div>
-    <div class="custom-grid-item">
-        <div class="label label-researcher">For researchers</div>
-        <h2>UCloud</h2>
-        <p class="custom-grid-feature">UCloud is a research platform providing high-performance computing with an easy-to-use interface for data analytics.</p>
-        <a href="/ucloud/"><i class="bi bi-info-circle"></i>About UCloud</a>
-        <a href="/ucloud/how-to-access/"><i class="bi bi-key"></i>How to access</a>
-        <a href="https://forms.office.com/e/8Khbr1TJGC"><i class="bi bi-file-earmark-text"></i>Application form</a>
-    </div>
-    <div class="custom-grid-item">
-        <div class="label label-researcher">For researchers</div>
-        <h2>AI Cloud</h2>
-        <p class="custom-grid-feature">AI Cloud is a GPU cluster designed for demanding machine learning workloads, accessed via terminal for job submission.</p>
-        <a href="/ai-cloud/"><i class="bi bi-info-circle"></i>About AI Cloud</a>
-        <a href="/ai-cloud/how-to-access/"><i class="bi bi-key"></i>How to access</a>
-        <a href="https://serviceportal.aau.dk/serviceportal?id=sc_cat_item&sys_id=37b26fd4c3afee10f0f3041ad00131d0"><i class="bi bi-file-earmark-text"></i>Application form</a>
-    </div>
-    <div class="custom-grid-item">
-        <div class="label label-student">For students</div>
-        <h2>AI-LAB</h2>
-        <p class="custom-grid-feature">AI-LAB offers Aalborg University students HPC access, ideal for deep learning, simulations, and fast data analysis.</p>
-        <a href="/ai-lab/"><i class="bi bi-info-circle"></i>About AI-LAB</a>
-        <a href="/ai-lab/how-to-access/"><i class="bi bi-key"></i>How to access</a>
-        <a href="https://forms.office.com/e/caEhCRmqVN"><i class="bi bi-file-earmark-text"></i>Application form</a>
-    </div>
+<div class="grid cards" markdown>
+
+-   :lucide-server:{ .lg .middle } __Strato__
+
+    ---
+
+    Strato provides virtual machines users can launch as needed, accessible from a terminal on their local computer.
+
+    [:lucide-circle-help: About Strato](/strato/)  
+    [:lucide-key-round: How to access](/strato/how-to-access/)  
+    [:lucide-file-text: Application form](https://forms.office.com/e/r1u0QXH4KJ)
+
+-   :lucide-cloud:{ .lg .middle } __UCloud__
+
+    ---
+
+    UCloud is a research platform providing high-performance computing with an easy-to-use interface for data analytics.
+
+    [:lucide-circle-help: About UCloud](/ucloud/)  
+    [:lucide-key-round: How to access](/ucloud/how-to-access/)  
+    [:lucide-file-text: Application form](https://forms.office.com/e/8Khbr1TJGC)
+
+-   :lucide-cpu:{ .lg .middle } __AI Cloud__
+
+    ---
+
+    AI Cloud is a GPU cluster designed for demanding machine learning workloads, accessed via terminal for job submission.
+
+    [:lucide-circle-help: About AI Cloud](/ai-cloud/)  
+    [:lucide-key-round: How to access](/ai-cloud/how-to-access/)  
+    [:lucide-file-text: Application form](https://serviceportal.aau.dk/serviceportal?id=sc_cat_item&sys_id=37b26fd4c3afee10f0f3041ad00131d0)
+
+-   :lucide-graduation-cap:{ .lg .middle } __AI-LAB__
+
+    ---
+
+    AI-LAB offers Aalborg University students HPC access, ideal for deep learning, simulations, and fast data analysis.
+
+    [:lucide-circle-help: About AI-LAB](/ai-lab/)  
+    [:lucide-key-round: How to access](/ai-lab/how-to-access/)  
+    [:lucide-file-text: Application form](https://forms.office.com/e/caEhCRmqVN)
+
+-   :lucide-shield-check:{ .lg .middle } __TAAURUS__
+
+    ---
+
+    TAAURUS is a secure platform for sensitive data processing with GPU resources and a browser-based working environment.
+
+    [:lucide-circle-help: About TAAURUS](/taaurus/)  
+    [:lucide-key-round: How to access](/taaurus/how-to-access/)  
+    [:lucide-file-text: Application form](https://serviceportal.aau.dk/serviceportal?id=sc_cat_item&sys_id=04934a6cc3a5e210f0f3041ad00131fc)
+
 </div>
 
 
    
-<div class="video-container">
-  <iframe src="https://panopto.aau.dk/Panopto/Pages/Embed.aspx?id=cbfb191c-fde8-4dec-998e-b2b800ba6b03&amp;autoplay=false&amp;offerviewer=true&amp;showtitle=false&amp;showbrand=true&amp;captions=false&amp;interactivity=all"
-          allowfullscreen=""
-          allow="autoplay"
-          style="border: 1px solid #464646;"></iframe>
-</div>
 
 ## External HPC
 
-<div class="custom-grid-4">
-    <div class="custom-grid-item">
-        <h2>DeiC Throughput HPC</h2>
-        <p class="custom-grid-feature">DeiC Throughput HPC offers queued job execution on large CPU clusters, including DTU Sophia, GenomeDK, and Computerome 2.0.</p>
-        <a href="/external-hpc/deic-resources/"><i class="bi bi-info-circle"></i>About Deic HPC</a>
-        <a href="https://forms.office.com/e/DxRA4hPK84"><i class="bi bi-file-earmark-text"></i>Application form</a>
-    </div>
-    <div class="custom-grid-item">
-        <h2>LUMI</h2>
-        <p class="custom-grid-feature">LUMI is AAU’s largest supercomputer, providing CPU and GPU processing via a queue-based, containerized job system.</p>
-        <a href="/external-hpc/lumi/"><i class="bi bi-info-circle"></i>About LUMI</a>
-        <a href="https://forms.office.com/e/4XC48iVu4S"><i class="bi bi-file-earmark-text"></i>Application form</a>
-    </div>
-    <div class="custom-grid-item">
-        <h2>EuroHPC</h2>
-        <p class="custom-grid-feature">Aalborg University researchers can access EuroHPC supercomputers by applying for computing time, like external research funding.</p>
-        <a href="/external-hpc/eurohpc-resources/"><i class="bi bi-info-circle"></i>About EuroHPC</a>
-    </div>
+<div class="grid cards" markdown>
+
+-   :lucide-cpu:{ .lg .middle } __DeiC Throughput HPC__
+
+    ---
+
+    DeiC Throughput HPC offers queued job execution on large CPU clusters, including DTU Sophia, GenomeDK, and Computerome 2.0.
+
+    [:lucide-circle-help: About DeiC HPC](/external-hpc/deic-resources/)  
+    [:lucide-file-text: Application form](https://forms.office.com/e/DxRA4hPK84)
+
+-   :lucide-orbit:{ .lg .middle } __LUMI__
+
+    ---
+
+    LUMI is AAU's largest supercomputer, providing CPU and GPU processing through a queue-based, containerized job system.
+
+    [:lucide-circle-help: About LUMI](/external-hpc/lumi/)  
+    [:lucide-file-text: Application form](https://forms.office.com/e/4XC48iVu4S)
+
+-   :lucide-globe:{ .lg .middle } __EuroHPC__
+
+    ---
+
+    AAU researchers can access EuroHPC supercomputers by applying for computing time, similar to external research funding.
+
+    [:lucide-circle-help: About EuroHPC](/external-hpc/eurohpc-resources/)
+
 </div>
 

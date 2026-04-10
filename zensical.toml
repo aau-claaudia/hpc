@@ -49,12 +49,6 @@ copyright = "&copy; 2026 CLAAUDIA"
 nav = [
   {"Home" = [
     "index.md",
-    {"Support" = "https://serviceportal.aau.dk/serviceportal?id=sc_cat_item&sys_id=a05e2fb4c3434610f0f3041ad001310e"},
-    {"Tools" = [
-      "hpc-decision-tree.md",
-      "hpc-comparison-table.md",
-      "https://www.researcher.aau.dk/guides/research-data-and-software/software-and-tools",
-    ]},
   ]},
   {"Strato" = [
     {"About" = "strato/index.md"},
@@ -97,10 +91,6 @@ nav = [
 
   {"UCloud" = [
     {"About" = "ucloud/index.md"},
-    {"How to access" = [
-      "ucloud/how-to-access.md",
-      "ucloud/expanded-application-guide.mdd",
-    ]},
     "ucloud/how-to-access.md",
     "ucloud/terms-and-conditions.md",
     "ucloud/external-collaborator.md",
@@ -109,12 +99,13 @@ nav = [
     "ucloud/service-windows.md",
     {"Support" = "https://serviceportal.aau.dk/serviceportal?id=sc_cat_item&sys_id=a05e2fb4c3434610f0f3041ad001310e"},
     {"Guides" = [
+      "ucloud/expanded-application-guide.md",
+      "ucloud/guides/sensitive-data-on-ucloud.md",
       {"Getting started" = [
         "ucloud/guides/getting-started/before-you-begin.md",
         "ucloud/guides/getting-started/transfer-files.md",
         "ucloud/guides/getting-started/Licens.md",
       ]},
-      "ucloud/guides/sensitive-data-on-ucloud.md",
       {"Application guides" = [
         "ucloud/guides/application-guides/ChatUI/index.md",
         "ucloud/guides/application-guides/transcriber/index.md",
@@ -194,8 +185,6 @@ nav = [
     "ai-lab/service-windows.md",
     {"Support" = "https://serviceportal.aau.dk/serviceportal?id=sc_cat_item&sys_id=a05e2fb4c3434610f0f3041ad001310e"},
     {"Guides" = [
-      "ai-lab/guides/index.md",
-      "ai-lab/guides/video-onboarding-guide.md",
       {"Getting started" = [
         "ai-lab/guides/prerequisites.md",
         "ai-lab/guides/login.md",
@@ -256,13 +245,6 @@ nav = [
       ]},
     ]},
   ]},
-  {"External HPC" = [
-    {"About" = "external-hpc/index.md"},
-    "external-hpc/deic-resources.md",
-    "external-hpc/eurohpc-resources.md",
-    "external-hpc/lumi.md",
-    {"Support" = "https://serviceportal.aau.dk/serviceportal?id=sc_cat_item&sys_id=a05e2fb4c3434610f0f3041ad001310e"},
-  ]},
   {"Mistral" = [
     {"About" = "mistral/index.md"},
     "mistral/how-to-access.md",
@@ -280,6 +262,16 @@ nav = [
       ]},
     ]},
   ]},
+  {"External HPC" = [
+    {"About" = "external-hpc/index.md"},
+    "external-hpc/deic-resources.md",
+    "external-hpc/eurohpc-resources.md",
+    "external-hpc/lumi.md",
+    {"Support" = "https://serviceportal.aau.dk/serviceportal?id=sc_cat_item&sys_id=a05e2fb4c3434610f0f3041ad001310e"},
+  ]},
+  {"Tools" = [
+    {"Tools" = "tools/index.md"}
+  ]}
 ]
 
 
@@ -543,15 +535,35 @@ icon = "lucide/message-circle-question-mark"
 link = "https://serviceportal.aau.dk/serviceportal?id=sc_cat_item&sys_id=a05e2fb4c3434610f0f3041ad001310e"
 name = "Get support"
 
+[project.markdown_extensions.tables]
 [project.markdown_extensions.pymdownx.snippets]
 base_path = ["docs"]
 check_paths = true
+
 [project.markdown_extensions.admonition]
 [project.markdown_extensions.pymdownx.details]
 [project.markdown_extensions.pymdownx.superfences]
+custom_fences = [
+  { name = "mermaid", class = "mermaid", format = "pymdownx.superfences.fence_code_format" }
+]
+
 [project.markdown_extensions.abbr]
+[project.markdown_extensions.md_in_html]
 [project.markdown_extensions.attr_list]
 [project.markdown_extensions.pymdownx.emoji]
 emoji_index = "zensical.extensions.emoji.twemoji" 
 emoji_generator = "zensical.extensions.emoji.to_svg"
 
+[project.markdown_extensions.pymdownx.tabbed]
+alternate_style = true
+
+[project.markdown_extensions.pymdownx.highlight]
+anchor_linenums = true
+line_spans = "__span"
+pygments_lang_class = true
+[project.markdown_extensions.pymdownx.inlinehilite]
+
+[project.markdown_extensions.pymdownx.caret]
+[project.markdown_extensions.pymdownx.keys]
+[project.markdown_extensions.pymdownx.mark]
+[project.markdown_extensions.pymdownx.tilde]

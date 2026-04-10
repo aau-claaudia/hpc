@@ -1,3 +1,8 @@
+---
+icon: lucide/info
+---
+
+
 # External HPC Facilites
 
 In addition to the HPC platforms that we provide locally at AAU, users can gain access to several powerful platforms made available through national and european cooperation. We encourage all users to reach out for these resources - especially if they have large or continuous long-stretched resource needs. 
