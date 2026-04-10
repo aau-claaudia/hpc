@@ -1,7 +1,10 @@
 ---
 icon: lucide/layout-grid
+hide:
+    - path
+    - footer
+    - toc
 ---
-
 
 # Tools
 
