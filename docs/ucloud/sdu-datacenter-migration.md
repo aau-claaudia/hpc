@@ -19,7 +19,7 @@ For technical details on the new hardware and machine types, see the [official S
 | **May 4, 2026** | The new datacenter is up and running. UCloud is back online with your migrated data. |
 
 !!! warning "Important deadline"
-    If you use AAU/K8s or AAU/VM, **April 27, 2026** is the last day to transfer your data. After that, it cannot be recovered. Transferring large amounts of data can take time—start early to avoid problems.
+    If you use AAU/K8s or AAU/VM, then you need to transfere your data out **before April 27, 2026**. After that, it cannot be recovered. Transferring large amounts of data can take time—start early to avoid problems.
 
 ## Do I need to do anything?
 
