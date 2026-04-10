@@ -7,9 +7,9 @@ If you are working with data level 2 or 3 in relation to [AAU data classificatio
 ### Procedure sensitive UCloud projects
   ```mermaid
   graph TD
-      A[Register your project with Grants and Contracts] --> B[📝 Complete the application form]
+      A[Register your project <br/> with Grants and Contracts] --> B[📝 Complete the <br/> application form]
       B --> C[✅ CLAAUDIA approval]
-      C --> D[💻 Enter the approved resources in UCloud]
+      C --> D[💻 Enter the approved <br/> resources in UCloud]
       D --> E[✅ CLAAUDIA approval]
       E --> F[⭐ The project is now available]
 
@@ -53,11 +53,11 @@ Sensitive data may only be handled within a dedicated UCloud research project an
 ### Creating a sensitive folder on UCloud
 Best practice for handlig sensitive data on UCloud require you to mark the folder with the data "sensitive" You can do this by going to your **files** and right-click on the folder select **Change sensitivity**.
 
-![Marking a folder in a project as sensitive in UCloud](\assets\img\UCloud\SensitiveGuide\FolderSensitive.png){.standard_image_width}
+![Marking a folder in a project as sensitive in UCloud](/assets/img/UCloud/SensitiveGuide/FolderSensitive.png)
 
 Now click the dropdown and select *sensitive" and write the reason for the sensitivity change. 
 
-![Marking a folder as sensitive in UCloud](\assets\img\UCloud\SensitiveGuide\FolderSensitive1.png){.standard_image_width}
+![Marking a folder as sensitive in UCloud](/assets/img/UCloud/SensitiveGuide/FolderSensitive1.png)
 
 ### Collaboration within UCloud projects (AAU Members)
 - Only individuals registered with the department of Grants and Contracts or those included via an approved data processing agreement may be added to UCloud projects.

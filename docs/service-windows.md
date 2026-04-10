@@ -1,4 +1,3 @@
-
 <!-- !!! warning "Next Service window: 13th and 15th of May 2025" -->
 
 Four times a year, all of our platforms are subject to *service windows* where changes and security upgrades are implemented.
@@ -10,52 +9,34 @@ It should be expected that the platforms are offline for the entire day from 00:
 
 A service window will take place on the following dates:
 
-<div class="grid" markdown>
-
-<div markdown>
 
 **AI Cloud, Strato, UCloud VM's & UCloud Kubernetes**
 
-| 2025  | 2026  | 2027  | 2028  |
-| ---   | ---   | ---   | ---   |
-| <s>11/02</s> | <s>10/02</s>  | 09/02 | 08/02 |
-| <s>13/05</s> | <span style="background:#211a52; color:white; font-weight:bold; border:2px solid #211a52; border-radius:4px; padding:2px 8px; display:inline-block;">28/04</s> | 11/05 | 09/05 |
-| <s>16/09</s> | 15/09 | 14/09 | 12/09 |
-| <s>02/12</s> | 01/12 | 30/11 | 28/11 |
-
-</div>
-
-<div markdown>
+| 2025  | 2026  | 2027 | 2028  |
+| ---   | ---   | ---  | ---   |
+| 11/02 | 10/02 | 09/02 | 08/02 |
+| 13/05 | 28/04 | 11/05 | 09/05 |
+| 16/09 | 15/09 | 14/09 | 12/09 |
+| 02/12 | 01/12 | 30/11 | 28/11 |
 
 **AI-LAB**
 
 | 2025  | 2026  | 2027  | 2028  |
 | ---   | ---   | ---   | ---   |
-| <s>13/02</s> | <s>12/02</s> | 11/02 | 10/02 |
-| <s>15/05</s> | <span style="background:#211a52; color:white; font-weight:bold; border:2px solid #211a52; border-radius:4px; padding:2px 8px; display:inline-block;">30/04</span> | 13/05 | 11/05 |
-| <s>18/09</s> | 17/09 | 16/09 | 14/09 |
-| <s>04/12</s> | 03/12 | 02/12 | 30/11 |
-
-</div>
-
-</div>
-
-<div class="grid" markdown>
-
-<div markdown>
+| 13/02 | 12/02 | 11/02 | 10/02 |
+| 15/05 | 30/04 | 13/05 | 11/05 |
+| 18/09 | 17/09 | 16/09 | 14/09 |
+| 04/12 | 03/12 | 02/12 | 30/11 |
 
 **TAAURUS**
 
-| 2026  | 2027  | 2028  | 2029  |
+| 2025  | 2026  | 2027  | 2028  |
 | ---   | ---   | ---   | ---   |
-| <s>03/02</s> | - | - | - |
-| <span style="background:#211a52; color:white; font-weight:bold; border:2px solid #211a52; border-radius:4px; padding:2px 8px; display:inline-block;">05/05</span> | - | - | - |
+| - | 03/20 | - | - |
+| - | 05/05 | - | - |
 | - | - | - | - |
 | - | - | - | - |
 
-</div>
-
-</div>
 
 !!! info "Sign up for notifications on serviceinfo.dk"
     Click this link to go to serviceinfo.dk. Then select *Aalborg University*,

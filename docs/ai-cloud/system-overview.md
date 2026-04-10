@@ -1,4 +1,6 @@
-
+---
+icon: lucide/cog
+---
 
 AI Cloud platform is built around several key components, including a front-end node for managing tasks and code, and 27 compute nodes equipped with diverse hardware options. In this overview, you will find a description of each of the platforms major components.
 

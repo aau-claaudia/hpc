@@ -1,4 +1,8 @@
-# How to Access Mistral
+---
+icon: lucide/lock-keyhole-open
+---
+
+
 Access to Mistral is granted in two stages — the base login works for both Le Char and AI Studio interfaces, while API key access requires an additional application.
 
 

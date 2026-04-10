@@ -1,4 +1,7 @@
-# TAAURUS system overview
+---
+icon: lucide/cog
+---
+
 
 Key characteristics:
 
@@ -116,7 +119,6 @@ Import and export are controlled workflows and require approval within the platf
 
 Available software includes:
 
-- **Firefox** 
 - **LibreOffice Calc** 
 - **LibreOffice Writer** 
 - **Atril Document Viewer** 

@@ -1,3 +1,9 @@
+---
+icon: lucide/globe
+---
+
+# EuroHPC resources
+
 [EuroHPC](https://eurohpc-ju.europa.eu/about/discover-eurohpc-ju_en) is the body responsible for coordinating HPC efforts on the european level. There is a number of calls from which HPC-resources can be acquired. The following is a brief summary of [the official page for EuroHPC access calls](https://eurohpc-ju.europa.eu/supercomputers/supercomputers-access-calls_en).
 
 ## Which HPC platforms can be applied to?

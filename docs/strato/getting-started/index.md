@@ -1,3 +1,5 @@
+# Before you begin
+
 Before diving into Strato, ensure you have the necessary tools and knowledge for the best experience. Here's a brief overview:
 
 !!! info "Request access"

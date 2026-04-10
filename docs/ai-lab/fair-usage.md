@@ -1,3 +1,7 @@
+---
+icon: lucide/heart-handshake
+---
+
 ## System administration
 The CLAAUDIA team is responsible for system administration and support. We work closely with the infrastructure team in ITS on maintainance of the system.
 

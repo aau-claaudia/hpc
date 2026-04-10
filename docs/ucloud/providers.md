@@ -1,3 +1,7 @@
+---
+icon: lucide/server
+---
+
 # Providers on UCloud
 
 UCloud supports several providers that cater to different research and computational needs. This guide covers three primary providers: SDU/K8s, AAU/K8s, and AAU/VM.

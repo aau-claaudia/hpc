@@ -1,4 +1,8 @@
-# DeiC's National Resources
+---
+icon: lucide/cpu
+---
+
+# DeiC resources
 
  [DeiC](https://www.deic.dk/en/node/330) is the overarching national body responsible for coordinating national HPC efforts on across all the danish universities. Among other things, they are responsible for distributing compute time on national HPC facilities.
 

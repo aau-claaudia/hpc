@@ -1,3 +1,8 @@
+---
+icon: lucide/heart-handshake
+---
+
+
 The CLAAUDIA team is responsible for system administration and user support. We work closely with the infrastructure team in ITS, which takes care of hardware and system maintainance.
 
 We do recognise that we are a learning institution and that much of the work carried out on AI Cloud is *learning-by-doing*. We welcome this. Users are encouraged to experiment with features that they do not yet master, and we encourage them to reach out to us if they want our help with utilising the platform.

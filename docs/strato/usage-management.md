@@ -1,3 +1,7 @@
+---
+icon: lucide/server-cog
+---
+
 Effective from 16th September 2025
 > **Note:** Usage management as described on this page is only applicable to the **AAU Availability Zone**. 
 
@@ -5,7 +9,7 @@ Effective from 16th September 2025
 <div style="display: flex; gap: 2rem; align-items: flex-start; justify-content: center; flex-wrap: wrap;">
 
   <!-- Mermaid Diagram -->
-  <div style="flex: 1; max-width: 150px; min-width: 100px; text-align: left;">
+  <div style="flex: 1; max-width: 200px; min-width: 100px; text-align: left;">
     
 ```mermaid
 graph TD

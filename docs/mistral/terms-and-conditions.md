@@ -1,4 +1,6 @@
-# Terms and Conditions
+---
+icon: lucide/scale
+---
 
 ##### Use of Mistral Le Chat and AI Studio at Aalborg University (AAU)
 

@@ -1,6 +1,7 @@
+# Transcriber
+
 <div class="guide-page-header">
   <div>
-    <h1 class="guide-page-header__title">Transcriber</h1>
     <p><strong>Approved for data classification level</strong></p>
     <a href="https://www.security.aau.dk/data-classification" target="_blank" class="icon-container">
       <span class="icon level-1" title="Click to see data-classification">1</span>

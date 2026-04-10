@@ -1,3 +1,8 @@
+---
+icon: lucide/lock-keyhole-open
+---
+
+
 ## Who can get access?
 Access is available to all students and teachers at Aalborg University. 
 

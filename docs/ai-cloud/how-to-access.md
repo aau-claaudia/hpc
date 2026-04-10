@@ -1,3 +1,8 @@
+---
+icon: lucide/lock-keyhole-open
+---
+
+
 ## Who can request access?
 
 * **Researchers** are granted access upon filling out our access request form.
