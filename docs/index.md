@@ -14,6 +14,7 @@ hide:
 
 !!! tip "Not sure where to begin?"
     Start with the [**HPC Decision Tree**](/hpc-decision-tree/) if you want a guided recommendation.
+    You can also use the [**HPC Comparison Table**](/hpc-comparison-table/) for a side-by-side overview.
     If you already know your requirements, jump directly to the [**AAU HPC overview**](/#aau-hpc-overview) and [**External HPC overview**](/#external-hpc-overview) tables below.
 
 ## News
