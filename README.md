@@ -1,6 +1,6 @@
 # AAU HPC Documentation (`hpc.aau.dk`)
 
-Documentation source for the AAU HPC site, built with **Zensical**.
+Documentation for AAU HPC, built with **Zensical**.
 
 The project contains:
 - content pages in `docs/`
