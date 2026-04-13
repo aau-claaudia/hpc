@@ -1,5 +1,13 @@
 {% extends "base.html" %}
 
+{% block extrahead %}
+  {{ super() }}
+  <script
+    data-goatcounter="https://hpc-analytics.goatcounter.com/count"
+    async
+    src="//gc.zgo.at/count.js"></script>
+{% endblock %}
+
 {#
 {% block announce %}
 <div class="announce-bar" role="status" aria-live="polite">
