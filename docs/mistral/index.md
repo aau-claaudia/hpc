@@ -19,7 +19,7 @@ Students :lucide-ban:
 Teaching :lucide-ban:
 { .hpc-tag title="Mistral is only for academic reserach activities." }
 
-Sensitive data :lucide-ban:
+Confidential & sensitive data :lucide-ban:
 { .hpc-tag title="Mistral is only approved for public data (level 1)." }
 
 Personal data :lucide-ban:
