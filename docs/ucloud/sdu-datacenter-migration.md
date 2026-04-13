@@ -15,7 +15,7 @@ For technical details on the new hardware and machine types, see the [official S
 | When | What happens |
 |------|--------------|
 | **Before April 27 8:00 am, 2026** | If you have data in AAU/K8s or AAU/VM, you must finish transferring it to SDU/K8s by this time. After this, any data left behind will be permanently deleted. |
-| **From April to 27  May 4** | Downtime for all UCloud services.  You will not be able to access the platform during this time. |
+| **From April 27 to  May 4** | Downtime for all UCloud services.  You will not be able to access the platform during this time. |
 | **May 4, 2026** | The new datacenter is up and running. UCloud is back online with your migrated data. |
 
 !!! warning "Important deadline"
