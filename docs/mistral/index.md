@@ -22,6 +22,9 @@ Teaching :lucide-ban:
 Sensitive data :lucide-ban:
 { .hpc-tag title="Mistral is only approved for public data (level 1)." }
 
+Personal data :lucide-ban:
+{ .hpc-tag title="Mistral is not approved for personal data." }
+
 Web interface :lucide-check:
 { .hpc-tag title="The service is accessed through a browser-based interface." }
 
