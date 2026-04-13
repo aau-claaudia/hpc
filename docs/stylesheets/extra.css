@@ -324,6 +324,27 @@
   width: 100%;
 }
 
+/* Homepage target user tags */
+.md-typeset .home-platform-table-wrap .target-user-tag {
+  display: inline-block;
+  padding: 0.2rem 0.55rem;
+  border-radius: 999px;
+  font-size: 0.7rem;
+  line-height: 1.25;
+  white-space: nowrap;
+}
+
+.md-typeset .home-platform-table-wrap .target-user-tag--researchers {
+  background-color: rgba(37, 99, 235, 0.14);
+  color: #1d4ed8;
+}
+
+.md-typeset .home-platform-table-wrap .target-user-tag--students {
+  background-color: rgba(22, 163, 74, 0.14);
+  border-color: rgba(22, 163, 74, 0.32);
+  color: #15803d;
+}
+
 .lucide-star,
 .lucide-star svg {
   color: #2563eb;
