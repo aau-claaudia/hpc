@@ -65,7 +65,7 @@ Complete Step 1 and verify that you can log in to both Le Chat and AI Studio bef
 ### How to apply
 
 1. Log in to AI Studio at [console.mistral.ai](https://console.mistral.ai).
-2. Go to the CLAAUDIA Serviceportal and fill out the form **Mistral workspace request form** *(link to be inserted)*.
+2. Go to the CLAAUDIA Serviceportal and fill out the form [**Mistral workspace request form**](https://serviceportal.aau.dk/serviceportal?id=sc_cat_item&sys_id=b3a364e5c3a336d4f0f3041ad001316e).
 3. The CLAAUDIA team will review your request. If approved, they will create a workspace named your title for your project.
 4. You will receive a notification when the workspace is ready.
 
