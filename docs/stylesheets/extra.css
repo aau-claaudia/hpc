@@ -323,3 +323,10 @@
 .md-typeset .home-platform-table-wrap .md-typeset__table {
   width: 100%;
 }
+
+.lucide-star,
+.lucide-star svg {
+  color: #2563eb;
+  fill: currentColor;
+  stroke: currentColor;
+}
