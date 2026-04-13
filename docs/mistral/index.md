@@ -31,7 +31,7 @@ Web interface :lucide-check:
 
 Mistral is an AI service that gives AAU researchers access to generative AI tools. In this section you can read more about the two services: Le Chat for conversational AI assistance and AI Studio for larger generative tasks, including API-based integration with custom AI workflows.
 
-!!! info "Only for non-confidential data"
+!!! info "No personal data allowed"
     Mistral AI may be used only for data classified as level 1 under [AAU’s data classification model](https://www.sikkerhed.aau.dk/dataklassifikation){__blank}. It is not approved for processing personal data, so data containing personal information must not be uploaded to or processed in Mistral AI. If you are unsure what qualifies as personal data, see [What is personal data?](https://www.datatilsynet.dk/english/fundamental-concepts-/what-is-personal-data){__blank}
 
 [Get access to Mistral](/mistral/how-to-access){ .md-button .md-button--primary }
