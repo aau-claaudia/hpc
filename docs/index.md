@@ -53,7 +53,10 @@ hide:
 
 !!! info "Service status and planning"
     - Check upcoming maintenance in [Service windows](/service-windows/).
-    - Use [Support](https://serviceportal.aau.dk/serviceportal?id=sc_cat_item&sys_id=a05e2fb4c3434610f0f3041ad001310e) for help with platform selection, setup, and troubleshooting.
+    - Upcoming migration to new SDU datacenter
+        - UCloud is moving to a new SDU datacenter. If you have data in the **AAU/K8s** or **AAU/VM** providers, you will need to transfer it to **SDU/K8s** before the migration deadline.  
+            - Read the step-by-step **AAU/K8s / AAU/VM migration guide** :octicons-arrow-right-16: [UCloud datacenter migration](/ucloud/sdu-datacenter-migration/).  
+            - See the full, technical description from the consortium behind UCloud :octicons-arrow-right-16: [New SDU Datacenter](https://docs.cloud.sdu.dk/intro/new_datacenter.html#sphx-glr-new-datacenter).
 
 
 ## AAU HPC overview
