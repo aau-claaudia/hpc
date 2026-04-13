@@ -129,14 +129,6 @@ source .venv/bin/activate
 python -m zensical serve
 ```
 
-## Build static site
-
-```bash
-python -m zensical build
-```
-
-This generates the static output in `site/`.
-
 ## Notes
 
 - Main navigation is defined in `zensical.toml` under `nav`.
