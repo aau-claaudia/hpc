@@ -23,10 +23,10 @@ If the user suspects that their API key has been compromised or misused, they mu
 
 ## 3. Data classification
 
-!!! warning "Level 1 data only"
-    Only data classified as **Level 1** under [AAU's data classification policy](https://www.security.aau.dk/data-classification) may be used with Mistral services.
+!!! warning "No personal data allowed"
+    Mistral AI may be used only for data classified as level 1 under [AAU’s data classification model](https://www.sikkerhed.aau.dk/dataklassifikation){__blank}. It is not approved for processing personal data, so data containing personal information must not be uploaded to or processed in Mistral AI. 
 
-    Data classified as **Level 2 or Level 3 may never** be uploaded, entered, or processed in Mistral Le Chat or AI Studio.
+    Personal data and data classified as **Level 2 or Level 3 may never** be uploaded, entered, or processed in Mistral Le Chat or AI Studio.
 
 Users are personally responsible for ensuring compliance with AAU's data classification requirements before submitting any content to the service.
 
