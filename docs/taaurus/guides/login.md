@@ -245,8 +245,7 @@ This guide will help you connect to TAAURUS using Remote Desktop Protocol (RDP).
     - The full command you tried
     - Any error output from the terminal
 
-    👉 Submit a ticket via the AAU Service Portal:  
-    https://serviceportal.aau.dk/serviceportal?id=sc_cat_item&sys_id=a05e2fb4c3434610f0f3041ad00131d0
+    👉 Submit a ticket via the [AAU Service Portal](https://serviceportal.aau.dk/serviceportal?id=sc_cat_item&sys_id=a05e2fb4c3434610f0f3041ad00131d0)
 
 
 
