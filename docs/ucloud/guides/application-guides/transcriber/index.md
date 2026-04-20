@@ -82,6 +82,7 @@ Select the guide of your choice below for step-by-step instructions for each ver
 
     ![Open interface](/assets/img/UCloud/TranscriberguideGUI2.jpg)
     
+     
     #### 1.3 Adding files to be transcribed
 
     Once the app starts, decide how you want to add files for transcription. You have two main options:
