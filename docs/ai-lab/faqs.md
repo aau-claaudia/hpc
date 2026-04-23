@@ -20,17 +20,75 @@ icon: lucide/message-circle-question-mark
 
     **Solution:** In code editors such as VS Code or PyCharm, you can switch between LF (Linux endings) and CRLF (Windows endings) from the right-hand side of the status bar at the bottom of the window. Therefore, use LF endings if you wish to move a file to AI-LAB.
 
-??? question "Why can't I connect to AI-LAB?"
+## Login known issues and fixes
 
-    If you encounter an error like `ssh: Could not resolve hostname ailab-fe01.srv.aau.dk: No such host is known.`, you may need to connect through AAU's jump host (SSH gateway).
+??? question "If you get `Permission denied, please try again`, what should you check?"
 
-    **Solution:** Use the jump host option with the `-J` flag:
+    Most often this means the password or username format is incorrect.
 
-    ```bash
-    ssh -J user@student.aau.dk@sshgw.aau.dk -l user@student.aau.dk ailab-fe01.srv.aau.dk
-    ```
+    **Check this:**
 
-    Replace `user@student.aau.dk` with your actual AAU email address. You will need to enter your password twice and use Microsoft Authenticator in between.
+    - Use your AAU username in the email format (for example `ab12cd@student.aau.dk`).
+    - Make sure you did not misspell your username.
+    - If you connect through `sshgw`, it is normal to enter credentials in multiple steps:
+      1. Password for `sshgw`.
+      2. Microsoft Authenticator approval.
+      3. Password again for AI-LAB.
 
-    If you still encounter issues, try using [PuTTY terminal](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html) software as an alternative.
+??? question "If SSH gets stuck in a password loop and MFA is not triggered on `sshgw.aau.dk`, what should you check?"
 
+    This is usually an MFA setup issue for SSH gateway access.
+
+    **Check this:**
+
+    - Verify AAU MFA is configured according to AAU's official guide, especially the Microsoft Authenticator push/message method.
+    - Make sure MFA is enabled for the account and device you are currently using.
+    - Try again with verbose logging and include output when requesting support:
+      - `ssh -vvv user@student.aau.dk@sshgw.aau.dk`
+
+??? question "If login fails when you are off campus, what should you check?"
+
+    Off-campus access requires either AAU VPN or SSH gateway.
+
+    **Check this:**
+
+    - If you use Cisco VPN, confirm you are actually connected to AAU VPN before running SSH.
+    - If VPN is unstable, use SSH gateway instead:
+      - `ssh -J user@student.aau.dk@sshgw.aau.dk -l user@student.aau.dk ailab-fe01.srv.aau.dk`
+    - If you are already on AAU network (on campus), connect directly to AI-LAB and skip `sshgw`.
+
+??? question "If `ailab-fe01` is unavailable or very slow, what should you check?"
+
+    This can happen during frontend incidents or heavy load.
+
+    **Check this:**
+
+    - Try the secondary frontend:
+      - `ssh user@student.aau.dk@ailab-fe02.srv.aau.dk`
+    - Retry later if there is an ongoing frontend incident.
+    - If both nodes are slow/unavailable, it is likely a platform-side issue and should be reported.
+
+??? question "If VS Code Remote SSH says `Failed to parse remote port from server output`, what should you check?"
+
+    This is commonly a VS Code remote environment issue, not a basic SSH account issue.
+
+    **Check this:**
+
+    - First test plain terminal SSH login to confirm credentials/network are working:
+      - `ssh user@student.aau.dk@ailab-fe01.srv.aau.dk`
+    - If terminal login works but VS Code fails, clean VS Code server files on AI-LAB and reconnect:
+      - `rm -rf ~/.vscode-server`
+      - `rm -rf ~/.vscode-remote`
+    - Temporarily reduce enabled VS Code extensions if reconnect is still unstable.
+
+??? question "If your login suddenly stops working after it worked before, what should you check first?"
+
+    In many cases this is a temporary node/load incident, not your account.
+
+    **Check this:**
+
+    - Retry on `ailab-fe02`.
+    - Retry after some time.
+    - Run a verbose SSH test and include it in support tickets:
+      - `ssh -vvv user@student.aau.dk@ailab-fe01.srv.aau.dk`
+    - Include whether you are on campus, on VPN, or using `sshgw`.
