@@ -31,6 +31,15 @@ Check that Git is available:
 git --version
 ```
 
+### 2.1 Set up Git (first time only)
+
+Configure your Git identity (replace with your own name/email):
+
+```bash
+git config --global user.name "Your Name"
+git config --global user.email "your.email@example.com"
+```
+
 ### 3. Clone the repository from GitHub
 
 The source lives in the **aau-claaudia/hpc** repository:
