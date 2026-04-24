@@ -62,7 +62,7 @@ icon: lucide/message-circle-question-mark
     This can happen during frontend incidents or heavy load.
 
     **Check this:**
-
+    
     - Try the secondary frontend:
       - `ssh user@student.aau.dk@ailab-fe02.srv.aau.dk`
     - Retry later if there is an ongoing frontend incident.
