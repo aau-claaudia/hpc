@@ -25,7 +25,7 @@ Git is required to copy the repository from GitHub.
 - **macOS:** Install [Git](https://git-scm.com/download/mac) (Xcode Command Line Tools include `git`, or use the installer from the Git site).
 - **Linux:** Install Git with your package manager, for example `sudo apt install git` on Debian/Ubuntu.
 
-Check that Git is available:
+Check that Git is available in a terminal (try closing and opening the terminal if it cant fint git):
 
 ```bash
 git --version
