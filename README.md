@@ -33,7 +33,7 @@ git --version
 
 ### 2.1 Set up Git (first time only)
 
-Configure your Git identity (replace with your own name/email):
+Open a terminal and configure your Git identity (replace with your own name/email):
 
 ```bash
 git config --global user.name "Your Name"
