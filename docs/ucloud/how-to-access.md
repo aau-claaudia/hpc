@@ -48,7 +48,7 @@ graph TD
       <p class="admonition-title">Sensitive data:</p>
       <ul>
         <li> You must have a WorkZone case number for your research project.
-          <br>If you don't have one, you can apply through Grants and Contracts using their <a href="#">registration form</a>.
+          <br>If you don't have one, you can apply through Grants and Contracts using their <a href="https://aaudk.sharepoint.com/sites/persondata-ressourcer/SitePages/Registrations%20og%20reports%20(Online%20forms).aspx">registration form</a>.
         </li>
         <li> Only SDU compute resources may be used to handle sensitive data.</li>
         <li> To get started, read <a href="/ucloud/guides/sensitive-data-on-ucloud/">our guide</a> on how to handle sensitive data on UCloud.</li>
