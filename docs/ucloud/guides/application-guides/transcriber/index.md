@@ -46,6 +46,8 @@ There are two ways to use Transcriber on UCloud:
 
 ### Select the guide of your choice below for step-by-step instructions for each version.
 
+<div class="transcriber-tab-selection" markdown="1">
+
 === "Transcriber Interface (Default version)"
     <br>
     This guide will walk you through using the latest **default** version of Transcriber, featuring an improved, user-friendly interface for transcribing your audio and video files on UCloud.
@@ -82,6 +84,7 @@ There are two ways to use Transcriber on UCloud:
 
     ![Open interface](/assets/img/UCloud/TranscriberguideGUI2.jpg)
     
+     
     #### 1.3 Adding files to be transcribed
 
     Once the app starts, decide how you want to add files for transcription. You have two main options:
@@ -290,6 +293,8 @@ There are two ways to use Transcriber on UCloud:
     - When enabled, the app generates additional files with merged text in **docx**, **dote**, **json**, and **csv** formats. These files are named `filename_merged` and are created alongside the original files.
       
       >  To make the option visible, scroll down in the optional parameter window.
+
+</div>
 
 ### Need assitance?
 
