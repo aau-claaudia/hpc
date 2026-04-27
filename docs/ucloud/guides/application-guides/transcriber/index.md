@@ -45,7 +45,6 @@ There are two ways to use Transcriber on UCloud:
 | Basic settings: language and model selection | Advanced settings: language, model, number of speakers, and merge speaker entries |
 
 ### Select the guide of your choice below for step-by-step instructions for each version.
-
 <div class="transcriber-tab-selection" markdown="1">
 
 === "Transcriber Interface (Default version)"
