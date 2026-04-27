@@ -102,9 +102,15 @@ python3 --version
 ### Windows (PowerShell)
 
 ```powershell
-python -m venv .venv
-.\.venv\Scripts\python -m pip install -r requirements.txt
+.\serve.ps1
 ```
+
+If that doesnt work, try  :
+
+```powershell
+Set-ExecutionPolicy RemoteSigned
+```
+
 
 ### macOS/Linux (bash/zsh)
 
