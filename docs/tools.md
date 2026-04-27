@@ -40,6 +40,16 @@ hide:
 
     [:octicons-arrow-right-24: HPC Comparison Table](/hpc-comparison-table)
 
+-   __HPC Cost Estimator__
+
+    Estimate the cost of using an HPC platform for your project.
+    
+    ---
+
+    ![HPC Cost Estimator](/assets/img/tools/hpc-cost-estimator.png)
+
+    [:octicons-arrow-right-24: HPC Cost Estimator](/hpc-cost-estimator)
+
 
 -   __DataDeposit__
 

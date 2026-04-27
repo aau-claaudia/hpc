@@ -56,7 +56,6 @@ copyright = """
 nav = [
   {"Home" = [
     "index.md",
-    "ideas.md",
     "tools.md",
     {"About CLAAUDIA" = "https://www.researcher.aau.dk/contact/claaudia"},
     {"Support" = "https://serviceportal.aau.dk/serviceportal?id=sc_cat_item&sys_id=a05e2fb4c3434610f0f3041ad001310e"},
@@ -108,6 +107,7 @@ nav = [
     "ucloud/providers.md",
     "ucloud/sdu-datacenter-migration.md",
     "ucloud/service-windows.md",
+    "ucloud/ideas.md",
     {"Support" = "https://serviceportal.aau.dk/serviceportal?id=sc_cat_item&sys_id=a05e2fb4c3434610f0f3041ad001310e"},
     {"Guides" = [
       "ucloud/expanded-application-guide.md",

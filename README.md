@@ -25,10 +25,19 @@ Git is required to copy the repository from GitHub.
 - **macOS:** Install [Git](https://git-scm.com/download/mac) (Xcode Command Line Tools include `git`, or use the installer from the Git site).
 - **Linux:** Install Git with your package manager, for example `sudo apt install git` on Debian/Ubuntu.
 
-Check that Git is available:
+Check that Git is available in a terminal (try closing and opening the terminal if it cant fint git):
 
 ```bash
 git --version
+```
+
+### 2.1 Set up Git (first time only)
+
+Open a terminal and configure your Git identity (replace with your own name/email):
+
+```bash
+git config --global user.name "Your Name"
+git config --global user.email "your.email@example.com"
 ```
 
 ### 3. Clone the repository from GitHub

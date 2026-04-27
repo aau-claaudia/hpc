@@ -101,15 +101,24 @@ Select the guide of your choice below for step-by-step instructions for each ver
     
     > **Info:** The app can only process `.mp3`, `.mp4`, `.m4a`, `.wav`, and `.mpg` files. If your file is in another format, we recommend using VLC to convert it. VLC can be downloaded from the Software Center/Company Portal.
 
-    ![Selecting files to be transcribed](/assets/img/UCloud/TranscriberguideGUI3.jpg)    
+    ![Selecting files to be transcribed](/assets/img/UCloud/TranscriberguideGUI3.jpg) 
 
-    #### 1.4 Starting the transcription
+    #### 1.4 Optional: Choose a transcriptionmodel
+    Select the model size:
+
+    - **Small**: Faster but less accurate.
+    - **Medium**: Slightly slower, more accurate.
+    - **Large**: Most accurate but slowest.
+
+    >**Note:** The default is **Large**. With a machine featuring 16 vCPUs and 96GB of memory, transcription speed is about the same as the audio length (e.g., 1 minute of audio takes approximately 1 minute to transcribe).
+
+    #### 1.5 Starting the transcription
 
     - Once you have added all your desired files to the transcription queue, click **Start Transcription**.
     - The app will begin transcribing your files and show a progress bar so you can track the transcription status in real time.
         > **Note:** The progress bar provides an estimated completion time for each file, but this estimate may change as the transcription proceeds. Factors such as the selected machine, the amount of speech in the audio, and the selected transcription model can affect how long each file takes.
 
-    #### 1.5 Downloading your transcriptions
+    #### 1.6 Downloading your transcriptions
 
     - **While the job is running**: You can download completed transcriptions directly from the app, either one by one or as a zip file. When downloading individual files, you can select your preferred output format (TXT, DOCX, VTT, etc.). If you choose to download as a zip file, you'll receive all available output formats for each transcription. 
         - **Important:** If you are working with confidential or sensitive data, remember that you may **not** download it directly to any personal or nonapproved devices.
@@ -119,7 +128,7 @@ Select the guide of your choice below for step-by-step instructions for each ver
     
     - **After the job is finished**: All transcriptions will be available on UCloud in the folder: `/Jobs/Transcriber/<job-id>/TRANSCRIPTIONS/`.
  
-    #### 1.6 Optional: Adjusting settings
+    #### 1.7 Optional: Adjusting settings
 
     - Click **Show settings** at the top of the page to adjust:
       
