@@ -65,6 +65,7 @@
 }
 /* Custom icons */
 .md-nav__link[href*="serviceportal?id=sc_cat_item&sys_id=a05e2fb4c3434610f0f3041ad001310e"] .md-ellipsis,
+.md-nav__link[href*="service-windows"] .md-ellipsis,
 .md-nav__link[href*="hpc-decision-tree"] .md-ellipsis,
 .md-nav__link[href*="https://www.researcher.aau.dk/contact/claaudia"] .md-ellipsis,
 .md-nav__link[href*="https://serviceportal.aau.dk/kb/en/taaurus-terms-of-use?sys_kb_id=7de0759b83783650e1c9f665eeaad396&id=kb_article_view&sysparm_rank=3&sysparm_tsqueryId=efed437733a1fe50d95cab273e5c7b19"] .md-ellipsis {
@@ -74,6 +75,7 @@
 }
 .md-nav__link[href*="serviceportal?id=sc_cat_item&sys_id=a05e2fb4c3434610f0f3041ad001310e"] .md-ellipsis::before,
 .md-nav__link[href*="hpc-decision-tree"] .md-ellipsis::before,
+.md-nav__link[href*="service-windows"] .md-ellipsis::before,
 .md-nav__link[href*="https://www.researcher.aau.dk/contact/claaudia"] .md-ellipsis::before,
 .md-nav__link[href*="https://serviceportal.aau.dk/kb/en/taaurus-terms-of-use?sys_kb_id=7de0759b83783650e1c9f665eeaad396&id=kb_article_view&sysparm_rank=3&sysparm_tsqueryId=efed437733a1fe50d95cab273e5c7b19"] .md-ellipsis::before {
   content: "";
@@ -99,6 +101,10 @@
 .md-nav__link[href*="hpc-decision-tree"] .md-ellipsis::before {
   -webkit-mask: url("/assets/icons/network.svg") no-repeat center / contain;
   mask: url("/assets/icons/network.svg") no-repeat center / contain;
+}
+.md-nav__link[href*="service-windows"] .md-ellipsis::before {
+  -webkit-mask: url("/assets/icons/construction.svg") no-repeat center / contain;
+  mask: url("/assets/icons/construction.svg") no-repeat center / contain;
 }
 
 .service-window-next-date {

@@ -1,5 +1,4 @@
 ---
-icon: lucide/construction
 hide:
     - path
 ---
