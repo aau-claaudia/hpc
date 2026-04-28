@@ -44,7 +44,8 @@ There are two ways to use Transcriber on UCloud:
 | Download results from the app or UCloud folders | Download results from UCloud folders |
 | Basic settings: language and model selection | Advanced settings: language, model, number of speakers, and merge speaker entries |
 
-Select the guide of your choice below for step-by-step instructions for each version.
+### Select the guide of your choice below for step-by-step instructions for each version.
+<div class="transcriber-tab-selection" markdown="1">
 
 === "Transcriber Interface (Default version)"
     <br>
@@ -291,6 +292,8 @@ Select the guide of your choice below for step-by-step instructions for each ver
     - When enabled, the app generates additional files with merged text in **docx**, **dote**, **json**, and **csv** formats. These files are named `filename_merged` and are created alongside the original files.
       
       >  To make the option visible, scroll down in the optional parameter window.
+
+</div>
 
 ### Need assitance?
 

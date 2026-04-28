@@ -46,30 +46,18 @@ The source lives in the **aau-claaudia/hpc** repository:
 
 [https://github.com/aau-claaudia/hpc](https://github.com/aau-claaudia/hpc)
 
-1. Open a terminal (on Windows: **PowerShell** or **Git Bash**).
-2. Go to the folder where you keep projects, for example `Documents`:
-
-   ```powershell
-   cd $HOME\Documents
-   ```
-
-   On macOS or Linux you might use `cd ~/Documents` instead.
-
-3. Clone the repo (this creates a folder named `hpc`):
-
-   ```bash
-   git clone https://github.com/aau-claaudia/hpc.git
-   ```
-
-4. If the repository is **private**, GitHub will ask you to sign in. Use a [personal access token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens) or [GitHub CLI](https://cli.github.com/) as described in GitHub’s documentation, or clone via SSH if your AAU GitHub account has SSH keys set up:
-
-   ```bash
-   git clone git@github.com:aau-claaudia/hpc.git
-   ```
+1. In VS Code, open the Command Palette (`Ctrl+Shift+P` on Windows/Linux, `Cmd+Shift+P` on macOS).
+2. Run `Git: Clone`.
+3. Paste the repository URL: `https://github.com/aau-claaudia/hpc.git`.
+4. Choose where to save it locally.
+5. When prompted, click **Open** to open the cloned folder in VS Code.
+6. If the repository is private, sign in to GitHub when VS Code asks.
 
 ### 4. Open the project in VS Code
 
-1. In VS Code, choose **File → Open Folder…** (or **Open…** on macOS).
+If you clicked **Open** after cloning, this is already done. Otherwise:
+
+1. In VS Code, choose **File -> Open Folder...** (or **Open...** on macOS).
 2. Select the `hpc` folder you just cloned (the one that contains `README.md`, `docs/`, and `zensical.toml`).
 3. Confirm; the project root should appear in the Explorer sidebar.
 
@@ -91,14 +79,38 @@ Follow **Requirements** and **Install** below to create a Python virtual environ
 - Python 3.10+ (recommended)
 - `pip`
 
+If Python is not installed yet, install it first:
+
+- **Windows:** Install from [python.org](https://www.python.org/downloads/windows/). During setup, enable **Add Python to PATH**.
+- **macOS:** Install from [python.org](https://www.python.org/downloads/macos/) or with Homebrew (`brew install python`).
+- **Linux:** Install with your package manager (for example `sudo apt install python3 python3-venv python3-pip` on Debian/Ubuntu).
+
+Verify installation:
+
+```bash
+python --version
+```
+
+If `python` is not recognized on macOS/Linux, use:
+
+```bash
+python3 --version
+```
+
 ## Install
 
 ### Windows (PowerShell)
 
 ```powershell
-python -m venv .venv
-.\.venv\Scripts\python -m pip install -r requirements.txt
+.\serve.ps1
 ```
+
+If that doesnt work, try  :
+
+```powershell
+Set-ExecutionPolicy RemoteSigned
+```
+
 
 ### macOS/Linux (bash/zsh)
 
