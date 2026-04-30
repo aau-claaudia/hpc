@@ -63,6 +63,9 @@
 .md-typeset .question>.admonition-title:before, .md-typeset .question>summary:before {
   background-color: #00b0ff !important;
 }
+.md-typeset .question>.admonition-title:after, .md-typeset .question>summary:after {
+  color: #00b0ff !important;
+}
 /* Custom icons */
 .md-nav__link[href*="serviceportal?id=sc_cat_item&sys_id=a05e2fb4c3434610f0f3041ad001310e"] .md-ellipsis,
 .md-nav__link[href*="service-windows"] .md-ellipsis,
