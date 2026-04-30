@@ -7,15 +7,13 @@ If you are working with data level 2 or 3 in relation to [AAU data classificatio
 ### Procedure sensitive UCloud projects
   ```mermaid
   graph TD
-      A[Register your project <br/> with Grants and Contracts] --> B[📝 Complete the <br/> application form]
+      A[Register your project <br/> with Grants and Contracts] 
+      A --> B[💻 Enter the approved <br/> resources in UCloud]
       B --> C[✅ CLAAUDIA approval]
-      C --> D[💻 Enter the approved <br/> resources in UCloud]
-      D --> E[✅ CLAAUDIA approval]
-      E --> F[⭐ The project is now available]
+      C --> D[⭐ The project is now available]
 
       click A "https://aaudk.sharepoint.com/sites/persondata-ressourcer/SitePages/Registrations%20og%20reports%20(Online%20forms).aspx" "Open Grants and Contracts registration" _blank
-      click B "https://forms.office.com/e/8Khbr1TJGC" "Open application form" _blank
-      click D "https://cloud.sdu.dk/app/dashboard" "Open UCloud dashboard" _blank
+      click B "https://cloud.sdu.dk/app/dashboard" "Open UCloud dashboard" _blank
 
 
           %% Define classes for colors
@@ -24,19 +22,16 @@ If you are working with data level 2 or 3 in relation to [AAU data classificatio
     classDef Completed fill:#66ff66,stroke:#006600,color:#0b0c0c,font-size:14px;
 
     %% Assign classes
-    class A,B,D User;
-    class C,E CLAAUDIA;
-    class F Completed;
+    class A,B User;
+    class C CLAAUDIA;
+    class D Completed;
   ```
 
   > **Note**:  As project applicant you will be the Principal Investigator for the project, and you should be aware of your roles and responsibilities.
 
-### Providers
-Level 2 and 3 data must **only** be handled on SDU/K8s provider hardware. For more information about the differences between providers, see the [provider page](docs\ucloud\providers.md).
-
 
 ### Data classification on UCloud
-- On Ucloud you can work with level 1,2 and 3 categories of data form AAUs data classification model.
+- On UCloud you can work with level 1,2 and 3 categories of data form AAUs data classification model.
 - Store all project data in a designated project folder labeled according to its data sensitivity, following the AAU Data Classification Model. This folder must be labeled according to its data sensitivity, following the [AAU Data Classification Model](https://www.security.aau.dk/data-classification). The equivalent UCloud classifications are:
     - **AAU Level 1**  → **UCloud: Inherit**
     - **AAU Level 2**  → **UCloud: Private/Confidential**
@@ -47,8 +42,6 @@ Level 2 and 3 data must **only** be handled on SDU/K8s provider hardware. For mo
 
 ### Sensitive data only allowed in dedicated projects 
 Sensitive data may only be handled within a dedicated UCloud research project and must **never** be stored or processed inside your personal "My Workspace." This ensures that all sensitive data is properly registered, tracked, and linked to a project with a workzone number for compliance.
-
-<br>
 
 ### Creating a sensitive folder on UCloud
 Best practice for handlig sensitive data on UCloud require you to mark the folder with the data "sensitive" You can do this by going to your **files** and right-click on the folder select **Change sensitivity**.

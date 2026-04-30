@@ -3,7 +3,7 @@ icon: lucide/lock-keyhole-open
 ---
 
 ## Direct access
-All Aalborg University users automatically have access to UCloud and can simply log in using their WAYF credentials (university logon credentials). This gives you access to **"My Workspace"** with a starting quota of 2000 CPU-hours that can be used in the standard web app environment. This is the quickest and most user-friendly way to access HPC as a first-time user.
+All Aalborg University users automatically have access to UCloud and can simply log in using their WAYF credentials (university logon credentials). This gives you access to **"My Workspace"** with a starting quota of 2000 CPU-hours that can be used in the standard web app environment. This is the quickest and most user-friendly way to access high-performance computing (HPC) as a first-time user.
 
 [Log in to UCloud](https://cloud.sdu.dk/app/dashboard){ .md-button .md-button--primary target=_blank }
 
@@ -22,13 +22,13 @@ The diagram below outlines the process for getting your project approved and set
   <div style="flex: 1; max-width: 1500px; min-width: 400px; text-align: left;">
 ```mermaid
 graph TD
-    A["📝 Complete the <br/>application form"] --> B["✅ CLAAUDIA approval"]
-    B --> C["💻 Enter the approved <br/>resources in UCloud"]
-    C --> D["✅ CLAAUDIA approval"]
-    D --> E["⭐ The project is now available"]
+    A["💻 Create project or <br/>apply for resources in UCloud"]
+    --> B["✅ CLAAUDIA review <br/>and approval"]
+    B --> C["🏷️ DeiC project number <br/>assigned by CLAAUDIA"]
+    C --> D["⭐ The project is now available <br/>in UCloud"]
 
-    click A "https://forms.office.com/e/8Khbr1TJGC" "Open application form" _blank
-    click C "https://cloud.sdu.dk/app/dashboard" "Open UCloud dashboard" _blank
+    %% Clickable entry point
+    click A "https://cloud.sdu.dk/app/dashboard" "Open UCloud dashboard" _blank
 
     %% Define classes for colors
     classDef User fill:#e6f3ff,stroke:#1d70b8,color:#0b0c0c,font-size:14px;
@@ -36,9 +36,9 @@ graph TD
     classDef Completed fill:#66ff66,stroke:#006600,color:#0b0c0c,font-size:14px;
 
     %% Assign classes
-    class A,C User;
-    class B,D CLAAUDIA;
-    class E Completed;
+    class A User;
+    class B,C CLAAUDIA;
+    class D Completed;
 ```
   </div>
 
@@ -50,7 +50,6 @@ graph TD
         <li> You must have a WorkZone case number for your research project.
           <br>If you don't have one, you can apply through Grants and Contracts using their <a href="https://aaudk.sharepoint.com/sites/persondata-ressourcer/SitePages/Registrations%20og%20reports%20(Online%20forms).aspx">registration form</a>.
         </li>
-        <li> Only SDU compute resources may be used to handle sensitive data.</li>
         <li> To get started, read <a href="/ucloud/guides/sensitive-data-on-ucloud/">our guide</a> on how to handle sensitive data on UCloud.</li>
       </ul>
     </div>
