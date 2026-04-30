@@ -8,7 +8,7 @@ If you are working with data level 2 or 3 in relation to [AAU data classificatio
   ```mermaid
   graph TD
       A[Register your project <br/> with Grants and Contracts] 
-      A --> B[💻 Enter the approved <br/> resources in UCloud]
+      A --> B["💻 Create project or <br/>apply for resources in UCloud"]
       B --> C[✅ CLAAUDIA approval]
       C --> D[⭐ The project is now available]
 
