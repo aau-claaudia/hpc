@@ -386,7 +386,6 @@ processor](https://aaudk.sharepoint.com/sites/persondata-ressourcer/SitePages/Re
  
     a. Only the SDU/K8 provider is permitted for working with data classifications 2 and 3.
     
-    b. The AAU/K8 and AAU virtual machine providers are only permitted to be used for data classified as level 1.
 
 11. On completion the project 
 

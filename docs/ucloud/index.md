@@ -52,10 +52,10 @@ Not for storage :lucide-ban:
 
 UCloud is a HPC research platform, engineered to provide high-performance computing with a focus on ease of use. UCloud provides an intuitive graphical user interface to powerful interactive high-performance computing and tools for data analytics and visualization. UCloud offers an “Apps” section preloaded with popular applications and more applications can be customized and uploaded on-demand.
 
-!!! info "Upcoming migration to new SDU datacenter"
-    UCloud is moving to a new SDU datacenter. If you have data in the **AAU/K8s** or **AAU/VM** providers, you will need to transfer it to **SDU/K8s** before the migration deadline.  
+!!! info "SDU datacenter update"
+    UCloud runs in the new SDU datacenter.  
     
-    * Read the step-by-step **AAU/K8s / AAU/VM migration guide** :octicons-arrow-right-16: [UCloud datacenter migration](/ucloud/sdu-datacenter-migration/).  
+    * Read the **UCloud datacenter migration and status page** :octicons-arrow-right-16: [UCloud datacenter migration](/ucloud/sdu-datacenter-migration/).  
     * See the full, technical description from the consortium behind UCloud :octicons-arrow-right-16: [New SDU Datacenter](https://docs.cloud.sdu.dk/intro/new_datacenter.html#sphx-glr-new-datacenter).
 
 [Get access to UCloud](/ucloud/how-to-access){ .md-button .md-button--primary }
