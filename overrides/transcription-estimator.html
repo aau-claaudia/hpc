@@ -8,7 +8,7 @@
 
 <section class="md-content__inner md-typeset">
 
-  <h1>Audio processing cost estimator</h1>
+  <h1>Transcription resource estimator</h1>
 
   <p>
     Use this estimator to calculate the required CPU and GPU hours based on
@@ -66,7 +66,7 @@
     <summary>How are these values calculated?</summary>
     <ul>
       <li><strong>CPU hours</strong> = 32 × total audio hours</li>
-      <li><strong>GPU hours</strong> = 25% of total audio hours, rounded up</li>
+      <li><strong>GPU hours</strong> = 3.6% of total audio hours (for partial GPU usage - MIG), rounded up</li>
     </ul>
   </details>
 
@@ -76,9 +76,8 @@
   function calculate() {
     const x = Number(document.getElementById('audio-hours').value) || 0;
     document.getElementById('cpu-hours').textContent = x * 32;
-    document.getElementById('gpu-hours').textContent = Math.ceil(x * 0.25);
+    document.getElementById('gpu-hours').textContent = Math.ceil(x * 0.036);
   }
 </script>
 
-{{ super() }}
 {% endblock %}
