@@ -58,7 +58,7 @@ UCloud is a HPC research platform, engineered to provide high-performance comput
     * Read the **UCloud datacenter migration and status page** :octicons-arrow-right-16: [UCloud datacenter migration](/ucloud/sdu-datacenter-migration/).  
     * See the full, technical description from the consortium behind UCloud :octicons-arrow-right-16: [New SDU Datacenter](https://docs.cloud.sdu.dk/intro/new_datacenter.html#sphx-glr-new-datacenter).
 
-[Get access to UCloud](/ucloud/how-to-access){ .md-button .md-button--primary } [Got ideas for new UCloud apps?](/ucloud/ideas){ .md-button }
+[Get access to UCloud](/ucloud/how-to-access){ .md-button .md-button--primary }
 
 ## Features
 
@@ -98,5 +98,3 @@ UCloud is a HPC research platform, engineered to provide high-performance comput
 
 </div>
 
-!!! tip "Ideas for new UCloud apps?"
-    If you have an idea for a new application or improvement on UCloud, share it on the [**Ideas page**](/ucloud/ideas/) so we can see community needs and prioritise development.

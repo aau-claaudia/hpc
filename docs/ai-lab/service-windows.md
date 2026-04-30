@@ -1,7 +1,3 @@
----
-icon: lucide/construction
----
-
 
 <!-- 
 Just inherits the content from /docs/terms-and-conditions.md. 
