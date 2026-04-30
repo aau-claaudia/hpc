@@ -40,6 +40,17 @@ hide:
 
     [:octicons-arrow-right-24: HPC Comparison Table](/hpc-comparison-table)
 
+-   __Transcription resource estimator__
+
+    Estimate the UCloud resource needs for transcribing audio.
+    
+    ---
+
+    ![Transcription resource estimator](/assets/img/tools/trascriber-resource-estimator.png)
+
+    [:octicons-arrow-right-24: Transcription resource estimator](/transcription-estimator)
+
+
 -   __HPC Cost Estimator__
 
     Estimate the cost of using an HPC platform for your project.
