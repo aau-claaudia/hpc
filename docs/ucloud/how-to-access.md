@@ -51,6 +51,7 @@ graph TD
           <br>If you don't have one, you can apply through Grants and Contracts using their <a href="https://aaudk.sharepoint.com/sites/persondata-ressourcer/SitePages/Registrations%20og%20reports%20(Online%20forms).aspx">registration form</a>.
         </li>
         <li> To get started, read <a href="/ucloud/guides/sensitive-data-on-ucloud/">our guide</a> on how to handle sensitive data on UCloud.</li>
+        <li> If your research project is governed by a separate data processing or a subordinate data processing agreement, you will need to identify the WorkZone case number that includes the relevant contract information. This case should include that the project is processing data on the UCloud platform.</li>
       </ul>
     </div>
   </div>
