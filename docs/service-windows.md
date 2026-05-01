@@ -47,7 +47,7 @@ A service window will take place on the following dates:
 
 ### Platform specific information
 
-## Strato and UCloud virtual machines
+## Strato virtual machines
 
 **Be sure to save your work** no later than the end of the day before the service window begins, as all virtual machines will be automatically shut down during the service window and any unsaved data will be lost.
 
@@ -96,9 +96,6 @@ If you want to move your project, you can find instructions on [how to apply for
 
 The application form for inclusion in the automatic restart list closed on on the Thursday prior to each service window.
 [Strato service window: Automatic server restart inclusion form](https://forms.office.com/e/0geuYrC1dZ)
-
-
-
 
 Link to Strato's
 web-interface: [strato-new.claaudia.aau.dk](https://strato-new.claaudia.aau.dk/)
