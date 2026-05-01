@@ -14,8 +14,6 @@ If you require a larger CPU quota, access to GPU resources, a virtual machine, o
 
 The diagram below outlines the process for getting your project approved and set up on UCloud:
 
-[Apply for UCloud project](https://forms.office.com/e/8Khbr1TJGC){ .md-button .md-button--primary target=_blank }
-
 <div style="display: flex; gap: 2rem; align-items: flex-start; justify-content: center; flex-wrap: wrap;">
 
   <!-- Mermaid Diagram -->
