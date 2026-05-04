@@ -1,0 +1,83 @@
+{% extends "main.html" %}
+
+{% block content %}
+
+<!--
+  Minimal calculator styled to match Zenical / hpc.aau.dk overrides.
+-->
+
+<section class="md-content__inner md-typeset">
+
+  <h1>Transcription resource estimator</h1>
+
+  <p>
+    Use this estimator to calculate the required CPU and GPU hours based on
+    the total duration of audio to be processed.
+  </p>
+
+  <form id="audio-form" onsubmit="return false;">
+
+    <div class="md-field">
+      <label for="audio-hours"><strong>Total number of hours of audio</strong></label>
+      <input
+        id="audio-hours"
+        type="number"
+        min="0"
+        step="0.1"
+        class="md-input"
+        placeholder="e.g. 12.5"
+      />
+    </div>
+
+    <p>
+      <button type="button"
+              class="md-button md-button--primary"
+              onclick="calculate()">
+        Calculate
+      </button>
+    </p>
+
+  </form>
+
+  <hr />
+
+  <h2>Estimated resource usage</h2>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Resource</th>
+        <th>Hours needed</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>CPU</td>
+        <td><span id="cpu-hours">–</span></td>
+      </tr>
+      <tr>
+        <td>GPU</td>
+        <td><span id="gpu-hours">–</span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <details>
+    <summary>How are these values calculated?</summary>
+    <ul>
+      <li><strong>CPU hours</strong> = 32 × total audio hours</li>
+      <li><strong>GPU hours</strong> = 3.6% of total audio hours (for partial GPU usage - MIG), rounded up</li>
+    </ul>
+  </details>
+
+</section>
+
+<script>
+  function calculate() {
+    const x = Number(document.getElementById('audio-hours').value) || 0;
+    document.getElementById('cpu-hours').textContent = x * 32;
+    document.getElementById('gpu-hours').textContent = Math.ceil(x * 0.036);
+  }
+</script>
+
+{% endblock %}
