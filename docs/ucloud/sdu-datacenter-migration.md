@@ -5,6 +5,7 @@ icon: lucide/server-cog
 # UCloud datacenter migration
 
 The new SDU data center is now operational, and UCloud services are up and running.
+If you find any issues please let us know through the serviceportal. 
 
 ## Timeline
 
