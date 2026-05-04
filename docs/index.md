@@ -26,7 +26,7 @@ hide:
     ---
 
     #### :lucide-star: UCloud migration complete
-    The migration to the new data centre is finished—new CPU and GPU machine types, rewritten VMs, and job networking are available. You may need to apply for resources on the new types to continue working.
+    The migration to the new data centre is finished.
 
     [:lucide-arrow-right: Read more](https://cloud.sdu.dk/app/news/detailed/465)
 
