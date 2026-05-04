@@ -47,7 +47,7 @@ A service window will take place on the following dates:
 
 ### Platform specific information
 
-## Strato and UCloud virtual machines
+## Strato virtual machines
 
 **Be sure to save your work** no later than the end of the day before the service window begins, as all virtual machines will be automatically shut down during the service window and any unsaved data will be lost.
 
@@ -76,7 +76,9 @@ for instructions on how to do this.
 
 **Apply for automatic restart of your Strato server**
 
-> **Note:** The deadline for requesting inclusion in the automatic restart list has now passed for the service window on the 2nd december.
+[Automatic server restart application](https://forms.office.com/e/0geuYrC1dZ){ .md-button .md-button--primary target=_blank }
+
+> **Note:** The deadline for requesting inclusion in the automatic restart is 12:00 on the Thursday before each service window.
 
 You could request automatic restarts for your server if **all** of the following conditions were met:
 
@@ -92,11 +94,8 @@ You could request automatic restarts for your server if **all** of the following
 Servers running in personal project spaces (such as default quota projects, e.g. `GK83DJ@aau.dk`) **cannot be included**.  
 If you want to move your project, you can find instructions on [how to apply for a Strato Project](https://hpc.aau.dk/strato/how-to-access/)
 
-The application form for inclusion in the automatic restart list closed on **November 25th**:  
+The application form for inclusion in the automatic restart list closed on on the Thursday prior to each service window.
 [Strato service window: Automatic server restart inclusion form](https://forms.office.com/e/0geuYrC1dZ)
-
-
-
 
 Link to Strato's
 web-interface: [strato-new.claaudia.aau.dk](https://strato-new.claaudia.aau.dk/)
