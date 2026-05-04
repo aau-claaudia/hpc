@@ -187,7 +187,7 @@ There are two ways to use Transcriber on UCloud:
       
       > Feel free to test with sample files to see what works best for you.
 
-      ![Transcriber Node Assigned](/assets/img/UCloud/Transcriberguide19.jpg)
+      ![Transcriber Node Assigned](/assets/img/UCloud/Transcriberguide19.png)
 
     ##### 1.2.4 Select the input file
     - Click the "use" button.
