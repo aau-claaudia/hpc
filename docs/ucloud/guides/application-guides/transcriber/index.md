@@ -22,6 +22,10 @@
 
     Using a dedicated project helps ensure proper access control and compliance with data protection requirements.
 
+!!! tip "Don't have a project yet?"
+
+    If you haven't created a project, please see the [Expanded UCloud Application Guide](/ucloud/expanded) for step-by-step instructions on setting up your first project.
+
 
 ### What is Transcriber
 Transcriber is an application on [UCloud](https://cloud.sdu.dk/app/jobs/create?app=transcriber-gui) designed to automatically convert audio and video files into accurate, readable text. It leverages advanced speech recognition models to transcribe spoken content, making it easier to analyze, search, and share information from interviews, lectures, meetings, podcasts, and other recordings. Transcriber helps researchers save time and effort by providing fast, reliable transcriptions directly within the secure UCloud platform — no technical expertise required. Whether you need simple text output or more advanced features like speaker identification and multiple file formats, Transcriber streamlines the process of turning your recordings into useful, accessible documents.
@@ -69,7 +73,7 @@ There are two ways to use Transcriber on UCloud:
     - **Set the duration**: Specify how many hours the job should run. For reference, a 1-hour audio typically takes about 1 hour to transcribe on a `u1-standard-16` machine.
         - You can stop the machine early or add more time later if needed.
 
-    - **Choose a machine**: We recommend <span class="machine-name"> a MIG fraction of the gpu-nvidia-b200-1-mig.1g </span> if available, otherwise use <span class="machine-name">u1-standard-16</span>.
+    - **Choose a machine**: We recommend the MIG fraction GPU <span class="machine-name">gpu-nvidia-b200-1-mig.1g </span> if available, otherwise use <span class="machine-name">u1-standard-16</span>.
 
     - **(Optional) Select folders to use**: If you want to use UCloud folders, select the folder(s) containing your files.
       - The app will scan these folders for compatible files.
@@ -77,7 +81,7 @@ There are two ways to use Transcriber on UCloud:
 
     - Once you finish configuring, click **Submit** to start the Transcriber job.
 
-    ![Starting the job on UCloud](/assets/img/UCloud/Transcriberguide_mig_gpu.jpg)
+    ![Starting the job on UCloud](/assets/img/UCloud/Transcriberguide_mig_gpu.png)
 
     After submitting your job, you'll be redirected to a new page where your Transcriber machine is being prepared. Once it's ready, click the **Open interface** button to launch the Transcriber application.
 
