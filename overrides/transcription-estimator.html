@@ -70,6 +70,40 @@
     </ul>
   </details>
 
+<div class="admonition info">
+  <p class="admonition-title">Dictaphone users:</p>
+
+  <p>
+    This estimate can also be used for Dictaphone. This is because the estimate is extra conservative.
+    Dictaphone users are recommended to record audio with a machine type that does not use GPU resources.
+  </p>
+
+  <p><strong>How is the estimate conservative?</strong></p>
+
+  <ul>
+    <li>
+      There are enough resources suggested that you could transcribe your audio
+      on either the CPU or GPU options.
+    </li>
+    <li>
+      Both resources are also doubled. This is to allow you to attempt more than
+      one transcriber model size if you don't get great results with the default settings.
+    </li>
+  </ul>
+
+  <p>
+    Dictaphone users can launch the application with a small CPU machine type for recording audio, and
+    later return to the recording data and transcribe this with larger CPU or GPU machine types.
+  </p>
+
+  <p>
+    Use this estimate as a guideline when requesting resources. If your workload is
+    experimental or your audio material varies significantly, consider applying for
+    slightly more resources than the estimate suggests.
+  </p>
+</div>
+
+
 </section>
 
 <script>
@@ -79,5 +113,7 @@
     document.getElementById('gpu-hours').textContent = Math.ceil(x * 0.036);
   }
 </script>
+
+
 
 {% endblock %}

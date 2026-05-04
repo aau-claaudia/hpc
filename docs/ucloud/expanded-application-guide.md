@@ -34,7 +34,9 @@ Before requesting a project or additional resources, make sure that you:
 ### How to apply for a project or additional resources
 
 #### Step 1: Log in to UCloud
-Log in to UCloud using your institutional (WAYF) credentials.
+Log in to [UCloud](https://cloud.sdu.dk) using your institutional (WAYF) credentials.
+
+![Log into UCloud](/assets/img/UCloud/expanded-application-guide/ucloud-expanded-project-application-image-01.png){.standard_image_width}
 
 All AAU users automatically have access to UCloud and can work in their personal workspace with a basic starting quota.
 
@@ -43,7 +45,9 @@ All AAU users automatically have access to UCloud and can work in their personal
 #### Step 2: Create or open your project
 In the UCloud interface:
 
-![Apply for resources](/assets/img/UCloud/expanded-application-guide/ucloud-expanded-project-application-image-05.png){.standard_image_width}
+![Click on the projects icon](/assets/img/UCloud/expanded-application-guide/ucloud-expanded-project-application-image-02.png){.standard_image_width}
+
+![Apply for resources](/assets/img/UCloud/expanded-application-guide/ucloud-expanded-project-application-image-03.png){.standard_image_width}
 
 1. Open **Projects** in the left-hand menu
 2. Click **Apply for resources**
@@ -51,66 +55,111 @@ In the UCloud interface:
     - Create a **new project**, or
     - **Select an existing project** if you want to add resources to an existing project
 
+
 ---
 
-#### Step 3: Request resources in UCloud
+#### Step 3: Provide project details for title and time-frame
+
+![Provide title and duration](/assets/img/UCloud/expanded-application-guide/ucloud-expanded-project-application-image-04.png){.standard_image_width}
+
+1. Provide a title for your UCloud project. Preferably something unique that reflects the work you plan to do. For example, "biothermal_image_training_fall_2026".
+2. Applications for resource allocations start from the first day of the month specified in the start date. Unless it is necessary, allocations should not exceed the end of the current calendar year.
+3. Select "Type 1 - AAU"
+
+!!! info "First of the month start for all allocations"
+    For example, if you apply for your project to start from 15 October 2026, then all approved allocations will start from 01 October 2026 and run for the time period specified. 
+
+
+
+---
+
+#### Step 4: Request resources in UCloud
 Select the resources that you wish to apply for.
 
+<<<<<<< HEAD
+=======
+![Specify the resource allocations you need](/assets/img/UCloud/expanded-application-guide/ucloud-expanded-project-application-image-05.png){.standard_image_width}
+
+
+##### Available resource options
+
+>>>>>>> 698ef00 (guide modifications)
 | Resource type | Product identifier | Description | Notes |
 |--------------|-------------------|-------------|-------|
 | CPU resources | `cpu-amd-zen5` | General‑purpose CPU compute for data analysis, simulations, preprocessing, and other standard workloads | Suitable for most workloads that do not require GPU acceleration |
-| GPU resources | `gpu-nvidia-b200` | GPU compute for AI, machine learning, transcription, and other accelerator‑based workloads | Required for transcription and GPU‑accelerated applications |
-| Storage | `u1-cephfs` | Persistent data storage required to be able to use the UCloud platform | Storage must be requested as part of all projects |
+| GPU resources | `gpu-nvidia-b200` | GPU compute for AI, machine learning, transcription, and other accelerator‑based workloads | Required for GPU‑accelerated applications |
+| Storage | `storage` | Persistent data storage required to be able to use the UCloud platform | Storage must be requested as part of all projects |
 | Licenses | MATLAB, COMSOL, ANSYS | Access to licensed research software | Available to **researchers only**, for **non‑commercial research activities** |
 
-All resources are allocated from the **SDU datacenter**, which is now the sole UCloud provider.
+There is a [resource estimator available for Transcriber and Dictaphone users](/docs/transcription-estimator/).
+
+All resources are allocated from the **new datacenter**, which is now the sole UCloud provider.
 
 ---
-#### Step 4: Motivate your application
+#### Step 5: Motivate your application
 
-Additional resources should be motivated in the **Introduction** section.
+![Project application](/assets/img/UCloud/expanded-application-guide/ucloud-expanded-project-application-image-06.png){.standard_image_width}
 
+<<<<<<< HEAD
 Please clearly explain (in roughly 100 words) why you are requesting access to UCloud and which research objectives this access will help you achieve.
+=======
+>>>>>>> 698ef00 (guide modifications)
 
-!!! info "At a minimum this should include:"
+1. Your application for a grant should be motivated in the **Motivation** section. 
+2. Specify the highest AAU data classification level of data to be included in your project.
+3. Include your WorkZone number, if for all projects with data classification levels 2 or 3.
+4. Provide your email address (as Principal Investigator in the project).
 
+!!! info "Motivation requirements:"
+    Please clearly explain (in roughly 100 words) why you are requesting access to UCloud and which research objectives this access will help you achieve. This should at minumum include:
+    
     - What is the problem statement addressed by / purpose of the research?
     - What are the methods to be used on the platform?
+    
+    **If this description is not complete, the application will not be approved.**
 
-**If this description is not complete, the application will not be approved.**
-
----
-
-
-#### Step 5: Sensitive data: Include Workszone case number
-All projects with data classification levels 2 or 3, must submit the WorkZone case number related to the registration of the research with GDPR sensitive data.
 
 !!! info "Special data processing agreements"
 
     Some research groups have data processing agreements that apply to all sub-projects within the scope of those agreements. If your project is governed by a broader data processing agreement, you should submit the case number related to this GDPR registration in the **Separate data processing agreement** field, and leave the **WorkZone reference number** field blank.
 
 
-<!-- ![Add DeiC project number and WorkZone case number if relevant](/assets/img/UCloud/expanded-application-guide/ucloud-expanded-project-application-image-08.png){.standard_image_width} -->
-
-<!-- Screenshot: Approved project visible in UCloud -->
-
-
 ---
 
 #### Step 6: Enter all project participant email addresses
 
+<<<<<<< HEAD
 All persons that will participate in the project should have their email addresses included in the email address fields at the bottom of the form
+=======
+All persons that will participate in the project should have their email addresses included in the email address fields available.
+>>>>>>> 698ef00 (guide modifications)
 
-<!-- ![Add DeiC project number and WorkZone case number if relevant](/assets/img/UCloud/expanded-application-guide/ucloud-expanded-project-application-image-08.png){.standard_image_width}  -->
+![Enter project participant email addresses](/assets/img/UCloud/expanded-application-guide/ucloud-expanded-project-application-image-07.png){.standard_image_width}
+
+
+
+#### Step 7: External collaborators and DeiC project number
+
+![Enter external collaborator information](/assets/img/UCloud/expanded-application-guide/ucloud-expanded-project-application-image-08.png){.standard_image_width}
+
+1. If there are external collaborators you should specify their name, email address and affiliation in this field. (If there is more than one external collaborator, you should separate their details with a semi-colon ';')
+2. Do not modify. Your DeiC Project number will be provided by a CLAAUDIA employee during the approval process.
+
+!!! info "Licensed products warning"
+    **No licenced software may be included in projects with external participants.**
 
 ---
 
-#### Step 7: Approval and allocation
+#### Step 8: Approval and allocation
 After submitting your request:
 
 - The application is reviewed by **CLAAUDIA** (AAU’s local DeiC front office)
 - You will receive confirmation once resources are approved
 - Approved resources will appear directly in your UCloud project
+
+You will find your newly approved project in the project workspace dropdown menu at the top-right corner of the UCloud landing page.
+
+![Open the project workspace](/assets/img/UCloud/expanded-application-guide/ucloud-expanded-project-application-image-09.png){.standard_image_width}
 
 ---
 
