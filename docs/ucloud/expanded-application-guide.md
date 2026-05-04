@@ -12,7 +12,7 @@ If you need additional resources on UCloud (for example GPU access, larger CPU q
     At the same time, the UCloud platform has been simplified:
 
     - All compute resources are provided via **one provider (SDU)**
-    - Users choose between **one CPU product** and **one GPU product**
+    - Users choose between **one CPU product**, **one GPU product** and **one Storage product**
 
 ---
 
@@ -49,15 +49,12 @@ In the UCloud interface:
 2. Click **Apply for resources**
 3. Either:
     - Create a **new project**, or
-    - Open this link from within an **existing project workspace** if you want to add resources to an existing project
+    - **Select an existing project** if you want to add resources to an existing project
 
 ---
 
 #### Step 3: Request resources in UCloud
 Select the resources that you wish to apply for.
-
-
-##### Available resource options
 
 | Resource type | Product identifier | Description | Notes |
 |--------------|-------------------|-------------|-------|
@@ -73,7 +70,7 @@ All resources are allocated from the **SDU datacenter**, which is now the sole U
 
 Additional resources should be motivated in the **Introduction** section.
 
-Please clearly explain (in roughly 200 words) why you are requesting access to UCloud and which research objectives this access will help you achieve.
+Please clearly explain (in roughly 100 words) why you are requesting access to UCloud and which research objectives this access will help you achieve.
 
 !!! info "At a minimum this should include:"
 
@@ -102,7 +99,7 @@ All projects with data classification levels 2 or 3, must submit the WorkZone ca
 
 #### Step 6: Enter all project participant email addresses
 
-All persons that well participate in the project should have their email addresses included in the email address fields at the bottom of the form
+All persons that will participate in the project should have their email addresses included in the email address fields at the bottom of the form
 
 <!-- ![Add DeiC project number and WorkZone case number if relevant](/assets/img/UCloud/expanded-application-guide/ucloud-expanded-project-application-image-08.png){.standard_image_width}  -->
 
