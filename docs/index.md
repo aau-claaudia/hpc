@@ -21,7 +21,16 @@ hide:
 
 <div class="grid cards three" markdown>
 
--   ##### 7 May 2026
+-   ##### 4 May 2026
+
+    ---
+
+    #### :lucide-star: UCloud migration complete
+    The migration to the new data centre is finished—new CPU and GPU machine types, rewritten VMs, and job networking are available. You may need to apply for resources on the new types to continue working.
+
+    [:lucide-arrow-right: Read more](https://cloud.sdu.dk/app/news/detailed/465)
+
+-   ##### 7 April 2026
 
     ---
 
@@ -38,15 +47,6 @@ hide:
     See migration deadlines, expected downtime, and practical next steps for users.
 
     [:lucide-arrow-right: Read more](/ucloud/sdu-datacenter-migration/)
-
--   ##### 20 March 2026
-
-    ---
-
-    #### :lucide-star: RAGFlow on UCloud
-    Use AI over your own documents and data with grounded retrieval on UCloud.
-
-    [:lucide-arrow-right: Read more](https://interactivehpc.dk/?p=2759)
 
 </div>
 
