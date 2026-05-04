@@ -4,15 +4,15 @@ icon: lucide/server-cog
 
 # UCloud datacenter migration
 
-The migration deadline has now passed, and UCloud will remain offline until the new datacenter is established on **May 4, 2026**.
+The new SDU data center is now operational, and UCloud services are up and running.
 
 ## Timeline
 
 | Date | Status |
 |------|--------|
 | ~~**Before April 27, 2026 at 08:00**~~ *(surpassed)* | ~~Final deadline for moving data out of `AAU/K8` and `AAU/VM`.~~ |
-| **April 27 to May 4, 2026** *(ongoing)* | Full UCloud downtime during the migration. |
-| **May 4, 2026** | Expected reopening of UCloud in the new SDU datacenter. |
+| ~~**April 27 to May 4, 2026** *(overstået)*~~ | ~~Full UCloud downtime during the migration.~~ |
+| **May 4, 2026** | The new SDU data center is now open|
 
 
 ## What users should know
