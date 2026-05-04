@@ -22,9 +22,9 @@
 
     Using a dedicated project helps ensure proper access control and compliance with data protection requirements.
 
-!!! tip "Don't have a project yet?"
-
     If you haven't created a project, please see the [Expanded UCloud Application Guide](/ucloud/expanded) for step-by-step instructions on setting up your first project.
+
+    
 
 
 ### What is Transcriber
