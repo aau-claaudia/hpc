@@ -22,7 +22,7 @@
 
     Using a dedicated project helps ensure proper access control and compliance with data protection requirements.
 
-    If you haven't created a project, please see the [Expanded UCloud Application Guide](/ucloud/expanded) for step-by-step instructions on setting up your first project.
+    If you haven't created a project, please see the [Expanded UCloud Application Guide](/docs/ucloud/expanded-application-guide.md) for step-by-step instructions on setting up your first project.
 
     
 
