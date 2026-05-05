@@ -29,9 +29,8 @@ The UCloud platform is once again up and running.
     - All `u1-standard` CPU resources and `u3-gpu` resources have become redundant.
 
     **How do you get new resources?**
-
-    - CPU resources are now called: `cpu-amd-zen5`
-    - GPU resources are now called: `gpu-nvidia-b200`
+    - Apply for CPU resources now called: `cpu-amd-zen5`
+    - Apply for GPU resources now called: `gpu-nvidia-b200`
 
 
 If you have not yet applied for the new compute resources `cpu-amd-zen5` and `gpu-nvidia-b200`, you must do so before you can use them. 
