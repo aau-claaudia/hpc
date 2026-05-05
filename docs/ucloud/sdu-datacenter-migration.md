@@ -18,9 +18,25 @@ If you find any issues please let us know through the serviceportal.
 
 ## What users should know
 
-There is no action to take inside UCloud right now because the platform is offline.
+The UCloud platform is once again up and running.
 
-When the new datacenter opens, all project data stored in `u1-cephfs` will be available as before. If you have not yet applied for the new compute resources `cpu-amd-zen5` and `gpu-nvidia-b200`, you must do so before you can use them. The application procedure is the same as usual as shown on the [How to access UCloud page](/ucloud/how-to-access/).
+!!! info "**All old resources have expired except storage**"
+    All previous allocations of compute resources have been automatically expired. This is because we now have access to an entirely separate datacenter, and none of the previous resources are available to us.
+
+    **What has changed?**
+
+    - The storage allocation you had have changed name from `u1-cephs` to `storage`.
+    - All `u1-standard` CPU resources and `u3-gpu` resources have become redundant.
+
+    **How do you get new resources?**
+
+    - CPU resources are now called: `cpu-amd-zen5`
+    - GPU resources are now called: `gpu-nvidia-b200`
+
+
+If you have not yet applied for the new compute resources `cpu-amd-zen5` and `gpu-nvidia-b200`, you must do so before you can use them. 
+
+The application procedure has been simplified dramatically, and you now only need to apply inside the UCloud platform. For more information read the [How to access UCloud page](/ucloud/how-to-access/).
 
 For technical details about the new hardware and machine types, see the [official SDU migration guide](https://docs.cloud.sdu.dk/intro/new_datacenter.html#sphx-glr-new-datacenter).
 
