@@ -25,7 +25,7 @@ The UCloud platform is once again up and running.
 
     **What has changed?**
 
-    - The storage allocation you had have changed name from `u1-cephs` to `storage`.
+    - The storage allocations have changed name from `u1-cephs` to `storage`.
     - All `u1-standard` CPU resources and `u3-gpu` resources have become redundant.
 
     **How do you get new resources?**
