@@ -48,6 +48,17 @@
   opacity: 0.85;
 }
 
+/* Red danger variant of the announce bar */
+.announce-bar--danger,
+.announce-bar--danger .announce-bar__title,
+.announce-bar--danger .announce-bar__text {
+  color: #991b1b;
+}
+
+.announce-bar--danger .announce-bar__text {
+  font-size: 0.68rem;
+}
+
 
 /* Custom admonition styles */
 .md-typeset .admonition.info, .md-typeset details.info {

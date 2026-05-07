@@ -22,3 +22,12 @@
 </div>
 {% endblock %}
 #}
+
+{% block announce %}
+<div class="announce-bar announce-bar--danger" role="alert" aria-live="assertive">
+  <p class="announce-bar__title">⚠ Strato: Service disruption</p>
+  <p class="announce-bar__text">Some virtual machines are not starting and may appear as "SHUT OFF".  Please avoid repeated start attempts — we are working to resolve this. Running instances are unaffected. -CLAAUDIA</p>
+</div>
+{% endblock %}
+
+

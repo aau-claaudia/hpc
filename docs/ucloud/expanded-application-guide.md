@@ -12,7 +12,7 @@ If you need additional resources on UCloud (for example GPU access, larger CPU q
     At the same time, the UCloud platform has been simplified:
 
     - All compute resources are provided via **one provider (SDU)**
-    - Users choose between **one CPU product**, **one GPU product** and **one Storage product**
+    - Users choose between **one CPU product** and **one GPU product**
 
 ---
 
@@ -53,7 +53,7 @@ In the UCloud interface:
 2. Click **Apply for resources**
 3. Either:
     - Create a **new project**, or
-    - **Select an existing project** if you want to add resources to an existing project
+    - Open this link from within an **existing project workspace** if you want to add resources to an existing project
 
 
 ---
@@ -76,14 +76,11 @@ In the UCloud interface:
 #### Step 4: Request resources in UCloud
 Select the resources that you wish to apply for.
 
-<<<<<<< HEAD
-=======
 ![Specify the resource allocations you need](/assets/img/UCloud/expanded-application-guide/ucloud-expanded-project-application-image-05.png){.standard_image_width}
 
 
 ##### Available resource options
 
->>>>>>> 698ef00 (guide modifications)
 | Resource type | Product identifier | Description | Notes |
 |--------------|-------------------|-------------|-------|
 | CPU resources | `cpu-amd-zen5` | General‑purpose CPU compute for data analysis, simulations, preprocessing, and other standard workloads | Suitable for most workloads that do not require GPU acceleration |
@@ -100,10 +97,6 @@ All resources are allocated from the **new datacenter**, which is now the sole U
 
 ![Project application](/assets/img/UCloud/expanded-application-guide/ucloud-expanded-project-application-image-06.png){.standard_image_width}
 
-<<<<<<< HEAD
-Please clearly explain (in roughly 100 words) why you are requesting access to UCloud and which research objectives this access will help you achieve.
-=======
->>>>>>> 698ef00 (guide modifications)
 
 1. Your application for a grant should be motivated in the **Motivation** section. 
 2. Specify the highest AAU data classification level of data to be included in your project.
@@ -128,11 +121,7 @@ Please clearly explain (in roughly 100 words) why you are requesting access to U
 
 #### Step 6: Enter all project participant email addresses
 
-<<<<<<< HEAD
-All persons that will participate in the project should have their email addresses included in the email address fields at the bottom of the form
-=======
 All persons that will participate in the project should have their email addresses included in the email address fields available.
->>>>>>> 698ef00 (guide modifications)
 
 ![Enter project participant email addresses](/assets/img/UCloud/expanded-application-guide/ucloud-expanded-project-application-image-07.png){.standard_image_width}
 
@@ -153,9 +142,9 @@ All persons that will participate in the project should have their email address
 #### Step 8: Approval and allocation
 After submitting your request:
 
-- The application is reviewed by **CLAAUDIA** (AAU’s local DeiC front office)
-- You will receive confirmation once resources are approved
-- Approved resources will appear directly in your UCloud project
+- The application is reviewed by **CLAAUDIA** (AAU’s local DeiC front office).
+- You will receive confirmation once resources are approved.
+- Approved resources will appear directly in your UCloud project.
 
 You will find your newly approved project in the project workspace dropdown menu at the top-right corner of the UCloud landing page.
 
