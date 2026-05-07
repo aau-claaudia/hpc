@@ -100,7 +100,9 @@ Host ailab-2
 
 # AI-LAB via SSH Gateway (for off-campus access)
 # For this to work, you need to have set up AAU MFA (https://www.en.its.aau.dk/instructions/mfa)
-Host ailab-vpn
+# Also don't forget to update the user credentials to your own username.
+
+Host ailab-sshgw
     HostName ailab-fe01.srv.aau.dk
     User user@student.aau.dk
     ProxyJump user@student.aau.dk@sshgw.aau.dk
