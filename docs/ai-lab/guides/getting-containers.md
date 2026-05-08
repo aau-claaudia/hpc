@@ -46,7 +46,6 @@ Common containers include:
 - **Python**: Basic Python environment
 - **PyTorch**: Deep learning with PyTorch
 - **TensorFlow**: Deep learning with TensorFlow
-- **MATLAB**: MATLAB computational environment
 
 ### Using Pre-downloaded Containers
 
