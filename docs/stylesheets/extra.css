@@ -59,6 +59,18 @@
   font-size: 0.68rem;
 }
 
+.announce-bar--danger .announce-bar__link {
+  color: #991b1b;
+  border-color: #991b1b;
+  font-size: 0.68rem;
+}
+
+.announce-bar__divider {
+  border: none;
+  border-top: 1px solid rgba(153, 27, 27, 0.25);
+  margin: 0;
+}
+
 
 /* Custom admonition styles */
 .md-typeset .admonition.info, .md-typeset details.info {
