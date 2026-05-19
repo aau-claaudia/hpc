@@ -31,7 +31,7 @@ Acquiring LUMI-resources should <u>always</u> be a two step proces:
 
     Make use of one of the following:
 
-      - **AAU's local resource pool:** Fill out [our application form](https://forms.office.com/e/4XC48iVu4S).
+      - **AAU's local resource pool:** Fill out [our application form](https://aau.service-now.com/serviceportal?id=sc_cat_item&sys_id=d8a58078c358cb50f0f3041ad001318b).
 
       - **EuroHPC:** Read more on [our page dedicated to this option](/external-hpc/eurohpc-resources/).
 
@@ -41,7 +41,7 @@ Acquiring LUMI-resources should <u>always</u> be a two step proces:
 
     Make use of one of the following:
 
-      - **AAU's local resource pool**: Fill out [our application form](https://forms.office.com/e/4XC48iVu4S). Suitable for modest/large grants, depending on our budget.
+      - **AAU's local resource pool**: Fill out [our application form](https://aau.service-now.com/serviceportal?id=sc_cat_item&sys_id=d8a58078c358cb50f0f3041ad001318b). Suitable for modest/large grants, depending on our budget.
 
       - **DeiC's national resource pool**: Read more on [our page dedicated to this option](/external-hpc/deic-resources/#applications-to-the-national-resource-pool).
 
