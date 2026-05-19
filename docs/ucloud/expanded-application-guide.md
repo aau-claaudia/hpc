@@ -11,17 +11,17 @@ If you need additional resources on UCloud (for example GPU access, larger CPU q
 
     At the same time, the UCloud platform has been simplified:
 
-    - All compute resources are provided via **one provider (SDU)**
-    - Users choose between **one CPU product** and **one GPU product**
+    * All compute resources are provided via **one provider (SDU)**
+    * Users choose between **one CPU product** and **one GPU product**
 
 ---
 
 ### Before you apply
 Before requesting a project or additional resources, make sure that you:
 
-- Understand [the **data classification level** of your data](https://www.security.aau.dk/data-classification)
-- Have reviewed the **platform limitations and Terms & conditions**
-- Have completed any required **GDPR registrations** if your project involves sensitive data (classification level 2 or higher)
+* Understand [the **data classification level** of your data](https://www.security.aau.dk/data-classification)
+* Have reviewed the **platform limitations and Terms & conditions**
+* Have completed any required **GDPR registrations** if your project involves sensitive data (classification level 2 or higher)
 
 !!! info "GDPR registration of projects"
     
@@ -52,8 +52,8 @@ In the UCloud interface:
 1. Open **Projects** in the left-hand menu
 2. Click **Apply for resources**
 3. Either:
-    - Create a **new project**, or
-    - Open this link from within an **existing project workspace** if you want to add resources to an existing project
+    * Create a **new project**, or
+    * Open this link from within an **existing project workspace** if you want to add resources to an existing project
 
 
 ---
@@ -65,12 +65,12 @@ In the UCloud interface:
 1. Provide a title for your UCloud project. Preferably something unique that reflects the work you plan to do. For example, "biothermal_image_training_fall_2026".
 2. Applications for resource allocations start from the first day of the month specified in the start date. Unless it is necessary, allocations should not exceed the end of the current calendar year.
 3. In the **"Select grant giver(s)"** section, choose the appropriate option:
-    - **Researchers:** Select **"Type 1 - AAU"**.
-    - **Students and educators:** Select one of the **AAU Education projects**, depending on your faculty:
-         - Faculty of ENG – AAU Education  
-         - Faculty of TECH – AAU Education  
-         - Faculty of SSH – AAU Education  
-         - Faculty of SUND – AAU Education  
+    * **Researchers:** Select **"Type 1 - AAU"**.
+    * **Students and educators:** Select one of the **AAU Education projects**, depending on your faculty:
+         * Faculty of ENG – AAU Education  
+         * Faculty of TECH – AAU Education  
+         * Faculty of SSH – AAU Education  
+         * Faculty of SUND – AAU Education  
 
    Please ensure you choose the correct category, as different terms and available resources apply.
 
@@ -97,14 +97,21 @@ Select the resources that you wish to apply for.
 
 There is a [resource estimator available for Transcriber and Dictaphone users](/docs/transcription-estimator/).
 
-!!! info "Licenses for COMSOL and ANSYS not available to students"
+!!! info "These licenses are provided for non‑commercial academic research only."
     
-    * Usage for teaching purposes (i.e. all teaching or student projects) are currently not approved for the multi-processor licenses that are offered on the UCloud platform.
-    * This includes all projects for teaching or students (i.e. all AAU education projects)
+    **They may not be used for**:
+
+       * Teaching or coursework
+       * Student assignments
+       * Commercial or industry-funded work
+
+    Students may use the software **only when participating in eligible academic research projects**.
+
 
 !!! info "MATLAB is available to students by disabling the HPC license"
 
     * Your Mathworks license can be attained by following [the guide in UCloud's documentation](https://docs.cloud.sdu.dk/Apps/matlab.html).
+    * Be aware that you will need to 
 
 All resources are allocated from the **new datacenter**, which is now the sole UCloud provider.
 
@@ -122,8 +129,8 @@ All resources are allocated from the **new datacenter**, which is now the sole U
 !!! info "Motivation requirements:"
     Please clearly explain (in roughly 100 words) why you are requesting access to UCloud and which research objectives this access will help you achieve. This should at minumum include:
     
-    - What is the problem statement addressed by / purpose of the research?
-    - What are the methods to be used on the platform?
+    * What is the problem statement addressed by / purpose of the research?
+    * What are the methods to be used on the platform?
     
     **If this description is not complete, the application will not be approved.**
 
@@ -158,9 +165,9 @@ All persons that will participate in the project should have their email address
 #### Step 8: Approval and allocation
 After submitting your request:
 
-- The application is reviewed by **CLAAUDIA** (AAU’s local DeiC front office).
-- You will receive confirmation once resources are approved.
-- Approved resources will appear directly in your UCloud project.
+* The application is reviewed by **CLAAUDIA** (AAU’s local DeiC front office).
+* You will receive confirmation once resources are approved.
+* Approved resources will appear directly in your UCloud project.
 
 You will find your newly approved project in the project workspace dropdown menu at the top-right corner of the UCloud landing page.
 
@@ -219,9 +226,9 @@ slightly more resources than the estimate suggests.
 
 As part of the migration to the new SDU datacenter:
 
-- Previous AAU-based providers (AAU/K8s and AAU/VM) have been decommissioned
-- Existing allocations expired during the migration period
-- Projects must request resources again under the new SDU-based setup
+* Previous AAU-based providers (AAU/K8s and AAU/VM) have been decommissioned
+* Existing allocations expired during the migration period
+* Projects must request resources again under the new SDU-based setup
 
 This simplification results in fewer choices and a clearer, faster application process.
 
