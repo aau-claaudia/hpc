@@ -19,7 +19,7 @@ If you need additional resources on UCloud (for example GPU access, larger CPU q
 ### Before you apply
 Before requesting a project or additional resources, make sure that you:
 
-- Understand the **data classification level** of your data
+- Understand [the **data classification level** of your data](https://www.security.aau.dk/data-classification)
 - Have reviewed the **platform limitations and Terms & conditions**
 - Have completed any required **GDPR registrations** if your project involves sensitive data (classification level 2 or higher)
 
@@ -99,7 +99,8 @@ There is a [resource estimator available for Transcriber and Dictaphone users](/
 
 !!! info "Licenses for COMSOL and ANSYS not available to students"
     
-    * Students are currently not approved for the multi-processor licenses that are offered on the UCloud platform.
+    * Usage for teaching purposes (i.e. all teaching or student projects) are currently not approved for the multi-processor licenses that are offered on the UCloud platform.
+    * This includes all projects for teaching or students (i.e. all AAU education projects)
 
 !!! info "MATLAB is available to students by disabling the HPC license"
 
