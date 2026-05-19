@@ -97,6 +97,14 @@ Select the resources that you wish to apply for.
 
 There is a [resource estimator available for Transcriber and Dictaphone users](/docs/transcription-estimator/).
 
+!!! info "Licenses for COMSOL and ANSYS not available to students"
+    
+    * Students are currently not approved for the multi-processor licenses that are offered on the UCloud platform.
+
+!!! info "MATLAB is available to students by disabling the HPC license"
+
+    * Your Mathworks license can be attained by following [the guide in UCloud's documentation](https://docs.cloud.sdu.dk/Apps/matlab.html).
+
 All resources are allocated from the **new datacenter**, which is now the sole UCloud provider.
 
 ---
