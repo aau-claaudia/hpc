@@ -111,7 +111,7 @@ There is a [resource estimator available for Transcriber and Dictaphone users](/
 !!! info "MATLAB is available to students by disabling the HPC license"
 
     * Your Mathworks license can be attained by following [the guide in UCloud's documentation](https://docs.cloud.sdu.dk/Apps/matlab.html).
-    * Be aware that you will need to 
+    * Be aware that you will need to [remove devices in your MathWorks profile](https://www.mathworks.com/help/matlab/matlab_env/manage-your-licenses.html) periodically if you activate your MATLAB license in a UCloud job.
 
 All resources are allocated from the **new datacenter**, which is now the sole UCloud provider.
 
