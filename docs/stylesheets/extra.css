@@ -48,6 +48,29 @@
   opacity: 0.85;
 }
 
+/* Red danger variant of the announce bar */
+.announce-bar--danger,
+.announce-bar--danger .announce-bar__title,
+.announce-bar--danger .announce-bar__text {
+  color: #991b1b;
+}
+
+.announce-bar--danger .announce-bar__text {
+  font-size: 0.68rem;
+}
+
+.announce-bar--danger .announce-bar__link {
+  color: #991b1b;
+  border-color: #991b1b;
+  font-size: 0.68rem;
+}
+
+.announce-bar__divider {
+  border: none;
+  border-top: 1px solid rgba(153, 27, 27, 0.25);
+  margin: 0;
+}
+
 
 /* Custom admonition styles */
 .md-typeset .admonition.info, .md-typeset details.info {
@@ -63,8 +86,12 @@
 .md-typeset .question>.admonition-title:before, .md-typeset .question>summary:before {
   background-color: #00b0ff !important;
 }
+.md-typeset .question>.admonition-title:after, .md-typeset .question>summary:after {
+  color: #00b0ff !important;
+}
 /* Custom icons */
 .md-nav__link[href*="serviceportal?id=sc_cat_item&sys_id=a05e2fb4c3434610f0f3041ad001310e"] .md-ellipsis,
+.md-nav__link[href*="service-windows"] .md-ellipsis,
 .md-nav__link[href*="hpc-decision-tree"] .md-ellipsis,
 .md-nav__link[href*="https://www.researcher.aau.dk/contact/claaudia"] .md-ellipsis,
 .md-nav__link[href*="https://serviceportal.aau.dk/kb/en/taaurus-terms-of-use?sys_kb_id=7de0759b83783650e1c9f665eeaad396&id=kb_article_view&sysparm_rank=3&sysparm_tsqueryId=efed437733a1fe50d95cab273e5c7b19"] .md-ellipsis {
@@ -74,6 +101,7 @@
 }
 .md-nav__link[href*="serviceportal?id=sc_cat_item&sys_id=a05e2fb4c3434610f0f3041ad001310e"] .md-ellipsis::before,
 .md-nav__link[href*="hpc-decision-tree"] .md-ellipsis::before,
+.md-nav__link[href*="service-windows"] .md-ellipsis::before,
 .md-nav__link[href*="https://www.researcher.aau.dk/contact/claaudia"] .md-ellipsis::before,
 .md-nav__link[href*="https://serviceportal.aau.dk/kb/en/taaurus-terms-of-use?sys_kb_id=7de0759b83783650e1c9f665eeaad396&id=kb_article_view&sysparm_rank=3&sysparm_tsqueryId=efed437733a1fe50d95cab273e5c7b19"] .md-ellipsis::before {
   content: "";
@@ -99,6 +127,10 @@
 .md-nav__link[href*="hpc-decision-tree"] .md-ellipsis::before {
   -webkit-mask: url("/assets/icons/network.svg") no-repeat center / contain;
   mask: url("/assets/icons/network.svg") no-repeat center / contain;
+}
+.md-nav__link[href*="service-windows"] .md-ellipsis::before {
+  -webkit-mask: url("/assets/icons/construction.svg") no-repeat center / contain;
+  mask: url("/assets/icons/construction.svg") no-repeat center / contain;
 }
 
 .service-window-next-date {

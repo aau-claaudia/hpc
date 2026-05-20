@@ -21,7 +21,16 @@ hide:
 
 <div class="grid cards three" markdown>
 
--   ##### 7 May 2026
+-   ##### 4 May 2026
+
+    ---
+
+    #### :lucide-star: UCloud migration complete
+    The migration to the new data centre is finished.
+
+    [:lucide-arrow-right: Read more](https://cloud.sdu.dk/app/news/detailed/465)
+
+-   ##### 7 April 2026
 
     ---
 
@@ -39,23 +48,14 @@ hide:
 
     [:lucide-arrow-right: Read more](/ucloud/sdu-datacenter-migration/)
 
--   ##### 20 March 2026
-
-    ---
-
-    #### :lucide-star: RAGFlow on UCloud
-    Use AI over your own documents and data with grounded retrieval on UCloud.
-
-    [:lucide-arrow-right: Read more](https://interactivehpc.dk/?p=2759)
-
 </div>
 
 
 !!! info "Service status and planning"
     - Check upcoming maintenance in [Service windows](/service-windows/).
-    - Upcoming migration to new SDU datacenter
-        - UCloud is moving to a new SDU datacenter. If you have data in the **AAU/K8s** or **AAU/VM** providers, you will need to transfer it to **SDU/K8s** before the migration deadline.  
-            - Read the step-by-step **AAU/K8s / AAU/VM migration guide** :octicons-arrow-right-16: [UCloud datacenter migration](/ucloud/sdu-datacenter-migration/).  
+    - SDU datacenter update
+        - UCloud runs in the new SDU datacenter.  
+            - Read the current **migration and status guide** :octicons-arrow-right-16: [UCloud datacenter migration](/ucloud/sdu-datacenter-migration/).  
             - See the full, technical description from the consortium behind UCloud :octicons-arrow-right-16: [New SDU Datacenter](https://docs.cloud.sdu.dk/intro/new_datacenter.html#sphx-glr-new-datacenter).
 
 
@@ -68,7 +68,7 @@ Choose among **AAU-managed platforms** for virtual machines, GPU computing, stud
 | Platform | Details | Target users | Quicklinks |
 | --- | --- | --- | --- |
 | **Strato** | Virtual-machine platform where researchers launch customizable instances with CPU/GPU resources and access them via terminal from their local computer. | <span class="target-user-tag target-user-tag--researchers">Researchers</span> | [:lucide-arrow-right: About](/strato/)<br>[:lucide-arrow-right: How to access](/strato/how-to-access/)<br>[:lucide-arrow-right: Application form](https://forms.office.com/e/r1u0QXH4KJ) |
-| **UCloud** | High-performance research platform with an intuitive web interface, interactive computing, and preloaded apps for analytics and visualization workflows. | <span class="target-user-tag target-user-tag--researchers">Researchers</span> | [:lucide-arrow-right: About](/ucloud/)<br>[:lucide-arrow-right: How to access](/ucloud/how-to-access/)<br>[:lucide-arrow-right: Application form](https://forms.office.com/e/8Khbr1TJGC) |
+| **UCloud** | High-performance research platform with an intuitive web interface, interactive computing, and preloaded apps for analytics and visualization workflows. | <span class="target-user-tag target-user-tag--researchers">Researchers</span> | [:lucide-arrow-right: About](/ucloud/)<br>[:lucide-arrow-right: How to access](/ucloud/how-to-access/)<br>[:lucide-arrow-right: Application form](https://forms.office.com/e/R3M6gMj3rV) |
 | **AI Cloud** | NVIDIA GPU cluster for machine-learning workloads, accessed through terminal with job submission and file management on frontend nodes. | <span class="target-user-tag target-user-tag--researchers">Researchers</span> | [:lucide-arrow-right: About](/ai-cloud/)<br>[:lucide-arrow-right: How to access](/ai-cloud/how-to-access/)<br>[:lucide-arrow-right: Application form](https://serviceportal.aau.dk/serviceportal?id=sc_cat_item&sys_id=37b26fd4c3afee10f0f3041ad00131d0) |
 | **AI-LAB** | Student-focused HPC environment with GPU resources for deep learning, simulations, and high-speed data analysis in courses and projects. | <span class="target-user-tag target-user-tag--students">Students</span> | [:lucide-arrow-right: About](/ai-lab/)<br>[:lucide-arrow-right: How to access](/ai-lab/how-to-access/)<br>[:lucide-arrow-right: Application form](https://forms.office.com/e/caEhCRmqVN) |
 | **TAAURUS** | Secure, flexible, and scalable research platform for sensitive-data processing with compliance-focused project governance and GPU-capable compute. | <span class="target-user-tag target-user-tag--researchers">Researchers</span> | [:lucide-arrow-right: About](/taaurus/)<br>[:lucide-arrow-right: How to access](/taaurus/how-to-access/)<br>[:lucide-arrow-right: Application form](https://serviceportal.aau.dk/serviceportal?id=sc_cat_item&sys_id=04934a6cc3a5e210f0f3041ad00131fc) |

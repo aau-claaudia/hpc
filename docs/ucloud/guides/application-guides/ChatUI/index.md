@@ -36,7 +36,7 @@ Search for "chatui" under the apps section of UCloud and select it to begin setu
 ![Find ChatUI in apps](/assets/img/UCloud/ChatUI%202.png){.standard_image_width}
  
 ### 3. Select the optimal machine configuration  
-Choose a machine with **one** GPU, such as `u3-GPU` (SDU) or `uc1-l4`/`uc1-l40` (AAU/K8). Set the runtime duration in hours and select the previously created folder as `DATA_DIR`.  
+Choose the machine *gpu-nvidia-b200* with either one GPU or as a fraction named MIG. Set the runtime duration in hours and select the previously created folder as `DATA_DIR`.  
 ![Configure server settings](/assets/img/UCloud/ChatUI%203.png){.standard_image_width}
 
 ??? info "ChatUI public link for sharing with user outside UCloud"
@@ -46,7 +46,7 @@ Choose a machine with **one** GPU, such as `u3-GPU` (SDU) or `uc1-l4`/`uc1-l40` 
     </a>
 
 
-    To enable access outside UCloud, scroll down and click "Add Public Link." Create a link within the same provider as the machine (`SDU` or `AAU/K8`) in this example we use the `AAU/K8`. 
+    To enable access outside UCloud, scroll down and click "Add Public Link." Create a link to the SDU provider. 
     ![Add public link](/assets/img/UCloud/ChatUI%204.png){.standard_image_width}
     ![Create public link](/assets/img/UCloud/ChatUI%205.png)
 

@@ -8,7 +8,8 @@
     src="//gc.zgo.at/count.js"></script>
 {% endblock %}
 
-
+{# Announce bar with botton to refer to a guide. #}
+{# 
 {% block announce %}
 <div class="announce-bar" role="status" aria-live="polite">
   <p class="announce-bar__title">Planned UCloud downtime </p>
@@ -16,7 +17,21 @@
     To enable migration to a new SDU datacenter, the UCloud platform will be unavailable until May 4th.
   </p>
   <div class="announce-bar__links">
-    <a class="announce-bar__link" href="https://status.cloud.sdu.dk/" aria-label="Open migration guide">UCloud status</a>
+    <a class="announce-bar__link" href="/ucloud/sdu-datacenter-migration/" aria-label="Open migration guide">UCloud migration status</a>
   </div>
 </div>
 {% endblock %}
+#}
+
+
+{# Announce bar - Simple but with red text #}
+{# 
+{% block announce %}
+<div class="announce-bar announce-bar--danger" role="alert" aria-live="assertive">
+  <p class="announce-bar__title">⚠ UCloud: Extraordinary maintenance window today, May 19th, 20:00–22:00</p>
+  <p class="announce-bar__text">All compute nodes will be rebooted and may be unavailable for up to two hours. All running jobs will be terminated. — CLAAUDIA</p>
+</div>
+{% endblock %}
+#}
+
+

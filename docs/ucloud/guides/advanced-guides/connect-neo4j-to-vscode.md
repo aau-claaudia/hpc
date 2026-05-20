@@ -2,13 +2,13 @@
 
 ## Overview
 
-This solution demonstrates how to harness UCloud aau/k8's internal networking to create a robust, distributed architecture. By connecting two instances, you can run a dedicated Neo4j database server on one instance while running your applications (LangGraph, LangChain, and LLM) on another instance. This approach gives you the best of both worlds: persistent, reliable database storage and flexible, scalable application deployment.
+This solution demonstrates how to harness UCloud's internal networking to create a robust, distributed architecture. By connecting two instances, you can run a dedicated Neo4j database server on one instance while running your applications (LangGraph, LangChain, and LLM) on another instance. This approach gives you the best of both worlds: persistent, reliable database storage and flexible, scalable application deployment.
 
 **Universal application**: While this guide uses Neo4j as an example, the same connection procedure applies to many other services such as PostgreSQL, MySQL, Redis, MongoDB or any application that needs to communicate between UCloud instances.
 
 ## Prerequisites
 
-- Access to UCloud with AAU/K8 instances
+- Access to UCloud with instances in the current SDU datacenter setup
 - Both instances should be in the same UCloud project for network access
 
 ## Step-by-Step Solution
