@@ -76,6 +76,7 @@ Typing the full server addresses every time can be tedious. You can create short
 
 ===+ "Windows"
 
+    - Open file explorer on your laptop
     - Navigate to `C:\Users\[YOUR_USERNAME]\.ssh\`
     - Create or update a file called `config` (no extension)
 

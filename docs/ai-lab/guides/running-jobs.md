@@ -112,6 +112,8 @@ date
 - **`#SBATCH` lines**: Slurm directives that configure your job
 - **Commands below**: What you want to run
 
+To save your script and return to the terminal press `ctrl s` and thereafter `ctrl x`.
+
 ### Submitting the Job
 
 ```bash

@@ -12,7 +12,7 @@ To run commands inside a container, you use `singularity exec` with either `srun
 Let's start with a basic example using a Python container:
 
 ```bash
-srun --mem=24G --cpus-per-task=15 --gres=gpu:1 --time=01:00:00 singularity exec --nv /ceph/container/python/python_3.10.sif python3 -c "print('Hello from AI-LAB!')"
+srun --mem=24G --cpus-per-task=15 --gres=gpu:1 --time=01:00:00 singularity exec --nv /ceph/container/python/python_3.10.sif python3 -c "print('Hello from AI-LAB')"
 ```
 
 **Command breakdown:**
@@ -21,11 +21,11 @@ srun --mem=24G --cpus-per-task=15 --gres=gpu:1 --time=01:00:00 singularity exec 
 - `singularity exec`: Execute a command inside a container
 - `--nv`: Enable NVIDIA GPU drivers (required for GPU jobs)
 - `/ceph/container/python/python_3.10.sif`: Path to the container
-- `python3 -c "print('Hello from AI-LAB!')"`: Command to run
+- `python3 -c "print('Hello from AI-LAB')"`: Command to run
 
 ### Using Containers with sbatch
 
-For longer jobs, create a batch script:
+For longer jobs, enter `nano` jobname and create a batch script:
 
 ```bash title="my_job.sh"
 #!/bin/bash
