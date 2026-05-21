@@ -65,7 +65,7 @@ In the UCloud interface:
 1. Provide a title for your UCloud project. Preferably something unique that reflects the work you plan to do. For example, "biothermal_image_training_fall_2026".
 2. Applications for resource allocations start from the first day of the month specified in the start date. Unless it is necessary, allocations should not exceed the end of the current calendar year.
 3. In the **"Select grant giver(s)"** section, choose the appropriate option:
-    * **Researchers:** Select **"Type 1 - AAU"**.
+    * **Researchers (including Ph.d students):** Select **"Type 1 - AAU"**.
     * **Students and educators:** Select one of the **AAU Education projects**, depending on your faculty:
          * Faculty of ENG – AAU Education  
          * Faculty of TECH – AAU Education  
