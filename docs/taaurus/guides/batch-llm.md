@@ -54,9 +54,40 @@ Batch jobs expect **one JSON object per line** (JSONL). Each line must have:
 | Field | Meaning |
 |-------|---------|
 | `id` | Unique identifier for the row (number or string) |
-| `text` | One **document** — the full text the model should process in a single job step |
+| `text` | The **variable part** sent to the model for this row—usually the document or passage (see below) |
 
-Each document needs to be in one line. The entire body lives in `text` (use `\n` inside the string if you exported multiline text):
+### What should the model do? (your prompt / task)
+
+Batch jobs do not have a chat box. You define the **task once** (same instruction for every row), and each JSONL line supplies the **content** that task applies to.
+
+**Recommended:** save the task in a prompt file under your project:
+
+```bash
+/media/<your-project>/work/vllm/prompt.txt
+```
+
+Example `prompt.txt`:
+
+```text
+You are a medical text assistant. Read the clinical note below and write a one-paragraph summary in plain language. Do not invent facts not present in the note.
+
+--- NOTE ---
+```
+
+Pass it to every job with `--prompt-file` (see sections 5–6). The batch script combines **prompt file + `text` from each row** into the full input the model sees.
+
+**Alternative:** embed the instruction inside each row’s `text` when you build `input.jsonl` (no separate file). Useful for quick tests:
+
+```json
+{"id": "1042", "text": "Summarize this clinical note in one paragraph:\n\nPatient presents with chest pain..."}
+```
+
+| Approach | Task instruction | Per-row content |
+|----------|------------------|-----------------|
+| Prompt file (recommended) | `prompt.txt` + `--prompt-file` | `text` in JSONL |
+| Inline in JSONL | Start of each `text` field | Rest of each `text` field |
+
+Each document needs to be on one JSONL line. The body lives in `text` (use `\n` inside the string if you exported multiline text):
 
 ```json
 {"id": "1042", "text": "Patient presents with chest pain radiating to the left arm.\nECG normal. Plan: observation and repeat troponin in 6 hours."}
@@ -389,6 +420,7 @@ srun -G1 singularity exec --nv \
   /shared/containers/vllm-llm.sif \
   python /app/vllm_batch.py \
   --model /shared/models/llama3-8b \
+  --prompt-file /media/<your-project>/work/vllm/prompt.txt \
   --input /media/<your-project>/work/vllm/chunks/chunk_000.jsonl \
   --output /media/<your-project>/work/vllm/outputs/test.jsonl
 ```
@@ -443,6 +475,7 @@ INPUT_DIR=$PROJECT/work/vllm/chunks
 OUTPUT_DIR=$PROJECT/work/vllm/outputs
 mkdir -p "$OUTPUT_DIR"
 
+PROMPT_FILE=$PROJECT/work/vllm/prompt.txt
 INPUT_FILE=${INPUT_DIR}/chunk_$(printf '%03d' ${SLURM_ARRAY_TASK_ID}).jsonl
 OUTPUT_FILE=${OUTPUT_DIR}/output_${SLURM_ARRAY_TASK_ID}.jsonl
 
@@ -450,6 +483,7 @@ singularity exec --nv \
   "$CONTAINER" \
   python /app/vllm_batch.py \
   --model "$MODEL" \
+  --prompt-file "$PROMPT_FILE" \
   --input "$INPUT_FILE" \
   --output "$OUTPUT_FILE"
 ```
