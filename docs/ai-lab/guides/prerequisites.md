@@ -52,7 +52,7 @@ While AI-LAB is designed to be user-friendly, some basic knowledge is helpful:
 ### Software Requirements
 - **SSH client**: Built into most operating systems
 - **File transfer tool**: For moving files between your computer and AI-LAB
-    - Windows: [WinSCP](https://winscp.net/eng/download.php){target=_blank} or [PuTTY](https://www.putty.org/){target=_blank}
+    - Windows: [WinSCP](https://winscp.net/eng/download.php){target=_blank}
     - macOS/Linux: Built-in `scp` command
 
 ## What's Next?

@@ -155,7 +155,7 @@ All persons that will participate in the project should have their email address
 ![Enter external collaborator information](/assets/img/UCloud/expanded-application-guide/ucloud-expanded-project-application-image-08.png){.standard_image_width}
 
 1. If there are external collaborators you should specify their name, email address and affiliation in this field. (If there is more than one external collaborator, you should separate their details with a semi-colon ';')
-2. Do not modify. Your DeiC Project number will be provided by a CLAAUDIA employee during the approval process.
+
 
 !!! info "Licensed products warning"
     **No licenced software may be included in projects with external participants.**
