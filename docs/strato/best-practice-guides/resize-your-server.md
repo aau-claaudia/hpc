@@ -29,7 +29,6 @@ This guide shows you how to **change the size of your Strato server** to a small
 
 ### 5. Choose the new size (flavor)
 
-![Strato server resize overview](../../assets/img/strato/strato_resize_02.png)
 
 In the resize dialog you will see a list of available **flavors** (predefined combinations of vCPUs, RAM, and possibly disk and GPUs).
 
@@ -39,15 +38,19 @@ In the resize dialog you will see a list of available **flavors** (predefined co
   - Pick a flavor that meets your performance needs.
   - Make sure it fits within your quota and budget limits.
 
+
+![Strato server resize overview](../../assets/img/strato/strato_resize_02.png)
+
 > **Tip**: Before resizing your server, make sure your project has a high enough quota for the new flavor (vCPUs, RAM, GPU). If not, you may need to request a quota increase through the [Strato application form](https://forms.office.com/pages/responsepage.aspx/?id=Sbrb9QbOb0msPgzxQ2HZNEdKMbCNz_9Lom8_yaZURCNUNkE1NEYxMkw4UllRVllZTkFLVjRNUzJUTCQlQCN0PWcu).
 
 ### 6. Confirm the resize operation
 
-![Strato server resize overview](../../assets/img/strato/strato_resize_03.png)
 
 1. After selecting the new flavor, click **Resize**.
 2. The dialog window will close. 
 3. Back on the server page, in the upper‑right corner, click **Confirm Resize/Migrate** to apply the change.
+
+![Strato server resize overview](../../assets/img/strato/strato_resize_03.png)
 
 ### 7. Wait for the operation to complete
 
