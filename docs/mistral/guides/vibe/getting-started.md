@@ -1,6 +1,6 @@
-# Logging in to Le Chat
+# Logging in to Vibe
 
-Le Chat is accessed at [chat.mistral.ai](https://chat.mistral.ai){target="_blank"} using your AAU credentials. No separate account or password is needed.
+Vibe is accessed at [chat.mistral.ai](https://chat.mistral.ai){target="_blank"} using your AAU credentials. No separate account or password is needed.
 
 ---
 
@@ -8,7 +8,7 @@ Le Chat is accessed at [chat.mistral.ai](https://chat.mistral.ai){target="_blank
 
 Go to [chat.mistral.ai](https://chat.mistral.ai){target="_blank"} and click **Log in**.
 
-![Le Chat login page](/assets/img/mistral/le-chat/login/login1.png){style=max-height:600px;}
+![Vibe login page](/assets/img/mistral/vibe/login/login1.png){style=max-height:600px;}
 
 ---
 
@@ -16,7 +16,7 @@ Go to [chat.mistral.ai](https://chat.mistral.ai){target="_blank"} and click **Lo
 
 Enter your AAU email address (e.g. `ab12cd@domain.aau.dk`) and click **Continue**.
 
-![Le Chat email entry](/assets/img/mistral/login/m_login_1.png){style=max-height:600px;}
+![Vibe email entry](/assets/img/mistral/login/m_login_1.png){style=max-height:600px;}
 
 ---
 
@@ -24,7 +24,7 @@ Enter your AAU email address (e.g. `ab12cd@domain.aau.dk`) and click **Continue*
 
 Click **Continue with AAU – SSO** to be redirected to the AAU login page.
 
-![Le Chat SSO selection](/assets/img/mistral/login/m_login_2.png){style=max-height:600px;}
+![Vibe SSO selection](/assets/img/mistral/login/m_login_2.png){style=max-height:600px;}
 
 ---
 
@@ -32,15 +32,15 @@ Click **Continue with AAU – SSO** to be redirected to the AAU login page.
 
 Log in using your AAU credentials eg. *ab12cd* and approve the login via multi-factor authentication (MFA).
 
-![AAU login page](/assets/img/mistral/le-chat/login/login4.png){style=max-height:600px;}
+![AAU login page](/assets/img/mistral/vibe/login/login4.png){style=max-height:600px;}
 
 ---
 
 ## Step 5 — You are in
 
-You will be redirected back to Le Chat and land on the conversation screen. Here, you can confirm that you are logged in to the AAU organization.
+You will be redirected back to Vibe and land on the conversation screen. Here, you can confirm that you are logged in to the AAU organization.
 
-![Le Chat conversation screen](/assets/img/mistral/le-chat/login/login5.png){style=max-height:600px;}
+![Vibe conversation screen](/assets/img/mistral/vibe/login/login5.png){style=max-height:600px;}
 
 ---
 
