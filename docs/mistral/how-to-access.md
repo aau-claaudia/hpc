@@ -3,7 +3,7 @@ icon: lucide/lock-keyhole-open
 ---
 
 
-Access to Mistral is granted in two stages — the base login works for both Le Char and AI Studio interfaces, while API key access requires an additional application.
+Access to Mistral is granted in two stages — the base login works for both Vibe and AI Studio interfaces, while API key access requires an additional application.
 
 
 ## Access Levels
@@ -12,12 +12,12 @@ Understanding the difference between access levels helps you request the right o
 
 | Level | What you get | Who needs it |
 |---|---|---|
-| **Le Chat & AI Studio (without API keys)** | Access to both the conversational interface at [chat.mistral.ai](https://chat.mistral.ai) and the AI Studio console at [console.mistral.ai](https://console.mistral.ai), including the Playground, Document AI and Audio transcription. All standard features except programmatic/API key access. | Anyone who wants to use Mistral for writing, research assistance, summarisation, model testing, or prompt refinement—without needing to call the API from code. |
+| **Vibe & AI Studio (without API keys)** | Access to both the conversational interface at [chat.mistral.ai](https://chat.mistral.ai) and the AI Studio console at [console.mistral.ai](https://console.mistral.ai), including the Playground, Document AI and Audio transcription. All standard features except programmatic/API key access. | Anyone who wants to use Mistral for writing, research assistance, summarisation, model testing, or prompt refinement—without needing to call the API from code. |
 | **AI Studio (with API keys)** | Full programmatic access. Create API keys, call models from code, process data in bulk, and build automated workflows. | Researchers building custom pipelines, running batch analyses, or integrating Mistral into their own tools. |
 
 ---
 
-## Level 1 — Log in (Le Chat and AI Studio without API Keys)
+## Level 1 — Log in (Vibe and AI Studio without API Keys)
 
 All AAU **academic staff** can log in immediately via SSO. No application needed.
 
@@ -47,7 +47,7 @@ All AAU **academic staff** can log in immediately via SSO. No application needed
 
 After completing these steps, you have access to:
 
-- **Le Chat** at [chat.mistral.ai](https://chat.mistral.ai)
+- **Vibe** at [chat.mistral.ai](https://chat.mistral.ai)
 - **AI Studio Playground** at [console.mistral.ai](https://console.mistral.ai) (without API keys)
 
 
@@ -60,7 +60,7 @@ API keys allow you to call Mistral models programmatically from your own code. T
 
 ### Prerequisites
 
-Complete Step 1 and verify that you can log in to both Le Chat and AI Studio before applying.
+Complete Step 1 and verify that you can log in to both Vibe and AI Studio before applying.
 
 ### How to apply
 

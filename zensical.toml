@@ -263,9 +263,9 @@ nav = [
     {"Support" = "mistral/support.md"},
     {"Guides" = [
       "mistral/guides/index.md",
-      {"Le Chat" = [
-        "mistral/guides/le-chat/index.md",
-        "mistral/guides/le-chat/getting-started.md",
+      {"Vibe" = [
+        "mistral/guides/vibe/index.md",
+        "mistral/guides/vibe/getting-started.md",
       ]},
       {"AI Studio" = [
         "mistral/guides/ai-studio/index.md",

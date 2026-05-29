@@ -12,7 +12,7 @@ hide:
 
 -   __Mistral__
 
-    Generative AI services for AAU researchers, including Le Chat and AI Studio for browser-based and API-driven workflows.
+    Generative AI services for AAU researchers, including Vibe and AI Studio for browser-based and API-driven workflows.
 
     ---
 

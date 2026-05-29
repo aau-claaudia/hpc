@@ -1,4 +1,4 @@
----
+﻿---
 icon: lucide/house
 keywords: Home
 title: Home
@@ -35,7 +35,7 @@ hide:
     ---
 
     #### :lucide-star: Mistral AI for AAU researchers
-    AI Studio and Le Chat are now available for research API and chatbot workflows.
+    AI Studio and Vibe are now available for research API and chatbot workflows.
 
     [:lucide-arrow-right: Read more](/mistral/)
 
