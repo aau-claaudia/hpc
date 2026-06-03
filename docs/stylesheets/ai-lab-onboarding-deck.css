@@ -1,0 +1,335 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap");
+
+/* Scoped deck styles: only inside the onboarding workshop template */
+.ai-lab-onboarding-workshop {
+  --deck-bg: #f5f5f3;
+  --deck-fg: #1a1a1a;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  background: var(--deck-bg);
+  color: var(--deck-fg);
+  -webkit-font-smoothing: antialiased;
+  position: relative;
+  min-height: calc(100vh - 4.5rem);
+  margin: 0 -0.6rem;
+  padding: 0;
+  isolation: isolate;
+}
+
+.ai-lab-onboarding-workshop .deck {
+  position: relative;
+  width: 100%;
+  min-height: calc(100vh - 4.5rem);
+  max-height: calc(100vh - 4.5rem);
+  overflow: hidden;
+}
+
+.ai-lab-onboarding-workshop .slide {
+  position: absolute;
+  inset: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 6vh 8vw;
+  box-sizing: border-box;
+}
+
+.ai-lab-onboarding-workshop .slide.active {
+  display: flex;
+}
+
+.ai-lab-onboarding-workshop .slide-inner {
+  width: 100%;
+  max-width: 1100px;
+}
+
+/* Markdown / typeset inside slides */
+.ai-lab-onboarding-workshop .slide-inner.md-typeset h1 {
+  font-size: clamp(2.5rem, 6vw, 5rem);
+  font-weight: 500;
+  line-height: 1.1;
+  letter-spacing: -0.035em;
+  margin: 0 0 1.5rem;
+  color: var(--deck-fg);
+}
+
+.ai-lab-onboarding-workshop .slide-inner.md-typeset h2 {
+  font-size: clamp(1.75rem, 3.5vw, 2.6rem);
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: -0.025em;
+  margin: 0 0 1.25rem;
+  color: var(--deck-fg);
+}
+
+.ai-lab-onboarding-workshop .slide-inner.md-typeset h3 {
+  font-size: clamp(1.2rem, 2.2vw, 1.6rem);
+  font-weight: 500;
+  margin: 1rem 0 0.75rem;
+  color: var(--deck-fg);
+}
+
+.ai-lab-onboarding-workshop .slide-inner.md-typeset p,
+.ai-lab-onboarding-workshop .slide-inner.md-typeset li {
+  font-size: clamp(0.95rem, 1.2vw, 1.1rem);
+  line-height: 1.55;
+  color: #3a3a38;
+}
+
+.ai-lab-onboarding-workshop .slide-inner.md-typeset ul,
+.ai-lab-onboarding-workshop .slide-inner.md-typeset ol {
+  margin: 0.5rem 0 1rem 1.25rem;
+}
+
+.ai-lab-onboarding-workshop .slide-inner.md-typeset a {
+  color: #1a1a1a;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.ai-lab-onboarding-workshop .slide-inner.md-typeset pre {
+  margin: 1rem 0;
+  border-radius: 8px;
+  font-size: 0.82rem;
+}
+
+.ai-lab-onboarding-workshop .slide-inner.md-typeset img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.ai-lab-onboarding-workshop .slide-inner .eyebrow {
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #a0a09a;
+  margin-bottom: 1.5rem;
+}
+
+.ai-lab-onboarding-workshop .slide-inner .subtitle {
+  font-size: clamp(1rem, 1.4vw, 1.25rem);
+  color: #a0a09a;
+  font-weight: 400;
+  line-height: 1.5;
+  max-width: 720px;
+}
+
+.ai-lab-onboarding-workshop .slide-inner .meta {
+  font-size: 0.85rem;
+  color: #a0a09a;
+  margin-top: 2rem;
+}
+
+.ai-lab-onboarding-workshop h1 span.dim,
+.ai-lab-onboarding-workshop h2 span.dim,
+.ai-lab-onboarding-workshop h3 span.dim {
+  color: #b5b5b0;
+  font-weight: 300;
+}
+
+.ai-lab-onboarding-workshop .quote-slide .md-typeset h1 {
+  font-size: clamp(3rem, 7vw, 6.5rem);
+  line-height: 1.05;
+  letter-spacing: -0.045em;
+}
+
+.ai-lab-onboarding-workshop .slide.dark {
+  background: #1a1a1a;
+  color: #f5f5f3;
+}
+
+.ai-lab-onboarding-workshop .slide.dark .md-typeset h1,
+.ai-lab-onboarding-workshop .slide.dark .md-typeset h2,
+.ai-lab-onboarding-workshop .slide.dark .md-typeset h3,
+.ai-lab-onboarding-workshop .slide.dark .md-typeset p,
+.ai-lab-onboarding-workshop .slide.dark .md-typeset li {
+  color: #f5f5f3;
+}
+
+.ai-lab-onboarding-workshop .slide.dark .md-typeset a {
+  color: #e5e5e0;
+}
+
+.ai-lab-onboarding-workshop .slide.dark h1 span.dim {
+  color: #888;
+}
+
+/* Two-column helper (optional HTML in markdown) */
+.ai-lab-onboarding-workshop .two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: start;
+  margin-top: 1rem;
+}
+
+@media (max-width: 44rem) {
+  .ai-lab-onboarding-workshop .two-col {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Nav + progress */
+.ai-lab-onboarding-workshop .nav {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  font-size: 0.7rem;
+  color: #b5b5b0;
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  max-width: calc(100vw - 2rem);
+  justify-content: flex-end;
+}
+
+.ai-lab-onboarding-workshop .enter-fs-btn {
+  appearance: none;
+  border: 1px solid #d5d5d0;
+  background: #fafaf8;
+  color: #1a1a1a;
+  padding: 0.4rem 0.85rem;
+  border-radius: 100px;
+  font-size: 0.72rem;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+  white-space: nowrap;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.ai-lab-onboarding-workshop .enter-fs-btn:hover {
+  border-color: #1a1a1a;
+  background: #fff;
+}
+
+.ai-lab-onboarding-workshop:fullscreen .enter-fs-btn,
+.ai-lab-onboarding-workshop:-webkit-full-screen .enter-fs-btn {
+  display: none !important;
+}
+
+.ai-lab-onboarding-workshop .nav-buttons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.ai-lab-onboarding-workshop .nav-btn {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 1px solid #d5d5d0;
+  background: transparent;
+  color: #b5b5b0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  padding: 0;
+}
+
+.ai-lab-onboarding-workshop .nav-btn:hover {
+  border-color: #1a1a1a;
+  color: #1a1a1a;
+}
+
+.ai-lab-onboarding-workshop .progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 2px;
+  width: 0;
+  background: #1a1a1a;
+  transition: width 0.25s ease;
+  z-index: 100;
+}
+
+/* Exit full screen: only visible while this root is in browser fullscreen */
+.ai-lab-onboarding-workshop .exit-fs-btn {
+  display: none;
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 300;
+  background: rgba(26, 26, 26, 0.92);
+  color: #f5f5f3;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 0.5rem 1rem;
+  border-radius: 100px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  cursor: pointer;
+  font-family: inherit;
+  letter-spacing: 0.02em;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+.ai-lab-onboarding-workshop:fullscreen .exit-fs-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ai-lab-onboarding-workshop .exit-fs-btn:hover {
+  background: #000;
+}
+
+/* Safari / older WebKit */
+.ai-lab-onboarding-workshop:-webkit-full-screen .exit-fs-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@page {
+  size: 13.333in 7.5in;
+  margin: 0;
+}
+
+@media print {
+  .ai-lab-onboarding-workshop {
+    min-height: auto;
+    max-height: none;
+    overflow: visible !important;
+    background: #f5f5f3;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  .ai-lab-onboarding-workshop .deck {
+    min-height: auto;
+    max-height: none;
+    overflow: visible !important;
+    position: static;
+    width: 13.333in;
+  }
+
+  .ai-lab-onboarding-workshop .slide {
+    display: flex !important;
+    position: relative !important;
+    inset: auto !important;
+    width: 13.333in !important;
+    height: 7.5in !important;
+    page-break-after: always !important;
+    break-after: page !important;
+    -webkit-print-color-adjust: exact !important;
+  }
+
+  .ai-lab-onboarding-workshop .slide:last-child {
+    page-break-after: auto !important;
+  }
+
+  .ai-lab-onboarding-workshop .slide.dark {
+    background: #1a1a1a !important;
+  }
+
+  .ai-lab-onboarding-workshop .nav,
+  .ai-lab-onboarding-workshop .progress,
+  .ai-lab-onboarding-workshop .exit-fs-btn,
+  .ai-lab-onboarding-workshop .enter-fs-btn {
+    display: none !important;
+  }
+}

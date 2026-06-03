@@ -1,6 +1,9 @@
 # Exercise 1: Run a simple job with srun
 
----
+
+
+<div class="workshop-internal-break" role="separator"></div>
+
 
 1. Download workshop files by running this command:
 
@@ -31,7 +34,10 @@ Second 30...
 Done after 30 seconds!
 ```
 
----
+
+
+<div class="workshop-internal-break" role="separator"></div>
+
 
 **Next:** [Creating an sbatch Script →](12-creating-a-sbatch-script.md)
 

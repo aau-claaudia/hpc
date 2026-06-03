@@ -2,7 +2,10 @@
 
 When running jobs, you can request specific resources like memory, CPUs, and GPUs.
 
----
+
+
+<div class="workshop-internal-break" role="separator"></div>
+
 
 ### 💾 System memory
 
@@ -30,7 +33,10 @@ When running jobs, you can request specific resources like memory, CPUs, and GPU
     
     We strongly encourage inexperienced users to allocate only 1 GPU, as most workloads do not speed up automatically with more GPUs.
 
----
+
+
+<div class="workshop-internal-break" role="separator"></div>
+
 
 ## 🚀 Example: Allocating resources with srun
 
@@ -38,7 +44,10 @@ When running jobs, you can request specific resources like memory, CPUs, and GPU
 srun --cpus-per-task=4 --mem=8G --gres=gpu:1 python3 my_script.py
 ```
 
----
+
+
+<div class="workshop-internal-break" role="separator"></div>
+
 
 ## 📝 Example: Allocating resources with sbatch
 
@@ -53,6 +62,9 @@ In a batch script, add resource requests using `#SBATCH` directives:
 python3 my_script.py
 ```
 
----
+
+
+<div class="workshop-internal-break" role="separator"></div>
+
 
 **Next:** [Containers →](15-containers.md)

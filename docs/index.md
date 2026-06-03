@@ -21,6 +21,15 @@ hide:
 
 <div class="grid cards three" markdown>
 
+-   ##### Teaching at AAU
+
+    ---
+
+    #### :lucide-star: UCloud for teaching
+    UCloud is now available for courses and project work—with webinars, browser apps, and guides for teachers and students.
+
+    [:lucide-arrow-right: Read more](/ucloud/ucloud-for-teaching/)
+
 -   ##### 4 May 2026
 
     ---

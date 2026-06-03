@@ -2,7 +2,10 @@
 
 **Slurm** is the job scheduler that manages compute resources on AI-LAB.
 
----
+
+
+<div class="workshop-internal-break" role="separator"></div>
+
 
 ## 🧠 What Slurm Does
 
@@ -10,7 +13,10 @@
 * **Queues** jobs when resources are busy
 * **Ensures fairness** among users
 
----
+
+
+<div class="workshop-internal-break" role="separator"></div>
+
 
 ## 🔍 Useful Commands
 
@@ -21,6 +27,9 @@ sinfo           # Show node status
 nodesummary     # Display resource allocations
 ```
 
----
+
+
+<div class="workshop-internal-break" role="separator"></div>
+
 
 **Next:** [Two Ways of Running Jobs →](10-two-ways-of-running-jobs.md)
