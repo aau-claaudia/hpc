@@ -96,7 +96,7 @@ You can choose between the following introductory webinars:
 !!! info "Registration"
     **Both teachers and students must register themselves.**
 
-    Registration link: *to be announced
+    Registration link: **to be announced**
 
 ---
 
