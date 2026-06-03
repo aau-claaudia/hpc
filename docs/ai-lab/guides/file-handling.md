@@ -67,7 +67,11 @@ AI-LAB runs on Ubuntu Linux, so you'll work primarily through a command-line int
 
 ### Text Editing with Nano
 
-Nano is a beginner-friendly text editor perfect for creating and editing scripts:
+Nano is a beginner-friendly text editor perfect for creating and editing scripts.
+
+Scripts are not meant to be written directly in the terminal. If you need to write a script, you can either upload your script as a file or write the script in the text editor. 
+
+To open the text editor, where you can create or edit your script use the command `nano`.
 
 ```bash
 nano my_script.py  # Create or edit a file

@@ -2,7 +2,7 @@
 
 AI Studio is Mistral's developer platform, available at [console.mistral.ai](https://console.mistral.ai){target="_blank"}. It is designed for structured experimentation, API integration, and building repeatable AI-powered workflows. It includes a Playground for testing models interactively, API key management, usage monitoring, and tools for building and deploying agents.
 
-At AAU, basic access to AI Studio (Playground, Document AI, Audio transcription) is available through the same SSO login as Le Chat. API key access requires an additional approval step — see [How to Access Mistral](/mistral/how-to-access/) for details.
+At AAU, basic access to AI Studio (Playground, Document AI, Audio transcription) is available through the same SSO login as Vibe. API key access requires an additional approval step — see [How to Access Mistral](/mistral/how-to-access/) for details.
 
 For a full overview of AI Studio features, see Mistral's official documentation:
 

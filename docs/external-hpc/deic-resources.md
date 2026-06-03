@@ -62,7 +62,7 @@ In the beginning of every year CLAAUDIA receives an amount of resources to hand 
 
 * **UCloud:** See our ["How to acess"](/ucloud/how-to-access) page for UCloud.
 * **Computerome, GenomeDK, Sophia:** Fill out [the application form](https://forms.office.com/e/DxRA4hPK84).
-* **LUMI:** Fill out [the application form](https://forms.office.com/e/4XC48iVu4S).
+* **LUMI:** Fill out [the application form](https://aau.service-now.com/serviceportal?id=sc_cat_item&sys_id=d8a58078c358cb50f0f3041ad001318b).
 
 
 !!! questions "Questions regarding the local pool for national HPC facilities"

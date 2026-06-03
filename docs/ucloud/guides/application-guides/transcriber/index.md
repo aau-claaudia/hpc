@@ -70,10 +70,10 @@ There are two ways to use Transcriber on UCloud:
     - **Name your job**: Choose a name that helps you identify the job later (e.g., "Transcriber Demo 1").
       - *Note*: Avoid special characters like "æøå".
 
-    - **Set the duration**: Specify how many hours the job should run. For reference, a 1-hour audio typically takes about 1 hour to transcribe on a `u1-standard-16` machine.
+    - **Set the duration**: Specify how many hours the job should run. For reference, a 1-hour audio typically takes about 1 hour to transcribe on a `cpu-amd-zen5-16` machine.
         - You can stop the machine early or add more time later if needed.
 
-    - **Choose a machine**: We recommend the MIG fraction GPU <span class="machine-name">gpu-nvidia-b200-1-mig.1g </span> if available, otherwise use <span class="machine-name">u1-standard-16</span>.
+    - **Choose a machine**: We recommend the MIG fraction GPU <span class="machine-name">gpu-nvidia-b200-1-mig.1g </span> if available, otherwise use <span class="machine-name">cpu-amd-zen5-16</span>.
 
     - **(Optional) Select folders to use**: If you want to use UCloud folders, select the folder(s) containing your files.
       - The app will scan these folders for compatible files.
@@ -183,7 +183,7 @@ There are two ways to use Transcriber on UCloud:
       > **Note**: If you run out of allocated time, the file being transcribed will fail. You can allocate more time after starting the job if needed.
 
     ##### 1.2.3 Pick a machine to use
-    - We recommend the <span class="machine-name">gpu-nvidia-b200-1-mig.1g</span> machine, which performed best in our tests. If the option is unavailable we recommend the <span class="machine-name">u1-standard-16</span> as an alternative.
+    - We recommend the <span class="machine-name">gpu-nvidia-b200-1-mig.1g</span> machine, which performed best in our tests. If the option is unavailable we recommend the <span class="machine-name">cpu-amd-zen5-16</span> as an alternative.
       
       > Feel free to test with sample files to see what works best for you.
 

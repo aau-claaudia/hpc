@@ -11,17 +11,17 @@ If you need additional resources on UCloud (for example GPU access, larger CPU q
 
     At the same time, the UCloud platform has been simplified:
 
-    - All compute resources are provided via **one provider (SDU)**
-    - Users choose between **one CPU product** and **one GPU product**
+    * All compute resources are provided via **one provider (SDU)**
+    * Users choose between **one CPU product** and **one GPU product**
 
 ---
 
 ### Before you apply
 Before requesting a project or additional resources, make sure that you:
 
-- Understand the **data classification level** of your data
-- Have reviewed the **platform limitations and Terms & conditions**
-- Have completed any required **GDPR registrations** if your project involves sensitive data (classification level 2 or higher)
+* Understand [the **data classification level** of your data](https://www.security.aau.dk/data-classification)
+* Have reviewed the **platform limitations and Terms & conditions**
+* Have completed any required **GDPR registrations** if your project involves sensitive data (classification level 2 or higher)
 
 !!! info "GDPR registration of projects"
     
@@ -52,8 +52,8 @@ In the UCloud interface:
 1. Open **Projects** in the left-hand menu
 2. Click **Apply for resources**
 3. Either:
-    - Create a **new project**, or
-    - Open this link from within an **existing project workspace** if you want to add resources to an existing project
+    * Create a **new project**, or
+    * Open this link from within an **existing project workspace** if you want to add resources to an existing project
 
 
 ---
@@ -64,11 +64,18 @@ In the UCloud interface:
 
 1. Provide a title for your UCloud project. Preferably something unique that reflects the work you plan to do. For example, "biothermal_image_training_fall_2026".
 2. Applications for resource allocations start from the first day of the month specified in the start date. Unless it is necessary, allocations should not exceed the end of the current calendar year.
-3. Select "Type 1 - AAU"
+3. In the **"Select grant giver(s)"** section, choose the appropriate option:
+    * **Researchers (including Ph.d students):** Select **"Type 1 - AAU"**.
+    * **Students and educators:** Select one of the **AAU Education projects**, depending on your faculty:
+         * Faculty of ENG – AAU Education  
+         * Faculty of TECH – AAU Education  
+         * Faculty of SSH – AAU Education  
+         * Faculty of SUND – AAU Education  
+
+   Please ensure you choose the correct category, as different terms and available resources apply.
 
 !!! info "First of the month start for all allocations"
-    For example, if you apply for your project to start from 15 October 2026, then all approved allocations will start from 01 October 2026 and run for the time period specified. 
-
+    For example, if you apply for your project to start from 15 October 2026, then all approved allocations will start from 01 October 2026 and run for the time period specified.
 
 
 ---
@@ -90,6 +97,22 @@ Select the resources that you wish to apply for.
 
 There is a [resource estimator available for Transcriber and Dictaphone users](/docs/transcription-estimator/).
 
+!!! info "These licenses are provided for non‑commercial academic research only."
+    
+    **They may not be used for**:
+
+       * Teaching or coursework
+       * Student assignments
+       * Commercial or industry-funded work
+
+    Students may use the software **only when participating in eligible academic research projects**.
+
+
+!!! info "MATLAB is available to students by disabling the HPC license"
+
+    * Your Mathworks license can be attained by following [the guide in UCloud's documentation](https://docs.cloud.sdu.dk/Apps/matlab.html).
+    * Be aware that you will need to [remove devices in your MathWorks profile](https://www.mathworks.com/help/matlab/matlab_env/manage-your-licenses.html) periodically if you activate your MATLAB license in a UCloud job.
+
 All resources are allocated from the **new datacenter**, which is now the sole UCloud provider.
 
 ---
@@ -106,8 +129,8 @@ All resources are allocated from the **new datacenter**, which is now the sole U
 !!! info "Motivation requirements:"
     Please clearly explain (in roughly 100 words) why you are requesting access to UCloud and which research objectives this access will help you achieve. This should at minumum include:
     
-    - What is the problem statement addressed by / purpose of the research?
-    - What are the methods to be used on the platform?
+    * What is the problem statement addressed by / purpose of the research?
+    * What are the methods to be used on the platform?
     
     **If this description is not complete, the application will not be approved.**
 
@@ -132,7 +155,7 @@ All persons that will participate in the project should have their email address
 ![Enter external collaborator information](/assets/img/UCloud/expanded-application-guide/ucloud-expanded-project-application-image-08.png){.standard_image_width}
 
 1. If there are external collaborators you should specify their name, email address and affiliation in this field. (If there is more than one external collaborator, you should separate their details with a semi-colon ';')
-2. Do not modify. Your DeiC Project number will be provided by a CLAAUDIA employee during the approval process.
+
 
 !!! info "Licensed products warning"
     **No licenced software may be included in projects with external participants.**
@@ -142,9 +165,9 @@ All persons that will participate in the project should have their email address
 #### Step 8: Approval and allocation
 After submitting your request:
 
-- The application is reviewed by **CLAAUDIA** (AAU’s local DeiC front office).
-- You will receive confirmation once resources are approved.
-- Approved resources will appear directly in your UCloud project.
+* The application is reviewed by **CLAAUDIA** (AAU’s local DeiC front office).
+* You will receive confirmation once resources are approved.
+* Approved resources will appear directly in your UCloud project.
 
 You will find your newly approved project in the project workspace dropdown menu at the top-right corner of the UCloud landing page.
 
@@ -203,9 +226,9 @@ slightly more resources than the estimate suggests.
 
 As part of the migration to the new SDU datacenter:
 
-- Previous AAU-based providers (AAU/K8s and AAU/VM) have been decommissioned
-- Existing allocations expired during the migration period
-- Projects must request resources again under the new SDU-based setup
+* Previous AAU-based providers (AAU/K8s and AAU/VM) have been decommissioned
+* Existing allocations expired during the migration period
+* Projects must request resources again under the new SDU-based setup
 
 This simplification results in fewer choices and a clearer, faster application process.
 

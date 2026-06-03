@@ -1,12 +1,15 @@
-When we run a job, a number of default parameters are passed to Slurm, and we are granted access to resources in accordance with the default configuration.
+Whenever we run a job a number of default parameters are passed to Slurm, and we are granted access to resources in accordance with this default configuration.
+
 In some cases we may want to pass different values to some of these paramaters, eg. in order to launch a job on a node with access restrictions, or if we want to access the default resources on different terms.
 
-### Resource control features
-On AI Cloud we use a variety of features to control access to resources:
 
-* Nodes in the cluster can belong to one or more `partitions`
-* Access to these partitions may be restricted to certain `accounts`
-* The term `quality of serivce` (abbreviated `QOS`) can determine the amount of resources that can be accessed at any given time. On this page, we will give you a demonstration of what is possible.
+!!! info "Resource control features"
+
+    On AI Cloud we use a variety of features to control access to resources:
+    
+    * Nodes in the cluster can belong to one or more `partitions`
+    * Access to these partitions may be restricted to certain `accounts`
+    * The term `quality of serivce` (abbreviated `QOS`) can determine the amount of resources that can be accessed at any given time. On this page, we will give you a demonstration of what is possible.
 
 ## The default access mode
 
@@ -16,7 +19,7 @@ For reference, let's launch a job with the default settings:
 srun hostname
 ```
 
-This job is run with the parameters `--account=aau`, `--qos=normal` and `--partition=prioritized`. These parameters are the defaults, and do not have to be passed to your launch command.
+Even though we did not specify anything, this job is run with the default parameters `--account=aau`, `--qos=normal` and `--partition=prioritized`. These parameters are the defaults, and do not have to be passed to your launch command.
 
 !!! example "Excercise: Verify the Slurm parameters"
 
@@ -30,7 +33,7 @@ This job is run with the parameters `--account=aau`, `--qos=normal` and `--parti
 
 ## Unprivileged access
 
-An infinite number of jobs can be launched using the flag `--qos=unprivileged`.
+Users can launch an infinite number of jobs by using the flag `--qos=unprivileged`. This is an attempt to make the most of the hardware and potentially run 100 % of the time.
 
 ```
 srun --qos=unprivileged --time=2-00:00:00 hostname

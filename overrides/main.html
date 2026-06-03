@@ -8,7 +8,7 @@
     src="//gc.zgo.at/count.js"></script>
 {% endblock %}
 
-
+{# Announce bar with botton to refer to a guide. #}
 {# 
 {% block announce %}
 <div class="announce-bar" role="status" aria-live="polite">
@@ -23,11 +23,26 @@
 {% endblock %}
 #}
 
+
+{# Announce bar - Simple but with red text #}
+{#
 {% block announce %}
 <div class="announce-bar announce-bar--danger" role="alert" aria-live="assertive">
-  <p class="announce-bar__title">⚠ Strato: Service disruption</p>
-  <p class="announce-bar__text">Some virtual machines are not starting and may appear as "SHUT OFF".  Please avoid repeated start attempts — we are working to resolve this. Running instances are unaffected. -CLAAUDIA</p>
+  <p class="announce-bar__title">⚠ UCloud: Extraordinary maintenance window May 23rd, 07:00–10:00</p>
+  <p class="announce-bar__text">We have scheduled an extraordinary maintenance window. All compute nodes will be rebooted. All running jobs will be terminated.</p>
 </div>
 {% endblock %}
+#}
 
-
+{# Announce bar - AI Cloud / AI-LAB operational issue #}
+{#
+{% block announce %}
+<div class="announce-bar announce-bar--danger" role="alert" aria-live="assertive">
+  <p class="announce-bar__title">⚠ Strato / AI Cloud / AI-LAB: Operational disruption</p>
+  <p class="announce-bar__text">
+    Selected nodes on Strato and in AI Cloud and all nodes in AI-LAB are currently offline due to a technical issue. 
+    We are working to resolve the problem as quickly as possible and will notify users once services are restored.
+  </p>
+</div>
+{% endblock %}
+#}

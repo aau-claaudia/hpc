@@ -16,6 +16,9 @@ Researchers :lucide-check:
 Lecturers :lucide-check:
 { .hpc-tag title="Indicates if the platform is accessible to lecturers for teaching purposes." }
 
+Students :lucide-check:
+{ .hpc-tag title="Indicates if the platform is accessible to students for educational purposes." }
+
 Sensitive Data :lucide-check:
 { .hpc-tag title="Whether the platform supports processing and storing sensitive or confidential data" }
 

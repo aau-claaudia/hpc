@@ -76,6 +76,7 @@ Typing the full server addresses every time can be tedious. You can create short
 
 ===+ "Windows"
 
+    - Open file explorer on your laptop
     - Navigate to `C:\Users\[YOUR_USERNAME]\.ssh\`
     - Create or update a file called `config` (no extension)
 
@@ -99,8 +100,10 @@ Host ailab-2
     User user@student.aau.dk
 
 # AI-LAB via SSH Gateway (for off-campus access)
-# For this to work, you need to have set up AAU MFA (https://www.its.aau.dk/vejledninger/mfa)
-Host ailab-vpn
+# For this to work, you need to have set up AAU MFA (https://www.en.its.aau.dk/instructions/mfa)
+# Also don't forget to update the user credentials to your own username.
+
+Host ailab-sshgw
     HostName ailab-fe01.srv.aau.dk
     User user@student.aau.dk
     ProxyJump user@student.aau.dk@sshgw.aau.dk

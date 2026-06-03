@@ -8,13 +8,13 @@ This page explains how Mistral meters and bills usage, how seats and tokens work
 
 Mistral uses two different models for measuring access and usage, depending on which interface you are using.
 
-### Seats (Le Chat)
+### Seats (Vibe)
 
-**Le Chat access is seat-based.** A seat is a named user license. AAU holds a number of seats as part of its institutional agreement with Mistral. When you log in to Le Chat via AAU SSO, you are assigned a seat for your account.
+**Vibe access is seat-based.** A seat is a named user license. AAU holds a number of seats as part of its institutional agreement with Mistral. When you log in to Vibe via AAU SSO, you are assigned a seat for your account.
 
 Key points about seats:
 
-- A seat gives you access to Le Chat's full feature set.
+- A seat gives you access to Vibe's full feature set.
 - You do not pay per message — usage is covered institutionally up to the agreed tier's daily limits.
 - Seats are tied to your AAU login. You cannot transfer or share a seat.
 - If the institutional seat limit is reached, new users may need to wait or apply through CLAAUDIA.
@@ -190,9 +190,9 @@ See [Using the API](/mistral/guides/ai-studio/using-the-api/#batch-inference-50-
 
 ---
 
-## Le Chat Usage Limits by Tier
+## Vibe Usage Limits by Tier
 
-Although Le Chat is seat-based, individual features have daily usage caps. These are soft limits that reset each day.
+Although Vibe is seat-based, individual features have daily usage caps. These are soft limits that reset each day.
 
 | Feature | Free tier | Pro tier |
 |---|---|---|
@@ -213,11 +213,11 @@ For the latest limits, see [mistral.ai/pricing](https://mistral.ai/pricing).
 
 ## Summary
 
-| | Le Chat | AI Studio API |
+| | Vibe | AI Studio API |
 |---|---|---|
 | **How usage is measured** | Seats | Tokens |
 | **Who pays** | Institution (seat license) | Institution (project token budget) |
-| **How to monitor** | Daily limits shown in Le Chat interface | Usage dashboard in AI Studio |
+| **How to monitor** | Daily limits shown in Vibe interface | Usage dashboard in AI Studio |
 | **Limits** | Per-feature daily caps | Project token quota |
 | **Cost control tips** | Stay within daily limits | Use small models, batch inference, efficient prompts |
 

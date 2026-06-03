@@ -1,4 +1,4 @@
----
+﻿---
 icon: lucide/house
 keywords: Home
 title: Home
@@ -44,7 +44,7 @@ hide:
     ---
 
     #### :lucide-star: Mistral AI for AAU researchers
-    AI Studio and Le Chat are now available for research API and chatbot workflows.
+    AI Studio and Vibe are now available for research API and chatbot workflows.
 
     [:lucide-arrow-right: Read more](/mistral/)
 
@@ -77,7 +77,7 @@ Choose among **AAU-managed platforms** for virtual machines, GPU computing, stud
 | Platform | Details | Target users | Quicklinks |
 | --- | --- | --- | --- |
 | **Strato** | Virtual-machine platform where researchers launch customizable instances with CPU/GPU resources and access them via terminal from their local computer. | <span class="target-user-tag target-user-tag--researchers">Researchers</span> | [:lucide-arrow-right: About](/strato/)<br>[:lucide-arrow-right: How to access](/strato/how-to-access/)<br>[:lucide-arrow-right: Application form](https://forms.office.com/e/r1u0QXH4KJ) |
-| **UCloud** | High-performance research platform with an intuitive web interface, interactive computing, and preloaded apps for analytics and visualization workflows. | <span class="target-user-tag target-user-tag--researchers">Researchers</span> | [:lucide-arrow-right: About](/ucloud/)<br>[:lucide-arrow-right: How to access](/ucloud/how-to-access/)<br>[:lucide-arrow-right: Application form](https://forms.office.com/e/R3M6gMj3rV) |
+| **UCloud** | High-performance research platform with an intuitive web interface, interactive computing, and preloaded apps for analytics and visualization workflows. | <span class="target-user-tag target-user-tag--researchers">Researchers</span><br><span style="display:inline-block; height:1.7em;"></span><span class="target-user-tag target-user-tag--students">Students</span> | [:lucide-arrow-right: About](/ucloud/)<br>[:lucide-arrow-right: How to access](/ucloud/how-to-access/)<br>[:lucide-arrow-right: Application form](https://forms.office.com/e/R3M6gMj3rV) |
 | **AI Cloud** | NVIDIA GPU cluster for machine-learning workloads, accessed through terminal with job submission and file management on frontend nodes. | <span class="target-user-tag target-user-tag--researchers">Researchers</span> | [:lucide-arrow-right: About](/ai-cloud/)<br>[:lucide-arrow-right: How to access](/ai-cloud/how-to-access/)<br>[:lucide-arrow-right: Application form](https://serviceportal.aau.dk/serviceportal?id=sc_cat_item&sys_id=37b26fd4c3afee10f0f3041ad00131d0) |
 | **AI-LAB** | Student-focused HPC environment with GPU resources for deep learning, simulations, and high-speed data analysis in courses and projects. | <span class="target-user-tag target-user-tag--students">Students</span> | [:lucide-arrow-right: About](/ai-lab/)<br>[:lucide-arrow-right: How to access](/ai-lab/how-to-access/)<br>[:lucide-arrow-right: Application form](https://forms.office.com/e/caEhCRmqVN) |
 | **TAAURUS** | Secure, flexible, and scalable research platform for sensitive-data processing with compliance-focused project governance and GPU-capable compute. | <span class="target-user-tag target-user-tag--researchers">Researchers</span> | [:lucide-arrow-right: About](/taaurus/)<br>[:lucide-arrow-right: How to access](/taaurus/how-to-access/)<br>[:lucide-arrow-right: Application form](https://serviceportal.aau.dk/serviceportal?id=sc_cat_item&sys_id=04934a6cc3a5e210f0f3041ad00131fc) |
