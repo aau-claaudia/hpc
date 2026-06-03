@@ -1,4 +1,4 @@
-﻿---
+---
 icon: lucide/house
 keywords: Home
 title: Home
@@ -20,15 +20,6 @@ hide:
 ## News
 
 <div class="grid cards three" markdown>
-
--   ##### 3 June 2026
-
-    ---
-
-    #### :lucide-star: UCloud for teaching
-    UCloud is now available for courses and project work—with webinars, browser apps, and guides for teachers and students.
-
-    [:lucide-arrow-right: Read more](/ucloud/ucloud-for-teaching/)
 
 -   ##### 4 May 2026
 
@@ -89,7 +80,7 @@ Choose among **AAU-managed platforms** for virtual machines, GPU computing, stud
 
 ## External HPC overview
 
-Beyond AAU’s local platforms, you can apply for compute time on **national Danish** and **European** facilities.
+Beyond AAU's local platforms, you can apply for compute time on **national Danish** and **European** facilities.
 
 <div class="home-platform-table-wrap" markdown>
 
