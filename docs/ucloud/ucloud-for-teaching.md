@@ -74,7 +74,6 @@ UCloud includes apps across different disciplines and use cases. Examples includ
 | MATLAB | Numerical computing, modelling, and analysis |
 | CVAT | Annotation of visual data |
 
-For a broader overview of applications, see the [expanded application guide](/ucloud/expanded-application-guide/).
 
 ---
 
