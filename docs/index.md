@@ -21,7 +21,7 @@ hide:
 
 <div class="grid cards three" markdown>
 
--   ##### Teaching at AAU
+-   ##### 3 June 2026
 
     ---
 
