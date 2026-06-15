@@ -23,7 +23,9 @@ In addition to the default resource limitations that are in place on the platfor
 
 ### Recommendations:
 
-* Always launch your jobs as batch-jobs that require no interference from the user. A batch job is one that has clearly defined start and stop conditions; the job should should execute some script and then release the resources when it's finished.
+* Always launch your jobs as batch-jobs that require no interference from the user. A batch job is one that has clearly defined start and stop conditions; the job should should execute some script and then release the resources when it's finished. Use `sbatch` instead of `srun` (see [this guide]('/ai-cloud/getting-started/run-jobs/#which-one-to-use-srun-vs-sbatch')).
+
+* Keep in mind that AI Cloud is a multi-user system, and that it is entirely possible for one user to destabilize the front-end node by launching resource-intensive operations. Ensuring that we have a stable platform is a shared responsibility.
 
 * Ensure that your jobs occupy resources only as long as they are needed.
 
@@ -33,20 +35,18 @@ In addition to the default resource limitations that are in place on the platfor
 
 * If possible, we recomend making good use of the time scheduler features in Slurm. Launch jobs in periods with low demand - ie. times outside of office hours; on weekends, during holidays, during the night, etc. The parameter `--begin` can be added to your Slurm command for this purpose.
 
-* Keep in mind that AI Cloud is a multi-user system, and that it is entirely possible for one user to destabilize the front-end node by launching resource-intensive operations. Ensuring that we have a stable platform is a shared responsibility.
 
-
-## Disallowed use of the platform
+## Disencouraged use of the platform
 
 ### Interactive sessions
 
 AI Cloud is designed for launching unattended batch jobs, and thus we do not allow interactive development sessions. Interactive development sessions are defined as any session, that is opened on a compute node and idles until the user initiates a proces.
 
-* **Launching jobs from within interactive shell sessions** 
+* **Interactive shell sessions** 
     
-    It is considered bad practice to launch unattended jobs from within interactive shell sessions. This would be opening a shell session (with something like `srun --pty`), and then interactively typing in the commands for loading the container and executing the traning proces. This not only occupies resources for longer than needed, but also makes it dependent on the shell session on the front end node, which will crash your job if the front end node were to crash. Read our guide [Getting started > Run Jobs](ai-cloud/getting-started/run-jobs/) to learn what to do instead.
+    It is considered bad practice to launch unattended jobs from within interactive shell sessions. This would be opening a shell session (with something like `srun --pty`), and then interactively typing in commands to launch the container and initiate the traning proces. This not only occupies resources for longer than needed, but also makes it dependent on the shell session on the front end node, which will crash your job if the front end node were to crash. Read our guide [Getting started > Run Jobs](ai-cloud/getting-started/run-jobs/) to learn what to do instead.
 
-* **Interactive development sessions**
+* **Interactive development sessions on GPU's**
 
     We do not allow interactive development sessions. By *interactive development* we mean opening an interactive shell session with something like `srun --pty -G 1 singularity --nv <shell/exec> image.sif`, and only occassionally execute commands be that directly from the console or from an IDE like Jupyter Notebook, Spyder or VS Code. This does not guarantee that resources are released automatically, when they are no longer needed, and thus resources are occupied for longer than needed.
 
@@ -54,10 +54,14 @@ AI Cloud is designed for launching unattended batch jobs, and thus we do not all
 
     Do know that interactive development is allowed on [UCloud](/ucloud/).
 
-### VS Code sessions
+* **Development sessions using VS Code**
 
-Increasingly we find that users are logging in to the platform with the [Remote SSH-extension](https://code.visualstudio.com/docs/remote/ssh) for VS Code (and forks thereof; Cursor, Kiro, etc.). This puts immense pressure on [the front end node](ai-cloud/system-overview/#front-end-node), which results in the node becoming sluggish and unresponsive for all users on the system. 
+    Increasingly we find that users are logging in to the platform with the [Remote SSH-extension](https://code.visualstudio.com/docs/remote/ssh) for VS Code (and forks thereof; Cursor, Kiro, etc.). This puts immense pressure on [the front end node](ai-cloud/system-overview/#front-end-node), which results in the node becoming sluggish and unresponsive for all users on the system. 
 
-This is certainly a cool feature, and one that we do plan on supporting in the future - but as of now, we do not support it fully. We therefore ask our user's to take great care when using this feature.
+    This is certainly a cool feature, and one that we do plan on supporting in the future - but as of now, our support for it is very limited. We therefore ask our user's to take great care when using this feature:
 
-If we find that platform responsiveness is challanged by the use of this feature, we will act in accordance with the practice layed out in [Enforcement of rules](#enforcement-of-rules).
+    * **Do not** initiate file transfers via VS Code or use fancy file synchronisation tools. Follow our guidelines on [File management]('/ai-cloud/getting-started/file-management') instead.
+
+    * If you plan to make use of AI coding asisstants, **do not** run these on the front end node.
+
+    If we find that platform responsiveness is challanged by the use of this feature, we will act in accordance with the practice layed out in [Enforcement of rules](#enforcement-of-rules).
