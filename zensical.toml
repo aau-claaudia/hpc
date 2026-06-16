@@ -56,6 +56,7 @@ copyright = """
 nav = [
   {"Home" = [
     "index.md",
+    "news.md",
     "tools.md",
     {"About CLAAUDIA" = "https://www.researcher.aau.dk/contact/claaudia"},
     "service-windows.md",
@@ -129,6 +130,7 @@ nav = [
     ]},
     {"Use cases" = [
       {"Voice modification for schizophrenia therapy" = "ucloud/use-cases/voice-modification-schizophrenia.md"},
+      {"Time-use and consumption data" = "ucloud/use-cases/time-use-consumption-data.md"},
     ]},
   ]},
   {"AI Cloud" = [

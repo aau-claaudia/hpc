@@ -18,37 +18,16 @@ hide:
     If you already know your requirements, jump directly to the [**AAU HPC overview**](/#aau-hpc-overview) and [**External HPC overview**](/#external-hpc-overview) tables below.
 
 ## News
+<!--
+To add a new news item, please edit the [News page](/news/).
+This section will always display the 3 latest news automatically.
+-->
 
-<div class="grid cards three" markdown>
-
--   ##### 4 May 2026
-
-    ---
-
-    #### :lucide-star: UCloud migration complete
-    The migration to the new data centre is finished.
-
-    [:lucide-arrow-right: Read more](https://cloud.sdu.dk/app/news/detailed/465)
-
--   ##### 7 April 2026
-
-    ---
-
-    #### :lucide-star: Mistral AI for AAU researchers
-    AI Studio and Vibe are now available for research API and chatbot workflows.
-
-    [:lucide-arrow-right: Read more](/mistral/)
-
--   ##### 27 March 2026
-
-    ---
-
-    #### :lucide-star: New UCloud data centre
-    See migration deadlines, expected downtime, and practical next steps for users.
-
-    [:lucide-arrow-right: Read more](/ucloud/sdu-datacenter-migration/)
-
+<div id="home-news-cards">
+  Loading latest news...
 </div>
+
+[See all news :lucide-arrow-right:](/news/)
 
 
 !!! info "Service status and planning"

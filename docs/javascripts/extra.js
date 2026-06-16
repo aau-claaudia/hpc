@@ -103,3 +103,51 @@ document.addEventListener("DOMContentLoaded", setExternalLinksNewTab);
 if (window.document$?.subscribe) {
   window.document$.subscribe(setExternalLinksNewTab);
 }
+
+function updateHomeNewsCards() {
+  const isHomePage =
+    window.location.pathname === "/" ||
+    window.location.pathname.endsWith("/index.html");
+  if (!isHomePage) return;
+
+  const target = document.getElementById("home-news-cards");
+  if (!target) return;
+
+  fetch("/news/")
+    .then((response) => {
+      if (!response.ok) throw new Error("Failed to load news page");
+      return response.text();
+    })
+    .then((html) => {
+      const parser = new DOMParser();
+      const doc = parser.parseFromString(html, "text/html");
+      const allNewsCards = Array.from(doc.querySelectorAll(".grid.cards.three ul > li"));
+      const newestThreeCards = allNewsCards.slice(0, 3);
+
+      if (newestThreeCards.length === 0) {
+        target.innerHTML = "No news items found.";
+        return;
+      }
+
+      const wrapper = document.createElement("div");
+      wrapper.className = "grid cards three";
+
+      const list = document.createElement("ul");
+      newestThreeCards.forEach((card) => {
+        list.appendChild(card.cloneNode(true));
+      });
+
+      wrapper.appendChild(list);
+      target.innerHTML = "";
+      target.appendChild(wrapper);
+      setExternalLinksNewTab();
+    })
+    .catch(() => {
+      target.innerHTML = "Unable to load latest news right now.";
+    });
+}
+
+document.addEventListener("DOMContentLoaded", updateHomeNewsCards);
+if (window.document$?.subscribe) {
+  window.document$.subscribe(updateHomeNewsCards);
+}
