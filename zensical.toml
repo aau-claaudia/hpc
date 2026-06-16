@@ -211,6 +211,7 @@ nav = [
         "ai-lab/guides/requeuing-jobs.md",
         "ai-lab/guides/ci-cd-with-github-actions.md",
       ]},
+      {"Onboarding workshop" = "ai-lab/guides/onboarding-workshop.md"},
       {"Workshop" = [
         "ai-lab/workshop/1-Introduction-to-ai-lab.md",
         "ai-lab/workshop/2-what-is-ai-lab.md",
@@ -291,7 +292,7 @@ nav = [
 #
 # Read more: https://zensical.org/docs/customization/#additional-css
 #
-extra_css = ["stylesheets/extra.css"]
+extra_css = ["stylesheets/extra.css", "stylesheets/ai-lab-onboarding-deck.css"]
 
 # With the `extra_javascript` option you can add your own JavaScript to your
 # project to customize the behavior according to your needs.
@@ -593,3 +594,6 @@ toc_depth = 2
 #    find what they're searching for. With your consent, you're helping us to
 #    make our documentation better.
 #""" 
+
+[project.markdown_extensions.pymdownx.tasklist]
+custom_checkbox = true

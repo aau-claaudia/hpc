@@ -2,7 +2,10 @@
 
 Practice creating and submitting batch scripts.
 
----
+
+
+<div class="workshop-internal-break" role="separator"></div>
+
 
 
 1. Use `micro` text editor (or any other if you're an experienced Linux user) to open the script `run.sh` that already exist in the workshop directory.
@@ -42,7 +45,10 @@ Practice creating and submitting batch scripts.
         cat myjob.log
         ```
 
----
+
+
+<div class="workshop-internal-break" role="separator"></div>
+
 
 **Next:** [Allocating Resources →](14-allocating-resources.md)
 

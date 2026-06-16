@@ -1,0 +1,207 @@
+{% extends "main.html" %}
+
+{# Markdown is rendered into page.content; slides are split on <hr> from a line containing only --- #}
+
+{% block content %}
+<div class="ai-lab-onboarding-workshop" data-onboarding-workshop="1" data-deck-title="{{ page.title | e }}">
+  <div id="onboarding-md-source" class="md-typeset" hidden>
+    {{ page.content }}
+  </div>
+
+  <div class="progress" id="onboarding-progress" role="progressbar" aria-valuemin="1" aria-valuemax="1" aria-valuenow="1"></div>
+
+  <div class="deck" id="onboarding-deck"></div>
+
+  <button type="button" class="exit-fs-btn" id="onboarding-exit-fs" aria-label="Exit full screen">Exit full screen</button>
+
+  <div class="nav">
+    <button type="button" class="enter-fs-btn" id="onboarding-enter-fs" aria-label="Enter full screen">Full screen</button>
+    <span id="onboarding-counter">1 / 1</span>
+    <div class="nav-buttons">
+      <button type="button" class="nav-btn" id="onboarding-prev" aria-label="Previous slide">‹</button>
+      <button type="button" class="nav-btn" id="onboarding-next" aria-label="Next slide">›</button>
+    </div>
+  </div>
+</div>
+
+<script>
+(function () {
+  function splitSlidesFromSource(source) {
+    var root = source.classList && source.classList.contains("md-typeset")
+      ? source
+      : source.querySelector(".md-typeset") || source;
+    var nodes = Array.from(root.children);
+    var groups = [];
+    var current = [];
+    nodes.forEach(function (node) {
+      if (node.tagName === "HR") {
+        node.remove();
+        if (current.length) {
+          groups.push(current);
+          current = [];
+        }
+      } else {
+        current.push(node);
+      }
+    });
+    if (current.length) groups.push(current);
+    if (!groups.length && nodes.length) return [nodes];
+    return groups.length ? groups : [];
+  }
+
+  function buildDeck() {
+    var workshop = document.querySelector("[data-onboarding-workshop=\"1\"]");
+    if (!workshop) return;
+    var deck = document.getElementById("onboarding-deck");
+    var source = document.getElementById("onboarding-md-source");
+    if (!deck || !source) return;
+    if (deck.dataset.built === "1") return;
+    deck.dataset.built = "1";
+
+    var groups = splitSlidesFromSource(source);
+    if (!groups.length) {
+      deck.innerHTML = "<section class=\"slide active\"><div class=\"slide-inner md-typeset\"><p>No slides found. In the Markdown source, put a line with only <code>---</code> between slides.</p></div></section>";
+    } else {
+      groups.forEach(function (chunk, i) {
+        var sec = document.createElement("section");
+        sec.className = "slide" + (i === 0 ? " active" : "");
+        var inner = document.createElement("div");
+        inner.className = "slide-inner md-typeset";
+        chunk.forEach(function (n) {
+          inner.appendChild(n);
+        });
+        sec.appendChild(inner);
+        deck.appendChild(sec);
+      });
+    }
+
+    source.remove();
+
+    var slides = deck.querySelectorAll(".slide");
+    var counter = document.getElementById("onboarding-counter");
+    var progress = document.getElementById("onboarding-progress");
+
+    function show(i) {
+      if (i < 0 || i >= slides.length) return;
+      slides.forEach(function (s) {
+        s.classList.remove("active");
+      });
+      slides[i].classList.add("active");
+      if (counter) counter.textContent = i + 1 + " / " + slides.length;
+      if (progress) {
+        progress.style.width = ((i + 1) / slides.length) * 100 + "%";
+        progress.setAttribute("aria-valuenow", String(i + 1));
+        progress.setAttribute("aria-valuemax", String(slides.length));
+      }
+      deck.dataset.slideIndex = String(i);
+    }
+
+    function next() {
+      var cur = parseInt(deck.dataset.slideIndex || "0", 10);
+      if (cur < slides.length - 1) show(cur + 1);
+    }
+    function prev() {
+      var cur = parseInt(deck.dataset.slideIndex || "0", 10);
+      if (cur > 0) show(cur - 1);
+    }
+
+    function enterFullscreen() {
+      if (!document.fullscreenElement) {
+        workshop.requestFullscreen && workshop.requestFullscreen();
+      }
+    }
+
+    function exitFullscreen() {
+      if (document.fullscreenElement) {
+        document.exitFullscreen && document.exitFullscreen();
+      }
+    }
+
+    deck._onboardingApi = { show: show, next: next, prev: prev, slides: slides };
+
+    var btnNext = document.getElementById("onboarding-next");
+    var btnPrev = document.getElementById("onboarding-prev");
+    var btnEnterFs = document.getElementById("onboarding-enter-fs");
+    var btnExitFs = document.getElementById("onboarding-exit-fs");
+    if (btnNext) {
+      btnNext.onclick = next;
+    }
+    if (btnPrev) {
+      btnPrev.onclick = prev;
+    }
+    if (btnEnterFs) {
+      btnEnterFs.onclick = enterFullscreen;
+    }
+    if (btnExitFs) {
+      btnExitFs.onclick = exitFullscreen;
+    }
+
+    show(0);
+  }
+
+  if (!window.__aauOnboardingGlobalNav) {
+    window.__aauOnboardingGlobalNav = true;
+    document.addEventListener("keydown", function (e) {
+      var deck = document.getElementById("onboarding-deck");
+      if (!deck || !document.body.contains(deck) || !deck._onboardingApi) return;
+      var api = deck._onboardingApi;
+      var t = e.target;
+      if (t && (t.tagName === "INPUT" || t.tagName === "TEXTAREA" || t.isContentEditable)) return;
+      if (e.key === "ArrowRight" || e.key === " " || e.key === "PageDown") {
+        e.preventDefault();
+        api.next();
+      }
+      if (e.key === "ArrowLeft" || e.key === "PageUp") {
+        e.preventDefault();
+        api.prev();
+      }
+      if (e.key === "Home") api.show(0);
+      if (e.key === "End") api.show(api.slides.length - 1);
+      if (e.key === "f" || e.key === "F") {
+        e.preventDefault();
+        var w = document.querySelector("[data-onboarding-workshop=\"1\"]");
+        if (!w) return;
+        if (!document.fullscreenElement) {
+          w.requestFullscreen && w.requestFullscreen();
+        } else {
+          document.exitFullscreen && document.exitFullscreen();
+        }
+      }
+    });
+
+    var touchStartX = 0;
+    document.addEventListener(
+      "touchstart",
+      function (e) {
+        var deck = document.getElementById("onboarding-deck");
+        if (!deck || !document.body.contains(deck) || !deck._onboardingApi) return;
+        touchStartX = e.changedTouches[0].screenX;
+      },
+      { passive: true }
+    );
+    document.addEventListener(
+      "touchend",
+      function (e) {
+        var deck = document.getElementById("onboarding-deck");
+        if (!deck || !document.body.contains(deck) || !deck._onboardingApi) return;
+        var api = deck._onboardingApi;
+        var dx = e.changedTouches[0].screenX - touchStartX;
+        if (Math.abs(dx) < 50) return;
+        if (dx < 0) api.next();
+        else api.prev();
+      },
+      { passive: true }
+    );
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", buildDeck);
+  } else {
+    buildDeck();
+  }
+  if (window.document$ && window.document$.subscribe) {
+    window.document$.subscribe(buildDeck);
+  }
+})();
+</script>
+{% endblock %}

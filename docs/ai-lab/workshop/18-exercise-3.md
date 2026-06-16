@@ -2,7 +2,10 @@
 
 Let's try running a Python GPU script inside a PyTorch container with resources allocated.
 
----
+
+
+<div class="workshop-internal-break" role="separator"></div>
+
 
 1. Inside the workshop directory, you will also find a file called `run_container.sh`
 
@@ -81,6 +84,9 @@ Let's try running a Python GPU script inside a PyTorch container with resources 
         
 6. Once completed, cancel all your jobs by using `scancel -u $USER`
 
----
+
+
+<div class="workshop-internal-break" role="separator"></div>
+
 
 **Next:** [Final pointers →](19-final-pointers.md)

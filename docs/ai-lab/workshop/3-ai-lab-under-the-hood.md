@@ -2,7 +2,10 @@
 
 AI-LAB combines specialized hardware and software to deliver high-performance computing for AI workloads.
 
----
+
+
+<div class="workshop-internal-break" role="separator"></div>
+
 
 ``` mermaid
 flowchart LR
@@ -31,7 +34,10 @@ flowchart LR
 
 ```
 
----
+
+
+<div class="workshop-internal-break" role="separator"></div>
+
 
 ## 🖥️ Hardware Overview
 
@@ -44,7 +50,10 @@ flowchart LR
 
 ![](../images/ailab-architecture.png)
 
----
+
+
+<div class="workshop-internal-break" role="separator"></div>
+
 
 ## ⚙️ Software Stack
 
@@ -53,6 +62,9 @@ flowchart LR
 | Scheduler  | **Slurm**       | Manages compute resources and queues   |
 | Containers | **Singularity** | Isolates applications and dependencies |
 
----
+
+
+<div class="workshop-internal-break" role="separator"></div>
+
 
 **Next:** [The AI-LAB Workflow →](4-the-ai-lab-workflow.md)

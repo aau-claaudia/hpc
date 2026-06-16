@@ -2,7 +2,10 @@
 
 Let's run a simple Python script inside a Singularity container with GPU support.
 
----
+
+
+<div class="workshop-internal-break" role="separator"></div>
+
 
 
 ## 🚀 Example: Running a container with srun
@@ -11,7 +14,10 @@ Let's run a simple Python script inside a Singularity container with GPU support
 srun singularity exec --nv /ceph/container/pytorch/pytorch_25.04.sif python3 gpu_stress.py
 ```
 
----
+
+
+<div class="workshop-internal-break" role="separator"></div>
+
 
 ## 📝 Example: Running a container with sbatch
 
@@ -23,7 +29,10 @@ In a batch script, add resource requests using `#SBATCH` directives:
 singularity exec --nv /ceph/container/pytorch/pytorch_25.04.sif python3 gpu_stress.py
 ```
 
----
+
+
+<div class="workshop-internal-break" role="separator"></div>
+
 
 ## 📖 Understanding the Singularity command
 
@@ -34,6 +43,9 @@ Let's break down what each part does:
 * `/ceph/container/pytorch/pytorch_25.04.sif`: The path to your container file. This is a pre-downloaded PyTorch container stored on AI-LAB.
 * `python3 gpu_stress.py`: The command to run inside the container. This executes your Python script using Python 3 from within the container environment.
 
----
+
+
+<div class="workshop-internal-break" role="separator"></div>
+
 
 **Next:** [Exercise 3 →](18-exercise-3.md)

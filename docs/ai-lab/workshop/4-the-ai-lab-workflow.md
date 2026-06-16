@@ -2,7 +2,10 @@
 
 AI-LAB follows a simple 4-step workflow for running AI experiments efficiently.
 
----
+
+
+<div class="workshop-internal-break" role="separator"></div>
+
 
 ## 🔄 Workflow Overview
 
@@ -13,6 +16,9 @@ AI-LAB follows a simple 4-step workflow for running AI experiments efficiently.
 
 ![](../images/ailab-workflow.png)
 
----
+
+
+<div class="workshop-internal-break" role="separator"></div>
+
 
 **Next:** [Logging into AI-LAB →](5-logging-into-ai-lab.md)

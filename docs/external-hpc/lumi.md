@@ -5,49 +5,29 @@ icon: lucide/paw-print
 
 # LUMI
 
-LUMI is a supercomputer located in Kajaani, Finland and ranks among the world's Top 10 supercomputers according to the [Top 500 list](https://top500.org). The true power of the system lies in it's oppurtunity to scale jobs massively, but we also want to encourage our users to experiment with the system, and to think of it as an extension of the compute capacity available to them as researchers at AAU.
+LUMI is a supercomputer located in Kajaani, Finland and ranks among the world's Top 10 supercomputers according to the [Top 500 list](https://top500.org). 
+
+### Overview of resource pools
+
+The system is funded jointly by [EuroHPC](https://www.lumi-supercomputer.eu/eurohpcju/) and the [LUMI consortium](https://www.lumi-supercomputer.eu/lumi-consortium/). The system's resources are thus distributed by a centralized european organization (EuroHPC), and nationally by the individual LUMI consortium member countries. Denmark is a member of both, and AAU's researchers can apply for compute-time from both.
 
 
-!!! abstract "Call open: Possible to apply for national resources"
+## Apply for resources
 
-    Call "H2-2026" is open from the 13th of January 2026, and will close 10th of March 2026.
+* Find an overview of the [EuroHPC resource pools](/external-hpc/eurohpc-resources/).
 
-    * Find more information on CLAAUDIA's page dedicated to this :octicons-arrow-right-16: [DeiC HPC resources](/external-hpc/deic-resources/).
+* Find an overview [DeiC's national resource calls](/external-hpc/deic-resources/).
 
-    * Find the official call page :octicons-arrow-right-16: [DeiC "H2-2026"](https://www.deic.dk/en/grants/h2-2026-call-applications-access-national-e-resources).
+* Find the application form for [AAU's local resources](https://aau.service-now.com/serviceportal?id=sc_cat_item&sys_id=d8a58078c358cb50f0f3041ad001318b).
 
-## Access
+!!! example "Always test out the system first"
 
-The system is funded by [EuroHPC](https://www.lumi-supercomputer.eu/eurohpcju/) and the [LUMI consortium](https://www.lumi-supercomputer.eu/lumi-consortium/) which Denmark is a member of. For this reason CLAAUDIA can provide AAU-users with **direct access** to the system. 
+    We want our local resources to be put to good use, and we therefore want to ask our users to help us ensure that allocated resources do not go to waste.
 
-### Recommendations for acquiring compute time on LUMI
+    We therefore encourage our users to always start by reaching out for a modest amount of resources. This especially applies to new research projects, users who have not tried working with this particular systems, or have not tried out their particular software stack on this particular system.    
 
-Acquiring LUMI-resources should <u>always</u> be a two step proces:
 
-  1. **<u>Acquire resources for testing out the system</u>:** 
-
-    It is always good to do a test run on the system prior to reaching out for a larger grant. Being able to demonstrate that you are able to utilise the system effectivly, and that your project fits the system, will greatly help your chances of being awarded the resources.
-    Further acquiring too large a resource, which is left unused, might make this resource unavailable to others who might have been able to put it to good use.
-
-    Make use of one of the following:
-
-      - **AAU's local resource pool:** Fill out [our application form](https://aau.service-now.com/serviceportal?id=sc_cat_item&sys_id=d8a58078c358cb50f0f3041ad001318b).
-
-      - **EuroHPC:** Read more on [our page dedicated to this option](/external-hpc/eurohpc-resources/).
-
-2. **<u>Acquire resources for actual project work</u>:** 
-
-    When you have demonstrated that your applicaiton is fit for the system, you can reach out for a larger grant.
-
-    Make use of one of the following:
-
-      - **AAU's local resource pool**: Fill out [our application form](https://aau.service-now.com/serviceportal?id=sc_cat_item&sys_id=d8a58078c358cb50f0f3041ad001318b). Suitable for modest/large grants, depending on our budget.
-
-      - **DeiC's national resource pool**: Read more on [our page dedicated to this option](/external-hpc/deic-resources/#applications-to-the-national-resource-pool).
-
-      - **EuroHPC**: Read more on [our page dedicated to this option](/external-hpc/eurohpc-resources/).
-
-!!! info "LUMI's resource cutter"
+!!! warning "LUMI's resource cutter"
 
     In order to ensure consistency in the availability of resources, LUMI has imposed a *resource cutting* mechanism that affects projects that run for more than 6 months (ie. projects with a shorter lifespan are not affected). If 40 % of the allocated resources have not been consumed within 6 months, an amount up to 40 % is cut from the total allocation. To clarify:
 
@@ -57,23 +37,9 @@ Acquiring LUMI-resources should <u>always</u> be a two step proces:
 
     * If the project's lifespan is 6 months or shorter, nothing is cut.
 
-    Reference: ["LUMI - REsource cut-off policy"](https://lumi-supercomputer.eu/wp-content/uploads/2026/03/LUMI-Resource_cut-off_policy_2026.pdf)
+    Reference: ["LUMI - Resource cut-off policy"](https://lumi-supercomputer.eu/wp-content/uploads/2026/03/LUMI-Resource_cut-off_policy_2026.pdf)
 
 
-### User support
-
-User support for the system is provided jointly by [CLAAUDIA](https://aau.service-now.com/serviceportal?id=sc_cat_item&sys_id=a05e2fb4c3434610f0f3041ad001310e) and the [LUMI User Support Team (LUST)](https://www.lumi-supercomputer.eu/user-support/).
-
-With a EuroHPC grant it is possible to apply for in-depth, HPC-expert assistance from [the Epicure project](/external-hpc/eurohpc-resources/#epicure).
-
-## Software
-
-LUMI utilises two main software components:
-
-- [Slurm queueing system](https://docs.lumi-supercomputer.eu/runjobs/scheduled-jobs/slurm-quickstart/) for distributing ressources.
-- [Singularity container framework](https://docs.lumi-supercomputer.eu/software/containers/singularity/) for containerising software.
-
-Users familiar with [AI Cloud](/ai-cloud) or [AI-LAB](/ai-lab) will find that operating the system a familiar experience.
 
 ## Hardware
 
@@ -82,15 +48,11 @@ LUMI consists of multiple compute partitions. Two of the main ones are:
 
 | Partition | Number of nodes | Purpose | Node configuration |
 | ---       |       ---       |   ---   |   ---         |
-| [LUMI-C](https://docs.lumi-supercomputer.eu/hardware/lumic/) | 2978 | Scaleable, demanding CPU operations | 128 cores AMD EPYC with different RAM capacities 256, 512 and 1024 GB| 
-| [LUMI-G](https://docs.lumi-supercomputer.eu/hardware/lumig/) | 2048 | Scaleable, demanding GPU operations | 4 x AMD MI250x GPU's (128 GB GPU-RAM each)|
+| LUMI-C | 2978 | Scaleable, demanding CPU operations | 2 x 64 cores **AMD EPYC** in different RAM configurations (256, 512 and 1024 GB). Find [the detailed specifications](https://docs.lumi-supercomputer.eu/hardware/lumic/).| 
+| LUMI-G | 2048 | Scaleable, demanding GPU operations | 4 x **AMD MI250x** GPU's, 128 GB VRAM. Find [the detailed specifications](https://docs.lumi-supercomputer.eu/hardware/lumig/).|
 
 The table above is intended for the purpose of providing a rough overview of the hardware. 
 A more complete overview can be found in [the official LUMI documentation](https://docs.lumi-supercomputer.eu/hardware/)
-
-!!! info "A note on AMD GPU hardware"
-
-    The AMD ROCM ecosystem has matured a lot in the recent years, and in most cases Nvidia-supported code can be ported to an AMD-system with only minor tweaks.
 
 #### Network
 All compute nodes are equipped with an high-speed interconnect which ensures high transfer speeds between compute nodes and storage partitions.
@@ -103,8 +65,22 @@ LUMI also several different storage partitions serving different purposes. Users
 
 - [Recommendations on using the storage partitions](https://docs.lumi-supercomputer.eu/storage/)
 
+## Software
+
+LUMI utilises two main software components:
+
+- [Slurm queueing system](https://docs.lumi-supercomputer.eu/runjobs/scheduled-jobs/slurm-quickstart/) for distributing ressources.
+- [Singularity container framework](https://docs.lumi-supercomputer.eu/software/containers/singularity/) for containerising software.
+
+Users familiar with [AI Cloud](/ai-cloud) or [AI-LAB](/ai-lab) will find that operating the system a familiar experience.
+
 ## Using the system
 
+!!! info "User support"
+
+    User support for the system is provided by [CLAAUDIA](https://aau.service-now.com/serviceportal?id=sc_cat_item&sys_id=a05e2fb4c3434610f0f3041ad001310e) and the [LUMI User Support Team (LUST)](https://www.lumi-supercomputer.eu/user-support/).
+
+    With a EuroHPC grant it is possible to apply for in-depth, HPC-expert assistance from [the Epicure project](/external-hpc/eurohpc-resources/#epicure).
 ### Before logging in
 
 Assuming that you have decided to make use of AAU's local resource pool, follow the instructions in the letter of approval, sent out following your [resource application](/external-hpc/access). This involves completing AAU's identity verification procedure and [uploading an SSH key](https://docs.lumi-supercomputer.eu/firststeps/SSH-keys/) to the system.

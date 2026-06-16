@@ -1,4 +1,4 @@
-﻿---
+---
 icon: lucide/house
 keywords: Home
 title: Home
@@ -80,7 +80,7 @@ Choose among **AAU-managed platforms** for virtual machines, GPU computing, stud
 
 ## External HPC overview
 
-Beyond AAU’s local platforms, you can apply for compute time on **national Danish** and **European** facilities.
+Beyond AAU's local platforms, you can apply for compute time on **national Danish** and **European** facilities.
 
 <div class="home-platform-table-wrap" markdown>
 
