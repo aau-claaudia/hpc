@@ -12,8 +12,8 @@ If you require a larger CPU quota, access to GPU resources, a virtual machine, o
 
 | | New UCloud researcher | Experienced UCloud researcher | Student |
 |---|---|---|---|
-| **CPU hours** | Up to 10,000 | Up to 200,000 | 2,500 / month |
-| **GPU hours** | Up to 500 | Up to 2,500 | 50 / month |
+| **CPU hours** | Up to 10,000 | Up to 200,000 | Up to 2,500 / month |
+| **GPU hours** | Up to 500 | Up to 2,500 | Up to 50 / month |
 
 > **Note:** Available resources can fluctuate throughout the year, and the figures provided will be adjusted depending on overall utilization.
 
