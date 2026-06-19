@@ -54,14 +54,16 @@ AI Cloud is designed for launching unattended batch jobs, and thus we do not all
 
     Do know that interactive development is allowed on [UCloud](/ucloud/).
 
-* **Development sessions using VS Code**
+* **Development sessions on the front-end node using VS Code**
 
-    Increasingly we find that users are logging in to the platform with the [Remote SSH-extension](https://code.visualstudio.com/docs/remote/ssh) for VS Code (and forks thereof; Cursor, Kiro, etc.). This puts immense pressure on [the front end node](ai-cloud/system-overview/#front-end-node), which results in the node becoming sluggish and unresponsive for all users on the system. 
+    Increasingly we find that users are logging in to the platform with the [Remote SSH-extension](https://code.visualstudio.com/docs/remote/ssh) for VS Code (and forks thereof; Cursor, Antigravity, etc.). This puts immense pressure on [the front end node](ai-cloud/system-overview/#front-end-node), which results in the node becoming sluggish and unresponsive for all users on the system. 
 
-    This is certainly a cool feature, and one that we do plan on supporting in the future - but as of now, our support for it is very limited. We therefore ask our user's to take great care when using this feature:
+    This is certainly a great feature, and one that we do plan on supporting in the future - but as of now, our support for it is very limited. We therefore ask our user's to take great care when using this feature:
 
-    * **Do not** initiate file transfers via VS Code or use fancy file synchronisation tools. Follow our guidelines on [File management]('/ai-cloud/getting-started/file-management') instead.
+    * **Do** keep an eye on your resource consumption: `htop -u $USER`.
 
-    * If you plan to make use of AI coding asisstants, **do not** run these on the front end node.
+    * **Do not** initiate file transfers via VS Code. File transfer processes should be as simple as possible. Follow our guidelines on [File management]('/ai-cloud/getting-started/file-management') instead.
+
+    * **Do not** run AI coding asistants (vibe-coding sessions) on the front-end node. Do this locally and upload your files.
 
     If we find that platform responsiveness is challanged by the use of this feature, we will act in accordance with the practice layed out in [Enforcement of rules](#enforcement-of-rules).
