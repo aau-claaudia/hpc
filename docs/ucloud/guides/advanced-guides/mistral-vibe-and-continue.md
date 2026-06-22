@@ -110,7 +110,7 @@ You will need this key during installation.
 
 3. Copy and pase the text of this script into a blank file and save it as: `setup-mistral-vibe-with-continue.sh`
 
-??? info "Set up script - save to a file called `setup-mistral-vibe-with-continue.sh`"
+??? info "Setup script - save to a file called `setup-mistral-vibe-with-continue.sh`"
 
     ```bash
     #!/usr/bin/env bash
@@ -298,9 +298,9 @@ You will need this key during installation.
 From UCloud:
 
 1. Open **Applications**  <img src="/assets/img/UCloud/mistral/ucloud-applications-icon.png" width="24" style="vertical-align: middle;" >
-2. Select **Coder with Python** <img src="/assets/img/UCloud/mistral/ucloud-coder-python.png" width="50" style="vertical-align: middle;" >
-3. Attach the folder 📂 `mistral-setup` with the script to the job
-4. Launch a new job
+2. Select **Coder with Python** <img src="/assets/img/UCloud/mistral/ucloud-coder-python.png" width="60" style="vertical-align: middle;" >
+3. Attach the folder 📂 `mistral-setup` containing `setup-mistral-vibe-with-continue.sh` to the job.
+4. Submit the job <img src="/assets/img/UCloud/mistral/ucloud-submit-button.png" width="60" style="vertical-align: middle;" >
 
 !!! info "Machine type"
 
@@ -313,7 +313,7 @@ From UCloud:
     | Cost | 1 CPU-hour / hour|
 
 
-Attach the 📂 folder containing `setup-mistral-vibe-with-continue.sh` to the job.
+Attach the 📂 folder 
 
 Wait for the application to start.
 
