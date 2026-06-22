@@ -320,7 +320,7 @@ is more than adequate for installation and usage.
 Attach the folder containing:
 
 ```text
-setup-mistral-vibe.sh
+setup-mistral-vibe-with-continue.sh
 ```
 
 to the job.
@@ -344,7 +344,7 @@ cd /work/mistral-setup
 Run the installer:
 
 ```bash
-bash setup-mistral-vibe.sh
+bash setup-mistral-vibe-with-continue.sh
 ```
 
 The installer will:
