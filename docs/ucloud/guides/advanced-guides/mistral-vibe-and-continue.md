@@ -2,6 +2,10 @@
 
 This is a detailed guide for setting up Mistral Vibe and Continue in Coder on the UCloud platform.
 
+The main features enabled by this guide in Coder are:
+1. An active Mistral AI agent that can interact with your files.
+2. Inline code completion for development purposes using the Mistral Codestral model.
+
 ---
 
 ## Important data classification restrictions
@@ -67,7 +71,7 @@ The guide explains:
 
 !!! info "API key access is required"
 
-    Access to Vibe and AI Studio alone is not sufficient.
+    Access to Vibe alone is not sufficient.
 
     You must have access to an AI Studio workspace that allows API key creation before proceeding with this guide.
 
@@ -77,7 +81,7 @@ The guide explains:
 
 Once your AI Studio workspace has been approved:
 
-1. Log in to AI Studio
+1. Log in to [Mistral AI Studio](https://console.mistral.ai/home)
 2. Select your project workspace
 3. Open **API Keys**
 4. Create a new API key
@@ -116,7 +120,7 @@ to this folder.
 
 Copy and pase the text of this script into a blank file and save it as: `setup-mistral-vibe-with-continue.sh`
 
-??? info "Set up script"
+??? info "Set up script - save to a file called `setup-mistral-vibe-with-continue.sh`"
 
     ```bash
     #!/usr/bin/env bash
