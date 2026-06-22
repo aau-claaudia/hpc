@@ -380,15 +380,11 @@ Open the Command Palette.
 
 #### Windows and Linux
 
-```text
-Ctrl + Shift + P
-```
+++ctrl+shift+p++
 
 #### macOS
 
-```text
-Cmd + Shift + P
-```
+++cmd+shift+p++
 
 Run:
 
@@ -442,9 +438,7 @@ The Continue extension will automatically provide suggestions when available.
 
 Many users find that pressing:
 
-```text
-Tab
-```
+++tab++
 
 once helps trigger completion requests.
 
