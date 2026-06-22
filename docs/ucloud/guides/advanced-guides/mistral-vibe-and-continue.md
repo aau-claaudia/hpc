@@ -3,7 +3,8 @@
 This is a detailed guide for setting up Mistral Vibe and Continue in Coder on the UCloud platform.
 
 The main features enabled by this guide in Coder are:
-1. An active Mistral AI agent that can interact with your files.
+
+1. An active Mistral Vibe AI agent that can interact with your files.
 2. Inline code completion for development purposes using the Mistral Codestral model.
 
 ---
