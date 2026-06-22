@@ -310,15 +310,17 @@ From UCloud:
 
 1. Open **Applications**
 2. Select **Coder with Python**
-3. Launch a new job
+3. Attach the folder with the script to the job
+4. Launch a new job
 
-A machine with:
+Machine type: `cpu-amd-zen5-1-vcpu`
 
 | Resource | Recommended |
 |----------|-------------|
-| CPU | 1 |
-| Memory | Default |
-| GPU | Not required |
+| vCPU | 1 |
+| Memory | 3 GB |
+| Cost | 1 CPU-hour / hour|
+
 
 is more than adequate for installation and usage.
 
