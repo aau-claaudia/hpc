@@ -83,7 +83,7 @@ The guide explains:
 Once your AI Studio workspace has been approved:
 
 1. Log in to [Mistral AI Studio](https://console.mistral.ai/home)
-2. Select your project workspace
+2. Select your project workspace 
 3. Open **API Keys**
 4. Create a new API key
 5. Copy and securely store the key
@@ -102,24 +102,13 @@ You will need this key during installation.
 
 ### Step 3: Upload the installation script to UCloud
 
-Create a folder in your UCloud workspace.
+1. Create a folder in your UCloud workspace, possibly in your `Members Files:YourUserName#1234` drive.
 
-For example:
+    For example 📂 `mistral-setup`.
 
-```text
-mistral-setup
-```
+2. Upload `setup-mistral-vibe-with-continue.sh` to this folder.
 
-Upload:
-
-```text
-setup-mistral-vibe-with-continue.sh
-```
-
-to this folder.
-
-
-Copy and pase the text of this script into a blank file and save it as: `setup-mistral-vibe-with-continue.sh`
+3. Copy and pase the text of this script into a blank file and save it as: `setup-mistral-vibe-with-continue.sh`
 
 ??? info "Set up script - save to a file called `setup-mistral-vibe-with-continue.sh`"
 
@@ -308,29 +297,23 @@ Copy and pase the text of this script into a blank file and save it as: `setup-m
 
 From UCloud:
 
-1. Open **Applications**
-2. Select **Coder with Python**
-3. Attach the folder with the script to the job
+1. Open **Applications**  <img src="/assets/img/UCloud/mistral/ucloud-applications-icon.png" width="24" style="vertical-align: middle;" >
+2. Select **Coder with Python** <img src="/assets/img/UCloud/mistral/ucloud-coder-python.png" width="50" style="vertical-align: middle;" >
+3. Attach the folder 📂 `mistral-setup` with the script to the job
 4. Launch a new job
 
-Machine type: `cpu-amd-zen5-1-vcpu`
+!!! info "Machine type"
 
-| Resource | Recommended |
-|----------|-------------|
-| vCPU | 1 |
-| Memory | 3 GB |
-| Cost | 1 CPU-hour / hour|
+    The machine type `cpu-amd-zen5-1-vcpu` is more than adequate for installation and usage.
+
+    | Resource | Recommended |
+    |----------|-------------|
+    | vCPU | 1 |
+    | Memory | 3 GB |
+    | Cost | 1 CPU-hour / hour|
 
 
-is more than adequate for installation and usage.
-
-Attach the folder containing:
-
-```text
-setup-mistral-vibe-with-continue.sh
-```
-
-to the job.
+Attach the 📂 folder containing `setup-mistral-vibe-with-continue.sh` to the job.
 
 Wait for the application to start.
 
