@@ -247,6 +247,7 @@ nav = [
     {"Guides" = [
       "taaurus/guides/login.md",
       "taaurus/guides/navigating-taaurus.md",
+      "taaurus/guides/git-for-projects.md",
       "taaurus/guides/import-export-of-data.md",
       {"Run GPU jobs" = [
         "taaurus/guides/before-running-jobs.md",
