@@ -11,9 +11,6 @@ hide:
 
 <div class="tag-container" markdown>
 
-SUND :lucide-check: 
-{ .hpc-tag title="Indicates that the platform is only for the Faculty of Medicine (SUND) researchers." }
-
 Researchers :lucide-check:
 { .hpc-tag title="Indicates if the platform is accessible for researchers (e.g., PhD students, postdocs, faculty) for research purposes." }
 
