@@ -30,8 +30,6 @@ A service window will take place on the following dates:
 
 **TAAURUS**
 
-TAAURUS service windows are scheduled on the **Tuesday one week after** AI Cloud and Strato.
-
 | 2025  | 2026  | 2027  | 2028  |
 | ---   | ---   | ---   | ---   |
 | 18/02 | 17/02 | 16/02 | 15/02 |
