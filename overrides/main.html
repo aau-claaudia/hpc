@@ -9,21 +9,18 @@
 {% endblock %}
 
 {# Announce bar with botton to refer to a guide. #}
-{# 
 {% block announce %}
-<div class="announce-bar" role="status" aria-live="polite">
-  <p class="announce-bar__title">Planned UCloud downtime </p>
+<div class="announce-bar announce-bar--danger" role="alert" aria-live="assertive">
+  <p class="announce-bar__title">⚠ AI Cloud / AI-LAB: Degraded performance</p>
   <p class="announce-bar__text">
-    To enable migration to a new SDU datacenter, the UCloud platform will be unavailable until May 4th.
+    AI Cloud and AI-LAB are currently experiencing slow response times from Ceph, our storage system. This may cause issues with job logging and general platform operations. We are investigating the issue and will update you as soon as we have more information.
   </p>
-  <div class="announce-bar__links">
-    <a class="announce-bar__link" href="/ucloud/sdu-datacenter-migration/" aria-label="Open migration guide">UCloud migration status</a>
-  </div>
 </div>
 {% endblock %}
-#}
+
 
 {# Announce bar - Simple but with red text #}
+{#
 {% block announce %}
 <div class="announce-bar announce-bar--danger" role="alert" aria-live="assertive">
   <p class="announce-bar__title">⚠ UCloud: Datacenter disruption</p>
@@ -37,7 +34,7 @@
   </div>
 </div>
 {% endblock %}
-
+#}
 {# Announce bar - AI Cloud / AI-LAB operational issue #}
 {#
 {% block announce %}
