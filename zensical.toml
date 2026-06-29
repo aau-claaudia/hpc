@@ -56,6 +56,7 @@ copyright = """
 nav = [
   {"Home" = [
     "index.md",
+    "news.md",
     "tools.md",
     {"About CLAAUDIA" = "https://www.researcher.aau.dk/contact/claaudia"},
     "service-windows.md",
@@ -105,7 +106,6 @@ nav = [
     "ucloud/how-to-access.md",
     "ucloud/terms-and-conditions.md",
     "ucloud/external-collaborator.md",
-    "ucloud/providers.md",
     "ucloud/sdu-datacenter-migration.md",
     "ucloud/service-windows.md",
     {"Support" = "https://serviceportal.aau.dk/serviceportal?id=sc_cat_item&sys_id=a05e2fb4c3434610f0f3041ad001310e"},
@@ -125,10 +125,12 @@ nav = [
       ]},
       {"Advanced guides" = [
         "ucloud/guides/advanced-guides/connect-neo4j-to-vscode.md",
+        "ucloud/guides/advanced-guides/mistral-vibe-and-continue.md",
       ]},
     ]},
     {"Use cases" = [
       {"Voice modification for schizophrenia therapy" = "ucloud/use-cases/voice-modification-schizophrenia.md"},
+      {"Time-use and consumption data" = "ucloud/use-cases/time-use-consumption-data.md"},
     ]},
   ]},
   {"AI Cloud" = [

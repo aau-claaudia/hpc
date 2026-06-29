@@ -1,4 +1,4 @@
----
+﻿---
 icon: lucide/lock-keyhole-open
 ---
 
@@ -9,6 +9,14 @@ All Aalborg University users automatically have access to UCloud and can simply 
 
 ## Projects
 If you require a larger CPU quota, access to GPU resources, a virtual machine, or need to work with sensitive data, you can apply for a project using CLAAUDIA’s local resources.
+
+| | New UCloud researcher | Experienced UCloud researcher | Student |
+|---|---|---|---|
+| **CPU hours** | Up to 10,000 | Up to 200,000 | Up to 2,500 / month |
+| **GPU hours** | Up to 500<br><small>equivalent to 3,500 MIG hours</small> | Up to 2,500<br><small>equivalent to 17,500 MIG hours</small> | Up to 50 / month<br><small>equivalent to 350 MIG hours</small> |
+
+> **Note:** Available resources can fluctuate throughout the year, and the figures provided will be adjusted depending on overall utilization.
+
 
 **Important:** If your project involves personally identifiable information, you must register your data with the Grant and Contract Unit. You can find detailed instructions for this process in our [guide on handling sensitive data on UCloud](/ucloud/guides/sensitive-data-on-ucloud/).
 

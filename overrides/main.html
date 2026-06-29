@@ -23,16 +23,20 @@
 {% endblock %}
 #}
 
-
 {# Announce bar - Simple but with red text #}
-{#
 {% block announce %}
 <div class="announce-bar announce-bar--danger" role="alert" aria-live="assertive">
-  <p class="announce-bar__title">⚠ UCloud: Extraordinary maintenance window May 23rd, 07:00–10:00</p>
-  <p class="announce-bar__text">We have scheduled an extraordinary maintenance window. All compute nodes will be rebooted. All running jobs will be terminated.</p>
+  <p class="announce-bar__title">⚠ UCloud: Datacenter disruption</p>
+  <p class="announce-bar__text">
+    On Friday 27 June, the Bitten datacenter was shut down after a transformer station explosion in Aabenraa caused widespread disruption to the surrounding power grid, including our datacenter. We are currently inspecting for potential damage and monitoring the datacenter's health closely.
+  </p>
+  <div class="announce-bar__links">
+    <a class="announce-bar__link" style="background-color: #fff; color: #212121; border: 1px solid #ddd;" href="https://status.cloud.sdu.dk/" aria-label="Open UCloud status">
+      UCloud status
+    </a>
+  </div>
 </div>
 {% endblock %}
-#}
 
 {# Announce bar - AI Cloud / AI-LAB operational issue #}
 {#
