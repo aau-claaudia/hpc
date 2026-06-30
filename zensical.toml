@@ -129,6 +129,7 @@ nav = [
       ]},
     ]},
     {"Use cases" = [
+      {"AI and satellite data to explore the upper atmosphere" = "ucloud/use-cases/combining-ai-satellite-upper-atmosphere.md"},
       {"Voice modification for schizophrenia therapy" = "ucloud/use-cases/voice-modification-schizophrenia.md"},
       {"Time-use and consumption data" = "ucloud/use-cases/time-use-consumption-data.md"},
     ]},

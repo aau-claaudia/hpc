@@ -13,6 +13,15 @@ The homepage automatically shows the first 3 cards from this page.
 
 <div class="grid cards three" markdown>
 
+-   ##### 29 June 2026
+
+    ---
+
+    #### :lucide-star: New UCloud use case: AI and satellite data in the upper atmosphere
+    Read how Associate Professor Lotte Ansgaard Thomsen uses UCloud to train AI models and combine satellite, solar, and ionospheric data in the UpperAtmosphere project.
+
+    [:lucide-arrow-right: Read more](/ucloud/use-cases/combining-ai-satellite-upper-atmosphere/)
+
 -   ##### 16 June 2026
 
     ---
