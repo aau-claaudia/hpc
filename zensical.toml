@@ -126,6 +126,7 @@ nav = [
       {"Advanced guides" = [
         "ucloud/guides/advanced-guides/connect-neo4j-to-vscode.md",
         "ucloud/guides/advanced-guides/mistral-vibe-and-continue.md",
+        "ucloud/guides/advanced-guides/matlab-initialization-and-execution.md",
       ]},
     ]},
     {"Use cases" = [
