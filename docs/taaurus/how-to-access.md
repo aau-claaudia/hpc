@@ -7,7 +7,9 @@ icon: lucide/lock-keyhole-open
 
 ## Who can get access?
 
-At this time, access to TAAURUS is available to researchers affiliated with the Faculty of Medicine (SUND) at Aalborg University.
+Access to TAAURUS is available to **researchers** at Aalborg University (for example PhD students, postdocs, and faculty).
+
+**Students** do not have direct access to TAAURUS. For student-focused HPC, see [AI-LAB](/ai-lab/).
 
 If you are unsure whether you are eligible, please contact CLAAUDIA via the [AAU Service Portal](https://serviceportal.aau.dk/serviceportal?id=sc_cat_item&sys_id=34e8536083cfc21053711d447daad30a).
 

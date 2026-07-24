@@ -30,6 +30,8 @@ If the user suspects that their API key has been compromised or misused, they mu
 
 Users are personally responsible for ensuring compliance with AAU's data classification requirements before submitting any content to the service.
 
+Conversations in Mistral Vibe are subject to a **90-day retention period**, after which chats are automatically deleted. Users should not rely on the service for long-term storage of any content.
+
 
 ## 4. Shared libraries
 

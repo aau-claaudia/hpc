@@ -7,33 +7,34 @@
     async
     src="//gc.zgo.at/count.js"></script>
 {% endblock %}
-
-{# Announce bar with botton to refer to a guide. #}
-{# 
+{# Announce bar - AI Cloud / AI-LAB: Degraded performance #}
+{#
 {% block announce %}
-<div class="announce-bar" role="status" aria-live="polite">
-  <p class="announce-bar__title">Planned UCloud downtime </p>
+<div class="announce-bar announce-bar--danger" role="alert" aria-live="assertive">
+  <p class="announce-bar__title">⚠ AI Cloud / AI-LAB: Degraded performance</p>
   <p class="announce-bar__text">
-    To enable migration to a new SDU datacenter, the UCloud platform will be unavailable until May 4th.
+    AI Cloud and AI-LAB are currently experiencing slow response times from Ceph, our storage system. This may cause issues with login and general platform operations. We are investigating the issue and will update you as soon as we have more information.
   </p>
-  <div class="announce-bar__links">
-    <a class="announce-bar__link" href="/ucloud/sdu-datacenter-migration/" aria-label="Open migration guide">UCloud migration status</a>
-  </div>
 </div>
 {% endblock %}
 #}
-
 
 {# Announce bar - Simple but with red text #}
 {#
 {% block announce %}
 <div class="announce-bar announce-bar--danger" role="alert" aria-live="assertive">
-  <p class="announce-bar__title">⚠ UCloud: Extraordinary maintenance window May 23rd, 07:00–10:00</p>
-  <p class="announce-bar__text">We have scheduled an extraordinary maintenance window. All compute nodes will be rebooted. All running jobs will be terminated.</p>
+  <p class="announce-bar__title">⚠ UCloud: Datacenter disruption</p>
+  <p class="announce-bar__text">
+    On Friday 27 June, the Bitten datacenter was shut down after a transformer station explosion in Aabenraa caused widespread disruption to the surrounding power grid, including our datacenter. We are currently inspecting for potential damage and monitoring the datacenter's health closely.
+  </p>
+  <div class="announce-bar__links">
+    <a class="announce-bar__link" style="background-color: #fff; color: #212121; border: 1px solid #ddd;" href="https://status.cloud.sdu.dk/" aria-label="Open UCloud status">
+      UCloud status
+    </a>
+  </div>
 </div>
 {% endblock %}
 #}
-
 {# Announce bar - AI Cloud / AI-LAB operational issue #}
 {#
 {% block announce %}

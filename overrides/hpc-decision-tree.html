@@ -820,19 +820,6 @@
               setContext: { roleType: "teacher", isTeacher: true },
             },
           ],
-          next: "faculty",
-        },
-        {
-          id: "faculty",
-          text: "Which AAU faculty do you belong to?",
-          type: "single",
-          options: [
-            { label: "SSH (Social Sciences and Humanities)", setContext: { faculty: "SSH" } },
-            { label: "ENG (Engineering and Science)", setContext: { faculty: "ENG" } },
-            { label: "SUND (Medicine)", setContext: { faculty: "SUND" } },
-            { label: "TECH (IT and Design)", setContext: { faculty: "TECH" } },
-            { label: "Other", setContext: { faculty: "Other" } },
-          ],
           next: "teachingStudents",
         },
         {
@@ -1753,29 +1740,21 @@
               blockReason: "TAAURUS is reserved for researchers and cannot be used by students.",
             };
           }
-          if (ctx.faculty !== "SUND") {
-            return {
-              allowed: false,
-              allowedReason: "",
-              blockReason: "Only SUND faculty may use TAAURUS.",
-            };
-          }
           const dataRule = supportsDataLevel("TAAURUS");
           if (!dataRule.allowed) return dataRule;
-          // If SUND researcher has funding to buy hardware, TAAURUS is a good option
           if (ctx.hasFunding === true) {
             return {
               allowed: true,
               allowedReason:
                 "Extra sensitive platform (servers at AAU, approved by security). Supports data levels 1-3. Unlimited GPU usage. GUI desktop with apps like RStudio, MATLAB, Stata. Can buy dedicated hardware for your project. Batch and interactive jobs.",
-              blockReason: "SUND faculty only, researchers only. ~5TB unpaid guideline (more can be charged). Harder access (GDPR registration + Data Management Plan). Not for server hosting.",
+              blockReason: "Researchers only. ~5TB unpaid guideline (more can be charged). Harder access (GDPR registration + Data Management Plan). Not for server hosting.",
             };
           }
           return {
             allowed: true,
               allowedReason:
                 "Extra sensitive platform (servers at AAU, approved by security). Supports data levels 1-3. Unlimited GPU usage. GUI desktop with apps like RStudio, MATLAB, Stata. Batch and interactive jobs.",
-            blockReason: "SUND faculty only, researchers only. ~5TB unpaid guideline (more can be charged). Harder access (GDPR registration + Data Management Plan). Not for server hosting.",
+            blockReason: "Researchers only. ~5TB unpaid guideline (more can be charged). Harder access (GDPR registration + Data Management Plan). Not for server hosting.",
           };
         },
       };
