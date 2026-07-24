@@ -100,7 +100,6 @@ nav = [
       ]},
     ]},
   ]},
-
   {"UCloud" = [
     {"About" = "ucloud/index.md"},
     "ucloud/how-to-access.md",
@@ -256,6 +255,9 @@ nav = [
         "taaurus/guides/getting-containers.md",
         "taaurus/guides/using-containers.md",
         "taaurus/guides/monitoring.md",
+      ]},
+    { "Application guides" = [
+        "taaurus/guides/larger-than-memory.md",
       ]},
     ]},
   ]},
