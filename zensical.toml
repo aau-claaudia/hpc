@@ -265,7 +265,31 @@ nav = [
       ]},
     ]},
   ]},
-  {"Mistral" = [
+  {"AAU Compute" = [
+    {"About" = "aau-compute/index.md"},
+    "aau-compute/how-to-access.md",
+    "aau-compute/terms-and-conditions.md",
+    "aau-compute/system-overview.md",
+    "aau-compute/fair-usage.md",
+    "aau-compute/resource-quotas.md",
+    "aau-compute/service-windows.md",
+      {"Guides" = [
+      {"Getting started" = [
+        "aau-compute/getting-started/index.md",
+        "aau-compute/getting-started/loginguide-vscode.md",
+        "aau-compute/getting-started/look-around.md",
+        "aau-compute/getting-started/file-management.md",
+        "aau-compute/getting-started/container-images.md",
+        "aau-compute/getting-started/run-jobs.md",
+      ]},
+      {"Additional guides" = [
+        {"Using the Linux CLI" = [
+          "aau-compute/additional-guides/understanding-linux-cli.md",
+        ]},
+       ]},
+      ]},
+  ]},  
+    {"Mistral" = [
     {"About" = "mistral/index.md"},
     "mistral/how-to-access.md",
     "mistral/terms-and-conditions.md",
