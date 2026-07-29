@@ -285,10 +285,40 @@ nav = [
       {"Additional guides" = [
         {"Using the Linux CLI" = [
           "aau-compute/additional-guides/understanding-linux-cli.md",
+          "aau-compute/additional-guides/edit-text-files-with-nano.md",
+          "aau-compute/additional-guides/useful-commands.md",
         ]},
-       ]},
+        "aau-compute/additional-guides/directories-overview.md",
+        {"Container guides" = [
+          "aau-compute/additional-guides/download-container-images.md",
+          "aau-compute/additional-guides/building-your-own-container-image.md",
+          "aau-compute/additional-guides/creating-a-virtual-environment.md",
+        ]},
+        {"Running jobs" = [
+          "aau-compute/additional-guides/run-jobs-beyond-the-default-qota.md",
+          "aau-compute/additional-guides/run-jobs-on-proprietary-nodes.md",
+          "aau-compute/additional-guides/setting-a-time-limit.md",
+          "aau-compute/additional-guides/cancelling-jobs.md",
+          "aau-compute/additional-guides/multiple-gpus-with-pytorch.md",
+          "aau-compute/additional-guides/checkpointing.md",
+          "aau-compute/additional-guides/cpu-gpu-and-memory-allocation.md",
+        ]},
+        {"Monitoring jobs" = [
+          "aau-compute/additional-guides/checking-the-queue.md",
+          "aau-compute/additional-guides/checking-the-status-of-compute-nodes.md",
+          "aau-compute/additional-guides/checking-gpu-utilisation.md",
+        ]},
+        {"Learn the Linux CLI" = [
+          "aau-compute/additional-guides/understanding-linux-cli.md",
+          "aau-compute/additional-guides/useful-commands.md",
+          "aau-compute/additional-guides/edit-text-files-with-nano.md",
+        ]},
+        {"Application examples" = [
+          "aau-compute/additional-guides/batch-llm-inference.md",
+        ]},
       ]},
-  ]},  
+    ]},
+  ]}, 
     {"Mistral" = [
     {"About" = "mistral/index.md"},
     "mistral/how-to-access.md",
