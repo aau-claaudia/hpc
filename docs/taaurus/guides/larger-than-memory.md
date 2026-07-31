@@ -4,7 +4,7 @@ Sometimes we can find ourselves in a situation, where the dataset we want to wor
 
 ## DuckDB
 
-DuckDB can do exactly this. One great advantage of using DuckDB, is that integrates well with R's built-in database interface (`DBI`), which allows us to use it as a drop-in replacement for existing methods for reading data, while still being able to query the data with well known libraries, such as `dplyr` and `bioconductor`. Since DuckDB operations are paralellized out of the box, we can expect DuckDB to deliver high performance.
+DuckDB is a modern lightweight database system, that can do exactly this. One great advantage of using DuckDB, is that integrates well with R's built-in database interface (`DBI`), which allows us to use it as a drop-in replacement for existing methods for reading data, while still being able to query the data with well known libraries, such as `dplyr` and `bioconductor`. Since DuckDB operations are paralellized out of the box, we can expect DuckDB to deliver high performance.
 
 # Installing DuckDB
 
@@ -63,14 +63,16 @@ First create a lazy table pointing to the DuckDB table:
 ```R
 large_dataset <- tbl(con, "large_data")
 ```
-And query the data with some dplyr functions:
+
+And query the data with the well-known `dplyr` toolbox:
 
 ```R
 large_dataset %>%
-filter(Age >= 65) %>%
-group_by(Age) %>%
-summarise(n = mean(Height_cm)) %>%
-arrange(Age) %>%
-collect()
+  filter(Age >= 65) %>%
+  group_by(Age) %>%
+  summarise(n = mean(Height_cm)) %>%
+  arrange(Age) %>%
+  collect()
 ```
+
 
