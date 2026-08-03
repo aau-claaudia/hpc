@@ -78,3 +78,5 @@ To learn more about this oppurtunity, please find our page dedicated to this pos
 [Need assistance? Reach us at the Serviceportal](https://aau.service-now.com/serviceportal?id=sc_cat_item&sys_id=34e8536083cfc21053711d447daad30a){ .md-button .md-button--primary target=_blank }
 
 
+
+<!-- Developer Note: This page provides instructions and resources for accessing UCloud, including project onboarding, sensitive data requirements, and information about national HPC resources. If you update workflow diagrams or sensitive data guidelines, ensure accuracy and consistency with institutional policies and available links. -->
