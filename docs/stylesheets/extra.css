@@ -459,3 +459,8 @@
   padding: 0;
   border-top: 1px solid var(--md-default-fg-color--lightest, #e0e0db);
 }
+
+/* Homepage news: shared include lists all cards; show only the newest 3 */
+.home-news-preview .grid.cards > ul > li:nth-child(n+4) {
+  display: none;
+}
