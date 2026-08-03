@@ -66,7 +66,7 @@ When you see a prompt like this, you're successfully logged in:
 user@student.aau.dk@ailab-fe01:~$
 ```
 
-This means you're now connected to AI-LAB and ready to start working!
+This means you're now connected to AI-LAB and ready to start working.
 
 ## Setting Up SSH Shortcuts (Recommended)
 
