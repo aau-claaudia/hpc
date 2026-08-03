@@ -79,4 +79,3 @@ To learn more about this oppurtunity, please find our page dedicated to this pos
 
 
 
-<!-- Developer Note: This page provides instructions and resources for accessing UCloud, including project onboarding, sensitive data requirements, and information about national HPC resources. If you update workflow diagrams or sensitive data guidelines, ensure accuracy and consistency with institutional policies and available links. -->
