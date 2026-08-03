@@ -100,7 +100,6 @@ nav = [
       ]},
     ]},
   ]},
-
   {"UCloud" = [
     {"About" = "ucloud/index.md"},
     "ucloud/how-to-access.md",
@@ -126,6 +125,7 @@ nav = [
       {"Advanced guides" = [
         "ucloud/guides/advanced-guides/connect-neo4j-to-vscode.md",
         "ucloud/guides/advanced-guides/mistral-vibe-and-continue.md",
+        "ucloud/guides/advanced-guides/matlab-initialization-and-execution.md",
       ]},
     ]},
     {"Use cases" = [
@@ -258,6 +258,10 @@ nav = [
         "taaurus/guides/getting-containers.md",
         "taaurus/guides/using-containers.md",
         "taaurus/guides/monitoring.md",
+      ]},
+    { "Application guides" = [
+        "taaurus/guides/larger-than-memory.md",
+
       ]},
     ]},
   ]},
