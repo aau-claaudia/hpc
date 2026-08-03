@@ -13,6 +13,15 @@ The homepage automatically shows the first 3 cards from this page.
 
 <div class="grid cards three" markdown>
 
+-   ##### 3 August 2026
+
+    ---
+
+    #### :lucide-star: DeiC national HPC call open until 1 September
+    Apply for compute resources at national HPC facilities, including LUMI. The call closes 1 September 2026 — applications open twice a year.
+
+    [:lucide-arrow-right: Read more](/news/deic-national-call-september-2026/)
+
 -   ##### 29 June 2026
 
     ---
