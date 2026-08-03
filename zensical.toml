@@ -302,6 +302,7 @@ nav = [
           "aau-compute/additional-guides/multiple-gpus-with-pytorch.md",
           "aau-compute/additional-guides/checkpointing.md",
           "aau-compute/additional-guides/cpu-gpu-and-memory-allocation.md",
+          "aau-compute/additional-guides/run-job-arrays.md",
         ]},
         {"Monitoring jobs" = [
           "aau-compute/additional-guides/checking-the-queue.md",
