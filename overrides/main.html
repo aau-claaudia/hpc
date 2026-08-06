@@ -7,6 +7,21 @@
     async
     src="//gc.zgo.at/count.js"></script>
 {% endblock %}
+{# Announce bar - Maintenance notice #}
+{% block announce %}
+<div class="announce-bar announce-bar--danger" role="alert" aria-live="assertive">
+  <p class="announce-bar__title">⚠ UCloud: Maintenance notice</p>
+  <p class="announce-bar__text">
+    On 06/08/2026, UCloud machines will reboot for important patches. Running jobs on those machines will be stopped. UCloud will remain accessible during this time.
+  </p>
+  <div class="announce-bar__links">
+    <a class="announce-bar__link" style="background-color: #fff; color: #212121; border: 1px solid #ddd;" href="https://status.cloud.sdu.dk/" aria-label="Open UCloud status">
+      UCloud status
+    </a>
+  </div>
+</div>
+{% endblock %}
+
 {# Announce bar - AI Cloud / AI-LAB: Degraded performance #}
 {#
 {% block announce %}
