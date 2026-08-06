@@ -64,7 +64,7 @@ output
 new recording) a new folder is created, by default: *1_Recording_1*,
 *2_Recording_2*, and so on.
 
-![Billede-3-Dictaphone-Guide](/assets/img/UCloud/Billede-3-Dictaphone-Guide..png)
+![Billede-3-Dictaphone-Guide](/assets/img/UCloud/Billede-3-Dictaphone-Guide.png)
 
 - Once you finish configuring, click **Submit** to start the Dictaphone
 job.
