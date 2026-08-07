@@ -58,7 +58,7 @@ Are you sure you want to continue connecting (yes/no/[fingerprint])?
 
 When prompted, enter your AAU password. **Important**: You won't see any characters (like `***`) as you type - this is normal for security reasons.
 
-### Step 5: Success!
+### Step 5: Success
 
 When you see a prompt like this, you're successfully logged in:
 
