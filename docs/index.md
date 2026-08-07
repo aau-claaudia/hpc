@@ -57,8 +57,6 @@ Choose among **AAU-managed platforms** for virtual machines, GPU computing, stud
 </div>
 
 
-   
-
 ## External HPC overview
 
 Beyond AAU's local platforms, you can apply for compute time on **national Danish** and **European** facilities.
