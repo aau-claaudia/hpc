@@ -165,7 +165,7 @@ There are two ways to use Transcriber on UCloud:
 
     You should now see the following screen:
 
-    ![Transcriber Node Assigned](/assets/img/UCloud/Transcriberguide18.jpg)
+    ![Transcriber Node Assigned](/assets/img/UCloud/Transcriberguide18.png)
 
     There are several options here, and it can seem overwhelming. For this example, we'll walk through the quickest way to start a transcription.
 

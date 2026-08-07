@@ -19,12 +19,14 @@ hide:
 
 ## News
 <!--
-To add a new news item, please edit the [News page](/news/).
-This section will always display the 3 latest news automatically.
+To add a new news item, edit docs/includes/news-cards.md (newest first).
+This section shows the first 3 cards from that shared list.
 -->
 
-<div id="home-news-cards">
-  Loading latest news...
+<div class="home-news-preview" markdown>
+
+--8<-- "includes/news-cards.md"
+
 </div>
 
 [See all news :lucide-arrow-right:](/news/)
@@ -54,8 +56,6 @@ Choose among **AAU-managed platforms** for virtual machines, GPU computing, stud
 
 </div>
 
-
-   
 
 ## External HPC overview
 
