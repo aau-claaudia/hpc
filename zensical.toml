@@ -172,6 +172,7 @@ nav = [
           "ai-cloud/additional-guides/multiple-gpus-with-pytorch.md",
           "ai-cloud/additional-guides/checkpointing.md",
           "ai-cloud/additional-guides/cpu-gpu-and-memory-allocation.md",
+          "ai-cloud/additional-guides/run-job-arrays.md",
         ]},
         {"Monitoring jobs" = [
           "ai-cloud/additional-guides/checking-the-queue.md",
