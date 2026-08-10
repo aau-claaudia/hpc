@@ -48,6 +48,7 @@ The following will work on most modern terminal emulators. For Windows users we 
 
 Now that we have created our key pair, we need to upload the public key to Strato 
 
+* Open your Strato dashboard in your browser
 * Navigate to *Compute -> Key Pairs*
 * Click **Import Public Key**. This will open a dialog box.
 * Under **Key Pair Name** type in the name you gave the key, when you created it.
@@ -56,6 +57,7 @@ Now that we have created our key pair, we need to upload the public key to Strat
 	* On Mac OS and Linux the directory `~/.ssh` is hidden and might not be visible in your file manager.
 		* MacOS *Finder* press "cmd + shift + ." to show hidden files.
 		* Ubuntu/Gnome (using Nautilus file manager) press "ctrl + h" to show hidden files.
+        * Windows: open your file manager on your local laptop and you’ll probably find the file in the following directory: `C:\Users\user_id\.ssh`
 * Select your public key file (ends in *.pub*) and click **Ok**.
 
 ## Launch Ubuntu instance
@@ -63,7 +65,7 @@ Now that we have created our key pair, we need to upload the public key to Strat
 To launch the Ubuntu instance navigate to the "launch instance" menu using the webinterface.
 
 1. Navigate to *Compute -> Images*
-3. Press **Launch** on the right side of the image you wish to Launch.
+3. Choose a image and press **Launch** on the right side of the image you wish to Launch.
 
 
 ![Alt Description](/assets/img/openstack/find_create_instance.gif "Find the 'create instance' option")

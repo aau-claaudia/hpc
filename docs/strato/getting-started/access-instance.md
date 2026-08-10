@@ -11,7 +11,7 @@ Open the appropriate terminal application for your system and enter the SSH comm
 The command structure is:
 
 ```
-ssh -i ~/.ssh/<my_private_key> ubuntu@10.92.0.zzz
+ssh -i ~/.ssh/<my_private_key> ubuntu@10.92.10.zzz
 ```
 
 * `ssh` is a call for establishing an SSH-connection. 
