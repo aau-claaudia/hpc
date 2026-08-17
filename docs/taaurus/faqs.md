@@ -52,7 +52,7 @@ icon: lucide/message-circle-question-mark
     However, TAAURUS is not intended to be used only as archival storage. You must also have a relevant processing/compute purpose for using the platform.
 
 ??? question "Is a Data Management Plan (DMP) required, and how do we get started?"
-    Yes. A DMP is required before you submit Part 2 in the [application process](/taaurus/how-to-access/).
+    Yes. Before you submit Part 2 in the [application process](/taaurus/how-to-access/), you must have **started working on** a DMP. It does not need to be finished yet.
 
     To get started with DMP work:
 

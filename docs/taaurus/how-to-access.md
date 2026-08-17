@@ -45,7 +45,7 @@ For writing a DMP, we recommend [DeiC DMP](https://dmp.deic.dk/plans/new), but o
 !!! note "Timing of approvals"
     GDPR registration and ethical approval do **not** need to be fully approved before you submit Part 1, but they **must** be approved before you submit Part 2—unless your project does not require them (see Part 2 below).
 
-    A DMP is required before Part 2.
+    A DMP does **not** need to be finished before Part 2, but you **must** have started working on it.
 
 ---
 
@@ -57,7 +57,7 @@ Use the [Part 2 form](https://serviceportal.aau.dk/serviceportal?id=sc_cat_item&
 
 - Part 1 has been submitted
 - CLAAUDIA and the TAAURUS board have approved Part 1
-- A DMP is in place
+- You have started working on a DMP
 - GDPR registration and ethical approval are **approved**—or confirmed as **not required** for your project (see below)
 - The form is submitted by the project's **Principal Investigator (PI)**
 
@@ -67,7 +67,6 @@ The Part 2 form lets you confirm when certain compliance items **do not apply** 
 
 - **No GDPR registration required** — the project does not process personal data in a way that requires registration
 - **No ethical approval required** — the project does not need research ethics review
-- **No license required** — the project does not need a specific license beyond standard platform terms
 
 Select the relevant options only when they truly apply to your project. CLAAUDIA may follow up if the justification is unclear.
 
@@ -85,7 +84,7 @@ graph TD
     D -->|GDPR needed| E["GDPR registration approved"]
     D -->|Ethics needed| F["Ethical approval granted"]
     D -->|Not required| G["Confirm in Part 2 form"]
-    C --> H["Data Management Plan ready"]
+    C --> H["DMP started"]
     E --> I["Part 2: Create TAAURUS project"]
     F --> I
     G --> I
@@ -119,17 +118,11 @@ Use the [modification form](https://serviceportal.aau.dk/serviceportal?id=sc_cat
 | Add new applications | :material-check: | :material-check: |
 | Import of extra data | :material-check: | — |
 
-Other changes—such as adding capacity, extending the project, or shutting down early—may also be available in the form. Contact CLAAUDIA if you are unsure which option to choose.
-
 !!! info "Project roles"
     When adding members in Part 1 or via the modification form, you can assign:
 
-    - **Principal Investigator (PI)**
-    - **Project Administrator**
     - **Project Member (Read/Write)**
     - **Project Member (Read-Only)**
-
-    See the [FAQs](/taaurus/faqs/) for more on roles and project structure.
 
 ---
 
