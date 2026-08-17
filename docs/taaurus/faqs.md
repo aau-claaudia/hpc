@@ -27,12 +27,9 @@ icon: lucide/message-circle-question-mark
     - Project Member (Read-Only access)
 
 ??? question "Can access privileges be updated after access is granted?"
-    Yes. It will be possible to modify an active project via a form on serviceportal.aau.dk.
+    Yes. You can modify an active project via the [modification form](https://serviceportal.aau.dk/serviceportal?id=sc_cat_item&sys_id=6e3aa12a838ee61053711d447daad3c1) on serviceportal.aau.dk.
 
-    This form supports (PI only):
-
-    - role and rights changes
-    - adding or removing project group members
+    What you can request depends on your role—see [Modify a running TAAURUS project](/taaurus/how-to-access/#modify-a-running-taaurus-project) for details.
 
 ## Project lifecycle and administration
 
@@ -40,12 +37,9 @@ icon: lucide/message-circle-question-mark
     Yes. It will be possible to request an extension via a form on serviceportal.aau.dk.
 
 ??? question "Can I add or remove members once a project is running?"
-    Yes. It will be possible to add or remove members via a form on serviceportal.aau.dk.
+    Yes. The PI can add or remove project group members—and change read/write or read-only group membership—via the [modification form](https://serviceportal.aau.dk/serviceportal?id=sc_cat_item&sys_id=6e3aa12a838ee61053711d447daad3c1).
 
-    This form supports (PI only):T
-
-    - adding or removing project group members
-    - role and rights changes
+    See [Modify a running TAAURUS project](/taaurus/how-to-access/#modify-a-running-taaurus-project) for what each role can request.
 
 ??? question "Can I request software that is not currently available on TAAURUS?"
     Yes. It will be possible to request additional software via a form on serviceportal.aau.dk.
@@ -66,9 +60,11 @@ icon: lucide/message-circle-question-mark
     - [Request support from CLAAUDIA](https://serviceportal.aau.dk/serviceportal?id=sc_cat_item&sys_id=66738c41c3c34610f0f3041ad001310d)
 
 ??? question "Do we need ethical approval and GDPR registration to get access?"
-    Yes. Both are required.
+    It depends on your project.
 
-    These items do not need to be fully approved before submitting Part 1, but they must be approved before submitting Part 2 in the [application process](/taaurus/how-to-access/).
+    If your project processes personal data or requires research ethics review, **GDPR registration and ethical approval are required** and must be approved before you submit Part 2.
+
+    If they are **not required**, you can confirm this in the Part 2 form. See [Part 2 — Create your TAAURUS project](/taaurus/how-to-access/#part-2-create-your-taaurus-project).
 
     - [Read more about GDPR registration](https://aaudk.sharepoint.com/sites/persondata-ressourcer/SitePages/Anmeldelse%20og%20registreringer.aspx)
     - [Read more about ethical approval](https://forms-intern.aau.dk/dialogue/AAU084/Ansgning_om_forskningsetisk_godkendelse)
