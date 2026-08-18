@@ -1,18 +1,23 @@
-You may need to install additional packages if your existing container is missing software required for your work. The recommended practice is to create a copy of your container and modify this. This allows you to make the changes you want without affecting the original container.
+You may need to install additional packages if your existing container is missing software required for your work. The recommended practice is to create a copy of the container and modify this. This allows you to make the changes you want without affecting the original container.
 ## Step 1: Create a copy of the container
-Navigate to the folder where your container is stored.
+You can **either** copy a container from the repository `/ceph/container/` **Or** use a container from your own directory `/ceph/home/student.aau.dk/user`
+
+Use the command `ls` to see which containers are available in the choosen folder. Every file which ends with `.sif` is a container.
+
+Choose the container you want to modify and navigate to the folder where it is located by using `cd`. Here's an example:
+
 ```
-cd /ceph/container/
+cd /ceph/container/pytorch/
 ```
-Choose the container you want to modify.  
+
 Run the following command to create a copy of your selected container:
 ```
-cp pytorch_26.04.sif ~/container/my_container.sif
+cp pytorch_26.04.sif ~/my_container.sif
 ```
 ###What does the command?
 - `cp` – copies a file.
 - `pytorch_26.04.sif` – the original container (source file).
-- `~/container/my_container.sif` – the new copy, which is saved in the folder "container" in your home directory with the name "my_container.sif"
+- `~/my_container.sif` – the new copy is saved in your home directory "~/" with the name "my_container.sif"
 
 ## Step 2: Check which packages are in the selected container
 Before adding a new package, you can check which Python packages are already installed in the container.
@@ -20,13 +25,13 @@ Before adding a new package, you can check which Python packages are already ins
 Navigate to the folder where your container is stored.
 
 ```
-cd ~/container/
+cd ~/
 ```
 To display a list of all Python packages installed in the container run the following command:
 ```
 srun singularity exec my_container.sif pip list
 ```
-
+###What does the command?
 - `srun` – asks Slurm to run the command as a job on a compute node.
 - `singularity exec` – tells Singularity to run a command inside the container.
 - `my_container.sif` – the name of the container you want to use.
@@ -35,30 +40,30 @@ srun singularity exec my_container.sif pip list
 **A reccomendation is to make a list of the packages you are missing in the container you want to modify.**
 
 ## Step 3: Build a sandbox
-A sandbox is a writable version of a container where you can make changes and install additional packages.
+A sandbox is a writable version of a container where you can make changes and install additional packages. If you copied the container you want to modify to your home directory, you can build a sandbox with the following command: 
 
 ```
-srun singularity build --sandbox /ceph/home/user/container/my_container/ /ceph/home/user/container/my_container.sif
+srun singularity build --sandbox ~/my_container/ ~/my_container.sif
 ```
 
 - `srun` – asks Slurm to run the command as a job on a compute node.
 - `singularity build` – is used to create a new container from an existing container.
 - `--sandbox` – tells Singularity to create the new container as a writable sandbox directory instead of a .sif file.
-- `/ceph/.../my_container/` – the location and name of the new sandbox.
-- `/ceph/.../my_container.sif` – the existing .sif container that the sandbox is created from.
+- `~/my_container/` – the location and name of the new sandbox.
+- `~/my_container.sif` – the existing .sif container that the sandbox is created from.
 
 **Note:** Building the sandbox can take a couple of minutes. When the proces is complete, you will get the info message `INFO: Build complete: /ceph/.../my_container/`
 
 ## Step 4: Install packages in your sandbox
 To be able to install additional packages, navigate to the folder where your sandbox is located and open a interactive session:
 ```
-cd /ceph/home/user/container/
+cd ~/
 ```
 Followed by:
 ```
 srun --pty singularity shell my_container/
 ```
-
+###What does the command?
 - `srun` – asks Slurm to run the command as a job on a compute node.
 - `singularity shell` – opens an interactive shell inside the container.
 - `my_container/` – the sandbox directory you want to open.
@@ -123,7 +128,8 @@ A `.sif` container is a better choice for long-term use because it:
 - prevents accidental changes to the container.
 
 ## Convert the sandbox back into a `.sif` container
-To convert your sandbox back into a `.sif` container, create a Slurm batch script and run it with `sbatch`.
+To convert your sandbox back into a `.sif` container, [create a Slurm batch script](https://hpc.aau.dk/ai-lab/guides/running-jobs/#using-sbatch-batch-jobs){target=_blank} and run it with `sbatch`.
+If needed, revisit the [Using containers to run jobs](https://hpc.aau.dk/ai-lab/guides/using-containers/){target=_blank} guide.
 
 Using a batch script is recommended because it:
 
@@ -131,19 +137,20 @@ Using a batch script is recommended because it:
 - reduces the risk of the job stopping due to time limits or a frozen terminal, and
 - allows you to choose the appropriate number of CPU cores and amount of memory to complete the conversion more efficiently.
 
-Add the following content to your batch script:
+**Add the following content to your batch script:**
 ```
 #!/bin/bash
-	#SBATCH --job-name=job_container_medium
-	#SBATCH --gres=gpu:1
-	#SBATCH --cpus-per-task=16
-	#SBATCH –mem=64G
-	#SBATCH –time=12:00:00
-	#SBATCH –output=logs/%x_%j.out
-	#SBATCH –error=logs/%x_%j.err
-	mkdir -p logs
-singularity build /ceph/home/its.aau.dk/vi40bx/training/container/my_container_updated.sif \
-/ceph/home/its.aau.dk/vi40bx/training/container/my_container/
+#SBATCH --job-name=job_container
+#SBATCH --gres=gpu:1
+#SBATCH --cpus-per-task=16
+#SBATCH --mem=64G
+#SBATCH --time=12:00:00
+#SBATCH --output=logs/%x_%j.out
+#SBATCH --error=logs/%x_%j.err
+
+mkdir -p logs
+
+singularity build ~/my_container_updated.sif ~/my_container/
 ```
 
 **Note:** that the job can take some time.
@@ -151,14 +158,13 @@ singularity build /ceph/home/its.aau.dk/vi40bx/training/container/my_container_u
 ## Verify and test the new container
 After the job has finished, check that a `.sif` container with the name you specified has been created by running this command:
 ```
-ls -lh /ceph/home/user/container/*.sif
+ls -lh ~/*.sif
 ```
 To verify that the packages you added have been installed successfully, follow these steps:
 
 **Start the container by running:**
 ```
-srun singularity shell \
-/ceph/home/user/container/my_container_updated.sif
+srun singularity shell ~/my_container_updated.sif
 ```
 **Once you are inside the container, run this command:**
 ```
