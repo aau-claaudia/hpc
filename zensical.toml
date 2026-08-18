@@ -214,6 +214,7 @@ nav = [
         "ai-lab/guides/checkpointing.md",
         "ai-lab/guides/requeuing-jobs.md",
         "ai-lab/guides/ci-cd-with-github-actions.md",
+        "ai-lab/additional-guides/adding-packages-to-a-container.md",
       ]},
       {"Onboarding workshop" = "ai-lab/guides/onboarding-workshop.md"},
       {"Workshop" = [
