@@ -32,7 +32,6 @@ Click **Continue with AAU – SSO** to be redirected to the AAU login page.
 
 Log in using your AAU credentials eg. *ab12cd* and approve the login via multi-factor authentication (MFA).
 
-![AAU login page](/assets/img/mistral/vibe/login/login4.png){style=max-height:600px;}
 
 ---
 
@@ -40,7 +39,6 @@ Log in using your AAU credentials eg. *ab12cd* and approve the login via multi-f
 
 You will be redirected back to Vibe and land on the conversation screen. Here, you can confirm that you are logged in to the AAU organization.
 
-![Vibe conversation screen](/assets/img/mistral/vibe/login/login5.png){style=max-height:600px;}
 
 ---
 
@@ -48,4 +46,4 @@ You will be redirected back to Vibe and land on the conversation screen. Here, y
     If you have not set up multi-factor authentication, see the [AAU MFA guide](https://www.en.its.aau.dk/instructions/mfa){target="_blank"} before logging in.
 
 !!! info "Access issues?"
-    If you cannot log in, contact CLAAUDIA via the [service portal](https://serviceportal.aau.dk/serviceportal?id=emp_taxonomy_topic&topic_id=82a253e8838fc21053711d447daad328){target="_blank"}.
+    If you cannot log in, contact us via the [service portal](https://serviceportal.aau.dk/serviceportal?id=emp_taxonomy_topic&topic_id=82a253e8838fc21053711d447daad328){target="_blank"}.

@@ -1,12 +1,12 @@
 # Support
 
-Support on Mistral is seperated into CLAAUDIA and Mistral support. In the section below you can read more about who to request support based on the nature of your question. 
+Support on Mistral is seperated into our support and Mistral support. In the section below you can read more about who to request support based on the nature of your question. 
 
 ---
 
-## When to contact CLAAUDIA
+## When to contact us
 
-CLAAUDIA handles institutional and access-related questions. Reach out to CLAAUDIA if you need help with:
+We handle institutional and access-related questions. Reach out to us if you need help with:
 
 - **Vibe** — access, seat assignment, or login issues
 - **AI Studio** — workspace creation, workspace members, or budget allocation
@@ -58,11 +58,11 @@ The Mistral Discord server is a good place to ask technical questions and get qu
 
 | Problem | Where to go |
 |---|---|
-| Cannot log in to Vibe | Contact CLAAUDIA via the [Serviceportal](https://aau.service-now.com/serviceportal) |
-| Cannot access AI Studio workspace | Contact CLAAUDIA via the [Serviceportal](https://aau.service-now.com/serviceportal) |
-| Token quota exceeded | Contact CLAAUDIA via the [Serviceportal](https://aau.service-now.com/serviceportal) |
-| I cannot create API key | Contact CLAAUDIA via the [Serviceportal](https://aau.service-now.com/serviceportal) |
-| Data classification questions | Contact CLAAUDIA via the [Serviceportal](https://aau.service-now.com/serviceportal) |
+| Cannot log in to Vibe | Contact us via the [Serviceportal](https://aau.service-now.com/serviceportal) |
+| Cannot access AI Studio workspace | Contact us via the [Serviceportal](https://aau.service-now.com/serviceportal) |
+| Token quota exceeded | Contact us via the [Serviceportal](https://aau.service-now.com/serviceportal) |
+| I cannot create API key | Contact us via the [Serviceportal](https://aau.service-now.com/serviceportal) |
+| Data classification questions | Contact us via the [Serviceportal](https://aau.service-now.com/serviceportal) |
 | API key not working | Contact Mistral via the in-app *Help and Resources* chat |
 | How to use an mistral api key in your own software | Contact Mistral via the in-app *Help and Resources* chat |
 | Vibe not behaving as expected (e.g. wrong output, missing feature) | Contact Mistral via the in-app *Help and Resources* chat in Vibe |

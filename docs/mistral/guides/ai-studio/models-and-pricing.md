@@ -2,6 +2,9 @@
 
 This page describes the main Mistral models available through AI Studio, what they are suited for, and how API pricing works. For the official and always up-to-date model list, see the [Mistral models documentation](https://docs.mistral.ai/getting-started/models/models_overview/).
 
+!!! info "Document the model you used"
+    When it is relevant for reproducibility or method description, record the model name and version (or API identifier). See [Responsible use of Mistral](/mistral/guides/responsible-use/#document-the-model-you-used).
+
 ---
 
 ## How to Browse Models in AI Studio

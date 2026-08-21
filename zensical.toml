@@ -272,6 +272,7 @@ nav = [
     {"Support" = "mistral/support.md"},
     {"Guides" = [
       "mistral/guides/index.md",
+      "mistral/guides/responsible-use.md",
       {"Vibe" = [
         "mistral/guides/vibe/index.md",
         "mistral/guides/vibe/getting-started.md",

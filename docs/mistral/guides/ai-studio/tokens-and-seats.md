@@ -17,7 +17,7 @@ Key points about seats:
 - A seat gives you access to Vibe's full feature set.
 - You do not pay per message — usage is covered institutionally up to the agreed tier's daily limits.
 - Seats are tied to your AAU login. You cannot transfer or share a seat.
-- If the institutional seat limit is reached, new users may need to wait or apply through CLAAUDIA.
+- If the institutional seat limit is reached, new users may need to wait or apply through the Serviceportal.
 
 ### Tokens (AI Studio API)
 
@@ -101,16 +101,16 @@ Logging this per call allows you to estimate the total cost of a workflow before
 
 ## Token Budget and Project Quotas at AAU
 
-At AAU, API access is tied to an approved project workspace. Each workspace operates against a token budget agreed with CLAAUDIA as part of the application process.
+At AAU, API access is tied to an approved project workspace. Each workspace operates against a token budget agreed with us as part of the application process.
 
 ### How to check your remaining budget
 
-Token usage at the workspace level is visible in AI Studio's Usage section. If you need to know the specific quota for your workspace, contact CLAAUDIA.
+Token usage at the workspace level is visible in AI Studio's Usage section. If you need to know the specific quota for your workspace, contact us.
 
 ### What happens when you approach the limit
 
 - Monitor usage regularly during active development and batch runs.
-- If your project requires more tokens than originally requested, submit a revised request through the CLAAUDIA Serviceportal.
+- If your project requires more tokens than originally requested, submit a revised request through the Serviceportal.
 - Unexpected overruns may be caused by inefficient prompts, long context windows, or unintended loops in code — check the per-key breakdown in the Usage view.
 
 ### Token rotation and expiry

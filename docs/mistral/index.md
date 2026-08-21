@@ -19,11 +19,11 @@ Students :lucide-ban:
 Teaching :lucide-ban:
 { .hpc-tag title="Mistral is only for academic reserach activities." }
 
-Confidential & sensitive data :lucide-ban:
-{ .hpc-tag title="Mistral is only approved for public data (level 1)." }
+Confidential & sensitive data :lucide-check:
+{ .hpc-tag title="Level 2 and 3 data is allowed only in a dedicated workspace requested via the Serviceportal, after the project is assessed by Grants and Contracts." }
 
-Personal data :lucide-ban:
-{ .hpc-tag title="Mistral is not approved for personal data." }
+Personal data :lucide-check:
+{ .hpc-tag title="Personal data may be processed only as an assisting research tool, with data minimisation, and Level 2 or 3 data only in a dedicated workspace." }
 
 Web interface :lucide-check:
 { .hpc-tag title="The service is accessed through a browser-based interface." }
@@ -34,8 +34,7 @@ Web interface :lucide-check:
 
 Mistral is an AI service that gives AAU researchers access to generative AI tools. In this section you can read more about the two services: Vibe for conversational AI assistance and AI Studio for larger generative tasks, including API-based integration with custom AI workflows.
 
-!!! info "No personal data allowed"
-    Mistral AI may be used only for data classified as level 1 under [AAU’s data classification model](https://www.sikkerhed.aau.dk/dataklassifikation){__blank}. It is not approved for processing personal data, so data containing personal information must not be uploaded to or processed in Mistral AI. If you are unsure what qualifies as personal data, see [What is personal data?](https://www.datatilsynet.dk/english/fundamental-concepts-/what-is-personal-data){__blank}
+Mistral is an assisting research tool only. Read [Responsible use of Mistral](/mistral/guides/responsible-use/) before you work with personal data or Level 2 or 3 data.
 
 [Get access to Mistral](/mistral/how-to-access){ .md-button .md-button--primary }
 

@@ -1,8 +1,20 @@
 # Mistral guides and documentation
 
-Mistral provides two main resources for documentation and support. Use these as your first stop for questions about features, models, the API, and troubleshooting.
+Start with reading our [Responsible use of Mistral](/mistral/guides/responsible-use/) before you process personal data or Level 2 or 3 data. That work requires a dedicated workspace requested through the Serviceportal. API access also requires a WorkZone case number from Grants and Contracts.
+
+Mistral also provides two main resources for product documentation and support. Use these as your first stop for questions about features, models, the API, and troubleshooting.
 
 For questions about access, workspaces, or quotas at AAU, see the [Support page](/mistral/support/).
+
+---
+
+## AAU instructions
+
+| Guide | What you will find |
+|---|---|
+| [Responsible use of Mistral](/mistral/guides/responsible-use/) | Assisting use only, data minimisation, prompting, API keys, 90-day deletion, documentation, and approved tools |
+| [Terms and Conditions](/mistral/terms-and-conditions/) | Binding rules for using Mistral at AAU |
+| [How to access Mistral](/mistral/how-to-access/) | SSO login and how to request a dedicated workspace |
 
 ---
 
