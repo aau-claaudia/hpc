@@ -106,9 +106,6 @@ In short:
 - An **MCP server** may be used if it is managed by AAU, approved for at least the same data classification, and covered by a valid data processing agreement.
 - If the other platform will receive **personal data** or data classified as **Level 2 or 3**, you must also have an agreement (typically a data processing agreement or confidentiality agreement) and **technical and organisational security** on that platform that matches the data you send.
 
-See AAU’s [Generative AI and Security](https://www.security.aau.dk/gen-ai){target="_blank"} overview.
-
----
 
 ## 7. Keep what you need — chats are deleted after 90 days
 
@@ -118,7 +115,6 @@ Chat history is deleted automatically after **90 days**. Do not use Vibe as a pr
 
 If you need the prompt, the output, or a record of how you used Mistral, save it in an **approved AAU system before the 90 days end**.
 
----
 
 ## 8. If Mistral is unavailable, or someone exercises their rights
 

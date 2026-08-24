@@ -16,21 +16,11 @@ For questions about access, workspaces, or quotas at AAU, see the [Support page]
 | [Terms and Conditions](/mistral/terms-and-conditions/) | Binding rules for using Mistral at AAU |
 | [How to access Mistral](/mistral/how-to-access/) | SSO login and how to request a dedicated workspace |
 
----
 
 ## Help Centre
 
 [help.mistral.ai](https://help.mistral.ai/en/){target="_blank"} — FAQs and articles covering accounts, subscriptions, and troubleshooting for both Vibe and AI Studio.
 
-| Section | What you will find |
-|---|---|
-| [Getting started](https://help.mistral.ai/en/collections/789614-getting-started){target="_blank"} | First steps with Mistral products |
-| [Vibe](https://help.mistral.ai/en/collections/789629-le-chat){target="_blank"} | Features, conversations, settings, and subscriptions |
-| [AI Studio](https://help.mistral.ai/en/collections/789620-mistral-ai-studio){target="_blank"} | Console, API keys, workspaces, and usage |
-| [Help and troubleshooting](https://help.mistral.ai/en/collections/789619-help-and-troubleshooting){target="_blank"} | Common issues and how to contact support |
-| [Trust, security, and compliance](https://help.mistral.ai/en/collections/789666-trust-security-compliance){target="_blank"} | Data handling, privacy, and security policies |
-
----
 
 ## Documentation Hub
 

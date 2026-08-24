@@ -31,7 +31,7 @@ Click **Continue with AAU – SSO** to be redirected to the AAU login page.
 
 Log in using your AAU credentials eg. *ab12cd* and approve the login via multi-factor authentication (MFA).
 
-![AAU login page](/assets/img/mistral/le-chat/login/login4.png){style=max-height:600px;}
+![AAU login page](/assets/img/mistral/vibe/login/login4.png){style=max-height:600px;}
 
 ---
 

@@ -186,8 +186,6 @@ It is not suited for:
 - Interactive use (results are not immediate)
 - Workflows that need the model's response before deciding the next step
 
-See [Using the API](/mistral/guides/ai-studio/using-the-api/#batch-inference-50-cost-reduction) for code examples, and the [Batch Inference documentation](https://docs.mistral.ai/capabilities/batch/) for the full specification.
-
 ---
 
 ## Vibe Usage Limits by Tier
