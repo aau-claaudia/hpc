@@ -172,6 +172,7 @@ nav = [
           "ai-cloud/additional-guides/multiple-gpus-with-pytorch.md",
           "ai-cloud/additional-guides/checkpointing.md",
           "ai-cloud/additional-guides/cpu-gpu-and-memory-allocation.md",
+          "ai-cloud/additional-guides/run-job-arrays.md",
         ]},
         {"Monitoring jobs" = [
           "ai-cloud/additional-guides/checking-the-queue.md",
@@ -213,6 +214,7 @@ nav = [
         "ai-lab/guides/checkpointing.md",
         "ai-lab/guides/requeuing-jobs.md",
         "ai-lab/guides/ci-cd-with-github-actions.md",
+        "ai-lab/additional-guides/adding-packages-to-a-container.md",
       ]},
       {"Onboarding workshop" = "ai-lab/guides/onboarding-workshop.md"},
       {"Workshop" = [

@@ -1,4 +1,7 @@
 site/
+.site/
+.cache/
+.zensical-serve.toml
 
 # Virtual environments
 .venv/
