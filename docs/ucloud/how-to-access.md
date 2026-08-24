@@ -3,7 +3,7 @@ icon: lucide/lock-keyhole-open
 ---
 
 ## Direct access
-All Aalborg University users automatically have access to UCloud and can simply log in using their WAYF credentials (university logon credentials). This gives you access to **"My Workspace"** with a starting quota of 2000 CPU-hours that can be used in the standard web app environment. This is the quickest and most user-friendly way to access high-performance computing (HPC) as a first-time user.
+All Aalborg University users automatically have access to UCloud and can simply log in using their WAYF credentials (university logon credentials). This gives you access to **"My Workspace"** with a starting quota of 100 CPU-hours that can be used in the standard web app environment. This is the quickest and most user-friendly way to access high-performance computing (HPC) as a first-time user.
 
 [Log in to UCloud](https://cloud.sdu.dk/app/dashboard){ .md-button .md-button--primary target=_blank }
 
