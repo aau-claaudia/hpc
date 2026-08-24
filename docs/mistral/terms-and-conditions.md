@@ -24,7 +24,7 @@ Security instruction coverage (1–21)
 18 §9 automation bias. Guide: automation bias
 19 §9 API human-in-the-loop. AI Studio page. Guide: human-in-the-loop
 20 §10 last paragraph. Guide: document model and version
-21 §7 Approved solutions. Guide: unapproved tools
+21 §7 Integrations and approved solutions. Guide: unapproved tools
 -->
 
 ##### Use of Mistral Vibe and AI Studio at Aalborg University (AAU)
@@ -104,12 +104,17 @@ If you suspect that an API key has been compromised or misused, you must immedia
 The feedback function is **disabled** at AAU and must remain disabled. If it becomes available again, it must **not** be used when processing personal data.
 -->
 
-## 7. Approved solutions only
+## 7. Integrations and third-party tools
 
 <!-- 21 -->
-Mistral may be connected to an MCP server  if the server is managed by AAU, approved for at least the same data classification, and governed by a valid data processing agreement.
+Integrations are used to exchange data to or from another platform. Connecting Mistral to unapproved third-party models, plugins, connectors, integrations, or tools is not permitted unless the conditions below are met.
 
-Connecting Mistral to unapproved third-party models, plugins, integrations, or tools is strictly prohibited. 
+- Mistral may be connected to an MCP server if the server is managed by AAU, approved for at least the same data classification, and governed by a valid data processing agreement.
+
+- If personal data and/or data above **Level 1** is transferred to or processed on the platform you integrate with, you must also ensure that the following are in place:
+
+    - **Agreement basis:** typically a data processing agreement or a confidentiality agreement that covers the processing performed in the integration.
+    - **Technical and organisational security** on the platform being integrated with, commensurate with the intended processing based on the data classification level and/or the type of personal data.
 
 
 ## 8. Shared libraries
