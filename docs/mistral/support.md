@@ -6,7 +6,6 @@ icon: lucide/message-circle-question-mark
 
 Support on Mistral is seperated into our support and Mistral support. In the section below you can read more about who to request support based on the nature of your question. 
 
----
 
 ## When to contact us
 
@@ -17,7 +16,7 @@ We handle institutional and access-related questions. Reach out to us if you nee
 - **Quotas** — requesting or increasing your token quota
 - **API keys** — rotation, closure of unused or expired keys, or suspected misuse
 
-For everything else — technical questions, API errors, or product behaviour — go directly to Mistral support (see below).
+For all technical questions about the Mistral products themselves — including API behaviour, model output, interface issues, and bugs — contact **Mistral's support** directly (see below).
 
 | Channel | Link |
 |---|---|
@@ -58,19 +57,17 @@ The Mistral Discord server is a good place to ask technical questions and get qu
 
 - [discord.gg/mistralai](https://discord.gg/mistralai)
 
----
 
 ## Common issues and who to request support
 
 | Problem | Where to go |
 |---|---|
-| Cannot log in to Vibe | Contact us via the [Serviceportal](https://aau.service-now.com/serviceportal){target="_blank"} |
-| Cannot access AI Studio workspace | Contact us via the [Serviceportal](https://aau.service-now.com/serviceportal){target="_blank"} |
-| Token quota exceeded | Contact us via the [Serviceportal](https://aau.service-now.com/serviceportal){target="_blank"} |
-| I have a a project workspace but cannot create API key | Contact us via the [Serviceportal](https://aau.service-now.com/serviceportal){target="_blank"} |
-| Data classification questions | See [Responsible use of Mistral](/mistral/guides/responsible-use/) and the [Terms and Conditions](/mistral/terms-and-conditions/), or contact us via the [Serviceportal](https://aau.service-now.com/serviceportal){target="_blank"} |
-| API key not working | Contact Mistral via the in-app *Help and Resources* chat |
-| How to use an mistral api key in your own software | Contact Mistral via the in-app *Help and Resources* chat |
+| Cannot log in to Vibe or AI Studio | Contact us via the [Serviceportal](https://serviceportal.aau.dk/serviceportal?id=emp_taxonomy_topic&topic_id=82a253e8838fc21053711d447daad328){target="_blank"} |
+| Cannot access an AI Studio workspace | Contact us via the [Serviceportal](https://serviceportal.aau.dk/serviceportal?id=emp_taxonomy_topic&topic_id=82a253e8838fc21053711d447daad328){target="_blank"} |
+| Token quota exceeded | Contact us via the [Serviceportal](https://serviceportal.aau.dk/serviceportal?id=emp_taxonomy_topic&topic_id=82a253e8838fc21053711d447daad328){target="_blank"} |
+| I have a project workspace but cannot create an API key | Contact us via the [Serviceportal](https://serviceportal.aau.dk/serviceportal?id=emp_taxonomy_topic&topic_id=82a253e8838fc21053711d447daad328){target="_blank"} |
+| Data classification questions | See [Responsible use of Mistral](/mistral/guides/responsible-use/) and the [Terms and Conditions](/mistral/terms-and-conditions/), or contact Grants and Contracts   |
+| How to use a Mistral API key in your own software | Contact Mistral via the in-app *Help and Resources* chat |
 | Vibe not behaving as expected (e.g. wrong output, missing feature) | Contact Mistral via the in-app *Help and Resources* chat in Vibe |
 | AI Studio not behaving as expected (e.g. console error, API issue, unexpected model behaviour) | Contact Mistral via the in-app *Help and Resources* chat in AI Studio |
 | How to use a feature | Contact Mistral via the in-app *Help and Resources* chat |

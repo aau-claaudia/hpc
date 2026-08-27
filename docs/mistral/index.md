@@ -34,7 +34,7 @@ Web interface :lucide-check:
 
 Mistral is an AI service that gives AAU researchers access to generative AI tools. In this section you can read more about the two services: Vibe for conversational AI assistance and AI Studio for larger generative tasks, including API-based integration with custom AI workflows.
 
-Mistral is an assisting research tool only. Read [Responsible use of Mistral](/mistral/guides/responsible-use/) before you work with personal data or Level 2 or 3 data.
+Mistral is an assisting research tool only and is provided for academic research activities — not teaching, commercial, or private use. Read [Responsible use of Mistral](/mistral/guides/responsible-use/) and the [Terms and Conditions](/mistral/terms-and-conditions/) before you start. 
 
 [Get access to Mistral](/mistral/how-to-access){ .md-button .md-button--primary }
 

@@ -5,7 +5,6 @@ This page describes the main Mistral models available through AI Studio, what th
 !!! info "Document the model you used"
     When it is relevant for reproducibility or describing your methods, note the model name and version (or API identifier) you used. For further guidance, see [Responsible use of Mistral](/mistral/guides/responsible-use/).
 
----
 
 ## How to Browse Models in AI Studio
 
@@ -18,7 +17,6 @@ In [AI Studio](https://console.mistral.ai/), click **Models** in the left naviga
 
 You can also compare models side by side using the [Mistral model comparison tool](https://docs.mistral.ai/getting-started/models/compare).
 
----
 
 ## Model Families
 
@@ -83,7 +81,6 @@ Compact, highly efficient models for edge deployment or cost-sensitive workloads
 !!! info "Check current prices"
     Prices for the Ministral family and other models are regularly updated. Always verify current pricing on the [Mistral pricing page](https://mistral.ai/pricing) or the individual model pages at [docs.mistral.ai](https://docs.mistral.ai/getting-started/models/models_overview/).
 
----
 
 ### Reasoning Models (Magistral)
 
@@ -119,7 +116,6 @@ A smaller, open-weight version of the Magistral reasoning approach.
 
 See [Mistral Reasoning documentation](https://docs.mistral.ai/capabilities/reasoning/) for more on how reasoning models work.
 
----
 
 ### Code Models
 
@@ -151,7 +147,6 @@ Mistral's frontier code-agent model. Designed for autonomous multi-step software
 
 See [Mistral Coding documentation](https://docs.mistral.ai/capabilities/code_generation/) for examples.
 
----
 
 ### Document AI Models
 
@@ -169,7 +164,6 @@ A specialised model for optical character recognition. Extracts text, tables, an
 
 See [Mistral Document AI documentation](https://docs.mistral.ai/capabilities/document_ai/) for details.
 
----
 
 ### Audio Models (Voxtral)
 
@@ -186,7 +180,6 @@ An audio model optimised for transcription of speech to text.
 
 See [Mistral Audio documentation](https://docs.mistral.ai/capabilities/audio_transcription/) for details.
 
----
 
 ### Embeddings
 
@@ -203,7 +196,6 @@ Produces numerical vector representations of text for semantic search and simila
 
 See [Mistral Embeddings documentation](https://docs.mistral.ai/capabilities/embeddings/) for details.
 
----
 
 ## Understanding Token Pricing
 
@@ -232,7 +224,6 @@ Output tokens typically cost more than input tokens.
 
 Mistral offers a 50% discount on requests submitted through the [Batch Inference API](https://docs.mistral.ai/capabilities/batch/). Batch jobs are processed asynchronously (not in real time) and are well suited for large-scale processing tasks where latency is not critical.
 
----
 
 ## Choosing the Right Model
 
@@ -264,7 +255,6 @@ Do you need semantic search over documents?
 !!! tip "Start with the small model"
     Run your prompt on Mistral Small 4 first. If the output quality is acceptable, you can save significant cost at scale. If the small model fails consistently on a task, then move up to Large 3.
 
----
 
 ## Model Versioning
 
@@ -272,7 +262,6 @@ Mistral model identifiers include a version date (e.g. `mistral-large-2512` for 
 
 Old versions are eventually deprecated. Mistral provides advance notice before deprecation. Check the [deprecation table](https://docs.mistral.ai/getting-started/models/models_overview/) for retirement dates.
 
----
 
 ## Further Reading
 
@@ -280,4 +269,4 @@ Old versions are eventually deprecated. Mistral provides advance notice before d
 - [Model comparison tool](https://docs.mistral.ai/getting-started/models/compare)
 - [Batch Inference documentation](https://docs.mistral.ai/capabilities/batch/)
 - [Mistral pricing page](https://mistral.ai/pricing)
-- [Using the API](/mistral/guides/ai-studio/using-the-api/)
+- [Responsible use of Mistral](/mistral/guides/responsible-use/#5-using-the-api) — AAU rules for API keys, rotation, and documentation

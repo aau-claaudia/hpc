@@ -2,29 +2,19 @@
 icon: lucide/lock-keyhole-open
 ---
 
-
-Access to Mistral is granted in two stages — the base login works for both Vibe and AI Studio interfaces, while a **dedicated workspace** is required for API keys and for all work with Level 2 and 3 data.
-
-!!! warning "Sensitive data only in a dedicated workspace"
-    **Level 2 or 3 data may only be processed in a dedicated workspace.** It must not be used in Vibe or in the default workspace.
-
-    API access requires that the research project or processing activity has been assessed by Grants and Contracts.
-
-    Register the project with [Grants and Contracts](https://aaudk.sharepoint.com/sites/persondata-ressourcer/SitePages/Registrations%20og%20reports%20(Online%20forms).aspx){target="_blank"} and apply through the [Serviceportal](https://serviceportal.aau.dk/serviceportal?id=sc_cat_item&sys_id=b3a364e5c3a336d4f0f3041ad001316e){target="_blank"}. See [Responsible use of Mistral](/mistral/guides/responsible-use/).
+Access to Mistral is granted in two tiers 
 
 
-## Access steps
-
-| Step | What you get | Who needs it |
+| Tiers | What you get | Who needs it |
 |---|---|---|
-| **Vibe & AI Studio (default workspace)** | Access to Vibe at [chat.mistral.ai](https://chat.mistral.ai) and the AI Studio console at [console.mistral.ai](https://console.mistral.ai), including the Playground, Document AI and Audio transcription. **Level 1 data only.** | Anyone who wants to use Mistral for writing, research assistance, summarisation, model testing, or prompt refinement with Level 1 data. |
-| **Dedicated workspace** | A project workspace created by us. Required for API keys and for **Level 2 or 3 data**. Create API keys, call models from code, and work in the Playground inside that workspace only. | Researchers who need API access, or who will process Level 2 or 3 data. |
+| **Vibe & AI Studio (default workspace)** | Access to Vibe at [chat.mistral.ai](https://chat.mistral.ai) and the AI Studio console at [console.mistral.ai](https://console.mistral.ai), including the Playground, Document AI and Audio transcription. **Level 1 data only.** | Academic staff who want to use Mistral for writing, research assistance, summarisation, model testing, or prompt refinement with Level 1 data. |
+| **Dedicated workspace** | A closed project workspace. Required for using API keys and for **Level 2 or 3 data**. Create API keys, call models from code, and work in Vibe and the Playground inside that workspace only. | Researchers who need API access, or who will process Level 2 or 3 data. |
 
----
 
-## Step 1 — Log in (Vibe and AI Studio without a dedicated workspace)
+## Tier 1 — Log in (Vibe and AI Studio without a dedicated workspace)
 
-All AAU **academic staff** can log in immediately via SSO. No application needed. This access is for **Level 1 data only**.
+All AAU **academic staff** can log in via SSO. No application is needed for the default workspace. 
+
 
 ??? info "Not employed as academic staff?"
     Access is granted based on the academic staff role at AAU. If you hold a different employment category — such as technical, administrative, or external staff — but need access to support ongoing academic research activities, you must request access manually.
@@ -57,17 +47,16 @@ After completing these steps, you have access to:
 
 
 
----
 
-## Step 2 — Request a dedicated workspace
+## Tier 2 — Request a dedicated workspace
 A dedicated workspace is required if you need **API keys**, or if you will process **Level 2 or 3 data**.
 
 
 ### Prerequisites
 
-Complete Step 1 and verify that you can log in to Mistral before applying.
+- Complete tier 1 steps and verify that you can log in to Mistral before applying.
 
-If you are working with level 2 or 3 data then have the **WorkZone case number** ready from your project registration and the data protection impact assessment (DPIA) of the project. <!-- 1 --><!-- 10 -->
+- If you are working with level 2 or 3 data then have the **WorkZone case number** ready from your project GDPR registration and the data protection impact assessment (DPIA) of the project. <!-- 1 --><!-- 10 -->
 
 ### How to apply
 
@@ -79,13 +68,10 @@ If you are working with level 2 or 3 data then have the **WorkZone case number**
 
 ### Finding your workspace
 
-Once a workspace is created for you:
-
-1. Log in to AI Studio.
-2. Click the **Default Workspace** selector in the bottom-left corner.
+1. Click the **Default Workspace** selector in the bottom-left corner.
+2. click on the **# workspace** settings
 3. Select your named workspace from the dropdown.
+4. Confirm in the buttom-left corner the correct workspace is selected. 
+![Mistral create workspace](/assets/img/mistral/mistral-change-workspace.png)
 
-![Mistral create workspace](/assets/img/mistral/login/m_create_workspcae.png)
-
----
 

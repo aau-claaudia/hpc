@@ -13,11 +13,7 @@ The main features enabled by this guide in Coder are:
 
 !!! warning "Data classification"
 
-    **Mistral Vibe (the chat interface) is Level 1 only.** Do not attach or send personal data or Level 2 or 3 data through Vibe.
-
-    Codestral and other API use may process Level 2 or 3 data **only** with API keys from a dedicated workspace. The project must have been assessed by Grants and Contracts, and a WorkZone case number must have been provided before the key is issued. Do not attach folders that the task does not need. Build human-in-the-loop into the workflow so output is not used automatically.
-
-    Before using this guide, consult the [AAU data classification guidelines](https://www.security.aau.dk/data-classification) and [Responsible use of Mistral](/mistral/guides/responsible-use/).
+    Before using this guide, consult the [Responsible use of Mistral](/mistral/guides/responsible-use/), and the [Terms and Conditions](/mistral/terms-and-conditions/).
 
 ---
 
@@ -48,7 +44,7 @@ Before proceeding, make sure that you:
 
 * Have access to UCloud
 * Have access to Mistral AI Studio
-* Are only working with data classification level 1 data
+* Have classified your data correctly and will use a dedicated workspace for Level 2 or 3 data
 * Have downloaded the installation script provided by AAU
 
 ---

@@ -1,12 +1,11 @@
 # Mistral guides and documentation
 
-Start with reading our [Responsible use of Mistral](/mistral/guides/responsible-use/) before you process personal data or Level 2 or 3 data. That work requires a dedicated workspace requested through the Serviceportal. API access also requires a WorkZone case number from Grants and Contracts.
+Start with reading our [Responsible use of Mistral](/mistral/guides/responsible-use/) and the [Terms and Conditions](/mistral/terms-and-conditions/). **Level 2 or 3 data** may only be processed in a dedicated workspace requested through the Serviceportal. A dedicated workspace and a WorkZone case number from Grants and Contracts are also required before an API key is issued.
 
 Mistral also provides two main resources for product documentation and support. Use these as your first stop for questions about features, models, the API, and troubleshooting.
 
 For questions about access, workspaces, or quotas at AAU, see the [Support page](/mistral/support/).
 
----
 
 ## AAU instructions
 
