@@ -31,13 +31,9 @@ Security instruction coverage (1–21)
 
 ## 1. Who may use Mistral at AAU
 
-Mistral Vibe and AI Studio are provided by Aalborg University (AAU) for **academic research activities only**. The services must not be used for any teaching, commercial or private purposes.
+Mistral Vibe and AI Studio are provided by Aalborg University (AAU) for **academic research activities**. The services must not be used for any teaching, commercial or private purposes.
 
-<!-- 1 -->
-Mistral may only be used as a **research-supporting and assisting tool**. It must not be used to make decisions about data subjects, and AI output must **never stand alone**. All outputs must be reviewed professionally and checked by a person before it is used in research or included in research conclusions.
 
-<!-- 1 -->
-A **data protection impact assessment (DPIA)** must be prepared for the research project in collaboration with Grants and Contracts, and it must include the project's use of AI.
 <!--
 NOTE FOR REVISION:
 Add reference or instructions on where and how to obtain or complete a suitable DPIA for Mistral/AI use at AAU. Clarify the process or link to AAU's DPIA documentation for researchers.
@@ -50,34 +46,29 @@ Mistral may only be used within the **specific research purpose** and the **spec
 <!-- 5 -->
 Use of Mistral should, as far as possible, be linkable to the relevant project, case, or underlying data.
 
+<!-- 1 -->
+Mistral may only be used as a **research-supporting and assisting tool**. It must not be used to make decisions about data subjects, and AI output must **never stand alone**. All outputs must be reviewed professionally and checked by a person before it is used in research or included in research conclusions.
 
-## 3. Data classification and dedicated workspaces
+## 3. Data classification, Personal data and dedicated workspaces
 
 Mistral may be used with data classified as **Level 1, Level 2, or Level 3** under [AAU’s data classification model](https://www.security.aau.dk/data-classification){target="_blank"}. Users are personally responsible for classifying their data correctly before submitting any content to the service.
 
-**Level 1 data** may be used in the default workspace in both Vibe and AI Studio.
+**Level 1 data without any personal data** may be used in the default workspace in both Vibe and AI Studio.
 
-**Level 2 or Level 3 data** may only be processed in a **dedicated workspace** created by us. Such data must never be entered in the default workspace.
+**Personal data** and **Level 2 or Level 3 data** may only be processed in a **dedicated workspace** created by us. This type of data must never be entered into the default workspace.
 
-When you process **Level 3 data**, or **sensitive personal data that has not been anonymised or pseudonymised**, you may only work from an **AAU-managed device**.
-
-<!-- 10 -->
-To obtain a dedicated workspace you must register the research project with [Grants and Contracts](https://aaudk.sharepoint.com/sites/persondata-ressourcer/SitePages/Registrations%20og%20reports%20(Online%20forms).aspx){target="_blank"}, obtain a **WorkZone case number**, and afterwards apply through the [AAU Serviceportal](https://serviceportal.aau.dk/serviceportal?id=sc_cat_item&sys_id=b3a364e5c3a336d4f0f3041ad001316e){target="_blank"}.
-
-See [Responsible use of Mistral](/mistral/guides/responsible-use/) and [How to access Mistral](/mistral/how-to-access/).
+Projects involving **personal data** is required to register the project with the [Grants and Contracts](https://aaudk.sharepoint.com/sites/persondata-ressourcer/SitePages/Registrations%20og%20reports%20(Online%20forms).aspx){target="_blank"} and make a **data protection impact assessment (DPIA)**  in collaboration with Grants and Contracts; it must include the project's use of AI.
 
 
 ## 4. Data minimisation and identifiers
 
 <!-- 2 -->
 <!-- 5 -->
-Users must follow good data practice, data minimisation, and data ethics. You may only process information in Mistral that is **necessary for the specific research purpose**.
+<!-- 7 -->
+Users must follow good data practice, data minimisation, and data ethics by ensuring that only information **necessary for the specific research purpose** is processed in Mistral; wherever possible, use **bounded datasets or extracts of datasets** instead of larger volumes of data if the purpose can be achieved with less.
 
 <!-- 6 -->
-Where possible, **anonymise, pseudonymise, or mask direct identifiers before** the data is transferred to Mistral.
-
-<!-- 7 -->
-Use **bounded datasets or extracts of datasets** rather than larger volumes of data, if the purpose can be met with less.
+Prior to transferring data to Mistral, users shall, to the extent practicable, anonymise, pseudonymise, or otherwise mask direct identifiers. In circumstances where anonymisation or pseudonymisation is not feasible and the data being processed qualifies as **Level 3 data** or **sensitive personal data**, processing is permitted solely on an **AAU-managed device**.
 
 <!-- 8 -->
 **Civil registration numbers (CPR) should as a rule not be processed in Mistral.** If unique identification is exceptionally necessary, use a project ID, case ID, or other pseudonymous key instead. The key table must be stored **outside** Mistral.
@@ -85,19 +76,13 @@ Use **bounded datasets or extracts of datasets** rather than larger volumes of d
 
 ## 5. API keys
 
-<!-- 10 -->
-API access to Mistral requires that the specific processing activity or research project has been **assessed by Grants and Contracts**. We will request a WorkZone case number or equivalent documentation **before an API key is issued**.
-
 <!-- 9 -->
 API keys issued through AI Studio are **personal and must not be shared**. Users are responsible for all activity performed using their personal API key.
 
 When you use an API key with **Level 2 or Level 3 data** that contains **sensitive personal data**, you must ensure that the system or environment from which the key is used logs **who** accessed **which data** and **when**. This logging is not required when the API is used with **Level 1 or Level 2 data** that only contains **ordinary personal data**.
 
 <!-- 9 -->
-All API keys must be rotated on a **30-day** cycle. We will **close keys that have not been rotated in time**. Keys will also be closed when a project ends, when a user leaves AAU, when a user's role changes, or where there is suspicion of incorrect or unauthorised use.
-
-If you suspect that an API key has been compromised or misused, you must immediately revoke the key and notify us.
-<!-- NOTE: is it CLAAUDIA they should contact. -->
+All API keys must be rotated at intervals not exceeding **30 days**. API keys must also be deactivated upon project completion, termination of the user's affiliation with AAU, any change in the user's role, or if there is any suspected improper or unauthorised use. If you suspect that an API key has been compromised or misused, you must immediately revoke the key and notify us. Please note: AAU reserves the right to revoke any API key at any time.
 
 ## 6. Integrations and third-party tools
 
@@ -127,7 +112,7 @@ Mistral can produce **erroneous, biased, or incomplete** answers. The user is re
 AI output must never stand alone. All outputs must be assessed professionally and checked by a person before it is used in research or included in research conclusions.
 
 <!-- 18 -->
-Be aware of **automation bias**: even when you know that AI can be wrong, you may still follow output uncritically. Do not do so.
+Users are hereby notified of the risk of **automation bias**, defined as the tendency to accept or act upon AI-generated output without sufficient critical assessment, despite awareness of potential inaccuracies or errors in AI responses. Users are obliged to exercise independent professional judgment and must not rely on AI output uncritically.
 
 <!-- 19 -->
 For **API workflows**, human-in-the-loop must be built in. Model output must not automatically lead to actions, classifications, or research conclusions without human control of the output.
@@ -160,7 +145,7 @@ The service is provided **"as is"** without guarantees of availability, performa
 
 ### Seat availability
 
-Access to Mistral depends on seat availability. We cannot guarantee access for every researcher at all times. Seats may be removed due to inactivity in order to ensure fair distribution of access among AAU researchers.
+Access to Mistral is subject to the availability of user seats. AAU makes no representations or warranties regarding the continuous availability of seats, and access for all researchers at all times cannot be assured. AAU reserves the right to revoke or reallocate seats due to user inactivity, in order to maintain equitable access to the service for all eligible AAU researchers.
 
 
 ## 12. Rights of data subjects
@@ -176,13 +161,7 @@ Use of the services must comply with the applicable [terms and conditions](https
 
 ## 14. Support and responsibilities
 
-We are responsible for the institutional setup of Mistral at AAU. This includes managing access, workspaces, and token quotas. Specifically, we can help with:
-
-- Access and login to Vibe and AI Studio
-- AI Studio workspace creation and workspace membership
-- Requesting or increasing a token quota
-
-For all technical questions about the Mistral products themselves — including API behaviour, model output, interface issues, and bugs — users must contact **Mistral's support** directly.
+Claaudia are responsible for the institutional setup of Mistral at AAU. This includes managing access, workspaces, and token quotas. For all technical questions about the Mistral products themselves — including API behaviour, model output, interface issues, and bugs — users must contact **Mistral's support** directly.
 
 
 ## 15. Fair usage
@@ -200,5 +179,4 @@ AAU may update these Terms and Conditions periodically. Users will be informed o
 Access may be suspended or removed if these terms, AAU policies, or Mistral AI's own terms are violated.
 
 
-
-*Effective date: 19/08/2026 — Version 2.1*
+*Effective date: 31/08/2026 — Version 2.1*
