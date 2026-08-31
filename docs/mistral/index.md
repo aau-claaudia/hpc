@@ -20,10 +20,10 @@ Teaching :lucide-ban:
 { .hpc-tag title="Mistral is only for academic reserach activities." }
 
 Sensitive data :lucide-check:
-{ .hpc-tag title="Level 2 and 3 data is allowed only in a dedicated workspace requested via the Serviceportal, after the project is assessed by Grants and Contracts." }
+{ .hpc-tag title="Level 2 and 3 data may only be processed in a dedicated workspace." }
 
 Personal data :lucide-check:
-{ .hpc-tag title="Personal data may be processed only as an assisting research tool, with data minimisation, and Level 2 or 3 data only in a dedicated workspace." }
+{ .hpc-tag title="Personal data may only be processed in a dedicated workspace, as an assisting research tool, and only after the project is registered with Grants and Contracts and a DPIA includes the use of AI." }
 
 Web interface :lucide-check:
 { .hpc-tag title="The service is accessed through a browser-based interface." }
@@ -32,11 +32,9 @@ Web interface :lucide-check:
 
 ## Introduction
 
-Mistral is an AI service that gives AAU researchers access to generative AI tools. In this section you can read more about the two services: Vibe for conversational AI assistance and AI Studio for larger generative tasks, including API-based integration with custom AI workflows.
+Mistral provides AAU researchers with access to advanced generative AI for academic research. The service includes Vibe for conversational assistance and AI Studio for larger or API-driven workflows. For a short how-to, see [Responsible use of Mistral](/mistral/guides/responsible-use/). The binding rules are in the [T&C](/mistral/terms-and-conditions/).
 
-Mistral is an assisting research tool only and is provided for academic research activities — not teaching, commercial, or private use. Read [Responsible use of Mistral](/mistral/guides/responsible-use/) and the [Terms and Conditions](/mistral/terms-and-conditions/) before you start. 
-
-[Get access to Mistral](/mistral/how-to-access){ .md-button .md-button--primary }
+[How to get access to Mistral](/mistral/how-to-access){ .md-button .md-button--primary }
 
 ## Features
 

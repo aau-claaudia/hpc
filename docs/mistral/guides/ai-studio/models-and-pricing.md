@@ -3,7 +3,7 @@
 This page describes the main Mistral models available through AI Studio, what they are suited for, and how API pricing works. For the official and always up-to-date model list, see the [Mistral models documentation](https://docs.mistral.ai/getting-started/models/models_overview/).
 
 !!! info "Document the model you used"
-    When it is relevant for reproducibility or describing your methods, note the model name and version (or API identifier) you used. For further guidance, see [Responsible use of Mistral](/mistral/guides/responsible-use/).
+    When it is relevant for reproducibility or describing your methods, note the model name and version (or API identifier) you used. See [Responsible use of Mistral](/mistral/guides/responsible-use/#using-the-api) and [T&C §9](/mistral/terms-and-conditions/#9-traceability-and-documentation).
 
 
 ## How to Browse Models in AI Studio
@@ -269,4 +269,4 @@ Old versions are eventually deprecated. Mistral provides advance notice before d
 - [Model comparison tool](https://docs.mistral.ai/getting-started/models/compare)
 - [Batch Inference documentation](https://docs.mistral.ai/capabilities/batch/)
 - [Mistral pricing page](https://mistral.ai/pricing)
-- [Responsible use of Mistral](/mistral/guides/responsible-use/#5-using-the-api) — AAU rules for API keys, rotation, and documentation
+- [Responsible use of Mistral](/mistral/guides/responsible-use/#using-the-api) — How to rotate a key; binding rules in the T&C

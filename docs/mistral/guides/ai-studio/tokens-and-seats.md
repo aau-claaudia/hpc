@@ -9,14 +9,14 @@ Mistral uses two different models for measuring access and usage, depending on w
 
 ### Seats (Vibe)
 
-**Vibe access is seat-based.** A seat is a named user license. AAU holds a number of seats as part of its institutional agreement with Mistral. When you log in to Vibe via AAU SSO, you are assigned a seat for your account.
+**Vibe access is seat-based.** A seat is a named user license. AAU holds a number of seats as part of its institutional agreement with Mistral. After your [access application](/mistral/how-to-access/) is approved and you log in via AAU SSO, you are assigned a seat for your account.
 
 Key points about seats:
 
 - A seat gives you access to Vibe's full feature set.
 - You do not pay per message — usage is covered institutionally up to the daily limits of the institutional agreement.
 - Seats are tied to your AAU login. You cannot transfer or share a seat.
-- Access depends on **seat availability**. We cannot guarantee access for every researcher at all times. Seats may be removed due to inactivity in order to ensure fair distribution of access among AAU researchers.
+- Access depends on **seat availability**. We cannot guarantee a seat for every researcher at all times. Unused seats may be removed or reassigned so that access can be shared fairly.
 
 ### Tokens (AI Studio API)
 
@@ -97,7 +97,7 @@ Logging this per call allows you to estimate the total cost of a workflow before
 
 ## Token budget and quotas at AAU
 
-At AAU, API access is tied to a dedicated workspace. Each AI Studio workspace has a **standard monthly usage quota**. We can adjust the monthly quota depending on demand. See the [Terms and Conditions](/mistral/terms-and-conditions/#15-fair-usage).
+At AAU, API access is tied to a dedicated workspace. Each AI Studio workspace has a **standard monthly usage quota**. AAU may adjust the monthly quota at any time if needed. See the [T&C](/mistral/terms-and-conditions/#15-fair-usage).
 
 ### How to check your remaining budget
 
@@ -111,11 +111,11 @@ Token usage at the workspace level is visible in AI Studio's Usage section. If y
 
 ### API key rotation
 
-All API keys must be rotated on a **30-day** cycle. We will **close keys that have not been rotated in time**. Keys will also be closed when a project ends, when a user leaves AAU, when a user's role changes, or where there is suspicion of incorrect or unauthorised use.
+Rotate each API key at least every **30 days**. Deactivate the key when the project ends, you leave AAU, your role changes, or you suspect misuse. AAU can revoke any API key at any time.
 
 **How to rotate a key:** In AI Studio, select the correct workspace. Go to **API Keys** → **My API keys** and use **Rotate key**. Then update your code with the new key.
 
-If you suspect that an API key has been compromised or misused, you must immediately **revoke** the key and notify us. See [Responsible use of Mistral](/mistral/guides/responsible-use/#5-using-the-api).
+If you suspect that an API key has been compromised or misused, revoke it at once and notify us. See [Responsible use of Mistral](/mistral/guides/responsible-use/#using-the-api) and [T&C §5](/mistral/terms-and-conditions/#5-api-keys).
 
 
 ## Cost Estimation Before a Large Run
@@ -185,14 +185,14 @@ Although Vibe is seat-based, individual features have daily usage caps that rese
 | **How usage is measured** | Seats | Tokens |
 | **Who pays** | Institution (seat license) | Institution (standard monthly quota) |
 | **How to monitor** | Daily limits shown in Vibe interface | Usage dashboard in AI Studio |
-| **Limits** | Per-feature daily caps; seat availability | Standard monthly quota, which we can adjust |
+| **Limits** | Per-feature daily caps; seat availability | Standard monthly quota, which AAU may adjust |
 | **Cost control tips** | Stay within daily limits | Use small models, batch inference, efficient prompts |
 
 
 ## Further Reading
 
 - [Models and Pricing](/mistral/guides/ai-studio/models-and-pricing/) — Per-model token costs
-- [Responsible use of Mistral](/mistral/guides/responsible-use/#5-using-the-api) — API keys, 30-day rotation, and documentation
+- [Responsible use of Mistral](/mistral/guides/responsible-use/#using-the-api) — How to rotate a key; binding rules in the T&C
 - [How to access Mistral](/mistral/how-to-access/) — Applying for a dedicated workspace and API key access
 - [Mistral pricing page](https://mistral.ai/pricing) — Official current pricing
 - [Support](/mistral/support/) — Who to contact for quota questions

@@ -4,9 +4,6 @@ Vibe is Mistral's conversational AI assistant, available at [chat.mistral.ai](ht
 
 Vibe is suited for everyday AI tasks such as drafting, summarising, explaining, translating, brainstorming, and exploring ideas. It includes features like web search, document libraries, image generation, code interpreter, agents, and canvas editing.
 
-!!! warning "Data classification depends on your workspace"
-    The **default workspace** may only be used with **Level 1** data under [AAU’s data classification model](https://www.security.aau.dk/data-classification){target="_blank"}. **Level 2 or 3 data** may only be processed in a **dedicated workspace** and must never be entered in the default workspace. See [How to access Mistral](/mistral/how-to-access/) and [Responsible use of Mistral](/mistral/guides/responsible-use/).
-
 
 !!! info "Chats are deleted after 90 days"
     Automatic deletion of chat history is set to **90 days**. Data that needs to be retained must be stored appropriately in **AAU systems** before the 90 days end. The deletion period does not replace data minimisation. <!-- 13 --><!-- 14 -->

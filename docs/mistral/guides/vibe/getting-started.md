@@ -1,6 +1,6 @@
 # Logging in to Vibe
 
-Vibe is accessed at [chat.mistral.ai](https://chat.mistral.ai){target="_blank"} using your AAU credentials. No separate account or password is needed.
+Vibe is accessed at [chat.mistral.ai](https://chat.mistral.ai){target="_blank"} using your AAU credentials. You must [apply for access](/mistral/how-to-access/) before you can log in.
 
 ## Step 1 — Go to the login page
 
@@ -27,7 +27,16 @@ Log in with your AAU credentials (for example `ab12cd@domain.aau.dk`) and approv
 
 ## Step 5 — You are in
 
-You will be redirected back to Vibe and land on the conversation screen. Confirm that you are logged in to the AAU organisation in the buttom left corner. If you will process Level 2 or 3 data, select your dedicated project workspace before you enter any content.
+You will be redirected back to Vibe and land on the conversation screen. Confirm that you are logged in to the AAU organisation in the bottom-left corner.
+
+If you applied for a dedicated workspace, select your named project workspace before you enter any content:
+
+1. Click the **Default Workspace** selector in the bottom-left corner.
+2. Click the **# workspace** settings.
+3. Select your named workspace from the dropdown.
+4. Confirm in the bottom-left corner that the correct workspace is selected.
+
+![Mistral create workspace](/assets/img/mistral/mistral-change-workspace.png)
 
 !!! info "MFA not set up?"
     If you have not set up multi-factor authentication, see the [AAU MFA guide](https://www.en.its.aau.dk/instructions/mfa){target="_blank"} before logging in.

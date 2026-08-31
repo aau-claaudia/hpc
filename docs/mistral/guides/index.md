@@ -1,6 +1,6 @@
 # Mistral guides and documentation
 
-Start with reading our [Responsible use of Mistral](/mistral/guides/responsible-use/) and the [Terms and Conditions](/mistral/terms-and-conditions/). **Level 2 or 3 data** may only be processed in a dedicated workspace requested through the Serviceportal. A dedicated workspace and a WorkZone case number from Grants and Contracts are also required before an API key is issued.
+Start with [Responsible use of Mistral](/mistral/guides/responsible-use/) for a short how-to. The [T&C](/mistral/terms-and-conditions/) are the binding rules. Everyone must [apply for access](/mistral/how-to-access/). The default workspace is for **Level 1 data with no personal data**. A dedicated workspace is required for Level 2 or 3 data, and for **personal data**.
 
 Mistral also provides two main resources for product documentation and support. Use these as your first stop for questions about features, models, the API, and troubleshooting.
 
@@ -11,9 +11,9 @@ For questions about access, workspaces, or quotas at AAU, see the [Support page]
 
 | Guide | What you will find |
 |---|---|
-| [Responsible use of Mistral](/mistral/guides/responsible-use/) | Assisting use only, data minimisation, prompting, API keys, 90-day deletion, documentation, and approved tools |
-| [Terms and Conditions](/mistral/terms-and-conditions/) | Binding rules for using Mistral at AAU |
-| [How to access Mistral](/mistral/how-to-access/) | SSO login and how to request a dedicated workspace |
+| [Responsible use of Mistral](/mistral/guides/responsible-use/) | Short how-to: workspace, prompting, API keys, and 90-day chats. Binding rules are in the T&C |
+| [T&C](/mistral/terms-and-conditions/) | Binding rules for using Mistral at AAU |
+| [How to access Mistral](/mistral/how-to-access/) | Apply for the default workspace or a dedicated workspace |
 
 
 ## Help Centre

@@ -13,7 +13,9 @@ The main features enabled by this guide in Coder are:
 
 !!! warning "Data classification"
 
-    Before using this guide, consult the [Responsible use of Mistral](/mistral/guides/responsible-use/), and the [Terms and Conditions](/mistral/terms-and-conditions/).
+    The default workspace is for **Level 1 data with no personal data**. **Personal data** and **Level 2 or 3 data** may only be processed in a **dedicated workspace**. API keys belong in that workspace.
+
+    Before using this guide, read [Responsible use of Mistral](/mistral/guides/responsible-use/) and the [T&C](/mistral/terms-and-conditions/).
 
 ---
 
@@ -44,7 +46,7 @@ Before proceeding, make sure that you:
 
 * Have access to UCloud
 * Have access to Mistral AI Studio
-* Have classified your data correctly and will use a dedicated workspace for Level 2 or 3 data
+* Have classified your data correctly and will use a dedicated workspace for personal data or Level 2 or 3 data
 * Have downloaded the installation script provided by AAU
 
 ---

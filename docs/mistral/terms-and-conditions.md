@@ -68,7 +68,7 @@ Projects involving **personal data** is required to register the project with th
 Users must follow good data practice, data minimisation, and data ethics by ensuring that only information **necessary for the specific research purpose** is processed in Mistral; wherever possible, use **bounded datasets or extracts of datasets** instead of larger volumes of data if the purpose can be achieved with less.
 
 <!-- 6 -->
-Prior to transferring data to Mistral, users shall, to the extent practicable, anonymise, pseudonymise, or otherwise mask direct identifiers. In circumstances where anonymisation or pseudonymisation is not feasible and the data being processed qualifies as **Level 3 data** or **sensitive personal data**, processing is permitted solely on an **AAU-managed device**.
+Prior to transferring data to Mistral, users shall, to the extent practicable, anonymise, pseudonymise, or otherwise mask direct identifiers. In circumstances where anonymisation or pseudonymisation is not feasible and the data being processed qualifies as **Level 3 data** or **sensitive personal data**, processing is permitted solely on Mistral from an **AAU-managed device**.
 
 <!-- 8 -->
 **Civil registration numbers (CPR) should as a rule not be processed in Mistral.** If unique identification is exceptionally necessary, use a project ID, case ID, or other pseudonymous key instead. The key table must be stored **outside** Mistral.
@@ -91,7 +91,7 @@ Integrations are used to exchange data to or from another platform. Connecting M
 
 - Mistral may be connected to an MCP server if the server is managed by AAU, approved for at least the same data classification, and governed by a valid data processing agreement.
 
-- If personal data and/or data above **Level 1** is transferred to or processed on the platform you integrate with, you must also ensure that the following are in place:
+- When you are working with **Level 2 or Level 3 data** that contains **sensitive personal data** and this data is transferred to or processed on the platform you integrate with, you must also ensure that the following are in place:
 
     - **Agreement basis:** typically a data processing agreement or a confidentiality agreement that covers the processing performed in the integration.
     - **Technical and organisational security** on the platform being integrated with, commensurate with the intended processing based on the data classification level and/or the type of personal data.
@@ -166,7 +166,7 @@ Claaudia are responsible for the institutional setup of Mistral at AAU. This inc
 
 ## 15. Fair usage
 
-All AI Studio workspaces have a standard usage qouta per month to ensure a fair usage and make the service availabe for all AAU users. We can adjust the montly qouta at all times depending on the usage demand form the users.
+AI Studio workspaces are assigned a standard monthly usage quota in order to promote fair usage and ensure access for AAU users. AAU may adjust the monthly quota at any time if needed.
 
 
 ## 16. Changes to Terms
@@ -179,4 +179,4 @@ AAU may update these Terms and Conditions periodically. Users will be informed o
 Access may be suspended or removed if these terms, AAU policies, or Mistral AI's own terms are violated.
 
 
-*Effective date: 31/08/2026 — Version 2.1*
+*Effective date: 01/09/2026 — Version 2.1*
