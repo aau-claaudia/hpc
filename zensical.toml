@@ -272,7 +272,7 @@ nav = [
   {"Mistral" = [
     {"About" = "mistral/index.md"},
     "mistral/how-to-access.md",
-    {"T&C" = "mistral/terms-and-conditions.md"},
+    {"Terms and conditions" = "mistral/terms-and-conditions.md"},
     {"Support" = "mistral/support.md"},
     {"Guides" = [
       "mistral/guides/index.md",

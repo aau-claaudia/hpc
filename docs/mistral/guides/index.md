@@ -12,7 +12,7 @@ For questions about access, workspaces, or quotas at AAU, see the [Support page]
 | Guide | What you will find |
 |---|---|
 | [Responsible use of Mistral](/mistral/guides/responsible-use/) | Short how-to: workspace, prompting, API keys, and 90-day chats. Binding rules are in the T&C |
-| [T&C](/mistral/terms-and-conditions/) | Binding rules for using Mistral at AAU |
+| [Terms and conditions](/mistral/terms-and-conditions/) | Binding rules for using Mistral at AAU |
 | [How to access Mistral](/mistral/how-to-access/) | Apply for the default workspace or a dedicated workspace |
 
 
