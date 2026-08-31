@@ -105,12 +105,15 @@ web-interface: [strato-new.claaudia.aau.dk](https://strato-new.claaudia.aau.dk/)
 In the days leading up to the service window, a reservation will be put in place for the entire cluster. The entirety of the cluster will therefore be unavailable for that day, but may come back online by the end of the day.
 
 **You can still submit jobs in the days leading up to the service window.**
-Since the `batch` and `prioritized` partitions have time limits of 12 hours and 6 days respectively, you will only be able to launch new jobs if you add the `--time` parameter to your Slurm command. If you do not set this parameter, and there are 5 days until the day of the service window, your job will not start until after the service window. You will thus need to calculate how much time there is left, and then submit the job with this parameter added. 
+Don't forget the default walltime of jobs is 6 days, and that this value is applied to the `--time` parameter automatically, when you don't specify it.
+If there are fewer than 5 days until the service window, and you don't specify the `--time` parameter, your job will not start before after the service window.
+Either:
 
-To submit a job that runs for 1 day and 8 hours, you can simply add `--time=1-08:00:00` to your Slurm command. 
+1. calculate the time you want to run for - eg. to submit a job that runs for 1 day and 8 hours, you can simply add `--time=1-08:00:00` to your Slurm command
+
+2. use the variable `$UNTIL_SERIVCE` which automatically asks for the remaining time, eg.: `srun --time=$UNTIL_SERVICE hostname`
 
 Additionally you can read about our recommendations for using [checkpointing](ai-lab/additional-guides/requeuing-and-checkpointing/) to work with time limits.
-
 
 ## AI-LAB
 

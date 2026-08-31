@@ -43,7 +43,7 @@ It's important to note that `unprivileged` jobs are preemptable. If a request fo
 
 ## Deadline access
 
-In the `deadline` account users are allowed to have an additional 12 simultaneous jobs with an additional 12 GPU's for a period of up to 14 days.
+In the `deadline` account users are allowed to have an additional 12 simultaneous jobs with an additional 12 GPU's for a period of up to 30 days.
 To run a job with deadline resources, we must specify `--account=deadline`.
 
 ```
