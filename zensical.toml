@@ -56,7 +56,11 @@ copyright = """
 nav = [
   {"Home" = [
     "index.md",
-    "news.md",
+    {"News" = [
+      {"All news" = "news.md"},
+      {"Mistral approved for Level 3 data" = "news/mistral-approved-for-level-3.md"},
+      {"DeiC national HPC call" = "news/deic-national-call-september-2026.md"},
+    ]},
     "tools.md",
     {"About CLAAUDIA" = "https://www.researcher.aau.dk/contact/claaudia"},
     "service-windows.md",
@@ -270,10 +274,11 @@ nav = [
   {"Mistral" = [
     {"About" = "mistral/index.md"},
     "mistral/how-to-access.md",
-    "mistral/terms-and-conditions.md",
+    {"Terms and conditions" = "mistral/terms-and-conditions.md"},
     {"Support" = "mistral/support.md"},
     {"Guides" = [
       "mistral/guides/index.md",
+      "mistral/guides/responsible-use.md",
       {"Vibe" = [
         "mistral/guides/vibe/index.md",
         "mistral/guides/vibe/getting-started.md",
