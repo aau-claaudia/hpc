@@ -2,35 +2,27 @@
 icon: lucide/lock-keyhole-open
 ---
 
+Access it granted though the [Mistral access form](https://aau.service-now.com/serviceportal?id=sc_cat_item&sys_id=b3a364e5c3a336d4f0f3041ad001316e) in the AAU Serviceportal. 
 
-Access to Mistral is granted in two stages — the base login works for both Vibe and AI Studio interfaces, while API key access requires an additional application.
+Different access options are available, each with their own specific requirements depending on your project needs:
+
+| Option | What you get | Data allowed | What you must provide | API keys? |
+|---|---|---|---|---|
+| **Default workspace** | Access to Vibe at [chat.mistral.ai](https://chat.mistral.ai) and AI Studio at [console.mistral.ai](https://console.mistral.ai), including the Playground, Document AI and Audio transcription. | **Level 1 data with no personal data** | Consent, and select the default workspace | No |
+| **Dedicated workspace, no personal data** | A closed project workspace. Full access to Vibe, AI Studio, and the API. | **No personal data.** | Request a dedicated workspace | Yes |
+| **Dedicated workspace with personal data** | A closed project workspace. Full access to Vibe, AI Studio, and the API. | **Personal data**, including Level 2 or 3 data that contains personal data | **WorkZone case number**, and confirmation that you have prepared a **DPIA** together with [Grants and Contracts](https://aaudk.sharepoint.com/sites/persondata-ressourcer/SitePages/Registrations%20og%20reports%20(Online%20forms).aspx){target="_blank"} | Yes |
+
+<p style="font-size: 0.92em; margin-top: -1.5em; color: #555;">
+  <em>
+    Not sure which data type you have?  
+    <a href="https://www.security.aau.dk/data-classification" target="_blank">
+      Read more about the AAU data classification here
+    </a>.
+  </em>
+</p>
 
 
-## Access Levels
-
-Understanding the difference between access levels helps you request the right one and use the service correctly.
-
-| Level | What you get | Who needs it |
-|---|---|---|
-| **Vibe & AI Studio (without API keys)** | Access to both the conversational interface at [chat.mistral.ai](https://chat.mistral.ai) and the AI Studio console at [console.mistral.ai](https://console.mistral.ai), including the Playground, Document AI and Audio transcription. All standard features except programmatic/API key access. | Anyone who wants to use Mistral for writing, research assistance, summarisation, model testing, or prompt refinement—without needing to call the API from code. |
-| **AI Studio (with API keys)** | Full programmatic access. Create API keys, call models from code, process data in bulk, and build automated workflows. | Researchers building custom pipelines, running batch analyses, or integrating Mistral into their own tools. |
-
----
-
-## Level 1 — Log in (Vibe and AI Studio without API Keys)
-
-All AAU **academic staff** can log in immediately via SSO. No application needed.
-
-??? info "Not employed as academic staff?"
-    Access is granted based on the academic staff role at AAU. If you hold a different employment category — such as technical, administrative, or external staff — but need access to support ongoing academic research activities, you must request access manually.
-
-    Contact CLAAUDIA through the [AAU Serviceportal](https://aau.service-now.com/serviceportal?id=sc_cat_item&sys_id=a05e2fb4c3434610f0f3041ad001310e) and include a short description of:
-
-    - your role and department
-    - which research project or activity you are supporting
-    - why access to Mistral is needed for that work
-
-    CLAAUDIA will review the request and confirm whether access can be granted.
+When you have submitted the form, CLAAUDIA will review your application. When your project have been approved you can login by: 
 
 1. Go to the [Mistral login page](https://v2.auth.mistral.ai/login)
 2. Enter your AAU email address and click **Continue**.
@@ -44,42 +36,39 @@ All AAU **academic staff** can log in immediately via SSO. No application needed
 4. Log in with your AAU credentials (e.g. `ab12cd@domain.aau.dk`).
 5. Approve the login using multi-factor authentication (MFA). If you have not set up MFA, see the [AAU MFA guide](https://www.en.its.aau.dk/instructions/mfa).
 
-
-After completing these steps, you have access to:
+After login:
 
 - **Vibe** at [chat.mistral.ai](https://chat.mistral.ai)
-- **AI Studio Playground** at [console.mistral.ai](https://console.mistral.ai) (without API keys)
+- **AI Studio** at [console.mistral.ai](https://console.mistral.ai)
+
+If you applied for the **default workspace**, use that workspace only.
+
+If you applied for a **dedicated workspace**, select your **named project workspace** before you enter any content.
 
 
+### Finding your dedicated workspace
 
----
-
-## Level 2 — Request API key access
-
-API keys allow you to call Mistral models programmatically from your own code. This requires an additional approval step.
-
-### Prerequisites
-
-Complete Step 1 and verify that you can log in to both Vibe and AI Studio before applying.
-
-### How to apply
-
-1. Log in to AI Studio at [console.mistral.ai](https://console.mistral.ai).
-2. Go to the CLAAUDIA Serviceportal and fill out the form [**Mistral workspace request form**](https://serviceportal.aau.dk/serviceportal?id=sc_cat_item&sys_id=b3a364e5c3a336d4f0f3041ad001316e).
-3. The CLAAUDIA team will review your request. If approved, they will create a workspace named your title for your project.
-4. You will receive a notification when the workspace is ready.
-
-### Finding your workspace
-
-Once a workspace is created for you:
-
-1. Log in to AI Studio.
-2. Click the **Default Workspace** selector in the top-left corner.
+1. Click the **Default Workspace** selector in the bottom-left corner.
+2. Click the **# workspace** settings.
 3. Select your named workspace from the dropdown.
+4. Confirm in the bottom-left corner that the correct workspace is selected.
 
-![Mistral create workspace](/assets/img/mistral/login/m_create_workspcae.png)
+![Mistral create workspace](/assets/img/mistral/mistral-change-workspace.png)
 
-API keys you create will be scoped to the selected workspace. Keys created in one workspace do not work in another.
+## FAQ
 
----
+??? question "Why can’t I log in with AAU SSO directly?"
 
+    Direct SSO login is **disabled**. Everyone must apply first, including for the default workspace.
+
+    That is so we can record consent, assign the right workspace, and — for **dedicated workspace with personal data** — check that a WorkZone number and DPIA are in place before anyone starts working.
+
+    Apply through the [Mistral access form](https://aau.service-now.com/serviceportal?id=sc_cat_item&sys_id=b3a364e5c3a336d4f0f3041ad001316e). After we approve the request, log in with AAU SSO as usual.
+
+??? question "I used to log in without applying. Do I need to apply now?"
+
+    Yes. Previous walk-in access no longer works. Submit the form even if you have used Mistral before.
+
+??? question "After I am approved, do I still use AAU SSO?"
+
+    Yes. The form only grants access. You still log in with **Continue with AAU – SSO** and your AAU credentials.

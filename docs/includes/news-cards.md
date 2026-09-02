@@ -1,5 +1,14 @@
 <div class="grid cards three" markdown>
 
+-   ##### 31 August 2026
+
+    ---
+
+    #### :lucide-star: Mistral is now approved for Level 3 data
+    AAU researchers can now use Vibe and AI Studio with Level 1, 2, and 3 data.
+
+    [:lucide-arrow-right: Read more](/news/mistral-approved-for-level-3/)
+
 -   ##### 3 August 2026
 
     ---

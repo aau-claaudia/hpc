@@ -1,24 +1,25 @@
 # Mistral guides and documentation
 
-Mistral provides two main resources for documentation and support. Use these as your first stop for questions about features, models, the API, and troubleshooting.
+Start with [Responsible use of Mistral](/mistral/guides/responsible-use/) for a short how-to. The [T&C](/mistral/terms-and-conditions/) are the binding rules. Everyone must [apply for access](/mistral/how-to-access/). The default workspace is for **Level 1 data with no personal data**. A dedicated workspace is required for Level 2 or 3 data, and for **personal data**.
+
+Mistral also provides two main resources for product documentation and support. Use these as your first stop for questions about features, models, the API, and troubleshooting.
 
 For questions about access, workspaces, or quotas at AAU, see the [Support page](/mistral/support/).
 
----
+
+## AAU instructions
+
+| Guide | What you will find |
+|---|---|
+| [Responsible use of Mistral](/mistral/guides/responsible-use/) | Short how-to: workspace, prompting, API keys, and 90-day chats. Binding rules are in the T&C |
+| [Terms and conditions](/mistral/terms-and-conditions/) | Binding rules for using Mistral at AAU |
+| [How to access Mistral](/mistral/how-to-access/) | Apply for the default workspace or a dedicated workspace |
+
 
 ## Help Centre
 
 [help.mistral.ai](https://help.mistral.ai/en/){target="_blank"} — FAQs and articles covering accounts, subscriptions, and troubleshooting for both Vibe and AI Studio.
 
-| Section | What you will find |
-|---|---|
-| [Getting started](https://help.mistral.ai/en/collections/789614-getting-started){target="_blank"} | First steps with Mistral products |
-| [Vibe](https://help.mistral.ai/en/collections/789629-le-chat){target="_blank"} | Features, conversations, settings, and subscriptions |
-| [AI Studio](https://help.mistral.ai/en/collections/789620-mistral-ai-studio){target="_blank"} | Console, API keys, workspaces, and usage |
-| [Help and troubleshooting](https://help.mistral.ai/en/collections/789619-help-and-troubleshooting){target="_blank"} | Common issues and how to contact support |
-| [Trust, security, and compliance](https://help.mistral.ai/en/collections/789666-trust-security-compliance){target="_blank"} | Data handling, privacy, and security policies |
-
----
 
 ## Documentation Hub
 
