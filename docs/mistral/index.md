@@ -71,3 +71,9 @@ Mistral provides AAU researchers with access to advanced generative AI for acade
     ---
 
     ![API & integration-ready workflows](/assets/img/mistral/mistral-feature-4.png)
+
+</div>
+
+## Use cases
+
+See examples of use cases Mistral can support research on [researcher.aau.dk](https://www.researcher.aau.dk/guides/research-data-and-software/software-and-tools/mistral-ai){target="_blank"}.
