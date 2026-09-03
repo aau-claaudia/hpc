@@ -178,5 +178,7 @@ AAU may update these Terms and Conditions periodically. Users will be informed o
 
 Access may be suspended or removed if these terms, AAU policies, or Mistral AI's own terms are violated.
 
+## 18. Additional workspace member 
+The workspace applicant shall ensure that all **additional workspace members** are duly informed of, understand, and agree to comply with all terms and conditions set forth herein, and that such members are duly authorized to access and process any data contained within the workspace.
 
 *Effective date: 01/09/2026 — Version 2.1*
