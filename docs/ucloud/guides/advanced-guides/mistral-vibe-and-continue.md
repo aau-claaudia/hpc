@@ -11,15 +11,11 @@ The main features enabled by this guide in Coder are:
 
 ## Important data classification restrictions
 
-!!! warning "Data classification restrictions"
+!!! warning "Data classification"
 
-    **The use of Mistral Vibe and Codestral is only permitted with AAU data classification level 1 data.**
+    The default workspace is for **Level 1 data with no personal data**. **Personal data** and **Level 2 or 3 data** may only be processed in a **dedicated workspace**. API keys belong in that workspace.
 
-    Before using this guide, consult the [AAU data classification guidelines](https://www.security.aau.dk/data-classification).
-
-    Personal data and data classified as Level 2 or Level 3 must never be exposed to Mistral AI Studio, Mistral Vibe, Continue, Codestral, or any associated API.
-
-    When launching Coder, ensure that no folders containing data above Classification Level 1 are attached to the job.
+    Before using this guide, read [Responsible use of Mistral](/mistral/guides/responsible-use/) and the [T&C](/mistral/terms-and-conditions/).
 
 ---
 
@@ -50,7 +46,7 @@ Before proceeding, make sure that you:
 
 * Have access to UCloud
 * Have access to Mistral AI Studio
-* Are only working with data classification level 1 data
+* Have classified your data correctly and will use a dedicated workspace for personal data or Level 2 or 3 data
 * Have downloaded the installation script provided by AAU
 
 ---

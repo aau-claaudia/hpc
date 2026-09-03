@@ -19,11 +19,11 @@ Students :lucide-ban:
 Teaching :lucide-ban:
 { .hpc-tag title="Mistral is only for academic reserach activities." }
 
-Confidential & sensitive data :lucide-ban:
-{ .hpc-tag title="Mistral is only approved for public data (level 1)." }
+Sensitive data :lucide-check:
+{ .hpc-tag title="Level 2 and 3 data may only be processed in a dedicated workspace." }
 
-Personal data :lucide-ban:
-{ .hpc-tag title="Mistral is not approved for personal data." }
+Personal data :lucide-check:
+{ .hpc-tag title="Personal data may only be processed in a dedicated workspace, as an assisting research tool, and only after the project is registered with Grants and Contracts and a DPIA includes the use of AI." }
 
 Web interface :lucide-check:
 { .hpc-tag title="The service is accessed through a browser-based interface." }
@@ -32,12 +32,9 @@ Web interface :lucide-check:
 
 ## Introduction
 
-Mistral is an AI service that gives AAU researchers access to generative AI tools. In this section you can read more about the two services: Vibe for conversational AI assistance and AI Studio for larger generative tasks, including API-based integration with custom AI workflows.
+Mistral provides AAU researchers with access to advanced generative AI for academic research. The service includes Vibe for conversational assistance and AI Studio for larger or API-driven workflows. For a short how-to, see [Responsible use of Mistral](/mistral/guides/responsible-use/). The binding rules are in the [T&C](/mistral/terms-and-conditions/).
 
-!!! info "No personal data allowed"
-    Mistral AI may be used only for data classified as level 1 under [AAU’s data classification model](https://www.sikkerhed.aau.dk/dataklassifikation){__blank}. It is not approved for processing personal data, so data containing personal information must not be uploaded to or processed in Mistral AI. If you are unsure what qualifies as personal data, see [What is personal data?](https://www.datatilsynet.dk/english/fundamental-concepts-/what-is-personal-data){__blank}
-
-[Get access to Mistral](/mistral/how-to-access){ .md-button .md-button--primary }
+[How to get access to Mistral](/mistral/how-to-access){ .md-button .md-button--primary }
 
 ## Features
 
@@ -74,3 +71,9 @@ Mistral is an AI service that gives AAU researchers access to generative AI tool
     ---
 
     ![API & integration-ready workflows](/assets/img/mistral/mistral-feature-4.png)
+
+</div>
+
+## Use cases
+
+See examples of use cases Mistral can support research on [researcher.aau.dk](https://www.researcher.aau.dk/guides/research-data-and-software/software-and-tools/mistral-ai){target="_blank"}.
