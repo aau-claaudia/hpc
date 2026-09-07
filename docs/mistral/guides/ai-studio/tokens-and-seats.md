@@ -2,7 +2,6 @@
 
 This page explains how Mistral meters and bills usage, how seats and tokens work within the AAU setup, and how to manage your usage in AI Studio.
 
----
 
 ## Two Ways Mistral Measures Usage
 
@@ -10,14 +9,14 @@ Mistral uses two different models for measuring access and usage, depending on w
 
 ### Seats (Vibe)
 
-**Vibe access is seat-based.** A seat is a named user license. AAU holds a number of seats as part of its institutional agreement with Mistral. When you log in to Vibe via AAU SSO, you are assigned a seat for your account.
+**Vibe access is seat-based.** A seat is a named user license. AAU holds a number of seats as part of its institutional agreement with Mistral. After your [access application](/mistral/how-to-access/) is approved and you log in via AAU SSO, you are assigned a seat for your account.
 
 Key points about seats:
 
 - A seat gives you access to Vibe's full feature set.
-- You do not pay per message — usage is covered institutionally up to the agreed tier's daily limits.
+- You do not pay per message — usage is covered institutionally up to the daily limits of the institutional agreement.
 - Seats are tied to your AAU login. You cannot transfer or share a seat.
-- If the institutional seat limit is reached, new users may need to wait or apply through CLAAUDIA.
+- Access depends on **seat availability**. We cannot guarantee a seat for every researcher at all times. Unused seats may be removed or reassigned so that access can be shared fairly.
 
 ### Tokens (AI Studio API)
 
@@ -29,9 +28,8 @@ Key points about tokens:
 - Output tokens: everything the model writes in response
 - Input and output tokens are priced separately (output is generally more expensive)
 - Token costs vary significantly by model — see [Models and Pricing](/mistral/guides/ai-studio/models-and-pricing/) for current rates
-- At AAU, token usage within an approved project workspace is covered by the institution up to a project quota
+- At AAU, token usage within an AI Studio workspace is covered by the institution up to the workspace's standard monthly quota
 
----
 
 ## Understanding Token Consumption
 
@@ -61,7 +59,6 @@ In a 10-turn conversation where each exchange is ~500 tokens, the 10th call send
 
 **Practical implication:** For bulk processing, design your workflow to send each item as an independent call (no persistent history), rather than accumulating a long conversation.
 
----
 
 ## Viewing Your Usage in AI Studio
 
@@ -97,38 +94,29 @@ print(f"Total tokens:  {usage.total_tokens}")
 
 Logging this per call allows you to estimate the total cost of a workflow before running it at full scale.
 
----
 
-## Token Budget and Project Quotas at AAU
+## Token budget and quotas at AAU
 
-At AAU, API access is tied to an approved project workspace. Each workspace operates against a token budget agreed with CLAAUDIA as part of the application process.
+At AAU, API access is tied to a dedicated workspace. Each AI Studio workspace has a **standard monthly usage quota**. AAU may adjust the monthly quota at any time if needed. See the [T&C](/mistral/terms-and-conditions/#15-fair-usage).
 
 ### How to check your remaining budget
 
-Token usage at the workspace level is visible in AI Studio's Usage section. If you need to know the specific quota for your workspace, contact CLAAUDIA.
+Token usage at the workspace level is visible in AI Studio's Usage section. If you need to know the specific quota for your workspace, contact us.
 
 ### What happens when you approach the limit
 
 - Monitor usage regularly during active development and batch runs.
-- If your project requires more tokens than originally requested, submit a revised request through the CLAAUDIA Serviceportal.
+- If your project requires a higher quota, request an increase through the [Serviceportal](https://serviceportal.aau.dk/serviceportal?id=emp_taxonomy_topic&topic_id=82a253e8838fc21053711d447daad328){target="_blank"}.
 - Unexpected overruns may be caused by inefficient prompts, long context windows, or unintended loops in code — check the per-key breakdown in the Usage view.
 
-### Token rotation and expiry
+### API key rotation
 
-API keys do not expire automatically, but you should:
+Rotate each API key at least every **30 days**. Deactivate the key when the project ends, you leave AAU, your role changes, or you suspect misuse. AAU can revoke any API key at any time.
 
-- Rotate keys if you suspect they have been exposed (e.g. committed to a public repository)
-- Delete keys that are no longer in use
-- Use separate keys for separate projects so usage can be tracked independently
+**How to rotate a key:** In AI Studio, select the correct workspace. Go to **API Keys** → **My API keys** and use **Rotate key**. Then update your code with the new key.
 
-To rotate or delete a key:
+If you suspect that an API key has been compromised or misused, revoke it at once and notify us. See [Responsible use of Mistral](/mistral/guides/responsible-use/#using-the-api) and [T&C §5](/mistral/terms-and-conditions/#5-api-keys).
 
-1. Go to **API Keys** in AI Studio.
-2. Click the three-dot menu next to the relevant key.
-3. Select **Revoke** or **Delete**.
-4. Create a new key if needed and update your code.
-
----
 
 ## Cost Estimation Before a Large Run
 
@@ -154,7 +142,6 @@ For a large job using a more expensive model:
 
 Always start with the smallest model that produces acceptable quality. The cost difference across models can be 10x or more.
 
----
 
 ## Reducing Token Usage
 
@@ -169,7 +156,6 @@ If you want to minimise token consumption:
 | Use Batch Inference | 50% discount on all token costs for async jobs |
 | Set `temperature=0.0` for deterministic tasks | Avoids wasted tokens on re-runs due to inconsistent outputs |
 
----
 
 ## Batch Inference (50% Discount)
 
@@ -186,47 +172,27 @@ It is not suited for:
 - Interactive use (results are not immediate)
 - Workflows that need the model's response before deciding the next step
 
-See [Using the API](/mistral/guides/ai-studio/using-the-api/#batch-inference-50-cost-reduction) for code examples, and the [Batch Inference documentation](https://docs.mistral.ai/capabilities/batch/) for the full specification.
 
----
+## Vibe usage limits
 
-## Vibe Usage Limits by Tier
+Although Vibe is seat-based, individual features have daily usage caps that reset each day. AAU users are on the institutional agreement; check the limits shown in the Vibe interface. For vendor-published tier comparisons, see [mistral.ai/pricing](https://mistral.ai/pricing).
 
-Although Vibe is seat-based, individual features have daily usage caps. These are soft limits that reset each day.
-
-| Feature | Free tier | Pro tier |
-|---|---|---|
-| Flash answers | Up to 150/day | Up to 200/day |
-| Think mode | — | Up to 30x free |
-| Deep Research | — | Up to 5x free |
-| Web searches (extra) | — | Up to 5x free |
-| Image generation | Daily limit | Up to 40x free |
-| Code interpreter | Daily limit | Up to 5x free |
-| Document uploads | Daily limit | Up to 20x free |
-| Libraries (storage) | Limited | Up to 15 GB |
-| Projects | Limited | Up to 1,000 |
-| Memories | 500 | 1,000 |
-
-For the latest limits, see [mistral.ai/pricing](https://mistral.ai/pricing).
-
----
 
 ## Summary
 
 | | Vibe | AI Studio API |
 |---|---|---|
 | **How usage is measured** | Seats | Tokens |
-| **Who pays** | Institution (seat license) | Institution (project token budget) |
+| **Who pays** | Institution (seat license) | Institution (standard monthly quota) |
 | **How to monitor** | Daily limits shown in Vibe interface | Usage dashboard in AI Studio |
-| **Limits** | Per-feature daily caps | Project token quota |
+| **Limits** | Per-feature daily caps; seat availability | Standard monthly quota, which AAU may adjust |
 | **Cost control tips** | Stay within daily limits | Use small models, batch inference, efficient prompts |
 
----
 
 ## Further Reading
 
 - [Models and Pricing](/mistral/guides/ai-studio/models-and-pricing/) — Per-model token costs
-- [Using the API](/mistral/guides/ai-studio/using-the-api/) — Code examples including usage logging and batch inference
-- [How to Access Mistral](/mistral/how-to-access/) — Applying for API key access
+- [Responsible use of Mistral](/mistral/guides/responsible-use/#using-the-api) — How to rotate a key; binding rules in the T&C
+- [How to access Mistral](/mistral/how-to-access/) — Applying for a dedicated workspace and API key access
 - [Mistral pricing page](https://mistral.ai/pricing) — Official current pricing
-- [Support](/mistral/guides/ai-studio/support/) — Who to contact for quota questions
+- [Support](/mistral/support/) — Who to contact for quota questions

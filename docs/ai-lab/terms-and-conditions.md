@@ -76,9 +76,9 @@ We reserve the right to make periodic changes to these terms and conditions, and
 
 ### 8.1. Right to Maintenance and Modification of Systems
 
-We reserve the right to periodically shut off entire systems for maintenance or security purposes. These systems require maintenance and updates at regular intervals, and we commit, where possible, to provide **a minimum of two calendar weeks** warning before any shutdown period commences.
+We reserve the right to periodically shut off entire systems for maintenance or security purposes. These systems require maintenance and updates at regular intervals, and we commit, where possible, to provide **a minimum of two weeks** warning before any shutdown period commences.
 
-We reserve the right to modify, redesign, disable or remove any of the existing services. Where possible, users will be notified of major modifications to AI-LAB **a minimum of one calendar month** before these changes are implemented. Updates, upgrades and shutdown periods are not considered major modifications.
+We reserve the right to modify, redesign, disable or remove any of the existing services. Where possible, users will be notified of major modifications to AI-LAB **a minimum of two weeks** before these changes are implemented. Updates, upgrades and shutdown periods are not considered major modifications.
 
 ### 8.2. Communication Policy Around Service Windows
 
@@ -86,7 +86,7 @@ We reserve the right to modify, redesign, disable or remove any of the existing 
 
     1.  **Service window date reminder email**
         *   Sent to all users of AI-LAB
-        *   Dispatched 4 weeks before service window
+        *   Dispatched 2 weeks before service window
 
     2.  **Notice of service window pre-arranged on [ServiceInfo.dk](https://serviceinfo.dk/login.php)**
         *   Put on 1 day before the service window

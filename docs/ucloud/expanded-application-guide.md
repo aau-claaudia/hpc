@@ -95,7 +95,7 @@ Select the resources that you wish to apply for.
 | Storage | `storage` | Persistent data storage required to be able to use the UCloud platform | Storage must be requested as part of all projects |
 | Licenses | MATLAB, COMSOL, ANSYS | Access to licensed research software | Available to **researchers only**, for **non‑commercial research activities** |
 
-There is a [resource estimator available for Transcriber and Dictaphone users](/docs/transcription-estimator/).
+There is a [resource estimator available for Transcriber and Dictaphone users](/transcription-estimator/).
 
 !!! info "These licenses are provided for non‑commercial academic research only."
     
