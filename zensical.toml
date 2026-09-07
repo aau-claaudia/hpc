@@ -127,6 +127,10 @@ nav = [
         "ucloud/guides/advanced-guides/mistral-vibe-and-continue.md",
         "ucloud/guides/advanced-guides/matlab-initialization-and-execution.md",
       ]},
+      {"Teaching guides" = [
+        "ucloud/guides/teaching-guides/index.md",
+        "ucloud/guides/teaching-guides/teaching-environment.md",
+      ]},
     ]},
     {"Use cases" = [
       {"AI and satellite data to explore the upper atmosphere" = "ucloud/use-cases/combining-ai-satellite-upper-atmosphere.md"},
