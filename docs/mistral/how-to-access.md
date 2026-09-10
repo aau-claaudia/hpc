@@ -6,6 +6,11 @@ Access it granted though the [Mistral access form](https://aau.service-now.com/s
 
 Different access options are available, each with their own specific requirements depending on your project needs:
 
+!!! info "Dedicated workspaces can *only* include users with an approved default workspace"
+    
+    * All persons that wish to be part of a dedicated Mistral workspace, must accept the Mistral Terms and Conditions. To do this each person must submit a request for the default workspace.
+    * Once all project members have approved for the default Mistral workspace, they can be added to the shared project workspace.
+
 | Option | What you get | Data allowed | What you must provide | API keys? |
 |---|---|---|---|---|
 | **Default workspace** | Access to Vibe at [chat.mistral.ai](https://chat.mistral.ai) and AI Studio at [console.mistral.ai](https://console.mistral.ai), including the Playground, Document AI and Audio transcription. | **Level 1 data with no personal data** | Consent, and select the default workspace | No |
@@ -22,7 +27,10 @@ Different access options are available, each with their own specific requirement
 </p>
 
 
+
 When you have submitted the form, CLAAUDIA will review your application. When your project have been approved you can login by: 
+
+
 
 1. Go to the [Mistral login page](https://v2.auth.mistral.ai/login)
 2. Enter your AAU email address and click **Continue**.
