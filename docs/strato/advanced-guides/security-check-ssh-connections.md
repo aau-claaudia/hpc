@@ -305,8 +305,6 @@ Exit the Nano editor
 
 ```bash
 CTRL + x
-
-Enter
 ```
 
 ## Prepare the script to run
