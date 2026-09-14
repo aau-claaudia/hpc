@@ -94,6 +94,7 @@ nav = [
         "strato/advanced-guides/persistent-terminal-sessions.md",
         "strato/advanced-guides/transfer-volume.md",
         "strato/advanced-guides/check-ownership-guide.md",
+        "strato/advanced-guides/security-check-ssh-connections.md",
       ]},
       {"Best-practice guides" = [
         "strato/best-practice-guides/delete-and-restart-an-instance-from-the-volume.md",
