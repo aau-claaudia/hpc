@@ -7,6 +7,21 @@
     async
     src="//gc.zgo.at/count.js"></script>
 {% endblock %}
+{# Announce bar - AI Cloud / Strato service window #}
+{% block announce %}
+<div class="announce-bar announce-bar--danger" role="alert" aria-live="assertive">
+  <p class="announce-bar__title">⚠ AI Cloud &amp; Strato: Service window today</p>
+  <p class="announce-bar__text">
+    AI Cloud and Strato are undergoing scheduled maintenance today (15 September 2026). Both platforms may be unavailable for the entire day.
+  </p>
+  <div class="announce-bar__links">
+    <a class="announce-bar__link" style="background-color: #fff; color: #212121; border: 1px solid #ddd;" href="/service-windows/" aria-label="Open service windows page">
+      Service windows
+    </a>
+  </div>
+</div>
+{% endblock %}
+
 {# Announce bar - Maintenance notice #}
 {#
 {% block announce %}
