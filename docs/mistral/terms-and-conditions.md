@@ -30,8 +30,18 @@ Security instruction coverage (1–21)
 
 
 ## 1. Who may use Mistral at AAU
-
-Mistral Vibe and AI Studio are provided by Aalborg University (AAU) for **academic research activities**. The services must not be used for any teaching, commercial or private purposes.
+ 
+Mistral Vibe and AI Studio are provided by Aalborg University (AAU) for academic research activities only. For the purposes of these Terms, research activities are defined as activities that contribute directly to research that **has received approval from the Research Ethics Committee**.
+ 
+The services may be used by:
+ 
+* Academic employees (VIP) for research activities (as defined above).
+* Administrative employees (TAP) where the use directly supports research activities (as defined above).
+* Student assistants employed by AAU for research-related duties, where the work contributes directly to approved research (as defined above). This access is only possible with a valid AAU employee account.
+ 
+Students are not permitted to use the services in their capacity as students.
+ 
+The services must not be used for teaching, commercial, or private purposes.
 
 
 <!--
@@ -57,7 +67,7 @@ Mistral may be used with data classified as **Level 1, Level 2, or Level 3** und
 
 **Personal data** and **Level 2 or Level 3 data** may only be processed in a **dedicated workspace** created by us. This type of data must never be entered into the default workspace.
 
-Projects involving **personal data** is required to register the project with the [Grants and Contracts](https://aaudk.sharepoint.com/sites/persondata-ressourcer/SitePages/Registrations%20og%20reports%20(Online%20forms).aspx){target="_blank"} and make a **data protection impact assessment (DPIA)**  in collaboration with Grants and Contracts; it must include the project's use of AI.
+Projects involving **personal data** is required to register the project with [Grants and Contracts](https://aaudk.sharepoint.com/sites/persondata-ressourcer/SitePages/Registrations%20og%20reports%20(Online%20forms).aspx){target="_blank"} and make a **data protection impact assessment (DPIA)**  in collaboration with Grants and Contracts; it must include the project's use of AI.
 
 
 ## 4. Data minimisation and identifiers

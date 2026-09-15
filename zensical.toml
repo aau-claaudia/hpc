@@ -94,6 +94,7 @@ nav = [
         "strato/advanced-guides/persistent-terminal-sessions.md",
         "strato/advanced-guides/transfer-volume.md",
         "strato/advanced-guides/check-ownership-guide.md",
+        "strato/advanced-guides/security-check-ssh-connections.md",
       ]},
       {"Best-practice guides" = [
         "strato/best-practice-guides/delete-and-restart-an-instance-from-the-volume.md",
@@ -130,6 +131,10 @@ nav = [
         "ucloud/guides/advanced-guides/connect-neo4j-to-vscode.md",
         "ucloud/guides/advanced-guides/mistral-vibe-and-continue.md",
         "ucloud/guides/advanced-guides/matlab-initialization-and-execution.md",
+      ]},
+      {"Teaching guides" = [
+        "ucloud/guides/teaching-guides/index.md",
+        "ucloud/guides/teaching-guides/teaching-environment.md",
       ]},
     ]},
     {"Use cases" = [
