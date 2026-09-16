@@ -61,7 +61,7 @@ Please visit [AAU's website for GDPR related info for students](https://aaudk.sh
 AI Cloud and virtual machines on Strato or UCloud must not be used to store confidential and/or sensitive data.
 
 !!! info "UCloud projects with sensitive data"
-    Please read the [procedure for working with sensitive data on UCloud](/ucloud/terms-and-conditions/#procedure-for-working-with-sensitive-data-on-ucloud-projects) that has been agreed upon with the Department of Grants and Contracts. 
+    Please read the [procedure for working with sensitive data on UCloud](/ucloud/terms-and-conditions/#procedure-for-working-with-sensitive-data-on-ucloud-projects) that has been agreed upon with [Contract Unit of Research Services](https://www.forskningsservice.aau.dk/kontraktenheden) (Previously the "Department of Grants and Contracts").
 
 ---
 
@@ -94,17 +94,7 @@ HPC RESOURCES may not, under any circumstances, be used for any purpose outside 
 
 Four entire days each year are reserved for security updates. This may require that all hosts are restarted. Users should expect that all virtual machines will be shut off during this service window and the job queue will be cleared.
 
-**Proposed schedule of service windows (these dates are subjects to change):**
-
-**2024** 17/09, 03/12
-
-**2025** 11/02, 13/05, 16/09, 02/12
-
-**2026** 10/02, 12/05, 15/09, 01/12
-
-**2027** 09/02, 11/05, 14/09, 30/11
-
-**2028** 08/02, 09/05, 12/09, 28/11
+Check the [Service Windows page](https://hpc.aau.dk/service-windows/) for more information about what to expect from each service window period.
 
 Check [ServiceInfo.dk](https://serviceinfo.dk/login.php) to learn more about current service windows
 
@@ -271,7 +261,7 @@ processor](https://aaudk.sharepoint.com/sites/persondata-ressourcer/SitePages/Re
     data classification](https://www.security.aau.dk/data-classification)
     model.
 
-2.  If you are a researcher, and working with personally identifiable information, you must register a research project with Grants and Contracts
+2.  If you are a researcher, and working with personally identifiable information, you must register a research project with the Contract Unit
     using [the relevant registration
     form.](https://aaudk.sharepoint.com/sites/persondata-ressourcer/SitePages/Registrations%20og%20reports%20(Online%20forms).aspx)
 
@@ -293,7 +283,7 @@ processor](https://aaudk.sharepoint.com/sites/persondata-ressourcer/SitePages/Re
         the project, and you should be aware of your [roles and
         responsibilities.](https://docs.cloud.sdu.dk/guide/project-overview.html#member-roles)
         
-    b.  The **Grants and Contracts reference number** should be included in the application form
+    b.  The **the Contract Unit reference number** should be included in the application form
         
         i. The WorkZone case number should be entered in the "WorkZone reference number" field.
     
