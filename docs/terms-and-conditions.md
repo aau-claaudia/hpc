@@ -227,7 +227,7 @@ UCloud users at AAU must be familiar with the details of
 the following codes of conduct and policies:
 
 1.  [The Danish Code of Conduct for Research
-    Integrity](https://ufm.dk/en/publications/2014/the-danish-code-of-conduct-for-research-integrity)
+    Integrity](https://ufsn.dk/english/publications/2026/januar/danish-code-of-conduct-for-research-integrity/)
 
 2.  [The AAU Policy for Research Data
     Management](https://www.ansatte.aau.dk/regler/forskning/politik-for-handtering-af-forskningsdata)
