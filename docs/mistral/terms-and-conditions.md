@@ -30,24 +30,10 @@ Security instruction coverage (1–21)
 
 
 ## 1. Who may use Mistral at AAU
- 
-Mistral Vibe and AI Studio are provided by Aalborg University (AAU) for academic research activities only. For the purposes of these Terms, research activities are defined as activities that contribute directly to research that **has received approval from the Research Ethics Committee**.
- 
-The services may be used by:
- 
-* Academic employees (VIP) for research activities (as defined above).
-* Administrative employees (TAP) where the use directly supports research activities (as defined above).
-* Student assistants employed by AAU for research-related duties, where the work contributes directly to approved research (as defined above). This access is only possible with a valid AAU employee account.
- 
-Students are not permitted to use the services in their capacity as students.
- 
+Mistral Vibe and AI Studio are provided by Aalborg University (AAU) for academic research and research-supporting activities, carried out by AAU employees.
 The services must not be used for teaching, commercial, or private purposes.
 
 
-<!--
-NOTE FOR REVISION:
-Add reference or instructions on where and how to obtain or complete a suitable DPIA for Mistral/AI use at AAU. Clarify the process or link to AAU's DPIA documentation for researchers.
--->
 ## 2. Permitted purpose
 
 <!-- 3 -->
