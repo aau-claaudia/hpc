@@ -254,7 +254,7 @@ and how long it should be archived for, etc.
 Contracts**
 
 For researchers at AAU, working with sensitive personal data requires
-that you register your research project with "Grants and Contracts" by
+that you register your research project with the [Contract Unit of Research Services](https://www.forskningsservice.aau.dk/kontraktenheden) (Previously referred to as "Grants and Contracts") by
 completing the [digital form that matches your role in relation to the
 data, for example Data Controller or Data
 processor](https://aaudk.sharepoint.com/sites/persondata-ressourcer/SitePages/Registrations%20og%20reports%20(Online%20forms).aspx).
@@ -279,35 +279,23 @@ processor](https://aaudk.sharepoint.com/sites/persondata-ressourcer/SitePages/Re
         Contracts, you will get a receipt that contains a "WorkZone case
         number" (To be included in your UCloud project application).
 
-<!-- 3.  Students cannot register projects with Grants and Contracts. As a
-    student you are personally responsible for any data you collect. You
-    must ensure that you comply with [GDPR regulations for
-    students](https://aaudk.sharepoint.com/sites/GDPR-for-students). -->
 
     
-3.  All applicants for projects on UCloud must complete the [CLAAUDIA
-    application form for DeiC Interactive HPC resources](https://forms.office.com/e/8Khbr1TJGC).
+3.  All applicants for projects on UCloud must follow the [CLAAUDIA
+    application process for UCloud projects resources](https://hpc.aau.dk/ucloud/expanded-application-guide/).
 
 
-4.  Once approved, you will receive a UCloud project
-    number, and you must [apply for a project in the UCloud
-    Interface](https://docs.cloud.sdu.dk/tutorials/tutorial3.html#create-a-project),
-    including the resources that you had approved in the CLAAUDIA
-    application. (You can apply for additional resources later if
-    needed.)
+4.  Once approved, your UCloud project
+    number will be included in your UCloud project application, and your 
+    project will be active on the UCloud platform.
 
     a.  As project applicant you will be the Principal Investigator for
         the project, and you should be aware of your [roles and
         responsibilities.](https://docs.cloud.sdu.dk/guide/project-overview.html#member-roles)
-
-    <!-- b.  If the user is a student, then their supervisor for the student
-        project must apply for the project, and so must assume the role
-        of Principal Investigator. -->
         
-    b. The project must use the same **project title** as provided in the CLAAUDIA application, and both the **DeiC project number** and the **Grants and Contracts reference number** should be included:
+    b.  The **Grants and Contracts reference number** should be included in the application form
         
-        i. The DeiC project number should be entered in the "DeiC Interactive HPC project number" field.
-        ii. The WorkZone case number should be entered in the "WorkZone reference number" field.
+        i. The WorkZone case number should be entered in the "WorkZone reference number" field.
     
     c.  Once your project is approved, you will get access to project
         storage (Drive(s)) on UCloud that is separate from your "My
@@ -330,11 +318,10 @@ processor](https://aaudk.sharepoint.com/sites/persondata-ressourcer/SitePages/Re
             and approved project folder.) Sensitive data may **NOT** be added to My Workspace.
             - AAU Level 4  → Not allowed  
 
-          
 
 6.  **Collaboration on UCloud within projects:** Fellow AAU persons
 
-    a.  Only persons named in the project registered with Grants and
+    a.  Only persons named, or otherwise specified, in the project registered with Grants and
         Contracts may be added to the UCloud project.
 
 7.  **Collaboration on UCloud within projects:** Persons from outside
