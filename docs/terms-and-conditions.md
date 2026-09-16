@@ -243,7 +243,7 @@ the following codes of conduct and policies:
     employees](https://aaudk.sharepoint.com/sites/persondata-administration))
 
 4.  [The AAU data management
-    recommendations](https://www.researcher.aau.dk/guides/research-data/data-management)
+    recommendations](https://www.researcher.aau.dk/conduct-manage/managing-active-research-data)
 
 These policies cover the general rules all researchers (and
 TAP staff for point 3.) should abide by with regards to what kind of
@@ -319,7 +319,7 @@ processor](https://aaudk.sharepoint.com/sites/persondata-ressourcer/SitePages/Re
     a.  Any data added to the project should be in a project folder and
         this must be marked according to the level of data sensitivity,
         as described in the [AAU data classification
-        model](https://aaudk.sharepoint.com/sites/ForskIT/Delte%20dokumenter/General/01%20-%20Administration/03%20-%20Policies%20and%20procedures/DeiC%20Interactive%20HPC/i.%09https:/www.security.aau.dk/dataclassification/model).
+        model](https://www.security.aau.dk/data-classification).
 
         i.  On the UCloud platform the corresponding classifications are
             as follows: 
@@ -401,6 +401,6 @@ processor](https://aaudk.sharepoint.com/sites/persondata-ressourcer/SitePages/Re
         repository in accordance with [The AAU Policy for Research Data
         Management](https://www.handbook.aau.dk/document/?contentId=402570).
         As of 2023-January, AAU
-        [DataDeposit](https://www.researcher.aau.dk/guides/research-data/data-management/data-publishing)
+        [DataDeposit](https://www.researcher.aau.dk/conduct-manage/managing-active-research-data/data-publishing)
         as a local archiving solution, while a national solution is
         under development.
