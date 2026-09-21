@@ -62,10 +62,10 @@ AI Cloud is designed for launching unattended batch jobs, and thus we do not all
 
     This is certainly a great feature, and one that we do plan on supporting in the future - but as of now, our support for it is very limited. We therefore ask our user's to take great care when using this feature:
 
-    * **Do** keep an eye on your resource consumption: `htop -u $USER`.
+    * Do keep an eye on your resource consumption: `htop -u $USER`.
 
-    * **Do not** initiate file transfers via VS Code. File transfer processes should be as simple as possible. Follow our guidelines on [File management]('/ai-cloud/getting-started/file-management') instead.
+    * Do not initiate file transfers via VS Code. File transfer processes should be as simple as possible. Follow our guidelines on [File management]('/ai-cloud/getting-started/file-management') instead.
 
-    * **Do not** run AI coding asistants (vibe-coding sessions) on the front-end node. These have been found to create a substantial destabilizing load on the platform. If you need to use AI agents in your development workflows, you should develop locally on your own machine.
+    * Do take great care run AI coding asistants (vibe-coding sessions) on the front-end node. These have been found to create a substantial destabilizing load on the platform. If you need to use AI agents in your development workflows, you should develop locally on your own machine.
 
     If we find that platform responsiveness is challanged by the use of this feature, we will act in accordance with the practice layed out in [Enforcement of rules](#enforcement-of-rules).
