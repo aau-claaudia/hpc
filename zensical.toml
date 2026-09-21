@@ -300,7 +300,10 @@ nav = [
     "external-hpc/eurohpc-resources.md",
     "external-hpc/lumi.md",
     {"Support" = "https://serviceportal.aau.dk/serviceportal?id=sc_cat_item&sys_id=a05e2fb4c3434610f0f3041ad001310e"},
-  ]}
+    {"Use cases" = [
+      "external-hpc/use-cases/summer-school.md",
+    ]},
+  ]},
 ]
 
 
