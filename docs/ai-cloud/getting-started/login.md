@@ -1,5 +1,8 @@
+Logging in to the platform is done by opening an SSH connection to the [front end node](/ai-cloud/system-overview/#front-end-node).
 
-Logging in to the platform is done with an SSH connection to the [front end node](/ai-cloud/system-overview/#front-end-node).
+
+
+
 
 Find [an SSH-capable terminal application](/ai-cloud/getting-started/#find-a-terminal-application) and run the command:
 ```
@@ -29,10 +32,18 @@ When your prompt changes to: `user@domain.aau.dk@ai-fe02:~$` - you are successfu
 
 #### Troubleshooting
 
-!!! failure "Having trouble with logging in?"
-    - In most cases where users have trouble logging in, they are not connected to the AAU network. See the section: [Before you begin](/ai-cloud/getting-started/).
+!!! failure "Forgot your password?"
 
-    - If it's still not working, create a case with us on [serviceportal.aau.dk](https://aau.service-now.com/serviceportal?id=sc_cat_item&sys_id=a05e2fb4c3434610f0f3041ad001310e). Please share the command output with us in the case, as this gives us a better oppurtunity to understand what is going on. Add the flag `-vv` to the command, like so:
+    The credentials required for logging in are the same as for any other service. If you have forgotten your password, you should therefore follow the [generic procedure](https://www.en.its.aau.dk/instructions/password) for this.
+
+!!! failure "Are you on the correct network?"
+
+    In most cases where users have trouble logging in, they are not connected to the AAU network. See the section: [Before you begin](/ai-cloud/getting-started/).
+
+
+!!! failure "It's still not working"
+
+    If it's still not working, create a case with us on [serviceportal.aau.dk](https://aau.service-now.com/serviceportal?id=sc_cat_item&sys_id=a05e2fb4c3434610f0f3041ad001310e). Please share the command output with us in the case, as this gives us a better oppurtunity to understand what is going on. Add the flag `-vv` to the command, like so:
     ```
     ssh -vv -l user@domain.aau.dk ai-fe02.srv.aau.dk
     ```

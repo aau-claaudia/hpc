@@ -61,7 +61,7 @@ Please visit [AAU's website for GDPR related info for students](https://aaudk.sh
 AI Cloud and virtual machines on Strato or UCloud must not be used to store confidential and/or sensitive data.
 
 !!! info "UCloud projects with sensitive data"
-    Please read the [procedure for working with sensitive data on UCloud](/ucloud/terms-and-conditions/#procedure-for-working-with-sensitive-data-on-ucloud-projects) that has been agreed upon with the Department of Grants and Contracts. 
+    Please read the [procedure for working with sensitive data on UCloud](/ucloud/terms-and-conditions/#procedure-for-working-with-sensitive-data-on-ucloud-projects) that has been agreed upon with [Contract Unit of Research Services](https://www.forskningsservice.aau.dk/kontraktenheden) (Previously the "Department of Grants and Contracts").
 
 ---
 
@@ -94,17 +94,7 @@ HPC RESOURCES may not, under any circumstances, be used for any purpose outside 
 
 Four entire days each year are reserved for security updates. This may require that all hosts are restarted. Users should expect that all virtual machines will be shut off during this service window and the job queue will be cleared.
 
-**Proposed schedule of service windows (these dates are subjects to change):**
-
-**2024** 17/09, 03/12
-
-**2025** 11/02, 13/05, 16/09, 02/12
-
-**2026** 10/02, 12/05, 15/09, 01/12
-
-**2027** 09/02, 11/05, 14/09, 30/11
-
-**2028** 08/02, 09/05, 12/09, 28/11
+Check the [Service Windows page](https://hpc.aau.dk/service-windows/) for more information about what to expect from each service window period.
 
 Check [ServiceInfo.dk](https://serviceinfo.dk/login.php) to learn more about current service windows
 
@@ -227,7 +217,7 @@ UCloud users at AAU must be familiar with the details of
 the following codes of conduct and policies:
 
 1.  [The Danish Code of Conduct for Research
-    Integrity](https://ufm.dk/en/publications/2014/the-danish-code-of-conduct-for-research-integrity)
+    Integrity](https://ufsn.dk/english/publications/2026/januar/danish-code-of-conduct-for-research-integrity/)
 
 2.  [The AAU Policy for Research Data
     Management](https://www.ansatte.aau.dk/regler/forskning/politik-for-handtering-af-forskningsdata)
@@ -243,7 +233,7 @@ the following codes of conduct and policies:
     employees](https://aaudk.sharepoint.com/sites/persondata-administration))
 
 4.  [The AAU data management
-    recommendations](https://www.researcher.aau.dk/guides/research-data/data-management)
+    recommendations](https://www.researcher.aau.dk/conduct-manage/managing-active-research-data)
 
 These policies cover the general rules all researchers (and
 TAP staff for point 3.) should abide by with regards to what kind of
@@ -254,7 +244,7 @@ and how long it should be archived for, etc.
 Contracts**
 
 For researchers at AAU, working with sensitive personal data requires
-that you register your research project with "Grants and Contracts" by
+that you register your research project with the [Contract Unit of Research Services](https://www.forskningsservice.aau.dk/kontraktenheden) (Previously referred to as "Grants and Contracts") by
 completing the [digital form that matches your role in relation to the
 data, for example Data Controller or Data
 processor](https://aaudk.sharepoint.com/sites/persondata-ressourcer/SitePages/Registrations%20og%20reports%20(Online%20forms).aspx).
@@ -271,7 +261,7 @@ processor](https://aaudk.sharepoint.com/sites/persondata-ressourcer/SitePages/Re
     data classification](https://www.security.aau.dk/data-classification)
     model.
 
-2.  If you are a researcher, and working with personally identifiable information, you must register a research project with Grants and Contracts
+2.  If you are a researcher, and working with personally identifiable information, you must register a research project with the Contract Unit
     using [the relevant registration
     form.](https://aaudk.sharepoint.com/sites/persondata-ressourcer/SitePages/Registrations%20og%20reports%20(Online%20forms).aspx)
 
@@ -279,35 +269,23 @@ processor](https://aaudk.sharepoint.com/sites/persondata-ressourcer/SitePages/Re
         Contracts, you will get a receipt that contains a "WorkZone case
         number" (To be included in your UCloud project application).
 
-<!-- 3.  Students cannot register projects with Grants and Contracts. As a
-    student you are personally responsible for any data you collect. You
-    must ensure that you comply with [GDPR regulations for
-    students](https://aaudk.sharepoint.com/sites/GDPR-for-students). -->
 
     
-3.  All applicants for projects on UCloud must complete the [CLAAUDIA
-    application form for DeiC Interactive HPC resources](https://forms.office.com/e/8Khbr1TJGC).
+3.  All applicants for projects on UCloud must follow the [CLAAUDIA
+    application process for UCloud projects resources](https://hpc.aau.dk/ucloud/expanded-application-guide/).
 
 
-4.  Once approved, you will receive a UCloud project
-    number, and you must [apply for a project in the UCloud
-    Interface](https://docs.cloud.sdu.dk/tutorials/tutorial3.html#create-a-project),
-    including the resources that you had approved in the CLAAUDIA
-    application. (You can apply for additional resources later if
-    needed.)
+4.  Once approved, your UCloud project
+    number will be included in your UCloud project application, and your 
+    project will be active on the UCloud platform.
 
     a.  As project applicant you will be the Principal Investigator for
         the project, and you should be aware of your [roles and
         responsibilities.](https://docs.cloud.sdu.dk/guide/project-overview.html#member-roles)
-
-    <!-- b.  If the user is a student, then their supervisor for the student
-        project must apply for the project, and so must assume the role
-        of Principal Investigator. -->
         
-    b. The project must use the same **project title** as provided in the CLAAUDIA application, and both the **DeiC project number** and the **Grants and Contracts reference number** should be included:
+    b.  The **the Contract Unit reference number** should be included in the application form
         
-        i. The DeiC project number should be entered in the "DeiC Interactive HPC project number" field.
-        ii. The WorkZone case number should be entered in the "WorkZone reference number" field.
+        i. The WorkZone case number should be entered in the "WorkZone reference number" field.
     
     c.  Once your project is approved, you will get access to project
         storage (Drive(s)) on UCloud that is separate from your "My
@@ -319,7 +297,7 @@ processor](https://aaudk.sharepoint.com/sites/persondata-ressourcer/SitePages/Re
     a.  Any data added to the project should be in a project folder and
         this must be marked according to the level of data sensitivity,
         as described in the [AAU data classification
-        model](https://aaudk.sharepoint.com/sites/ForskIT/Delte%20dokumenter/General/01%20-%20Administration/03%20-%20Policies%20and%20procedures/DeiC%20Interactive%20HPC/i.%09https:/www.security.aau.dk/dataclassification/model).
+        model](https://www.security.aau.dk/data-classification).
 
         i.  On the UCloud platform the corresponding classifications are
             as follows: 
@@ -330,11 +308,10 @@ processor](https://aaudk.sharepoint.com/sites/persondata-ressourcer/SitePages/Re
             and approved project folder.) Sensitive data may **NOT** be added to My Workspace.
             - AAU Level 4  → Not allowed  
 
-          
 
 6.  **Collaboration on UCloud within projects:** Fellow AAU persons
 
-    a.  Only persons named in the project registered with Grants and
+    a.  Only persons named, or otherwise specified, in the project registered with Grants and
         Contracts may be added to the UCloud project.
 
 7.  **Collaboration on UCloud within projects:** Persons from outside
@@ -401,6 +378,6 @@ processor](https://aaudk.sharepoint.com/sites/persondata-ressourcer/SitePages/Re
         repository in accordance with [The AAU Policy for Research Data
         Management](https://www.handbook.aau.dk/document/?contentId=402570).
         As of 2023-January, AAU
-        [DataDeposit](https://www.researcher.aau.dk/guides/research-data/data-management/data-publishing)
+        [DataDeposit](https://www.researcher.aau.dk/conduct-manage/managing-active-research-data/data-publishing)
         as a local archiving solution, while a national solution is
         under development.
