@@ -46,8 +46,11 @@ Use of Mistral should, as far as possible, be linkable to the relevant project, 
 Mistral may only be used as a **research-supporting and assisting tool**. It must not be used to make decisions about data subjects, and AI output must **never stand alone**. All outputs must be reviewed professionally and checked by a person before it is used in research or included in research conclusions.
 
 ### 2.1 Teaching activities and students participation 
-Mistral is not approved for student use in teaching activities. This includes situations where interaction with Mistral is required, expected, assessed, rewarded, or otherwise forms part of the learning activities or learning outcomes of a course.
-Nothing in these terms prevents the use of Mistral in research activities involving students, provided that the activity is conducted under the appropriate research governance framework and all relevant ethical, legal, data protection, and participant-related obligations have been fulfilled. Researchers remain solely responsible for ensuring that such requirements have been identified and addressed before involving participants in any activity.
+Mistral is approved for research purposes and may be used in research activities, including activities involving students as participants, provided that the responsible researcher has ensured that all applicable research governance requirements, including research ethics, legal, and data protection obligations, have been satisfied.
+ 
+At present, Mistral is not approved for student use in a teaching context and must therefore not form a mandatory or expected part of teaching activities, assessment, or the achievement of learning outcomes.
+ 
+This distinction reflects the fact that research and teaching are subject to different governance frameworks and requirements. The current approval of Mistral does not extend to student use in teaching activities, and responsibility for ensuring that an activity is appropriately governed rests with the staff member conducting the activity.
 
 ## 3. Data classification, Personal data and dedicated workspaces
 
