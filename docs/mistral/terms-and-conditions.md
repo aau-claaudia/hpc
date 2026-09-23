@@ -45,6 +45,10 @@ Use of Mistral should, as far as possible, be linkable to the relevant project, 
 <!-- 1 -->
 Mistral may only be used as a **research-supporting and assisting tool**. It must not be used to make decisions about data subjects, and AI output must **never stand alone**. All outputs must be reviewed professionally and checked by a person before it is used in research or included in research conclusions.
 
+### 2.1 Teaching activities and students participation 
+Mistral is not approved for student use in teaching activities. This includes situations where interaction with Mistral is required, expected, assessed, rewarded, or otherwise forms part of the learning activities or learning outcomes of a course.
+Nothing in these terms prevents the use of Mistral in research activities involving students, provided that the activity is conducted under the appropriate research governance framework and all relevant ethical, legal, data protection, and participant-related obligations have been fulfilled. Researchers remain solely responsible for ensuring that such requirements have been identified and addressed before involving participants in any activity.
+
 ## 3. Data classification, Personal data and dedicated workspaces
 
 Mistral may be used with data classified as **Level 1, Level 2, or Level 3** under [AAU’s data classification model](https://www.security.aau.dk/data-classification){target="_blank"}. Users are personally responsible for classifying their data correctly before submitting any content to the service.
