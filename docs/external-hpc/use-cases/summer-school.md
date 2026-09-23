@@ -51,4 +51,4 @@ Shristy expects to use many of the skills from the summer school directly in her
 
 Every year, DeiC offers PhD students the opportunity to apply for the LUMI Summer School. Keep an eye on the [DeiC website](https://deic.dk/en) for upcoming opportunities. You can also follow [researcher.aau.dk](https://researcher.aau.dk/) and the [ReachAAUt Teams channel](https://teams.microsoft.com/l/channel/19%3Ab08f7cbc0e214c69823a7207ba779fa5%40thread.tacv2/General?groupId=38f71674-0f6b-491b-850d-5cfa46819c8a), where we regularly share relevant opportunities for AAU researchers and PhD students.
 
-If you are interested in exploring whether LUMI could support your research, CLAAUDIA can help you understand the available opportunities and guide you through the application process. Contact CLAAUDIA here.
+If you are interested in exploring whether LUMI could support your research, CLAAUDIA can help you understand the available opportunities and guide you through the application process. Contact [CLAAUDIA here](https://serviceportal.aau.dk/serviceportal?id=emp_taxonomy_topic&topic_id=82a253e8838fc21053711d447daad328).
