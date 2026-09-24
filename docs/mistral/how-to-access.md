@@ -71,9 +71,9 @@ Dedicated workspaces can *only* include the users that have approved the Terms a
 3. Select your named workspace from the dropdown.
 4. Confirm in the bottom-left corner that the correct workspace is selected.
 
-![Mistral create workspace](/assets/img/mistral/mistral-change-workspace.png)
+![Mistral create workspace](/assets/img/mistral/Mistral-change-workspace.png)
 
-## FAQ
+### FAQ
 
 ??? question "Why can’t I log in with AAU SSO directly?"
 
