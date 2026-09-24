@@ -55,12 +55,8 @@ copyright = """
 
 nav = [
   {"Home" = [
-    "index.md",
-    {"News" = [
-      {"All news" = "news.md"},
-      {"Mistral approved for Level 3 data" = "news/mistral-approved-for-level-3.md"},
-      {"DeiC national HPC call" = "news/deic-national-call-september-2026.md"},
-    ]},
+    {"Home" = "index.md"},
+    "news.md",
     "tools.md",
     {"About CLAAUDIA" = "https://www.researcher.aau.dk/contact/claaudia"},
     "service-windows.md",

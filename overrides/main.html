@@ -6,7 +6,34 @@
     data-goatcounter="https://hpc-analytics.goatcounter.com/count"
     async
     src="//gc.zgo.at/count.js"></script>
+  <script>
+    try {
+      if (localStorage.getItem("ucloud-webinar-announce-dismissed") === "1") {
+        document.documentElement.classList.add("ucloud-webinar-dismissed");
+      }
+    } catch (e) {}
+  </script>
 {% endblock %}
+{# UCloud webinar promo. Remove after 1 October 2026. #}
+{% block announce %}
+{%- if page.url is startingwith "ucloud/" -%}
+<div class="announce-bar announce-bar--ucloud" role="region" aria-label="UCloud webinar">
+  <p class="announce-bar__title">Webinar 1 October: Getting started with UCloud</p>
+  <p class="announce-bar__text">
+    12:30–13:30, online. A guided tour of the UCloud interface, files, apps, and compute. No prior experience needed.
+  </p>
+  <div class="announce-bar__links">
+    <a class="announce-bar__link" href="https://www.researcher.aau.dk/introduction-getting-started-with-ucloud-event177267">
+      Sign up
+    </a>
+    <a class="announce-bar__link announce-bar__link--quiet" href="/news/getting-started-with-ucloud/">
+      Read more
+    </a>
+  </div>
+</div>
+{%- endif -%}
+{% endblock %}
+
 {# Announce bar - AI Cloud / Strato service window #}
 {#
 {% block announce %}
