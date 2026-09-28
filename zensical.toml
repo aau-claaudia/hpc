@@ -267,6 +267,7 @@ nav = [
         "taaurus/guides/monitoring.md",
       ]},
     { "Application guides" = [
+        "taaurus/guides/jupyterlab.md",
         "taaurus/guides/larger-than-memory.md",
 
       ]},
