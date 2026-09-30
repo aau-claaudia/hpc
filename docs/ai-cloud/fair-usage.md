@@ -25,6 +25,8 @@ In addition to the default resource limitations that are in place on the platfor
 
 * Always launch your jobs as batch-jobs that require no interference from the user. A batch job is one that has clearly defined start and stop conditions; the job should should execute some script and then release the resources when it's finished. Use `sbatch` instead of `srun` (see [this guide]('/ai-cloud/getting-started/run-jobs/#which-one-to-use-srun-vs-sbatch')).
 
+* Do not compute on the front end node! All computations should take place on compute nodes.
+
 * Keep in mind that AI Cloud is a multi-user system, and that it is entirely possible for one user to destabilize the front-end node by launching resource-intensive operations. Ensuring that we have a stable platform is a shared responsibility.
 
 * Ensure that your jobs occupy resources only as long as they are needed.
@@ -60,10 +62,10 @@ AI Cloud is designed for launching unattended batch jobs, and thus we do not all
 
     This is certainly a great feature, and one that we do plan on supporting in the future - but as of now, our support for it is very limited. We therefore ask our user's to take great care when using this feature:
 
-    * **Do** keep an eye on your resource consumption: `htop -u $USER`.
+    * Do keep an eye on your resource consumption: `htop -u $USER`.
 
-    * **Do not** initiate file transfers via VS Code. File transfer processes should be as simple as possible. Follow our guidelines on [File management]('/ai-cloud/getting-started/file-management') instead.
+    * Do not initiate file transfers via VS Code. File transfer processes should be as simple as possible. Follow our guidelines on [File management]('/ai-cloud/getting-started/file-management') instead.
 
-    * **Do not** run AI coding asistants (vibe-coding sessions) on the front-end node. Do this locally and upload your files.
+    * Do take great care run AI coding asistants (vibe-coding sessions) on the front-end node. These have been found to create a substantial destabilizing load on the platform. If you need to use AI agents in your development workflows, you should develop locally on your own machine.
 
     If we find that platform responsiveness is challanged by the use of this feature, we will act in accordance with the practice layed out in [Enforcement of rules](#enforcement-of-rules).

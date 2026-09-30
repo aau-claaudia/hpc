@@ -30,14 +30,10 @@ Security instruction coverage (1–21)
 
 
 ## 1. Who may use Mistral at AAU
+Mistral Vibe and AI Studio are provided by Aalborg University (AAU) for academic research and research-supporting activities, carried out by AAU employees.
+The services must not be used for teaching, commercial, or private purposes.
 
-Mistral Vibe and AI Studio are provided by Aalborg University (AAU) for **academic research activities**. The services must not be used for any teaching, commercial or private purposes.
 
-
-<!--
-NOTE FOR REVISION:
-Add reference or instructions on where and how to obtain or complete a suitable DPIA for Mistral/AI use at AAU. Clarify the process or link to AAU's DPIA documentation for researchers.
--->
 ## 2. Permitted purpose
 
 <!-- 3 -->
@@ -49,6 +45,7 @@ Use of Mistral should, as far as possible, be linkable to the relevant project, 
 <!-- 1 -->
 Mistral may only be used as a **research-supporting and assisting tool**. It must not be used to make decisions about data subjects, and AI output must **never stand alone**. All outputs must be reviewed professionally and checked by a person before it is used in research or included in research conclusions.
 
+
 ## 3. Data classification, Personal data and dedicated workspaces
 
 Mistral may be used with data classified as **Level 1, Level 2, or Level 3** under [AAU’s data classification model](https://www.security.aau.dk/data-classification){target="_blank"}. Users are personally responsible for classifying their data correctly before submitting any content to the service.
@@ -57,7 +54,7 @@ Mistral may be used with data classified as **Level 1, Level 2, or Level 3** und
 
 **Personal data** and **Level 2 or Level 3 data** may only be processed in a **dedicated workspace** created by us. This type of data must never be entered into the default workspace.
 
-Projects involving **personal data** is required to register the project with the [Grants and Contracts](https://aaudk.sharepoint.com/sites/persondata-ressourcer/SitePages/Registrations%20og%20reports%20(Online%20forms).aspx){target="_blank"} and make a **data protection impact assessment (DPIA)**  in collaboration with Grants and Contracts; it must include the project's use of AI.
+Projects involving **personal data** is required to register the project with [Grants and Contracts](https://aaudk.sharepoint.com/sites/persondata-ressourcer/SitePages/Registrations%20og%20reports%20(Online%20forms).aspx){target="_blank"} and make a **data protection impact assessment (DPIA)**  in collaboration with Grants and Contracts; it must include the project's use of AI.
 
 
 ## 4. Data minimisation and identifiers

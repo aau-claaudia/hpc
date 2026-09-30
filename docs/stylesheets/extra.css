@@ -71,6 +71,47 @@
   margin: 0;
 }
 
+/* UCloud webinar promo — only rendered on /ucloud/ pages */
+html.ucloud-webinar-dismissed [data-md-component="announce"]:has(.announce-bar--ucloud) {
+  display: none;
+}
+
+.md-banner:has(.announce-bar--ucloud) {
+  background: #1a56b0;
+  color: #fff;
+}
+
+.announce-bar--ucloud,
+.announce-bar--ucloud .announce-bar__title,
+.announce-bar--ucloud .announce-bar__text {
+  color: #fff;
+}
+
+.announce-bar--ucloud .announce-bar__text {
+  font-size: 0.78rem;
+}
+
+.announce-bar--ucloud .announce-bar__link {
+  background: #fff;
+  color: #1a56b0;
+  border-color: transparent;
+}
+
+.announce-bar--ucloud .announce-bar__link:hover {
+  background: #e8f1ff;
+  opacity: 1;
+}
+
+.announce-bar--ucloud .announce-bar__link--quiet {
+  background: transparent;
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.7);
+}
+
+.announce-bar--ucloud .announce-bar__link--quiet:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
 
 /* Custom admonition styles */
 .md-typeset .admonition.info, .md-typeset details.info {

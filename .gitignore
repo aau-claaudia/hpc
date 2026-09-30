@@ -8,6 +8,8 @@ site/
 venv/
 env/
 ENV/
+uv.lock
+pyproject.toml
 
 # Python cache and bytecode
 __pycache__/

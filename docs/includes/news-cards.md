@@ -1,5 +1,14 @@
 <div class="grid cards three" markdown>
 
+-   ##### 24 September 2026
+
+    ---
+
+    #### :lucide-star: Webinar: Getting started with UCloud
+    One hour online on 1 October, 12:30–13:30. A guided tour of the new interface, files, apps, and compute — no prior experience needed.
+
+    [:lucide-arrow-right: Read more](/news/getting-started-with-ucloud/)
+
 -   ##### 31 August 2026
 
     ---

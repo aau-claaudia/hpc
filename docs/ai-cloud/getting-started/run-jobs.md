@@ -129,6 +129,15 @@ Proving that we did indeed manage to launch the job on a GPU node.
     sbatch --gres=gpu:1 --wrap="singularity exec --nv /home/container/pytorch/pytorch_25.04.sif python3 -c 'import torch; print(torch.cuda.is_available())'"
     ```
 
+!!! tip "Bonus tip: Monitor the output file on a continuous basis"
+
+    We can use the tail command to print the bottom lines of a file, use the `-n 10` to print the last 10 lines, and `-f` (follow) to continuously print new lines, as they are written. This can also be done on two files at once.
+
+    This allows us to launch an unattended `sabtch` job, and benefit from printing the command output like `srun` does.
+
+    ```
+    tail -n 10 -f output.out 
+    ``` 
 
 ## Which one to use: srun vs sbatch
 

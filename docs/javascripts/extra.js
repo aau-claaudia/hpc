@@ -104,3 +104,19 @@ if (window.document$?.subscribe) {
   window.document$.subscribe(setExternalLinksNewTab);
 }
 
+/**
+ * Keep the UCloud webinar banner closed after the visitor dismisses it.
+ * Instant navigation replaces the banner element, so the theme's own
+ * dismiss flag does not survive a move to another UCloud page.
+ */
+document.addEventListener("click", (event) => {
+  const button = event.target.closest(".md-banner__button");
+  if (!button) return;
+  const root = button.closest("[data-md-component=announce]");
+  if (!root || !root.querySelector(".announce-bar--ucloud")) return;
+  try {
+    localStorage.setItem("ucloud-webinar-announce-dismissed", "1");
+  } catch (e) {}
+  document.documentElement.classList.add("ucloud-webinar-dismissed");
+});
+

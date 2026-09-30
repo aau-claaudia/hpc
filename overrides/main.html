@@ -6,7 +6,51 @@
     data-goatcounter="https://hpc-analytics.goatcounter.com/count"
     async
     src="//gc.zgo.at/count.js"></script>
+  <script>
+    try {
+      if (localStorage.getItem("ucloud-webinar-announce-dismissed") === "1") {
+        document.documentElement.classList.add("ucloud-webinar-dismissed");
+      }
+    } catch (e) {}
+  </script>
 {% endblock %}
+{# UCloud webinar promo. Remove after 1 October 2026. #}
+{% block announce %}
+{%- if page.url is startingwith "ucloud/" -%}
+<div class="announce-bar announce-bar--ucloud" role="region" aria-label="UCloud webinar">
+  <p class="announce-bar__title">Webinar 1 October: Getting started with UCloud</p>
+  <p class="announce-bar__text">
+    12:30–13:30, online. A guided tour of the UCloud interface, files, apps, and compute. No prior experience needed.
+  </p>
+  <div class="announce-bar__links">
+    <a class="announce-bar__link" href="https://www.researcher.aau.dk/introduction-getting-started-with-ucloud-event177267">
+      Sign up
+    </a>
+    <a class="announce-bar__link announce-bar__link--quiet" href="/news/getting-started-with-ucloud/">
+      Read more
+    </a>
+  </div>
+</div>
+{%- endif -%}
+{% endblock %}
+
+{# Announce bar - AI Cloud / Strato service window #}
+{#
+{% block announce %}
+<div class="announce-bar announce-bar--danger" role="alert" aria-live="assertive">
+  <p class="announce-bar__title">⚠ AI Cloud &amp; Strato: Service window today</p>
+  <p class="announce-bar__text">
+    AI Cloud and Strato are undergoing scheduled maintenance today (15 September 2026). Both platforms may be unavailable for the entire day.
+  </p>
+  <div class="announce-bar__links">
+    <a class="announce-bar__link" style="background-color: #fff; color: #212121; border: 1px solid #ddd;" href="/service-windows/" aria-label="Open service windows page">
+      Service windows
+    </a>
+  </div>
+</div>
+{% endblock %}
+#}
+
 {# Announce bar - Maintenance notice #}
 {#
 {% block announce %}
