@@ -159,6 +159,16 @@ This section has a few tips for starting the application from the UCloud interfa
 
 ![Billede-11-Dictaphone-Guide](/assets/img/UCloud/Billede-11-Dictaphone-Guide..png)
 
+> **Important when recording on a smartphone or tablet** 
+
+> Be aware that if your smartphone or tablet automatically locks while recording, the connection to the website will be lost and the recording will stop.
+>To avoid this, you can:
+
+> - Change your screen lock settings to **never lock** before you start recording
+> - If you are using an **AAU work phone**, this setting may not be available due to security policies.
+> - In that case, consider using a computer or another device where you can adjust the screen lock settings.
+
+
 ### 1.9 Closing the application
 
 When you are finished using Dictaphone, remember to close the
