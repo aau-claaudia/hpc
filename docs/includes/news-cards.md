@@ -1,5 +1,14 @@
 <div class="grid cards three" markdown>
 
+-   ##### 2 October 2026
+
+    ---
+
+    #### :lucide-star: Online session: AI for research at AAU
+    28 October, 14:30–15:30. Mathias Hedegaard introduces Mistral, including responsible use and sensitive data. In Danish, with live English subtitles. No registration.
+
+    [:lucide-arrow-right: Read more](/news/ai-for-research-at-aau/)
+
 -   ##### 24 September 2026
 
     ---
