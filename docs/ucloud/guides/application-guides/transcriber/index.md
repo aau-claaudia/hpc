@@ -321,7 +321,7 @@ Reachout to CLAAUDIA at [https://serviceportal.aau.dk](https://serviceportal.aau
 
 **Citation**
 
-CLAAUDIA, ITS, AAU (2024). Transcriber (Version1.0) [App]. UCloud interactive HPC system, eScience Center at the University of Southern Denmark. https://cloud.sdu.dk/app/jobs/create?app=transcriber&version=1.7  
+CLAAUDIA, ITS, AAU (Year). Transcriber (Version x) [App]. UCloud interactive HPC system, eScience Center at the University of Southern Denmark. https://cloud.sdu.dk/app/jobs/create?app=transcriber&version=1.7  
 
 
 
