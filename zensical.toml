@@ -158,10 +158,10 @@ nav = [
         "ai-cloud/getting-started/run-jobs.md",
       ]},
       {"Additional guides" = [
-        {"Using the Linux CLI" = [
-          "ai-cloud/additional-guides/understanding-linux-cli.md",
-          "ai-cloud/additional-guides/edit-text-files-with-nano.md",
-          "ai-cloud/additional-guides/useful-commands.md",
+        {"The Linux CLI" = [
+          { "The fundamentals" = "ai-cloud/additional-guides/understanding-linux-cli.md"},
+          { "Edit text files" = "ai-cloud/additional-guides/edit-text-files-with-nano.md"}, 
+          { "Useful commands" = "ai-cloud/additional-guides/useful-commands.md"},
         ]},
         "ai-cloud/additional-guides/directories-overview.md",
         {"Container guides" = [
