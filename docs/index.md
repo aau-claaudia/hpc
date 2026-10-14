@@ -13,7 +13,7 @@ hide:
 **High-performance computing (HPC)** means using powerful computers to run analyses, simulations, and AI workloads that would be slow or impractical on a laptop alone. At Aalborg University, [CLAAUDIA](https://www.researcher.aau.dk/contact/claaudia) helps researchers, lecturers, and students choose and use the right environment for their data, security requirements, and workflow.
 
 !!! tip "Not sure where to begin?"
-    Start with the [**HPC Decision Tree**](/hpc-decision-tree/) if you want a guided recommendation.
+    Start with the [**HPC Decision Tree**](/hpc-decision-tree) if you want a guided recommendation.
     You can also use the [**HPC Comparison Table**](/hpc-comparison-table/) for a side-by-side overview.
     If you already know your requirements, jump directly to the [**AAU HPC overview**](/#aau-hpc-overview) and [**External HPC overview**](/#external-hpc-overview) tables below.
 
