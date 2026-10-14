@@ -32,10 +32,11 @@ We can now create a batch script to launch our build:
 #!/usr/bin/env bash
 
 #SBATCH --job-name=build_torch
+#SBATCH --partition=cpu
 #SBATCH --output=build_torch.out
 #SBATCH --error=build_torch.err
 #SBATCH --cpus-per-task=32
-#SBATCH --mem=80G
+#SBATCH --mem=30G
 
 export SINGULARITY_TMPDIR=$HOME/.singularity/tmp
 export SINGULARITY_CACHEDIR=$HOME/.singularity/cache

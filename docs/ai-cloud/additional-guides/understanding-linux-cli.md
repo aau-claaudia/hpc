@@ -1,3 +1,5 @@
+# The fundamentals
+
 On this page our goal is to help you understand the most fundamental concepts of operating a Linux server. This page is not designed as a collection of useful commands, and neither is this a tutorial on operating a Linux server. Think of this page as a *concept glossary* that will help you understand how a Linux server works.
 
 After having read this page you should be much better equipped to work on AI Cloud (and other HPC systems).
