@@ -222,6 +222,9 @@ nav = [
         "ai-lab/additional-guides/adding-packages-to-a-container.md",
       ]},
     ]},
+    {"Use cases" = [
+      {"From AI theory to real-world solutions with AI-LAB" = "ai-lab/use-cases/from-ai-theory-to-real-world-solutions-with-ai-lab.md"},
+    ]},
   ]},
   {"TAAURUS" = [
     {"About" = "taaurus/index.md"},
