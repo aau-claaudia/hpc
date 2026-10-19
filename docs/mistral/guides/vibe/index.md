@@ -9,6 +9,9 @@ Vibe is suited for everyday AI tasks such as drafting, summarising, explaining, 
     Automatic deletion of chat history is set to **90 days**. Data that needs to be retained must be stored appropriately in **AAU systems** before the 90 days end. The deletion period does not replace data minimisation. <!-- 13 --><!-- 14 -->
 
 
+!!! warning "Vibe Code is currently disabled"
+    **Vibe Code** is not available at AAU at the moment. To work with the API, create an API key in [AI Studio](/mistral/guides/ai-studio/). API keys require a [dedicated workspace](/mistral/how-to-access/).
+
 ## Libraries  
 
 In Vibe you can create [libraries](https://help.mistral.ai/en/articles/347582-what-are-libraries-and-how-do-i-use-them-in-le-chat){target="_blank"} and upload files to interact and collaborate on them with other AAU Mistral users.
