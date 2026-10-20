@@ -122,7 +122,7 @@ True
 
 Proving that we did indeed manage to launch the job on a GPU node.
 
-!!! tip "Bonus tip: Launch unattended jobs *on-the-fly*"
+!!! tip "Bonus tip: Launch unattended batch jobs from an interactive shell"
     It's also possible to launch unattended jobs without a batch script. To do this, we can simply enter the `sbatch` command (optionally with a resource specification), and then wrapping the command we want to execute:
     
     ```
