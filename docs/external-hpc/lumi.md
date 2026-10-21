@@ -5,7 +5,7 @@ icon: lucide/paw-print
 
 # LUMI
 
-LUMI is a supercomputer located in Kajaani, Finland and ranks among the world's Top 10 supercomputers according to the [Top 500 list](https://top500.org). 
+LUMI is a supercomputer located in Kajaani, Finland and ranks as the 11th most powerful supercomputer in the world according to the [Top 500 list](https://top500.org). 
 
 ### Overview of resource pools
 
@@ -48,8 +48,8 @@ LUMI consists of multiple compute partitions. Two of the main ones are:
 
 | Partition | Number of nodes | Purpose | Node configuration |
 | ---       |       ---       |   ---   |   ---         |
-| LUMI-C | 2978 | Scaleable, demanding CPU operations | 2 x 64 cores **AMD EPYC** in different RAM configurations (256, 512 and 1024 GB). Find [the detailed specifications](https://docs.lumi-supercomputer.eu/hardware/lumic/).| 
-| LUMI-G | 2048 | Scaleable, demanding GPU operations | 4 x **AMD MI250x** GPU's, 128 GB VRAM. Find [the detailed specifications](https://docs.lumi-supercomputer.eu/hardware/lumig/).|
+| LUMI-C | 2978 | Scaleable, CPU demanding operations | 2 x 64 cores **AMD EPYC** in different RAM configurations (256, 512 and 1024 GB). Find [the detailed specifications](https://docs.lumi-supercomputer.eu/hardware/lumic/).| 
+| LUMI-G | 2048 | Scaleable, GPU demanding operations | 4 x **AMD MI250x** GPU's, 128 GB VRAM. Find [the detailed specifications](https://docs.lumi-supercomputer.eu/hardware/lumig/).|
 
 The table above is intended for the purpose of providing a rough overview of the hardware. 
 A more complete overview can be found in [the official LUMI documentation](https://docs.lumi-supercomputer.eu/hardware/)
