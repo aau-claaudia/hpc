@@ -43,15 +43,17 @@ It's important to note that `unprivileged` jobs are preemptable. If a request fo
 
 ## Deadline access
 
-In the `deadline` account users are allowed to have an additional 12 simultaneous jobs with an additional 12 GPU's for a period of up to 14 days.
+When the overall resource demand allows for it, users can apply for access to the `deadline` account. Here users are allowed to have an additional 12 simultaneous jobs with an additional 12 GPU's for a period of up to 14 days. Once granted it will not be possible to reapply for another 30 days.
+
+In order to gain access to the deadline account, users must submit an application found on serviceportal.aau.dk → [AI Cloud: Request access to deadline resources](https://aau.service-now.com/serviceportal?id=sc_cat_item&sys_id=22a816638322be5053711d447daad379). We will try to process applications on the same day.
+
+If resource demand is large, and we are operating at full capacity, we can not allow 
+
 To run a job with deadline resources, we must specify `--account=deadline`.
 
 ```
 srun --account=deadline hostname
+
 ```
 
-In order to gain access to the deadline account, users must submit an application found on serviceportal.aau.dk → [AI Cloud: Request access to deadline resources](https://aau.service-now.com/serviceportal?id=sc_cat_item&sys_id=22a816638322be5053711d447daad379). We will try to process applications on the same day.
-
-
-This option is for researchers who are working towards a deadline, and is not intended to become a permanent solution for projects with large resource needs. Once granted it will not be possible to reapply for another 30 days. If your project requires a large amount of resources, you should consider applying for a grant for an [external HPC system](/external-hpc/).
-
+This option is not intended to become a permanent solution for projects with large resource needs. If your project requires a larger amount of resources, than we can guarantee you with local resources, you should consider applying for a grant for an [external HPC system](/external-hpc/).
