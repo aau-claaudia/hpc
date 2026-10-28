@@ -158,12 +158,12 @@ nav = [
         "ai-cloud/getting-started/run-jobs.md",
       ]},
       {"Additional guides" = [
+        {"Overview of directories" = "ai-cloud/additional-guides/directories-overview.md" },
         {"The Linux CLI" = [
-          { "The fundamentals" = "ai-cloud/additional-guides/understanding-linux-cli.md"},
+          { "Learn the fundamental concepts" = "ai-cloud/additional-guides/understanding-linux-cli.md"},
           { "Edit text files" = "ai-cloud/additional-guides/edit-text-files-with-nano.md"}, 
           { "Useful commands" = "ai-cloud/additional-guides/useful-commands.md"},
         ]},
-        "ai-cloud/additional-guides/directories-overview.md",
         {"Container guides" = [
           "ai-cloud/additional-guides/download-container-images.md",
           "ai-cloud/additional-guides/building-your-own-container-image.md",
@@ -183,11 +183,6 @@ nav = [
           "ai-cloud/additional-guides/checking-the-queue.md",
           "ai-cloud/additional-guides/checking-the-status-of-compute-nodes.md",
           "ai-cloud/additional-guides/checking-gpu-utilisation.md",
-        ]},
-        {"Learn the Linux CLI" = [
-          "ai-cloud/additional-guides/understanding-linux-cli.md",
-          "ai-cloud/additional-guides/useful-commands.md",
-          "ai-cloud/additional-guides/edit-text-files-with-nano.md",
         ]},
         {"Application examples" = [
           "ai-cloud/additional-guides/batch-llm-inference.md",
@@ -221,6 +216,9 @@ nav = [
         "ai-lab/guides/ci-cd-with-github-actions.md",
         "ai-lab/additional-guides/adding-packages-to-a-container.md",
       ]},
+    ]},
+    {"Use cases" = [
+      {"From AI theory to real-world solutions with AI-LAB" = "ai-lab/use-cases/from-ai-theory-to-real-world-solutions-with-ai-lab.md"},
     ]},
   ]},
   {"TAAURUS" = [

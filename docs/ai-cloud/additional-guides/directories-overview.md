@@ -50,10 +50,16 @@ Go in to the project directory
 ```
 cd /home/project
 ```
-Before going ahead and creating a directory for group project, please consider naming the directory in a meaningful manner (ie. after your group or research project). A project directory can be created in the following manner (swap out `<name>` for the actual name of your project).
+Before going ahead and creating a directory for group project, please consider naming the directory in a meaningful manner (ie. after your group or research project). A project directory can be created in the following manner (swap out `<dirname>` for the actual name of your project).
 ```
-mkdir <name> 
+mkdir <dirname> 
 ```
+
+In order for others to be able to read and write the directory you may want to change the permissions of the directory:
+```
+chmod o=rw <dirname>
+```
+
 Please remember, that these directories should be deleted when your project is finished, and you no longer need them. They are not intended for long term data storage.
 
 ## Local storage
