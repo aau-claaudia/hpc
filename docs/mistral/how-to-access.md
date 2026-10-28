@@ -17,6 +17,10 @@ Different access options are available, each with their own specific requirement
     Not sure which data type you have?  
     <a href="https://www.security.aau.dk/data-classification" target="_blank">
       Read more about the AAU data classification here
+    </a>.<br>
+    Not sure what counts as personal data?  
+    <a href="https://www.ansatte.aau.dk/vejledninger/persondata-pa-aau/wiki#persoplysninger" target="_blank">
+      Read more about personal data at AAU here
     </a>.
   </em>
 </p>
