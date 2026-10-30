@@ -9,8 +9,8 @@ Vibe is suited for everyday AI tasks such as drafting, summarising, explaining, 
     Automatic deletion of chat history is set to **90 days**. Data that needs to be retained must be stored appropriately in **AAU systems** before the 90 days end. The deletion period does not replace data minimisation. <!-- 13 --><!-- 14 -->
 
 
-!!! warning "Vibe Code is currently disabled"
-    **Vibe Code** is not available at AAU at the moment. To work with the API, create an API key in [AI Studio](/mistral/guides/ai-studio/). API keys require a [dedicated workspace](/mistral/how-to-access/).
+!!! warning "Vibe Code: use an API key from AI Studio"
+    Signing in to **Vibe Code** with **Launch browser** is disabled at AAU. Create an API key in [AI Studio](https://console.mistral.ai/api-keys){target="_blank"} and add it in the CLI or the VS Code extension. See [Vibe Code](/mistral/guides/vibe/vibe-code/).
 
 ## Libraries  
 
@@ -32,6 +32,7 @@ Libraries have the following limits:
 | Question | Where to go |
 |---|---|
 | Cannot log in or access Vibe | Contact us via the [service portal](https://serviceportal.aau.dk/serviceportal?id=emp_taxonomy_topic&topic_id=82a253e8838fc21053711d447daad328){target="_blank"} |
+| Vibe Code / API key in CLI or VS Code | See [Vibe Code](/mistral/guides/vibe/vibe-code/) |
 | Questions about Vibe features | see [Mistral Vibe documentation](https://docs.mistral.ai/vibe){target="_blank"} or contact Mistral though the built in chat. |
 
 For a full overview of support options, see the [Support page](/mistral/support/).

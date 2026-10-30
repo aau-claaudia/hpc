@@ -43,6 +43,8 @@ Keys are **personal**. Do not share them.
 
 **How to rotate a key:** In AI Studio, select the correct workspace. Go to **API Keys** → **My API keys** and use **Rotate key**. Rotate at least every **30 days**.
 
+For **Vibe Code** (CLI or VS Code), create the key in AI Studio. Do not use **Launch browser**. See [Vibe Code](/mistral/guides/vibe/vibe-code/).
+
 A person must check API output before it leads to actions, classifications, or research conclusions.
 
 When it is relevant for your methods, note which model and version you used (for example `mistral-medium-latest`).

@@ -52,6 +52,8 @@ After login:
 
 If you applied for the **default workspace**, use that workspace only.
 
+API keys (including for [Vibe Code](/mistral/guides/vibe/vibe-code/)) are created in AI Studio in a **dedicated workspace**, not through Vibe Code’s **Launch browser** sign-in.
+
 ## For the Dedicated Workspace
 
 Dedicated workspaces can *only* include the users that have approved the Terms and Conditions, these include:
