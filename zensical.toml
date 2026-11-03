@@ -260,6 +260,7 @@ nav = [
       {"Vibe" = [
         "mistral/guides/vibe/index.md",
         "mistral/guides/vibe/getting-started.md",
+        "mistral/guides/vibe/vibe-code.md",
       ]},
       {"AI Studio" = [
         "mistral/guides/ai-studio/index.md",

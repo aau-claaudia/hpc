@@ -66,6 +66,7 @@ The Mistral Discord server is a good place to ask technical questions and get qu
 | Cannot access an AI Studio workspace | Contact us via the [Serviceportal](https://serviceportal.aau.dk/serviceportal?id=emp_taxonomy_topic&topic_id=82a253e8838fc21053711d447daad328){target="_blank"} |
 | Token quota exceeded | Contact us via the [Serviceportal](https://serviceportal.aau.dk/serviceportal?id=emp_taxonomy_topic&topic_id=82a253e8838fc21053711d447daad328){target="_blank"} |
 | I have a project workspace but cannot create an API key | Contact us via the [Serviceportal](https://serviceportal.aau.dk/serviceportal?id=emp_taxonomy_topic&topic_id=82a253e8838fc21053711d447daad328){target="_blank"} |
+| Vibe Code says *This workspace can't be used* or Launch browser fails | Expected. Create a key in AI Studio and paste it in. See [Vibe Code](/mistral/guides/vibe/vibe-code/) |
 | Data classification questions | See [Responsible use of Mistral](/mistral/guides/responsible-use/) and the [T&C](/mistral/terms-and-conditions/), or contact Grants and Contracts   |
 | How to use a Mistral API key in your own software | Contact Mistral via the in-app *Help and Resources* chat |
 | Vibe not behaving as expected (e.g. wrong output, missing feature) | Contact Mistral via the in-app *Help and Resources* chat in Vibe |

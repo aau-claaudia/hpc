@@ -194,5 +194,6 @@ Although Vibe is seat-based, individual features have daily usage caps that rese
 - [Models and Pricing](/mistral/guides/ai-studio/models-and-pricing/) — Per-model token costs
 - [Responsible use of Mistral](/mistral/guides/responsible-use/#using-the-api) — How to rotate a key; binding rules in the T&C
 - [How to access Mistral](/mistral/how-to-access/) — Applying for a dedicated workspace and API key access
+- [Vibe Code](/mistral/guides/vibe/vibe-code/) — Use an AI Studio key in the CLI or VS Code extension
 - [Mistral pricing page](https://mistral.ai/pricing) — Official current pricing
 - [Support](/mistral/support/) — Who to contact for quota questions

@@ -80,9 +80,11 @@ Once your AI Studio workspace has been approved:
 
 1. Log in to [Mistral AI Studio](https://console.mistral.ai/home)
 2. Select your project workspace 
-3. Open **API Keys**
+3. Open **API Keys** ([console.mistral.ai/api-keys](https://console.mistral.ai/api-keys))
 4. Create a new API key
 5. Copy and securely store the key
+
+Do not create the key through Vibe Code **Launch browser**. That option is disabled at AAU. See [Vibe Code](/mistral/guides/vibe/vibe-code/).
 
 You will need this key during installation.
 

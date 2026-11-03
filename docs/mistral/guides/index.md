@@ -14,6 +14,7 @@ For questions about access, workspaces, or quotas at AAU, see the [Support page]
 | [Responsible use of Mistral](/mistral/guides/responsible-use/) | Short how-to: workspace, prompting, API keys, and 90-day chats. Binding rules are in the T&C |
 | [Terms and conditions](/mistral/terms-and-conditions/) | Binding rules for using Mistral at AAU |
 | [How to access Mistral](/mistral/how-to-access/) | Apply for the default workspace or a dedicated workspace |
+| [Vibe Code](/mistral/guides/vibe/vibe-code/) | CLI and VS Code: create the API key in AI Studio, not via Launch browser |
 
 
 ## Help Centre
