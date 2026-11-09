@@ -20,7 +20,7 @@ Each time you log in to AI Cloud, you are landed in your user's home directory. 
     </ul>
 </div>
 
-The user directory is private by default, and users can there not access your files. In case you need to make files accessible for other users, we recommend putting them in a [Shared project directory](#the-shared-project-directory)
+The user directory is private by default, and users can there not access your files. In case you need to make files accessible for other users, we recommend putting them in a shared project directory (find the section below).
 
 !!! info "Storage quota expansions"
     When users log in to AI Cloud for the first time, a user directory is created for them. These directories are allocated 1 TB of storage by default. This should be plenty for most users, but should you need additional space, it is possible to apply for storage quota expansions for a limited time using our [Storage quota expansions form](https://forms.office.com/e/AjT0GccAPb).
@@ -105,7 +105,7 @@ Now transfer your files:
 scp xs98kl@domain.aau.dk@nv-ai-02.srv.aau.dk:/raid/xs98kl@domain.aau.dk
 ```
 
-Other file transfer methods (as described in the [File transfer](../getting-started/file-transfer.md)) section will also work. Just change the hostname from `ai-fe02.srv.aau.dk` to e.g. `nv-ai-03.srv.aau.dk`.
+Other file transfer methods (as described in the [File transfer](/ai-cloud/getting-started/file-management/)) section will also work. Just change the hostname from `ai-fe02.srv.aau.dk` to e.g. `nv-ai-03.srv.aau.dk`.
 
 Remember to stay mindful of your fellow resarchers, and cancel the job you created for the file transfer when you are finished.
 

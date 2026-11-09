@@ -30,7 +30,7 @@ Request only the number of GPUs your job can effectively utilize. Over-requestin
 
 !!! info "Monitor GPU usage"
 
-    You can use the NVIDIA GPU monitoring command `nvidia-smi` to output GPU usage information. Learn how to use it in [this guide](checking-gpu-usage.md).
+    You can use the NVIDIA GPU monitoring command `nvidia-smi` to output GPU usage information. Learn how to use it in [this guide](checking-gpu-utilisation/).
 
 ### Number of tasks to be run
 
