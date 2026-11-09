@@ -73,7 +73,7 @@ There are two ways to use Transcriber on UCloud:
     - **Set the duration**: Specify how many hours the job should run. For reference, a 1-hour audio typically takes about 1 hour to transcribe on a `cpu-amd-zen5-16` machine.
         - You can stop the machine early or add more time later if needed.
 
-    - **Choose a machine**: We recommend the MIG fraction GPU <span class="machine-name">gpu-nvidia-b200-1-mig.1g </span> if available, otherwise use <span class="machine-name">cpu-amd-zen5-16</span>.
+    - **Choose a machine**: Prefer the small GPU share named <span class="machine-name">gpu-nvidia-b200-1-mig.1g</span> if it is available. If it is not, use the 16-core CPU machine named <span class="machine-name">cpu-amd-zen5-16</span>.
 
     - **(Optional) Select folders to use**: If you want to use UCloud folders, select the folder(s) containing your files.
       - The app will scan these folders for compatible files.
