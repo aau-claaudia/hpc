@@ -7,6 +7,22 @@
     async
     src="//gc.zgo.at/count.js"></script>
 {% endblock %}
+
+{# Announce bar - Power outage in Aalborg #}
+{% block announce %}
+<div class="announce-bar announce-bar--danger" role="alert" aria-live="assertive">
+  <p class="announce-bar__title">⚠ Strato / AI Cloud / AI-LAB: Power outage</p>
+  <p class="announce-bar__text">
+    Strato, AI Cloud, and AI-LAB are currently shut down due to a power breakdown in Aalborg. We are working to restore the services as soon as possible.
+  </p>
+  <div class="announce-bar__links">
+    <a class="announce-bar__link" style="background-color: #fff; color: #212121; border: 1px solid #ddd;" href="https://serviceportal.aau.dk/serviceportal?id=emp_taxonomy_topic&amp;topic_id=82a253e8838fc21053711d447daad328" aria-label="Open Serviceportal">
+      Serviceportal
+    </a>
+  </div>
+</div>
+{% endblock %}
+
 {# Announce bar - AI Cloud / Strato service window #}
 {#
 {% block announce %}
