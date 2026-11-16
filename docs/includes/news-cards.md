@@ -72,13 +72,4 @@
 
     [:lucide-arrow-right: Read more](/mistral/)
 
--   ##### 27 March 2026
-
-    ---
-
-    #### :lucide-star: New UCloud data centre
-    See migration deadlines, expected downtime, and practical next steps for users.
-
-    [:lucide-arrow-right: Read more](/ucloud/sdu-datacenter-migration/)
-
 </div>

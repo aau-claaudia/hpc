@@ -20,6 +20,7 @@ Model prices vary significantly — larger and more capable models consume the q
 |---|---|
 | Cannot log in or access AI Studio | Contact us via the [service portal](https://serviceportal.aau.dk/serviceportal?id=emp_taxonomy_topic&topic_id=82a253e8838fc21053711d447daad328){target="_blank"} |
 | Request a workspace or API key access | Apply via the [Mistral access form](https://aau.service-now.com/serviceportal?id=sc_cat_item&sys_id=b3a364e5c3a336d4f0f3041ad001316e){target="_blank"} |
+| Use Vibe Code (CLI or VS Code) | Create the key in AI Studio and paste it in. See [Vibe Code](/mistral/guides/vibe/vibe-code/) |
 | Questions about AI Studio features | Use the in-app *Help and Resources* chat or see [help.mistral.ai](https://help.mistral.ai/en/){target="_blank"} |
 
 

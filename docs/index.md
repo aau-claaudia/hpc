@@ -34,10 +34,7 @@ This section shows the first 3 cards from that shared list.
 
 !!! info "Service status and planning"
     - Check upcoming maintenance in [Service windows](/service-windows/).
-    - SDU datacenter update
-        - UCloud runs in the new SDU datacenter.  
-            - Read the current **migration and status guide** :octicons-arrow-right-16: [UCloud datacenter migration](/ucloud/sdu-datacenter-migration/).  
-            - See the full, technical description from the consortium behind UCloud :octicons-arrow-right-16: [New SDU Datacenter](https://docs.cloud.sdu.dk/intro/new_datacenter.html#sphx-glr-new-datacenter).
+    - UCloud runs in the SDU datacenter. Hardware details: [UCloud products](https://docs.cloud.sdu.dk/guide/resources-products.html).
 
 
 ## AAU HPC overview

@@ -17,6 +17,10 @@ Different access options are available, each with their own specific requirement
     Not sure which data type you have?  
     <a href="https://www.security.aau.dk/data-classification" target="_blank">
       Read more about the AAU data classification here
+    </a>.<br>
+    Not sure what counts as personal data?  
+    <a href="https://www.ansatte.aau.dk/vejledninger/persondata-pa-aau/wiki#persoplysninger" target="_blank">
+      Read more about personal data at AAU here
     </a>.
   </em>
 </p>
@@ -47,6 +51,8 @@ After login:
 - **AI Studio** at [console.mistral.ai](https://console.mistral.ai)
 
 If you applied for the **default workspace**, use that workspace only.
+
+API keys (including for [Vibe Code](/mistral/guides/vibe/vibe-code/)) are created in AI Studio in a **dedicated workspace**, not through Vibe Code’s **Launch browser** sign-in.
 
 ## For the Dedicated Workspace
 

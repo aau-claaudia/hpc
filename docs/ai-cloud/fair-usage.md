@@ -44,7 +44,7 @@ In addition to the default resource limitations that are in place on the platfor
 
 AI Cloud is designed for launching unattended batch jobs, and thus we do not allow interactive development sessions. Interactive development sessions are defined as any session, that is opened on a compute node and idles until the user initiates a proces.
 
-* **Interactive shell sessions** 
+* **Interactive shell sessions on compute nodes** 
     
     It is considered bad practice to launch unattended jobs from within interactive shell sessions. This would be opening a shell session (with something like `srun --pty`), and then interactively typing in commands to launch the container and initiate the traning proces. This not only occupies resources for longer than needed, but also makes it dependent on the shell session on the front end node, which will crash your job if the front end node were to crash. Read our guide [Getting started > Run Jobs](ai-cloud/getting-started/run-jobs/) to learn what to do instead.
 

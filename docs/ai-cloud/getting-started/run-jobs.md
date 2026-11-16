@@ -1,6 +1,8 @@
 
 Jobs can be delegated to compute nodes, by submitting them to the queueing mechanism *Slurm*. There are two different commands for doing this, which can be useful in different situations.
 
+Simply put, their main differences are:
+
 * `srun`: the output is printed directly to the console.
 * `sbatch`: the output is written to a file.
 
@@ -45,13 +47,13 @@ srun: job 767229 has been allocated resources
 hello world
 ```
 
-Here you should especially note that the command has three components:
+Notice that the command has three main components:
 
   1. **The Slurm component**: in this case we are simply calling `srun` and thereby making a request for the default ressource configuration.
   
   2. **The Singularity component**: we call `singularity` and ask it to execute a `.sif` file
    
-  3. **The actual command, we want to execute.**: `python3 -c "print('hello worl')"`
+  3. **The actual command, we want to execute.**: `python3 -c "print('hello world')"`
 
 
 ### Execute a command on a GPU
