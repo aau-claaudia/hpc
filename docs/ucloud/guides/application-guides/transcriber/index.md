@@ -46,14 +46,15 @@ There are two ways to use Transcriber on UCloud:
 | Designed for most users | Designed for advanced users and batch jobs |
 | Add files by drag and drop from computer or UCloud folders | Add files from UCloud folders only |
 | Download results from the app or UCloud folders | Download results from UCloud folders |
-| Basic settings: language and model selection | Advanced settings: language, model, number of speakers, and merge speaker entries |
+| Basic settings: language and model selection | Advanced settings: language, model, number of speakers, and merge speaker entries | 
+| Enables editing of transcriptions and adding notes directly in the application | Does not support editing of transcriptions or adding notes |
 
 ### Select the guide of your choice below for step-by-step instructions for each version.
 <div class="transcriber-tab-selection" markdown="1">
 
 === "Transcriber Interface (Default version)"
-    <br>
-    This guide will walk you through using the latest **default** version of Transcriber, featuring an improved, user-friendly interface for transcribing your audio and video files on UCloud.
+    <br> 
+    This guide will walk you through using the latest **default** version of Transcriber, featuring an improved, user-friendly interface for transcribing your audio and video files on UCloud. The latest version also allows you to edit transcriptions directly in the app, listen to the specific audio segments corresponding to selected parts of the transcript, and add notes to individual audio or text segments.
 
     ### 1. Using the Transcriber default (Interface) application
 
@@ -68,7 +69,7 @@ There are two ways to use Transcriber on UCloud:
     #### 1.2 Configuring your job
 
     - **Name your job**: Choose a name that helps you identify the job later (e.g., "Transcriber Demo 1").
-      - *Note*: Avoid special characters like "æøå".
+      - *Note*: Avoid special characters like "æøå" or "!?.".
 
     - **Set the duration**: Specify how many hours the job should run. For reference, a 1-hour audio typically takes about 1 hour to transcribe on a `cpu-amd-zen5-16` machine.
         - You can stop the machine early or add more time later if needed.
@@ -81,16 +82,19 @@ There are two ways to use Transcriber on UCloud:
 
     - Once you finish configuring, click **Submit** to start the Transcriber job.
 
-    ![Starting the job on UCloud](/assets/img/UCloud/Transcriberguide_mig_gpu.png)
+    ![Starting the job on UCloud](/assets/img/UCloud/transcriber/transcriber_jobsettings.png)
 
     After submitting your job, you'll be redirected to a new page where your Transcriber machine is being prepared. Once it's ready, click the **Open interface** button to launch the Transcriber application.
 
-    ![Open interface](/assets/img/UCloud/TranscriberguideGUI2.jpg)
+    ![Open interface](/assets/img/UCloud/transcriber/transcriber_openinterface.png)
     
      
     #### 1.3 Adding files to be transcribed
 
-    Once the app starts, decide how you want to add files for transcription. You have two main options:
+    Press create first transcription.
+    ![Selecting files to be transcribed](/assets/img/UCloud/transcriber/transcriber_firsttranscription.png) 
+
+    Now you can decide how you want to add files for transcription. You have two main options:
 
 
     - **Use files from UCloud folders**
@@ -106,9 +110,11 @@ There are two ways to use Transcriber on UCloud:
     
     > **Info:** The app can only process `.mp3`, `.mp4`, `.m4a`, `.wav`, and `.mpg` files. If your file is in another format, we recommend using VLC to convert it. VLC can be downloaded from the Software Center/Company Portal.
 
-    ![Selecting files to be transcribed](/assets/img/UCloud/TranscriberguideGUI3.jpg) 
+    ![Selecting files to be transcribed](/assets/img/UCloud/transcriber/transcriber_uploadfiles.png) 
 
     #### 1.4 Optional: Choose a transcriptionmodel
+    Go to settings:
+    ![Selecting files to be transcribed](/assets/img/UCloud/transcriber/transcriber_settings.png) 
     Select the model size:
 
     - **Small**: Faster but less accurate.
@@ -121,26 +127,46 @@ There are two ways to use Transcriber on UCloud:
 
     - Once you have added all your desired files to the transcription queue, click **Start Transcription**.
     - The app will begin transcribing your files and show a progress bar so you can track the transcription status in real time.
-        > **Note:** The progress bar provides an estimated completion time for each file, but this estimate may change as the transcription proceeds. Factors such as the selected machine, the amount of speech in the audio, and the selected transcription model can affect how long each file takes.
+        - **Note:** The progress bar provides an estimated completion time for each file, but this estimate may change as the transcription proceeds. Factors such as the selected machine, the amount of speech in the audio, and the selected transcription model can affect how long each file takes.
 
-    #### 1.6 Downloading your transcriptions
+    ![Selecting files to be transcribed](/assets/img/UCloud/transcriber/transcriber_underprogress.png)   
 
-    - **While the job is running**: You can download completed transcriptions directly from the app, either one by one or as a zip file. When downloading individual files, you can select your preferred output format (TXT, DOCX, VTT, etc.). If you choose to download as a zip file, you'll receive all available output formats for each transcription. 
-        - **Important:** If you are working with confidential or sensitive data, remember that you may **not** download it directly to any personal or nonapproved devices.
-      
-      > **Note:** For better readability and to save time on post-processing, you can download a merged speaker format of the transcription that combines consecutive text entries from the same speaker into natural, flowing sentences. This feature helps streamline your workflow by reducing the need for manual text editing.
-    ![Download transcribed files](/assets/img/UCloud/TranscriberguideGUI4.jpg)   
+    #### 1.6 Edit your transcriptions or write notes
+    When the transcription is finished, the app allows you to edit your transcription directly, listen to individual audio segments, and add notes along the way.
     
-    - **After the job is finished**: All transcriptions will be available on UCloud in the folder: `/Jobs/Transcriber/<job-id>/TRANSCRIPTIONS/`.
- 
-    #### 1.7 Optional: Adjusting settings
+    Just click the **Edits & Notes** button
+    ![Selecting files to be transcribed](/assets/img/UCloud/transcriber/transcriber_editnotes.png)   
 
-    - Click **Show settings** at the top of the page to adjust:
+    When the **Edit Mode** is off, you can add notes to any segment of text and save the notes:
+    ![Selecting files to be transcribed](/assets/img/UCloud/transcriber/transcriber_addnotes.png)
+
+    When the **Edit Mode** is on, you can edit any text segment and apply the edits:
+    ![Selecting files to be transcribed](/assets/img/UCloud/transcriber/transcriber_editsegments.png)
+
+    When you are done writing notes or editing your transcription click the **Export** button.
+
+      -  Here you can choose what content you want to export, in which format you want to export it in and whether you want the speakers to merged:
+      ![Selecting files to be transcribed](/assets/img/UCloud/transcriber/transcriber_export.png)
+
+
+    #### 1.7 Download your transcriptions
+    If you didn't make any edits or notes, you can download completed transcriptions directly from the **Transcription Results** page, either one by one or as a zip file. When downloading individual files, you can select your preferred output format (TXT, DOCX, VTT, etc.). If you choose to download as a zip file, you'll receive all available output formats for each transcription.
+    
+    - **Important:** If you are working with confidential or sensitive data, remember that you may **not** download it directly to any personal or nonapproved devices.
       
-      - **New feature:** Transcribe and stop This setting allows the job to stop automatically once all selected files have been transcribed. Enabling this option is highly efficient in terms of compute hours allocated to your project, as the job remains active only while work is being performed. As always, the transcribed files can be found in the UCloud filesystem, either in the job folder or in the folder selected at startup.
+      > **Note:** For better readability and to save time on post-processing, you can download a **merged speaker format** of the transcription that combines consecutive text entries from the same speaker into natural, flowing sentences. This feature helps streamline your workflow by reducing the need for manual text editing.
+
+    ![Download transcribed files](/assets/img/UCloud/transcriber/transcriber_download.png)   
+    
+    - **Download the transcriptions after the job is finished**: All transcriptions will be available on UCloud in the folder: `/Jobs/Transcriber/<job-id>/TRANSCRIPTIONS/`.
+ 
+    #### 1.8 Adjust settings (Optional)
+    Click **Settings** at the top of the page to adjust:
       
-      - The transcription model (default is "large-v3").
-      - The language (default is "Automatic").
+      - **Transcribe and stop** This setting allows the job to stop automatically once all selected files have been transcribed. Enabling this option is highly efficient in terms of compute hours allocated to your project, as the job remains active only while work is being performed. As always, the transcribed files can be found in the UCloud filesystem, either in the job folder or in the folder selected at startup.
+      
+      - **Select transcription model** The default is "large-v3".
+      - **Select language** The default is "Automatic".
     > **Note:** If you're unsure, the default settings are usually best.
 
     **Need more advanced options?**  
