@@ -83,7 +83,7 @@ Users familiar with [AI Cloud](/ai-cloud) or [AI-LAB](/ai-lab) will find that op
     With a EuroHPC grant it is possible to apply for in-depth, HPC-expert assistance from [the Epicure project](/external-hpc/eurohpc-resources/#epicure).
 ### Before logging in
 
-Assuming that you have decided to make use of AAU's local resource pool, follow the instructions in the letter of approval, sent out following your [resource application](/external-hpc/access). This involves completing AAU's identity verification procedure and [uploading an SSH key](https://docs.lumi-supercomputer.eu/firststeps/SSH-keys/) to the system.
+Assuming that you have decided to make use of AAU's local resource pool, follow the instructions in the letter of approval, sent out following your [resource application](/external-hpc/access). This involves completing AAU's identity verification procedure (follow instructions in the aforementioned letter of approval), and [uploading an SSH key](https://docs.lumi-supercomputer.eu/firststeps/SSH-keys/#register-your-public-key) to the system.
 
 ### Log in to the system
 
