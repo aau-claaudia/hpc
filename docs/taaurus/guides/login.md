@@ -36,10 +36,10 @@ This guide will help you connect to TAAURUS using Remote Desktop Protocol (RDP).
 
     ### Step 2: Enter Server Details
 
-    3. In the Remote Desktop Connection window, enter the server address:
-    ```
-    sp-test05.srv.aau.dk
-    ```
+    3. In the Remote Desktop Connection window, enter the adress of your server.
+    For demonstrational purposes, we will use the test VM used by ITS: `sp-test05.srv.aau.dk`.
+    You should insert the URL of the VM created for your project.
+
     4. Click **Show Options** to access **Advanced** settings in the tab
 
     ![Screenshot of RDP](/assets/img/taaurus/windows-rdp-1.png){style=max-height:600px;}
