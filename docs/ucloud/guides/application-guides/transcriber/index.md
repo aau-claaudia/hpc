@@ -158,7 +158,7 @@ There are two ways to use Transcriber on UCloud:
 
     ![Download transcribed files](/assets/img/UCloud/transcriber/transcriber_download.png)   
     
-    - **Download the transcriptions after the job is finished**: All transcriptions will be available on UCloud in the folder: `/Jobs/Transcriber/<job-id>/<resultname>transcriber_Ucloud_<modelname>_<languagetype>/TRANSCRIPTIONS/`.
+    - **Download the transcriptions after the job is finished**: All transcriptions will be available on UCloud in the folder: `/Jobs/Transcriber/<job-id>/<resultname>_<modelname>_<languagetype>/TRANSCRIPTIONS/`.
  
     #### 1.8 Adjust settings (Optional)
     Click **Settings** at the top of the page to adjust:
@@ -168,6 +168,20 @@ There are two ways to use Transcriber on UCloud:
       - **Select transcription model** The default is "large-v3".
       - **Select language** The default is "Automatic".
     > **Note:** If you're unsure, the default settings are usually best.
+
+    #### 1.9 Optimal Utilization of Compute Resources
+    To avoid using unnecessary compute resources, we recommend switching to a smaller machine type once your transcription is complete.
+    Transcribing an audio or video file requires a certain amount of compute resources. However, once the transcription is finished, less compute power is needed. If you only want to use the Edit & Notes features, you can therefore restart the job using a smaller machine type.
+    
+    ##### What should you do?
+      - When your audio or video file has been transcribed, shut down the job.
+      - Navigate to **Compute > Jobs** and find the completed job
+      - Open the job and click the **Run again**
+      - Select the machine type **cpu-amd-zen5-1-vcpu**
+      - Click **Folder** to add a directory to your job.
+      - Select the folder **<resultname>_<modelname>_<languagetype>** and submit the job
+      - Open the interface. Your transcribed file should now be avaiable. 
+      - Click **Edit & View**, then **Edit & Notes** to start your editing or note-taking process without using unnecessary ressources.
 
     **Need more advanced options?**  
     Try the Transcriber batch version, which offers extended configuration possibilities.
