@@ -158,7 +158,7 @@ There are two ways to use Transcriber on UCloud:
 
     ![Download transcribed files](/assets/img/UCloud/transcriber/transcriber_download.png)   
     
-    - **Download the transcriptions after the job is finished**: All transcriptions will be available on UCloud in the folder: `/Jobs/Transcriber/<job-id>/TRANSCRIPTIONS/`.
+    - **Download the transcriptions after the job is finished**: All transcriptions will be available on UCloud in the folder: `/Jobs/Transcriber/<job-id>/<resultname>transcriber_Ucloud_<modelname>_<languagetype>/TRANSCRIPTIONS/`.
  
     #### 1.8 Adjust settings (Optional)
     Click **Settings** at the top of the page to adjust:
