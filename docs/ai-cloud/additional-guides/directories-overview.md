@@ -2,47 +2,17 @@
 
 Each time you log in to AI Cloud, you are landed in your user's home directory. This directory serves as the primary location for storing project files and data. The path to this directory can always be referenced with the variable `$HOME`.
 
-<div class="tree">
-    <ul>
-    <li><i class="fa fa-folder-open"></i> / <span>root</span>
-        <ul>
-        <li><i class="fa fa-folder-open"></i> home <span> home directories</span>
-            <ul>
-            <li><i class="fa fa-folder-open"></i> domain <span>e.g es.aau.dk</span>
-                <ul>
-                    <li><i class="fa fa-folder"></i> user <span>your user directory</span></li>
-                </ul>
-            </li>
-            </ul>
-        </li>
-        </ul>
-    </li>
-    </ul>
-</div>
-
 The user directory is private by default, and users can there not access your files. In case you need to make files accessible for other users, we recommend putting them in a shared project directory (find the section below).
 
 !!! info "Storage quota expansions"
     When users log in to AI Cloud for the first time, a user directory is created for them. These directories are allocated 1 TB of storage by default. This should be plenty for most users, but should you need additional space, it is possible to apply for storage quota expansions for a limited time using our [Storage quota expansions form](https://forms.office.com/e/AjT0GccAPb).
+
+!!! warning "CEPH-FS almost full"
+    The storage needs of our users are growing, and increasingly we find it hard to meet the demand. You should therefore expect, that we can not guarantee as much storage or for as long, as we have been able to previously. AI Cloud is not intended for long term storage of data, and we expect users to be able to offload to a different storage medium, when the data is not actively being worked on.
     
 ## Shared project directories
 
 AI Cloud fosters collaborative work through shared project directories in `/home/project`:
-
-<div class="tree">
-    <ul>
-    <li><i class="fa fa-folder-open"></i> /home <span>AI Cloud's file system</span>
-        <ul>
-        <li><i class="fa fa-folder-open"></i> project <span>shared project directories</span>
-            <ul>
-            <li><i class="fa fa-folder"></i> my_shared_project
-            </li>
-            </ul>
-        </li>
-        </ul>
-    </li>
-    </ul>
-</div>
 
 Users are welcome to create directories for their groups themselves, but they are encouraged to name the directories in a meaningful way (ie. after your group or project name).
 
