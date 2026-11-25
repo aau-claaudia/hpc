@@ -11,7 +11,7 @@ For a full overview of AI Studio features, see Mistral's official [AI Studio —
 
 Each AI Studio workspace has a **standard monthly usage quota**. This covers API usage (tokens consumed across all models) within that workspace for the month. AAU may adjust the monthly quota at any time if needed. If you need a higher quota, request an increase through the [Serviceportal](https://serviceportal.aau.dk/serviceportal?id=emp_taxonomy_topic&topic_id=82a253e8838fc21053711d447daad328){target="_blank"}.
 
-Model prices vary significantly — larger and more capable models consume the quota faster than smaller ones. See the [Mistral Models documentation](https://docs.mistral.ai/models){target="_blank"} for a full overview.
+Model prices vary significantly — larger and more capable models consume the quota faster than smaller ones. See the [Mistral Models documentation](https://docs.mistral.ai/models){target="_blank"} for a full overview over available models and their price.
 
 
 ## Support
