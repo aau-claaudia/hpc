@@ -7,7 +7,7 @@ This is a short how-to for everyday use of Vibe and AI Studio. The **binding rul
 [Apply for access](/mistral/how-to-access/) and classify your data under [AAU’s data classification](https://www.security.aau.dk/data-classification){target="_blank"} **before** you paste or upload anything.
 
 - **Default workspace** — Level 1 data with **no** personal data
-- **Dedicated workspace, no personal data** — API access
+- **Dedicated workspace, no personal data** — API access and [Vibe Code](/mistral/guides/vibe/vibe-code/)
 - **Dedicated workspace with personal data** — personal data, including Level 2 or 3 data that contains personal data (WorkZone number and a DPIA are required)
 
 See [How to access Mistral](/mistral/how-to-access/) and [T&C §3](/mistral/terms-and-conditions/#3-data-classification-personal-data-and-dedicated-workspaces).
@@ -43,7 +43,7 @@ Keys are **personal**. Do not share them.
 
 **How to rotate a key:** In AI Studio, select the correct workspace. Go to **API Keys** → **My API keys** and use **Rotate key**. Rotate at least every **30 days**.
 
-For **Vibe Code** (CLI or VS Code), create the key in AI Studio. Do not use **Launch browser**. See [Vibe Code](/mistral/guides/vibe/vibe-code/).
+**Vibe Code** is not available in the default project (Code tab, Desktop, CLI, and VS Code). Use a **dedicated workspace**. The CLI and VS Code need an API key from AI Studio; do not use **Launch browser**. See [Vibe Code](/mistral/guides/vibe/vibe-code/).
 
 A person must check API output before it leads to actions, classifications, or research conclusions.
 

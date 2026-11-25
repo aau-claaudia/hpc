@@ -8,9 +8,9 @@ Different access options are available, each with their own specific requirement
 
 | Option | What you get | Data allowed | What you must provide | API keys? |
 |---|---|---|---|---|
-| **Default workspace** | Access to Vibe at [chat.mistral.ai](https://chat.mistral.ai) and AI Studio at [console.mistral.ai](https://console.mistral.ai), including the Playground, Document AI and Audio transcription. | **Level 1 data with no personal data** | Consent, and select the default workspace | No |
-| **Dedicated workspace, no personal data** | A closed project workspace. Full access to Vibe, AI Studio, and the API. | **No personal data.** | Request a dedicated workspace | Yes |
-| **Dedicated workspace with personal data** | A closed project workspace. Full access to Vibe, AI Studio, and the API. | **Personal data**, including Level 2 or 3 data that contains personal data | **WorkZone case number**, and confirmation that you have prepared a **DPIA** together with [Grants and Contracts](https://aaudk.sharepoint.com/sites/persondata-ressourcer/SitePages/Registrations%20og%20reports%20(Online%20forms).aspx){target="_blank"} | Yes |
+| **Default workspace** | Access to Vibe at [chat.mistral.ai](https://chat.mistral.ai) and AI Studio at [console.mistral.ai](https://console.mistral.ai), including the Playground, Document AI and Audio transcription. **Vibe Code is not included.** | **Level 1 data with no personal data** | Consent, and select the default workspace | No |
+| **Dedicated workspace, no personal data** | A closed project workspace. Full access to Vibe, AI Studio, the API, and [Vibe Code](/mistral/guides/vibe/vibe-code/). | **No personal data.** | Request a dedicated workspace | Yes |
+| **Dedicated workspace with personal data** | A closed project workspace. Full access to Vibe, AI Studio, the API, and [Vibe Code](/mistral/guides/vibe/vibe-code/). | **Personal data**, including Level 2 or 3 data that contains personal data | **WorkZone case number**, and confirmation that you have prepared a **DPIA** together with [Grants and Contracts](https://aaudk.sharepoint.com/sites/persondata-ressourcer/SitePages/Registrations%20og%20reports%20(Online%20forms).aspx){target="_blank"} | Yes |
 
 <p style="font-size: 0.92em; margin-top: -1.5em; color: #555;">
   <em>
@@ -52,7 +52,7 @@ After login:
 
 If you applied for the **default workspace**, use that workspace only.
 
-API keys (including for [Vibe Code](/mistral/guides/vibe/vibe-code/)) are created in AI Studio in a **dedicated workspace**, not through Vibe Code’s **Launch browser** sign-in.
+[Vibe Code](/mistral/guides/vibe/vibe-code/) is **not available in the default project** — not in the Code tab, Desktop, CLI, or VS Code. For the CLI and VS Code, create the API key in AI Studio in a **dedicated workspace**, not through Vibe Code’s **Launch browser** sign-in.
 
 ## For the Dedicated Workspace
 

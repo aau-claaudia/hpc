@@ -2,7 +2,7 @@
 
 AI Studio is Mistral's developer platform, available at [console.mistral.ai](https://console.mistral.ai){target="_blank"}. It is designed for structured experimentation, API integration, and building repeatable AI-powered workflows. It includes a Playground for testing models interactively, API key management, usage monitoring, and tools for building and deploying agents.
 
-At AAU, access to AI Studio is granted after you [apply](/mistral/how-to-access/). The **default workspace** is for **Level 1 data with no personal data**. A dedicated workspace is required for API keys, Level 2 or 3 data, and personal data.
+At AAU, access to AI Studio is granted after you [apply](/mistral/how-to-access/). The **default workspace** is for **Level 1 data with no personal data**. A dedicated workspace is required for API keys, [Vibe Code](/mistral/guides/vibe/vibe-code/), Level 2 or 3 data, and personal data.
 
 
 For a full overview of AI Studio features, see Mistral's official [AI Studio — Documentation](https://docs.mistral.ai/deployment/ai-studio){target="_blank"} 
@@ -20,7 +20,7 @@ Model prices vary significantly — larger and more capable models consume the q
 |---|---|
 | Cannot log in or access AI Studio | Contact us via the [service portal](https://serviceportal.aau.dk/serviceportal?id=emp_taxonomy_topic&topic_id=82a253e8838fc21053711d447daad328){target="_blank"} |
 | Request a workspace or API key access | Apply via the [Mistral access form](https://aau.service-now.com/serviceportal?id=sc_cat_item&sys_id=b3a364e5c3a336d4f0f3041ad001316e){target="_blank"} |
-| Use Vibe Code (CLI or VS Code) | Create the key in AI Studio and paste it in. See [Vibe Code](/mistral/guides/vibe/vibe-code/) |
+| Use Vibe Code | Not available in the default project. Use a dedicated workspace. CLI and VS Code also need an AI Studio key. See [Vibe Code](/mistral/guides/vibe/vibe-code/) |
 | Questions about AI Studio features | Use the in-app *Help and Resources* chat or see [help.mistral.ai](https://help.mistral.ai/en/){target="_blank"} |
 
 

@@ -45,4 +45,4 @@ If you applied for a dedicated workspace, select your named project workspace be
     If you cannot log in, contact us via the [service portal](https://serviceportal.aau.dk/serviceportal?id=emp_taxonomy_topic&topic_id=82a253e8838fc21053711d447daad328){target="_blank"}.
 
 !!! info "Using Vibe Code?"
-    Browser sign-in for Vibe Code is disabled. Create an API key in AI Studio and paste it into the CLI or the VS Code extension. See [Vibe Code](/mistral/guides/vibe/vibe-code/).
+    Vibe Code is not available in the default project. That includes the **Code** tab, **Vibe Desktop**, the CLI, and VS Code. Switch to a dedicated workspace first. See [Vibe Code](/mistral/guides/vibe/vibe-code/).

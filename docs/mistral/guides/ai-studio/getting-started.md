@@ -47,4 +47,4 @@ Log in with your AAU credentials (for example `ab12cd`) and approve the login us
     If you cannot log in, contact us via the [service portal](https://serviceportal.aau.dk/serviceportal?id=emp_taxonomy_topic&topic_id=82a253e8838fc21053711d447daad328){target="_blank"}.
 
 !!! info "Using Vibe Code?"
-    Create the API key here in AI Studio, then paste it into the CLI or the VS Code extension. Do not use **Launch browser**. See [Vibe Code](/mistral/guides/vibe/vibe-code/).
+    Vibe Code is not available in the default project (Code tab, Desktop, CLI, and VS Code). Switch to your dedicated workspace. For the CLI and VS Code, create the API key here in AI Studio. Do not use **Launch browser**. See [Vibe Code](/mistral/guides/vibe/vibe-code/).
