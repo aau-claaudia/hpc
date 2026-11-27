@@ -183,6 +183,21 @@ There are two ways to use Transcriber on UCloud:
       - Open the interface. Your transcribed file should now be avaiable. 
       - Click **Edit & View**, then **Edit & Notes** to start your editing or note-taking process without using unnecessary ressources.
 
+    #### 1.10 Transcribing multiple files in one job
+    You can transcribe multiple files in a single job. There is no need to start a separate job for each file.
+    Simply add all the files you want to transcribe, for example by dragging and dropping them into the application. Then click **Start transcription** to begin processing all the files.
+
+    *Note: Make sure the job duration is long enough for all files to be transcribed before the job ends.* 
+
+    Once all files have been transcribed, your screen should look like this:
+    ![Download transcribed files](/assets/img/UCloud/transcriber/transcriber_morefiles.png)   
+    If you want to **view, edit, download, or add notes to a transcription**, click the **Edit & View** button.
+    
+    Here, you can review the transcription, make changes, add notes, or download the transcription.
+    
+    When you are finished, click the Transcriber logo to return to the overview of your transcriptions, as shown below:
+    ![Download transcribed files](/assets/img/UCloud/transcriber/transcriber_morefiles_edit_goback.png)   
+
     **Need more advanced options?**  
     Try the Transcriber batch version, which offers extended configuration possibilities.
 
